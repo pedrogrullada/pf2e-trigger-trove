@@ -9,10 +9,10 @@
     "minimum": "13",
     "verified": "13"
   },
-  "description": "A collection of triggers to use with the PF2e Trigger module.",
+  "description": "<p>A collection of triggers to use with the PF2e Trigger module.</p>",
   "flags": {
     "pf2e-trigger-trove": {
-        "triggers": "triggers/pf2e-trigger-trove.json"
+      "triggers": "triggers/pf2e-trigger-trove.json"
     }
   },
   "id": "pf2e-trigger-trove",
@@ -23,9 +23,15 @@
         "id": "pf2e",
         "type": "system"
       }
+    ],
+    "requires": [
+      {
+        "id": "pf2e-trigger",
+        "type": "module",
+        "compatibility": {}
+      }
     ]
   },
   "title": "PF2e Trigger Trove",
-  "url": "",
   "version": "1.0"
 }
