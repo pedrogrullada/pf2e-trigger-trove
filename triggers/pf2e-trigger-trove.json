@@ -289,6 +289,166 @@
             ]
         },
         {
+            "_id": "fmy4uug0XjFiB9BR",
+            "description": "<p>Post the Intense Heat ability to chat when a creature enters the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target as well.</p>",
+            "folder": "Monster Abilities",
+            "name": "Intense Heat (Aura Entered)",
+            "nodes": [
+                {
+                    "_id": "9vK4AZRg130Ww4c3",
+                    "inputs": {
+                        "slug": {
+                            "ids": [],
+                            "value": "intense-heat"
+                        },
+                        "targets": {
+                            "ids": [],
+                            "value": "all"
+                        },
+                        "turn": {
+                            "ids": [],
+                            "value": false
+                        }
+                    },
+                    "key": "aura-enter",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "D2RZzrx5D9SGQM8R.inputs.in"
+                            ]
+                        },
+                        "source": {
+                            "ids": [
+                                "D2RZzrx5D9SGQM8R.inputs.PAWVQq94ohe1Jwsj"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "D2RZzrx5D9SGQM8R",
+                    "inputs": {
+                        "ENRCMPZjXaVhJQta": {
+                            "ids": [
+                                "9vK4AZRg130Ww4c3.outputs.source"
+                            ]
+                        },
+                        "HhJmeS0b8RW20qN7": {
+                            "ids": [],
+                            "value": "intense-heat"
+                        },
+                        "in": {
+                            "ids": [
+                                "9vK4AZRg130Ww4c3.outputs.out"
+                            ]
+                        },
+                        "PAWVQq94ohe1Jwsj": {
+                            "ids": [
+                                "9vK4AZRg130Ww4c3.outputs.source"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-node",
+                    "position": {
+                        "x": 624,
+                        "y": 199.75
+                    },
+                    "target": "KbmYmEm4rMEedc9N",
+                    "type": "subtrigger"
+                }
+            ]
+        },
+        {
+            "_id": "QTlb6cOxsdi3TAY9",
+            "description": "<p>Post the Intense Heat ability to chat when a creature starts their turn in the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target as well.</p>",
+            "folder": "Monster Abilities",
+            "name": "Intense Heat (Turn Started)",
+            "nodes": [
+                {
+                    "_id": "LTD1CLZ6jWQVsHuH",
+                    "key": "turn-start",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "7M3EHWmPBnPEJrzy.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "7M3EHWmPBnPEJrzy",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "LTD1CLZ6jWQVsHuH.outputs.out"
+                            ]
+                        },
+                        "slug": {
+                            "ids": [],
+                            "value": "intense-heat"
+                        },
+                        "targets": {
+                            "ids": [],
+                            "value": "all"
+                        }
+                    },
+                    "key": "inside-aura",
+                    "outputs": {
+                        "source": {
+                            "ids": [
+                                "HMxdtUqPXbYAngfs.inputs.PAWVQq94ohe1Jwsj"
+                            ]
+                        },
+                        "true": {
+                            "ids": [
+                                "HMxdtUqPXbYAngfs.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 531,
+                        "y": 199.23000000000002
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "HMxdtUqPXbYAngfs",
+                    "inputs": {
+                        "HhJmeS0b8RW20qN7": {
+                            "ids": [],
+                            "value": "intense-heat"
+                        },
+                        "in": {
+                            "ids": [
+                                "7M3EHWmPBnPEJrzy.outputs.true"
+                            ]
+                        },
+                        "PAWVQq94ohe1Jwsj": {
+                            "ids": [
+                                "7M3EHWmPBnPEJrzy.outputs.source"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-node",
+                    "position": {
+                        "x": 810,
+                        "y": 199.75
+                    },
+                    "target": "KbmYmEm4rMEedc9N",
+                    "type": "subtrigger"
+                }
+            ]
+        },
+        {
             "_id": "4kTXa69928czX3l9",
             "description": "<p>Reduce the duration of @UUID[Compendium.pf2e.spells-srd.Item.2BV2yYPfVJ5zirZt]{Mountain Resilience}'s effect by 1 minute each time the beneficiary of the spell is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of fire damage will be missed.</em></p>",
             "folder": "Spells",
@@ -463,6 +623,155 @@
                         "y": 201.75
                     },
                     "type": "condition"
+                }
+            ]
+        },
+                {
+            "_id": "KbmYmEm4rMEedc9N",
+            "description": "<p>Send an ability to chat. The ability's slug and its origin are set in the parent trigger.</p>",
+            "folder": "Monster Abilties",
+            "name": "Send Ability to Chat",
+            "nodes": [
+                {
+                    "_id": "Y7APRXmdEhE6B4FN",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": true,
+                                "group": "",
+                                "key": "PAWVQq94ohe1Jwsj",
+                                "label": "Item Source",
+                                "type": "target"
+                            },
+                            {
+                                "custom": true,
+                                "group": "",
+                                "key": "HhJmeS0b8RW20qN7",
+                                "label": "Item Slug",
+                                "type": "text"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "key": "subtrigger-input",
+                    "outputs": {
+                        "ENRCMPZjXaVhJQta": {
+                            "ids": []
+                        },
+                        "HhJmeS0b8RW20qN7": {
+                            "ids": [
+                                "NZj2A17pIg8WD0Og.inputs.slug"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "NZj2A17pIg8WD0Og.inputs.in"
+                            ]
+                        },
+                        "PAWVQq94ohe1Jwsj": {
+                            "ids": [
+                                "NZj2A17pIg8WD0Og.inputs.target"
+                            ]
+                        },
+                        "this": {
+                            "ids": [
+                                "zKw74xr9ENDwJVM1.inputs.targeting"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "64NeRx00Ycrcpg7H",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "zKw74xr9ENDwJVM1.outputs.out"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-output",
+                    "position": {
+                        "x": 953,
+                        "y": 202
+                    },
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "NZj2A17pIg8WD0Og",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "Y7APRXmdEhE6B4FN.outputs.out"
+                            ]
+                        },
+                        "slug": {
+                            "ids": [
+                                "Y7APRXmdEhE6B4FN.outputs.HhJmeS0b8RW20qN7"
+                            ]
+                        },
+                        "target": {
+                            "ids": [
+                                "Y7APRXmdEhE6B4FN.outputs.PAWVQq94ohe1Jwsj"
+                            ]
+                        }
+                    },
+                    "key": "has-item-slug",
+                    "outputs": {
+                        "item": {
+                            "ids": [
+                                "zKw74xr9ENDwJVM1.inputs.item"
+                            ]
+                        },
+                        "true": {
+                            "ids": [
+                                "zKw74xr9ENDwJVM1.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 535.5,
+                        "y": 200.25
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "zKw74xr9ENDwJVM1",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "NZj2A17pIg8WD0Og.outputs.true"
+                            ]
+                        },
+                        "item": {
+                            "ids": [
+                                "NZj2A17pIg8WD0Og.outputs.item"
+                            ]
+                        },
+                        "targeting": {
+                            "ids": [
+                                "Y7APRXmdEhE6B4FN.outputs.this"
+                            ]
+                        }
+                    },
+                    "key": "send-to-chat",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "64NeRx00Ycrcpg7H.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 770,
+                        "y": 202.75
+                    },
+                    "type": "action"
                 }
             ]
         },
