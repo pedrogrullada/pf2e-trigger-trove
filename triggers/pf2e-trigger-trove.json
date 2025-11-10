@@ -1050,6 +1050,607 @@
             ]
         },
         {
+            "_id": "bV351isJMsgV1AWn",
+            "description": "",
+            "folder": "Feats & Features",
+            "name": "Ravel of Thorns (Aura Left)",
+            "nodes": [
+                {
+                    "_id": "0cSvbjOKdXHhY5eD",
+                    "inputs": {
+                        "slug": {
+                            "ids": [],
+                            "value": "kinetic-aura"
+                        },
+                        "targets": {
+                            "ids": [],
+                            "value": "all"
+                        },
+                        "turn": {
+                            "ids": [],
+                            "value": false
+                        }
+                    },
+                    "key": "aura-leave",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "GyL5fh9MXNqCPqr8.inputs.in"
+                            ]
+                        },
+                        "source": {
+                            "ids": [
+                                "GyL5fh9MXNqCPqr8.inputs.target"
+                            ]
+                        },
+                        "this": {
+                            "ids": [
+                                "MyQTwPVwVLdg4tot.inputs.target"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "GyL5fh9MXNqCPqr8",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "0cSvbjOKdXHhY5eD.outputs.out"
+                            ]
+                        },
+                        "target": {
+                            "ids": [
+                                "0cSvbjOKdXHhY5eD.outputs.source"
+                            ]
+                        },
+                        "uuid": {
+                            "ids": [],
+                            "value": "Compendium.pf2e.feat-effects.Item.JW93FDTAOUNuCgIu"
+                        }
+                    },
+                    "key": "has-item",
+                    "outputs": {
+                        "true": {
+                            "ids": [
+                                "MyQTwPVwVLdg4tot.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 634,
+                        "y": 203.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "MyQTwPVwVLdg4tot",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "GyL5fh9MXNqCPqr8.outputs.true"
+                            ]
+                        },
+                        "target": {
+                            "ids": [
+                                "0cSvbjOKdXHhY5eD.outputs.this"
+                            ]
+                        },
+                        "uuid": {
+                            "ids": [],
+                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.uOHgKiyfUoS6fbkc"
+                        }
+                    },
+                    "key": "remove-item",
+                    "position": {
+                        "x": 878,
+                        "y": 205.75
+                    },
+                    "type": "action"
+                }
+            ]
+        },
+        {
+            "_id": "9avLgSorYNoUr5q4",
+            "description": "",
+            "folder": "Feats & Features",
+            "name": "Ravel of Thorns (Turn Started)",
+            "nodes": [
+                {
+                    "_id": "ZUNVwcHmDyNgS28p",
+                    "key": "turn-start",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "oXrVeC48OkKL4dsj.inputs.in"
+                            ]
+                        },
+                        "this": {
+                            "ids": []
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "Q6Dpggwd4YDDWySL",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "oXrVeC48OkKL4dsj.outputs.true"
+                            ]
+                        },
+                        "target": {
+                            "ids": [
+                                "oXrVeC48OkKL4dsj.outputs.source"
+                            ]
+                        },
+                        "uuid": {
+                            "ids": [],
+                            "value": "Compendium.pf2e.feat-effects.Item.JW93FDTAOUNuCgIu"
+                        }
+                    },
+                    "key": "has-item",
+                    "outputs": {
+                        "true": {
+                            "ids": [
+                                "ml3RgC87jzoja3GI.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 779,
+                        "y": 303.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "QhMWLgghKnEMizXU",
+                    "inputs": {
+                        "duplicate": {
+                            "ids": [],
+                            "value": false
+                        },
+                        "in": {
+                            "ids": [
+                                "FljnDlD3QCCL7w1B.outputs.false"
+                            ]
+                        },
+                        "target": {
+                            "ids": []
+                        },
+                        "uuid": {
+                            "ids": [],
+                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.uOHgKiyfUoS6fbkc"
+                        }
+                    },
+                    "key": "create-item",
+                    "outputs": {
+                        "out": {
+                            "ids": []
+                        }
+                    },
+                    "position": {
+                        "x": 1426,
+                        "y": 301.75
+                    },
+                    "type": "action"
+                },
+                {
+                    "_id": "ml3RgC87jzoja3GI",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "Q6Dpggwd4YDDWySL.outputs.true"
+                            ]
+                        },
+                        "WAhq9tiXEkLImyNR": {
+                            "ids": [
+                                "oXrVeC48OkKL4dsj.outputs.source"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-node",
+                    "outputs": {
+                        "GfBbyVIsTRBoQoZu": {
+                            "ids": [
+                                "FljnDlD3QCCL7w1B.inputs.input"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "FljnDlD3QCCL7w1B.inputs.in"
+                            ]
+                        },
+                        "z0TmreWutCkpH3CX": {
+                            "ids": [
+                                "Q6Dpggwd4YDDWySL.inputs.target",
+                                "poIT2vN8onNx5DRU.inputs.a"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1008,
+                        "y": 302.75
+                    },
+                    "target": "4L67C3QxcYfBkIe5",
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "oXrVeC48OkKL4dsj",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "ZUNVwcHmDyNgS28p.outputs.out"
+                            ]
+                        },
+                        "slug": {
+                            "ids": [],
+                            "value": "kinetic-aura"
+                        },
+                        "targets": {
+                            "ids": [],
+                            "value": "all"
+                        }
+                    },
+                    "key": "inside-aura",
+                    "outputs": {
+                        "source": {
+                            "ids": [
+                                "ml3RgC87jzoja3GI.inputs.WAhq9tiXEkLImyNR",
+                                "Q6Dpggwd4YDDWySL.inputs.target"
+                            ]
+                        },
+                        "true": {
+                            "ids": [
+                                "Q6Dpggwd4YDDWySL.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 499,
+                        "y": 304.23
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "FljnDlD3QCCL7w1B",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "ml3RgC87jzoja3GI.outputs.out"
+                            ]
+                        },
+                        "input": {
+                            "ids": [
+                                "ml3RgC87jzoja3GI.outputs.GfBbyVIsTRBoQoZu"
+                            ]
+                        }
+                    },
+                    "key": "boolean-splitter",
+                    "outputs": {
+                        "false": {
+                            "ids": [
+                                "QhMWLgghKnEMizXU.inputs.in"
+                            ]
+                        },
+                        "true": {
+                            "ids": []
+                        }
+                    },
+                    "position": {
+                        "x": 1246,
+                        "y": 318.75
+                    },
+                    "type": "splitter"
+                }
+            ],
+            "variables": {}
+        },
+        {
+            "_id": "4L67C3QxcYfBkIe5",
+            "description": "",
+            "folder": "Feats & Features",
+            "name": "Safe Elements Check",
+            "nodes": [
+                {
+                    "_id": "rhU7xPk7sTDXAyyY",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": true,
+                                "group": "",
+                                "key": "WAhq9tiXEkLImyNR",
+                                "label": "Kineticist",
+                                "type": "target"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "key": "subtrigger-input",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "Uw4491CYV4baT0SD.inputs.in"
+                            ]
+                        },
+                        "this": {
+                            "ids": []
+                        },
+                        "WAhq9tiXEkLImyNR": {
+                            "ids": [
+                                "pGmHEWPEX5PvjQPB.inputs.b"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "BfjtLFNJuNMBgXVj",
+                    "custom": {
+                        "inputs": [
+                            {
+                                "custom": true,
+                                "group": "",
+                                "key": "GfBbyVIsTRBoQoZu",
+                                "label": "Safe Elements?",
+                                "type": "boolean"
+                            }
+                        ],
+                        "outputs": [],
+                        "outs": []
+                    },
+                    "inputs": {
+                        "d9HttWP76IXywtml": {
+                            "ids": [],
+                            "value": false
+                        },
+                        "GfBbyVIsTRBoQoZu": {
+                            "ids": [
+                                "gCzqqYh1HfVBU7XD.outputs.value"
+                            ]
+                        },
+                        "h2cWS0oFITR4puQG": {
+                            "ids": []
+                        },
+                        "in": {
+                            "ids": [
+                                "gCzqqYh1HfVBU7XD.outputs.out"
+                            ]
+                        },
+                        "ky0YzehoZ9GUWR4s": {
+                            "ids": [],
+                            "value": false
+                        },
+                        "nFGnBC9OX6cR3d40": {
+                            "ids": []
+                        },
+                        "o8ryNdfqZWGfdZRQ": {
+                            "ids": []
+                        },
+                        "QhrfCXJqGhiGDYR3": {
+                            "ids": [
+                                "gCzqqYh1HfVBU7XD.outputs.value"
+                            ]
+                        },
+                        "XscPwsjDwxGOI2of": {
+                            "ids": [],
+                            "value": false
+                        },
+                        "z0TmreWutCkpH3CX": {
+                            "ids": []
+                        },
+                        "zIZvqU6ZYYX1LF9G": {
+                            "ids": [],
+                            "value": false
+                        }
+                    },
+                    "key": "subtrigger-output",
+                    "position": {
+                        "x": 1369,
+                        "y": 146
+                    },
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "Uw4491CYV4baT0SD",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "rhU7xPk7sTDXAyyY.outputs.out"
+                            ]
+                        },
+                        "target": {
+                            "ids": []
+                        },
+                        "uuid": {
+                            "ids": [],
+                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd"
+                        }
+                    },
+                    "key": "has-item",
+                    "outputs": {
+                        "false": {
+                            "ids": []
+                        },
+                        "item": {
+                            "ids": [
+                                "HnxFAittbHaWHqiZ.inputs.input"
+                            ]
+                        },
+                        "true": {
+                            "ids": [
+                                "HnxFAittbHaWHqiZ.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 548,
+                        "y": 98.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "HnxFAittbHaWHqiZ",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": true,
+                                "group": "",
+                                "key": "origin",
+                                "label": "Origin Actor",
+                                "type": "target"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "Uw4491CYV4baT0SD.outputs.true"
+                            ]
+                        },
+                        "input": {
+                            "ids": [
+                                "Uw4491CYV4baT0SD.outputs.item"
+                            ]
+                        }
+                    },
+                    "key": "item-splitter",
+                    "outputs": {
+                        "origin": {
+                            "ids": [
+                                "pGmHEWPEX5PvjQPB.inputs.a"
+                            ]
+                        },
+                        "origin|signature": {
+                            "ids": []
+                        },
+                        "out": {
+                            "ids": [
+                                "pGmHEWPEX5PvjQPB.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 785,
+                        "y": 137.23000000000002
+                    },
+                    "type": "splitter"
+                },
+                {
+                    "_id": "pGmHEWPEX5PvjQPB",
+                    "inputs": {
+                        "a": {
+                            "ids": [
+                                "HnxFAittbHaWHqiZ.outputs.origin"
+                            ]
+                        },
+                        "b": {
+                            "ids": [
+                                "rhU7xPk7sTDXAyyY.outputs.WAhq9tiXEkLImyNR"
+                            ]
+                        },
+                        "in": {
+                            "ids": [
+                                "HnxFAittbHaWHqiZ.outputs.out"
+                            ]
+                        }
+                    },
+                    "key": "eq-actor",
+                    "outputs": {
+                        "false": {
+                            "ids": []
+                        },
+                        "true": {
+                            "ids": [
+                                "gCzqqYh1HfVBU7XD.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 981,
+                        "y": 137.75
+                    },
+                    "type": "logic"
+                },
+                {
+                    "_id": "gCzqqYh1HfVBU7XD",
+                    "custom": {
+                        "inputs": [
+                            {
+                                "custom": false,
+                                "group": "",
+                                "key": "input",
+                                "label": "boolean",
+                                "type": "boolean"
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "custom": false,
+                                "group": "",
+                                "key": "value",
+                                "type": "boolean"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "pGmHEWPEX5PvjQPB.outputs.true"
+                            ]
+                        },
+                        "input": {
+                            "ids": [],
+                            "value": true
+                        }
+                    },
+                    "key": "variable-setter",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "BfjtLFNJuNMBgXVj.inputs.in"
+                            ]
+                        },
+                        "value": {
+                            "ids": [
+                                "BfjtLFNJuNMBgXVj.inputs.GfBbyVIsTRBoQoZu"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1174,
+                        "y": 139.75
+                    },
+                    "target": "rhU7xPk7sTDXAyyY.outputs.e5X2Ynye36jQgGRY",
+                    "type": "variable"
+                }
+            ],
+            "variables": {
+                "rhU7xPk7sTDXAyyY.outputs.e5X2Ynye36jQgGRY": {
+                    "global": true,
+                    "label": "Output",
+                    "locked": false,
+                    "type": "boolean"
+                }
+            }
+        },
+        {
             "_id": "KbmYmEm4rMEedc9N",
             "description": "<p>Send an ability to chat. The ability's slug and its origin are set in the parent trigger.</p>",
             "folder": "Monster Abilties",
@@ -1376,6 +1977,524 @@
                         "y": 367.25
                     },
                     "type": "value"
+                }
+            ]
+        },
+        {
+            "_id": "LJuaEKVxjMvAvlvd",
+            "description": "",
+            "folder": "Feats & Features",
+            "name": "Thermal Nimbus  (Aura Entered)",
+            "nodes": [
+                {
+                    "_id": "vR9CfnFeJeP25gqP",
+                    "inputs": {
+                        "slug": {
+                            "ids": [],
+                            "value": "kinetic-aura"
+                        },
+                        "targets": {
+                            "ids": [],
+                            "value": "all"
+                        },
+                        "turn": {
+                            "ids": [],
+                            "value": false
+                        }
+                    },
+                    "key": "aura-enter",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "JazgJ7ajxUh9U2CK.inputs.in"
+                            ]
+                        },
+                        "source": {
+                            "ids": [
+                                "mfaXee07LOd73Zga.inputs.BEwwxVzgSXKzDJj9",
+                                "JazgJ7ajxUh9U2CK.inputs.WAhq9tiXEkLImyNR"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "JazgJ7ajxUh9U2CK",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "vR9CfnFeJeP25gqP.outputs.out"
+                            ]
+                        },
+                        "WAhq9tiXEkLImyNR": {
+                            "ids": [
+                                "vR9CfnFeJeP25gqP.outputs.source"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-node",
+                    "outputs": {
+                        "1zDxBNYw9FE0E01Y": {
+                            "ids": []
+                        },
+                        "GfBbyVIsTRBoQoZu": {
+                            "ids": [
+                                "fB1cJSc6lhCf8ZlC.inputs.input"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "fB1cJSc6lhCf8ZlC.inputs.in"
+                            ]
+                        },
+                        "QhrfCXJqGhiGDYR3": {
+                            "ids": [
+                                "fB1cJSc6lhCf8ZlC.inputs.input"
+                            ]
+                        },
+                        "XscPwsjDwxGOI2of": {
+                            "ids": []
+                        }
+                    },
+                    "position": {
+                        "x": 621,
+                        "y": 199.5
+                    },
+                    "target": "4L67C3QxcYfBkIe5",
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "mfaXee07LOd73Zga",
+                    "inputs": {
+                        "BEwwxVzgSXKzDJj9": {
+                            "ids": [
+                                "vR9CfnFeJeP25gqP.outputs.source"
+                            ]
+                        },
+                        "in": {
+                            "ids": [
+                                "fB1cJSc6lhCf8ZlC.outputs.false"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-node",
+                    "position": {
+                        "x": 1053,
+                        "y": 260.75
+                    },
+                    "target": "Lq483RpAW8gAASLs",
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "fB1cJSc6lhCf8ZlC",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "JazgJ7ajxUh9U2CK.outputs.out"
+                            ]
+                        },
+                        "input": {
+                            "ids": [
+                                "JazgJ7ajxUh9U2CK.outputs.GfBbyVIsTRBoQoZu"
+                            ]
+                        }
+                    },
+                    "key": "boolean-splitter",
+                    "outputs": {
+                        "false": {
+                            "ids": [
+                                "mfaXee07LOd73Zga.inputs.in"
+                            ]
+                        },
+                        "true": {
+                            "ids": []
+                        }
+                    },
+                    "position": {
+                        "x": 862,
+                        "y": 215.75
+                    },
+                    "type": "splitter"
+                }
+            ]
+        },
+        {
+            "_id": "Lq483RpAW8gAASLs",
+            "description": "",
+            "folder": "Feats & Features",
+            "name": "Thermal Nimbus (Roll Damage)",
+            "nodes": [
+                {
+                    "_id": "yRjTcxpgFTfBT68d",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": true,
+                                "group": "",
+                                "key": "BEwwxVzgSXKzDJj9",
+                                "label": "Aura Source",
+                                "type": "target"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "key": "subtrigger-input",
+                    "outputs": {
+                        "BEwwxVzgSXKzDJj9": {
+                            "ids": [
+                                "uv0022TNb9Dfdkbn.inputs.target",
+                                "dKmsLNmOHNJGDmkg.inputs.origin"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "uv0022TNb9Dfdkbn.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "aOonZWNtjCyCdoIN",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "pGqJMR2lWAgGgKOd.outputs.out"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-output",
+                    "position": {
+                        "x": 1238,
+                        "y": 197
+                    },
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "uv0022TNb9Dfdkbn",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "yRjTcxpgFTfBT68d.outputs.out"
+                            ]
+                        },
+                        "target": {
+                            "ids": [
+                                "yRjTcxpgFTfBT68d.outputs.BEwwxVzgSXKzDJj9"
+                            ]
+                        },
+                        "uuid": {
+                            "ids": [],
+                            "value": "Compendium.pf2e.feat-effects.Item.2EMak2C8x6pFwoUi"
+                        }
+                    },
+                    "key": "has-item",
+                    "outputs": {
+                        "item": {
+                            "ids": []
+                        },
+                        "true": {
+                            "ids": [
+                                "ddUx8NXLIXrmMFSC.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 540,
+                        "y": 197.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "ddUx8NXLIXrmMFSC",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "uv0022TNb9Dfdkbn.outputs.true"
+                            ]
+                        },
+                        "item": {
+                            "ids": [
+                                "qjB7XlKvhE96HVE2.outputs.item"
+                            ]
+                        }
+                    },
+                    "key": "extract-formula",
+                    "outputs": {
+                        "formula": {
+                            "ids": [
+                                "pGqJMR2lWAgGgKOd.inputs.formula"
+                            ]
+                        },
+                        "options": {
+                            "ids": [
+                                "dKmsLNmOHNJGDmkg.inputs.options"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "pGqJMR2lWAgGgKOd.inputs.in"
+                            ]
+                        },
+                        "traits": {
+                            "ids": [
+                                "dKmsLNmOHNJGDmkg.inputs.traits"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 771,
+                        "y": 197.75
+                    },
+                    "type": "action"
+                },
+                {
+                    "_id": "pGqJMR2lWAgGgKOd",
+                    "inputs": {
+                        "formula": {
+                            "ids": [
+                                "ddUx8NXLIXrmMFSC.outputs.formula"
+                            ]
+                        },
+                        "in": {
+                            "ids": [
+                                "ddUx8NXLIXrmMFSC.outputs.out"
+                            ]
+                        },
+                        "roll": {
+                            "ids": [
+                                "dKmsLNmOHNJGDmkg.outputs.roll"
+                            ]
+                        }
+                    },
+                    "key": "roll-damage",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "aOonZWNtjCyCdoIN.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1015,
+                        "y": 197.75
+                    },
+                    "type": "action"
+                },
+                {
+                    "_id": "dKmsLNmOHNJGDmkg",
+                    "inputs": {
+                        "item": {
+                            "ids": [
+                                "qjB7XlKvhE96HVE2.outputs.item"
+                            ]
+                        },
+                        "options": {
+                            "ids": [
+                                "ddUx8NXLIXrmMFSC.outputs.options"
+                            ]
+                        },
+                        "origin": {
+                            "ids": [
+                                "yRjTcxpgFTfBT68d.outputs.BEwwxVzgSXKzDJj9"
+                            ]
+                        },
+                        "traits": {
+                            "ids": [
+                                "ddUx8NXLIXrmMFSC.outputs.traits"
+                            ]
+                        }
+                    },
+                    "key": "roll-data",
+                    "outputs": {
+                        "roll": {
+                            "ids": [
+                                "pGqJMR2lWAgGgKOd.inputs.roll"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1012.5,
+                        "y": 360.25
+                    },
+                    "type": "value"
+                },
+                {
+                    "_id": "qjB7XlKvhE96HVE2",
+                    "inputs": {
+                        "uuid": {
+                            "ids": [],
+                            "value": "Compendium.pf2e.feats-srd.Item.XJCsa3UbQtsKcqve"
+                        }
+                    },
+                    "key": "item-source",
+                    "outputs": {
+                        "item": {
+                            "ids": [
+                                "ddUx8NXLIXrmMFSC.inputs.item",
+                                "dKmsLNmOHNJGDmkg.inputs.item"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 797.5,
+                        "y": 354.25
+                    },
+                    "type": "value"
+                }
+            ]
+        },
+        {
+            "_id": "MIW5WDO597fGoWr5",
+            "description": "",
+            "folder": "Feats & Features",
+            "name": "Thermal Nimbus (Turn Started)",
+            "nodes": [
+                {
+                    "_id": "PQH6CfqMtlAZ8oBg",
+                    "key": "turn-start",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "ViY7RpUTsZG1qtUE.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "ViY7RpUTsZG1qtUE",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "PQH6CfqMtlAZ8oBg.outputs.out"
+                            ]
+                        },
+                        "slug": {
+                            "ids": [],
+                            "value": "kinetic-aura"
+                        },
+                        "targets": {
+                            "ids": [],
+                            "value": "all"
+                        }
+                    },
+                    "key": "inside-aura",
+                    "outputs": {
+                        "source": {
+                            "ids": [
+                                "NOILEL72mBsK5uLW.inputs.WAhq9tiXEkLImyNR",
+                                "q4e6s8jqkeMzfxtV.inputs.BEwwxVzgSXKzDJj9"
+                            ]
+                        },
+                        "true": {
+                            "ids": [
+                                "NOILEL72mBsK5uLW.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 537,
+                        "y": 201.23000000000002
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "NOILEL72mBsK5uLW",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "ViY7RpUTsZG1qtUE.outputs.true"
+                            ]
+                        },
+                        "WAhq9tiXEkLImyNR": {
+                            "ids": [
+                                "ViY7RpUTsZG1qtUE.outputs.source"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-node",
+                    "outputs": {
+                        "GfBbyVIsTRBoQoZu": {
+                            "ids": [
+                                "nCrduHEKkEQ3djYl.inputs.input"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "nCrduHEKkEQ3djYl.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 819,
+                        "y": 200.75
+                    },
+                    "target": "4L67C3QxcYfBkIe5",
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "q4e6s8jqkeMzfxtV",
+                    "inputs": {
+                        "BEwwxVzgSXKzDJj9": {
+                            "ids": [
+                                "ViY7RpUTsZG1qtUE.outputs.source"
+                            ]
+                        },
+                        "in": {
+                            "ids": [
+                                "nCrduHEKkEQ3djYl.outputs.false"
+                            ]
+                        }
+                    },
+                    "key": "subtrigger-node",
+                    "position": {
+                        "x": 1255,
+                        "y": 235.75
+                    },
+                    "target": "Lq483RpAW8gAASLs",
+                    "type": "subtrigger"
+                },
+                {
+                    "_id": "nCrduHEKkEQ3djYl",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "NOILEL72mBsK5uLW.outputs.out"
+                            ]
+                        },
+                        "input": {
+                            "ids": [
+                                "NOILEL72mBsK5uLW.outputs.GfBbyVIsTRBoQoZu"
+                            ]
+                        }
+                    },
+                    "key": "boolean-splitter",
+                    "outputs": {
+                        "false": {
+                            "ids": [
+                                "q4e6s8jqkeMzfxtV.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1059,
+                        "y": 216.75
+                    },
+                    "type": "splitter"
                 }
             ]
         },

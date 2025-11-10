@@ -1,0 +1,65 @@
+{
+  "name": "Aux Effect: Safe Elements",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.952,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Auxiliary effect for kineticist triggers when they have the @UUID[Compendium.pf2e.feats-srd.ZBPRABDXeLVwxFC7]{Safe Elements} feat.</p><p>This effect excludes you from being affected by the origin kineticist's triggers. Add it to the description of the kineticist's Safe Elements feat, and drag it from there.</p>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "rules": [],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 4
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "tokenIcon": {
+      "show": false
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": null,
+    "fromSpell": false,
+    "context": null
+  },
+  "img": "icons/magic/control/debuff-energy-hold-yellow.webp",
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "diNCaoaG6drqLVGt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.350",
+    "systemId": "pf2e",
+    "systemVersion": "7.6.4"
+  },
+  "_id": "p4SCBtIYPzVQ0gEd",
+  "sort": 0,
+  "_key": "!items!p4SCBtIYPzVQ0gEd"
+}
