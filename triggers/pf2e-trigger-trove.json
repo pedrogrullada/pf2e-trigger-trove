@@ -5,7 +5,7 @@
             "_id": "qFRjm1DiF2ye0nuX",
             "description": "<p>Automatically remove the Champion's Resistance effect after damage is taken.</p>",
             "folder": "Feats & Features",
-            "name": "Champion's Resistance (Remove Effect)",
+            "name": "Champion's Resistance (Damage Taken)",
             "nodes": [
                 {
                     "_id": "nOggEquouUTiOKnh",
@@ -49,7 +49,7 @@
             "_id": "ud3gr7TIOSGIX6KG",
             "description": "<p>Post a creature's Goblin Scuttle ability to chat when an allied token is moved to an adjacent space. Be aware of false positives resulting from a Foundry movement not being the same as having ended a move action.</p>",
             "folder": "Feats & Features",
-            "name": "Goblin Scuttle (Reminder)",
+            "name": "Goblin Scuttle (Token Moved)",
             "nodes": [
                 {
                     "_id": "alJQa0RbIZOQCIL8",
@@ -472,7 +472,7 @@
             "_id": "K8GYPAHnB7XZKlHD",
             "description": "<p>Add persistent fire damage to a creature within @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0]{Incendiary Aura} that takes fire damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is fire. This covers most cases, but be aware that some instances of fire damage will be missed.</em></p></p>",
             "folder": "Spells",
-            "name": "Incendiary Aura (Add Persistent Damage)",
+            "name": "Incendiary Aura (Damage Taken)",
             "nodes": [
                 {
                     "_id": "Gk1TCrQU7KShADph",
@@ -876,7 +876,7 @@
             "_id": "4kTXa69928czX3l9",
             "description": "<p>Reduce the duration of @UUID[Compendium.pf2e.spells-srd.Item.2BV2yYPfVJ5zirZt]{Mountain Resilience}'s effect by 1 minute each time the beneficiary of the spell is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of fire damage will be missed.</em></p>",
             "folder": "Spells",
-            "name": "Mountain Resilience (Reduce Duration)",
+            "name": "Mountain Resilience (Attack Rolled)",
             "nodes": [
                 {
                     "_id": "E43uf8iRfdGSBWBY",
@@ -1054,7 +1054,7 @@
             "_id": "55BlQXKBJuKxR0Fp",
             "description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.ZL97DcoJ8us6EwAF]{Shields of the Spirit}'s damage when an ally within the champion's aura is attacked. The champion must have the spell's effect on them.</p>",
             "folder": "Spells",
-            "name": "Shields of the Spirit (Roll Damage)",
+            "name": "Shields of the Spirit (Attack Rolled)",
             "nodes": [
                 {
                     "_id": "5Ffw8tb8P1fX3zzQ",
@@ -1442,7 +1442,7 @@
             "_id": "WWTQgPr6jEXI7Avv",
             "description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorns}' damage when the beneficiary of the spell is hit with an unarmed attack, or a melee attack by an adjacent creature.</p>",
             "folder": "Spells",
-            "name": "Vibrant Thorns (Roll Damage)",
+            "name": "Vibrant Thorns (Attack Rolled)",
             "nodes": [
                 {
                     "_id": "vHBoEFwYTRqQOmvX",
@@ -2042,7 +2042,7 @@
             "_id": "bAAN0NJZlrihZsTh",
             "description": "",
             "folder": "Feats & Features",
-            "name": "Safe Elements Check",
+            "name": "Safe Elements (Check)",
             "nodes": [
                 {
                     "_id": "rhU7xPk7sTDXAyyY",
