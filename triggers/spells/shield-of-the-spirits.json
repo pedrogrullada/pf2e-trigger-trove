@@ -1,0 +1,153 @@
+{
+  "_id": "55BlQXKBJuKxR0Fp",
+  "description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.ZL97DcoJ8us6EwAF]{Shields of the Spirit}'s damage when an ally within the champion's aura is attacked. The champion must have the spell's effect on them.</p>",
+  "folder": "Spells",
+  "name": "Shields of the Spirit (Attack Rolled)",
+  "nodes": [
+    {
+      "_id": "5Ffw8tb8P1fX3zzQ",
+      "key": "attack-roll",
+      "outputs": {
+        "other": {
+          "ids": ["ZoR39yPBKP5eE5PN.inputs.target"]
+        },
+        "out": {
+          "ids": ["ZoR39yPBKP5eE5PN.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "event"
+    },
+    {
+      "_id": "ZoR39yPBKP5eE5PN",
+      "inputs": {
+        "in": {
+          "ids": ["5Ffw8tb8P1fX3zzQ.outputs.out"]
+        },
+        "slug": {
+          "ids": [],
+          "value": "champions-aura"
+        },
+        "target": {
+          "ids": ["5Ffw8tb8P1fX3zzQ.outputs.other"]
+        },
+        "targets": {
+          "ids": [],
+          "value": "allies"
+        }
+      },
+      "key": "inside-aura",
+      "outputs": {
+        "source": {
+          "ids": [
+            "rGd4unBXiWFF7tG3.inputs.origin",
+            "3z6epIrvHjth3ocH.inputs.target"
+          ]
+        },
+        "true": {
+          "ids": ["3z6epIrvHjth3ocH.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 530,
+        "y": 202.23000000000002
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "3z6epIrvHjth3ocH",
+      "inputs": {
+        "in": {
+          "ids": ["ZoR39yPBKP5eE5PN.outputs.true"]
+        },
+        "target": {
+          "ids": ["ZoR39yPBKP5eE5PN.outputs.source"]
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e.spell-effects.Item.mlvDokpnQBhvQrSk"
+        }
+      },
+      "key": "has-item",
+      "outputs": {
+        "item": {
+          "ids": []
+        },
+        "true": {
+          "ids": ["ZoWPq43S0e5H2qtj.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 809,
+        "y": 204.75
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "ZoWPq43S0e5H2qtj",
+      "inputs": {
+        "formula": {
+          "ids": [],
+          "value": "(ceil(@actor.level/4))d4[spirit]"
+        },
+        "in": {
+          "ids": ["3z6epIrvHjth3ocH.outputs.true"]
+        },
+        "roll": {
+          "ids": ["rGd4unBXiWFF7tG3.outputs.roll"]
+        }
+      },
+      "key": "roll-damage",
+      "position": {
+        "x": 1062,
+        "y": 204.75
+      },
+      "type": "action"
+    },
+    {
+      "_id": "rGd4unBXiWFF7tG3",
+      "inputs": {
+        "item": {
+          "ids": ["uT28rwo8zhoZSFnX.outputs.item"]
+        },
+        "origin": {
+          "ids": ["ZoR39yPBKP5eE5PN.outputs.source"]
+        }
+      },
+      "key": "roll-data",
+      "outputs": {
+        "roll": {
+          "ids": ["ZoWPq43S0e5H2qtj.inputs.roll"]
+        }
+      },
+      "position": {
+        "x": 806.5,
+        "y": 340.25
+      },
+      "type": "value"
+    },
+    {
+      "_id": "uT28rwo8zhoZSFnX",
+      "inputs": {
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e.spells-srd.Item.ZL97DcoJ8us6EwAF"
+        }
+      },
+      "key": "item-source",
+      "outputs": {
+        "item": {
+          "ids": ["rGd4unBXiWFF7tG3.inputs.item"]
+        }
+      },
+      "position": {
+        "x": 601.5,
+        "y": 367.25
+      },
+      "type": "value"
+    }
+  ]
+}
