@@ -1,71 +1,211 @@
 {
-  "name": "Taunt Offguard When Attacking Other",
-  "type": "effect",
-  "effects": [],
-  "system": {
-    "_migration": {
-      "version": 0.952,
-      "previous": null
-    },
-    "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.actionspf2e.Item.4DYFJ4TUsNkgFBDb]{Taunt}</p><p>You are off-guard for 1 round.</p>",
-      "gm": ""
-    },
-    "publication": {
-      "title": "",
-      "authors": "",
-      "license": "OGL",
-      "remaster": false
-    },
-    "rules": [
-      {
-        "inMemoryOnly": true,
-        "key": "GrantItem",
-        "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg"
-      }
+    "_id": "lp48uom6KnwJqqbm",
+    "description": "<p>Checks if attacking creature is Taunted, if so it then checks if the attack target is creature is a creature other than the origin of Taunt. If so, off-guard is applied to the attacking creature until start of its next turn.</p>",
+    "folder": "Feats & Features",
+    "name": "Taunt (Attack Rolled)",
+    "nodes": [
+        {
+            "_id": "HXDTKLxztzxoSJ0b",
+            "key": "attack-roll",
+            "outputs": {
+                "other": {
+                    "ids": [
+                        "dhDKEodo68yOmboW.inputs.a"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "g0uNoPtxw7nnSCYY.inputs.in"
+                    ]
+                },
+                "this": {
+                    "ids": [
+                        "td8NBHCGOaaDPFEM.inputs.target",
+                        "MkP7YJUjgLgYw7Ub.inputs.target",
+                        "g0uNoPtxw7nnSCYY.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "td8NBHCGOaaDPFEM",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "g0uNoPtxw7nnSCYY.outputs.false"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "HXDTKLxztzxoSJ0b.outputs.this"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.feat-effects.Item.FlyWq9znOHvpISNW"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "item": {
+                    "ids": [
+                        "0KNgCnrMVD3mqXag.inputs.input"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "0KNgCnrMVD3mqXag.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 787,
+                "y": 204.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "0KNgCnrMVD3mqXag",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": true,
+                        "group": "",
+                        "key": "origin",
+                        "label": "Origin",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "td8NBHCGOaaDPFEM.outputs.true"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "td8NBHCGOaaDPFEM.outputs.item"
+                    ]
+                }
+            },
+            "key": "item-splitter",
+            "outputs": {
+                "origin": {
+                    "ids": [
+                        "dhDKEodo68yOmboW.inputs.b"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "dhDKEodo68yOmboW.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1032,
+                "y": 262.23
+            },
+            "type": "splitter"
+        },
+        {
+            "_id": "dhDKEodo68yOmboW",
+            "inputs": {
+                "a": {
+                    "ids": [
+                        "HXDTKLxztzxoSJ0b.outputs.other"
+                    ]
+                },
+                "b": {
+                    "ids": [
+                        "0KNgCnrMVD3mqXag.outputs.origin"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "0KNgCnrMVD3mqXag.outputs.out"
+                    ]
+                }
+            },
+            "key": "eq-actor",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "MkP7YJUjgLgYw7Ub.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1266.5,
+                "y": 298.75
+            },
+            "type": "logic"
+        },
+        {
+            "_id": "MkP7YJUjgLgYw7Ub",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "dhDKEodo68yOmboW.outputs.false"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "HXDTKLxztzxoSJ0b.outputs.this"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.r28SWVOzbBKh25gq"
+                }
+            },
+            "key": "create-item",
+            "position": {
+                "x": 1472,
+                "y": 354
+            },
+            "type": "action"
+        },
+        {
+            "_id": "g0uNoPtxw7nnSCYY",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "HXDTKLxztzxoSJ0b.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "HXDTKLxztzxoSJ0b.outputs.this"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.r28SWVOzbBKh25gq"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "td8NBHCGOaaDPFEM.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 544.5,
+                "y": 194.25
+            },
+            "type": "condition"
+        }
     ],
-    "slug": null,
-    "traits": {
-      "otherTags": [],
-      "value": []
-    },
-    "level": {
-      "value": 1
-    },
-    "duration": {
-      "value": 1,
-      "unit": "rounds",
-      "expiry": "turn-start",
-      "sustained": false
-    },
-    "tokenIcon": {
-      "show": false
-    },
-    "unidentified": false,
-    "start": {
-      "value": 0,
-      "initiative": null
-    },
-    "badge": null,
-    "fromSpell": false,
-    "context": null
-  },
-  "_id": "r28SWVOzbBKh25gq",
-  "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "VGbTFIXX0Qzs8xTF": 3
-  },
-  "flags": {},
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.350",
-    "systemId": "pf2e",
-    "systemVersion": "7.7.1"
-  },
-  "_key": "!items!r28SWVOzbBKh25gq"
+    "variables": {}
 }
