@@ -1,0 +1,72 @@
+{
+  "name": "Aux Effect: One Shot, One Kill",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.952,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.actionspf2e.Item.Tlrde2xh7AhesXNB]{One Shot, One Kill}</p><p>Sets the necessary Roll Option for One Shot, One Kill damage to be automatically applied.</p>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "option": "one-shot-one-kill",
+        "domain": "strike-damage",
+        "priority": 51
+      }
+    ],
+    "slug": "aux-effect-one-shot-one-kill",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": null,
+    "fromSpell": false,
+    "context": null
+  },
+  "_id": "jS7TfJyhTvK8XExA",
+  "img": "icons/skills/ranged/projectile-strike-impale-gray.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "ffgOqjJLqWaPWsyC": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.350",
+    "systemId": "pf2e",
+    "systemVersion": "7.7.1"
+  },
+  "_key": "!items!jS7TfJyhTvK8XExA"
+}

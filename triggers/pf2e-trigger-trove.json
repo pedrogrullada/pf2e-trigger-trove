@@ -2263,7 +2263,8 @@
                             "ids": [
                                 "Vhhpnl6DCt52JmHC.inputs.target",
                                 "BXCPgJG2xNCZstKr.inputs.target",
-                                "7Xovp9XwlWSyLJsO.inputs.target"
+                                "7Xovp9XwlWSyLJsO.inputs.target",
+                                "9pF94AfV1wTMzynM.inputs.target"
                             ]
                         },
                         "out": {
@@ -2298,6 +2299,11 @@
                     },
                     "key": "has-item",
                     "outputs": {
+                        "item": {
+                            "ids": [
+                                "3FZDTsxc9iy4nLt1.inputs.item"
+                            ]
+                        },
                         "true": {
                             "ids": [
                                 "7Xovp9XwlWSyLJsO.inputs.in"
@@ -2346,7 +2352,7 @@
                         },
                         "in": {
                             "ids": [
-                                "7Xovp9XwlWSyLJsO.outputs.true"
+                                "GQ9Mtnciwjx2HYHu.outputs.true"
                             ]
                         },
                         "target": {
@@ -2356,13 +2362,20 @@
                         },
                         "uuid": {
                             "ids": [],
-                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.Wa7FSiCSJUjjaN65"
+                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.jS7TfJyhTvK8XExA"
                         }
                     },
                     "key": "create-item",
+                    "outputs": {
+                        "out": {
+                            "ids": [
+                                "3FZDTsxc9iy4nLt1.inputs.in"
+                            ]
+                        }
+                    },
                     "position": {
-                        "x": 1542,
-                        "y": 686.75
+                        "x": 1823,
+                        "y": 637.75
                     },
                     "type": "action"
                 },
@@ -2388,15 +2401,95 @@
                     "outputs": {
                         "true": {
                             "ids": [
+                                "GQ9Mtnciwjx2HYHu.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1312,
+                        "y": 620.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "GQ9Mtnciwjx2HYHu",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "7Xovp9XwlWSyLJsO.outputs.true"
+                            ]
+                        },
+                        "prompt": {
+                            "ids": [],
+                            "value": "<p>Are you using One Shot, One Kill in this combat?</p>"
+                        },
+                        "title": {
+                            "ids": [
+                                "9pF94AfV1wTMzynM.outputs.label"
+                            ]
+                        }
+                    },
+                    "key": "await-confirm",
+                    "outputs": {
+                        "true": {
+                            "ids": [
                                 "BXCPgJG2xNCZstKr.inputs.in"
                             ]
                         }
                     },
                     "position": {
-                        "x": 1310,
-                        "y": 653.75
+                        "x": 1551,
+                        "y": 623.23
                     },
-                    "type": "condition"
+                    "type": "action"
+                },
+                {
+                    "_id": "9pF94AfV1wTMzynM",
+                    "inputs": {
+                        "prefix": {
+                            "ids": [],
+                            "value": "One Shot, One Kill"
+                        },
+                        "target": {
+                            "ids": [
+                                "WkjfKwOCxdxAccNE.outputs.other"
+                            ]
+                        }
+                    },
+                    "key": "named-label-actor",
+                    "outputs": {
+                        "label": {
+                            "ids": [
+                                "GQ9Mtnciwjx2HYHu.inputs.title"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1293.5,
+                        "y": 779.25
+                    },
+                    "type": "value"
+                },
+                {
+                    "_id": "3FZDTsxc9iy4nLt1",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "BXCPgJG2xNCZstKr.outputs.out"
+                            ]
+                        },
+                        "item": {
+                            "ids": [
+                                "Vhhpnl6DCt52JmHC.outputs.item"
+                            ]
+                        }
+                    },
+                    "key": "send-to-chat",
+                    "position": {
+                        "x": 2061,
+                        "y": 646.75
+                    },
+                    "type": "action"
                 }
             ]
         },
@@ -2445,7 +2538,7 @@
                         },
                         "uuid": {
                             "ids": [],
-                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.Wa7FSiCSJUjjaN65"
+                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.jS7TfJyhTvK8XExA"
                         }
                     },
                     "key": "remove-item",
@@ -2498,6 +2591,7 @@
                             ]
                         },
                         "predicate": {
+                            "ids": [],
                             "value": "[\n  {\n    \"or\": [\n      \"item:group:crossbow\",\n      \"item:group:firearm\"\n    ]\n  }\n]"
                         }
                     },
