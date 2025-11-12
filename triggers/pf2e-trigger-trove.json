@@ -2,231 +2,6 @@
     "items": [],
     "triggers": [
         {
-            "_id": "sBxRJPElo18e25Zl",
-            "description": "<p>Checks if attacking creature has taunt, if so it then checks if attack target is creature is the creature that originally targeted. If not, Offguard is applied to attacking creature until start of next turn.</p>",
-            "folder": "Feats & Features",
-            "name": "Taunt (Attack Rolled)",
-            "nodes": [
-                {
-                    "_id": "HXDTKLxztzxoSJ0b",
-                    "key": "attack-roll",
-                    "outputs": {
-                        "other": {
-                            "ids": [
-                                "dhDKEodo68yOmboW.inputs.a"
-                            ]
-                        },
-                        "out": {
-                            "ids": [
-                                "td8NBHCGOaaDPFEM.inputs.in"
-                            ]
-                        },
-                        "this": {
-                            "ids": [
-                                "td8NBHCGOaaDPFEM.inputs.target",
-                                "oHVn1IBAVWHidPal.inputs.target"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 350,
-                        "y": 200
-                    },
-                    "type": "event"
-                },
-                {
-                    "_id": "td8NBHCGOaaDPFEM",
-                    "inputs": {
-                        "in": {
-                            "ids": [
-                                "HXDTKLxztzxoSJ0b.outputs.out"
-                            ]
-                        },
-                        "target": {
-                            "ids": [
-                                "HXDTKLxztzxoSJ0b.outputs.this"
-                            ]
-                        },
-                        "uuid": {
-                            "ids": [],
-                            "value": "Compendium.pf2e.feat-effects.Item.FlyWq9znOHvpISNW"
-                        }
-                    },
-                    "key": "has-item",
-                    "outputs": {
-                        "item": {
-                            "ids": [
-                                "0KNgCnrMVD3mqXag.inputs.input"
-                            ]
-                        },
-                        "true": {
-                            "ids": [
-                                "0KNgCnrMVD3mqXag.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 570,
-                        "y": 197.75
-                    },
-                    "type": "condition"
-                },
-                {
-                    "_id": "0KNgCnrMVD3mqXag",
-                    "custom": {
-                        "inputs": [],
-                        "outputs": [
-                            {
-                                "custom": true,
-                                "group": "",
-                                "key": "origin",
-                                "label": "Origin",
-                                "type": "target"
-                            }
-                        ],
-                        "outs": []
-                    },
-                    "inputs": {
-                        "in": {
-                            "ids": [
-                                "td8NBHCGOaaDPFEM.outputs.true"
-                            ]
-                        },
-                        "input": {
-                            "ids": [
-                                "td8NBHCGOaaDPFEM.outputs.item"
-                            ]
-                        }
-                    },
-                    "key": "item-splitter",
-                    "outputs": {
-                        "origin": {
-                            "ids": [
-                                "dhDKEodo68yOmboW.inputs.b"
-                            ]
-                        },
-                        "out": {
-                            "ids": [
-                                "dhDKEodo68yOmboW.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 823,
-                        "y": 242.23000000000002
-                    },
-                    "type": "splitter"
-                },
-                {
-                    "_id": "dhDKEodo68yOmboW",
-                    "inputs": {
-                        "a": {
-                            "ids": [
-                                "HXDTKLxztzxoSJ0b.outputs.other"
-                            ]
-                        },
-                        "b": {
-                            "ids": [
-                                "0KNgCnrMVD3mqXag.outputs.origin"
-                            ]
-                        },
-                        "in": {
-                            "ids": [
-                                "0KNgCnrMVD3mqXag.outputs.out"
-                            ]
-                        }
-                    },
-                    "key": "eq-actor",
-                    "outputs": {
-                        "false": {
-                            "ids": [
-                                "oHVn1IBAVWHidPal.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 1049.5,
-                        "y": 281.75
-                    },
-                    "type": "logic"
-                },
-                {
-                    "_id": "oHVn1IBAVWHidPal",
-                    "inputs": {
-                        "condition": {
-                            "ids": [],
-                            "value": "off-guard"
-                        },
-                        "effect": {
-                            "ids": [
-                                "wA46liFabIpEET3J.outputs.effect"
-                            ]
-                        },
-                        "in": {
-                            "ids": [
-                                "dhDKEodo68yOmboW.outputs.false"
-                            ]
-                        },
-                        "target": {
-                            "ids": [
-                                "HXDTKLxztzxoSJ0b.outputs.this"
-                            ]
-                        }
-                    },
-                    "key": "add-condition",
-                    "position": {
-                        "x": 1256,
-                        "y": 324.75
-                    },
-                    "type": "action"
-                },
-                {
-                    "_id": "wA46liFabIpEET3J",
-                    "inputs": {
-                        "duration": {
-                            "ids": [
-                                "b8PQy4MLGcKpHYAj.outputs.duration"
-                            ]
-                        },
-                        "label": {
-                            "ids": [],
-                            "value": ""
-                        }
-                    },
-                    "key": "effect-data",
-                    "outputs": {
-                        "effect": {
-                            "ids": [
-                                "oHVn1IBAVWHidPal.inputs.effect"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 847.5,
-                        "y": 444.25
-                    },
-                    "type": "value"
-                },
-                {
-                    "_id": "b8PQy4MLGcKpHYAj",
-                    "key": "duration-unit",
-                    "outputs": {
-                        "duration": {
-                            "ids": [
-                                "wA46liFabIpEET3J.inputs.duration"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 534.5,
-                        "y": 516.25
-                    },
-                    "type": "value"
-                }
-            ],
-            "variables": {}
-        },
-        {
             "_id": "qFRjm1DiF2ye0nuX",
             "description": "<p>Automatically remove the Champion's Resistance effect after damage is taken.</p>",
             "folder": "Feats & Features",
@@ -2835,6 +2610,217 @@
                     "type": "condition"
                 }
             ]
+        },
+        {
+            "_id": "lp48uom6KnwJqqbm",
+            "description": "<p>Checks if attacking creature has taunt, if so it then checks if attack target is creature is the creature that originally targeted. If not, Offguard is applied to attacking creature until start of next turn.</p>",
+            "folder": "Feats & Features",
+            "name": "Taunt (Attack Rolled)",
+            "nodes": [
+                {
+                    "_id": "HXDTKLxztzxoSJ0b",
+                    "key": "attack-roll",
+                    "outputs": {
+                        "other": {
+                            "ids": [
+                                "dhDKEodo68yOmboW.inputs.a"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "g0uNoPtxw7nnSCYY.inputs.in"
+                            ]
+                        },
+                        "this": {
+                            "ids": [
+                                "td8NBHCGOaaDPFEM.inputs.target",
+                                "MkP7YJUjgLgYw7Ub.inputs.target",
+                                "g0uNoPtxw7nnSCYY.inputs.target"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "td8NBHCGOaaDPFEM",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "g0uNoPtxw7nnSCYY.outputs.false"
+                            ]
+                        },
+                        "target": {
+                            "ids": [
+                                "HXDTKLxztzxoSJ0b.outputs.this"
+                            ]
+                        },
+                        "uuid": {
+                            "ids": [],
+                            "value": "Compendium.pf2e.feat-effects.Item.FlyWq9znOHvpISNW"
+                        }
+                    },
+                    "key": "has-item",
+                    "outputs": {
+                        "item": {
+                            "ids": [
+                                "0KNgCnrMVD3mqXag.inputs.input"
+                            ]
+                        },
+                        "true": {
+                            "ids": [
+                                "0KNgCnrMVD3mqXag.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 787,
+                        "y": 204.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "0KNgCnrMVD3mqXag",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": true,
+                                "group": "",
+                                "key": "origin",
+                                "label": "Origin",
+                                "type": "target"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "td8NBHCGOaaDPFEM.outputs.true"
+                            ]
+                        },
+                        "input": {
+                            "ids": [
+                                "td8NBHCGOaaDPFEM.outputs.item"
+                            ]
+                        }
+                    },
+                    "key": "item-splitter",
+                    "outputs": {
+                        "origin": {
+                            "ids": [
+                                "dhDKEodo68yOmboW.inputs.b"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "dhDKEodo68yOmboW.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1032,
+                        "y": 262.23
+                    },
+                    "type": "splitter"
+                },
+                {
+                    "_id": "dhDKEodo68yOmboW",
+                    "inputs": {
+                        "a": {
+                            "ids": [
+                                "HXDTKLxztzxoSJ0b.outputs.other"
+                            ]
+                        },
+                        "b": {
+                            "ids": [
+                                "0KNgCnrMVD3mqXag.outputs.origin"
+                            ]
+                        },
+                        "in": {
+                            "ids": [
+                                "0KNgCnrMVD3mqXag.outputs.out"
+                            ]
+                        }
+                    },
+                    "key": "eq-actor",
+                    "outputs": {
+                        "false": {
+                            "ids": [
+                                "MkP7YJUjgLgYw7Ub.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 1266.5,
+                        "y": 298.75
+                    },
+                    "type": "logic"
+                },
+                {
+                    "_id": "MkP7YJUjgLgYw7Ub",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "dhDKEodo68yOmboW.outputs.false"
+                            ]
+                        },
+                        "target": {
+                            "ids": [
+                                "HXDTKLxztzxoSJ0b.outputs.this"
+                            ]
+                        },
+                        "uuid": {
+                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.r28SWVOzbBKh25gq"
+                        }
+                    },
+                    "key": "create-item",
+                    "position": {
+                        "x": 1472,
+                        "y": 354
+                    },
+                    "type": "action"
+                },
+                {
+                    "_id": "g0uNoPtxw7nnSCYY",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "HXDTKLxztzxoSJ0b.outputs.out"
+                            ]
+                        },
+                        "target": {
+                            "ids": [
+                                "HXDTKLxztzxoSJ0b.outputs.this"
+                            ]
+                        },
+                        "uuid": {
+                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.r28SWVOzbBKh25gq"
+                        }
+                    },
+                    "key": "has-item",
+                    "outputs": {
+                        "false": {
+                            "ids": [
+                                "td8NBHCGOaaDPFEM.inputs.in"
+                            ]
+                        },
+                        "true": {
+                            "ids": []
+                        }
+                    },
+                    "position": {
+                        "x": 544.5,
+                        "y": 194.25
+                    },
+                    "type": "condition"
+                }
+            ],
+            "variables": {}
         },
         {
             "_id": "bAAN0NJZlrihZsTh",
