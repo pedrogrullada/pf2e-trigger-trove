@@ -1,3 +1,10 @@
+## 0.3.0
+- Workflow improvements
+  - Add release script (Chasarooni)
+  - Split triggers into individual JSON files to be merged on build (Chasarooni)
+- Add new triggers
+  - Apply off-guard to a **Taunted** creature that attacks a creature other than the origin of its taunt effect. (Ettio) 
+  - Add a **Shared Stratagem** effect to a Devise a Stratagem target, and post an effect to drag onto the designated ally. The target will be off-guard to the designated ally's next attack
 ## 0.2.2
 - Add missing auxiliary effect for One Shot, One Kill trigger
 - Add confirmation dialogue for One Shot, One Kill trigger
