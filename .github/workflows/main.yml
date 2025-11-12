@@ -184,7 +184,7 @@ jobs:
                     CHANGELOG.md                         \
                     LICENSE                              \
                     main.js                              \
-                    triggers/pf2e-trigger-trove.json     \
+                    triggers/triggers.json               \
                     templates/                           \
                     scripts/                             \
                     styles/                              \
