@@ -134,6 +134,11 @@ jobs:
               const content = fs.readFileSync(file, 'utf8');
               const data = JSON.parse(content);
               
+              // If the file has a trigger object, add it to triggers array
+              if (data.trigger) {
+                combined.triggers.push(data.trigger);
+                console.log(`Added trigger from ${file}`);
+              }
               // If the file has a triggers array, add all triggers
               else if (Array.isArray(data.triggers)) {
                 combined.triggers.push(...data.triggers);
