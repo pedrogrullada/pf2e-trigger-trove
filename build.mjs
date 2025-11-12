@@ -33,7 +33,7 @@ for (const pack of packFolders) {
 console.log("Build Packs Finished");
 
 // Copy files and folders to output
-const files = ["triggers","module.json", "README.md","LICENSE"];
+const files = ["triggers/pf2e-trigger-trove.json","module.json", "README.md","LICENSE"];
 for (const file of files) {
     await fs.cp(file, path.resolve(outDir, file), {recursive: true});
 }
