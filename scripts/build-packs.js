@@ -25,7 +25,7 @@ for (const pack of packFolders) {
 
   try {
     await compilePack(sourcePath, outputPath);
-    console.log(`✔ Successfully compiled: ${packName}`);
+    console.log(`Successfully compiled: ${packName}`);
 
     const contents = await fs.readdir(sourcePath, { withFileTypes: true });
     for (const item of contents) {
@@ -36,7 +36,7 @@ for (const pack of packFolders) {
     }
     console.log(`  Cleaned source JSON files from ${packName}`);
   } catch (error) {
-    console.error(`✗ Failed to compile ${packName}:`, error.message);
+    console.error(`Failed to compile ${packName}:`, error.message);
   }
 }
 
