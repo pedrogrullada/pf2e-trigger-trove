@@ -87,7 +87,7 @@ jobs:
 
       # Build
       - name: Build
-        run: node build.mjs
+        run: node ./scripts/build-packs.js
 
       # Combine individual trigger files into a single file
       - name: Combine Trigger Files
@@ -131,7 +131,6 @@ jobs:
             main.js                              \
             triggers/pf2e-trigger-trove.json     \
             templates/                           \
-            scripts/                             \
             styles/                              \
             packs/                               \
             lang/                                \
