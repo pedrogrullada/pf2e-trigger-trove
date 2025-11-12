@@ -80,17 +80,9 @@ jobs:
         id: get_version
         uses: battila7/get-version-action@v2
 
-      # Install dependencies needed for pack compilation
-      - name: Install Dependencies
-        run: npm install @foundryvtt/foundryvtt-cli
-
-      # Build the packs into a temporary build directory
-      - name: Build Packs
-        run: node ./scripts/build-packs.js
-
-      # Combine individual trigger files into a single file
-      - name: Combine Trigger Files
-        run: node ./scripts/combine-triggers.js
+      - name: Build
+        run: |
+          npm run build
 
       # Modify "module.json" with values specific to the release.
       # Since the values for the "version" and "url" keys aren't known ahead of
