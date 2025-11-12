@@ -5,26 +5,39 @@ import path from "path";
 
 const packsDir = path.resolve(process.cwd(), "packs");
 
-if (existsSync(packsDir)) {
-  const filesToClean = (await fs.readdir(packsDir)).map((dirName) =>
-    path.resolve(packsDir, dirName)
-  );
-  for (const file of filesToClean) {
-    await fs.rm(file, { recursive: true });
-  }
-} else {
-  await fs.mkdir(packsDir);
+if (!existsSync(packsDir)) {
+  console.error("Error: packs directory does not exist!");
+  process.exit(1);
 }
 
-await fs.mkdir(packsDir, { recursive: true });
+const packFolders = await fs.readdir(packsDir, { withFileTypes: true });
 
-const packFolders = await fs.readdir("packs");
 for (const pack of packFolders) {
-  const sourcePath = pack;
-  const outputPath = path.resolve(packsDir, pack);
+  if (!pack.isDirectory()) {
+    continue;
+  }
 
-  console.log(`Compiling pack: ${pack}`);
-  await compilePack(sourcePath, outputPath);
+  const packName = pack.name;
+  const sourcePath = path.resolve(packsDir, packName);
+  const outputPath = path.resolve(packsDir, packName);
+
+  console.log(`Compiling pack: ${packName}`);
+
+  try {
+    await compilePack(sourcePath, outputPath);
+    console.log(`✔ Successfully compiled: ${packName}`);
+
+    const contents = await fs.readdir(sourcePath, { withFileTypes: true });
+    for (const item of contents) {
+      const itemPath = path.resolve(sourcePath, item.name);
+      if (item.isFile() && item.name.endsWith(".json")) {
+        await fs.unlink(itemPath);
+      }
+    }
+    console.log(`  Cleaned source JSON files from ${packName}`);
+  } catch (error) {
+    console.error(`✗ Failed to compile ${packName}:`, error.message);
+  }
 }
 
 console.log("Pack compilation complete!");
