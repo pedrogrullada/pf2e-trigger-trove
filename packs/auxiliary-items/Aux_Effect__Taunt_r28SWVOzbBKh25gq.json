@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.feat-effects.Item.FlyWq9znOHvpISNW]{Effect: Taunt}</p><p></p><p>Sets Offguard and duration for creature that has taunt and attacked a creature other than the Guardian that gave it taunt.</p>",
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.actionspf2e.Item.4DYFJ4TUsNkgFBDb]{Taunt}</p><p>You are off-guard for 1 round.</p>",
       "gm": ""
     },
     "publication": {
@@ -19,6 +19,7 @@
     },
     "rules": [
       {
+        "inMemoryOnly": true,
         "key": "GrantItem",
         "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg"
       }
@@ -38,9 +39,9 @@
       "sustained": false
     },
     "tokenIcon": {
-      "show": true
+      "show": false
     },
-    "unidentified": true,
+    "unidentified": false,
     "start": {
       "value": 0,
       "initiative": null
