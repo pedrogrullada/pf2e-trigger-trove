@@ -1,0 +1,102 @@
+{
+  "_id": "k0xxagFv7QRRkAgZ",
+  "description": "<p>Remove the One Shot, One Kill auxiliary effect when an enemy takes damage from a character benefitting from that ability.</p>",
+  "folder": "Feats & Features",
+  "name": "One Shot, One Kill (Damage Taken)",
+  "nodes": [
+    {
+      "_id": "NNtpqUsGLItiISNT",
+      "key": "damage-taken",
+      "outputs": {
+        "options": {
+          "ids": ["wr3McEPuRJw8eDBO.inputs.list"]
+        },
+        "other": {
+          "ids": []
+        },
+        "out": {
+          "ids": ["wr3McEPuRJw8eDBO.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "event"
+    },
+    {
+      "_id": "D5tPvMUpohF58PjK",
+      "inputs": {
+        "in": {
+          "ids": ["wr3McEPuRJw8eDBO.outputs.true"]
+        },
+        "target": {
+          "ids": ["ZzbhmEnFk4fJqDH6.outputs.output"]
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.jS7TfJyhTvK8XExA"
+        }
+      },
+      "key": "remove-item",
+      "position": {
+        "x": 778,
+        "y": 211.75
+      },
+      "type": "action"
+    },
+    {
+      "_id": "ZzbhmEnFk4fJqDH6",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": false,
+            "group": "",
+            "key": "output",
+            "type": "target"
+          }
+        ],
+        "outs": []
+      },
+      "key": "variable-getter",
+      "outputs": {
+        "output": {
+          "ids": ["D5tPvMUpohF58PjK.inputs.target"]
+        }
+      },
+      "position": {
+        "x": 657.5,
+        "y": 346.25
+      },
+      "target": "NNtpqUsGLItiISNT.outputs.other",
+      "type": "variable"
+    },
+    {
+      "_id": "wr3McEPuRJw8eDBO",
+      "inputs": {
+        "in": {
+          "ids": ["NNtpqUsGLItiISNT.outputs.out"]
+        },
+        "list": {
+          "ids": ["NNtpqUsGLItiISNT.outputs.options"]
+        },
+        "predicate": {
+          "ids": [],
+          "value": "[\n  {\n    \"or\": [\n      \"item:group:crossbow\",\n      \"item:group:firearm\"\n    ]\n  }\n]"
+        }
+      },
+      "key": "match-predicate",
+      "outputs": {
+        "true": {
+          "ids": ["D5tPvMUpohF58PjK.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 539.5,
+        "y": 211.75
+      },
+      "type": "condition"
+    }
+  ]
+}

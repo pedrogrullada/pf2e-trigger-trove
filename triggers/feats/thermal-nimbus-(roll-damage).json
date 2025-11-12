@@ -1,0 +1,191 @@
+{
+  "_id": "dXiVIcJYpjkeqA73",
+  "description": "",
+  "folder": "Feats & Features",
+  "name": "Thermal Nimbus (Roll Damage)",
+  "nodes": [
+    {
+      "_id": "yRjTcxpgFTfBT68d",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": true,
+            "group": "",
+            "key": "BEwwxVzgSXKzDJj9",
+            "label": "Aura Source",
+            "type": "target"
+          }
+        ],
+        "outs": []
+      },
+      "key": "subtrigger-input",
+      "outputs": {
+        "BEwwxVzgSXKzDJj9": {
+          "ids": [
+            "uv0022TNb9Dfdkbn.inputs.target",
+            "dKmsLNmOHNJGDmkg.inputs.origin"
+          ]
+        },
+        "out": {
+          "ids": ["uv0022TNb9Dfdkbn.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "subtrigger"
+    },
+    {
+      "_id": "aOonZWNtjCyCdoIN",
+      "inputs": {
+        "in": {
+          "ids": ["pGqJMR2lWAgGgKOd.outputs.out"]
+        }
+      },
+      "key": "subtrigger-output",
+      "position": {
+        "x": 1238,
+        "y": 197
+      },
+      "type": "subtrigger"
+    },
+    {
+      "_id": "uv0022TNb9Dfdkbn",
+      "inputs": {
+        "in": {
+          "ids": ["yRjTcxpgFTfBT68d.outputs.out"]
+        },
+        "target": {
+          "ids": ["yRjTcxpgFTfBT68d.outputs.BEwwxVzgSXKzDJj9"]
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e.feat-effects.Item.2EMak2C8x6pFwoUi"
+        }
+      },
+      "key": "has-item",
+      "outputs": {
+        "item": {
+          "ids": []
+        },
+        "true": {
+          "ids": ["ddUx8NXLIXrmMFSC.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 540,
+        "y": 197.75
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "ddUx8NXLIXrmMFSC",
+      "inputs": {
+        "in": {
+          "ids": ["uv0022TNb9Dfdkbn.outputs.true"]
+        },
+        "item": {
+          "ids": ["qjB7XlKvhE96HVE2.outputs.item"]
+        }
+      },
+      "key": "extract-formula",
+      "outputs": {
+        "formula": {
+          "ids": ["pGqJMR2lWAgGgKOd.inputs.formula"]
+        },
+        "options": {
+          "ids": ["dKmsLNmOHNJGDmkg.inputs.options"]
+        },
+        "out": {
+          "ids": ["pGqJMR2lWAgGgKOd.inputs.in"]
+        },
+        "traits": {
+          "ids": ["dKmsLNmOHNJGDmkg.inputs.traits"]
+        }
+      },
+      "position": {
+        "x": 771,
+        "y": 197.75
+      },
+      "type": "action"
+    },
+    {
+      "_id": "pGqJMR2lWAgGgKOd",
+      "inputs": {
+        "formula": {
+          "ids": ["ddUx8NXLIXrmMFSC.outputs.formula"]
+        },
+        "in": {
+          "ids": ["ddUx8NXLIXrmMFSC.outputs.out"]
+        },
+        "roll": {
+          "ids": ["dKmsLNmOHNJGDmkg.outputs.roll"]
+        }
+      },
+      "key": "roll-damage",
+      "outputs": {
+        "out": {
+          "ids": ["aOonZWNtjCyCdoIN.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 1015,
+        "y": 197.75
+      },
+      "type": "action"
+    },
+    {
+      "_id": "dKmsLNmOHNJGDmkg",
+      "inputs": {
+        "item": {
+          "ids": ["qjB7XlKvhE96HVE2.outputs.item"]
+        },
+        "options": {
+          "ids": ["ddUx8NXLIXrmMFSC.outputs.options"]
+        },
+        "origin": {
+          "ids": ["yRjTcxpgFTfBT68d.outputs.BEwwxVzgSXKzDJj9"]
+        },
+        "traits": {
+          "ids": ["ddUx8NXLIXrmMFSC.outputs.traits"]
+        }
+      },
+      "key": "roll-data",
+      "outputs": {
+        "roll": {
+          "ids": ["pGqJMR2lWAgGgKOd.inputs.roll"]
+        }
+      },
+      "position": {
+        "x": 1012.5,
+        "y": 360.25
+      },
+      "type": "value"
+    },
+    {
+      "_id": "qjB7XlKvhE96HVE2",
+      "inputs": {
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e.feats-srd.Item.XJCsa3UbQtsKcqve"
+        }
+      },
+      "key": "item-source",
+      "outputs": {
+        "item": {
+          "ids": [
+            "ddUx8NXLIXrmMFSC.inputs.item",
+            "dKmsLNmOHNJGDmkg.inputs.item"
+          ]
+        }
+      },
+      "position": {
+        "x": 797.5,
+        "y": 354.25
+      },
+      "type": "value"
+    }
+  ]
+}

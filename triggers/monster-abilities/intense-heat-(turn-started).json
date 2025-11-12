@@ -1,0 +1,74 @@
+{
+  "_id": "QTlb6cOxsdi3TAY9",
+  "description": "<p>Post the Intense Heat ability to chat when a creature starts their turn in the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target as well.</p>",
+  "folder": "Monster Abilities",
+  "name": "Intense Heat (Turn Started)",
+  "nodes": [
+    {
+      "_id": "LTD1CLZ6jWQVsHuH",
+      "key": "turn-start",
+      "outputs": {
+        "out": {
+          "ids": ["7M3EHWmPBnPEJrzy.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "event"
+    },
+    {
+      "_id": "7M3EHWmPBnPEJrzy",
+      "inputs": {
+        "in": {
+          "ids": ["LTD1CLZ6jWQVsHuH.outputs.out"]
+        },
+        "slug": {
+          "ids": [],
+          "value": "intense-heat"
+        },
+        "targets": {
+          "ids": [],
+          "value": "all"
+        }
+      },
+      "key": "inside-aura",
+      "outputs": {
+        "source": {
+          "ids": ["HMxdtUqPXbYAngfs.inputs.PAWVQq94ohe1Jwsj"]
+        },
+        "true": {
+          "ids": ["HMxdtUqPXbYAngfs.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 531,
+        "y": 199.23000000000002
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "HMxdtUqPXbYAngfs",
+      "inputs": {
+        "HhJmeS0b8RW20qN7": {
+          "ids": [],
+          "value": "intense-heat"
+        },
+        "in": {
+          "ids": ["7M3EHWmPBnPEJrzy.outputs.true"]
+        },
+        "PAWVQq94ohe1Jwsj": {
+          "ids": ["7M3EHWmPBnPEJrzy.outputs.source"]
+        }
+      },
+      "key": "subtrigger-node",
+      "position": {
+        "x": 810,
+        "y": 199.75
+      },
+      "target": "KbmYmEm4rMEedc9N",
+      "type": "subtrigger"
+    }
+  ]
+}

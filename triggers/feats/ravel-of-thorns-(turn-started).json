@@ -1,0 +1,163 @@
+{
+  "_id": "9avLgSorYNoUr5q4",
+  "description": "",
+  "folder": "Feats & Features",
+  "name": "Ravel of Thorns (Turn Started)",
+  "nodes": [
+    {
+      "_id": "ZUNVwcHmDyNgS28p",
+      "key": "turn-start",
+      "outputs": {
+        "out": {
+          "ids": ["oXrVeC48OkKL4dsj.inputs.in"]
+        },
+        "this": {
+          "ids": []
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "event"
+    },
+    {
+      "_id": "Q6Dpggwd4YDDWySL",
+      "inputs": {
+        "in": {
+          "ids": ["oXrVeC48OkKL4dsj.outputs.true"]
+        },
+        "target": {
+          "ids": ["oXrVeC48OkKL4dsj.outputs.source"]
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e.feat-effects.Item.JW93FDTAOUNuCgIu"
+        }
+      },
+      "key": "has-item",
+      "outputs": {
+        "true": {
+          "ids": ["67t8MR6CnfsWVffp.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 785,
+        "y": 304.75
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "QhMWLgghKnEMizXU",
+      "inputs": {
+        "duplicate": {
+          "ids": [],
+          "value": false
+        },
+        "in": {
+          "ids": ["FljnDlD3QCCL7w1B.outputs.false"]
+        },
+        "target": {
+          "ids": []
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.uOHgKiyfUoS6fbkc"
+        }
+      },
+      "key": "create-item",
+      "outputs": {
+        "out": {
+          "ids": []
+        }
+      },
+      "position": {
+        "x": 1426,
+        "y": 301.75
+      },
+      "type": "action"
+    },
+    {
+      "_id": "oXrVeC48OkKL4dsj",
+      "inputs": {
+        "in": {
+          "ids": ["ZUNVwcHmDyNgS28p.outputs.out"]
+        },
+        "slug": {
+          "ids": [],
+          "value": "kinetic-aura"
+        },
+        "targets": {
+          "ids": [],
+          "value": "all"
+        }
+      },
+      "key": "inside-aura",
+      "outputs": {
+        "source": {
+          "ids": [
+            "Q6Dpggwd4YDDWySL.inputs.target",
+            "67t8MR6CnfsWVffp.inputs.WAhq9tiXEkLImyNR"
+          ]
+        },
+        "true": {
+          "ids": ["Q6Dpggwd4YDDWySL.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 499,
+        "y": 304.23
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "FljnDlD3QCCL7w1B",
+      "inputs": {
+        "in": {
+          "ids": ["67t8MR6CnfsWVffp.outputs.out"]
+        },
+        "input": {
+          "ids": []
+        }
+      },
+      "key": "boolean-splitter",
+      "outputs": {
+        "false": {
+          "ids": ["QhMWLgghKnEMizXU.inputs.in"]
+        },
+        "true": {
+          "ids": []
+        }
+      },
+      "position": {
+        "x": 1226,
+        "y": 317.75
+      },
+      "type": "splitter"
+    },
+    {
+      "_id": "67t8MR6CnfsWVffp",
+      "inputs": {
+        "in": {
+          "ids": ["Q6Dpggwd4YDDWySL.outputs.true"]
+        },
+        "WAhq9tiXEkLImyNR": {
+          "ids": ["oXrVeC48OkKL4dsj.outputs.source"]
+        }
+      },
+      "key": "subtrigger-node",
+      "outputs": {
+        "out": {
+          "ids": ["FljnDlD3QCCL7w1B.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 1020,
+        "y": 301.75
+      },
+      "target": "bAAN0NJZlrihZsTh",
+      "type": "subtrigger"
+    }
+  ],
+  "variables": {}
+}

@@ -1,0 +1,96 @@
+{
+  "_id": "GnfoPAyuICXUktw2",
+  "description": "<p>Roll a kineticist's Thermal Nimbus damage when a creature starts its turn in their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong></p>",
+  "folder": "Feats & Features",
+  "name": "Thermal Nimbus (Turn Started)",
+  "nodes": [
+    {
+      "_id": "PQH6CfqMtlAZ8oBg",
+      "key": "turn-start",
+      "outputs": {
+        "out": {
+          "ids": ["ViY7RpUTsZG1qtUE.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "event"
+    },
+    {
+      "_id": "ViY7RpUTsZG1qtUE",
+      "inputs": {
+        "in": {
+          "ids": ["PQH6CfqMtlAZ8oBg.outputs.out"]
+        },
+        "slug": {
+          "ids": [],
+          "value": "kinetic-aura"
+        },
+        "targets": {
+          "ids": [],
+          "value": "all"
+        }
+      },
+      "key": "inside-aura",
+      "outputs": {
+        "source": {
+          "ids": [
+            "QWITCEWdwJk5Vfz0.inputs.WAhq9tiXEkLImyNR",
+            "qdykfvIJJbvCBj8V.inputs.BEwwxVzgSXKzDJj9"
+          ]
+        },
+        "true": {
+          "ids": ["QWITCEWdwJk5Vfz0.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 537,
+        "y": 201.23000000000002
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "QWITCEWdwJk5Vfz0",
+      "inputs": {
+        "in": {
+          "ids": ["ViY7RpUTsZG1qtUE.outputs.true"]
+        },
+        "WAhq9tiXEkLImyNR": {
+          "ids": ["ViY7RpUTsZG1qtUE.outputs.source"]
+        }
+      },
+      "key": "subtrigger-node",
+      "outputs": {
+        "out": {
+          "ids": ["qdykfvIJJbvCBj8V.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 826,
+        "y": 201.23000000000002
+      },
+      "target": "bAAN0NJZlrihZsTh",
+      "type": "subtrigger"
+    },
+    {
+      "_id": "qdykfvIJJbvCBj8V",
+      "inputs": {
+        "BEwwxVzgSXKzDJj9": {
+          "ids": ["ViY7RpUTsZG1qtUE.outputs.source"]
+        },
+        "in": {
+          "ids": ["QWITCEWdwJk5Vfz0.outputs.out"]
+        }
+      },
+      "key": "subtrigger-node",
+      "position": {
+        "x": 1025,
+        "y": 202.23000000000002
+      },
+      "target": "dXiVIcJYpjkeqA73",
+      "type": "subtrigger"
+    }
+  ]
+}

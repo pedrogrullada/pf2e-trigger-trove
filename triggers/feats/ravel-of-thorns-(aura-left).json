@@ -1,0 +1,92 @@
+{
+  "_id": "bV351isJMsgV1AWn",
+  "description": "<p>Remove the Ravel of Thorns penalty when a creature leaves the kineticist's kinetic aura.</p>",
+  "folder": "Feats & Features",
+  "name": "Ravel of Thorns (Aura Left)",
+  "nodes": [
+    {
+      "_id": "0cSvbjOKdXHhY5eD",
+      "inputs": {
+        "slug": {
+          "ids": [],
+          "value": "kinetic-aura"
+        },
+        "targets": {
+          "ids": [],
+          "value": "all"
+        },
+        "turn": {
+          "ids": [],
+          "value": false
+        }
+      },
+      "key": "aura-leave",
+      "outputs": {
+        "out": {
+          "ids": ["GyL5fh9MXNqCPqr8.inputs.in"]
+        },
+        "source": {
+          "ids": ["GyL5fh9MXNqCPqr8.inputs.target"]
+        },
+        "this": {
+          "ids": []
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "event"
+    },
+    {
+      "_id": "GyL5fh9MXNqCPqr8",
+      "inputs": {
+        "in": {
+          "ids": ["0cSvbjOKdXHhY5eD.outputs.out"]
+        },
+        "target": {
+          "ids": ["0cSvbjOKdXHhY5eD.outputs.source"]
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e.feat-effects.Item.JW93FDTAOUNuCgIu"
+        }
+      },
+      "key": "has-item",
+      "outputs": {
+        "item": {
+          "ids": []
+        },
+        "true": {
+          "ids": ["MyQTwPVwVLdg4tot.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 625,
+        "y": 202.75
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "MyQTwPVwVLdg4tot",
+      "inputs": {
+        "in": {
+          "ids": ["GyL5fh9MXNqCPqr8.outputs.true"]
+        },
+        "target": {
+          "ids": []
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.uOHgKiyfUoS6fbkc"
+        }
+      },
+      "key": "remove-item",
+      "position": {
+        "x": 862,
+        "y": 205.75
+      },
+      "type": "action"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "_id": "Bi2hZkpcAArBi1rT",
+  "description": "<p>Post the Stench ability to chat when a creature enters the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target as well.</p>",
+  "folder": "Monster Abilities",
+  "name": "Stench (Aura Entered)",
+  "nodes": [
+    {
+      "_id": "ODFGmGQqTiDIQSmx",
+      "inputs": {
+        "slug": {
+          "ids": [],
+          "value": "stench"
+        },
+        "targets": {
+          "ids": [],
+          "value": "all"
+        },
+        "turn": {
+          "ids": [],
+          "value": false
+        }
+      },
+      "key": "aura-enter",
+      "outputs": {
+        "out": {
+          "ids": ["YxTeuHMZdzI6098t.inputs.in"]
+        },
+        "source": {
+          "ids": ["YxTeuHMZdzI6098t.inputs.PAWVQq94ohe1Jwsj"]
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "event"
+    },
+    {
+      "_id": "YxTeuHMZdzI6098t",
+      "inputs": {
+        "HhJmeS0b8RW20qN7": {
+          "ids": [],
+          "value": "stench"
+        },
+        "in": {
+          "ids": ["ODFGmGQqTiDIQSmx.outputs.out"]
+        },
+        "PAWVQq94ohe1Jwsj": {
+          "ids": ["ODFGmGQqTiDIQSmx.outputs.source"]
+        }
+      },
+      "key": "subtrigger-node",
+      "position": {
+        "x": 629,
+        "y": 199.23000000000002
+      },
+      "target": "KbmYmEm4rMEedc9N",
+      "type": "subtrigger"
+    }
+  ]
+}
