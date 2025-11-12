@@ -47,7 +47,7 @@ for (const file of files) {
   await fs.cp(file, path.resolve(outDir, file), { recursive: true });
 }
 
-fs.console.log("Build Complete");
+console.log("Build Complete");
 
 if (process.argv[2] === "--watch") {
   const watcher = fs.watch(process.cwd(), { recursive: true });
