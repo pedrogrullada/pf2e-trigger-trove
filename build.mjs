@@ -2,6 +2,7 @@ import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { existsSync } from "fs";
 import fs from "fs/promises";
 import path from "path";
+import { combineTriggers } from "./scripts/combine-triggers";
 
 // Clean output directory, or create build directory
 const outDir = path.resolve(process.cwd(), "build");
@@ -30,6 +31,13 @@ for (const file of files) {
     await fs.cp(file, path.resolve(outDir, file), {recursive: true});
 }
 console.log("Build Complete");
+
+console.log('Combining Triggers')
+
+combineTriggers('./triggers', './triggers/pf2e-trigger-trove.json');
+
+console.log('Triggers Combined')
+
 
 if (process.argv[2] === "--watch") {
     const watcher = fs.watch(process.cwd(), { recursive: true });

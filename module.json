@@ -22,9 +22,7 @@
     {
       "folders": [],
       "name": "PF2e Trigger Trove",
-      "packs": [
-        "auxiliary-items"
-      ],
+      "packs": ["auxiliary-items"],
       "sorting": "a"
     }
   ],
@@ -62,6 +60,8 @@
     ]
   },
   "title": "PF2e Trigger Trove",
-  "url": "https://github.com/pedrogrullada/pf2e-trigger-trove",
-  "version": "0.2.2"
+  "version": "#{VERSION}#",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#"
 }
