@@ -2,7 +2,7 @@ import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { existsSync } from "fs";
 import fs from "fs/promises";
 import path from "path";
-import { combineTriggers } from "./scripts/combine-triggers";
+import { combineTriggers } from "./scripts/combine-triggers.js";
 
 // Clean output directory, or create build directory
 const outDir = path.resolve(process.cwd(), "build");
