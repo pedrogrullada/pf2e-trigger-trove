@@ -80,6 +80,10 @@ jobs:
         id: get_version
         uses: battila7/get-version-action@v2
 
+         # Install dependencies needed for pack compilation
+      - name: Install Dependencies
+        run: npm install @foundryvtt/foundryvtt-cli
+
       - name: Build
         run: |
           npm run build
