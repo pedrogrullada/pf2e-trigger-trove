@@ -10,13 +10,17 @@
         "key": "damage-taken",
         "outputs": {
           "options": {
-            "ids": ["wr3McEPuRJw8eDBO.inputs.list"]
+            "ids": [
+              "wr3McEPuRJw8eDBO.inputs.list"
+            ]
           },
           "other": {
             "ids": []
           },
           "out": {
-            "ids": ["wr3McEPuRJw8eDBO.inputs.in"]
+            "ids": [
+              "wr3McEPuRJw8eDBO.inputs.in"
+            ]
           }
         },
         "position": {
@@ -29,10 +33,14 @@
         "_id": "D5tPvMUpohF58PjK",
         "inputs": {
           "in": {
-            "ids": ["wr3McEPuRJw8eDBO.outputs.true"]
+            "ids": [
+              "wr3McEPuRJw8eDBO.outputs.true"
+            ]
           },
           "target": {
-            "ids": ["ZzbhmEnFk4fJqDH6.outputs.output"]
+            "ids": [
+              "ZzbhmEnFk4fJqDH6.outputs.output"
+            ]
           },
           "uuid": {
             "ids": [],
@@ -63,7 +71,9 @@
         "key": "variable-getter",
         "outputs": {
           "output": {
-            "ids": ["D5tPvMUpohF58PjK.inputs.target"]
+            "ids": [
+              "D5tPvMUpohF58PjK.inputs.target"
+            ]
           }
         },
         "position": {
@@ -77,10 +87,14 @@
         "_id": "wr3McEPuRJw8eDBO",
         "inputs": {
           "in": {
-            "ids": ["NNtpqUsGLItiISNT.outputs.out"]
+            "ids": [
+              "NNtpqUsGLItiISNT.outputs.out"
+            ]
           },
           "list": {
-            "ids": ["NNtpqUsGLItiISNT.outputs.options"]
+            "ids": [
+              "NNtpqUsGLItiISNT.outputs.options"
+            ]
           },
           "predicate": {
             "ids": [],
@@ -90,7 +104,9 @@
         "key": "match-predicate",
         "outputs": {
           "true": {
-            "ids": ["D5tPvMUpohF58PjK.inputs.in"]
+            "ids": [
+              "D5tPvMUpohF58PjK.inputs.in"
+            ]
           }
         },
         "position": {
@@ -102,17 +118,24 @@
     ]
   },
   {
-    "_id": "JiRB5MWasufEMmTo",
-    "description": "<p>On the first turn of the first round of combat, add an effect that enables One Shot, One Kill for characters with that ability that rolled Stealth for initiative.</p>",
+    "_id": "zO6QyDBjnZuAEPwu",
+    "description": "<p>After confirming that One Shot, One Kill is used, add an effect that enables its additional precision damage until the first successful Strike deals damage.</p>",
     "folder": "Feats & Features",
-    "name": "One Shot, One Kill (Turn Started)",
+    "name": "One Shot, One Kill (Combatant Joined)",
     "nodes": [
       {
-        "_id": "mJBm1WX6wOhCbIqn",
-        "key": "turn-start",
+        "_id": "Ri27fBgf6TYrlCzi",
+        "key": "combatant-create",
         "outputs": {
           "out": {
-            "ids": ["6poiY7db2qsXgJhd.inputs.in"]
+            "ids": [
+              "kGULduqR8yiyPAZK.inputs.in"
+            ]
+          },
+          "this": {
+            "ids": [
+              "jqdsuvnyEfsuIPLK.inputs.target"
+            ]
           }
         },
         "position": {
@@ -122,63 +145,12 @@
         "type": "event"
       },
       {
-        "_id": "6poiY7db2qsXgJhd",
+        "_id": "kGULduqR8yiyPAZK",
         "inputs": {
           "in": {
-            "ids": ["mJBm1WX6wOhCbIqn.outputs.out"]
-          },
-          "option": {
-            "ids": [],
-            "value": "encounter:round:1"
-          }
-        },
-        "key": "has-option",
-        "outputs": {
-          "true": {
-            "ids": ["aflDTpIEdTRvbDSP.inputs.in"]
-          }
-        },
-        "position": {
-          "x": 498,
-          "y": 303.75
-        },
-        "type": "condition"
-      },
-      {
-        "_id": "WkjfKwOCxdxAccNE",
-        "inputs": {
-          "in": {
-            "ids": ["aflDTpIEdTRvbDSP.outputs.true"]
-          }
-        },
-        "key": "scene-tokens",
-        "outputs": {
-          "other": {
             "ids": [
-              "Vhhpnl6DCt52JmHC.inputs.target",
-              "BXCPgJG2xNCZstKr.inputs.target",
-              "7Xovp9XwlWSyLJsO.inputs.target",
-              "9pF94AfV1wTMzynM.inputs.target"
+              "Ri27fBgf6TYrlCzi.outputs.out"
             ]
-          },
-          "out": {
-            "ids": ["Vhhpnl6DCt52JmHC.inputs.in"]
-          }
-        },
-        "position": {
-          "x": 896,
-          "y": 564.23
-        },
-        "type": "action"
-      },
-      {
-        "_id": "Vhhpnl6DCt52JmHC",
-        "inputs": {
-          "in": {
-            "ids": ["WkjfKwOCxdxAccNE.outputs.out"]
-          },
-          "target": {
-            "ids": ["WkjfKwOCxdxAccNE.outputs.other"]
           },
           "uuid": {
             "ids": [],
@@ -188,53 +160,90 @@
         "key": "has-item",
         "outputs": {
           "item": {
-            "ids": ["3FZDTsxc9iy4nLt1.inputs.item"]
+            "ids": []
           },
           "true": {
-            "ids": ["7Xovp9XwlWSyLJsO.inputs.in"]
+            "ids": [
+              "Gh2K5lFqvlm8e9uT.inputs.in"
+            ]
           }
         },
         "position": {
-          "x": 1079,
-          "y": 591.75
+          "x": 543,
+          "y": 199.75
         },
         "type": "condition"
       },
       {
-        "_id": "aflDTpIEdTRvbDSP",
+        "_id": "Gh2K5lFqvlm8e9uT",
         "inputs": {
           "in": {
-            "ids": ["6poiY7db2qsXgJhd.outputs.true"]
+            "ids": [
+              "kGULduqR8yiyPAZK.outputs.true"
+            ]
           },
-          "option": {
+          "prompt": {
             "ids": [],
-            "value": "encounter:turn:1"
+            "value": "<p>Are you using One Shot, One Kill in this combat?</p>"
+          },
+          "title": {
+            "ids": [
+              "jqdsuvnyEfsuIPLK.outputs.label"
+            ]
           }
         },
-        "key": "has-option",
+        "key": "await-confirm",
         "outputs": {
           "true": {
-            "ids": ["WkjfKwOCxdxAccNE.inputs.in"]
+            "ids": [
+              "G5i7v0PkvWf86agl.inputs.in"
+            ]
           }
         },
         "position": {
-          "x": 696,
-          "y": 433.75
+          "x": 782,
+          "y": 198.23000000000002
         },
-        "type": "condition"
+        "type": "action"
       },
       {
-        "_id": "BXCPgJG2xNCZstKr",
+        "_id": "jqdsuvnyEfsuIPLK",
+        "inputs": {
+          "prefix": {
+            "ids": [],
+            "value": "One Shot, One Killed"
+          },
+          "target": {
+            "ids": [
+              "Ri27fBgf6TYrlCzi.outputs.this"
+            ]
+          }
+        },
+        "key": "named-label-actor",
+        "outputs": {
+          "label": {
+            "ids": [
+              "Gh2K5lFqvlm8e9uT.inputs.title"
+            ]
+          }
+        },
+        "position": {
+          "x": 540.5,
+          "y": 336.75
+        },
+        "type": "value"
+      },
+      {
+        "_id": "G5i7v0PkvWf86agl",
         "inputs": {
           "duplicate": {
             "ids": [],
             "value": false
           },
           "in": {
-            "ids": ["GQ9Mtnciwjx2HYHu.outputs.true"]
-          },
-          "target": {
-            "ids": ["WkjfKwOCxdxAccNE.outputs.other"]
+            "ids": [
+              "Gh2K5lFqvlm8e9uT.outputs.true"
+            ]
           },
           "uuid": {
             "ids": [],
@@ -242,106 +251,9 @@
           }
         },
         "key": "create-item",
-        "outputs": {
-          "out": {
-            "ids": ["3FZDTsxc9iy4nLt1.inputs.in"]
-          }
-        },
         "position": {
-          "x": 1823,
-          "y": 637.75
-        },
-        "type": "action"
-      },
-      {
-        "_id": "7Xovp9XwlWSyLJsO",
-        "inputs": {
-          "in": {
-            "ids": ["Vhhpnl6DCt52JmHC.outputs.true"]
-          },
-          "option": {
-            "ids": [],
-            "value": "self:participant:initiative:stat:stealth"
-          },
-          "target": {
-            "ids": ["WkjfKwOCxdxAccNE.outputs.other"]
-          }
-        },
-        "key": "has-option",
-        "outputs": {
-          "true": {
-            "ids": ["GQ9Mtnciwjx2HYHu.inputs.in"]
-          }
-        },
-        "position": {
-          "x": 1312,
-          "y": 620.75
-        },
-        "type": "condition"
-      },
-      {
-        "_id": "GQ9Mtnciwjx2HYHu",
-        "inputs": {
-          "in": {
-            "ids": ["7Xovp9XwlWSyLJsO.outputs.true"]
-          },
-          "prompt": {
-            "ids": [],
-            "value": "<p>Are you using One Shot, One Kill in this combat?</p>"
-          },
-          "title": {
-            "ids": ["9pF94AfV1wTMzynM.outputs.label"]
-          }
-        },
-        "key": "await-confirm",
-        "outputs": {
-          "true": {
-            "ids": ["BXCPgJG2xNCZstKr.inputs.in"]
-          }
-        },
-        "position": {
-          "x": 1551,
-          "y": 623.23
-        },
-        "type": "action"
-      },
-      {
-        "_id": "9pF94AfV1wTMzynM",
-        "inputs": {
-          "prefix": {
-            "ids": [],
-            "value": "One Shot, One Kill"
-          },
-          "target": {
-            "ids": ["WkjfKwOCxdxAccNE.outputs.other"]
-          }
-        },
-        "key": "named-label-actor",
-        "outputs": {
-          "label": {
-            "ids": ["GQ9Mtnciwjx2HYHu.inputs.title"]
-          }
-        },
-        "position": {
-          "x": 1293.5,
-          "y": 779.25
-        },
-        "type": "value"
-      },
-      {
-        "_id": "3FZDTsxc9iy4nLt1",
-        "inputs": {
-          "in": {
-            "ids": ["BXCPgJG2xNCZstKr.outputs.out"]
-          },
-          "item": {
-            "ids": ["Vhhpnl6DCt52JmHC.outputs.item"]
-          }
-        },
-        "key": "send-to-chat",
-        "position": {
-          "x": 2061,
-          "y": 646.75
+          "x": 1052,
+          "y": 195.75
         },
         "type": "action"
       }
