@@ -1,0 +1,199 @@
+{
+  "_id": "bAAN0NJZlrihZsTh",
+  "description": "",
+  "folder": "Feats & Features",
+  "name": "Safe Elements (Check)",
+  "nodes": [
+    {
+      "_id": "rhU7xPk7sTDXAyyY",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": true,
+            "group": "",
+            "key": "WAhq9tiXEkLImyNR",
+            "label": "Kineticist",
+            "type": "target"
+          }
+        ],
+        "outs": []
+      },
+      "key": "subtrigger-input",
+      "outputs": {
+        "out": {
+          "ids": ["Uw4491CYV4baT0SD.inputs.in"]
+        },
+        "this": {
+          "ids": []
+        },
+        "WAhq9tiXEkLImyNR": {
+          "ids": ["pGmHEWPEX5PvjQPB.inputs.b"]
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "subtrigger"
+    },
+    {
+      "_id": "BfjtLFNJuNMBgXVj",
+      "custom": {
+        "inputs": [],
+        "outputs": [],
+        "outs": []
+      },
+      "inputs": {
+        "d9HttWP76IXywtml": {
+          "ids": [],
+          "value": false
+        },
+        "GfBbyVIsTRBoQoZu": {
+          "ids": []
+        },
+        "h2cWS0oFITR4puQG": {
+          "ids": []
+        },
+        "in": {
+          "ids": [
+            "Uw4491CYV4baT0SD.outputs.false",
+            "pGmHEWPEX5PvjQPB.outputs.false"
+          ]
+        },
+        "ky0YzehoZ9GUWR4s": {
+          "ids": [],
+          "value": false
+        },
+        "nFGnBC9OX6cR3d40": {
+          "ids": []
+        },
+        "o8ryNdfqZWGfdZRQ": {
+          "ids": []
+        },
+        "QhrfCXJqGhiGDYR3": {
+          "ids": ["gCzqqYh1HfVBU7XD.outputs.value"]
+        },
+        "XscPwsjDwxGOI2of": {
+          "ids": [],
+          "value": false
+        },
+        "z0TmreWutCkpH3CX": {
+          "ids": []
+        },
+        "zIZvqU6ZYYX1LF9G": {
+          "ids": [],
+          "value": false
+        }
+      },
+      "key": "subtrigger-output",
+      "position": {
+        "x": 1201,
+        "y": 317
+      },
+      "type": "subtrigger"
+    },
+    {
+      "_id": "Uw4491CYV4baT0SD",
+      "inputs": {
+        "in": {
+          "ids": ["rhU7xPk7sTDXAyyY.outputs.out"]
+        },
+        "target": {
+          "ids": []
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd"
+        }
+      },
+      "key": "has-item",
+      "outputs": {
+        "false": {
+          "ids": ["BfjtLFNJuNMBgXVj.inputs.in"]
+        },
+        "item": {
+          "ids": ["HnxFAittbHaWHqiZ.inputs.input"]
+        },
+        "true": {
+          "ids": ["HnxFAittbHaWHqiZ.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 536,
+        "y": 201.75
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "HnxFAittbHaWHqiZ",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": true,
+            "group": "",
+            "key": "origin",
+            "label": "Origin Actor",
+            "type": "target"
+          }
+        ],
+        "outs": []
+      },
+      "inputs": {
+        "in": {
+          "ids": ["Uw4491CYV4baT0SD.outputs.true"]
+        },
+        "input": {
+          "ids": ["Uw4491CYV4baT0SD.outputs.item"]
+        }
+      },
+      "key": "item-splitter",
+      "outputs": {
+        "origin": {
+          "ids": ["pGmHEWPEX5PvjQPB.inputs.a"]
+        },
+        "origin|signature": {
+          "ids": []
+        },
+        "out": {
+          "ids": ["pGmHEWPEX5PvjQPB.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 778,
+        "y": 187.23000000000002
+      },
+      "type": "splitter"
+    },
+    {
+      "_id": "pGmHEWPEX5PvjQPB",
+      "inputs": {
+        "a": {
+          "ids": ["HnxFAittbHaWHqiZ.outputs.origin"]
+        },
+        "b": {
+          "ids": ["rhU7xPk7sTDXAyyY.outputs.WAhq9tiXEkLImyNR"]
+        },
+        "in": {
+          "ids": ["HnxFAittbHaWHqiZ.outputs.out"]
+        }
+      },
+      "key": "eq-actor",
+      "outputs": {
+        "false": {
+          "ids": ["BfjtLFNJuNMBgXVj.inputs.in"]
+        },
+        "true": {
+          "ids": []
+        }
+      },
+      "position": {
+        "x": 990,
+        "y": 198.75
+      },
+      "type": "logic"
+    }
+  ],
+  "variables": {}
+}

@@ -1,0 +1,169 @@
+{
+  "_id": "KbmYmEm4rMEedc9N",
+  "description": "<p>Send an ability to chat. The ability's slug and its origin are set in the parent trigger.</p>",
+  "folder": "Miscellaneous",
+  "name": "Send Ability to Chat",
+  "nodes": [
+    {
+      "_id": "Y7APRXmdEhE6B4FN",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": true,
+            "group": "",
+            "key": "PAWVQq94ohe1Jwsj",
+            "label": "Item Source",
+            "type": "target"
+          },
+          {
+            "custom": true,
+            "group": "",
+            "key": "HhJmeS0b8RW20qN7",
+            "label": "Item Slug",
+            "type": "text"
+          }
+        ],
+        "outs": []
+      },
+      "key": "subtrigger-input",
+      "outputs": {
+        "ENRCMPZjXaVhJQta": {
+          "ids": []
+        },
+        "HhJmeS0b8RW20qN7": {
+          "ids": ["NZj2A17pIg8WD0Og.inputs.slug"]
+        },
+        "out": {
+          "ids": ["1o7Atl59ScSzKbB2.inputs.in"]
+        },
+        "PAWVQq94ohe1Jwsj": {
+          "ids": [
+            "NZj2A17pIg8WD0Og.inputs.target",
+            "U2Lc430o7EbYCvwG.inputs.target",
+            "1o7Atl59ScSzKbB2.inputs.target"
+          ]
+        },
+        "this": {
+          "ids": ["zKw74xr9ENDwJVM1.inputs.targeting"]
+        }
+      },
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "type": "subtrigger"
+    },
+    {
+      "_id": "64NeRx00Ycrcpg7H",
+      "inputs": {
+        "in": {
+          "ids": ["zKw74xr9ENDwJVM1.outputs.out"]
+        }
+      },
+      "key": "subtrigger-output",
+      "position": {
+        "x": 1335,
+        "y": 231
+      },
+      "type": "subtrigger"
+    },
+    {
+      "_id": "NZj2A17pIg8WD0Og",
+      "inputs": {
+        "in": {
+          "ids": ["U2Lc430o7EbYCvwG.outputs.false"]
+        },
+        "slug": {
+          "ids": ["Y7APRXmdEhE6B4FN.outputs.HhJmeS0b8RW20qN7"]
+        },
+        "target": {
+          "ids": ["Y7APRXmdEhE6B4FN.outputs.PAWVQq94ohe1Jwsj"]
+        }
+      },
+      "key": "has-item-slug",
+      "outputs": {
+        "item": {
+          "ids": ["zKw74xr9ENDwJVM1.inputs.item"]
+        },
+        "true": {
+          "ids": ["zKw74xr9ENDwJVM1.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 912.5,
+        "y": 178.25
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "zKw74xr9ENDwJVM1",
+      "inputs": {
+        "in": {
+          "ids": ["NZj2A17pIg8WD0Og.outputs.true"]
+        },
+        "item": {
+          "ids": ["NZj2A17pIg8WD0Og.outputs.item"]
+        },
+        "targeting": {
+          "ids": ["Y7APRXmdEhE6B4FN.outputs.this"]
+        }
+      },
+      "key": "send-to-chat",
+      "outputs": {
+        "out": {
+          "ids": ["64NeRx00Ycrcpg7H.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 1150,
+        "y": 230.75
+      },
+      "type": "action"
+    },
+    {
+      "_id": "U2Lc430o7EbYCvwG",
+      "inputs": {
+        "in": {
+          "ids": ["1o7Atl59ScSzKbB2.outputs.true"]
+        },
+        "target": {
+          "ids": ["Y7APRXmdEhE6B4FN.outputs.PAWVQq94ohe1Jwsj"]
+        }
+      },
+      "key": "is-dead",
+      "outputs": {
+        "false": {
+          "ids": ["NZj2A17pIg8WD0Og.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 728,
+        "y": 152.75
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "1o7Atl59ScSzKbB2",
+      "inputs": {
+        "in": {
+          "ids": ["Y7APRXmdEhE6B4FN.outputs.out"]
+        },
+        "target": {
+          "ids": ["Y7APRXmdEhE6B4FN.outputs.PAWVQq94ohe1Jwsj"]
+        }
+      },
+      "key": "in-combat",
+      "outputs": {
+        "true": {
+          "ids": ["U2Lc430o7EbYCvwG.inputs.in"]
+        }
+      },
+      "position": {
+        "x": 541,
+        "y": 151.75
+      },
+      "type": "condition"
+    }
+  ]
+}

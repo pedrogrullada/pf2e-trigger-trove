@@ -10,21 +10,17 @@
     "verified": "13"
   },
   "description": "A collection of triggers to use with the PF2e Trigger module.",
-  "download": "https://github.com/pedrogrullada/pf2e-trigger-trove/releases/download/0.2.2/module.zip",
   "flags": {
     "pf2e-trigger-trove": {
       "triggers": "triggers/pf2e-trigger-trove.json"
     }
   },
   "id": "pf2e-trigger-trove",
-  "manifest": "https://github.com/pedrogrullada/pf2e-trigger-trove/releases/latest/download/module.json",
   "packFolders": [
     {
       "folders": [],
       "name": "PF2e Trigger Trove",
-      "packs": [
-        "auxiliary-items"
-      ],
+      "packs": ["auxiliary-items"],
       "sorting": "a"
     }
   ],
@@ -62,6 +58,8 @@
     ]
   },
   "title": "PF2e Trigger Trove",
-  "url": "https://github.com/pedrogrullada/pf2e-trigger-trove",
-  "version": "0.2.2"
+  "version": "#{VERSION}#",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#"
 }

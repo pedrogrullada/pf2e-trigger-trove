@@ -1,0 +1,244 @@
+{
+    "_id": "K8GYPAHnB7XZKlHD",
+    "description": "<p>Add persistent fire damage to a creature within @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0]{Incendiary Aura} that takes fire damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is fire. This covers most cases, but be aware that some instances of fire damage will be missed.</em></p></p>",
+    "folder": "Spells",
+    "name": "Incendiary Aura (Damage Taken)",
+    "nodes": [
+        {
+            "_id": "Gk1TCrQU7KShADph",
+            "key": "damage-taken",
+            "outputs": {
+                "options": {
+                    "ids": [
+                        "9NxbUkUafRQUHkdD.inputs.list"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "vIVj1DekKykYMU2c.inputs.in"
+                    ]
+                },
+                "this": {
+                    "ids": [
+                        "vIVj1DekKykYMU2c.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "vIVj1DekKykYMU2c",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "Gk1TCrQU7KShADph.outputs.out"
+                    ]
+                },
+                "slug": {
+                    "ids": [],
+                    "value": "incendiary-aura"
+                },
+                "target": {
+                    "ids": [
+                        "Gk1TCrQU7KShADph.outputs.this"
+                    ]
+                },
+                "targets": {
+                    "ids": [],
+                    "value": "all"
+                }
+            },
+            "key": "inside-aura",
+            "outputs": {
+                "source": {
+                    "ids": [
+                        "j5525TTAlWaXgkJ6.inputs.input"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "9NxbUkUafRQUHkdD.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 535,
+                "y": 201.23000000000002
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "9NxbUkUafRQUHkdD",
+            "inputs": {
+                "entry": {
+                    "ids": [],
+                    "value": "item:damage:type:fire"
+                },
+                "in": {
+                    "ids": [
+                        "vIVj1DekKykYMU2c.outputs.true"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "Gk1TCrQU7KShADph.outputs.options"
+                    ]
+                }
+            },
+            "key": "contains-entry",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "j5525TTAlWaXgkJ6.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 811.5,
+                "y": 200.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "aYEg3vmlAJUQLUGe",
+            "inputs": {
+                "die": {
+                    "ids": [
+                        "Sy2J1AXMjWQiVzR9.outputs.result"
+                    ]
+                },
+                "effect": {
+                    "ids": []
+                },
+                "in": {
+                    "ids": [
+                        "Sy2J1AXMjWQiVzR9.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": []
+                },
+                "type": {
+                    "ids": [],
+                    "value": "fire"
+                }
+            },
+            "key": "add-persistent",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "430cmI71uWYclUOr.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1471,
+                "y": 192.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "430cmI71uWYclUOr",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "aYEg3vmlAJUQLUGe.outputs.out"
+                    ]
+                }
+            },
+            "key": "break-process",
+            "position": {
+                "x": 1690,
+                "y": 192.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "Sy2J1AXMjWQiVzR9",
+            "inputs": {
+                "formula": {
+                    "ids": [],
+                    "value": "(ceil(@x/4)+1)d4"
+                },
+                "in": {
+                    "ids": [
+                        "j5525TTAlWaXgkJ6.outputs.out"
+                    ]
+                },
+                "x": {
+                    "ids": [
+                        "j5525TTAlWaXgkJ6.outputs.level"
+                    ]
+                }
+            },
+            "key": "replace-x",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "aYEg3vmlAJUQLUGe.inputs.in"
+                    ]
+                },
+                "result": {
+                    "ids": [
+                        "aYEg3vmlAJUQLUGe.inputs.die"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1233,
+                "y": 193.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "j5525TTAlWaXgkJ6",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": true,
+                        "group": "",
+                        "key": "level",
+                        "label": "Caster's Level",
+                        "type": "number"
+                    }
+                ],
+                "outs": []
+            },
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "9NxbUkUafRQUHkdD.outputs.true"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "vIVj1DekKykYMU2c.outputs.source"
+                    ]
+                }
+            },
+            "key": "actor-splitter",
+            "outputs": {
+                "level": {
+                    "ids": [
+                        "Sy2J1AXMjWQiVzR9.inputs.x"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "Sy2J1AXMjWQiVzR9.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1040.5,
+                "y": 216.23000000000002
+            },
+            "type": "splitter"
+        }
+    ]
+}
