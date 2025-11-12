@@ -39,10 +39,8 @@ function combineTriggers(triggersDir = "./triggers", outputFile = null) {
     triggers: [],
   };
 
-
   const jsonFiles = getAllJsonFiles(triggersDir);
   console.log(`Found ${jsonFiles.length} JSON files`);
-
 
   for (const file of jsonFiles) {
     try {
@@ -67,13 +65,17 @@ function combineTriggers(triggersDir = "./triggers", outputFile = null) {
   console.log(`\nCombined ${combined.triggers.length} triggers total`);
 
   if (outputFile) {
+    const outputDir = path.dirname(outputFile);
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
     fs.writeFileSync(outputFile, JSON.stringify(combined, null, 4));
     console.log(`Written to ${outputFile}`);
   }
 
   return combined;
 }
-
 
 if (require.main === module) {
   const triggersDir = process.argv[2] || "./triggers";
