@@ -1,0 +1,652 @@
+[
+    {
+        "_id": "5P9g28gnG65G6Snq",
+        "description": "<p>Roll a kineticist's Crowned in Tempest's Fury damage when a creature enters their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them from the kineticist's sheet.</p>",
+        "folder": "Feats & Features",
+        "name": "Crowned in Tempest's Fury (Aura Entered)",
+        "nodes": [
+            {
+                "_id": "brGVfdUfL6maX5JH",
+                "inputs": {
+                    "slug": {
+                        "ids": [],
+                        "value": "kinetic-aura"
+                    },
+                    "targets": {
+                        "ids": [],
+                        "value": "all"
+                    },
+                    "turn": {
+                        "ids": [],
+                        "value": false
+                    }
+                },
+                "key": "aura-enter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "502CORMXmxXfcG9o.inputs.in"
+                        ]
+                    },
+                    "source": {
+                        "ids": [
+                            "502CORMXmxXfcG9o.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "KZH0pHb0kPndWp7s",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "502CORMXmxXfcG9o.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "aHEFib4d1MiRi8Ja.outputs.output"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feat-effects.Item.woKCbf1kXPrPjeZG"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "HybnuOwz816WM0CM.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 869,
+                    "y": 212.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "502CORMXmxXfcG9o",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "brGVfdUfL6maX5JH.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "brGVfdUfL6maX5JH.outputs.source"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feats-srd.Item.8iHpUB0bYaHh86Kk"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "item": {
+                        "ids": []
+                    },
+                    "true": {
+                        "ids": [
+                            "KZH0pHb0kPndWp7s.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 630,
+                    "y": 208.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "aHEFib4d1MiRi8Ja",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "KZH0pHb0kPndWp7s.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 740.5,
+                    "y": 354.25
+                },
+                "target": "brGVfdUfL6maX5JH.outputs.source",
+                "type": "variable"
+            },
+            {
+                "_id": "ikqdsScPuMe3AOJx",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "type": "variable"
+            },
+            {
+                "_id": "zeXkU9xu0b8ZkvJb",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "type": "variable"
+            },
+            {
+                "_id": "y8GHY6rfRnyb0pY4",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "type": "variable"
+            },
+            {
+                "_id": "RYgaEib29xF9QWyP",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "type": "variable"
+            },
+            {
+                "_id": "HybnuOwz816WM0CM",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "KZH0pHb0kPndWp7s.outputs.true"
+                        ]
+                    },
+                    "WAhq9tiXEkLImyNR": {
+                        "ids": [
+                            "CKEzVIeZX9jeCpTk.outputs.output"
+                        ]
+                    }
+                },
+                "key": "subtrigger-node",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "jR56P8I65IqoiBF3.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1140,
+                    "y": 215.23000000000002
+                },
+                "target": "bAAN0NJZlrihZsTh",
+                "type": "subtrigger"
+            },
+            {
+                "_id": "CKEzVIeZX9jeCpTk",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "HybnuOwz816WM0CM.inputs.WAhq9tiXEkLImyNR",
+                            "jR56P8I65IqoiBF3.inputs.BEwwxVzgSXKzDJj9"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1146.5,
+                    "y": 358.25
+                },
+                "target": "brGVfdUfL6maX5JH.outputs.source",
+                "type": "variable"
+            },
+            {
+                "_id": "jR56P8I65IqoiBF3",
+                "inputs": {
+                    "1Q8Ic2uIJU03nP8m": {
+                        "ids": [],
+                        "value": 1
+                    },
+                    "BEwwxVzgSXKzDJj9": {
+                        "ids": [
+                            "CKEzVIeZX9jeCpTk.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "HybnuOwz816WM0CM.outputs.out"
+                        ]
+                    },
+                    "SXkcGb5TWetDeoiL": {
+                        "ids": [
+                            "1hEXxIjDQWWH8gKz.outputs.output"
+                        ]
+                    }
+                },
+                "key": "subtrigger-node",
+                "position": {
+                    "x": 1354,
+                    "y": 218.23000000000002
+                },
+                "target": "dXiVIcJYpjkeqA73",
+                "type": "subtrigger"
+            },
+            {
+                "_id": "x8IYLdEsuBAOXzDW",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "type": "variable"
+            },
+            {
+                "_id": "WDsKl726q88jwv85",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "type": "variable"
+            },
+            {
+                "_id": "QwZ3XejCBSN21OPz",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "type": "variable"
+            },
+            {
+                "_id": "1hEXxIjDQWWH8gKz",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "item"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "jR56P8I65IqoiBF3.inputs.SXkcGb5TWetDeoiL"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1089.5,
+                    "y": 391.25
+                },
+                "target": "502CORMXmxXfcG9o.outputs.item",
+                "type": "variable"
+            }
+        ],
+        "variables": {
+            "502CORMXmxXfcG9o.outputs.item": {
+                "global": false,
+                "label": "Crowned in Tempests Fury",
+                "locked": false,
+                "type": "item"
+            }
+        }
+    },
+    {
+        "_id": "rd8ftQGFUrIAQ7Tr",
+        "description": "<p>Roll a kineticist's Crowned in Tempest's Fury damage when a creature end its turn in their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong></p>",
+        "folder": "Feats & Features",
+        "name": "Crowned in Tempest's Fury (Turn Ended)",
+        "nodes": [
+            {
+                "_id": "VewcORAEJxjNlOye",
+                "key": "turn-end",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "Q9uf0vReMy9bUKJ6.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "Q9uf0vReMy9bUKJ6",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "VewcORAEJxjNlOye.outputs.out"
+                        ]
+                    },
+                    "slug": {
+                        "ids": [],
+                        "value": "kinetic-aura"
+                    },
+                    "targets": {
+                        "ids": [],
+                        "value": "all"
+                    }
+                },
+                "key": "inside-aura",
+                "outputs": {
+                    "source": {
+                        "ids": [
+                            "b2N23f7Q7vTeFbAz.inputs.target"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "b2N23f7Q7vTeFbAz.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 543,
+                    "y": 197.23000000000002
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "b2N23f7Q7vTeFbAz",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "Q9uf0vReMy9bUKJ6.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "Q9uf0vReMy9bUKJ6.outputs.source"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feats-srd.Item.8iHpUB0bYaHh86Kk"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "kgNGwqd3D06xZAxU.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 839,
+                    "y": 196.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "kgNGwqd3D06xZAxU",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "b2N23f7Q7vTeFbAz.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "K2iLHeKpJg30LpoH.outputs.output"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feat-effects.Item.woKCbf1kXPrPjeZG"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "bSOCR2h3Rd7ooGPQ.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1092,
+                    "y": 196.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "K2iLHeKpJg30LpoH",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "kgNGwqd3D06xZAxU.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 981.5,
+                    "y": 362.25
+                },
+                "target": "Q9uf0vReMy9bUKJ6.outputs.source",
+                "type": "variable"
+            },
+            {
+                "_id": "bSOCR2h3Rd7ooGPQ",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "kgNGwqd3D06xZAxU.outputs.true"
+                        ]
+                    },
+                    "WAhq9tiXEkLImyNR": {
+                        "ids": [
+                            "qVkZVYAExHT2mg9o.outputs.output"
+                        ]
+                    }
+                },
+                "key": "subtrigger-node",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "AtGCPaWx2lls4GP4.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1355,
+                    "y": 198.23000000000002
+                },
+                "target": "bAAN0NJZlrihZsTh",
+                "type": "subtrigger"
+            },
+            {
+                "_id": "qVkZVYAExHT2mg9o",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "bSOCR2h3Rd7ooGPQ.inputs.WAhq9tiXEkLImyNR",
+                            "AtGCPaWx2lls4GP4.inputs.BEwwxVzgSXKzDJj9"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1334.5,
+                    "y": 345.25
+                },
+                "target": "Q9uf0vReMy9bUKJ6.outputs.source",
+                "type": "variable"
+            },
+            {
+                "_id": "AtGCPaWx2lls4GP4",
+                "inputs": {
+                    "1Q8Ic2uIJU03nP8m": {
+                        "ids": [],
+                        "value": 1
+                    },
+                    "BEwwxVzgSXKzDJj9": {
+                        "ids": [
+                            "qVkZVYAExHT2mg9o.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "bSOCR2h3Rd7ooGPQ.outputs.out"
+                        ]
+                    },
+                    "SXkcGb5TWetDeoiL": {
+                        "ids": [
+                            "ES1BTyiBQ4dRbyxK.outputs.output"
+                        ]
+                    }
+                },
+                "key": "subtrigger-node",
+                "position": {
+                    "x": 1566,
+                    "y": 196.23000000000002
+                },
+                "target": "dXiVIcJYpjkeqA73",
+                "type": "subtrigger"
+            },
+            {
+                "_id": "ES1BTyiBQ4dRbyxK",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "item"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "AtGCPaWx2lls4GP4.inputs.SXkcGb5TWetDeoiL"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1276.5,
+                    "y": 386.25
+                },
+                "target": "b2N23f7Q7vTeFbAz.outputs.item",
+                "type": "variable"
+            }
+        ],
+        "variables": {
+            "b2N23f7Q7vTeFbAz.outputs.item": {
+                "global": false,
+                "label": "Crowned in Tempests Fury",
+                "locked": false,
+                "type": "item"
+            },
+            "Q9uf0vReMy9bUKJ6.outputs.source": {
+                "global": false,
+                "label": "Aura Source",
+                "locked": false,
+                "type": "target"
+            }
+        }
+    }
+]
