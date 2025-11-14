@@ -1,0 +1,141 @@
+[
+    {
+        "_id": "y0iuf6DaL7jPPVz5",
+        "description": "<p>When a frightened creature ends their turn inside an allies' champion's aura with Aura of Courage, they reduce their frightened value by 1.</p>",
+        "folder": "Feats & Features",
+        "name": "Aura of Courage (Turn Ended)",
+        "nodes": [
+            {
+                "_id": "gbmZQKFWBJCNRlKC",
+                "key": "turn-end",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "lsx0sM9l88KjHE9L.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "rP5reDL2j69aSJ9z",
+                "inputs": {
+                    "condition": {
+                        "ids": [],
+                        "value": "frightened"
+                    },
+                    "in": {
+                        "ids": [
+                            "FVC7hBhzid08LsxW.outputs.true"
+                        ]
+                    }
+                },
+                "key": "has-condition",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "Mr3gVmzz7aaZZ27v.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1050,
+                    "y": 203.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "lsx0sM9l88KjHE9L",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "gbmZQKFWBJCNRlKC.outputs.out"
+                        ]
+                    },
+                    "slug": {
+                        "ids": [],
+                        "value": "champions-aura"
+                    },
+                    "targets": {
+                        "ids": [],
+                        "value": "allies"
+                    }
+                },
+                "key": "inside-aura",
+                "outputs": {
+                    "source": {
+                        "ids": [
+                            "FVC7hBhzid08LsxW.inputs.target"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "FVC7hBhzid08LsxW.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 534,
+                    "y": 200.23000000000002
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "FVC7hBhzid08LsxW",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "lsx0sM9l88KjHE9L.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "lsx0sM9l88KjHE9L.outputs.source"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feats-srd.Item.TIwk07T0OxSbcOpJ"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "rP5reDL2j69aSJ9z.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 816,
+                    "y": 203.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "Mr3gVmzz7aaZZ27v",
+                "inputs": {
+                    "condition": {
+                        "ids": [],
+                        "value": "frightened"
+                    },
+                    "in": {
+                        "ids": [
+                            "rP5reDL2j69aSJ9z.outputs.true"
+                        ]
+                    }
+                },
+                "key": "reduce-condition",
+                "position": {
+                    "x": 1283,
+                    "y": 203.75
+                },
+                "type": "action"
+            }
+        ]
+    }
+]
