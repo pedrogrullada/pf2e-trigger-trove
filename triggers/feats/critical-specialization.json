@@ -1,0 +1,651 @@
+{
+    "items": [],
+    "triggers": [
+        {
+            "_id": "XT5z6wqVGfk4lqvf",
+            "description": "<p>When critical damage is dealt with a weapon in the bow group and the origin has its critical specialization effect, add the immobilized condition to the target.</p>",
+            "folder": "Feats & Features",
+            "name": "Bow Critical Specialization (Damage Taken)",
+            "nodes": [
+                {
+                    "_id": "8OKpjTDGj07tBOzf",
+                    "key": "damage-taken",
+                    "outputs": {
+                        "options": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.inputs.list"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "MClb5S1fdxeATr0H",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "8OKpjTDGj07tBOzf.outputs.out"
+                            ]
+                        },
+                        "list": {
+                            "ids": [
+                                "8OKpjTDGj07tBOzf.outputs.options"
+                            ]
+                        },
+                        "predicate": {
+                            "ids": [],
+                            "value": "[\n  \"check:outcome:critical-success\",\n  \"critical-specialization\"\n]"
+                        }
+                    },
+                    "key": "match-predicate",
+                    "outputs": {
+                        "true": {
+                            "ids": [
+                                "8ZeHDXRaRVXXyO0U.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 547,
+                        "y": 200.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "8ZeHDXRaRVXXyO0U",
+                    "inputs": {
+                        "entry": {
+                            "ids": [],
+                            "value": "item:group:bow"
+                        },
+                        "in": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.outputs.true"
+                            ]
+                        },
+                        "list": {
+                            "ids": [
+                                "HpKI8YuoVQICzosr.outputs.output"
+                            ]
+                        }
+                    },
+                    "key": "contains-entry",
+                    "outputs": {
+                        "false": {
+                            "ids": []
+                        },
+                        "true": {
+                            "ids": [
+                                "7Taf9QROfaT90Jeo.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 791,
+                        "y": 197.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "HpKI8YuoVQICzosr",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": false,
+                                "group": "",
+                                "key": "output",
+                                "type": "list"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "key": "variable-getter",
+                    "outputs": {
+                        "output": {
+                            "ids": [
+                                "8ZeHDXRaRVXXyO0U.inputs.list"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 664.5,
+                        "y": 340.25
+                    },
+                    "target": "8OKpjTDGj07tBOzf.outputs.options",
+                    "type": "variable"
+                },
+                {
+                    "_id": "7Taf9QROfaT90Jeo",
+                    "inputs": {
+                        "condition": {
+                            "ids": [],
+                            "value": "immobilized"
+                        },
+                        "effect": {
+                            "ids": [
+                                "6Pru7PazXuqu1d87.outputs.effect"
+                            ]
+                        },
+                        "in": {
+                            "ids": [
+                                "8ZeHDXRaRVXXyO0U.outputs.true"
+                            ]
+                        }
+                    },
+                    "key": "add-condition",
+                    "position": {
+                        "x": 1033,
+                        "y": 196.75
+                    },
+                    "type": "action"
+                },
+                {
+                    "_id": "6Pru7PazXuqu1d87",
+                    "inputs": {
+                        "image": {
+                            "ids": [],
+                            "value": "icons/skills/ranged/person-archery-bow-attack-orange.webp"
+                        },
+                        "label": {
+                            "ids": [],
+                            "value": "Effect: Bow Critical Specialization"
+                        }
+                    },
+                    "key": "effect-data",
+                    "outputs": {
+                        "effect": {
+                            "ids": [
+                                "7Taf9QROfaT90Jeo.inputs.effect"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 788.5,
+                        "y": 385.25
+                    },
+                    "type": "value"
+                }
+            ],
+            "variables": {}
+        },
+        {
+            "_id": "EeqWuOdnFx3Khl72",
+            "description": "<p>When critical damage is dealt with a weapon in the spear group and the origin has its critical specialization effect, add the clumsy condition to the target until the start of the origin's turn.</p>",
+            "folder": "Feats & Features",
+            "name": "Spear Critical Specialization (Damage Taken)",
+            "nodes": [
+                {
+                    "_id": "8OKpjTDGj07tBOzf",
+                    "key": "damage-taken",
+                    "outputs": {
+                        "options": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.inputs.list"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "MClb5S1fdxeATr0H",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "8OKpjTDGj07tBOzf.outputs.out"
+                            ]
+                        },
+                        "list": {
+                            "ids": [
+                                "8OKpjTDGj07tBOzf.outputs.options"
+                            ]
+                        },
+                        "predicate": {
+                            "ids": [],
+                            "value": "[\n  \"check:outcome:critical-success\",\n  \"critical-specialization\"\n]"
+                        }
+                    },
+                    "key": "match-predicate",
+                    "outputs": {
+                        "true": {
+                            "ids": [
+                                "4tpuvfgXc5d763sl.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 547,
+                        "y": 200.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "4tpuvfgXc5d763sl",
+                    "inputs": {
+                        "entry": {
+                            "ids": [],
+                            "value": "item:group:spear"
+                        },
+                        "in": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.outputs.true"
+                            ]
+                        },
+                        "list": {
+                            "ids": [
+                                "07vAM6MeMDRGtXsH.outputs.output"
+                            ]
+                        }
+                    },
+                    "key": "contains-entry",
+                    "outputs": {
+                        "false": {
+                            "ids": []
+                        },
+                        "true": {
+                            "ids": [
+                                "BrIgsLzwf0uAbd18.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 790,
+                        "y": 198.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "07vAM6MeMDRGtXsH",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": false,
+                                "group": "",
+                                "key": "output",
+                                "type": "list"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "key": "variable-getter",
+                    "outputs": {
+                        "output": {
+                            "ids": [
+                                "4tpuvfgXc5d763sl.inputs.list"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 654.5,
+                        "y": 333.25
+                    },
+                    "target": "8OKpjTDGj07tBOzf.outputs.options",
+                    "type": "variable"
+                },
+                {
+                    "_id": "BrIgsLzwf0uAbd18",
+                    "inputs": {
+                        "condition": {
+                            "ids": [],
+                            "value": "clumsy"
+                        },
+                        "effect": {
+                            "ids": [
+                                "p7Phruu9YTiOaDjI.outputs.effect"
+                            ]
+                        },
+                        "in": {
+                            "ids": [
+                                "4tpuvfgXc5d763sl.outputs.true"
+                            ]
+                        }
+                    },
+                    "key": "add-condition",
+                    "position": {
+                        "x": 1029,
+                        "y": 197.75
+                    },
+                    "type": "action"
+                },
+                {
+                    "_id": "p7Phruu9YTiOaDjI",
+                    "inputs": {
+                        "duration": {
+                            "ids": [
+                                "3dwlbbRwE20GQb9w.outputs.duration"
+                            ]
+                        },
+                        "image": {
+                            "ids": [],
+                            "value": "icons/skills/melee/strike-polearm-light-orange.webp"
+                        },
+                        "label": {
+                            "ids": [],
+                            "value": "Effect: Spear Critical Specialization"
+                        }
+                    },
+                    "key": "effect-data",
+                    "outputs": {
+                        "effect": {
+                            "ids": [
+                                "BrIgsLzwf0uAbd18.inputs.effect"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 798.5,
+                        "y": 361.25
+                    },
+                    "type": "value"
+                },
+                {
+                    "_id": "3dwlbbRwE20GQb9w",
+                    "inputs": {
+                        "expiry": {
+                            "ids": [],
+                            "value": "turn-start"
+                        },
+                        "origin": {
+                            "ids": [
+                                "FomcLMqmV2VGrkM7.outputs.output"
+                            ]
+                        }
+                    },
+                    "key": "duration-unit",
+                    "outputs": {
+                        "duration": {
+                            "ids": [
+                                "p7Phruu9YTiOaDjI.inputs.duration"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 539.5,
+                        "y": 468.25
+                    },
+                    "type": "value"
+                },
+                {
+                    "_id": "FomcLMqmV2VGrkM7",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": false,
+                                "group": "",
+                                "key": "output",
+                                "type": "target"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "key": "variable-getter",
+                    "outputs": {
+                        "output": {
+                            "ids": [
+                                "3dwlbbRwE20GQb9w.inputs.origin"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 383.5,
+                        "y": 518.25
+                    },
+                    "target": "8OKpjTDGj07tBOzf.outputs.other",
+                    "type": "variable"
+                }
+            ],
+            "variables": {}
+        },
+        {
+            "_id": "hWdbjm5z34ByMnXH",
+            "description": "<p>When critical damage is dealt with a weapon in the sword group and the origin has its critical specialization effect, add the off-guard condition to the target until the start of the origin's turn.</p>",
+            "folder": "Feats & Features",
+            "name": "Sword Critical Specialization (Damage Taken)",
+            "nodes": [
+                {
+                    "_id": "8OKpjTDGj07tBOzf",
+                    "key": "damage-taken",
+                    "outputs": {
+                        "options": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.inputs.list"
+                            ]
+                        },
+                        "out": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 350,
+                        "y": 200
+                    },
+                    "type": "event"
+                },
+                {
+                    "_id": "MClb5S1fdxeATr0H",
+                    "inputs": {
+                        "in": {
+                            "ids": [
+                                "8OKpjTDGj07tBOzf.outputs.out"
+                            ]
+                        },
+                        "list": {
+                            "ids": [
+                                "8OKpjTDGj07tBOzf.outputs.options"
+                            ]
+                        },
+                        "predicate": {
+                            "ids": [],
+                            "value": "[\n  \"check:outcome:critical-success\",\n  \"critical-specialization\"\n]"
+                        }
+                    },
+                    "key": "match-predicate",
+                    "outputs": {
+                        "true": {
+                            "ids": [
+                                "Qr4FE1bIvBOJnaAF.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 546,
+                        "y": 199.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "Qr4FE1bIvBOJnaAF",
+                    "inputs": {
+                        "entry": {
+                            "ids": [],
+                            "value": "item:group:sword"
+                        },
+                        "in": {
+                            "ids": [
+                                "MClb5S1fdxeATr0H.outputs.true"
+                            ]
+                        },
+                        "list": {
+                            "ids": [
+                                "q17swgFX05S7jv8w.outputs.output"
+                            ]
+                        }
+                    },
+                    "key": "contains-entry",
+                    "outputs": {
+                        "true": {
+                            "ids": [
+                                "CTQFn30SRYfo837t.inputs.in"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 786,
+                        "y": 198.75
+                    },
+                    "type": "condition"
+                },
+                {
+                    "_id": "q17swgFX05S7jv8w",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": false,
+                                "group": "",
+                                "key": "output",
+                                "type": "list"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "key": "variable-getter",
+                    "outputs": {
+                        "output": {
+                            "ids": [
+                                "Qr4FE1bIvBOJnaAF.inputs.list"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 647.5,
+                        "y": 336.25
+                    },
+                    "target": "8OKpjTDGj07tBOzf.outputs.options",
+                    "type": "variable"
+                },
+                {
+                    "_id": "CTQFn30SRYfo837t",
+                    "inputs": {
+                        "condition": {
+                            "ids": [],
+                            "value": "off-guard"
+                        },
+                        "effect": {
+                            "ids": [
+                                "Gpdh32nw9KKbT09N.outputs.effect"
+                            ]
+                        },
+                        "in": {
+                            "ids": [
+                                "Qr4FE1bIvBOJnaAF.outputs.true"
+                            ]
+                        }
+                    },
+                    "key": "add-condition",
+                    "position": {
+                        "x": 1056,
+                        "y": 199.75
+                    },
+                    "type": "action"
+                },
+                {
+                    "_id": "Gpdh32nw9KKbT09N",
+                    "inputs": {
+                        "duration": {
+                            "ids": [
+                                "RxJJGeodBt5k4nsc.outputs.duration"
+                            ]
+                        },
+                        "image": {
+                            "ids": [],
+                            "value": "icons/skills/melee/strike-sword-steel-yellow.webp"
+                        },
+                        "label": {
+                            "ids": [],
+                            "value": "Effect: Sword Critical Specialization"
+                        }
+                    },
+                    "key": "effect-data",
+                    "outputs": {
+                        "effect": {
+                            "ids": [
+                                "CTQFn30SRYfo837t.inputs.effect"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 817.5,
+                        "y": 360.25
+                    },
+                    "type": "value"
+                },
+                {
+                    "_id": "RxJJGeodBt5k4nsc",
+                    "inputs": {
+                        "origin": {
+                            "ids": [
+                                "5uSxWGishtu5g0KA.outputs.output"
+                            ]
+                        }
+                    },
+                    "key": "duration-unit",
+                    "outputs": {
+                        "duration": {
+                            "ids": [
+                                "Gpdh32nw9KKbT09N.inputs.duration"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 559.5,
+                        "y": 460.25
+                    },
+                    "type": "value"
+                },
+                {
+                    "_id": "5uSxWGishtu5g0KA",
+                    "custom": {
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "custom": false,
+                                "group": "",
+                                "key": "output",
+                                "type": "target"
+                            }
+                        ],
+                        "outs": []
+                    },
+                    "key": "variable-getter",
+                    "outputs": {
+                        "output": {
+                            "ids": [
+                                "RxJJGeodBt5k4nsc.inputs.origin"
+                            ]
+                        }
+                    },
+                    "position": {
+                        "x": 404.5,
+                        "y": 513.25
+                    },
+                    "target": "8OKpjTDGj07tBOzf.outputs.other",
+                    "type": "variable"
+                }
+            ],
+            "variables": {}
+        }
+    ]
+}
