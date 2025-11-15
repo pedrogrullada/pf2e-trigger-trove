@@ -1,0 +1,178 @@
+{
+    "_id": "e83uGV2QckCV8FP4",
+    "description": "<p>Reduce the duration of @UUID[Compendium.pf2e.feats-srd.Item.9p28s0zg4Vv4r5i2]{Spike Skin}'s effect by 1 minute each time the user is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of the previously mentioned damage types will be missed.</em></p>",
+    "folder": "Feats & Features",
+    "name": "Spike Skin (Attack Rolled)",
+    "nodes": [
+        {
+            "_id": "E43uf8iRfdGSBWBY",
+            "key": "attack-roll",
+            "outputs": {
+                "options": {
+                    "ids": [
+                        "if6pYThrElD4Fl23.inputs.list"
+                    ]
+                },
+                "other": {
+                    "ids": [
+                        "pLaF3VCl3WulGrMr.inputs.target"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "if6pYThrElD4Fl23.inputs.in"
+                    ]
+                },
+                "outcome": {
+                    "ids": [
+                        "6gLaDZHkvQWmQ5yx.inputs.a"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "pLaF3VCl3WulGrMr",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "if6pYThrElD4Fl23.outputs.true"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "E43uf8iRfdGSBWBY.outputs.other"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.feat-effects.Item.pFEk5cwegWqXvX4D"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "item": {
+                    "ids": [
+                        "gIgkxkTBPlUVNTOH.inputs.effect"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "6gLaDZHkvQWmQ5yx.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 773,
+                "y": 202.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "6gLaDZHkvQWmQ5yx",
+            "inputs": {
+                "a": {
+                    "ids": [
+                        "E43uf8iRfdGSBWBY.outputs.outcome"
+                    ]
+                },
+                "b": {
+                    "ids": [
+                        "l0n8325MahuLqtgL.outputs.value"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "pLaF3VCl3WulGrMr.outputs.true"
+                    ]
+                }
+            },
+            "key": "gte-number",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "gIgkxkTBPlUVNTOH.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1021,
+                "y": 218.75
+            },
+            "type": "logic"
+        },
+        {
+            "_id": "l0n8325MahuLqtgL",
+            "key": "success-value",
+            "outputs": {
+                "value": {
+                    "ids": [
+                        "6gLaDZHkvQWmQ5yx.inputs.b"
+                    ]
+                }
+            },
+            "position": {
+                "x": 837.5,
+                "y": 336.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "gIgkxkTBPlUVNTOH",
+            "inputs": {
+                "effect": {
+                    "ids": [
+                        "pLaF3VCl3WulGrMr.outputs.item"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "6gLaDZHkvQWmQ5yx.outputs.true"
+                    ]
+                }
+            },
+            "key": "effect-duration",
+            "position": {
+                "x": 1204,
+                "y": 202.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "if6pYThrElD4Fl23",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "E43uf8iRfdGSBWBY.outputs.out"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "E43uf8iRfdGSBWBY.outputs.options"
+                    ]
+                },
+                "predicate": {
+                    "ids": [],
+                    "value": "[\n  {\n    \"or\": [\n    \"item:damage:type:bludgeoning\",\n    \"item:damage:type:piercing\",\n    \"item:damage:type:slashing\"\n    ]\n  }\n]"
+                }
+            },
+            "key": "match-predicate",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "pLaF3VCl3WulGrMr.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 534.5,
+                "y": 201.75
+            },
+            "type": "condition"
+        }
+    ]
+}
