@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "",
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorn}</p><p>When a character has this effect and the Nettleskin trigger is enabled, damage will be rolled automatically when adjacent creatures that hit them with a melee attack, as well as creatures that hit them with unarmed attacks.</p>",
       "gm": ""
     },
     "publication": {
@@ -17,7 +17,25 @@
       "license": "OGL",
       "remaster": false
     },
-    "rules": [],
+    "rules": [
+      {
+        "itemType": "spell",
+        "key": "ItemAlteration",
+        "mode": "add",
+        "property": "description",
+        "predicate": [
+          "item:trait:vitality"
+        ],
+        "value": [
+          {
+            "text": "Anytime you cast a vitality spell, the thorns' damage increases to d6s of piercing damage until the start of your next turn."
+          },
+          {
+            "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.tMv3au5iEzSGOWxN]{Aux Effect: Vibrant Thorns (Increase Damage)}"
+          }
+        ]
+      }
+    ],
     "slug": "aux-effect-vibrant-thorns",
     "traits": {
       "otherTags": [],
@@ -59,7 +77,7 @@
     "exportSource": null,
     "coreVersion": "13.350",
     "systemId": "pf2e",
-    "systemVersion": "7.6.4"
+    "systemVersion": "7.7.1"
   },
   "_key": "!items!KGbXSyZzPE5i1O4N"
 }

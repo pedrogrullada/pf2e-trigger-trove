@@ -1,5 +1,5 @@
 {
-  "img": "systems/pf2e/icons/equipment/consumables/ammunition/trustworthy-round.webp",
+  "img": "icons/skills/ranged/projectile-strike-egg-blue.webp",
   "name": "Aux Effect: Energy Shot",
   "system": {
     "description": {
@@ -16,9 +16,9 @@
       "value": 1
     },
     "publication": {
-      "license": "ORC",
-      "remaster": true,
-      "title": "Pathfinder Guns & Gears (Remastered)",
+      "license": "",
+      "remaster": false,
+      "title": "",
       "authors": ""
     },
     "rules": [
@@ -74,4 +74,3 @@
   "sort": 200000,
   "_key": "!items!8awQu81nSawdU8WM"
 }
-
