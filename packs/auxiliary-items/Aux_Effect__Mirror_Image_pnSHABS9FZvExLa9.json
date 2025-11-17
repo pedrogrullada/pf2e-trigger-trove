@@ -26,7 +26,6 @@
       {
         "key": "SpecialResource",
         "max": 3,
-        "value": 1,
         "label": "Mirror Images",
         "slug": "mirror-images"
       }
