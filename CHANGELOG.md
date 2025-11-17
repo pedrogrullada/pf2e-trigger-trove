@@ -1,3 +1,26 @@
+## 0.5.0
+- **New Triggers**	
+  - **Amulet's Abeyance**
+	  - *Damage Taken*: Automatically remove Amulet's Abeyance effect after non-healing damage is taken.
+  - **Critical Specialization**
+      - *Damage Taken*: When a creature takes damage from a character with critical specialization with a weapon from the bow, spear, or sword groups, their critical specialization effects are automatically applied.  
+      - Spear and Sword will take *grievous* rune into account.
+      - Only these groups are supported as the rest either a.) already as automated as they can be by the system, or b.) require a saving throw, which I don't want to automatically roll for people.
+  - **Inviolable**
+	  - *Attack Rolled:* When a creature with Inviolable is hit, roll 3d6 spirit damage. If they are holy or unholy, the damage has the corresponding trait.
+  - **Mirror Image & Trickster's Mirrors**
+	  - *Attack Rolled*: If the attacked creature has the respective auxiliary effect, automatically reduce the mirrors/images resource depending on both the outcome of the attack and a randomly generated number, as described by the spell. In the case of Trickster's Mirrors, if the attacker is within 5 feet, also roll damage when a mirror is destroyed.
+  - **Nettleskin**
+	  - *Attack Rolled*: Roll Nettleskin's damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent attacker. For this trigger to work, the auxiliary effect must be dragged onto the recipient. Furthermore, it must be dragged from the spell's card in chat in order to have the correct damage scaling.
+	  - *Damage Taken*: When an attacker takes Nettleskin damage, reduce the auxiliary effect's duration by 1 round.
+  - **Spike Skin**
+	  - *Attack Rolled:* Reduce the duration of Spike Skin's effect by 1 minute each time the user is hit by an attack that deals bludgeoning, piercing, or slashing damage.	
+  - **Steam Knight**
+	  - *Turn Started:* If there is an enemy within a kinetic aura of a character in Steam Knight stance, send free action reminder to chat, along with a save button, and roll damage automatically.  
+- **Updated Triggers**
+  - Add auxiliary effect to increase **Vibrant's Thorn** damage and link the effect when a vitality spell is cast.
+  - Clean up several trigger blueprints.
+
 ## 0.4.0
 - **New Triggers**
   - **Aura of Courage**

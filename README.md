@@ -9,14 +9,19 @@ Here's the list of abilities currently handled by triggers in some capacity.
   <summary>The List (As of 0.4.0)</summary>
 
    - Feats & Features
+     - Amulet's Abeyance
      - Aura of Courage
      - Champion's Resistance
+     - Critical Specialization (Bow, Spear, Sword)
      - Crowned in Tempest's Fury
      - Energy Shot
      - Goblin Scuttle
+     - Inviolable
      - One Shot, One Kill
      - Ravel of Thorns
      - Shared Stratagem
+     - Spike Skin
+     - Steam Knight
      - Swashbuckler Finisher
      - Taunt
      - Thermal Nimbus
@@ -26,8 +31,11 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Stench
    - Spells
      - Incendiary Aura
+     - Mirror Image
      - Mountain Resilience
+     - Nettleskin
      - Shields of the Spirit
+     - Trickster's Mirrors
      - Vibrant Thorns
 </details>
 
