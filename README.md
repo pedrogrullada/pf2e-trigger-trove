@@ -14,7 +14,6 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Amulet's Abeyance
      - Aura of Courage
      - Champion's Resistance
-     - Critical Specialization (Bow, Spear, Sword)
      - Crowned in Tempest's Fury
      - Energy Shot
      - Goblin Scuttle
