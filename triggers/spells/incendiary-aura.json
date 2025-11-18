@@ -1,6 +1,6 @@
 {
     "_id": "K8GYPAHnB7XZKlHD",
-    "description": "<p>Add persistent fire damage to a creature within @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0]{Incendiary Aura} that takes fire damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is fire. This covers most cases, but be aware that some instances of fire damage will be missed.</em></p></p>",
+    "description": "<p>Roll persistent fire damage each time a creature within an @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0]{Incendiary Aura} takes damage. This trigger cannot distinguish between damage types, so it's up to the user to apply it only when the triggering creature takes fire damage.</p>",
     "folder": "Spells",
     "name": "Incendiary Aura (Damage Taken)",
     "nodes": [
@@ -57,7 +57,7 @@
                 },
                 "true": {
                     "ids": [
-                        "9NxbUkUafRQUHkdD.inputs.in"
+                        "45eDDtBxxKNfOI5l.inputs.in"
                     ]
                 }
             },
@@ -68,79 +68,11 @@
             "type": "condition"
         },
         {
-            "_id": "9NxbUkUafRQUHkdD",
-            "inputs": {
-                "entry": {
-                    "ids": [],
-                    "value": "item:damage:type:fire"
-                },
-                "in": {
-                    "ids": [
-                        "vIVj1DekKykYMU2c.outputs.true"
-                    ]
-                },
-                "list": {
-                    "ids": [
-                        "f58bLM3lB6GnmEcu.outputs.output"
-                    ]
-                }
-            },
-            "key": "contains-entry",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "j5525TTAlWaXgkJ6.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 811.5,
-                "y": 200.75
-            },
-            "type": "condition"
-        },
-        {
-            "_id": "aYEg3vmlAJUQLUGe",
-            "inputs": {
-                "die": {
-                    "ids": [
-                        "Sy2J1AXMjWQiVzR9.outputs.result"
-                    ]
-                },
-                "effect": {
-                    "ids": []
-                },
-                "in": {
-                    "ids": [
-                        "Sy2J1AXMjWQiVzR9.outputs.out"
-                    ]
-                },
-                "target": {
-                    "ids": []
-                },
-                "type": {
-                    "ids": [],
-                    "value": "fire"
-                }
-            },
-            "key": "add-persistent",
-            "outputs": {
-                "out": {
-                    "ids": []
-                }
-            },
-            "position": {
-                "x": 1496,
-                "y": 191.75
-            },
-            "type": "action"
-        },
-        {
             "_id": "Sy2J1AXMjWQiVzR9",
             "inputs": {
                 "formula": {
                     "ids": [],
-                    "value": "(ceil(@x/4)+1)d4"
+                    "value": "(ceil(@x/4)+1)d4[persistent,fire]"
                 },
                 "in": {
                     "ids": [
@@ -157,18 +89,18 @@
             "outputs": {
                 "out": {
                     "ids": [
-                        "aYEg3vmlAJUQLUGe.inputs.in"
+                        "5DN6EyKcOZ3t60kS.inputs.in"
                     ]
                 },
                 "result": {
                     "ids": [
-                        "aYEg3vmlAJUQLUGe.inputs.die"
+                        "5DN6EyKcOZ3t60kS.inputs.formula"
                     ]
                 }
             },
             "position": {
-                "x": 1253,
-                "y": 196.75
+                "x": 1419,
+                "y": 295.75
             },
             "type": "action"
         },
@@ -190,12 +122,12 @@
             "inputs": {
                 "in": {
                     "ids": [
-                        "9NxbUkUafRQUHkdD.outputs.true"
+                        "uPjkkD6WJIlr4xVi.outputs.false"
                     ]
                 },
                 "input": {
                     "ids": [
-                        "qHTLQ0VUaOM8dQnX.outputs.output"
+                        "fselTo6IrqbC6rcE.outputs.output"
                     ]
                 }
             },
@@ -213,42 +145,91 @@
                 }
             },
             "position": {
-                "x": 1046.5,
-                "y": 218.23000000000002
+                "x": 1202.5,
+                "y": 291.23
             },
             "type": "splitter"
         },
         {
-            "_id": "f58bLM3lB6GnmEcu",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "list"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
+            "_id": "5DN6EyKcOZ3t60kS",
+            "inputs": {
+                "formula": {
                     "ids": [
-                        "9NxbUkUafRQUHkdD.inputs.list"
+                        "Sy2J1AXMjWQiVzR9.outputs.result"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "Sy2J1AXMjWQiVzR9.outputs.out"
+                    ]
+                },
+                "roll": {
+                    "ids": [
+                        "HX2anZaTYCVxImqr.outputs.roll"
+                    ]
+                }
+            },
+            "key": "roll-damage",
+            "position": {
+                "x": 1681,
+                "y": 315.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "HX2anZaTYCVxImqr",
+            "inputs": {
+                "item": {
+                    "ids": [
+                        "dKq9pzJDP9TUDg7g.outputs.item"
+                    ]
+                },
+                "note": {
+                    "value": "<p>If a creature within the emanation takes fire damage, it catches on fire, taking persistent fire damage.</p>"
+                },
+                "origin": {
+                    "ids": [
+                        "XFe2mYBT0LzeU6Dk.outputs.output"
+                    ]
+                }
+            },
+            "key": "roll-data",
+            "outputs": {
+                "roll": {
+                    "ids": [
+                        "5DN6EyKcOZ3t60kS.inputs.roll"
                     ]
                 }
             },
             "position": {
-                "x": 692.5,
-                "y": 363.25
+                "x": 1451.5,
+                "y": 432.25
             },
-            "target": "Gk1TCrQU7KShADph.outputs.options",
-            "type": "variable"
+            "type": "value"
         },
         {
-            "_id": "qHTLQ0VUaOM8dQnX",
+            "_id": "dKq9pzJDP9TUDg7g",
+            "inputs": {
+                "uuid": {
+                    "value": "Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0"
+                }
+            },
+            "key": "item-source",
+            "outputs": {
+                "item": {
+                    "ids": [
+                        "HX2anZaTYCVxImqr.inputs.item"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1242.5,
+                "y": 496.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "fselTo6IrqbC6rcE",
             "custom": {
                 "inputs": [],
                 "outputs": [
@@ -270,8 +251,154 @@
                 }
             },
             "position": {
-                "x": 921.5,
-                "y": 336.25
+                "x": 1080.5,
+                "y": 386.25
+            },
+            "target": "vIVj1DekKykYMU2c.outputs.source",
+            "type": "variable"
+        },
+        {
+            "_id": "45eDDtBxxKNfOI5l",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "vIVj1DekKykYMU2c.outputs.true"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "K69iMkdl3yVT76Tl.outputs.output"
+                    ]
+                }
+            },
+            "key": "boolean-splitter",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "uPjkkD6WJIlr4xVi.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 823,
+                "y": 216.75
+            },
+            "type": "splitter"
+        },
+        {
+            "_id": "K69iMkdl3yVT76Tl",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "boolean"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "45eDDtBxxKNfOI5l.inputs.input"
+                    ]
+                }
+            },
+            "position": {
+                "x": 707.5,
+                "y": 361.25
+            },
+            "target": "Gk1TCrQU7KShADph.outputs.negated",
+            "type": "variable"
+        },
+        {
+            "_id": "uPjkkD6WJIlr4xVi",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "45eDDtBxxKNfOI5l.outputs.false"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "FJegUeNTZPd4A089.outputs.output"
+                    ]
+                }
+            },
+            "key": "boolean-splitter",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "j5525TTAlWaXgkJ6.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 1007,
+                "y": 257.75
+            },
+            "type": "splitter"
+        },
+        {
+            "_id": "FJegUeNTZPd4A089",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "boolean"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "uPjkkD6WJIlr4xVi.inputs.input"
+                    ]
+                }
+            },
+            "position": {
+                "x": 879.5,
+                "y": 311.25
+            },
+            "target": "Gk1TCrQU7KShADph.outputs.heal",
+            "type": "variable"
+        },
+        {
+            "_id": "XFe2mYBT0LzeU6Dk",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "HX2anZaTYCVxImqr.inputs.origin"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1313.5,
+                "y": 454.25
             },
             "target": "vIVj1DekKykYMU2c.outputs.source",
             "type": "variable"
@@ -281,6 +408,7 @@
         "vIVj1DekKykYMU2c.outputs.source": {
             "global": false,
             "label": "Aura Source",
+            "locked": false,
             "type": "target"
         }
     }
