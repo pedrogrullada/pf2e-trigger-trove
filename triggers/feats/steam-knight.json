@@ -1,6 +1,6 @@
 {
     "_id": "E4S5YdgxAPJeZnYh",
-    "description": "<p>If there is an enemy within a kinetic aura while the aura source is in @UUID[Compendium.pf2e.feats-srd.Item.7PjBANpMMoBxTYq3]{Steam Knight} stance, roll damage automatically, along with a note with a reminder of the free action they can use to deal this damage and the necessary saving throw for the damage targets.</p>",
+    "description": "<p>If a character in @UUID[Compendium.pf2e.feats-srd.Item.7PjBANpMMoBxTYq3]{Steam Knight} stance starts their turn and there's an enemy within their kinetic aura, roll damage automatically, along with a note with a reminder of the free action they can use to deal this damage and the necessary saving throw for the damage targets.</p>",
     "folder": "Feats & Features",
     "name": "Steam Knight (Turn Started)",
     "nodes": [

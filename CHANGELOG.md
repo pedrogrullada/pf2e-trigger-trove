@@ -20,7 +20,7 @@
   - **Spike Skin**
 	  - *Attack Rolled:* Reduce the duration of Spike Skin's effect by 1 minute each time the user is hit by an attack that deals bludgeoning, piercing, or slashing damage.	
   - **Steam Knight**
-	  - *Turn Started:* If there is an enemy within a kinetic aura of a character in Steam Knight stance, send free action reminder to chat, along with a save button, and roll damage automatically.  
+	  - *Turn Started:* If a character in Steam Knight stance starts their turn and there's an enemy within their kinetic aura, roll damage automatically, along with a note with a reminder of the free action they can use to deal this damage and the necessary saving throw.
 - **Updated Triggers**
   - Add auxiliary effect to increase **Vibrant's Thorn** damage and link the effect when a vitality spell is cast.
   - Clean up several trigger blueprints.
