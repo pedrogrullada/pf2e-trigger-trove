@@ -1,0 +1,32 @@
+name: "Trigger Request"
+description: Request a new trigger
+labels: ["trigger-request"]
+body:
+  - type: input
+    id: feature_link
+    attributes:
+      label: "Rules Reference"
+      description: "Provide a link to the rules text you want supported (Archives of Nethys etc.)"
+      placeholder: "https://2e.aonprd.com/Spells.aspx?ID=2049"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Provide a description of what you would want the trigger to do."
+      placeholder: "Describe the trigger you'd like to see implemented..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: "Pre-submission Checklist"
+      description: "Please confirm you have completed the following:"
+      options:
+        - label: "I have verified that this trigger is not already available in the module"
+          required: true
+        - label: "I have searched existing issues to ensure this request hasn't been made before"
+          required: true
