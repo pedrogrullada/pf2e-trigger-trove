@@ -1,3 +1,16 @@
+## 0.5.2
+- **New Triggers**
+  - **Dread Flickering**
+    - _Turn Ended:_ When a non-immune living character ends their turn in a Dread Flickering aura, send the ability to chat alongside an immunity auxiliary effect to be applied in the event of a critically successful save.
+  - **Spirit Link**
+    - _Turn Started:_ When a creature starts their turn and they have a _spirit link_ auxiliary effect that originated from themselves, then check scene tokens for other creatures with an identical effect. If there is such a token, check if they're not at their Hit Point maximum and if so, send a damage-healing-hybrid roll to chat for both parties of spirit link to apply to themselves.
+- **Updated Triggers**
+  - Update **Incendiary Aura** trigger to send persistent damage to chat whenever damage is taken in the aura rather than unreliably auto-apply it
+  - Rewrite **Steam Knight**'s trigger to be clearer
+  - Fix **Taunt** trigger adding auxiliary effect to target rather than to triggering creature
+- **Workflow**
+  - Add new issue templates for **Trigger Request** and **Trigger Error** issues. Should make it easier to report errors or request triggers, evidently. (Thanks to Chasarooni for letting me copy his homework)
+
 ## 0.5.1
 - Fix broken links in Mirror Image and Trickster's Mirrors descriptions.
 - Reclassify critical specialization as equipment triggers

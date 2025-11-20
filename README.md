@@ -27,6 +27,7 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Taunt
      - Thermal Nimbus
    - Monster Abilities
+     - Dread Flickering 
      - Frightful Presence
      - Intense Heat
      - Stench
@@ -36,6 +37,7 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Mountain Resilience
      - Nettleskin
      - Shields of the Spirit
+     - Spirit Link
      - Trickster's Mirrors
      - Vibrant Thorns
 </details>
