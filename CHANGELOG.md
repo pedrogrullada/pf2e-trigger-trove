@@ -1,3 +1,8 @@
+## 0.5.3
+- **Updated Triggers**
+  - Account for rerolls in Shared Stratagem's trigger
+  - Send HP difference to chat instead of double spell rank if it's lower with Spirit Link trigger
+
 ## 0.5.2
 - **New Triggers**
   - **Dread Flickering**
