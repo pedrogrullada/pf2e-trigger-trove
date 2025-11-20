@@ -1,3 +1,9 @@
+## 0.5.4
+- **New Triggers**
+  - **Gibbering**:
+    - _Turn Started_: When a non-immune creature begins its turn within the gibbering aura, send the ability to chat alongside an auxiliary effect to apply immunity.  
+- **Updated Items**
+  - Add missing selector to EphemeralEffect on Shared Stratagem's auxiliary effect
 ## 0.5.3
 - **Updated Triggers**
   - Account for rerolls in Shared Stratagem's trigger
