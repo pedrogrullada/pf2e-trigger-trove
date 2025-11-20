@@ -1,6 +1,6 @@
 {
     "_id": "sTiUh3h7Ft4VBqpg",
-    "description": "When a creature starts their turn and they have a @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e]{Spirit Link} auxiliary effect that originated from themselves, then check scene tokens for other creatures with an identical effect. If there is such a creature, check if they're not at their Hit Point maximum and if so, send a damage-healing-hybrid roll to chat for both parties of spirit link to apply to themselves.",
+    "description": "<p>When a creature starts their turn and they have a @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e]{Spirit Link} auxiliary effect that originated from themselves, then check scene tokens for other creatures with an identical effect. If there is such a creature, check if they're not at their Hit Point maximum and if so, send a damage-healing-hybrid roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD]{Aux Effect: Spirit Link} to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.</p>",
     "folder": "Spells",
     "name": "Spirit Link (Turn Started)",
     "nodes": [
@@ -29,6 +29,7 @@
                     ]
                 },
                 "uuid": {
+                    "ids": [],
                     "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD"
                 }
             },
@@ -54,6 +55,7 @@
         {
             "_id": "nIYuadExTAcOAIG6",
             "custom": {
+                "inputs": [],
                 "outputs": [
                     {
                         "custom": true,
@@ -69,7 +71,8 @@
                         "label": "Effect Level",
                         "type": "number"
                     }
-                ]
+                ],
+                "outs": []
             },
             "inputs": {
                 "in": {
@@ -341,6 +344,7 @@
             "_id": "1ks47feRs7FyKufE",
             "inputs": {
                 "formula": {
+                    "ids": [],
                     "value": "(2*@x)"
                 },
                 "in": {
@@ -358,18 +362,18 @@
             "outputs": {
                 "out": {
                     "ids": [
-                        "qITOKOStz9bfrJLx.inputs.in"
+                        "xOKlGY9JrmKOksXO.inputs.in"
                     ]
                 },
                 "result": {
                     "ids": [
-                        "qITOKOStz9bfrJLx.inputs.formula"
+                        "xOKlGY9JrmKOksXO.inputs.formula"
                     ]
                 }
             },
             "position": {
                 "x": 2751,
-                "y": 844.75
+                "y": 815.75
             },
             "type": "action"
         },
@@ -407,12 +411,12 @@
             "inputs": {
                 "formula": {
                     "ids": [
-                        "1ks47feRs7FyKufE.outputs.result"
+                        "VdMWe3wG7Pid1nrP.outputs.output"
                     ]
                 },
                 "in": {
                     "ids": [
-                        "1ks47feRs7FyKufE.outputs.out"
+                        "4UA1qnL2xRKpjsIE.outputs.false"
                     ]
                 },
                 "roll": {
@@ -433,8 +437,8 @@
                 }
             },
             "position": {
-                "x": 3005,
-                "y": 862.75
+                "x": 3695,
+                "y": 892.75
             },
             "type": "action"
         },
@@ -447,6 +451,7 @@
                     ]
                 },
                 "note": {
+                    "ids": [],
                     "value": "<p>At the start of each of your turns, if the target is below maximum Hit Points, it regains 2 Hit Points per spell rank of <em>spirit link</em> (or the difference between its current and maximum Hit Points, if that's lower). You lose as many Hit Points as the target regained.</p>"
                 },
                 "origin": {
@@ -459,13 +464,14 @@
             "outputs": {
                 "roll": {
                     "ids": [
-                        "qITOKOStz9bfrJLx.inputs.roll"
+                        "qITOKOStz9bfrJLx.inputs.roll",
+                        "2hU4XZbwCpWZk9hn.inputs.roll"
                     ]
                 }
             },
             "position": {
-                "x": 2864.5,
-                "y": 1090.25
+                "x": 3692.5,
+                "y": 1107.25
             },
             "type": "value"
         },
@@ -473,6 +479,7 @@
             "_id": "cBdrfbsRZvOeqWxk",
             "inputs": {
                 "uuid": {
+                    "ids": [],
                     "value": "Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e"
                 }
             },
@@ -485,8 +492,8 @@
                 }
             },
             "position": {
-                "x": 2613.5,
-                "y": 1156.25
+                "x": 3481.5,
+                "y": 1179.25
             },
             "type": "value"
         },
@@ -513,8 +520,8 @@
                 }
             },
             "position": {
-                "x": 2675.5,
-                "y": 1124.25
+                "x": 3540.5,
+                "y": 1143.25
             },
             "target": "5ihYn9u4nbO0s2v5.outputs.this",
             "type": "variable"
@@ -542,8 +549,8 @@
                 }
             },
             "position": {
-                "x": 2861.5,
-                "y": 1015.25
+                "x": 3500.5,
+                "y": 1021.25
             },
             "target": "P0t72oPHvb15fNCn.outputs.other",
             "type": "variable"
@@ -595,6 +602,7 @@
                     ]
                 },
                 "b": {
+                    "ids": [],
                     "value": 100
                 },
                 "in": {
@@ -714,6 +722,7 @@
         {
             "_id": "ZaTbSV3ts4sb4sCS",
             "custom": {
+                "inputs": [],
                 "outputs": [
                     {
                         "custom": true,
@@ -729,7 +738,8 @@
                         "label": "HP Max",
                         "type": "number"
                     }
-                ]
+                ],
+                "outs": []
             },
             "inputs": {
                 "in": {
@@ -795,32 +805,397 @@
             },
             "target": "P0t72oPHvb15fNCn.outputs.other",
             "type": "variable"
+        },
+        {
+            "_id": "ooMEEWjm0gz3bM1c",
+            "inputs": {
+                "a": {
+                    "ids": [
+                        "8eSSHszwyS6adn5a.outputs.output"
+                    ]
+                },
+                "b": {
+                    "ids": [
+                        "2BCF1rlZDTBgxmuY.outputs.output"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "xOKlGY9JrmKOksXO.outputs.out"
+                    ]
+                }
+            },
+            "key": "subtract-number",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "4UA1qnL2xRKpjsIE.inputs.in"
+                    ]
+                },
+                "result": {
+                    "ids": [
+                        "4UA1qnL2xRKpjsIE.inputs.a"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3245,
+                "y": 822.25
+            },
+            "type": "action"
+        },
+        {
+            "_id": "8eSSHszwyS6adn5a",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "number"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "ooMEEWjm0gz3bM1c.inputs.a"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3125.5,
+                "y": 924.25
+            },
+            "target": "ZaTbSV3ts4sb4sCS.outputs.system|attributes|hp|max",
+            "type": "variable"
+        },
+        {
+            "_id": "2BCF1rlZDTBgxmuY",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "number"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "ooMEEWjm0gz3bM1c.inputs.b"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3119.5,
+                "y": 962.25
+            },
+            "target": "ZaTbSV3ts4sb4sCS.outputs.system|attributes|hp|value",
+            "type": "variable"
+        },
+        {
+            "_id": "xOKlGY9JrmKOksXO",
+            "inputs": {
+                "formula": {
+                    "ids": [
+                        "1ks47feRs7FyKufE.outputs.result"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "1ks47feRs7FyKufE.outputs.out"
+                    ]
+                }
+            },
+            "key": "resolve-formula",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "ooMEEWjm0gz3bM1c.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 2997,
+                "y": 817.23
+            },
+            "type": "action"
+        },
+        {
+            "_id": "4UA1qnL2xRKpjsIE",
+            "inputs": {
+                "a": {
+                    "ids": [
+                        "ooMEEWjm0gz3bM1c.outputs.result"
+                    ]
+                },
+                "b": {
+                    "ids": [
+                        "xIr5cyJ1NRCjRXYz.outputs.output"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "ooMEEWjm0gz3bM1c.outputs.out"
+                    ]
+                }
+            },
+            "key": "lt-number",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "qITOKOStz9bfrJLx.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "iSV0m5RPvtqACaoN.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3437,
+                "y": 837.75
+            },
+            "type": "logic"
+        },
+        {
+            "_id": "xIr5cyJ1NRCjRXYz",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "number"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "4UA1qnL2xRKpjsIE.inputs.b"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3267.5,
+                "y": 957.25
+            },
+            "target": "xOKlGY9JrmKOksXO.outputs.result",
+            "type": "variable"
+        },
+        {
+            "_id": "VdMWe3wG7Pid1nrP",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "text"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "qITOKOStz9bfrJLx.inputs.formula"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3485.5,
+                "y": 982.25
+            },
+            "target": "1ks47feRs7FyKufE.outputs.result",
+            "type": "variable"
+        },
+        {
+            "_id": "iSV0m5RPvtqACaoN",
+            "inputs": {
+                "formula": {
+                    "value": "@x"
+                },
+                "in": {
+                    "ids": [
+                        "4UA1qnL2xRKpjsIE.outputs.true"
+                    ]
+                },
+                "x": {
+                    "ids": [
+                        "1zLqAASt0YDFEqLs.outputs.output"
+                    ]
+                }
+            },
+            "key": "replace-x",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "2hU4XZbwCpWZk9hn.inputs.in"
+                    ]
+                },
+                "result": {
+                    "ids": [
+                        "2hU4XZbwCpWZk9hn.inputs.formula"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3723,
+                "y": 671.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "1zLqAASt0YDFEqLs",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "number"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "iSV0m5RPvtqACaoN.inputs.x"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3731.5,
+                "y": 813.25
+            },
+            "target": "ooMEEWjm0gz3bM1c.outputs.result",
+            "type": "variable"
+        },
+        {
+            "_id": "2hU4XZbwCpWZk9hn",
+            "inputs": {
+                "formula": {
+                    "ids": [
+                        "iSV0m5RPvtqACaoN.outputs.result"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "iSV0m5RPvtqACaoN.outputs.out"
+                    ]
+                },
+                "roll": {
+                    "ids": [
+                        "PZGLRxLnnCkuXknX.outputs.roll"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "GPytffi1RIvXk5xh.outputs.output"
+                    ]
+                }
+            },
+            "key": "roll-damage",
+            "position": {
+                "x": 3967,
+                "y": 661.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "GPytffi1RIvXk5xh",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "2hU4XZbwCpWZk9hn.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3776.5,
+                "y": 849.25
+            },
+            "target": "P0t72oPHvb15fNCn.outputs.other",
+            "type": "variable"
         }
     ],
     "variables": {
+        "1ks47feRs7FyKufE.outputs.result": {
+            "global": false,
+            "label": "Healing Formula",
+            "type": "text"
+        },
         "1vgIr9cH83WjUQua.outputs.item": {
             "global": false,
             "label": "Triggering Effect",
+            "locked": false,
             "type": "item"
         },
         "nIYuadExTAcOAIG6.outputs.level": {
             "global": false,
             "label": "Effect Level",
+            "locked": false,
+            "type": "number"
+        },
+        "ooMEEWjm0gz3bM1c.outputs.result": {
+            "global": false,
+            "label": "Hit Point Difference",
             "type": "number"
         },
         "P0t72oPHvb15fNCn.outputs.other": {
             "global": false,
             "label": "Scene Target",
+            "locked": false,
             "type": "target"
+        },
+        "xOKlGY9JrmKOksXO.outputs.result": {
+            "global": false,
+            "label": "Healing Number",
+            "type": "number"
         },
         "ZaTbSV3ts4sb4sCS.outputs.system|attributes|hp|max": {
             "global": false,
             "label": "HP Max",
+            "locked": false,
             "type": "number"
         },
         "ZaTbSV3ts4sb4sCS.outputs.system|attributes|hp|value": {
             "global": false,
             "label": "HP Value",
+            "locked": false,
             "type": "number"
         }
     }
