@@ -17,30 +17,7 @@
       "license": "OGL",
       "remaster": false
     },
-    "rules": [
-      {
-        "key": "ChoiceSet",
-        "choices": [
-          {
-            "label": "PF2E.Check.Result.Degree.Check.failure",
-            "value": "failure"
-          },
-          {
-            "label": "PF2E.Check.Result.Degree.Check.success",
-            "value": "success"
-          }
-        ],
-        "rollOption": "gibbering"
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ",
-        "inMemoryOnly": true,
-        "predicate": [
-          "gibbering:failure"
-        ]
-      }
-    ],
+    "rules": [],
     "slug": null,
     "traits": {
       "otherTags": [],

@@ -1,6 +1,6 @@
 {
   "_id": "WWTQgPr6jEXI7Avv",
-  "description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorns}' damage when the beneficiary of the spell is hit with an unarmed attack, or a melee attack by an adjacent creature.</p>",
+  "description": "@Localize[TRIGGERTROVE.VibrantThorns.Trigger.Description]",
   "folder": "Spells",
   "name": "Vibrant Thorns (Attack Rolled)",
   "nodes": [

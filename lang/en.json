@@ -1,0 +1,119 @@
+{
+    "TRIGGERTROVE": {
+        "AmuletsAbeyance": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": ""
+                }
+            }
+        },
+        "AuraOfCourage": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": ""
+                }
+            }
+        },
+        "ChampionsResistance": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": ""
+                }
+            }
+        },
+        "CriticalSpecialization": {
+            "Trigger": {
+                "Description": {
+                    "DamageTaken": {
+                        "Bow": "When critical damage is dealt with a weapon in the bow group and the origin has its critical specialization effect, add the immobilized condition to the target.",
+                        "Spear": "When critical damage is dealt with a weapon in the spear group and the origin has its critical specialization effect, add the clumsy condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts for an additional round.",
+                        "Sword": "When critical damage is dealt with a weapon in the sword group and the origin has its critical specialization effect, add the off-guard condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts until the end of the origin's turn instead."
+                    }
+                }
+            }
+        },
+        "CrownedInTempestsFury": {
+            "Trigger": {
+                "AuraEntered": "",
+                "TurnEnded": ""
+            }
+        },
+        "EnergyShot": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": ""
+                },
+                "CombatantJoined": {
+                    "Description": ""
+                }
+            },
+            "Item": {
+                "ResourceLabel": "Energy Shots"
+            }
+        },
+        "Generic": {
+            "Immunity": {
+                "Addendum": {
+                    "CriticalSuccess": "If the triggering character critically succeeds, you can apply this effect to make them immune.",
+                    "Success": "If the triggering character succeeds, you can apply this effect to make them immune."
+                }
+            },
+            "Note": {
+                "Label": "Trigger Trove Note"
+            }
+        },
+        "IncendiaryAura": {
+            "Trigger": {
+                "DamageTaken": "",
+                "Description": "Roll persistent fire damage each time a creature within an @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0]{Incendiary Aura} takes damage. This trigger cannot distinguish between damage types, so it's up to the user to apply it only when the triggering creature takes fire damage.",
+                "Note": "If a creature within the emanation takes fire damage, it catches on fire, taking persistent fire damage."
+            }
+        },
+        "MirrorImage": {
+            "Item": {
+                "ResourceLabel": "Mirror Images"
+            },
+            "Trigger": {
+                "Description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.pnSHABS9FZvExLa9]{Aux Effect: Mirror Image}, automatically reduce the Mirror Images resource depending on both the outcome of the attack and a randomly generated number, as described by the spell.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access, and used instead of the system-provided effect.</p>",
+                "Note": {
+                    "Hit": "<p><strong>Mirror Image</strong> The attack hits you! All your mirror images remain.</p>",
+                    "Miss": "<p><strong>Mirror Image</strong> The attack misses you! One of your mirror images is destroyed.</p>"
+                }
+            }
+        },
+        "SharedStratagem": {
+            "Trigger": {
+                "ChatMessage": "Drag this effect onto the designated ally for Shared Stratagem!",
+                "Description": {
+                    "AttackRolledAlly": "If the attacker has the Shared Stratagem auxiliary effect and the target is the Devise a Stratagem target, remove the auxiliary effect if they miss on their attack. If the attack is rerolled into a success, add the effect back.",
+                    "AttackRolledInvestigator": "Apply a marker effect to the investigator's Devise a Stratagem target. Then post a message to chat with an effect to drag onto the designated ally. The attack target will be off-guard to the designated allies' next attack.",
+                    "DamageTaken": "If the damage origin has the Shared Stratagem auxiliary effect and the target is the Devise a Stratagem target, remove both the auxiliary and trigger effects."
+                }
+            }
+        },
+        "SteamKnight": {
+            "Trigger": {
+                "ChatMessage": "At the start of each of your turns, you can emit steam as a free action. It deals fire damage to each creature in your kinetic aura with a @Check[reflex|against:kineticist|basic|options:area-effect|traits:composite,fire,impulse,kineticist,primal,stance,water] save against your class DC. A creature that fails is also pushed 5 feet.",
+                "Description": "If a character in @UUID[Compendium.pf2e.feats-srd.Item.7PjBANpMMoBxTYq3]{Steam Knight} stance starts their turn and there's an enemy within their kinetic aura, roll damage automatically, including a reminder note of the free action they can use to deal this damage, and the necessary saving throw.",
+                "FeatLabel": "Steam Knight"
+            }
+        },
+        "TrickstersMirrors": {
+            "Item": {
+                "Note": "A damaging effect that affects all targets within your space destroys all of the mirrors.",
+                "ResourceLabel": "Trickster's Mirrors"
+            },
+            "Trigger": {
+                "Description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ]{Aux Effect: Trickster's Mirrors}, automatically reduce the Trickster's Mirrors resource depending on both the outcome of the attack and a randomly generated number, as described by the spell. If the attacker is within 5 feet, roll damage when a mirror is destroyed.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access.</p>"
+            }
+        },
+        "VibrantThorns": {
+            "Item": {
+                "Addendum": "Anytime you cast a vitality spell, the thorns' damage increases to d6s of piercing damage until the start of your next turn."
+            },
+            "Trigger": {
+                "Description": "Roll @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorns}' damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent creature."
+            }
+        }
+    }
+}

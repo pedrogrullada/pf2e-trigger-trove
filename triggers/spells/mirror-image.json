@@ -1,6 +1,6 @@
 {
     "_id": "14kEtJItBbFlopQQ",
-    "description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.pnSHABS9FZvExLa9]{Aux Effect: Mirror Image}, automatically reduce the Mirror Images resource depending on both the outcome of the attack and a randomly generated number, as described by the spell.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access, and used instead of the system-provided effect.</p>",
+    "description": "@Localize[TRIGGERTROVE.MirrorImage.Trigger.Description]",
     "folder": "Spells",
     "name": "Mirror Image (Attack Rolled)",
     "nodes": [
@@ -345,7 +345,7 @@
                 },
                 "message": {
                     "ids": [],
-                    "value": "<p><strong>Mirror Image</strong> The attack hits you! All your mirror images remain.</p>"
+                    "value": "<p>@Localize[TRIGGERTROVE.MirrorImage.Trigger.Note.Hit]</p>"
                 },
                 "target": {
                     "ids": [
@@ -370,7 +370,7 @@
                 },
                 "message": {
                     "ids": [],
-                    "value": "<p><strong>Mirror Image</strong> The attack misses you! One of your mirror images is destroyed.</p>"
+                    "value": "<p>@Localize[TRIGGERTROVE.MirrorImage.Trigger.Note.Miss]</p>"
                 },
                 "target": {
                     "ids": [

@@ -1,6 +1,6 @@
 {
     "_id": "xtZCghvcDeL2xQNs",
-    "description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ]{Aux Effect: Trickster's Mirrors}, automatically reduce the Trickster's Mirrors resource depending on both the outcome of the attack and a randomly generated number, as described by the spell. If the attacker is within 5 feet, roll damage when a mirror is destroyed.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access.</p>",
+    "description": "@Localize[TRIGGERTROVE.TrickstersMirrors.Trigger.Description]",
     "folder": "Spells",
     "name": "Trickster's Mirrors (Attack Rolled)",
     "nodes": [

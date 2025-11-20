@@ -21,7 +21,10 @@
       {
         "key": "EphemeralEffect",
         "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg",
-        "selectors": "attack-roll",
+        "selectors": [
+          "attack-roll",
+          "damage"
+        ],
         "predicate": [
           "target:effect:t-gyc4tee2pkad-tx1-shared-stratagem"
         ]
@@ -66,9 +69,9 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.1"
+    "systemVersion": "7.7.4"
   },
   "_key": "!items!u6Czd41XiuFK70J3"
 }

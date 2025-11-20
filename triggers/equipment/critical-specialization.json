@@ -1,7 +1,7 @@
 [
     {
         "_id": "XT5z6wqVGfk4lqvf",
-        "description": "<p>When critical damage is dealt with a weapon in the bow group and the origin has its critical specialization effect, add the immobilized condition to the target.</p>",
+        "description": "@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Bow]",
         "folder": "Equipment",
         "name": "Bow Critical Specialization (Damage Taken)",
         "nodes": [
@@ -178,7 +178,7 @@
     },
     {
         "_id": "EeqWuOdnFx3Khl72",
-        "description": "<p>When critical damage is dealt with a weapon in the spear group and the origin has its critical specialization effect, add the clumsy condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts for an additional round.</p>",
+        "description": "TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Spear",
         "folder": "Equipment",
         "name": "Spear Critical Specialization (Damage Taken)",
         "nodes": [
@@ -542,7 +542,7 @@
     },
     {
         "_id": "hWdbjm5z34ByMnXH",
-        "description": "<p>When critical damage is dealt with a weapon in the sword group and the origin has its critical specialization effect, add the off-guard condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts until the end of the origin's turn instead.</p>",
+        "description": "TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Sword",
         "folder": "Equipment",
         "name": "Sword Critical Specialization (Damage Taken)",
         "nodes": [

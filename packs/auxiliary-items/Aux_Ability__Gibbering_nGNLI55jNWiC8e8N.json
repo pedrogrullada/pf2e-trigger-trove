@@ -28,13 +28,13 @@
         ],
         "value": [
           {
-            "text": "If the triggering character succeeds, you can apply this effect to make them immune."
+            "text": "TRIGGERTROVE.Generic.Immunity.Addendum.Success"
           },
           {
             "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.lab3fNjYMH2OdJuX]{Aux Effect: Gibbering}"
           }
         ],
-        "label": "Trigger Trove Note"
+        "label": "TRIGGERTROVE.Generic.Note.Label"
       }
     ],
     "slug": null,

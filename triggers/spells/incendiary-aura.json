@@ -1,6 +1,6 @@
 {
     "_id": "K8GYPAHnB7XZKlHD",
-    "description": "<p>Roll persistent fire damage each time a creature within an @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0]{Incendiary Aura} takes damage. This trigger cannot distinguish between damage types, so it's up to the user to apply it only when the triggering creature takes fire damage.</p>",
+    "description": "@Localize[TRIGGERTROVE.IncendiaryAura.Trigger.Description]",
     "folder": "Spells",
     "name": "Incendiary Aura (Damage Taken)",
     "nodes": [
@@ -185,7 +185,8 @@
                     ]
                 },
                 "note": {
-                    "value": "<p>If a creature within the emanation takes fire damage, it catches on fire, taking persistent fire damage.</p>"
+                    "ids": [],
+                    "value": "<p>@Localize[TRIGGERTROVE.IncendiaryAura.Trigger.Note]</p>"
                 },
                 "origin": {
                     "ids": [
@@ -211,6 +212,7 @@
             "_id": "dKq9pzJDP9TUDg7g",
             "inputs": {
                 "uuid": {
+                    "ids": [],
                     "value": "Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0"
                 }
             },

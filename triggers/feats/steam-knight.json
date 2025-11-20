@@ -1,6 +1,6 @@
 {
     "_id": "E4S5YdgxAPJeZnYh",
-    "description": "<p>If a character in @UUID[Compendium.pf2e.feats-srd.Item.7PjBANpMMoBxTYq3]{Steam Knight} stance starts their turn and there's an enemy within their kinetic aura, roll damage automatically, including a reminder note of the free action they can use to deal this damage, and the necessary saving throw.</p>",
+    "description": "@Localize[TRIGGERTROVE.SteamKnight.Trigger.Description]",
     "folder": "Feats & Features",
     "name": "Steam Knight (Turn Started)",
     "nodes": [
@@ -297,7 +297,7 @@
                 },
                 "input": {
                     "ids": [],
-                    "value": "<strong>Steam Knight</strong> <span class=\"action-glyph\">F</span>"
+                    "value": "<strong>@Localize[TRIGGERTROVE.SteamKnight.Trigger.FeatLabel]</strong> <span class=\"action-glyph\">F</span>"
                 },
                 "prefix": {
                     "ids": [],
@@ -337,7 +337,7 @@
                 },
                 "b": {
                     "ids": [],
-                    "value": "<p>At the start of each of your turns, you can emit steam as a free action. It deals fire damage to each creature in your kinetic aura with a @Check[reflex|against:kineticist|basic|options:area-effect|traits:composite,fire,impulse,kineticist,primal,stance,water] save against your class DC. A creature that fails is also pushed 5 feet.</p>"
+                    "value": "<p>@Localize[TRIGGERTROVE.SteamKnight.Trigger.ChatMessage]</p>"
                 },
                 "in": {
                     "ids": [
@@ -541,6 +541,7 @@
         "oJoLfkzu2efQOzkI.outputs.other": {
             "global": false,
             "label": "Scene Target",
+            "locked": false,
             "type": "target"
         }
     }
