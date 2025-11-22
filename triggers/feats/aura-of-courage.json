@@ -1,6 +1,6 @@
 {
     "_id": "y0iuf6DaL7jPPVz5",
-    "description": "<p>When a champion with Aura of Courage ends their turn, all allies within their aura reduce their frightened condition by 1.</p>",
+    "description": "@Localize[TRIGGERTROVE.AuraOfCourage.Trigger.TurnEnded.Description]",
     "folder": "Feats & Features",
     "name": "Aura of Courage (Turn Ended)",
     "nodes": [

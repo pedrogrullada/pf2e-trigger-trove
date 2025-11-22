@@ -1,6 +1,6 @@
 {
   "_id": "55BlQXKBJuKxR0Fp",
-  "description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.ZL97DcoJ8us6EwAF]{Shields of the Spirit}'s damage when an ally is attacked while they are in the champion's aura. The champion must have the spell's effect on them.</p><p>Alternatively, roll damage if the target ally is not within the champion's aura, but does have the Shields of the Spirit (Security) effect on them.</p>",
+  "description": "@Localize[TRIGGERTROVE.ShieldsOfTheSpirit.Trigger.AttackRolled.Description]",
   "folder": "Spells",
   "name": "Shields of the Spirit (Attack Rolled)",
   "nodes": [

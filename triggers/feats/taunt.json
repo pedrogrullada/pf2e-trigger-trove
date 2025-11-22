@@ -1,6 +1,6 @@
 {
     "_id": "lp48uom6KnwJqqbm",
-    "description": "<p>Checks if attacking creature is Taunted, if so it then checks if the attack target is creature is a creature other than the origin of Taunt. If so, off-guard is applied to the attacking creature until start of its next turn.</p>",
+    "description": "@Localize[TRIGGERTROVE.Taunt.Trigger.AttackRolled.Description]",
     "folder": "Feats & Features",
     "name": "Taunt (Attack Rolled)",
     "nodes": [

@@ -22,7 +22,7 @@
         "key": "SpecialResource",
         "max": 3,
         "value": 1,
-        "label": "Trickster's Mirrors",
+        "label": "TRIGGERTROVE.TrickstersMirrors.Item.ResourceLabel",
         "slug": "tricksters-mirrors"
       },
       {
@@ -38,8 +38,8 @@
             ]
           }
         ],
-        "text": "A damaging effect that affects all targets within your space destroys all of the mirrors.",
-        "title": "{item|name}"
+        "text": "TRIGGERTROVE.TrickstersMirrors.Item.Note",
+        "title": "TRIGGERTROVE.Generic.Note.Label"
       }
     ],
     "slug": null,
@@ -83,7 +83,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.1"
+    "systemVersion": "7.7.4"
   },
   "_key": "!items!SlgTXSJRSL5UplfQ"
 }

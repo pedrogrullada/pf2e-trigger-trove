@@ -1,7 +1,7 @@
 [
     {
         "_id": "tGyc4TEe2PkadTx1",
-        "description": "<p>Apply a marker effect to the investigator's Devise a Stratagem target. Then post a message to chat with an effect to drag onto the designated ally. The attack target will be off-guard to the designated allies' next attack.</p>",
+        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.AttackRolled.Investigator.Description]",
         "folder": "Feats & Features",
         "name": "Shared Stratagem (Attack Rolled, Investigator)",
         "nodes": [
@@ -37,7 +37,7 @@
                     },
                     "message": {
                         "ids": [],
-                        "value": "<p>Drag this effect onto the designated ally for Shared Stratagem!</p><p>@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3]{Aux Effect: Shared Stratagem}</p>"
+                        "value": "TRIGGERTROVE.SharedStratagem.Trigger.AttackRolled.Investigator.ChatMessage"
                     }
                 },
                 "key": "create-message",
@@ -324,6 +324,7 @@
                         ]
                     },
                     "trigger": {
+                        "ids": [],
                         "value": "tGyc4TEe2PkadTx1"
                     }
                 },
@@ -433,7 +434,7 @@
     },
     {
         "_id": "DC7rsacX7zSEdmGG",
-        "description": "<p>If the attacker has the Shared Stratagem auxiliary effect and the target is the Devise a Stratagem target, remove the auxiliary effect if they miss on their attack. If the attack is rerolled into a success, add the effect back.</p>",
+        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.AttackRolled.Ally.Description]",
         "folder": "Feats & Features",
         "name": "Shared Strategem (Attack Rolled, Ally)",
         "nodes": [
@@ -759,7 +760,7 @@
     },
     {
         "_id": "92acwAQIN8qficIR",
-        "description": "<p>If the damage origin has the Shared Stratagem auxiliary effect and the target is the Devise a Stratagem target, remove both the auxiliary and trigger effects.</p>",
+        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.DamageTaken.Description]",
         "folder": "Feats & Features",
         "name": "Shared Stratagem (Damage Taken)",
         "nodes": [

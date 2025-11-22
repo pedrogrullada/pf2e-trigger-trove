@@ -1,7 +1,7 @@
 [
   {
     "_id": "fmy4uug0XjFiB9BR",
-    "description": "<p>Post the Intense Heat ability to chat when a creature enters the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target as well.</p>",
+    "description": "<p>@Localize[TRIGGERTROVE.IntenseHeat.Trigger.AuraEntered.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
     "folder": "Monster Abilities",
     "name": "Intense Heat (Aura Entered)",
     "nodes": [
@@ -65,7 +65,7 @@
   },
   {
     "_id": "QTlb6cOxsdi3TAY9",
-    "description": "<p>Post the Intense Heat ability to chat when a creature starts their turn in the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target as well.</p>",
+    "description": "<p>@Localize[TRIGGERTROVE.IntenseHeat.Trigger.TurnStarted.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
     "folder": "Monster Abilities",
     "name": "Intense Heat (Turn Started)",
     "nodes": [

@@ -28,13 +28,13 @@
         ],
         "value": [
           {
-            "text": "Anytime you cast a vitality spell, the thorns' damage increases to d6s of piercing damage until the start of your next turn."
+            "text": "TRIGGERTROVE.VibrantThorns.Item.Addendum"
           },
           {
             "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.tMv3au5iEzSGOWxN]{Aux Effect: Vibrant Thorns (Increase Damage)}"
           }
         ],
-        "label": "Trigger Trove Note"
+        "label": "TRIGGERTROVE.Generic.Note.Label"
       }
     ],
     "slug": "aux-effect-vibrant-thorns",

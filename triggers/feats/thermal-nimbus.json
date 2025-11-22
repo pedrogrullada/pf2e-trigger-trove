@@ -1,7 +1,7 @@
 [
   {
     "_id": "lq5hYIT4k51SNiqM",
-    "description": "<p>Roll a kineticist's Thermal Nimbus damage when a creature enters their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong></p>",
+    "description": "<p>@Localize[TRIGGERTROVE.ThermalNimbus.Trigger.AuraEntered.Description]</p><p>@Localize[TRIGGERTROVE.SafeElements.Subtrigger.Check.Addendum]</p>",
     "folder": "Feats & Features",
     "name": "Thermal Nimbus (Aura Entered)",
     "nodes": [
@@ -264,7 +264,7 @@
   },
   {
     "_id": "GnfoPAyuICXUktw2",
-    "description": "<p>Roll a kineticist's Thermal Nimbus damage when a creature starts its turn in their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong></p>",
+    "description": "<p>@Localize[TRIGGERTROVE.ThermalNimbus.Trigger.AuraEntered.Description]</p><p>@Localize[TRIGGERTROVE.SafeElements.Subtrigger.Check.Addendum]</p>",
     "folder": "Feats & Features",
     "name": "Thermal Nimbus (Turn Started)",
     "nodes": [

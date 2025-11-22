@@ -1,7 +1,7 @@
 [
     {
         "_id": "4nz2AB6hApWyBj2I",
-        "description": "<p>When a creature with Inviolable is hit, roll 3d6 spirit damage. If they are holy or unholy, the damage has the corresponding trait.</p>",
+        "description": "@Localize[TRIGGERTROVE.Inviolable.Trigger.AttackRolled.Description]",
         "folder": "Feats & Features",
         "name": "Inviolable (Attack Rolled)",
         "nodes": [

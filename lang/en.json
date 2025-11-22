@@ -1,0 +1,297 @@
+{
+    "TRIGGERTROVE": {
+        "AmuletsAbeyance": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatically remove the @UUID[Compendium.pf2e.actionspf2e.Item.Or6RLXeoZkN8CLdi]{Amulet's Abeyance} effect after damage is taken."
+                }
+            }
+        },
+        "AuraOfCourage": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": "When a champion with Aura of Courage ends their turn, all allies within their aura reduce their frightened condition by 1."
+                }
+            }
+        },
+        "AuxiliarySubtriggers": {
+            "RollItemDamage": {
+                "Description": "Roll item damage with context provided by the parent trigger."
+            },
+            "SendAbilityToChat": {
+                "Addendum": "If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target.</p>",
+                "Description": "Send an ability to chat. The ability's slug and its origin are set in the parent trigger."
+            }
+        },
+        "ChampionsResistance": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatically remove the Champion's Resistance effect after damage is taken."
+                }
+            }
+        },
+        "CriticalSpecialization": {
+            "Trigger": {
+                "Description": {
+                    "DamageTaken": {
+                        "Description": {
+                            "Bow": "When critical damage is dealt with a weapon in the bow group and the origin has its critical specialization effect, add the immobilized condition to the target.",
+                            "Spear": "When critical damage is dealt with a weapon in the spear group and the origin has its critical specialization effect, add the clumsy condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts for an additional round.",
+                            "Sword": "When critical damage is dealt with a weapon in the sword group and the origin has its critical specialization effect, add the off-guard condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts until the end of the origin's turn instead."
+                        }
+                    }
+                }
+            }
+        },
+        "CrownedInTempestsFury": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "<p>Roll a kineticist's Crowned in Tempest's Fury damage when a creature enters their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them from the kineticist's sheet.</p>"
+                },
+                "TurnEnded": {
+                    "Description": "<p>Roll a kineticist's Crowned in Tempest's Fury damage when a creature end its turn in their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong></p>"
+                }
+            }
+        },
+        "DreadFlickering": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": "When a non-immune living character ends their turn in a Dread Flickering aura, send the ability to chat alongside an immunity auxiliary effect to be applied in the event of a critically successful save."
+                }
+            }
+        },
+        "EnergyShot": {
+            "Item": {
+                "ResourceLabel": "Energy Shots"
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "If the attacker has the Energy Shot auxiliary effect, deplete the Energy Shots resource by 1 after attacking with a crossbow or firearm. If there are no more Energy Shots left, remove the effect automatically."
+                },
+                "CombatantJoined": {
+                    "Description": "After confirming that Energy Shot is used, add its damage effect as well as an auxiliary effect to automatically track the shots as a Special Resource."
+                }
+            }
+        },
+        "FrightfulPresence": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": {
+                        "All": "Post the Frightful Presence ability to chat when a creature enters the aura. If you have Frightful Presence (Aura Entered, Enemies Only) enabled, disable this one.",
+                        "EnemiesOnly": "Post the Frightful Presence ability to chat when an enemy of the Frightful Presence creature enters the aura. If you have Frightful Presence (Aura Entered) enabled, disable this one."
+                    }
+                }
+            }
+        },
+        "Generic": {
+            "Immunity": {
+                "Addendum": {
+                    "CriticalSuccess": "If the triggering character critically succeeds, you can apply this effect to make them immune.",
+                    "Success": "If the triggering character succeeds, you can apply this effect to make them immune."
+                }
+            },
+            "Note": {
+                "Label": "Trigger Trove Note"
+            }
+        },
+        "Gibbering": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "When a non-immune creature begins its turn within the gibbering aura, send the ability to chat alongside an auxiliary effect to apply immunity."
+                }
+            }
+        },
+        "GoblinScuttle": {
+            "Trigger": {
+                "TokenMoved": {
+                    "Description": "When an allied token is moved to an adjacent space of another token with Goblin Scuttle, confirm whether they want to use it, and if so, send the feat to chat. Be aware of false positives resulting from a Foundry movement not being the same as having ended a move action.",
+                    "Prompt": "Your ally has moved into an adjacent space, possibly ending their move action there. Do you want to use Goblin Scuttle?"
+                }
+            }
+        },
+        "IncendiaryAura": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Roll persistent fire damage each time a creature within an @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0]{Incendiary Aura} takes damage. This trigger cannot distinguish between damage types, so it's up to the user to apply it only when the triggering creature takes fire damage.",
+                    "Note": "If a creature within the emanation takes fire damage, it catches on fire, taking persistent fire damage."
+                }
+            }
+        },
+        "IntenseHeat": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "Post the Intense Heat ability to chat when a creature enters the aura."
+                },
+                "TurnStarted": {
+                    "Description": "Post the Intense Heat ability to chat when a creature starts their turn in the aura."
+                }
+            }
+        },
+        "Inviolable": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "When a creature with Inviolable is hit, roll 3d6 spirit damage. If they are holy or unholy, the damage has the corresponding trait."
+                }
+            }
+        },
+        "MirrorImage": {
+            "Item": {
+                "ResourceLabel": "Mirror Images"
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.pnSHABS9FZvExLa9]{Aux Effect: Mirror Image}, automatically reduce the Mirror Images resource depending on both the outcome of the attack and a randomly generated number, as described by the spell.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access, and used instead of the system-provided effect.</p>",
+                    "Note": {
+                        "Hit": "<strong>Mirror Image</strong> The attack hits you! All your mirror images remain.",
+                        "Miss": "<strong>Mirror Image</strong> The attack misses you! One of your mirror images is destroyed."
+                    }
+                }
+            }
+        },
+        "MountainResilience": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Reduce the duration of @UUID[Compendium.pf2e.spells-srd.Item.2BV2yYPfVJ5zirZt]{Mountain Resilience}'s effect by 1 minute each time the beneficiary of the spell is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of the previously mentioned damage types will be missed.</em></p>"
+                }
+            }
+        },
+        "Nettleskin": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.BA143r8fCqmSjdRf]{Nettleskin}'s damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent attacker.</p><p>For this trigger to work, the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.QrCwY1ylvvuzW7mb]{Aux Effect: Nettleskin} must be dragged onto the recipient. Furthermore, it must be dragged from the spell's card in chat, otherwise it won't have the correct scaling.</p>"
+                }
+            }
+        },
+        "OneShotOneKill": {
+            "Trigger": {
+                "CombatantJoined": {
+                    "Description": "After confirming that One Shot, One Kill is used, add an effect that enables its additional precision damage until the first successful Strike deals damage.",
+                    "Prompt": "Are you using One Shot, One Kill in this combat?"
+                },
+                "DamageTaken": {
+                    "Description": "Remove the One Shot, One Kill auxiliary effect when an enemy takes damage from a character benefitting from that ability."
+                }
+            }
+        },
+        "RavelOfThorns": {
+            "Trigger": {
+                "AuraLeft": {
+                    "Description": "Remove the Ravel of Thorns penalty when a creature leaves the kineticist's kinetic aura."
+                },
+                "TurnStarted": {
+                    "Description": "When a creature starts its turn inside the kinetic aura of a character in @UUID[Compendium.pf2e.feats-srd.Item.mHvkBdBN4gs6CH1g]{Ravel of Thorns} stance, add the Ravel of Thorns auxiliary effect."
+                }
+            }
+        },
+        "SafeElements": {
+            "Subtrigger": {
+                "Check": {
+                    "Addendum": "A creature can be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong>"
+                }
+            }
+        },
+        "SharedStratagem": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Ally": {
+                        "Description": "If the attacker has the Shared Stratagem auxiliary effect and the target is the Devise a Stratagem target, remove the auxiliary effect if they miss on their attack. If the attack is rerolled into a success, add the effect back."
+                    },
+                    "Investigator": {
+                        "ChatMessage": "<p><strong>Trigger Trove Note</strong> Drag this effect onto the designated ally for Shared Stratagem!</p><p>@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3]{Aux Effect: Shared Stratagem}</p>",
+                        "Description": "Apply a marker effect to the investigator's Devise a Stratagem target. Then post a message to chat with an effect to drag onto the designated ally. The attack target will be off-guard to the designated allies' next attack."
+                    }
+                },
+                "DamageTaken": {
+                    "Description": "If the damage origin has the Shared Stratagem auxiliary effect and the target is the Devise a Stratagem target, remove both the auxiliary and trigger effects."
+                }
+            }
+        },
+        "ShieldsOfTheSpirit": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.ZL97DcoJ8us6EwAF]{Shields of the Spirit}'s damage when an ally is attacked while they are in the champion's aura. The champion must have the spell's effect on them.</p><p>Alternatively, roll damage if the target ally is not within the champion's aura, but does have the Shields of the Spirit (Security) effect on them.</p>"
+                }
+            }
+        },
+        "SpikeSkin": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Reduce the duration of @UUID[Compendium.pf2e.feats-srd.Item.9p28s0zg4Vv4r5i2]{Spike Skin}'s effect by 1 minute each time the user is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of the previously mentioned damage types will be missed.</em></p>"
+                }
+            }
+        },
+        "SpiritLink": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "<p>When a creature starts their turn and they have a @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e]{Spirit Link} auxiliary effect that originated from themselves, then check scene tokens for other creatures with an identical effect. If there is such a creature, check if they're not at their Hit Point maximum and if so, send a damage-healing-hybrid roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD]{Aux Effect: Spirit Link} to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.</p>"
+                }
+            }
+        },
+        "SteamKnight": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "If a character in @UUID[Compendium.pf2e.feats-srd.Item.7PjBANpMMoBxTYq3]{Steam Knight} stance starts their turn and there's an enemy within their kinetic aura, roll damage automatically, including a reminder note of the free action they can use to deal this damage, and the necessary saving throw.",
+                    "Note": "<strong>Steam Knight</strong> <span class=\"action-glyph\">F</span> At the start of each of your turns, you can emit steam as a free action. It deals fire damage to each creature in your kinetic aura with a @Check[reflex|against:kineticist|basic|options:area-effect,forced-movement|traits:composite,fire,impulse,kineticist,primal,stance,water] save. A creature that fails is also pushed 5 feet."
+                }
+            }
+        },
+        "Stench": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "Post the Stench ability when a creature enters the aura."
+                },
+                "TurnStarted": {
+                    "Description": "Post the Stench ability when a creature starts its turn in the aura."
+                }
+            }
+        },
+        "SwashbucklerFinisher": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Remove Panache's effect when a finisher misses. If the attack is rerolled into a success, grant Panache back to enable finisher damage."
+                },
+                "DamageTaken": {
+                    "Description": "Remove Panache's effect from damage origin when finisher damage is dealt."
+                }
+            }
+        },
+        "Taunt": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Checks if attacking creature is @UUID[Compendium.pf2e.actionspf2e.Item.4DYFJ4TUsNkgFBDb]{Taunted}, if so it then checks if the attack target is creature is a creature other than the origin of Taunt. If so, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} is applied to the attacking creature until start of its next turn."
+                }
+            }
+        },
+        "ThermalNimbus": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "Roll a kineticist's Thermal Nimbus damage when a creature enters their kinetic aura while their stance is active."
+                },
+                "TurnStarted": {
+                    "Description": "Roll a kineticist's Thermal Nimbus damage when a creature ends their turn in their kinetic aura while their stance is active."
+                }
+            }
+        },
+        "TrickstersMirrors": {
+            "Item": {
+                "Note": "A damaging effect that affects all targets within your space destroys all of the mirrors.",
+                "ResourceLabel": "Trickster's Mirrors"
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ]{Aux Effect: Trickster's Mirrors}, automatically reduce the Trickster's Mirrors resource depending on both the outcome of the attack and a randomly generated number, as described by the spell. If the attacker is within 5 feet, roll damage when a mirror is destroyed.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access.</p>"
+                }
+            }
+        },
+        "VibrantThorns": {
+            "Item": {
+                "Addendum": "Anytime you cast a vitality spell, the thorns' damage increases to d6s of piercing damage until the start of your next turn."
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Roll @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorns}' damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent creature."
+                }
+            }
+        }
+    }
+}

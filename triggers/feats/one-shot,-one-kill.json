@@ -1,7 +1,7 @@
 [
   {
     "_id": "k0xxagFv7QRRkAgZ",
-    "description": "<p>Remove the One Shot, One Kill auxiliary effect when an enemy takes damage from a character benefitting from that ability.</p>",
+    "description": "@Localize[TRIGGERTROVE.OneShotOneKill.Trigger.DamageTaken.Description]",
     "folder": "Feats & Features",
     "name": "One Shot, One Kill (Damage Taken)",
     "nodes": [
@@ -119,7 +119,7 @@
   },
   {
     "_id": "zO6QyDBjnZuAEPwu",
-    "description": "<p>After confirming that One Shot, One Kill is used, add an effect that enables its additional precision damage until the first successful Strike deals damage.</p>",
+    "description": "@Localize[TRIGGERTROVE.OneShotOneKill.Trigger.CombatantJoined.Description]",
     "folder": "Feats & Features",
     "name": "One Shot, One Kill (Combatant Joined)",
     "nodes": [
@@ -184,7 +184,7 @@
           },
           "prompt": {
             "ids": [],
-            "value": "<p>Are you using One Shot, One Kill in this combat?</p>"
+            "value": "TRIGGERTROVE.OneShotOneKill.Trigger.CombatantJoined.Prompt"
           },
           "title": {
             "ids": [

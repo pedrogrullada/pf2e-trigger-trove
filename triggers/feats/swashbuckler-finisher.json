@@ -1,7 +1,7 @@
 [
     {
         "_id": "SjD7rEF1hPWqmwGB",
-        "description": "<p>Remove Panache's effect from damage origin when finisher damage is dealt.</p>",
+        "description": "@Localize[TRIGGERTROVE.SwashbucklerFinisher.Trigger.DamageTaken.Description]",
         "folder": "Feats & Features",
         "name": "Swashbuckler Finisher (Damage Taken)",
         "nodes": [
@@ -119,7 +119,7 @@
     },
     {
         "_id": "eFqdJDQVZDjOvjHa",
-        "description": "<p>Remove Panache's effect when a finisher misses. If the attack is rerolled into a success, grant Panache back to enable finisher damage.</p>",
+        "description": "@Localize[TRIGGERTROVE.SwashbucklerFinisher.Trigger.AttackRolled.Description]",
         "folder": "Feats & Features",
         "name": "Swashbuckler Finisher (Attack Rolled)",
         "nodes": [

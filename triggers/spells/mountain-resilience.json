@@ -1,6 +1,6 @@
 {
   "_id": "4kTXa69928czX3l9",
-  "description": "<p>Reduce the duration of @UUID[Compendium.pf2e.spells-srd.Item.2BV2yYPfVJ5zirZt]{Mountain Resilience}'s effect by 1 minute each time the beneficiary of the spell is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of the previously mentioned damage types will be missed.</em></p>",
+  "description": "@Localize[TRIGGERTROVE.MountainResilience.Trigger.AttackRolled.Description]",
   "folder": "Spells",
   "name": "Mountain Resilience (Attack Rolled)",
   "nodes": [

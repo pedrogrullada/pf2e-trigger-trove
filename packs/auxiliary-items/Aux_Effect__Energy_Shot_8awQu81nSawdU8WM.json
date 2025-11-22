@@ -28,7 +28,7 @@
       },
       {
         "key": "SpecialResource",
-        "label": "Energy Shots",
+        "label": "TRIGGERTROVE.EnergyShot.Item.ResourceLabel",
         "max": 3,
         "slug": "energy-shots"
       }
@@ -59,9 +59,9 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.1"
+    "systemVersion": "7.7.4"
   },
   "effects": [],
   "folder": null,

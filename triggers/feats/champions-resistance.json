@@ -1,6 +1,6 @@
 {
   "_id": "qFRjm1DiF2ye0nuX",
-  "description": "<p>Automatically remove the Champion's Resistance effect after damage is taken.</p>",
+  "description": "@Localize[TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Description]",
   "folder": "Feats & Features",
   "name": "Champion's Resistance (Damage Taken)",
   "nodes": [
