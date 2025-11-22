@@ -1,4 +1,4 @@
-## 0.6.0
+## 0.6.1
 - **Housekeeping**
   - Update minimum PF2e Trigger version to 2.17.0
 ## 0.6.0
