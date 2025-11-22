@@ -1,4 +1,7 @@
 ## 0.6.0
+- **Housekeeping**
+  - Update minimum PF2e Trigger version to 2.17.0
+## 0.6.0
 - **Improvements**
   - Add support for localization
 ## 0.5.4
