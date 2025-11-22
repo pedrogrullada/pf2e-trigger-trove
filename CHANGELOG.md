@@ -1,3 +1,6 @@
+## 0.6.0
+- **Improvements**
+  - Add support for localization
 ## 0.5.4
 - **New Triggers**
   - **Gibbering**:
