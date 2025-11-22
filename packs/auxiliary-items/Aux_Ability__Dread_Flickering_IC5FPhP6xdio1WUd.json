@@ -28,7 +28,7 @@
         ],
         "value": [
           {
-            "text": "TRIGGERTROVE.GenericAbility.Immunity.Addendum.CriticalSuccess"
+            "text": "TRIGGERTROVE.Generic.Immunity.Addendum.CriticalSuccess"
           },
           {
             "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.1D7YdXwRsOncOhcW]{Aux Effect: Dread Flickering Immunity}"

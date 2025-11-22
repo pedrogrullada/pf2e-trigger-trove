@@ -188,7 +188,7 @@
                 },
                 "in": {
                     "ids": [
-                        "ZzGh877LtxaQXxHe.outputs.out"
+                        "7eRNKkNoN5dZqP6q.outputs.out"
                     ]
                 },
                 "roll": {
@@ -209,8 +209,8 @@
                 }
             },
             "position": {
-                "x": 2252,
-                "y": 380.75
+                "x": 1775,
+                "y": 366.75
             },
             "type": "action"
         },
@@ -239,7 +239,7 @@
                 },
                 "out": {
                     "ids": [
-                        "XZc1rR4XXcBKFOXH.inputs.in"
+                        "HV0Om2ZO32n83dOb.inputs.in"
                     ]
                 }
             },
@@ -258,9 +258,8 @@
                     ]
                 },
                 "note": {
-                    "ids": [
-                        "ZzGh877LtxaQXxHe.outputs.result"
-                    ]
+                    "ids": [],
+                    "value": "TRIGGERTROVE.SteamKnight.Trigger.TurnStarted.Note"
                 },
                 "options": {
                     "ids": [
@@ -282,87 +281,10 @@
                 }
             },
             "position": {
-                "x": 2247.5,
-                "y": 543.25
+                "x": 1519.5,
+                "y": 566.25
             },
             "type": "value"
-        },
-        {
-            "_id": "XZc1rR4XXcBKFOXH",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "7eRNKkNoN5dZqP6q.outputs.out"
-                    ]
-                },
-                "input": {
-                    "ids": [],
-                    "value": ""
-                },
-                "prefix": {
-                    "ids": [],
-                    "value": "<p>"
-                },
-                "suffix": {
-                    "ids": [],
-                    "value": "</p>"
-                }
-            },
-            "key": "surround-text",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "ZzGh877LtxaQXxHe.inputs.in"
-                    ]
-                },
-                "result": {
-                    "ids": [
-                        "ZzGh877LtxaQXxHe.inputs.a"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1751,
-                "y": 362.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "ZzGh877LtxaQXxHe",
-            "inputs": {
-                "a": {
-                    "ids": [
-                        "XZc1rR4XXcBKFOXH.outputs.result"
-                    ]
-                },
-                "b": {
-                    "ids": [],
-                    "value": "<p></p>"
-                },
-                "in": {
-                    "ids": [
-                        "XZc1rR4XXcBKFOXH.outputs.out"
-                    ]
-                }
-            },
-            "key": "concat-texts",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "HV0Om2ZO32n83dOb.inputs.in"
-                    ]
-                },
-                "result": {
-                    "ids": [
-                        "Wm6aradk2tpyvZ1A.inputs.note"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1999,
-                "y": 382.75
-            },
-            "type": "action"
         },
         {
             "_id": "08LoYch4whGmLqJG",
@@ -409,8 +331,8 @@
                 }
             },
             "position": {
-                "x": 2081.5,
-                "y": 622.25
+                "x": 1276.5,
+                "y": 683.25
             },
             "target": "08LoYch4whGmLqJG.outputs.item",
             "type": "variable"
@@ -438,8 +360,8 @@
                 }
             },
             "position": {
-                "x": 2026.5,
-                "y": 661.25
+                "x": 1225.5,
+                "y": 724.25
             },
             "target": "7eRNKkNoN5dZqP6q.outputs.options",
             "type": "variable"
@@ -455,8 +377,8 @@
             },
             "key": "break-process",
             "position": {
-                "x": 2478,
-                "y": 381.75
+                "x": 2006,
+                "y": 367.75
             },
             "type": "action"
         },
@@ -483,8 +405,8 @@
                 }
             },
             "position": {
-                "x": 2041.5,
-                "y": 342.25
+                "x": 1547.5,
+                "y": 512.25
             },
             "target": "7eRNKkNoN5dZqP6q.outputs.formula",
             "type": "variable"
@@ -512,8 +434,8 @@
                 }
             },
             "position": {
-                "x": 2079.5,
-                "y": 585.25
+                "x": 1365.5,
+                "y": 599.25
             },
             "target": "RuDsbE2sXw6FKxYB.outputs.this",
             "type": "variable"

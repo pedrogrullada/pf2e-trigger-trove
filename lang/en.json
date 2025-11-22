@@ -76,7 +76,10 @@
         "FrightfulPresence": {
             "Trigger": {
                 "AuraEntered": {
-                    "Description": "Post the Frightful Presence ability to chat when a creature enters the aura. If you have Frightful Presence (Aura Entered, Enemies Only) enabled, disable this one."
+                    "Description": {
+                        "All": "Post the Frightful Presence ability to chat when a creature enters the aura. If you have Frightful Presence (Aura Entered, Enemies Only) enabled, disable this one.",
+                        "EnemiesOnly": "Post the Frightful Presence ability to chat when an enemy of the Frightful Presence creature enters the aura. If you have Frightful Presence (Aura Entered) enabled, disable this one."
+                    }
                 }
             }
         },
@@ -175,8 +178,8 @@
                 "AuraLeft": {
                     "Description": "Remove the Ravel of Thorns penalty when a creature leaves the kineticist's kinetic aura."
                 },
-                "TurnEnded": {
-                    "Description": "When a creature starts its turn inside the kinetic aura of a character in @UUID[Compendium.pf2e.feats-srd.Item.mHvkBdBN4gs6CH1g]{Ravel of Thorns} stance, add the Ravel of Thorns auxiliary effec, unless they're designated by the @UUID[Compendium.pf2e.feats-srd.Item.ZBPRABDXeLVwxFC7]{Safe Elements} feat."
+                "TurnStarted": {
+                    "Description": "When a creature starts its turn inside the kinetic aura of a character in @UUID[Compendium.pf2e.feats-srd.Item.mHvkBdBN4gs6CH1g]{Ravel of Thorns} stance, add the Ravel of Thorns auxiliary effect."
                 }
             }
         },

@@ -119,7 +119,7 @@
     },
     {
         "_id": "eFqdJDQVZDjOvjHa",
-        "description": "TRIGGERTROVE.SwashbucklerFinisher.Trigger.AttackRolled.Description",
+        "description": "@Localize[TRIGGERTROVE.SwashbucklerFinisher.Trigger.AttackRolled.Description]",
         "folder": "Feats & Features",
         "name": "Swashbuckler Finisher (Attack Rolled)",
         "nodes": [

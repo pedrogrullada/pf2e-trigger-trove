@@ -1,7 +1,7 @@
 [
   {
     "_id": "bV351isJMsgV1AWn",
-    "description": "@Localize[TRIGGERTROVE.RavelOfThorns.Trigger.AuraLeft.Description]",
+    "description": "<p>@Localize[TRIGGERTROVE.RavelOfThorns.Trigger.AuraLeft.Description]</p><p>@Localize[TRIGGERTROVE.SafeElements.Subtrigger.Check.Addendum]</p>",
     "folder": "Feats & Features",
     "name": "Ravel of Thorns (Aura Left)",
     "nodes": [
@@ -93,7 +93,7 @@
   },
   {
     "_id": "9avLgSorYNoUr5q4",
-    "description": "@Localize[TRIGGERTROVE.RavelOfThorns.Trigger.TurnEnded.Description]",
+    "description": "<p>@Localize[TRIGGERTROVE.RavelOfThorns.Trigger.TurnStarted.Description]</p><p>@Localize[TRIGGERTROVE.SafeElements.Subtrigger.Check.Addendum]</p>",
     "folder": "Feats & Features",
     "name": "Ravel of Thorns (Turn Started)",
     "nodes": [
