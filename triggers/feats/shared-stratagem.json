@@ -1,7 +1,7 @@
 [
     {
         "_id": "tGyc4TEe2PkadTx1",
-        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.Description.AttackRolledInvestigator]",
+        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.AttackRolled.Investigator.Description]",
         "folder": "Feats & Features",
         "name": "Shared Stratagem (Attack Rolled, Investigator)",
         "nodes": [
@@ -37,7 +37,7 @@
                     },
                     "message": {
                         "ids": [],
-                        "value": "<p>@Localize[TRIGGERTROVE.SharedStratagem.Trigger.ChatMessage]</p><p>@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3]{Aux Effect: Shared Stratagem}</p>"
+                        "value": "TRIGGERTROVE.SharedStratagem.Trigger.AttackRolled.Investigator.ChatMessage"
                     }
                 },
                 "key": "create-message",
@@ -434,7 +434,7 @@
     },
     {
         "_id": "DC7rsacX7zSEdmGG",
-        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.Description.AttackRolledAlly]",
+        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.AttackRolled.Ally.Description]",
         "folder": "Feats & Features",
         "name": "Shared Strategem (Attack Rolled, Ally)",
         "nodes": [
@@ -760,7 +760,7 @@
     },
     {
         "_id": "92acwAQIN8qficIR",
-        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.Description.DamageTaken]",
+        "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.DamageTaken.Description]",
         "folder": "Feats & Features",
         "name": "Shared Stratagem (Damage Taken)",
         "nodes": [

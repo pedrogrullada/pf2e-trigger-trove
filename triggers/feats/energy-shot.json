@@ -1,7 +1,7 @@
 [
     {
         "_id": "VMKwpFghlw45EFkv",
-        "description": "<p>After confirming that Energy Shot is used, add its damage effect as well as an auxiliary effect to automatically track the shots as a Special Resource.</p>",
+        "description": "@Localize[TRIGGERTROVE.EnergyShot.Trigger.CombatantJoined.Description]",
         "folder": "Feats & Features",
         "name": "Energy Shot (Combatant Joined)",
         "nodes": [
@@ -143,7 +143,7 @@
     },
     {
         "_id": "UBXbzTygXDXgt69l",
-        "description": "<p>If the attacker has the Energy Shot auxiliary effect, deplete the Energy Shots resource by 1 after attacking with a crossbow or firearm. If there are no more Energy Shots left, remove the effect automatically.</p>",
+        "description": "@Localize[TRIGGERTROVE.EnergyShot.Trigger.AttackRolled.Description]",
         "folder": "Feats & Features",
         "name": "Energy Shot (Attack Rolled)",
         "nodes": [

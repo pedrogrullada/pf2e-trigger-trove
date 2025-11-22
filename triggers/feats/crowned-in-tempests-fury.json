@@ -1,7 +1,7 @@
 [
     {
         "_id": "5P9g28gnG65G6Snq",
-        "description": "<p>Roll a kineticist's Crowned in Tempest's Fury damage when a creature enters their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them from the kineticist's sheet.</p>",
+        "description": "TRIGGERTROVE.CrownedInTempestsFury.Trigger.AuraEntered.Description",
         "folder": "Feats & Features",
         "name": "Crowned in Tempest's Fury (Aura Entered)",
         "nodes": [
@@ -365,7 +365,7 @@
     },
     {
         "_id": "rd8ftQGFUrIAQ7Tr",
-        "description": "<p>Roll a kineticist's Crowned in Tempest's Fury damage when a creature end its turn in their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong></p>",
+        "description": "@Localize[TRIGGERTROVE.CrownedInTempestsFury.Trigger.TurnEnded.Description]",
         "folder": "Feats & Features",
         "name": "Crowned in Tempest's Fury (Turn Ended)",
         "nodes": [

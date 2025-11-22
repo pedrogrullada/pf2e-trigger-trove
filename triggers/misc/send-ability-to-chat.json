@@ -1,6 +1,6 @@
 {
   "_id": "KbmYmEm4rMEedc9N",
-  "description": "<p>Send an ability to chat. The ability's slug and its origin are set in the parent trigger.</p>",
+  "description": "@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Description]",
   "folder": "Miscellaneous",
   "name": "Send Ability to Chat",
   "nodes": [

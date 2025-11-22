@@ -1,7 +1,7 @@
 [
     {
         "_id": "gGsnDqJF1KZA2Pzz",
-        "description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.BA143r8fCqmSjdRf]{Nettleskin}'s damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent attacker.</p><p>For this trigger to work, the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.QrCwY1ylvvuzW7mb]{Aux Effect: Nettleskin} must be dragged onto the recipient. Furthermore, it must be dragged from the spell's card in chat, otherwise it won't have the correct scaling.</p>",
+        "description": "@Localize[TRIGGERTROVE.Nettleskin.Trigger.AttackRolled.Description]",
         "folder": "Spells",
         "name": "Nettleskin (Attack Rolled)",
         "nodes": [

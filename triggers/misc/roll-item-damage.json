@@ -1,6 +1,6 @@
 {
     "_id": "dXiVIcJYpjkeqA73",
-    "description": "Roll damage with context provided by the parent trigger.",
+    "description": "@Localize[TRIGGERTROVE.AuxiliarySubtriggers.RollItemDamage.Description]",
     "folder": "Miscellaneous",
     "name": "Roll Item Damage",
     "nodes": [

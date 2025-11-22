@@ -39,6 +39,7 @@ console.log("Build Packs Finished");
 
 // Copy files and folders to output
 const files = [
+  "lang",
   "module.json",
   "README.md",
   "LICENSE",

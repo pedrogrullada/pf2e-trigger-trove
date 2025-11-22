@@ -347,7 +347,7 @@
         },
         "prompt": {
           "ids": [],
-          "value": "<p>Your ally has moved into an adjacent space, possibly ending their move action there. Do you want to use Goblin Scuttle?</p>"
+          "value": "TRIGGERTROVE.GoblinScuttle.Trigger.TokenMoved.Prompt"
         },
         "target": {
           "ids": [

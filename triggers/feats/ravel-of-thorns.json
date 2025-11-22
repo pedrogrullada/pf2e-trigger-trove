@@ -1,7 +1,7 @@
 [
   {
     "_id": "bV351isJMsgV1AWn",
-    "description": "<p>Remove the Ravel of Thorns penalty when a creature leaves the kineticist's kinetic aura.</p>",
+    "description": "@Localize[TRIGGERTROVE.RavelOfThorns.Trigger.AuraLeft.Description]",
     "folder": "Feats & Features",
     "name": "Ravel of Thorns (Aura Left)",
     "nodes": [
@@ -93,7 +93,7 @@
   },
   {
     "_id": "9avLgSorYNoUr5q4",
-    "description": "",
+    "description": "@Localize[TRIGGERTROVE.RavelOfThorns.Trigger.TurnEnded.Description]",
     "folder": "Feats & Features",
     "name": "Ravel of Thorns (Turn Started)",
     "nodes": [

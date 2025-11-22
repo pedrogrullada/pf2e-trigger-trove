@@ -1,6 +1,6 @@
 {
     "_id": "sTiUh3h7Ft4VBqpg",
-    "description": "<p>When a creature starts their turn and they have a @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e]{Spirit Link} auxiliary effect that originated from themselves, then check scene tokens for other creatures with an identical effect. If there is such a creature, check if they're not at their Hit Point maximum and if so, send a damage-healing-hybrid roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD]{Aux Effect: Spirit Link} to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.</p>",
+    "description": "@Localize[TRIGGERTROVE.SpiritLink.Trigger.TurnStarted.Description]",
     "folder": "Spells",
     "name": "Spirit Link (Turn Started)",
     "nodes": [

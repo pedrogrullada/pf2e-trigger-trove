@@ -1,6 +1,6 @@
 {
     "_id": "e83uGV2QckCV8FP4",
-    "description": "<p>Reduce the duration of @UUID[Compendium.pf2e.feats-srd.Item.9p28s0zg4Vv4r5i2]{Spike Skin}'s effect by 1 minute each time the user is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of the previously mentioned damage types will be missed.</em></p>",
+    "description": "@Localize[TRIGGERTROVE.SpikeSkin.Trigger.AttackRolled.Description]",
     "folder": "Feats & Features",
     "name": "Spike Skin (Attack Rolled)",
     "nodes": [

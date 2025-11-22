@@ -61,5 +61,13 @@
   "version": "#{VERSION}#",
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
-  "download": "#{DOWNLOAD}#"
+  "download": "#{DOWNLOAD}#",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "Main (English)",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ]
 }

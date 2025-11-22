@@ -1,6 +1,6 @@
 {
     "_id": "K8GYPAHnB7XZKlHD",
-    "description": "@Localize[TRIGGERTROVE.IncendiaryAura.Trigger.Description]",
+    "description": "@Localize[TRIGGERTROVE.IncendiaryAura.Trigger.DamageTaken.Description]",
     "folder": "Spells",
     "name": "Incendiary Aura (Damage Taken)",
     "nodes": [
@@ -186,7 +186,7 @@
                 },
                 "note": {
                     "ids": [],
-                    "value": "<p>@Localize[TRIGGERTROVE.IncendiaryAura.Trigger.Note]</p>"
+                    "value": "TRIGGERTROVE.IncendiaryAura.Trigger.DamageTaken.Note"
                 },
                 "origin": {
                     "ids": [

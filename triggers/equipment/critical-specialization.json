@@ -1,7 +1,7 @@
 [
     {
         "_id": "XT5z6wqVGfk4lqvf",
-        "description": "@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Bow]",
+        "description": "@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.DamageTaken.Description.Bow]",
         "folder": "Equipment",
         "name": "Bow Critical Specialization (Damage Taken)",
         "nodes": [
@@ -178,7 +178,7 @@
     },
     {
         "_id": "EeqWuOdnFx3Khl72",
-        "description": "TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Spear",
+        "description": "@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.DamageTaken.Description.Spear]",
         "folder": "Equipment",
         "name": "Spear Critical Specialization (Damage Taken)",
         "nodes": [
@@ -542,7 +542,7 @@
     },
     {
         "_id": "hWdbjm5z34ByMnXH",
-        "description": "TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Sword",
+        "description": "@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.DamageTaken.Description.Sword]",
         "folder": "Equipment",
         "name": "Sword Critical Specialization (Damage Taken)",
         "nodes": [

@@ -1,6 +1,6 @@
 {
     "_id": "nMWxoyx3mJeElz9t",
-    "description": "<p>When a non-immune living character ends their turn in a Dread Flickering aura, send the ability to chat alongside an immunity auxiliary effect to be applied in the event of a critically successful save.</p>",
+    "description": "@Localize[TRIGGERTROVE.DreadFlickering.Trigger.TurnEnded.Description]",
     "folder": "Monster Abilities",
     "name": "Dread Flickering (Turn Ended)",
     "nodes": [

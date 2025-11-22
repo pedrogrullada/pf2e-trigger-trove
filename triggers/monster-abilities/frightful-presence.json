@@ -1,7 +1,7 @@
 [
     {
         "_id": "Jr4FQZIIkI89gNad",
-        "description": "<p>Post the Frightful Presence ability to chat when a creature enters the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target.</p><p>If you have Frightful Presence (Aura Entered, Enemies Only) enabled, disable this one.</p>",
+        "description": "<p>@Localize[TRIGGERTROVE.FrightfulPresence.Trigger.AuraEntered.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
         "folder": "Monster Abilities",
         "name": "Frightful Presence (Aura Entered)",
         "nodes": [

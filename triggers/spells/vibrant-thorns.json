@@ -1,6 +1,6 @@
 {
   "_id": "WWTQgPr6jEXI7Avv",
-  "description": "@Localize[TRIGGERTROVE.VibrantThorns.Trigger.Description]",
+  "description": "@Localize[TRIGGERTROVE.VibrantThorns.Trigger.AttackRolled.Description]",
   "folder": "Spells",
   "name": "Vibrant Thorns (Attack Rolled)",
   "nodes": [

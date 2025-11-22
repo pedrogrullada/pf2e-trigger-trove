@@ -1,6 +1,6 @@
 {
     "_id": "xtZCghvcDeL2xQNs",
-    "description": "@Localize[TRIGGERTROVE.TrickstersMirrors.Trigger.Description]",
+    "description": "@Localize[TRIGGERTROVE.TrickstersMirrors.Trigger.AttackRolled.Description]",
     "folder": "Spells",
     "name": "Trickster's Mirrors (Attack Rolled)",
     "nodes": [

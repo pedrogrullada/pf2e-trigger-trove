@@ -1,7 +1,7 @@
 [
   {
     "_id": "Bi2hZkpcAArBi1rT",
-    "description": "<p>Post the Stench ability to chat when a creature enters the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target as well.</p>",
+    "description": "<p>@Localize[TRIGGERTROVE.Stench.Trigger.AuraEntered.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
     "folder": "Monster Abilities",
     "name": "Stench (Aura Entered)",
     "nodes": [
@@ -62,7 +62,7 @@
   },
   {
     "_id": "1tsFsw9YqKis3t9F",
-    "description": "<p>Post the Stench ability to chat when a creature starts their turn in the aura. If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target as well.</p>",
+    "description": "<p>@Localize[TRIGGERTROVE.Stench.Trigger.TurnStarted.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
     "folder": "Monster Abilities",
     "name": "Stench (Turn Started)",
     "nodes": [

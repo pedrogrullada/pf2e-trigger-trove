@@ -1,6 +1,6 @@
 {
     "_id": "14kEtJItBbFlopQQ",
-    "description": "@Localize[TRIGGERTROVE.MirrorImage.Trigger.Description]",
+    "description": "@Localize[TRIGGERTROVE.MirrorImage.Trigger.AttackRolled.Description]",
     "folder": "Spells",
     "name": "Mirror Image (Attack Rolled)",
     "nodes": [
@@ -345,7 +345,7 @@
                 },
                 "message": {
                     "ids": [],
-                    "value": "<p>@Localize[TRIGGERTROVE.MirrorImage.Trigger.Note.Hit]</p>"
+                    "value": "TRIGGERTROVE.MirrorImage.Trigger.AttackRolled.Note.Hit"
                 },
                 "target": {
                     "ids": [
@@ -370,7 +370,7 @@
                 },
                 "message": {
                     "ids": [],
-                    "value": "<p>@Localize[TRIGGERTROVE.MirrorImage.Trigger.Note.Miss]</p>"
+                    "value": "TRIGGERTROVE.MirrorImage.Trigger.AttackRolled.Note.Miss"
                 },
                 "target": {
                     "ids": [

@@ -1,6 +1,6 @@
 {
     "_id": "DwC7O1VgVDsTxugS",
-    "description": "<p>When a non-immune creature begins its turn within the gibbering aura, send the ability to chat alongside an auxiliary effect to apply immunity.</p>",
+    "description": "<p>@Localize[TRIGGERTROVE.Gibbering.Trigger.TurnStarted.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
     "folder": "Monster Abilities",
     "name": "Gibbering (Turn Started)",
     "nodes": [

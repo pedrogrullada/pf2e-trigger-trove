@@ -1,6 +1,6 @@
 {
     "_id": "E6L9tmlV6P7xUQnB",
-    "description": "<p>Automatically remove the @UUID[Compendium.pf2e.actionspf2e.Item.Or6RLXeoZkN8CLdi]{Amulet's Abeyance} effect after damage is taken.</p>",
+    "description": "@Localize[TRIGGERTROVE.AmuletsAbeyance.Trigger.DamageTaken.Description]",
     "folder": "Feats & Features",
     "name": "Amulet's Abeyance (Damage Taken)",
     "nodes": [

@@ -1,6 +1,6 @@
 {
     "_id": "E4S5YdgxAPJeZnYh",
-    "description": "@Localize[TRIGGERTROVE.SteamKnight.Trigger.Description]",
+    "description": "@Localize[TRIGGERTROVE.SteamKnight.Trigger.TurnStarted.Description]",
     "folder": "Feats & Features",
     "name": "Steam Knight (Turn Started)",
     "nodes": [
@@ -297,7 +297,7 @@
                 },
                 "input": {
                     "ids": [],
-                    "value": "<strong>@Localize[TRIGGERTROVE.SteamKnight.Trigger.FeatLabel]</strong> <span class=\"action-glyph\">F</span>"
+                    "value": ""
                 },
                 "prefix": {
                     "ids": [],
@@ -337,7 +337,7 @@
                 },
                 "b": {
                     "ids": [],
-                    "value": "<p>@Localize[TRIGGERTROVE.SteamKnight.Trigger.ChatMessage]</p>"
+                    "value": "<p></p>"
                 },
                 "in": {
                     "ids": [
