@@ -1,0 +1,1908 @@
+[
+    {
+        "_id": "PcLvtOmbLuFS5Csv",
+        "description": "<p>When Gunslinger makes a successfull ranged strike against an enemy within their reach with a one-handed firearm or one-handed crossbow, trigger adds aux effect that makes enemy @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against their next melee attack with a one-handed melee weapn</p>",
+        "folder": "Feats & Features",
+        "name": "Sword and Pistol (Attack Rolled, Ranged)",
+        "nodes": [
+            {
+                "_id": "clQGNEOJEaTXuSTZ",
+                "key": "attack-roll",
+                "outputs": {
+                    "options": {
+                        "ids": [
+                            "gXTJTiYahg6FR4ES.inputs.list"
+                        ]
+                    },
+                    "out": {
+                        "ids": [
+                            "blqtNYcXhNNgJaVq.inputs.in"
+                        ]
+                    },
+                    "this": {
+                        "ids": [
+                            "blqtNYcXhNNgJaVq.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "blqtNYcXhNNgJaVq",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "clQGNEOJEaTXuSTZ.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "clQGNEOJEaTXuSTZ.outputs.this"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "false": {
+                        "ids": []
+                    },
+                    "true": {
+                        "ids": [
+                            "gXTJTiYahg6FR4ES.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 531,
+                    "y": 199.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "gXTJTiYahg6FR4ES",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "blqtNYcXhNNgJaVq.outputs.true"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "clQGNEOJEaTXuSTZ.outputs.options"
+                        ]
+                    },
+                    "predicate": {
+                        "ids": [],
+                        "value": "[\n  \n   \"item:hands-held:1\"\n  ,\n  {\n    \"or\": [\n      \"item:group:crossbow\",\n      \"item:group:firearm\"\n    ]\n  }\n]"
+                    }
+                },
+                "key": "match-predicate",
+                "outputs": {
+                    "false": {
+                        "ids": []
+                    },
+                    "true": {
+                        "ids": [
+                            "EoO3MpoLW3RTbp8Z.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 758,
+                    "y": 201.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "QfIFLakv8Jovovl4",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "system|attributes|reach|base",
+                            "label": "Reach",
+                            "type": "number"
+                        }
+                    ],
+                    "outs": []
+                },
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "n30UYDd0CZcOG3LY.outputs.true"
+                        ]
+                    },
+                    "input": {
+                        "ids": [
+                            "NbyVXFleIWGwOaei.outputs.output"
+                        ]
+                    }
+                },
+                "key": "actor-splitter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "zebr4dif5NSao60S.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1891,
+                    "y": 221.23000000000002
+                },
+                "type": "splitter"
+            },
+            {
+                "_id": "NbyVXFleIWGwOaei",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "QfIFLakv8Jovovl4.inputs.input",
+                            "zebr4dif5NSao60S.inputs.a"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1926.5,
+                    "y": 309.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.this",
+                "type": "variable"
+            },
+            {
+                "_id": "zebr4dif5NSao60S",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "NbyVXFleIWGwOaei.outputs.output"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "LIvzIfUpW47BJjQ8.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "QfIFLakv8Jovovl4.outputs.out"
+                        ]
+                    }
+                },
+                "key": "distance-between",
+                "outputs": {
+                    "distance": {
+                        "ids": [
+                            "QlQ6M6ZyUZhG44HK.inputs.a",
+                            "4pS5MAbFh0bUFI9n.inputs.a"
+                        ]
+                    },
+                    "out": {
+                        "ids": [
+                            "QlQ6M6ZyUZhG44HK.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2071,
+                    "y": 206.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "LIvzIfUpW47BJjQ8",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "zebr4dif5NSao60S.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1930.5,
+                    "y": 347.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "QlQ6M6ZyUZhG44HK",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "zebr4dif5NSao60S.outputs.distance"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "oeSDhVgfKRMH0aEx.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "zebr4dif5NSao60S.outputs.out"
+                        ]
+                    }
+                },
+                "key": "lte-number",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "4pS5MAbFh0bUFI9n.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "IKuGbE5N8Ga0q3os.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2284,
+                    "y": 221.75
+                },
+                "type": "logic"
+            },
+            {
+                "_id": "oeSDhVgfKRMH0aEx",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "number"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "QlQ6M6ZyUZhG44HK.inputs.b",
+                            "4pS5MAbFh0bUFI9n.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2366,
+                    "y": 336.75
+                },
+                "target": "QfIFLakv8Jovovl4.outputs.system|attributes|reach|base",
+                "type": "variable"
+            },
+            {
+                "_id": "IKuGbE5N8Ga0q3os",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "QlQ6M6ZyUZhG44HK.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "ARD604zMJLImLDcs.outputs.output"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
+                    }
+                },
+                "key": "create-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "O6EhnhcnbbljbQxW.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2465,
+                    "y": 108.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "4pS5MAbFh0bUFI9n",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "zebr4dif5NSao60S.outputs.distance"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "oeSDhVgfKRMH0aEx.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "QlQ6M6ZyUZhG44HK.outputs.false"
+                        ]
+                    }
+                },
+                "key": "subtract-number",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "9oZEtX5eBLE1F9Bj.inputs.in"
+                        ]
+                    },
+                    "result": {
+                        "ids": [
+                            "9oZEtX5eBLE1F9Bj.inputs.a"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2466,
+                    "y": 263.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "9oZEtX5eBLE1F9Bj",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "4pS5MAbFh0bUFI9n.outputs.result"
+                        ]
+                    },
+                    "b": {
+                        "ids": [],
+                        "value": 5
+                    },
+                    "in": {
+                        "ids": [
+                            "4pS5MAbFh0bUFI9n.outputs.out"
+                        ]
+                    }
+                },
+                "key": "lte-number",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "XS99295j3XhEWkBD.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2645.5,
+                    "y": 278.75
+                },
+                "type": "logic"
+            },
+            {
+                "_id": "XS99295j3XhEWkBD",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "9oZEtX5eBLE1F9Bj.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "NJKFr9CZOQg2PD7u.outputs.output"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.EDS3isStHA0T4hVW"
+                    }
+                },
+                "key": "create-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "O6EhnhcnbbljbQxW.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2824,
+                    "y": 262.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "ARD604zMJLImLDcs",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "IKuGbE5N8Ga0q3os.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2339.5,
+                    "y": 130.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.this",
+                "type": "variable"
+            },
+            {
+                "_id": "NJKFr9CZOQg2PD7u",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "XS99295j3XhEWkBD.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2679.5,
+                    "y": 389.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.this",
+                "type": "variable"
+            },
+            {
+                "_id": "O6EhnhcnbbljbQxW",
+                "inputs": {
+                    "effect": {
+                        "ids": [
+                            "e3CRnzKpKswI7S1l.outputs.effect"
+                        ]
+                    },
+                    "identifier": {
+                        "ids": [],
+                        "value": "sword-and-pistol"
+                    },
+                    "in": {
+                        "ids": [
+                            "IKuGbE5N8Ga0q3os.outputs.out",
+                            "XS99295j3XhEWkBD.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "yWSc2E51TRkPj7gI.outputs.output"
+                        ]
+                    }
+                },
+                "key": "add-temporary",
+                "position": {
+                    "x": 3076,
+                    "y": 263.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "yWSc2E51TRkPj7gI",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "O6EhnhcnbbljbQxW.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2930,
+                    "y": 417.75
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "e3CRnzKpKswI7S1l",
+                "inputs": {
+                    "duration": {
+                        "ids": [
+                            "w34OsLb1xRRTtnnY.outputs.duration"
+                        ]
+                    },
+                    "image": {
+                        "ids": [],
+                        "value": "systems/pf2e/icons/equipment/weapons/dueling-pistol.webp"
+                    },
+                    "label": {
+                        "ids": [],
+                        "value": "Effect: Sword and Pistol"
+                    }
+                },
+                "key": "effect-data",
+                "outputs": {
+                    "effect": {
+                        "ids": [
+                            "O6EhnhcnbbljbQxW.inputs.effect"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3073.5,
+                    "y": 422.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "w34OsLb1xRRTtnnY",
+                "inputs": {
+                    "expiry": {
+                        "ids": [],
+                        "value": "turn-end"
+                    },
+                    "origin": {
+                        "ids": [
+                            "o3mt5x80PqW7Jm5m.outputs.output"
+                        ]
+                    }
+                },
+                "key": "duration-unit",
+                "outputs": {
+                    "duration": {
+                        "ids": [
+                            "e3CRnzKpKswI7S1l.inputs.duration"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3063.5,
+                    "y": 565.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "o3mt5x80PqW7Jm5m",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "w34OsLb1xRRTtnnY.inputs.origin"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3059.5,
+                    "y": 709.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.this",
+                "type": "variable"
+            },
+            {
+                "_id": "fWzyhsdTSG95R2Yl",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "number"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "n30UYDd0CZcOG3LY.inputs.a"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1711.5,
+                    "y": 331.75
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.outcome",
+                "type": "variable"
+            },
+            {
+                "_id": "n30UYDd0CZcOG3LY",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "fWzyhsdTSG95R2Yl.outputs.output"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "zFniEV7KE0E0H00L.outputs.value"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "aIbY1eGRDjbVJTwb.outputs.out"
+                        ]
+                    }
+                },
+                "key": "gte-number",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "QfIFLakv8Jovovl4.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1711,
+                    "y": 218.75
+                },
+                "type": "logic"
+            },
+            {
+                "_id": "zFniEV7KE0E0H00L",
+                "key": "success-value",
+                "outputs": {
+                    "value": {
+                        "ids": [
+                            "n30UYDd0CZcOG3LY.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1707.5,
+                    "y": 367.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "EoO3MpoLW3RTbp8Z",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "gXTJTiYahg6FR4ES.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
+                    }
+                },
+                "key": "remove-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "FmKqTdCuo3EnjY5J.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 987.5,
+                    "y": 202.25
+                },
+                "type": "action"
+            },
+            {
+                "_id": "FmKqTdCuo3EnjY5J",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "EoO3MpoLW3RTbp8Z.outputs.out"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.EDS3isStHA0T4hVW"
+                    }
+                },
+                "key": "remove-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "aIbY1eGRDjbVJTwb.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1209.5,
+                    "y": 203.25
+                },
+                "type": "action"
+            },
+            {
+                "_id": "aIbY1eGRDjbVJTwb",
+                "inputs": {
+                    "identifier": {
+                        "ids": [],
+                        "value": "sword-and-pistol"
+                    },
+                    "in": {
+                        "ids": [
+                            "FmKqTdCuo3EnjY5J.outputs.out"
+                        ]
+                    },
+                    "trigger": {
+                        "ids": [],
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "remove-temporary",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "n30UYDd0CZcOG3LY.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1461.5,
+                    "y": 203
+                },
+                "type": "action"
+            },
+            {
+                "_id": "0w9GhBuXKctf730H",
+                "inputs": {
+                    "in": {
+                        "ids": []
+                    }
+                },
+                "key": "subtrigger-node",
+                "position": {
+                    "x": 990.39,
+                    "y": 93.24000000000001
+                },
+                "target": "5Z4NlzgXpeQoIbaF",
+                "type": "subtrigger"
+            }
+        ],
+        "variables": {
+            "QfIFLakv8Jovovl4.outputs.system|attributes|reach|base": {
+                "global": false,
+                "label": "Reach",
+                "locked": false,
+                "type": "number"
+            }
+        }
+    },
+    {
+        "_id": "q301fM0zLI9LIeVq",
+        "description": "<p>Checks if melee attack is made with a one-handed weapon. If the target is subject to Sword and Pistol it will be offguard.</p>",
+        "folder": "Feats & Features",
+        "name": "Sword and Pistol (Attack Rolled, Melee)",
+        "nodes": [
+            {
+                "_id": "M7hSO7mtPE07QLET",
+                "key": "attack-roll",
+                "outputs": {
+                    "options": {
+                        "ids": [
+                            "8K9UwYIT2F4LotrH.inputs.list",
+                            "2coYJCeMAU7iOqiK.inputs.list"
+                        ]
+                    },
+                    "out": {
+                        "ids": [
+                            "8K9UwYIT2F4LotrH.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "yrUX20cjMbd0TUuR",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "IR6av3Ee5FIb2dlZ.outputs.false",
+                            "Fy2N3t72A5p6VWcS.outputs.false"
+                        ]
+                    },
+                    "seHgjgJVjj69kZQW": {
+                        "ids": [
+                            "a4lKjeHSNdVSe7AX.outputs.output"
+                        ]
+                    }
+                },
+                "key": "subtrigger-node",
+                "position": {
+                    "x": 1442,
+                    "y": 103.23000000000002
+                },
+                "target": "5Z4NlzgXpeQoIbaF",
+                "type": "subtrigger"
+            },
+            {
+                "_id": "IR6av3Ee5FIb2dlZ",
+                "inputs": {
+                    "identifier": {
+                        "ids": [],
+                        "value": "sword-and-pistol"
+                    },
+                    "in": {
+                        "ids": [
+                            "2coYJCeMAU7iOqiK.outputs.false",
+                            "Fy2N3t72A5p6VWcS.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "z0IEEPVdGEFzOh7a.outputs.output"
+                        ]
+                    },
+                    "trigger": {
+                        "ids": [],
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "has-temporary",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "yrUX20cjMbd0TUuR.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "ukk3CJoNIlxztcaH.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1215,
+                    "y": 198.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "8K9UwYIT2F4LotrH",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "M7hSO7mtPE07QLET.outputs.out"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "M7hSO7mtPE07QLET.outputs.options"
+                        ]
+                    },
+                    "predicate": {
+                        "ids": [],
+                        "value": "[\n  \"item:melee\",\n  \"item:hands-held:1\",\n  {\n    \"or\": [\n      \"self:effect:aux-sword-and-pistol\",\n      \"self:effect:aux-sword-and-pistol-reach\"\n    ]\n  }\n]"
+                    }
+                },
+                "key": "match-predicate",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "2coYJCeMAU7iOqiK.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 531.5,
+                    "y": 197.25
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "2coYJCeMAU7iOqiK",
+                "inputs": {
+                    "entry": {
+                        "ids": [],
+                        "value": "self:effect:aux-sword-and-pistol-reach"
+                    },
+                    "in": {
+                        "ids": [
+                            "8K9UwYIT2F4LotrH.outputs.true"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "M7hSO7mtPE07QLET.outputs.options"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "IR6av3Ee5FIb2dlZ.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "Fy2N3t72A5p6VWcS.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 761,
+                    "y": 197.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "Fy2N3t72A5p6VWcS",
+                "inputs": {
+                    "entry": {
+                        "ids": [],
+                        "value": "item:trait:reach"
+                    },
+                    "in": {
+                        "ids": [
+                            "2coYJCeMAU7iOqiK.outputs.true"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "NVcT43r0acWDL94Z.outputs.output"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "yrUX20cjMbd0TUuR.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "IR6av3Ee5FIb2dlZ.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 989,
+                    "y": 75.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "z0IEEPVdGEFzOh7a",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "IR6av3Ee5FIb2dlZ.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1098,
+                    "y": 352.75
+                },
+                "target": "M7hSO7mtPE07QLET.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "NVcT43r0acWDL94Z",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "list"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "Fy2N3t72A5p6VWcS.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 849,
+                    "y": 164.75
+                },
+                "target": "M7hSO7mtPE07QLET.outputs.options",
+                "type": "variable"
+            },
+            {
+                "_id": "ukk3CJoNIlxztcaH",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "CLh4Eib5vRdWA9hB.outputs.output"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "sw50Td9lYbCSXub3.outputs.value"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "IR6av3Ee5FIb2dlZ.outputs.true"
+                        ]
+                    }
+                },
+                "key": "lte-number",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "5APVdtTCedax5YG5.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "JDrY7wN1UFRvvHU5.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1615,
+                    "y": 197.75
+                },
+                "type": "logic"
+            },
+            {
+                "_id": "CLh4Eib5vRdWA9hB",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "number"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "ukk3CJoNIlxztcaH.inputs.a"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1498.5,
+                    "y": 251.75
+                },
+                "target": "M7hSO7mtPE07QLET.outputs.outcome",
+                "type": "variable"
+            },
+            {
+                "_id": "sw50Td9lYbCSXub3",
+                "inputs": {
+                    "input": {
+                        "ids": [],
+                        "value": "failure"
+                    }
+                },
+                "key": "success-value",
+                "outputs": {
+                    "value": {
+                        "ids": [
+                            "ukk3CJoNIlxztcaH.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1428.5,
+                    "y": 355.75
+                },
+                "type": "value"
+            },
+            {
+                "_id": "5APVdtTCedax5YG5",
+                "inputs": {
+                    "entry": {
+                        "ids": [],
+                        "value": "check:reroll"
+                    },
+                    "in": {
+                        "ids": [
+                            "ukk3CJoNIlxztcaH.outputs.false"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "zPc45ZitrfFVAWYe.outputs.output"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "uzLkEzTKqlKdMx64.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1797,
+                    "y": 257.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "zPc45ZitrfFVAWYe",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "list"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "5APVdtTCedax5YG5.inputs.list",
+                            "uzLkEzTKqlKdMx64.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1661.5,
+                    "y": 324.25
+                },
+                "target": "M7hSO7mtPE07QLET.outputs.options",
+                "type": "variable"
+            },
+            {
+                "_id": "uzLkEzTKqlKdMx64",
+                "inputs": {
+                    "entry": {
+                        "ids": [],
+                        "value": "item:trait:reach"
+                    },
+                    "in": {
+                        "ids": [
+                            "5APVdtTCedax5YG5.outputs.true"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "zPc45ZitrfFVAWYe.outputs.output"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "A6KJPMbZdAUsuqai.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "h8jZkGRTTEvkIfva.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2029,
+                    "y": 259.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "h8jZkGRTTEvkIfva",
+                "inputs": {
+                    "duplicate": {
+                        "ids": [],
+                        "value": true
+                    },
+                    "in": {
+                        "ids": [
+                            "uzLkEzTKqlKdMx64.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.EDS3isStHA0T4hVW"
+                    }
+                },
+                "key": "create-item",
+                "position": {
+                    "x": 2284,
+                    "y": 207.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "A6KJPMbZdAUsuqai",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "uzLkEzTKqlKdMx64.outputs.false"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
+                    }
+                },
+                "key": "create-item",
+                "position": {
+                    "x": 2287,
+                    "y": 363.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "JDrY7wN1UFRvvHU5",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "ukk3CJoNIlxztcaH.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "2nyJCbJqoZVbil3n.inputs.in"
+                        ]
+                    },
+                    "item": {
+                        "ids": [
+                            "12X86b4c3M8JB9tU.inputs.uuid"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "12X86b4c3M8JB9tU.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1798,
+                    "y": 125.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "12X86b4c3M8JB9tU",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "JDrY7wN1UFRvvHU5.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [
+                            "JDrY7wN1UFRvvHU5.outputs.item"
+                        ]
+                    }
+                },
+                "key": "remove-item",
+                "position": {
+                    "x": 2031,
+                    "y": 4.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "2nyJCbJqoZVbil3n",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "JDrY7wN1UFRvvHU5.outputs.false"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.EDS3isStHA0T4hVW"
+                    }
+                },
+                "key": "remove-item",
+                "position": {
+                    "x": 2028,
+                    "y": 130.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "a4lKjeHSNdVSe7AX",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "yrUX20cjMbd0TUuR.inputs.seHgjgJVjj69kZQW"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1296,
+                    "y": 165.75
+                },
+                "target": "M7hSO7mtPE07QLET.outputs.this",
+                "type": "variable"
+            }
+        ]
+    },
+    {
+        "_id": "4hY8icoXNd0qd1Zb",
+        "description": "<p>Checks if damage taken is from a valid Sword and Pistol melee attack and removes the associated effects.</p>",
+        "folder": "Feats & Features",
+        "name": "Sword and Pistol (Damage Taken)",
+        "nodes": [
+            {
+                "_id": "p5EDEPXRZVlHHyBX",
+                "key": "damage-taken",
+                "outputs": {
+                    "options": {
+                        "ids": [
+                            "qKuagkSMnctlPVBb.inputs.list"
+                        ]
+                    },
+                    "other": {
+                        "ids": [
+                            "KEDs7WabcdG1E79u.inputs.seHgjgJVjj69kZQW"
+                        ]
+                    },
+                    "out": {
+                        "ids": [
+                            "qKuagkSMnctlPVBb.inputs.in"
+                        ]
+                    },
+                    "this": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "qKuagkSMnctlPVBb",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "p5EDEPXRZVlHHyBX.outputs.out"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "p5EDEPXRZVlHHyBX.outputs.options"
+                        ]
+                    },
+                    "predicate": {
+                        "ids": [],
+                        "value": "[\n  \"item:melee\",\n  \"item:hands-held:1\",\n  \"self:effect:pc-lvt-omb-lu-fs5csv-sword-and-pistol\"\n]"
+                    }
+                },
+                "key": "match-predicate",
+                "outputs": {
+                    "false": {
+                        "ids": []
+                    },
+                    "true": {
+                        "ids": [
+                            "KEDs7WabcdG1E79u.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 527.5,
+                    "y": 200.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "TyqqBjHoVXgXzLzz",
+                "inputs": {
+                    "identifier": {
+                        "ids": [],
+                        "value": "sword-and-pistol"
+                    },
+                    "in": {
+                        "ids": [
+                            "KEDs7WabcdG1E79u.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "FOVIuYKZkQRE898Z.outputs.output"
+                        ]
+                    },
+                    "trigger": {
+                        "ids": [],
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "remove-temporary",
+                "outputs": {
+                    "out": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 958,
+                    "y": 203.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "KEDs7WabcdG1E79u",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "qKuagkSMnctlPVBb.outputs.true"
+                        ]
+                    },
+                    "seHgjgJVjj69kZQW": {
+                        "ids": [
+                            "p5EDEPXRZVlHHyBX.outputs.other"
+                        ]
+                    }
+                },
+                "key": "subtrigger-node",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "TyqqBjHoVXgXzLzz.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 758.39,
+                    "y": 203.24
+                },
+                "target": "5Z4NlzgXpeQoIbaF",
+                "type": "subtrigger"
+            },
+            {
+                "_id": "FOVIuYKZkQRE898Z",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "TyqqBjHoVXgXzLzz.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 812,
+                    "y": 307.75
+                },
+                "target": "p5EDEPXRZVlHHyBX.outputs.this",
+                "type": "variable"
+            }
+        ]
+    },
+    {
+        "_id": "5Z4NlzgXpeQoIbaF",
+        "description": "<p>Dedicated subtrigger for removing Sword and Pistol related effects.</p>",
+        "folder": "Miscellaneous",
+        "name": "Remove Sword and Pistol",
+        "nodes": [
+            {
+                "_id": "EGx7U1Al0oios7w2",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "seHgjgJVjj69kZQW",
+                            "label": "Gunslinger",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "subtrigger-input",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "9vIbWlo6DBCFe3Sa.inputs.in"
+                        ]
+                    },
+                    "seHgjgJVjj69kZQW": {
+                        "ids": [
+                            "9vIbWlo6DBCFe3Sa.inputs.target"
+                        ]
+                    },
+                    "this": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "subtrigger"
+            },
+            {
+                "_id": "6CreWhYQAt9YGjGd",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "OvDsqmpUQTyqxJ0j.outputs.out"
+                        ]
+                    }
+                },
+                "key": "subtrigger-output",
+                "position": {
+                    "x": 1666,
+                    "y": 180
+                },
+                "type": "subtrigger"
+            },
+            {
+                "_id": "9vIbWlo6DBCFe3Sa",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "EGx7U1Al0oios7w2.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "EGx7U1Al0oios7w2.outputs.seHgjgJVjj69kZQW"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "6LFhfNR5yUHudxRE.inputs.in"
+                        ]
+                    },
+                    "item": {
+                        "ids": [
+                            "rCVPjqZqwf90A39C.inputs.uuid"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "rCVPjqZqwf90A39C.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 530.5,
+                    "y": 200.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "rCVPjqZqwf90A39C",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "9vIbWlo6DBCFe3Sa.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "G3V9RCTOIi6bjv4B.outputs.output"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [
+                            "9vIbWlo6DBCFe3Sa.outputs.item"
+                        ]
+                    }
+                },
+                "key": "remove-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "iuNjjJY9HBaTfn6D.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 758,
+                    "y": 148.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "6LFhfNR5yUHudxRE",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "9vIbWlo6DBCFe3Sa.outputs.false"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "G3V9RCTOIi6bjv4B.outputs.output"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.EDS3isStHA0T4hVW"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "iuNjjJY9HBaTfn6D.inputs.in"
+                        ]
+                    },
+                    "item": {
+                        "ids": [
+                            "wyhRvqXvUbSS2TQo.inputs.uuid"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "wyhRvqXvUbSS2TQo.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 761.5,
+                    "y": 277.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "wyhRvqXvUbSS2TQo",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "6LFhfNR5yUHudxRE.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "G3V9RCTOIi6bjv4B.outputs.output"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [
+                            "6LFhfNR5yUHudxRE.outputs.item"
+                        ]
+                    }
+                },
+                "key": "remove-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "iuNjjJY9HBaTfn6D.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1011,
+                    "y": 280.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "iuNjjJY9HBaTfn6D",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "wyhRvqXvUbSS2TQo.outputs.out",
+                            "rCVPjqZqwf90A39C.outputs.out",
+                            "6LFhfNR5yUHudxRE.outputs.false"
+                        ]
+                    }
+                },
+                "key": "scene-tokens",
+                "outputs": {
+                    "other": {
+                        "ids": [
+                            "OvDsqmpUQTyqxJ0j.inputs.target"
+                        ]
+                    },
+                    "out": {
+                        "ids": [
+                            "OvDsqmpUQTyqxJ0j.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1226,
+                    "y": 182.23000000000002
+                },
+                "type": "action"
+            },
+            {
+                "_id": "OvDsqmpUQTyqxJ0j",
+                "inputs": {
+                    "identifier": {
+                        "ids": [],
+                        "value": "sword-and-pistol"
+                    },
+                    "in": {
+                        "ids": [
+                            "iuNjjJY9HBaTfn6D.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "iuNjjJY9HBaTfn6D.outputs.other"
+                        ]
+                    },
+                    "trigger": {
+                        "ids": [],
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "remove-temporary",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "6CreWhYQAt9YGjGd.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1411,
+                    "y": 179.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "G3V9RCTOIi6bjv4B",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "6LFhfNR5yUHudxRE.inputs.target",
+                            "rCVPjqZqwf90A39C.inputs.target",
+                            "wyhRvqXvUbSS2TQo.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 625,
+                    "y": 342.75
+                },
+                "target": "EGx7U1Al0oios7w2.outputs.seHgjgJVjj69kZQW",
+                "type": "variable"
+            }
+        ]
+    }
+]

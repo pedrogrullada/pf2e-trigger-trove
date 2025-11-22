@@ -1,0 +1,81 @@
+{
+  "name": "Aux Effect: Sword and Pistol, Reach",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.953,
+      "previous": {
+        "schema": 0.952,
+        "foundry": "13.350",
+        "system": "7.7.4"
+      }
+    },
+    "description": {
+      "value": "<p>The target of your ranged strike will be @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against your next one-handed melee attack.</p>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "Pathfinder Guns & Gears",
+      "authors": "",
+      "license": "ORC",
+      "remaster": true
+    },
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "predicate": [
+          "item:melee",
+          "item:hands-held:1",
+          "item:trait:reach",
+          "target:effect:pc-lvt-omb-lu-fs5csv-sword-and-pistol"
+        ],
+        "selectors": "melee-attack-roll",
+        "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg"
+      }
+    ],
+    "slug": "aux-sword-and-pistol-reach",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": null,
+    "fromSpell": false,
+    "context": null
+  },
+  "img": "systems/pf2e/icons/equipment/weapons/dueling-pistol.webp",
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.350",
+    "systemId": "pf2e",
+    "systemVersion": "7.7.4"
+  },
+  "ownership": {
+    "default": 0,
+    "VGbTFIXX0Qzs8xTF": 3
+  },
+  "_id": "EDS3isStHA0T4hVW",
+  "sort": 0,
+  "_key": "!items!EDS3isStHA0T4hVW"
+}
