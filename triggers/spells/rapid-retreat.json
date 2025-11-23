@@ -1,8 +1,8 @@
 {
-    "_id": "IzF3aVEPKkQROFUA",
-    "description": "@Localize[TRIGGERTROVE.PhaseFamiliar.Trigger.DamageTaken.Description]",
+    "_id": "HrHUCxjJwClu1LNK",
+    "description": "@Localize[TRIGGERTROVE.RapidRetreat.Trigger.DamageTaken.Description]",
     "folder": "Spells",
-    "name": "Phase Familiar (Damage Taken)",
+    "name": "Rapid Retreat (Damage Taken)",
     "nodes": [
         {
             "_id": "0PbCXeix0PnW2Jhc",
@@ -29,7 +29,8 @@
                     ]
                 },
                 "uuid": {
-                    "value": "Compendium.pf2e.spell-effects.Item.61Hl31nyzt63vvX9"
+                    "ids": [],
+                    "value": "Compendium.pf2e.spell-effects.Item.n4aQ7fwJ5ogn1ekG"
                 }
             },
             "key": "has-item",
@@ -161,6 +162,7 @@
         "UcxKar95r9uMnBL2.outputs.item": {
             "global": false,
             "label": "Phase Familiar",
+            "locked": false,
             "type": "item"
         }
     }

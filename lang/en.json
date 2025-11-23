@@ -176,7 +176,14 @@
         "PhaseFamiliar": {
             "Trigger": {
                 "DamageTaken": {
-                    "Description": "<p>Automatically remove the @UUID[Compendium.pf2e.spells-srd.Item.rMOI8JFJ0nT2mrCF]{Phase Familiar}'s effect after damage is taken</p>"
+                    "Description": "Automatically remove @UUID[Compendium.pf2e.spells-srd.Item.rMOI8JFJ0nT2mrCF]{Phase Familiar}'s effect after damage is taken"
+                }
+            }
+        },
+        "RapidRetreat": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatically remove @UUID[Compendium.pf2e.spells-srd.Item.6sNjsNPipZvQ3BGe]{Rapid Retreat}'s effect after damage is taken."
                 }
             }
         },
