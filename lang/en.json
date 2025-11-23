@@ -306,6 +306,13 @@
                     "Description": "Roll @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorns}' damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent creature."
                 }
             }
+        },
+        "WarpingPull": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatically remove @UUID[Compendium.pf2e.spells-srd.Item.UtINSoEJ0u630ia4]{Warping Pull}'s effect after damage is taken"
+                }
+            }
         }
     }
 }
