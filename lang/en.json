@@ -173,6 +173,13 @@
                 }
             }
         },
+        "PhaseFamiliar": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "<p>Automatically remove the @UUID[Compendium.pf2e.spells-srd.Item.rMOI8JFJ0nT2mrCF]{Phase Familiar}'s effect after damage is taken</p>"
+                }
+            }
+        },
         "RavelOfThorns": {
             "Trigger": {
                 "AuraLeft": {
