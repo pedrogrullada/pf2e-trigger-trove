@@ -6,7 +6,7 @@ Enable the module and you will see this module's triggers. They are **disabled**
 
 Here's the list of abilities currently handled by triggers in some capacity.
 <details>
-  <summary>The List (As of 0.5.4)</summary>
+  <summary>The List (As of 0.7.0)</summary>
 
    - Equipment
      - Critical Specialization (Bow, Spear, and Sword only)
@@ -37,10 +37,13 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Mirror Image
      - Mountain Resilience
      - Nettleskin
+     - Phase Familiar
+     - Rapid Retreat
      - Shields of the Spirit
      - Spirit Link
      - Trickster's Mirrors
      - Vibrant Thorns
+     - Warping Pull
 </details>
 
 ## Contribute

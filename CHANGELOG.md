@@ -1,3 +1,15 @@
+## 0.7.0
+- ## Housekeeping
+  - Update minimum PF2e Trigger version to 2.19.0
+  - **New Triggers**
+    - **Phase Familiar, Rapid Retreat, Warping Pull**
+      - _Damage Taken:_ Automatically remove their respective spell effects when damage is taken.
+  - **Updated Triggers**
+    - **Aura of Courage, Goblin Scuttle, Steam Knight**
+      - Maintain these triggers to latest PF2e Trigger changes
+    - **Stench**
+      - Add Stench immunity effect and append a link to said effect when the ability is posted to chat.
+
 ## 0.6.1
 - **Housekeeping**
   - Update minimum PF2e Trigger version to 2.17.0
@@ -7,7 +19,7 @@
 ## 0.5.4
 - **New Triggers**
   - **Gibbering**:
-    - _Turn Started_: When a non-immune creature begins its turn within the gibbering aura, send the ability to chat alongside an auxiliary effect to apply immunity.  
+    - _Turn Started:_ When a non-immune creature begins its turn within the gibbering aura, send the ability to chat alongside an auxiliary effect to apply immunity.  
 - **Updated Items**
   - Add missing selector to EphemeralEffect on Shared Stratagem's auxiliary effect
 ## 0.5.3
