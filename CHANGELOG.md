@@ -1,14 +1,14 @@
 ## 0.7.0
 - ## Housekeeping
   - Update minimum PF2e Trigger version to 2.19.0
-  - **New Triggers**
-    - **Phase Familiar, Rapid Retreat, Warping Pull**
-      - _Damage Taken:_ Automatically remove their respective spell effects when damage is taken.
-  - **Updated Triggers**
-    - **Aura of Courage, Goblin Scuttle, Steam Knight**
-      - Maintain these triggers to latest PF2e Trigger changes
-    - **Stench**
-      - Add Stench immunity effect and append a link to said effect when the ability is posted to chat.
+- **New Triggers**
+  - **Phase Familiar, Rapid Retreat, Warping Pull**
+    - _Damage Taken:_ Automatically remove their respective spell effects when damage is taken.
+- **Updated Triggers**
+  - **Aura of Courage, Goblin Scuttle, Steam Knight**
+    - Maintain these triggers to latest PF2e Trigger changes
+  - **Stench**
+    - Add Stench immunity effect and append a link to said effect when the ability is posted to chat.
 
 ## 0.6.1
 - **Housekeeping**
