@@ -66,7 +66,7 @@
                     },
                     "prompt": {
                         "ids": [],
-                        "value": "<p>Are you using Energy Shot in this combat?</p>"
+                        "value": "TRIGGERTROVE.EnergyShot.Trigger.CombatantJoined.Prompt"
                     },
                     "title": {
                         "ids": [
@@ -93,7 +93,7 @@
                 "inputs": {
                     "prefix": {
                         "ids": [],
-                        "value": "Energy Shot"
+                        "value": "TRIGGERTROVE.EnergyShot.Label"
                     },
                     "target": {
                         "ids": [
@@ -110,8 +110,8 @@
                     }
                 },
                 "position": {
-                    "x": 598.5,
-                    "y": 370.25
+                    "x": 589.5,
+                    "y": 363.25
                 },
                 "type": "value"
             },

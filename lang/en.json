@@ -64,12 +64,14 @@
             "Item": {
                 "ResourceLabel": "Energy Shots"
             },
+            "Label": "Energy Shot",
             "Trigger": {
                 "AttackRolled": {
                     "Description": "If the attacker has the Energy Shot auxiliary effect, deplete the Energy Shots resource by 1 after attacking with a crossbow or firearm. If there are no more Energy Shots left, remove the effect automatically."
                 },
                 "CombatantJoined": {
-                    "Description": "After confirming that Energy Shot is used, add its damage effect as well as an auxiliary effect to automatically track the shots as a Special Resource."
+                    "Description": "After confirming that Energy Shot is used, add its damage effect as well as an auxiliary effect to automatically track the shots as a Special Resource.",
+                    "Prompt": "Are you using Energy Shot in this combat?"
                 }
             }
         },
@@ -163,6 +165,7 @@
             }
         },
         "OneShotOneKill": {
+            "Label": "One Shot, One Kill",
             "Trigger": {
                 "CombatantJoined": {
                     "Description": "After confirming that One Shot, One Kill is used, add an effect that enables its additional precision damage until the first successful Strike deals damage.",
@@ -288,7 +291,10 @@
         },
         "TrickstersMirrors": {
             "Item": {
-                "Note": "A damaging effect that affects all targets within your space destroys all of the mirrors.",
+                "Note": {
+                    "Hit": "<strong>Trickster's Mirror</strong> The attack hits you! All your mirrors remain.",
+                    "Miss": "<p>The attack misses you! One of your mirrors is destroyed. If the attacker was within 5 feet, they must succeed at a @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] save or take mental damage as they believe themselves cut by a shower of glass shards from the breaking mirror.</p>"
+                },
                 "ResourceLabel": "Trickster's Mirrors"
             },
             "Trigger": {

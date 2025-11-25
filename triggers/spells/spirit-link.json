@@ -180,12 +180,12 @@
             "outputs": {
                 "other": {
                     "ids": [
-                        "aEDUz9kBMgKOj0UA.inputs.a"
+                        "GhmTr3HOGVHIShvT.inputs.multi"
                     ]
                 },
                 "out": {
                     "ids": [
-                        "aEDUz9kBMgKOj0UA.inputs.in"
+                        "GhmTr3HOGVHIShvT.inputs.in"
                     ]
                 }
             },
@@ -205,7 +205,7 @@
                 },
                 "target": {
                     "ids": [
-                        "EJVHOhvR7aNu3ros.outputs.output"
+                        "zP4wDTRd3G6V4FwU.outputs.output"
                     ]
                 },
                 "uuid": {
@@ -227,8 +227,8 @@
                 }
             },
             "position": {
-                "x": 1535,
-                "y": 574.75
+                "x": 1743,
+                "y": 551.75
             },
             "type": "condition"
         },
@@ -273,8 +273,8 @@
                 }
             },
             "position": {
-                "x": 1771.5,
-                "y": 642.23
+                "x": 1980.5,
+                "y": 631.23
             },
             "type": "splitter"
         },
@@ -306,8 +306,8 @@
                 }
             },
             "position": {
-                "x": 1957,
-                "y": 669.75
+                "x": 2174,
+                "y": 649.75
             },
             "type": "logic"
         },
@@ -334,8 +334,8 @@
                 }
             },
             "position": {
-                "x": 1797.5,
-                "y": 759.25
+                "x": 2018.5,
+                "y": 739.25
             },
             "target": "5ihYn9u4nbO0s2v5.outputs.this",
             "type": "variable"
@@ -372,8 +372,8 @@
                 }
             },
             "position": {
-                "x": 2751,
-                "y": 815.75
+                "x": 2972,
+                "y": 758.75
             },
             "type": "action"
         },
@@ -400,8 +400,8 @@
                 }
             },
             "position": {
-                "x": 2609.5,
-                "y": 971.25
+                "x": 2845.5,
+                "y": 887.25
             },
             "target": "nIYuadExTAcOAIG6.outputs.level",
             "type": "variable"
@@ -426,7 +426,7 @@
                 },
                 "target": {
                     "ids": [
-                        "P3QFowJg38wIRDnw.outputs.output"
+                        "WSFlFa0tdKTGeCP2.outputs.output"
                     ]
                 }
             },
@@ -437,8 +437,8 @@
                 }
             },
             "position": {
-                "x": 3695,
-                "y": 892.75
+                "x": 3843,
+                "y": 931.75
             },
             "type": "action"
         },
@@ -470,8 +470,8 @@
                 }
             },
             "position": {
-                "x": 3692.5,
-                "y": 1107.25
+                "x": 3979.5,
+                "y": 1100.25
             },
             "type": "value"
         },
@@ -492,8 +492,8 @@
                 }
             },
             "position": {
-                "x": 3481.5,
-                "y": 1179.25
+                "x": 3759.5,
+                "y": 1182.25
             },
             "type": "value"
         },
@@ -520,39 +520,10 @@
                 }
             },
             "position": {
-                "x": 3540.5,
-                "y": 1143.25
+                "x": 3817.5,
+                "y": 1142.25
             },
             "target": "5ihYn9u4nbO0s2v5.outputs.this",
-            "type": "variable"
-        },
-        {
-            "_id": "P3QFowJg38wIRDnw",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "qITOKOStz9bfrJLx.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 3500.5,
-                "y": 1021.25
-            },
-            "target": "P0t72oPHvb15fNCn.outputs.other",
             "type": "variable"
         },
         {
@@ -588,8 +559,8 @@
                 }
             },
             "position": {
-                "x": 2323.5,
-                "y": 755.25
+                "x": 2541.5,
+                "y": 713.25
             },
             "type": "action"
         },
@@ -620,46 +591,17 @@
                 }
             },
             "position": {
-                "x": 2565,
-                "y": 827.75
+                "x": 2785,
+                "y": 757.75
             },
             "type": "logic"
-        },
-        {
-            "_id": "EJVHOhvR7aNu3ros",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "3KnggXiDcDNVYHwu.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1390.5,
-                "y": 665.25
-            },
-            "target": "P0t72oPHvb15fNCn.outputs.other",
-            "type": "variable"
         },
         {
             "_id": "aEDUz9kBMgKOj0UA",
             "inputs": {
                 "a": {
                     "ids": [
-                        "P0t72oPHvb15fNCn.outputs.other"
+                        "GhmTr3HOGVHIShvT.outputs.target"
                     ]
                 },
                 "b": {
@@ -669,7 +611,7 @@
                 },
                 "in": {
                     "ids": [
-                        "P0t72oPHvb15fNCn.outputs.out"
+                        "GhmTr3HOGVHIShvT.outputs.out"
                     ]
                 }
             },
@@ -685,8 +627,8 @@
                 }
             },
             "position": {
-                "x": 1350,
-                "y": 533.75
+                "x": 1546,
+                "y": 521.75
             },
             "type": "logic"
         },
@@ -713,8 +655,8 @@
                 }
             },
             "position": {
-                "x": 1190.5,
-                "y": 610.25
+                "x": 1401.5,
+                "y": 637.25
             },
             "target": "5ihYn9u4nbO0s2v5.outputs.this",
             "type": "variable"
@@ -749,7 +691,7 @@
                 },
                 "input": {
                     "ids": [
-                        "silGjVLrwluCIRe9.outputs.output"
+                        "4nl6vrsgWBa9SuWv.outputs.output"
                     ]
                 }
             },
@@ -772,39 +714,10 @@
                 }
             },
             "position": {
-                "x": 2142,
-                "y": 733.23
+                "x": 2352,
+                "y": 704.23
             },
             "type": "splitter"
-        },
-        {
-            "_id": "silGjVLrwluCIRe9",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "ZaTbSV3ts4sb4sCS.inputs.input"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1997.5,
-                "y": 791.25
-            },
-            "target": "P0t72oPHvb15fNCn.outputs.other",
-            "type": "variable"
         },
         {
             "_id": "ooMEEWjm0gz3bM1c",
@@ -839,8 +752,8 @@
                 }
             },
             "position": {
-                "x": 3245,
-                "y": 822.25
+                "x": 3461,
+                "y": 764.25
             },
             "type": "action"
         },
@@ -867,8 +780,8 @@
                 }
             },
             "position": {
-                "x": 3125.5,
-                "y": 924.25
+                "x": 3342.5,
+                "y": 882.25
             },
             "target": "ZaTbSV3ts4sb4sCS.outputs.system|attributes|hp|max",
             "type": "variable"
@@ -896,8 +809,8 @@
                 }
             },
             "position": {
-                "x": 3119.5,
-                "y": 962.25
+                "x": 3339.5,
+                "y": 919.25
             },
             "target": "ZaTbSV3ts4sb4sCS.outputs.system|attributes|hp|value",
             "type": "variable"
@@ -925,8 +838,8 @@
                 }
             },
             "position": {
-                "x": 2997,
-                "y": 817.23
+                "x": 3216,
+                "y": 761.23
             },
             "type": "action"
         },
@@ -963,8 +876,8 @@
                 }
             },
             "position": {
-                "x": 3437,
-                "y": 837.75
+                "x": 3647,
+                "y": 778.75
             },
             "type": "logic"
         },
@@ -991,8 +904,8 @@
                 }
             },
             "position": {
-                "x": 3267.5,
-                "y": 957.25
+                "x": 3508.5,
+                "y": 910.25
             },
             "target": "xOKlGY9JrmKOksXO.outputs.result",
             "type": "variable"
@@ -1020,8 +933,8 @@
                 }
             },
             "position": {
-                "x": 3485.5,
-                "y": 982.25
+                "x": 3669.5,
+                "y": 984.25
             },
             "target": "1ks47feRs7FyKufE.outputs.result",
             "type": "variable"
@@ -1030,6 +943,7 @@
             "_id": "iSV0m5RPvtqACaoN",
             "inputs": {
                 "formula": {
+                    "ids": [],
                     "value": "@x"
                 },
                 "in": {
@@ -1057,8 +971,8 @@
                 }
             },
             "position": {
-                "x": 3723,
-                "y": 671.75
+                "x": 3835,
+                "y": 720.75
             },
             "type": "action"
         },
@@ -1085,8 +999,8 @@
                 }
             },
             "position": {
-                "x": 3731.5,
-                "y": 813.25
+                "x": 3857.5,
+                "y": 854.25
             },
             "target": "ooMEEWjm0gz3bM1c.outputs.result",
             "type": "variable"
@@ -1111,19 +1025,139 @@
                 },
                 "target": {
                     "ids": [
-                        "GPytffi1RIvXk5xh.outputs.output"
+                        "dFYEXu2zIaGrL10D.outputs.output"
                     ]
                 }
             },
             "key": "roll-damage",
             "position": {
-                "x": 3967,
-                "y": 661.75
+                "x": 4090,
+                "y": 721.75
             },
             "type": "action"
         },
         {
-            "_id": "GPytffi1RIvXk5xh",
+            "_id": "GhmTr3HOGVHIShvT",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "P0t72oPHvb15fNCn.outputs.out"
+                    ]
+                },
+                "multi": {
+                    "ids": [
+                        "P0t72oPHvb15fNCn.outputs.other"
+                    ]
+                }
+            },
+            "key": "loop-targets",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "aEDUz9kBMgKOj0UA.inputs.in"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "aEDUz9kBMgKOj0UA.inputs.a"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1350.3899999999999,
+                "y": 472.24
+            },
+            "type": "action"
+        },
+        {
+            "_id": "zP4wDTRd3G6V4FwU",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "3KnggXiDcDNVYHwu.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1584.5,
+                "y": 656.25
+            },
+            "target": "GhmTr3HOGVHIShvT.outputs.target",
+            "type": "variable"
+        },
+        {
+            "_id": "4nl6vrsgWBa9SuWv",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "ZaTbSV3ts4sb4sCS.inputs.input"
+                    ]
+                }
+            },
+            "position": {
+                "x": 2201.5,
+                "y": 776.25
+            },
+            "target": "GhmTr3HOGVHIShvT.outputs.target",
+            "type": "variable"
+        },
+        {
+            "_id": "WSFlFa0tdKTGeCP2",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "qITOKOStz9bfrJLx.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 3667.5,
+                "y": 1048.25
+            },
+            "target": "GhmTr3HOGVHIShvT.outputs.target",
+            "type": "variable"
+        },
+        {
+            "_id": "dFYEXu2zIaGrL10D",
             "custom": {
                 "inputs": [],
                 "outputs": [
@@ -1145,10 +1179,10 @@
                 }
             },
             "position": {
-                "x": 3776.5,
-                "y": 849.25
+                "x": 3920.5,
+                "y": 895.25
             },
-            "target": "P0t72oPHvb15fNCn.outputs.other",
+            "target": "GhmTr3HOGVHIShvT.outputs.target",
             "type": "variable"
         }
     ],
@@ -1156,6 +1190,7 @@
         "1ks47feRs7FyKufE.outputs.result": {
             "global": false,
             "label": "Healing Formula",
+            "locked": false,
             "type": "text"
         },
         "1vgIr9cH83WjUQua.outputs.item": {
@@ -1163,6 +1198,17 @@
             "label": "Triggering Effect",
             "locked": false,
             "type": "item"
+        },
+        "5ihYn9u4nbO0s2v5.outputs.JGfT3PKdLkLq3KWV": {
+            "global": true,
+            "label": "TARGET LIST",
+            "type": "multi"
+        },
+        "GhmTr3HOGVHIShvT.outputs.target": {
+            "global": false,
+            "label": "Looped Target",
+            "locked": false,
+            "type": "target"
         },
         "nIYuadExTAcOAIG6.outputs.level": {
             "global": false,
@@ -1173,17 +1219,13 @@
         "ooMEEWjm0gz3bM1c.outputs.result": {
             "global": false,
             "label": "Hit Point Difference",
-            "type": "number"
-        },
-        "P0t72oPHvb15fNCn.outputs.other": {
-            "global": false,
-            "label": "Scene Target",
             "locked": false,
-            "type": "target"
+            "type": "number"
         },
         "xOKlGY9JrmKOksXO.outputs.result": {
             "global": false,
             "label": "Healing Number",
+            "locked": false,
             "type": "number"
         },
         "ZaTbSV3ts4sb4sCS.outputs.system|attributes|hp|max": {

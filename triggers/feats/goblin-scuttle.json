@@ -39,18 +39,18 @@
       "outputs": {
         "other": {
           "ids": [
-            "wjESrwI3H2zOVzs5.inputs.target"
+            "PE50xytDSrE2nKM0.inputs.multi"
           ]
         },
         "out": {
           "ids": [
-            "wjESrwI3H2zOVzs5.inputs.in"
+            "PE50xytDSrE2nKM0.inputs.in"
           ]
         }
       },
       "position": {
-        "x": 716,
-        "y": 266.23
+        "x": 755,
+        "y": 273.23
       },
       "type": "action"
     },
@@ -81,8 +81,8 @@
         }
       },
       "position": {
-        "x": 1358,
-        "y": 336.75
+        "x": 1684,
+        "y": 449.75
       },
       "type": "logic"
     },
@@ -119,8 +119,8 @@
         }
       },
       "position": {
-        "x": 1138.5,
-        "y": 326.75
+        "x": 1433.5,
+        "y": 412.75
       },
       "type": "action"
     },
@@ -148,8 +148,8 @@
         }
       },
       "position": {
-        "x": 2658,
-        "y": 453.75
+        "x": 2901,
+        "y": 488.75
       },
       "type": "action"
     },
@@ -195,8 +195,8 @@
         }
       },
       "position": {
-        "x": 1554.5,
-        "y": 358.23
+        "x": 1882.5,
+        "y": 478.23
       },
       "type": "splitter"
     },
@@ -241,8 +241,8 @@
         }
       },
       "position": {
-        "x": 1820.5,
-        "y": 398.23
+        "x": 2136.5,
+        "y": 479.23
       },
       "type": "splitter"
     },
@@ -274,8 +274,8 @@
         }
       },
       "position": {
-        "x": 2092,
-        "y": 405.75
+        "x": 2400,
+        "y": 477.75
       },
       "type": "logic"
     },
@@ -297,8 +297,8 @@
         }
       },
       "position": {
-        "x": 532,
-        "y": 240.75
+        "x": 559,
+        "y": 237.75
       },
       "type": "condition"
     },
@@ -307,12 +307,12 @@
       "inputs": {
         "in": {
           "ids": [
-            "D6X01eF4x6HyAFA7.outputs.out"
+            "PE50xytDSrE2nKM0.outputs.out"
           ]
         },
         "target": {
           "ids": [
-            "D6X01eF4x6HyAFA7.outputs.other"
+            "PE50xytDSrE2nKM0.outputs.target"
           ]
         },
         "uuid": {
@@ -332,8 +332,8 @@
         }
       },
       "position": {
-        "x": 901.5,
-        "y": 301.25
+        "x": 1171.5,
+        "y": 361.25
       },
       "type": "condition"
     },
@@ -369,8 +369,8 @@
         }
       },
       "position": {
-        "x": 2356,
-        "y": 418.23
+        "x": 2636,
+        "y": 463.23
       },
       "type": "action"
     },
@@ -396,8 +396,8 @@
         }
       },
       "position": {
-        "x": 2094.5,
-        "y": 540.75
+        "x": 2403.5,
+        "y": 612.75
       },
       "type": "value"
     },
@@ -424,8 +424,8 @@
         }
       },
       "position": {
-        "x": 965.5,
-        "y": 452.25
+        "x": 1277.5,
+        "y": 526.25
       },
       "target": "alJQa0RbIZOQCIL8.outputs.this",
       "type": "variable"
@@ -453,8 +453,8 @@
         }
       },
       "position": {
-        "x": 959.5,
-        "y": 502.25
+        "x": 1292.5,
+        "y": 564.25
       },
       "target": "D6X01eF4x6HyAFA7.outputs.other",
       "type": "variable"
@@ -482,8 +482,8 @@
         }
       },
       "position": {
-        "x": 1421.5,
-        "y": 470.25
+        "x": 1760.5,
+        "y": 572.25
       },
       "target": "D6X01eF4x6HyAFA7.outputs.other",
       "type": "variable"
@@ -511,8 +511,8 @@
         }
       },
       "position": {
-        "x": 1719.5,
-        "y": 506.25
+        "x": 1989.5,
+        "y": 572.25
       },
       "target": "alJQa0RbIZOQCIL8.outputs.this",
       "type": "variable"
@@ -540,8 +540,8 @@
         }
       },
       "position": {
-        "x": 1884.5,
-        "y": 506.25
+        "x": 2199.5,
+        "y": 596.25
       },
       "target": "2CWH75DDYutH7tfe.outputs.system|details|alliance",
       "type": "variable"
@@ -569,8 +569,8 @@
         }
       },
       "position": {
-        "x": 1943.5,
-        "y": 607.25
+        "x": 2260.5,
+        "y": 671.25
       },
       "target": "D6X01eF4x6HyAFA7.outputs.other",
       "type": "variable"
@@ -598,8 +598,8 @@
         }
       },
       "position": {
-        "x": 2191.5,
-        "y": 645.25
+        "x": 2506.5,
+        "y": 720.25
       },
       "target": "D6X01eF4x6HyAFA7.outputs.other",
       "type": "variable"
@@ -627,27 +627,63 @@
         }
       },
       "position": {
-        "x": 2501.5,
-        "y": 585.25
+        "x": 2765.5,
+        "y": 620.25
       },
       "target": "wjESrwI3H2zOVzs5.outputs.item",
       "type": "variable"
+    },
+    {
+      "_id": "PE50xytDSrE2nKM0",
+      "inputs": {
+        "in": {
+          "ids": [
+            "D6X01eF4x6HyAFA7.outputs.out"
+          ]
+        },
+        "multi": {
+          "ids": [
+            "D6X01eF4x6HyAFA7.outputs.other"
+          ]
+        }
+      },
+      "key": "loop-targets",
+      "outputs": {
+        "out": {
+          "ids": [
+            "wjESrwI3H2zOVzs5.inputs.in"
+          ]
+        },
+        "target": {
+          "ids": [
+            "wjESrwI3H2zOVzs5.inputs.target"
+          ]
+        }
+      },
+      "position": {
+        "x": 956.39,
+        "y": 323.24
+      },
+      "type": "action"
     }
   ],
   "variables": {
     "2CWH75DDYutH7tfe.outputs.system|details|alliance": {
       "global": false,
       "label": "Scene Target Alliance",
+      "locked": false,
       "type": "text"
     },
     "D6X01eF4x6HyAFA7.outputs.other": {
       "global": false,
       "label": "Scene Target",
+      "locked": false,
       "type": "target"
     },
     "wjESrwI3H2zOVzs5.outputs.item": {
       "global": false,
       "label": "Goblin Scuttle",
+      "locked": false,
       "type": "item"
     }
   }

@@ -345,7 +345,7 @@
                 },
                 "message": {
                     "ids": [],
-                    "value": "<p><strong>Trickster's Mirror</strong> The attack hits you! All your mirrors remain.</p>"
+                    "value": "TRIGGERTROVE.TrickstersMirrors.Item.Note.Hit"
                 },
                 "target": {
                     "ids": [
@@ -498,7 +498,7 @@
                 },
                 "note": {
                     "ids": [],
-                    "value": "<p>The attack misses you! One of your mirrors is destroyed. If the attacker was within 5 feet, they must succeed at a @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] save or take mental damage as they believe themselves cut by a shower of glass shards from the breaking mirror.</p>"
+                    "value": "TRIGGERTROVE.TrickstersMirrors.Item.Note.Miss"
                 },
                 "options": {
                     "ids": []

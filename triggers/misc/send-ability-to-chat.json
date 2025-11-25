@@ -65,8 +65,8 @@
       },
       "key": "subtrigger-output",
       "position": {
-        "x": 1335,
-        "y": 231
+        "x": 1346,
+        "y": 229
       },
       "type": "subtrigger"
     },
@@ -121,10 +121,13 @@
             "NZj2A17pIg8WD0Og.outputs.item"
           ]
         },
-        "targeting": {
+        "target": {
           "ids": [
-            "Dr3bEV4Z3MPENFhr.outputs.output"
+            "bd9uDrWvxyeGya1P.outputs.output"
           ]
+        },
+        "targeting": {
+          "ids": []
         }
       },
       "key": "send-to-chat",
@@ -196,35 +199,6 @@
         "y": 151.75
       },
       "type": "condition"
-    },
-    {
-      "_id": "Dr3bEV4Z3MPENFhr",
-      "custom": {
-        "inputs": [],
-        "outputs": [
-          {
-            "custom": false,
-            "group": "",
-            "key": "output",
-            "type": "target"
-          }
-        ],
-        "outs": []
-      },
-      "key": "variable-getter",
-      "outputs": {
-        "output": {
-          "ids": [
-            "zKw74xr9ENDwJVM1.inputs.targeting"
-          ]
-        }
-      },
-      "position": {
-        "x": 1012.5,
-        "y": 366.25
-      },
-      "target": "Y7APRXmdEhE6B4FN.outputs.this",
-      "type": "variable"
     },
     {
       "_id": "3lhhpLOeIJ6DHYxW",
@@ -311,6 +285,35 @@
         "y": 264.25
       },
       "target": "Y7APRXmdEhE6B4FN.outputs.PAWVQq94ohe1Jwsj",
+      "type": "variable"
+    },
+    {
+      "_id": "bd9uDrWvxyeGya1P",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": false,
+            "group": "",
+            "key": "output",
+            "type": "target"
+          }
+        ],
+        "outs": []
+      },
+      "key": "variable-getter",
+      "outputs": {
+        "output": {
+          "ids": [
+            "zKw74xr9ENDwJVM1.inputs.target"
+          ]
+        }
+      },
+      "position": {
+        "x": 974.5,
+        "y": 350.25
+      },
+      "target": "Y7APRXmdEhE6B4FN.outputs.this",
       "type": "variable"
     }
   ]
