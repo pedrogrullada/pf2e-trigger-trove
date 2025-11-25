@@ -7,6 +7,8 @@
 - **Updated Triggers**
   - **Aura of Courage, Goblin Scuttle, Steam Knight**
     - Maintain these triggers to latest PF2e Trigger changes
+  - **Energy Shot and One Shot, One Kill**
+    - Fix some unlocalized strings
   - **Stench**
     - Add Stench immunity effect and append a link to said effect when the ability is posted to chat.
 
