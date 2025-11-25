@@ -1,0 +1,324 @@
+{
+    "TRIGGERTROVE": {
+        "AmuletsAbeyance": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatycznie usuwa efekt @UUID[Compendium.pf2e.actionspf2e.Item.Or6RLXeoZkN8CLdi] po otrzymaniu obrażeń."
+                }
+            }
+        },
+        "AuraOfCourage": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": "Kiedy czempion z Aurą Odwagi kończy swoją turę, wszyscy sojusznicy w zasięgu jego aury zmniejszają swój stan przestraszony o 1."
+                }
+            }
+        },
+        "AuxiliarySubtriggers": {
+            "RollItemDamage": {
+                "Description": "Wywołuje rzut obrażeń przedmiotu w kontekście zapewnionym przez wyzwalacz nadrzędny."
+            },
+            "SendAbilityToChat": {
+                "Addendum": "Jeśli masz włączoną funkcję Pomocnik Celowania w <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>, komunikat będzie miał jako cel stworzenie, które go wywołało.",
+                "Description": "Wyślij zdolność na czat. Nazwa zdolności i jej pochodzenie są ustawione w wyzwalaczu nadrzędnym."
+            }
+        },
+        "ChampionsResistance": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatycznie usuwa efekt Odporności Czempiona po otrzymaniu obrażeń."
+                }
+            }
+        },
+        "CriticalSpecialization": {
+            "Trigger": {
+                "Description": {
+                    "DamageTaken": {
+                        "Description": {
+                            "Bow": "Kiedy zadano krytyczne obrażenia bronią z grupy łuków, a źródło posiada efekt specjalizacji krytycznej, dodaje do celu stan unieruchomienia.",
+                            "Spear": "Kiedy zadano krytyczne obrażenia bronią z grupy włóczni, a pochodzenie ma efekt specjalizacji krytycznej, dodaje do celu stan niezdarności, który trwa do początku tury źródła. Jeśli broń ma runę brutalności, efekt trwa przez dodatkową rundę.",
+                            "Sword": "Kiedy zadano krytyczne obrażenia bronią z grupy mieczy, a pochodzenie ma efekt specjalizacji krytycznej, dodaje do celu stan odsłonięty, który trwa do początku tury źródła. Jeśli broń ma runę brutalności, efekt trwa do końca tury źródła."
+                        }
+                    }
+                }
+            }
+        },
+        "CrownedInTempestsFury": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "<p>Rzuć obrażenia kinetyka Ukoronowanego w Furii Burzy, gdy stworzenie wejdzie w jego aurę kinetyczną.</p><p>Jeśli posiadasz Bezpieczne Żywioły, możesz wyznaczyć członka drużyny, który nie będzie podlegał działaniu tego wyzwalacza, przeciągając na niego efekt @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd] z karty kinetyka.</p>"
+                },
+                "TurnEnded": {
+                    "Description": "<p>Rzuć obrażenia kinetyka Ukoronowanego w Furii Burzy, gdy stworzenie kończy swoją turę w jego aurze kinetycznej.</p><p>Jeśli posiadasz Bezpieczne Żywioły, możesz wyznaczyć członka drużyny, który nie będzie podlegał działaniu tego wyzwalacza, przeciągając na niego efekt @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd] <strong>z karty kinetyka.</strong></p>"
+                }
+            }
+        },
+        "DreadFlickering": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": "Kiedy postać nieposiadająca niewrażliwości kończy swoją turę w obszarze działania aury Przerażające Migotanie, wyślij zdolność na czat wraz z dodatkowym efektem niewrażliwości, który zostanie zastosowany w przypadku krytycznego sukcesu rzutu obronnego."
+                }
+            }
+        },
+        "EnergyShot": {
+            "Item": {
+                "ResourceLabel": "Strzały Energetyczne"
+            },
+            "Label": "Strzał Energetyczny",
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Jeśli atakujący posiada efekt pomocniczy Strzał Energetyczny, po ataku z kuszy lub broni palnej zmniejsz zasób Strzałów Energetycznych o 1. Jeśli nie ma już Strzałów Energetycznych, automatycznie usuwa ten efekt."
+                },
+                "CombatantJoined": {
+                    "Description": "Po potwierdzeniu użycia Strzału Energetycznego dodaje jego efekt obrażeń oraz efekt pomocniczy automatycznie śledzący strzały jako Zasób Specjalny.",
+                    "Prompt": "Czy używasz Strzału Energetycznego w tej walce?"
+                }
+            }
+        },
+        "FrightfulPresence": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": {
+                        "All": "Umieść zdolność Przerażająca Obecność na czacie, gdy stworzenie wejdzie w aurę. Jeśli masz włączoną zdolność Przerażająca Obecność (Wejście w aurę, tylko wrogowie), wyłącz tę.",
+                        "EnemiesOnly": "Umieść zdolność Przerażająca Obecność na czacie, gdy wróg stworzenia Przerażającej Obecności wejdzie w aurę. Jeśli masz włączoną funkcję Przerażająca Obecność (Wejście w aurę), wyłącz tę opcję."
+                    }
+                }
+            }
+        },
+        "Generic": {
+            "Immunity": {
+                "Addendum": {
+                    "CriticalSuccess": "Jeśli postać wywołująca efekt odniesie krytyczny sukces, możesz zastosować ten efekt, aby uczynić ją niewrażliwą.",
+                    "Success": "Jeśli postać wywołująca efekt odniesie sukces, możesz zastosować ten efekt, aby uczynić ją niewrażliwą."
+                }
+            },
+            "Note": {
+                "Label": "Notatka Trigger Trove"
+            }
+        },
+        "Gibbering": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "Kiedy istota nieposiadająca niewrażliwości rozpoczyna swoją turę w obszarze działania aury bełkotania, wyślij na czat zdolność wraz z efektem dodatkowym, aby nadać jej niewrażliwość."
+                }
+            }
+        },
+        "GoblinScuttle": {
+            "Trigger": {
+                "TokenMoved": {
+                    "Description": "Kiedy sojuszniczy token zostanie przeniesiony do pola sąsiadującego z innym tokenem za pomocą Gobliński Pęd, zapytaj, czy chce on z niego skorzystać, a jeśli tak, wyślij atut na czat. Uważaj na fałszywe alarmy wynikające z tego, że ruch Foundry nie jest tym samym, co zakończenie akcji ruchu.",
+                    "Prompt": "Twój sojusznik przemieścił się do sąsiedniego pola, prawdopodobnie kończąc tam swoją akcję ruchu. Czy chcesz użyć Goblińskiego Pędu?"
+                }
+            }
+        },
+        "IncendiaryAura": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Rzuć test na trwałe obrażenia od ognia za każdym razem, gdy stworzenie w zasięgu @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0] otrzyma obrażenia. Ten wyzwalacz nie rozróżnia rodzajów obrażeń, więc użytkownik musi zastosować go tylko wtedy, gdy wyzwalające stworzenie otrzyma obrażenia od ognia.",
+                    "Note": "Jeśli stworzenie znajdujące się w zasięgu emanacji otrzyma obrażenia od ognia, zapali się, otrzymując trwałe obrażenia od ognia."
+                }
+            }
+        },
+        "IntenseHeat": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "Umieść na czacie zdolność Intensywny Żar, gdy stworzenie wejdzie w aurę."
+                },
+                "TurnStarted": {
+                    "Description": "Umieść na czacie zdolność Intensywny Żar, gdy stworzenie rozpoczyna swoją turę w aurze."
+                }
+            }
+        },
+        "Inviolable": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy stworzenie z cechą Nienaruszalny zostanie trafione, zrzuć 3k6 obrażeń duchowych. Jeśli jest święte lub nieświęte, obrażenia mają odpowiednią cechę."
+                }
+            }
+        },
+        "MirrorImage": {
+            "Item": {
+                "ResourceLabel": "Lustrzane Odbicia"
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Jeśli zaatakowana istota posiada @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.pnSHABS9FZvExLa9], automatycznie zmniejsz zasoby Lustrzanych Odbić w zależności od wyniku ataku i losowo wygenerowanej liczby, zgodnie z opisem zaklęcia.</p><p>Zaleca się dodanie efektu pomocniczego do opisu zaklęcia, aby był łatwo dostępny, i stosowanie go zamiast efektu zapewnianego przez system.</p>",
+                    "Note": {
+                        "Hit": "<strong>Lustrzane Odbicie</strong> Atak cię trafia! Wszystkie twoje odbicia pozostają.",
+                        "Miss": "<strong>Lustrzane Odbicie</strong> Atak cię nie dosięga! Jedno z twoich lustrzanych odbić zostaje zniszczone."
+                    }
+                }
+            }
+        },
+        "MountainResilience": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Skróć czas trwania efektu @UUID[Compendium.pf2e.spells-srd.Item.2BV2yYPfVJ5zirZt] o 1 minutę za każdym razem, gdy beneficjent zaklęcia zostanie trafiony atakiem zadającym obrażenia obuchowe, kłute lub tnące.</p><p><em><strong>Uwaga:</strong> Ze względu na obecne ograniczenia ten wyzwalacz będzie działał tylko wtedy, gdy głównym rodzajem obrażeń są obrażenia obuchowe, kłute lub cięte. Obejmuje to większość przypadków, ale należy pamiętać, że niektóre przypadki wspomnianych wcześniej rodzajów obrażeń zostaną pominięte.</em></p>"
+                }
+            }
+        },
+        "Nettleskin": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Rzuć na obrażenia od @UUID[Compendium.pf2e.spells-srd.Item.BA143r8fCqmSjdRf], gdy odbiorca zaklęcia zostanie trafiony atakiem bez broni lub atakiem wręcz przez sąsiedniego napastnika.</p><p>Aby ten wyzwalacz zadziałał, należy przeciągnąć @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.QrCwY1ylvvuzW7mb] na odbiorcę. Ponadto należy przeciągnąć go z karty zaklęcia na czacie, w przeciwnym razie nie będzie miał prawidłowego skalowania.</p>"
+                }
+            }
+        },
+        "OneShotOneKill": {
+            "Label": "Jeden Strzał, Jeden Trup",
+            "Trigger": {
+                "CombatantJoined": {
+                    "Description": "Po potwierdzeniu użycia zdolności Jeden Strzał, Jeden Trup dodaj efekt, który umożliwia zadawanie dodatkowych obrażeń precyzyjnych, dopóki pierwszy udany Atak nie zada obrażeń.",
+                    "Prompt": "Czy w tej walce używasz zdolności Jeden Strzał, Jeden Trup?"
+                },
+                "DamageTaken": {
+                    "Description": "Usuń efekt dodatkowy Jeden Strzał, Jeden Trup, gdy wróg otrzyma obrażenia od postaci korzystającej z tej zdolności."
+                }
+            }
+        },
+        "PhaseFamiliar": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatycznie usuń efekt @UUID[Compendium.pf2e.spells-srd.Item.rMOI8JFJ0nT2mrCF] po otrzymaniu obrażeń."
+                }
+            }
+        },
+        "RapidRetreat": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatycznie usuń efekt @UUID[Compendium.pf2e.spells-srd.Item.6sNjsNPipZvQ3BGe] po otrzymaniu obrażeń."
+                }
+            }
+        },
+        "RavelOfThorns": {
+            "Trigger": {
+                "AuraLeft": {
+                    "Description": "Usuń karę Plątaniny Cierni, gdy stworzenie opuści aurę kinetyczną kinetyka."
+                },
+                "TurnStarted": {
+                    "Description": "Kiedy stworzenie rozpoczyna swoją turę w obrębie kinetycznej aury postaci w postawie @UUID[Compendium.pf2e.feats-srd.Item.mHvkBdBN4gs6CH1g], dodaj efekt pomocniczy Plątanina Cierni."
+                }
+            }
+        },
+        "SafeElements": {
+            "Subtrigger": {
+                "Check": {
+                    "Addendum": "Istota może nie podlegać działaniu tego wyzwalacza poprzez przeciągnięcie na nią efektu @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd] <strong>z karty kinetyka</strong>."
+                }
+            }
+        },
+        "SharedStratagem": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Ally": {
+                        "Description": "Jeśli atakujący posiada efekt pomocniczy Wspólna Strategia, a celem jest cel Opracowania Strategii, usuń efekt pomocniczy, jeśli atak nie trafi. Jeśli atak zostanie powtórzony i zakończy się sukcesem, dodaj efekt z powrotem."
+                    },
+                    "Investigator": {
+                        "ChatMessage": "<p><strong>Uwaga Trigger Trove</strong> Przeciągnij ten efekt na wyznaczonego sojusznika, aby uzyskać Wspólną Strategię!</p><p>@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3]</p>",
+                        "Description": "Zastosuj efekt znacznika do celu Opracowania Strategii Badacza. Następnie opublikuj wiadomość na czacie z efektem, który można przeciągnąć na wyznaczonego sojusznika. Cel ataku będzie odsłonięty na następny atak wyznaczonych sojuszników."
+                    }
+                },
+                "DamageTaken": {
+                    "Description": "Jeśli źródło obrażeń ma dodatkowy efekt Wspólna Strategia, a celem jest cel Opracowana Strategii, usuń zarówno efekt dodatkowy, jak i efekt wyzwalający."
+                }
+            }
+        },
+        "ShieldsOfTheSpirit": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Rzuć na obrażenia od @UUID[Compendium.pf2e.spells-srd.Item.ZL97DcoJ8us6EwAF], gdy sojusznik zostanie zaatakowany, znajdując się w aurze czempiona. Czempion musi mieć na sobie efekt zaklęcia.</p><p>Alternatywnie, rzuć na obrażenia, jeśli sojusznik nie znajduje się w zasięgu aury czempiona, ale ma na sobie efekt Duchowe Tarcze (Bezpieczeństwo).</p>"
+                }
+            }
+        },
+        "SpikeSkin": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Skróć czas trwania efektu @UUID[Compendium.pf2e.feats-srd.Item.9p28s0zg4Vv4r5i2] o 1 minutę za każdym razem, gdy użytkownik zostanie trafiony atakiem zadającym obrażenia obuchowe, kłute lub tnące.</p><p><em><strong>Uwaga:</strong> Ze względu na obecne ograniczenia ten wyzwalacz będzie działał tylko wtedy, gdy głównym rodzajem obrażeń są obrażenia obuchowe, kłute lub cięte. Obejmuje to większość przypadków, ale należy pamiętać, że niektóre przypadki wspomnianych wcześniej rodzajów obrażeń zostaną pominięte.</em></p>"
+                }
+            }
+        },
+        "SpiritLink": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "<p>Kiedy stworzenie rozpoczyna swoją turę i posiada efekt pomocniczy @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e], który pochodzi od niego samego, sprawdź tokeny sceny pod kątem innych stworzeń o identycznym efekcie. Jeśli takie stworzenie istnieje, sprawdź, czy nie osiągnęło maksymalnej liczby Punktów Wytrzymałości, a jeśli tak, wyślij do czatu rzut hybrydowy obrażenia-leczenia dla obu stron połączenia duchowego, aby zastosować go do siebie.</p><p>Aby ten wyzwalacz działał poprawnie, musisz dodać @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD] do opisu zaklęcia i przeciągnąć go <strong>z karty czatu zaklęcia</strong> zarówno do rzucającego zaklęcie, jak i do celu.</p>"
+                }
+            }
+        },
+        "SteamKnight": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "Jeśli postać w postawie @UUID[Compendium.pf2e.feats-srd.Item.7PjBANpMMoBxTYq3] rozpoczyna swoją turę, a w jej aurze kinetycznej znajduje się wróg, automatycznie rzucaj kośćmi, aby określić obrażenia, pamiętając o darmowej akcji, którą może wykonać, aby zadać te obrażenia, oraz o niezbędnym rzucie obronnym.",
+                    "Note": "<strong>Parowy Rycerz</strong> <span class=\"action-glyph\">F</span> Na początku każdej swojej tury możesz wyemitować parę jako akcję darmową. Zadaje ona obrażenia od ognia każdej istocie w twojej aurze kinetycznej, która musi wykonać rzut obronny @Check[reflex|against:kineticist|basic|options:area-effect,forced-movement|traits:composite,fire,impulse,kineticist,primal,stance,water]. Istota, która nie zda rzutu, zostaje również odepchnięta o 5 stóp."
+                }
+            }
+        },
+        "Stench": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "Umieszcza na czacie zdolność Smród, gdy stworzenie wchodzi w obszar działania aury."
+                },
+                "TurnStarted": {
+                    "Description": "Umieszcza na czacie zdolność Smród, gdy stworzenie rozpoczyna swoją turę w aurze."
+                }
+            }
+        },
+        "SwashbucklerFinisher": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Usuń efekt Polotu, gdy Cios Kończący nie trafi. Jeśli atak zostanie ponownie rzucony i zakończy się sukcesem, przywróć Polot, aby umożliwić zadawanie obrażeń Ciosem Kończącym."
+                },
+                "DamageTaken": {
+                    "Description": "Usuń efekt Polotu ze źródła obrażeń, gdy zadane zostaną obrażenia Ciosu Kończącego."
+                }
+            }
+        },
+        "Taunt": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Sprawdza, czy atakująca istota jest @UUID[Compendium.pf2e.actionspf2e.Item.4DYFJ4TUsNkgFBDb]{Sprowokowana}, a jeśli tak, to sprawdza, czy celem ataku jest istota inna niż źródło Prowokacji. Jeśli tak, to na atakującą istotę nakładane jest @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Odsłonięcie} do początku jej następnej tury."
+                }
+            }
+        },
+        "ThermalNimbus": {
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "Rzuć obrażenia Termicznej Otuliny kinetyka, gdy stworzenie wejdzie w jego aurę kinetyczną, gdy jego postawa jest aktywna."
+                },
+                "TurnStarted": {
+                    "Description": "Rzuć na obrażenia Termicznej Otuliny kinetyka, gdy stworzenie kończy swoją turę w jego aurze kinetycznej, gdy jego postawa jest aktywna."
+                }
+            }
+        },
+        "TrickstersMirrors": {
+            "Item": {
+                "Note": {
+                    "Hit": "<strong>Lustro Oszusta</strong> Atak cię trafia! Wszystkie twoje lustra pozostają na swoim miejscu.",
+                    "Miss": "<p>Atak cię nie dosięga! Jedno z twoich luster zostaje zniszczone. Jeśli atakujący znajdował się w odległości mniejszej niż 5 stóp, musi wykonać rzut obronny @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] lub otrzymać obrażenia psychiczne, ponieważ wydaje mu się, że został skaleczony przez deszcz odłamków szkła z rozbitego lustra.</p>"
+                },
+                "ResourceLabel": "Lustra Oszusta"
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Jeśli zaatakowana istota posiada @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ], automatycznie zmniejsz zasoby Luster Oszusta w zależności od wyniku ataku i losowo wygenerowanej liczby, zgodnie z opisem zaklęcia. Jeśli atakujący znajduje się w odległości 5 stóp, zrzuć kostką, aby określić obrażenia, gdy lustro zostanie zniszczone.</p><p>Zaleca się dodanie efektu pomocniczego do opisu zaklęcia, aby ułatwić dostęp do niego.</p>"
+                }
+            }
+        },
+        "VibrantThorns": {
+            "Item": {
+                "Addendum": "Za każdym razem, gdy rzucasz zaklęcie witalności, obrażenia zadawane przez ciernie zwiększają się do k6 obrażeń kłutych do początku twojej następnej tury."
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Rzuć na cel obrażenia zaklęcia @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL], gdy cel zaklęcia zostanie trafiony atakiem bez broni lub atakiem wręcz przez sąsiednią istotę."
+                }
+            }
+        },
+        "WarpingPull": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Automatycznie usuń efekt @UUID[Compendium.pf2e.spells-srd.Item.UtINSoEJ0u630ia4] po otrzymaniu obrażeń."
+                }
+            }
+        }
+    }
+}

@@ -68,6 +68,13 @@
       "name": "Main (English)",
       "path": "lang/en.json",
       "flags": {}
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json",
+      "flags": {}
     }
   ]
 }
+
