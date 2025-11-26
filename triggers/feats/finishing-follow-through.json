@@ -1,0 +1,205 @@
+{
+    "_id": "txmfeygt8vWXouA6",
+    "description": "@Localize[TRIGGERTROVE.FinishingFollowThrough.Trigger.DamageTaken.Description]",
+    "folder": "Feats & Features",
+    "name": "Finishing Follow-Through (Damage Taken)",
+    "nodes": [
+        {
+            "_id": "rVRbGaNxs2vBqxOM",
+            "key": "damage-taken",
+            "outputs": {
+                "options": {
+                    "ids": []
+                },
+                "other": {
+                    "ids": [
+                        "1w9AEyCRNxHiJeoC.inputs.target"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "1w9AEyCRNxHiJeoC.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "1w9AEyCRNxHiJeoC",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "rVRbGaNxs2vBqxOM.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "rVRbGaNxs2vBqxOM.outputs.other"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "3jOvyAt7uRqpV9Ts.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 552.5,
+                "y": 199.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "3jOvyAt7uRqpV9Ts",
+            "inputs": {
+                "entry": {
+                    "ids": [],
+                    "value": "finisher"
+                },
+                "in": {
+                    "ids": [
+                        "1w9AEyCRNxHiJeoC.outputs.true"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "iyKkAVKBxwLfAsay.outputs.output"
+                    ]
+                }
+            },
+            "key": "contains-entry",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "nDDspgzTibWRw8Q5.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 793.5,
+                "y": 199.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "iyKkAVKBxwLfAsay",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "list"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "3jOvyAt7uRqpV9Ts.inputs.list"
+                    ]
+                }
+            },
+            "position": {
+                "x": 651.5,
+                "y": 340.25
+            },
+            "target": "rVRbGaNxs2vBqxOM.outputs.options",
+            "type": "variable"
+        },
+        {
+            "_id": "nDDspgzTibWRw8Q5",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "3jOvyAt7uRqpV9Ts.outputs.true"
+                    ]
+                }
+            },
+            "key": "is-dead",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "c5egFUvqZk59aoi0.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1036,
+                "y": 199.5
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "c5egFUvqZk59aoi0",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "nDDspgzTibWRw8Q5.outputs.true"
+                    ]
+                },
+                "item": {
+                    "ids": [
+                        "mTdoNbuq4KY0OBgz.outputs.output"
+                    ]
+                }
+            },
+            "key": "send-to-chat",
+            "position": {
+                "x": 1227,
+                "y": 199.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "mTdoNbuq4KY0OBgz",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "item"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "c5egFUvqZk59aoi0.inputs.item"
+                    ]
+                }
+            },
+            "position": {
+                "x": 996.5,
+                "y": 333.25
+            },
+            "target": "1w9AEyCRNxHiJeoC.outputs.item",
+            "type": "variable"
+        }
+    ],
+    "variables": {
+        "1w9AEyCRNxHiJeoC.outputs.item": {
+            "global": false,
+            "label": "Finishing Follow-Through",
+            "type": "item"
+        }
+    }
+}

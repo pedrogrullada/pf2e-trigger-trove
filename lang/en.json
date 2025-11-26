@@ -75,6 +75,13 @@
                 }
             }
         },
+        "FinishingFollowThrough": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "When a creature is brought to 0 Hit Points from a finisher, if the damage origin has @UUID[Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ]{Finishing Follow-Through} gains panache."
+                }
+            }
+        },
         "FrightfulPresence": {
             "Trigger": {
                 "AuraEntered": {
