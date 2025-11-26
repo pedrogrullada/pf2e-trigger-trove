@@ -78,7 +78,7 @@
         "FinishingFollowThrough": {
             "Trigger": {
                 "DamageTaken": {
-                    "Description": "When a creature is brought to 0 Hit Points from a finisher, if the damage origin has @UUID[Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ]{Finishing Follow-Through} gains panache."
+                    "Description": "When a creature is brought to 0 Hit Points from a finisher, if the damage origin has @UUID[Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ]{Finishing Follow-Through}, it gains panache."
                 }
             }
         },
@@ -210,7 +210,7 @@
         "RevitalizingFinisher": {
             "Trigger": {
                 "AttackRolled": {
-                    "Description": "When a @UUID[Compendium.pf2e.feats-srd.Item.83zzG4XBiL5I3NZv]{Revitalizing Finisher} hits, the origin creature and all allies within 30 feet of it gain temporary Hit Points equal to half the origin's level."
+                    "Description": "When a @UUID[Compendium.pf2e.feats-srd.Item.83zzG4XBiL5I3NZv]{Revitalizing Finisher} hits, the origin creature and all allies within 30 feet of it gain temporary Hit Points equal to half the origin's level. On a failure, only the origin gains this benefit."
                 }
             }
         },

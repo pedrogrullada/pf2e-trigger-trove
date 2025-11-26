@@ -1,3 +1,17 @@
+## 0.8.0
+- **Localization**
+  - (Lioheart) Add polish localization
+  - Fix some misplaced localization keys for Trickster's Mirrors trigger
+- **New Triggers**
+  - Finishing Follow-Through
+    - _Damage Taken:_ When a creature is brought to 0 HP from a finisher, the damage origin gains panache if it has Finishing Follow-Through.
+  - Revitalizing Finisher
+    - _Attack Rolled:_ When a creature is hit by a Revitalizing Finisher, the attack origin and all allies within 30 feet of it gain temporary Hit Points equal to half the origin's level. On a failure, only the attack origin gains this benefit.
+  - Swaggering Initiative
+    - _Damage Taken:_ When a character using Swaggering Initiative is the first one to take a turn in combat, they receive panache.
+  - Unbalancing Finisher
+    - _Damage Taken:_ When a creature takes damage from Unbalancing Finisher, it is off-guard until the end of the origin's next turn.
+
 ## 0.7.0
 - **Housekeeping**
   - Update minimum PF2e Trigger version to 2.19.0
