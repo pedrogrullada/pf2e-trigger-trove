@@ -75,6 +75,13 @@
                 }
             }
         },
+        "FinishingFollowThrough": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Kiedy Punkty Wytrzymałości stworzenia spadną do 0 w wyniku Ciosu Kończącego, jeśli źródłem obrażeń jest @UUID[Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ], zyskuje ono polot."
+                }
+            }
+        },
         "FrightfulPresence": {
             "Trigger": {
                 "AuraEntered": {
@@ -133,6 +140,13 @@
             "Trigger": {
                 "AttackRolled": {
                     "Description": "Kiedy stworzenie z cechą Nienaruszalny zostanie trafione, zrzuć 3k6 obrażeń duchowych. Jeśli jest święte lub nieświęte, obrażenia mają odpowiednią cechę."
+                }
+            }
+        },
+        "MartialPerformance": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "<p>Jeśli postać z @UUID[Compendium.pf2e.feats-srd.Item.q1iP3SjAF5uceI0M] zadaje obrażenia wrogowi, a ten znajduje się pod wpływem @UUID[Compendium.pf2e.spells-srd.Item.IAjvwqgiDr3qGYxY], @UUID[Compendium.pf2e.spells-srd.Item.bH0kPuf7UKxRvi2P] lub @UUID[Compendium.pf2e.spells-srd.Item.Xxdwkt0EEDgP1LGc]; czas trwania tych efektów zostaje przedłużony o 1 rundę.</p><p>Następnie dodawany jest efekt, który uniemożliwia ponowne skorzystanie z przedłużonych efektów.</p><p>Aby ten wyzwalacz działał poprawnie, efekt kompozycji musi zostać przeciągnięty z karty czatu postaci wyzwalającej.</p>"
                 }
             }
         },
@@ -200,6 +214,13 @@
                 }
             }
         },
+        "RevitalizingFinisher": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy @UUID[Compendium.pf2e.feats-srd.Item.83zzG4XBiL5I3NZv] trafia, stworzenie źródłowe i wszyscy sojusznicy w promieniu 30 stóp od niego zyskują tymczasowe Punkty Wytrzymałości równe połowie poziomu źródła. W przypadku porażki tylko źródło zyskuje tę korzyść."
+                }
+            }
+        },
         "SafeElements": {
             "Subtrigger": {
                 "Check": {
@@ -262,6 +283,13 @@
                 }
             }
         },
+        "SwaggeringInitiative": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "Kiedy postać używająca @UUID[Compendium.pf2e.feats-srd.Item.NHheDmNB7L4REmlr] jako pierwsza wykonuje swoją turę w walce, otrzymuje polot."
+                }
+            }
+        },
         "SwashbucklerFinisher": {
             "Trigger": {
                 "AttackRolled": {
@@ -301,6 +329,13 @@
                 "Note": {
                     "Hit": "<strong>Lustro Oszusta</strong> Atak cię trafia! Wszystkie twoje lustra pozostają na swoim miejscu.",
                     "Miss": "<p>Atak cię nie dosięga! Jedno z twoich luster zostaje zniszczone. Jeśli atakujący znajdował się w odległości mniejszej niż 5 stóp, musi wykonać rzut obronny @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] lub otrzymać obrażenia psychiczne, ponieważ wydaje mu się, że został skaleczony przez deszcz odłamków szkła z rozbitego lustra.</p>"
+                }
+            }
+        },
+        "UnbalancingFinisher": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Kiedy stworzenie otrzymuje obrażenia od @UUID[Compendium.pf2e.feats-srd.Item.VXA50vhIRCBt4vvP], pozostaje odsłonięty do końca następnej tury pochodzenia."
                 }
             }
         },
