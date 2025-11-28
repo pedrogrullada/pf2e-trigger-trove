@@ -143,6 +143,13 @@
                 }
             }
         },
+        "MartialPerformance": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "<p>If a character with @UUID[Compendium.pf2e.feats-srd.Item.q1iP3SjAF5uceI0M]{Martial Performance} deals damage to an enemy, and they are under the effects of @UUID[Compendium.pf2e.spells-srd.Item.IAjvwqgiDr3qGYxY]{Courageous Anthem}, @UUID[Compendium.pf2e.spells-srd.Item.bH0kPuf7UKxRvi2P]{Rallying Anthem}, or @UUID[Compendium.pf2e.spells-srd.Item.Xxdwkt0EEDgP1LGc]{Song of Strength}; the duration of these effects is extended by 1 round.</p><p>Then, an effect is added that prevents extended effects from benefitting again.</p><p>For this trigger to work correctly, the composition effect must have been dragged from the triggering character's chat card.</p>"
+                }
+            }
+        },
         "MirrorImage": {
             "Item": {
                 "ResourceLabel": "Mirror Images"
