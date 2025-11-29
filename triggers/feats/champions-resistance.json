@@ -1,166 +1,856 @@
-{
-  "_id": "qFRjm1DiF2ye0nuX",
-  "description": "@Localize[TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Description]",
-  "folder": "Feats & Features",
-  "name": "Champion's Resistance (Damage Taken)",
-  "nodes": [
-    {
-      "_id": "nOggEquouUTiOKnh",
-      "key": "damage-taken",
-      "outputs": {
-        "out": {
-          "ids": [
-            "miT5CqI6GGFJjJ7Z.inputs.in"
-          ]
-        }
-      },
-      "position": {
-        "x": 350,
-        "y": 200
-      },
-      "type": "event"
-    },
-    {
-      "_id": "miT5CqI6GGFJjJ7Z",
-      "inputs": {
-        "in": {
-          "ids": [
-            "nOggEquouUTiOKnh.outputs.out"
-          ]
-        },
-        "uuid": {
-          "ids": [],
-          "value": "Compendium.pf2e.feat-effects.Item.DawVHfoPKbPJsz4k"
-        }
-      },
-      "key": "has-item",
-      "outputs": {
-        "true": {
-          "ids": [
-            "2qc5e3gJ4AbDvhZW.inputs.in"
-          ]
-        }
-      },
-      "position": {
-        "x": 543,
-        "y": 199.75
-      },
-      "type": "condition"
-    },
-    {
-      "_id": "2qc5e3gJ4AbDvhZW",
-      "inputs": {
-        "in": {
-          "ids": [
-            "miT5CqI6GGFJjJ7Z.outputs.true"
-          ]
-        },
-        "input": {
-          "ids": [
-            "sOdeasU0MfWtkt2L.outputs.output"
-          ]
-        }
-      },
-      "key": "boolean-splitter",
-      "outputs": {
-        "false": {
-          "ids": [
-            "lmZBDgldS8ns7XsC.inputs.in"
-          ]
-        }
-      },
-      "position": {
-        "x": 809,
-        "y": 217.75
-      },
-      "type": "splitter"
-    },
-    {
-      "_id": "sOdeasU0MfWtkt2L",
-      "custom": {
-        "inputs": [],
-        "outputs": [
-          {
-            "custom": false,
-            "group": "",
-            "key": "output",
-            "type": "boolean"
+[
+  {
+    "_id": "qFRjm1DiF2ye0nuX",
+    "description": "@Localize[TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Description]",
+    "folder": "Feats & Features",
+    "name": "Champion's Resistance (Damage Taken)",
+    "nodes": [
+      {
+        "_id": "nOggEquouUTiOKnh",
+        "key": "damage-taken",
+        "outputs": {
+          "out": {
+            "ids": [
+              "miT5CqI6GGFJjJ7Z.inputs.in"
+            ]
           }
-        ],
-        "outs": []
-      },
-      "key": "variable-getter",
-      "outputs": {
-        "output": {
-          "ids": [
-            "2qc5e3gJ4AbDvhZW.inputs.input"
-          ]
-        }
-      },
-      "position": {
-        "x": 715.5,
-        "y": 332.25
-      },
-      "target": "nOggEquouUTiOKnh.outputs.heal",
-      "type": "variable"
-    },
-    {
-      "_id": "lmZBDgldS8ns7XsC",
-      "inputs": {
-        "in": {
-          "ids": [
-            "2qc5e3gJ4AbDvhZW.outputs.false"
-          ]
         },
-        "item": {
-          "ids": [
-            "UQpMTJ5ATW6Fwngz.outputs.output"
-          ]
-        }
+        "position": {
+          "x": 350,
+          "y": 200
+        },
+        "type": "event"
       },
-      "key": "delete-item",
-      "position": {
-        "x": 1012,
-        "y": 227.75
-      },
-      "type": "action"
-    },
-    {
-      "_id": "UQpMTJ5ATW6Fwngz",
-      "custom": {
-        "inputs": [],
-        "outputs": [
-          {
-            "custom": false,
-            "group": "",
-            "key": "output",
-            "type": "item"
+      {
+        "_id": "miT5CqI6GGFJjJ7Z",
+        "inputs": {
+          "in": {
+            "ids": [
+              "nOggEquouUTiOKnh.outputs.out"
+            ]
+          },
+          "uuid": {
+            "ids": [],
+            "value": "Compendium.pf2e.feat-effects.Item.DawVHfoPKbPJsz4k"
           }
-        ],
-        "outs": []
+        },
+        "key": "has-item",
+        "outputs": {
+          "true": {
+            "ids": [
+              "2qc5e3gJ4AbDvhZW.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 543,
+          "y": 199.75
+        },
+        "type": "condition"
       },
-      "key": "variable-getter",
-      "outputs": {
-        "output": {
-          "ids": [
-            "lmZBDgldS8ns7XsC.inputs.item"
-          ]
-        }
+      {
+        "_id": "2qc5e3gJ4AbDvhZW",
+        "inputs": {
+          "in": {
+            "ids": [
+              "miT5CqI6GGFJjJ7Z.outputs.true"
+            ]
+          },
+          "input": {
+            "ids": [
+              "sOdeasU0MfWtkt2L.outputs.output"
+            ]
+          }
+        },
+        "key": "boolean-splitter",
+        "outputs": {
+          "false": {
+            "ids": [
+              "lmZBDgldS8ns7XsC.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 809,
+          "y": 217.75
+        },
+        "type": "splitter"
       },
-      "position": {
-        "x": 838.5,
-        "y": 335.25
+      {
+        "_id": "sOdeasU0MfWtkt2L",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "boolean"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "2qc5e3gJ4AbDvhZW.inputs.input"
+            ]
+          }
+        },
+        "position": {
+          "x": 715.5,
+          "y": 332.25
+        },
+        "target": "nOggEquouUTiOKnh.outputs.heal",
+        "type": "variable"
       },
-      "target": "miT5CqI6GGFJjJ7Z.outputs.item",
-      "type": "variable"
+      {
+        "_id": "lmZBDgldS8ns7XsC",
+        "inputs": {
+          "in": {
+            "ids": [
+              "2qc5e3gJ4AbDvhZW.outputs.false"
+            ]
+          },
+          "item": {
+            "ids": [
+              "UQpMTJ5ATW6Fwngz.outputs.output"
+            ]
+          }
+        },
+        "key": "delete-item",
+        "outputs": {
+          "out": {
+            "ids": [
+              "QlPlto7JK5OW2SaR.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 1012,
+          "y": 227.75
+        },
+        "type": "action"
+      },
+      {
+        "_id": "UQpMTJ5ATW6Fwngz",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "item"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "lmZBDgldS8ns7XsC.inputs.item"
+            ]
+          }
+        },
+        "position": {
+          "x": 838.5,
+          "y": 335.25
+        },
+        "target": "miT5CqI6GGFJjJ7Z.outputs.item",
+        "type": "variable"
+      },
+      {
+        "_id": "QlPlto7JK5OW2SaR",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": true,
+              "group": "",
+              "key": "origin",
+              "label": "Champion",
+              "type": "target"
+            }
+          ],
+          "outs": []
+        },
+        "inputs": {
+          "in": {
+            "ids": [
+              "lmZBDgldS8ns7XsC.outputs.out"
+            ]
+          },
+          "input": {
+            "ids": [
+              "HsbZA4v1hzOyS4Cg.outputs.output"
+            ]
+          }
+        },
+        "key": "item-splitter",
+        "outputs": {
+          "origin": {
+            "ids": [
+              "NiyPRbnqF6c41six.inputs.target"
+            ]
+          },
+          "out": {
+            "ids": [
+              "NiyPRbnqF6c41six.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 1203,
+          "y": 243.23000000000002
+        },
+        "type": "splitter"
+      },
+      {
+        "_id": "NiyPRbnqF6c41six",
+        "inputs": {
+          "in": {
+            "ids": [
+              "QlPlto7JK5OW2SaR.outputs.out"
+            ]
+          },
+          "target": {
+            "ids": [
+              "QlPlto7JK5OW2SaR.outputs.origin"
+            ]
+          },
+          "uuid": {
+            "ids": [],
+            "value": "Compendium.pf2e.classfeatures.Item.UyuwFp0jQqYL2AdF"
+          }
+        },
+        "key": "has-item",
+        "outputs": {
+          "false": {
+            "ids": []
+          },
+          "true": {
+            "ids": [
+              "8EkD1BLnQ4HbHmeD.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 1426,
+          "y": 136.75
+        },
+        "type": "condition"
+      },
+      {
+        "_id": "HsbZA4v1hzOyS4Cg",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "item"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "QlPlto7JK5OW2SaR.inputs.input"
+            ]
+          }
+        },
+        "position": {
+          "x": 1046.5,
+          "y": 336.25
+        },
+        "target": "miT5CqI6GGFJjJ7Z.outputs.item",
+        "type": "variable"
+      },
+      {
+        "_id": "8EkD1BLnQ4HbHmeD",
+        "inputs": {
+          "in": {
+            "ids": [
+              "NiyPRbnqF6c41six.outputs.true"
+            ]
+          },
+          "TaDZdchy0pXIY3cK": {
+            "ids": [
+              "gXx4wVnCHEigay88.outputs.output"
+            ]
+          },
+          "W4q3Zyrmxoy53lHl": {
+            "ids": [
+              "L6qS4W64ETFBLScU.outputs.output"
+            ]
+          }
+        },
+        "key": "subtrigger-node",
+        "position": {
+          "x": 1685,
+          "y": -26.769999999999982
+        },
+        "target": "kIjkbR7WTllWnI1E",
+        "type": "subtrigger"
+      },
+      {
+        "_id": "gXx4wVnCHEigay88",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "target"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "8EkD1BLnQ4HbHmeD.inputs.TaDZdchy0pXIY3cK"
+            ]
+          }
+        },
+        "position": {
+          "x": 1555.5,
+          "y": 30.25
+        },
+        "target": "QlPlto7JK5OW2SaR.outputs.origin",
+        "type": "variable"
+      },
+      {
+        "_id": "L6qS4W64ETFBLScU",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "target"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "8EkD1BLnQ4HbHmeD.inputs.W4q3Zyrmxoy53lHl"
+            ]
+          }
+        },
+        "position": {
+          "x": 1525.5,
+          "y": 68.25
+        },
+        "target": "nOggEquouUTiOKnh.outputs.other",
+        "type": "variable"
+      }
+    ],
+    "variables": {
+      "miT5CqI6GGFJjJ7Z.outputs.item": {
+        "global": false,
+        "label": "Champion's Resistance",
+        "locked": false,
+        "type": "item"
+      },
+      "QlPlto7JK5OW2SaR.outputs.origin": {
+        "global": false,
+        "label": "Champion",
+        "locked": false,
+        "type": "target"
+      }
     }
-  ],
-  "variables": {
-    "miT5CqI6GGFJjJ7Z.outputs.item": {
-      "global": false,
-      "label": "Champion's Resistance",
-      "locked": false,
-      "type": "item"
+  },
+  {
+    "_id": "kIjkbR7WTllWnI1E",
+    "description": "",
+    "folder": "Feats & Features",
+    "name": "Glimpse of Redemption",
+    "nodes": [
+      {
+        "_id": "0C0CWofkY1Da3cgR",
+        "custom": {
+          "outputs": [
+            {
+              "custom": true,
+              "group": "",
+              "key": "TaDZdchy0pXIY3cK",
+              "label": "Champion",
+              "type": "target"
+            },
+            {
+              "custom": true,
+              "group": "",
+              "key": "W4q3Zyrmxoy53lHl",
+              "label": "Damage Origin",
+              "type": "target"
+            }
+          ]
+        },
+        "key": "subtrigger-input",
+        "outputs": {
+          "out": {
+            "ids": [
+              "8WYPJFVzwPkFKTld.inputs.in"
+            ]
+          },
+          "TaDZdchy0pXIY3cK": {
+            "ids": [
+              "8WYPJFVzwPkFKTld.inputs.target"
+            ]
+          }
+        },
+        "position": {
+          "x": 350,
+          "y": 200
+        },
+        "type": "subtrigger"
+      },
+      {
+        "_id": "Dez8VmHTYZHwDiBv",
+        "inputs": {
+          "in": {
+            "ids": [
+              "wqMKUibl0dvvy9XW.outputs.out",
+              "653vlEYigPVJvjNf.outputs.out"
+            ]
+          }
+        },
+        "key": "subtrigger-output",
+        "position": {
+          "x": 1679,
+          "y": 95
+        },
+        "type": "subtrigger"
+      },
+      {
+        "_id": "8WYPJFVzwPkFKTld",
+        "inputs": {
+          "in": {
+            "ids": [
+              "0C0CWofkY1Da3cgR.outputs.out"
+            ]
+          },
+          "target": {
+            "ids": [
+              "0C0CWofkY1Da3cgR.outputs.TaDZdchy0pXIY3cK"
+            ]
+          },
+          "uuid": {
+            "value": "Compendium.pf2e.feats-srd.Item.2c9awqDem5OLK47S"
+          }
+        },
+        "key": "has-item",
+        "outputs": {
+          "false": {
+            "ids": [
+              "wqMKUibl0dvvy9XW.inputs.in"
+            ]
+          },
+          "true": {
+            "ids": [
+              "yymyAROTE38lTnUI.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 548,
+          "y": 199.75
+        },
+        "type": "condition"
+      },
+      {
+        "_id": "wqMKUibl0dvvy9XW",
+        "inputs": {
+          "condition": {
+            "value": "enfeebled"
+          },
+          "counter": {
+            "value": 2
+          },
+          "effect": {
+            "ids": [
+              "Yeax0R4m3ypKu1tK.outputs.effect"
+            ]
+          },
+          "in": {
+            "ids": [
+              "8WYPJFVzwPkFKTld.outputs.false",
+              "yymyAROTE38lTnUI.outputs.false"
+            ]
+          },
+          "target": {
+            "ids": [
+              "w33jymdfcFDwhetT.outputs.output"
+            ]
+          }
+        },
+        "key": "add-condition",
+        "outputs": {
+          "out": {
+            "ids": [
+              "Dez8VmHTYZHwDiBv.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 1332,
+          "y": 236.75
+        },
+        "type": "action"
+      },
+      {
+        "_id": "yymyAROTE38lTnUI",
+        "inputs": {
+          "in": {
+            "ids": [
+              "8WYPJFVzwPkFKTld.outputs.true"
+            ]
+          },
+          "prompt": {
+            "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Prompt"
+          },
+          "title": {
+            "ids": [
+              "EhfqBZio9rjNDuNQ.outputs.label"
+            ]
+          }
+        },
+        "key": "await-confirm",
+        "outputs": {
+          "false": {
+            "ids": [
+              "wqMKUibl0dvvy9XW.inputs.in"
+            ]
+          },
+          "true": {
+            "ids": [
+              "653vlEYigPVJvjNf.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 825,
+          "y": 52.23000000000002
+        },
+        "type": "action"
+      },
+      {
+        "_id": "EhfqBZio9rjNDuNQ",
+        "inputs": {
+          "prefix": {
+            "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Title"
+          },
+          "target": {
+            "ids": [
+              "WZun9c51GuHtuRLx.outputs.output"
+            ]
+          }
+        },
+        "key": "named-label-actor",
+        "outputs": {
+          "label": {
+            "ids": [
+              "yymyAROTE38lTnUI.inputs.title"
+            ]
+          }
+        },
+        "position": {
+          "x": 588.5,
+          "y": 52.25
+        },
+        "type": "value"
+      },
+      {
+        "_id": "WZun9c51GuHtuRLx",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "target"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "EhfqBZio9rjNDuNQ.inputs.target"
+            ]
+          }
+        },
+        "position": {
+          "x": 489.5,
+          "y": 104.25
+        },
+        "target": "0C0CWofkY1Da3cgR.outputs.TaDZdchy0pXIY3cK",
+        "type": "variable"
+      },
+      {
+        "_id": "653vlEYigPVJvjNf",
+        "inputs": {
+          "condition": {
+            "value": "stupefied"
+          },
+          "counter": {
+            "value": 2
+          },
+          "effect": {
+            "ids": [
+              "BRTzJNGuyKlFACmS.outputs.effect"
+            ]
+          },
+          "in": {
+            "ids": [
+              "yymyAROTE38lTnUI.outputs.true"
+            ]
+          },
+          "target": {
+            "ids": [
+              "0gI5RtbafdCaN42r.outputs.output"
+            ]
+          }
+        },
+        "key": "add-condition",
+        "outputs": {
+          "out": {
+            "ids": [
+              "Dez8VmHTYZHwDiBv.inputs.in"
+            ]
+          }
+        },
+        "position": {
+          "x": 1308,
+          "y": -195.25
+        },
+        "type": "action"
+      },
+      {
+        "_id": "0gI5RtbafdCaN42r",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "target"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "653vlEYigPVJvjNf.inputs.target"
+            ]
+          }
+        },
+        "position": {
+          "x": 1149.5,
+          "y": -47.75
+        },
+        "target": "0C0CWofkY1Da3cgR.outputs.W4q3Zyrmxoy53lHl",
+        "type": "variable"
+      },
+      {
+        "_id": "w33jymdfcFDwhetT",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "target"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "wqMKUibl0dvvy9XW.inputs.target"
+            ]
+          }
+        },
+        "position": {
+          "x": 1193.5,
+          "y": 474.25
+        },
+        "target": "0C0CWofkY1Da3cgR.outputs.W4q3Zyrmxoy53lHl",
+        "type": "variable"
+      },
+      {
+        "_id": "BRTzJNGuyKlFACmS",
+        "inputs": {
+          "duration": {
+            "ids": [
+              "boOQYZuSJwutR74m.outputs.duration"
+            ]
+          },
+          "image": {
+            "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
+          },
+          "label": {
+            "value": "Effect: Glimpse of Redemption (Stupefied)"
+          }
+        },
+        "key": "effect-data",
+        "outputs": {
+          "effect": {
+            "ids": [
+              "653vlEYigPVJvjNf.inputs.effect"
+            ]
+          }
+        },
+        "position": {
+          "x": 1071.5,
+          "y": -193.75
+        },
+        "type": "value"
+      },
+      {
+        "_id": "boOQYZuSJwutR74m",
+        "inputs": {
+          "expiry": {
+            "value": "turn-end"
+          },
+          "origin": {
+            "ids": [
+              "K8ePfecX2BJkbF11.outputs.output"
+            ]
+          },
+          "value": {
+            "value": 1
+          }
+        },
+        "key": "duration-unit",
+        "outputs": {
+          "duration": {
+            "ids": [
+              "BRTzJNGuyKlFACmS.inputs.duration"
+            ]
+          }
+        },
+        "position": {
+          "x": 813.5,
+          "y": -194.75
+        },
+        "type": "value"
+      },
+      {
+        "_id": "K8ePfecX2BJkbF11",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "target"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "boOQYZuSJwutR74m.inputs.origin"
+            ]
+          }
+        },
+        "position": {
+          "x": 658.5,
+          "y": -169.75
+        },
+        "target": "0C0CWofkY1Da3cgR.outputs.W4q3Zyrmxoy53lHl",
+        "type": "variable"
+      },
+      {
+        "_id": "Yeax0R4m3ypKu1tK",
+        "inputs": {
+          "duration": {
+            "ids": [
+              "gZWJLMjuVYOHgCMe.outputs.output"
+            ]
+          },
+          "image": {
+            "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
+          },
+          "label": {
+            "value": "Effect: Glimpse of Redemption (Enfeebled)"
+          }
+        },
+        "key": "effect-data",
+        "outputs": {
+          "effect": {
+            "ids": [
+              "wqMKUibl0dvvy9XW.inputs.effect"
+            ]
+          }
+        },
+        "position": {
+          "x": 1095.5,
+          "y": 332.25
+        },
+        "type": "value"
+      },
+      {
+        "_id": "gZWJLMjuVYOHgCMe",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "duration"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "Yeax0R4m3ypKu1tK.inputs.duration"
+            ]
+          }
+        },
+        "position": {
+          "x": 980.5,
+          "y": 437.25
+        },
+        "target": "boOQYZuSJwutR74m.outputs.duration",
+        "type": "variable"
+      }
+    ],
+    "variables": {
+      "boOQYZuSJwutR74m.outputs.duration": {
+        "global": false,
+        "label": "Duration",
+        "type": "duration"
+      }
     }
   }
-}
+]

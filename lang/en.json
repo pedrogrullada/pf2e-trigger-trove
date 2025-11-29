@@ -26,7 +26,13 @@
         "ChampionsResistance": {
             "Trigger": {
                 "DamageTaken": {
-                    "Description": "Automatically remove the Champion's Resistance effect after damage is taken."
+                    "Description": "<p>Automatically remove the Champion's Resistance effect after damage is taken.<p>If the origin champion has the @UUID[Compendium.pf2e.classfeatures.Item.UyuwFp0jQqYL2AdF]{Redemption} cause, the damage origin also becomes enfeebled until the end of its next turn. If they have the @UUID[Compendium.pf2e.feats-srd.Item.2c9awqDem5OLK47S]{Weight of Guilt} feat, the champion can choose whether to apply the stupefied or enfeebled conditions.</p>",
+                    "Redemption": {
+                        "AwaitConfirmation": {
+                            "Prompt": "Will you use Weight of Guilt to make the enemy stupefied rather than enfeebled?",
+                            "Title": "Weight of Guilt"
+                        }
+                    }
                 }
             }
         },
