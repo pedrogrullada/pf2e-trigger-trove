@@ -1,3 +1,18 @@
+## 0.9.0
+- **New Triggers**
+  - (Ettio) Sword and Pistol
+    - _Attack Rolled:_ When a character with Sword and Pistol makes a successful ranged Strike against an enemy within their reach—as indicated by the toggle in their sheet—with a one-handed firearm or crossbow, an auxiliary effect is added that makes the target off-guard to their next melee attack with a one-handed melee weapon. A trigger effect is also added to the target of this attack for tracking purposes.
+    - _Damage Taken:_ When a character with Sword and Pistol deals damage with a one-handed melee weapon to an enemy that was off-guard as a result of that feat, remove the auxiliary effect on the attacker, and the trigger effect on the target.
+  - Martial Performance
+    - _Damage Taken:_ If a character with Martial Performance deals damage to an enemy, and they are under the effects of _courageous anthem_, _rallying anthem_, or _song of strength_; then the duration of these effects is extended by 1 round. Afterwards, an effect is added that prevents that same composition from benefitting again. For this trigger to work correctly, the composition effect must have been dragged from the triggering character's chat card.
+  - Selfish Shield
+    - _Damage Taken:_ Remove Selfish Shield's effect after taking damage. Additionally, add Champion's Extra Damage effect afterwards. The source of the damage must be targeted after the effect is added in order to work correctly. If the trigger target has Ongoing Selfishness, its effect will be added automatically as well.
+- **Updated Triggers**
+  - Champion's Resistance
+    - Now has specific support for Glimpse of Redemption. The trigger will  add enfeebled 2 to the damage origin. If the champion has Weight of Guilt, then they will be prompted to decide if they want to make the damage origin stupefied instead.
+- **Localization**
+  - (Lioheart) Update polish localization
+
 ## 0.8.0
 - **Localization**
   - (Lioheart) Add polish localization

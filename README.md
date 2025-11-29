@@ -6,27 +6,33 @@ Enable the module and you will see this module's triggers. They are **disabled**
 
 Here's the list of abilities currently handled by triggers in some capacity.
 <details>
-  <summary>The List (As of 0.8.0)</summary>
+  <summary>The List (As of 0.9.0)</summary>
 
    - Equipment
-     - Critical Specialization (Bow, Spear, and Sword only)
+     - Critical Specialization
+        + Bow, Spear, and Sword only
    - Feats & Features
      - Amulet's Abeyance
      - Aura of Courage
      - Champion's Resistance
+        + Special Glimpse of Redemption support
      - Crowned in Tempest's Fury
      - Energy Shot
      - Finishing Follow-Through
      - Goblin Scuttle
      - Inviolable
+     - Martial Performance
      - One Shot, One Kill
      - Ravel of Thorns
      - Revitalizing Finisher
+     - Selfish Shield
+        - Ongoing Selfishness
      - Shared Stratagem
      - Spike Skin
      - Steam Knight
      - Swaggering Initiative
      - Swashbuckler Finisher
+     - Sword and Pistol
      - Taunt
      - Unbalancing Finisher
      - Thermal Nimbus
