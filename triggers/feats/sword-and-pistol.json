@@ -1,18 +1,19 @@
 [
     {
         "_id": "PcLvtOmbLuFS5Csv",
-        "description": "<p>When Gunslinger makes a successfull ranged strike against an enemy within their reach with a one-handed firearm or one-handed crossbow, trigger adds aux effect that makes enemy @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against their next melee attack with a one-handed melee weapn</p>",
+        "description": "<p>When a character with @UUID[Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi]{Sword and Pistol} makes a successful ranged Strike against an enemy within their reach—as indicated by the toggle in their sheet—with a one-handed firearm or crossbow, an auxiliary effect is added that makes the target @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to their next melee attack with a one-handed melee weapon. A trigger effect is also added to the target of this attack for tracking purposes.</p>",
         "folder": "Feats & Features",
-        "name": "Sword and Pistol (Attack Rolled, Ranged)",
+        "name": "Sword and Pistol (Attack Rolled)",
         "nodes": [
             {
                 "_id": "clQGNEOJEaTXuSTZ",
                 "key": "attack-roll",
                 "outputs": {
                     "options": {
-                        "ids": [
-                            "gXTJTiYahg6FR4ES.inputs.list"
-                        ]
+                        "ids": []
+                    },
+                    "other": {
+                        "ids": []
                     },
                     "out": {
                         "ids": [
@@ -20,9 +21,7 @@
                         ]
                     },
                     "this": {
-                        "ids": [
-                            "blqtNYcXhNNgJaVq.inputs.target"
-                        ]
+                        "ids": []
                     }
                 },
                 "position": {
@@ -40,9 +39,7 @@
                         ]
                     },
                     "target": {
-                        "ids": [
-                            "clQGNEOJEaTXuSTZ.outputs.this"
-                        ]
+                        "ids": []
                     },
                     "uuid": {
                         "ids": [],
@@ -56,12 +53,12 @@
                     },
                     "true": {
                         "ids": [
-                            "gXTJTiYahg6FR4ES.inputs.in"
+                            "5qOmcjptKeAvVlsz.inputs.in"
                         ]
                     }
                 },
                 "position": {
-                    "x": 531,
+                    "x": 537,
                     "y": 199.75
                 },
                 "type": "condition"
@@ -71,48 +68,51 @@
                 "inputs": {
                     "in": {
                         "ids": [
-                            "blqtNYcXhNNgJaVq.outputs.true"
+                            "Lism53kxaElkbJ3S.outputs.out"
                         ]
                     },
                     "list": {
                         "ids": [
-                            "clQGNEOJEaTXuSTZ.outputs.options"
+                            "cCzkSN1wFvlu9Ock.outputs.output"
                         ]
                     },
                     "predicate": {
                         "ids": [],
-                        "value": "[\n  \"item:hands-held:1\",\n  \"sword-and-pistol-reach\",\n  {\n    \"or\": [\n      \"item:group:crossbow\",\n      \"item:group:firearm\"\n    ]\n  }\n]"
+                        "value": "[\n  \"item:hands-held:1\",\n  \"item:ranged\",\n  \"sword-and-pistol-reach\",\n  {\n    \"or\": [\n      \"item:group:crossbow\",\n      \"item:group:firearm\"\n    ]\n  }\n]"
                     }
                 },
                 "key": "match-predicate",
                 "outputs": {
                     "false": {
-                        "ids": []
+                        "ids": [
+                            "g8oTTcLuYAWv9XO6.inputs.in"
+                        ]
                     },
                     "true": {
                         "ids": [
-                            "eiDbJNFw4Ts2mkVT.inputs.in"
+                            "PaVl4S5gC2wgVcOM.inputs.in"
                         ]
                     }
                 },
                 "position": {
-                    "x": 758,
-                    "y": 201.75
+                    "x": 1297,
+                    "y": 183.75
                 },
                 "type": "condition"
             },
             {
                 "_id": "IKuGbE5N8Ga0q3os",
                 "inputs": {
+                    "duplicate": {
+                        "value": false
+                    },
                     "in": {
                         "ids": [
-                            "aIbY1eGRDjbVJTwb.outputs.out"
+                            "eiDbJNFw4Ts2mkVT.outputs.true"
                         ]
                     },
                     "target": {
-                        "ids": [
-                            "ARD604zMJLImLDcs.outputs.output"
-                        ]
+                        "ids": []
                     },
                     "uuid": {
                         "ids": [],
@@ -128,39 +128,10 @@
                     }
                 },
                 "position": {
-                    "x": 1640,
-                    "y": 205.75
+                    "x": 2759,
+                    "y": -138.25
                 },
                 "type": "action"
-            },
-            {
-                "_id": "ARD604zMJLImLDcs",
-                "custom": {
-                    "inputs": [],
-                    "outputs": [
-                        {
-                            "custom": false,
-                            "group": "",
-                            "key": "output",
-                            "type": "target"
-                        }
-                    ],
-                    "outs": []
-                },
-                "key": "variable-getter",
-                "outputs": {
-                    "output": {
-                        "ids": [
-                            "IKuGbE5N8Ga0q3os.inputs.target"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 1496.5,
-                    "y": 365.25
-                },
-                "target": "clQGNEOJEaTXuSTZ.outputs.this",
-                "type": "variable"
             },
             {
                 "_id": "O6EhnhcnbbljbQxW",
@@ -171,8 +142,9 @@
                         ]
                     },
                     "identifier": {
-                        "ids": [],
-                        "value": "sword-and-pistol"
+                        "ids": [
+                            "jS9kdyx7LWNc2hwG.outputs.output"
+                        ]
                     },
                     "in": {
                         "ids": [
@@ -186,9 +158,16 @@
                     }
                 },
                 "key": "add-temporary",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "CQT5BF4sRWB3zMjQ.inputs.in"
+                        ]
+                    }
+                },
                 "position": {
-                    "x": 1868,
-                    "y": 203.75
+                    "x": 3003,
+                    "y": -139.25
                 },
                 "type": "action"
             },
@@ -215,8 +194,8 @@
                     }
                 },
                 "position": {
-                    "x": 1719,
-                    "y": 365.75
+                    "x": 2868,
+                    "y": 85.75
                 },
                 "target": "clQGNEOJEaTXuSTZ.outputs.other",
                 "type": "variable"
@@ -234,8 +213,9 @@
                         "value": "systems/pf2e/icons/equipment/weapons/dueling-pistol.webp"
                     },
                     "label": {
-                        "ids": [],
-                        "value": "Effect: Sword and Pistol"
+                        "ids": [
+                            "tLZuAeeM60lZoyi8.outputs.label"
+                        ]
                     }
                 },
                 "key": "effect-data",
@@ -247,8 +227,8 @@
                     }
                 },
                 "position": {
-                    "x": 1865.5,
-                    "y": 364.25
+                    "x": 2757.5,
+                    "y": -322.75
                 },
                 "type": "value"
             },
@@ -274,8 +254,8 @@
                     }
                 },
                 "position": {
-                    "x": 1864.5,
-                    "y": 504.25
+                    "x": 2498.5,
+                    "y": -326.75
                 },
                 "type": "value"
             },
@@ -302,102 +282,10 @@
                     }
                 },
                 "position": {
-                    "x": 1848.5,
-                    "y": 645.25
+                    "x": 2347.5,
+                    "y": -303.75
                 },
                 "target": "clQGNEOJEaTXuSTZ.outputs.this",
-                "type": "variable"
-            },
-            {
-                "_id": "EoO3MpoLW3RTbp8Z",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "eiDbJNFw4Ts2mkVT.outputs.true"
-                        ]
-                    },
-                    "uuid": {
-                        "ids": [],
-                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
-                    }
-                },
-                "key": "remove-item",
-                "outputs": {
-                    "out": {
-                        "ids": [
-                            "aIbY1eGRDjbVJTwb.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 1168.5,
-                    "y": 201.25
-                },
-                "type": "action"
-            },
-            {
-                "_id": "aIbY1eGRDjbVJTwb",
-                "inputs": {
-                    "identifier": {
-                        "ids": [],
-                        "value": "sword-and-pistol"
-                    },
-                    "in": {
-                        "ids": [
-                            "EoO3MpoLW3RTbp8Z.outputs.out"
-                        ]
-                    },
-                    "target": {
-                        "ids": [
-                            "S5AnWCGXo1tnUwAy.outputs.output"
-                        ]
-                    },
-                    "trigger": {
-                        "ids": [],
-                        "value": "PcLvtOmbLuFS5Csv"
-                    }
-                },
-                "key": "remove-temporary",
-                "outputs": {
-                    "out": {
-                        "ids": [
-                            "IKuGbE5N8Ga0q3os.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 1390.5,
-                    "y": 204
-                },
-                "type": "action"
-            },
-            {
-                "_id": "S5AnWCGXo1tnUwAy",
-                "custom": {
-                    "inputs": [],
-                    "outputs": [
-                        {
-                            "custom": false,
-                            "group": "",
-                            "key": "output",
-                            "type": "target"
-                        }
-                    ],
-                    "outs": []
-                },
-                "key": "variable-getter",
-                "outputs": {
-                    "output": {
-                        "ids": [
-                            "aIbY1eGRDjbVJTwb.inputs.target"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 1247,
-                    "y": 331.75
-                },
-                "target": "clQGNEOJEaTXuSTZ.outputs.other",
                 "type": "variable"
             },
             {
@@ -411,8 +299,8 @@
                     }
                 },
                 "position": {
-                    "x": 771.5,
-                    "y": 369.75
+                    "x": 2344.5,
+                    "y": 53.75
                 },
                 "type": "value"
             },
@@ -431,21 +319,27 @@
                     },
                     "in": {
                         "ids": [
-                            "gXTJTiYahg6FR4ES.outputs.true"
+                            "v2lrhTw9bTp0qAGI.outputs.out",
+                            "mleiVocfLOWfiXu1.outputs.false"
                         ]
                     }
                 },
                 "key": "gte-number",
                 "outputs": {
+                    "false": {
+                        "ids": [
+                            "CQT5BF4sRWB3zMjQ.inputs.in"
+                        ]
+                    },
                     "true": {
                         "ids": [
-                            "EoO3MpoLW3RTbp8Z.inputs.in"
+                            "IKuGbE5N8Ga0q3os.inputs.in"
                         ]
                     }
                 },
                 "position": {
-                    "x": 989,
-                    "y": 219.25
+                    "x": 2560,
+                    "y": -30.75
                 },
                 "type": "logic"
             },
@@ -472,267 +366,14 @@
                     }
                 },
                 "position": {
-                    "x": 871.5,
-                    "y": 329.75
+                    "x": 2441.5,
+                    "y": 17.75
                 },
                 "target": "clQGNEOJEaTXuSTZ.outputs.outcome",
                 "type": "variable"
-            }
-        ],
-        "variables": {}
-    },
-    {
-        "_id": "q301fM0zLI9LIeVq",
-        "description": "<p>Checks if melee attack is made with a one-handed weapon. If the target is subject to Sword and Pistol it will be offguard.</p>",
-        "folder": "Feats & Features",
-        "name": "Sword and Pistol (Attack Rolled, Melee)",
-        "nodes": [
-            {
-                "_id": "M7hSO7mtPE07QLET",
-                "key": "attack-roll",
-                "outputs": {
-                    "options": {
-                        "ids": [
-                            "8K9UwYIT2F4LotrH.inputs.list"
-                        ]
-                    },
-                    "out": {
-                        "ids": [
-                            "8K9UwYIT2F4LotrH.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 350,
-                    "y": 200
-                },
-                "type": "event"
             },
             {
-                "_id": "IR6av3Ee5FIb2dlZ",
-                "inputs": {
-                    "identifier": {
-                        "ids": [],
-                        "value": "sword-and-pistol"
-                    },
-                    "in": {
-                        "ids": [
-                            "8K9UwYIT2F4LotrH.outputs.true"
-                        ]
-                    },
-                    "target": {
-                        "ids": [
-                            "z0IEEPVdGEFzOh7a.outputs.output"
-                        ]
-                    },
-                    "trigger": {
-                        "ids": [],
-                        "value": "PcLvtOmbLuFS5Csv"
-                    }
-                },
-                "key": "has-temporary",
-                "outputs": {
-                    "false": {
-                        "ids": [
-                            "odSLEz1D7CnZCndB.inputs.in"
-                        ]
-                    },
-                    "true": {
-                        "ids": [
-                            "ukk3CJoNIlxztcaH.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 761,
-                    "y": 198.75
-                },
-                "type": "condition"
-            },
-            {
-                "_id": "8K9UwYIT2F4LotrH",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "M7hSO7mtPE07QLET.outputs.out"
-                        ]
-                    },
-                    "list": {
-                        "ids": [
-                            "M7hSO7mtPE07QLET.outputs.options"
-                        ]
-                    },
-                    "predicate": {
-                        "ids": [],
-                        "value": "[\n  \"item:melee\",\n  \"item:hands-held:1\",\n  \"sword-and-pistol-reach\",\n  \"self:effect:aux-sword-and-pistol\"\n]"
-                    }
-                },
-                "key": "match-predicate",
-                "outputs": {
-                    "true": {
-                        "ids": [
-                            "IR6av3Ee5FIb2dlZ.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 531.5,
-                    "y": 197.25
-                },
-                "type": "condition"
-            },
-            {
-                "_id": "z0IEEPVdGEFzOh7a",
-                "custom": {
-                    "inputs": [],
-                    "outputs": [
-                        {
-                            "custom": false,
-                            "group": "",
-                            "key": "output",
-                            "type": "target"
-                        }
-                    ],
-                    "outs": []
-                },
-                "key": "variable-getter",
-                "outputs": {
-                    "output": {
-                        "ids": [
-                            "IR6av3Ee5FIb2dlZ.inputs.target"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 620,
-                    "y": 327.75
-                },
-                "target": "M7hSO7mtPE07QLET.outputs.other",
-                "type": "variable"
-            },
-            {
-                "_id": "ukk3CJoNIlxztcaH",
-                "inputs": {
-                    "a": {
-                        "ids": [
-                            "CLh4Eib5vRdWA9hB.outputs.output"
-                        ]
-                    },
-                    "b": {
-                        "ids": [
-                            "sw50Td9lYbCSXub3.outputs.value"
-                        ]
-                    },
-                    "in": {
-                        "ids": [
-                            "IR6av3Ee5FIb2dlZ.outputs.true"
-                        ]
-                    }
-                },
-                "key": "lte-number",
-                "outputs": {
-                    "false": {
-                        "ids": [
-                            "5APVdtTCedax5YG5.inputs.in"
-                        ]
-                    },
-                    "true": {
-                        "ids": [
-                            "12X86b4c3M8JB9tU.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 1011,
-                    "y": 214.75
-                },
-                "type": "logic"
-            },
-            {
-                "_id": "CLh4Eib5vRdWA9hB",
-                "custom": {
-                    "inputs": [],
-                    "outputs": [
-                        {
-                            "custom": false,
-                            "group": "",
-                            "key": "output",
-                            "type": "number"
-                        }
-                    ],
-                    "outs": []
-                },
-                "key": "variable-getter",
-                "outputs": {
-                    "output": {
-                        "ids": [
-                            "ukk3CJoNIlxztcaH.inputs.a"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 892.5,
-                    "y": 412.75
-                },
-                "target": "M7hSO7mtPE07QLET.outputs.outcome",
-                "type": "variable"
-            },
-            {
-                "_id": "sw50Td9lYbCSXub3",
-                "inputs": {
-                    "input": {
-                        "ids": [],
-                        "value": "failure"
-                    }
-                },
-                "key": "success-value",
-                "outputs": {
-                    "value": {
-                        "ids": [
-                            "ukk3CJoNIlxztcaH.inputs.b"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 798.5,
-                    "y": 354.75
-                },
-                "type": "value"
-            },
-            {
-                "_id": "5APVdtTCedax5YG5",
-                "inputs": {
-                    "entry": {
-                        "ids": [],
-                        "value": "check:reroll"
-                    },
-                    "in": {
-                        "ids": [
-                            "ukk3CJoNIlxztcaH.outputs.false"
-                        ]
-                    },
-                    "list": {
-                        "ids": [
-                            "zPc45ZitrfFVAWYe.outputs.output"
-                        ]
-                    }
-                },
-                "key": "contains-entry",
-                "outputs": {
-                    "true": {
-                        "ids": [
-                            "A6KJPMbZdAUsuqai.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 1192,
-                    "y": 262.75
-                },
-                "type": "condition"
-            },
-            {
-                "_id": "zPc45ZitrfFVAWYe",
+                "_id": "cCzkSN1wFvlu9Ock",
                 "custom": {
                     "inputs": [],
                     "outputs": [
@@ -749,90 +390,231 @@
                 "outputs": {
                     "output": {
                         "ids": [
-                            "5APVdtTCedax5YG5.inputs.list"
+                            "gXTJTiYahg6FR4ES.inputs.list"
                         ]
                     }
                 },
                 "position": {
-                    "x": 1056.5,
-                    "y": 329.25
+                    "x": 1151.5,
+                    "y": 345.25
                 },
-                "target": "M7hSO7mtPE07QLET.outputs.options",
+                "target": "clQGNEOJEaTXuSTZ.outputs.options",
                 "type": "variable"
             },
             {
-                "_id": "A6KJPMbZdAUsuqai",
+                "_id": "g8oTTcLuYAWv9XO6",
                 "inputs": {
                     "in": {
                         "ids": [
-                            "5APVdtTCedax5YG5.outputs.true"
+                            "gXTJTiYahg6FR4ES.outputs.false"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "EHY3Fqt18fkikf9c.outputs.output"
+                        ]
+                    },
+                    "predicate": {
+                        "value": "[\n  \"item:melee\",\n  \"item:hands-held:1\",\n  \"self:effect:sword-and-pistol-trigger\",\n  \"target-has-trigger-effect\"\n]"
+                    }
+                },
+                "key": "match-predicate",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "0Xh9AmkIaBJq4juP.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "mAfUwdAdxmDnOo5Q.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1594,
+                    "y": 276.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "mAfUwdAdxmDnOo5Q",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "4hOz6dSRIVJ3gGe8.outputs.output"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "lqvC3RFqM5cYNaEt.outputs.value"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "g8oTTcLuYAWv9XO6.outputs.true"
+                        ]
+                    }
+                },
+                "key": "gte-number",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "Xz3bI704AORMXCTF.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "ejwnuP2vZjmw9EJN.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2042,
+                    "y": 184.75
+                },
+                "type": "logic"
+            },
+            {
+                "_id": "4hOz6dSRIVJ3gGe8",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "number"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "mAfUwdAdxmDnOo5Q.inputs.a"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1923.5,
+                    "y": 197.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.outcome",
+                "type": "variable"
+            },
+            {
+                "_id": "lqvC3RFqM5cYNaEt",
+                "key": "success-value",
+                "outputs": {
+                    "value": {
+                        "ids": [
+                            "mAfUwdAdxmDnOo5Q.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1828.5,
+                    "y": 239.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "ejwnuP2vZjmw9EJN",
+                "inputs": {
+                    "entry": {
+                        "value": "check:reroll"
+                    },
+                    "in": {
+                        "ids": [
+                            "mAfUwdAdxmDnOo5Q.outputs.true"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "wWFbGCK7FVgtndYY.outputs.output"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "8X64MtwO4M2l8Gsa.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2540,
+                    "y": 162.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "wWFbGCK7FVgtndYY",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "list"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "ejwnuP2vZjmw9EJN.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2556.5,
+                    "y": 294.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.options",
+                "type": "variable"
+            },
+            {
+                "_id": "8X64MtwO4M2l8Gsa",
+                "inputs": {
+                    "duplicate": {
+                        "value": false
+                    },
+                    "in": {
+                        "ids": [
+                            "ejwnuP2vZjmw9EJN.outputs.true"
                         ]
                     },
                     "uuid": {
-                        "ids": [],
                         "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
                     }
                 },
                 "key": "create-item",
-                "position": {
-                    "x": 1420,
-                    "y": 261.75
-                },
-                "type": "action"
-            },
-            {
-                "_id": "12X86b4c3M8JB9tU",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "ukk3CJoNIlxztcaH.outputs.true"
-                        ]
-                    },
-                    "uuid": {
-                        "ids": [],
-                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
-                    }
-                },
-                "key": "remove-item",
-                "position": {
-                    "x": 1192,
-                    "y": 132.75
-                },
-                "type": "action"
-            },
-            {
-                "_id": "odSLEz1D7CnZCndB",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "IR6av3Ee5FIb2dlZ.outputs.false"
-                        ]
-                    },
-                    "uuid": {
-                        "ids": [],
-                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
-                    }
-                },
-                "key": "remove-item",
                 "outputs": {
                     "out": {
                         "ids": [
-                            "n6Pf69c6DQBuOU4O.inputs.in"
+                            "2wA4UenXhAAEOmKL.inputs.in"
                         ]
                     }
                 },
                 "position": {
-                    "x": 985,
-                    "y": 3.75
+                    "x": 2778,
+                    "y": 162.23000000000002
                 },
                 "type": "action"
             },
             {
-                "_id": "n6Pf69c6DQBuOU4O",
+                "_id": "hQxh4Z7RGlHsNeZL",
                 "inputs": {
                     "in": {
                         "ids": [
-                            "odSLEz1D7CnZCndB.outputs.out"
+                            "0Xh9AmkIaBJq4juP.outputs.out"
                         ]
                     }
                 },
@@ -840,32 +622,32 @@
                 "outputs": {
                     "other": {
                         "ids": [
-                            "mYYbprxJmvfKyNez.inputs.multi"
+                            "WGR8c5SgoFQc4VrL.inputs.multi"
                         ]
                     },
                     "out": {
                         "ids": [
-                            "mYYbprxJmvfKyNez.inputs.in"
+                            "WGR8c5SgoFQc4VrL.inputs.in"
                         ]
                     }
                 },
                 "position": {
-                    "x": 1206,
-                    "y": 5.75
+                    "x": 2149,
+                    "y": 437.75
                 },
                 "type": "action"
             },
             {
-                "_id": "mYYbprxJmvfKyNez",
+                "_id": "WGR8c5SgoFQc4VrL",
                 "inputs": {
                     "in": {
                         "ids": [
-                            "n6Pf69c6DQBuOU4O.outputs.out"
+                            "hQxh4Z7RGlHsNeZL.outputs.out"
                         ]
                     },
                     "multi": {
                         "ids": [
-                            "n6Pf69c6DQBuOU4O.outputs.other"
+                            "hQxh4Z7RGlHsNeZL.outputs.other"
                         ]
                     }
                 },
@@ -873,36 +655,95 @@
                 "outputs": {
                     "out": {
                         "ids": [
-                            "uI0Nw4kExpwl8VWx.inputs.in"
+                            "D4lXGwUfS2ccDBsv.inputs.in"
                         ]
                     },
                     "target": {
                         "ids": [
-                            "uI0Nw4kExpwl8VWx.inputs.target"
+                            "D4lXGwUfS2ccDBsv.inputs.target"
                         ]
                     }
                 },
                 "position": {
-                    "x": 1385.5,
-                    "y": 6.230000000000018
+                    "x": 2368,
+                    "y": 515.23
                 },
                 "type": "action"
             },
             {
-                "_id": "uI0Nw4kExpwl8VWx",
+                "_id": "D4lXGwUfS2ccDBsv",
                 "inputs": {
                     "identifier": {
-                        "ids": [],
-                        "value": "sword-and-pistol"
+                        "ids": [
+                            "yDYM3yyZouhzwISV.outputs.output"
+                        ]
                     },
                     "in": {
                         "ids": [
-                            "mYYbprxJmvfKyNez.outputs.out"
+                            "WGR8c5SgoFQc4VrL.outputs.out"
                         ]
                     },
                     "target": {
                         "ids": [
-                            "mYYbprxJmvfKyNez.outputs.target"
+                            "WGR8c5SgoFQc4VrL.outputs.target"
+                        ]
+                    },
+                    "trigger": {
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "remove-temporary",
+                "position": {
+                    "x": 2580,
+                    "y": 564.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "EHY3Fqt18fkikf9c",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "list"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "g8oTTcLuYAWv9XO6.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1451.5,
+                    "y": 375.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.options",
+                "type": "variable"
+            },
+            {
+                "_id": "FyNJxeTnkpQcvWHA",
+                "inputs": {
+                    "identifier": {
+                        "ids": [
+                            "KbHO1sEUWKTGyy0S.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "Xz3bI704AORMXCTF.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "n5VHoesqXqknRiKm.outputs.output"
                         ]
                     },
                     "trigger": {
@@ -912,16 +753,958 @@
                 },
                 "key": "remove-temporary",
                 "position": {
-                    "x": 1570,
-                    "y": 6.75
+                    "x": 2803,
+                    "y": 352.75
                 },
                 "type": "action"
+            },
+            {
+                "_id": "n5VHoesqXqknRiKm",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "FyNJxeTnkpQcvWHA.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2666.5,
+                    "y": 525.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "CQT5BF4sRWB3zMjQ",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "O6EhnhcnbbljbQxW.outputs.out",
+                            "eiDbJNFw4Ts2mkVT.outputs.false"
+                        ]
+                    }
+                },
+                "key": "scene-tokens",
+                "outputs": {
+                    "other": {
+                        "ids": [
+                            "f5yGh0NKZoowIBzE.inputs.multi"
+                        ]
+                    },
+                    "out": {
+                        "ids": [
+                            "f5yGh0NKZoowIBzE.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3260,
+                    "y": -20.25
+                },
+                "type": "action"
+            },
+            {
+                "_id": "f5yGh0NKZoowIBzE",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "CQT5BF4sRWB3zMjQ.outputs.out"
+                        ]
+                    },
+                    "multi": {
+                        "ids": [
+                            "CQT5BF4sRWB3zMjQ.outputs.other"
+                        ]
+                    }
+                },
+                "key": "loop-targets",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "pnw1zav9EdDFhoEh.inputs.in"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "pnw1zav9EdDFhoEh.inputs.a"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3445.5,
+                    "y": -32.76999999999998
+                },
+                "type": "action"
+            },
+            {
+                "_id": "XjMKUgaFcdTOXhzY",
+                "inputs": {
+                    "identifier": {
+                        "ids": [
+                            "4LGR2FzED1RQVcQp.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "pnw1zav9EdDFhoEh.outputs.false"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "cK2QPSfJfwHfQ4BG.outputs.output"
+                        ]
+                    },
+                    "trigger": {
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "remove-temporary",
+                "outputs": {
+                    "out": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 3826,
+                    "y": -8.25
+                },
+                "type": "action"
+            },
+            {
+                "_id": "PaVl4S5gC2wgVcOM",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "gXTJTiYahg6FR4ES.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "mleiVocfLOWfiXu1.inputs.in"
+                        ]
+                    },
+                    "item": {
+                        "ids": [
+                            "Rczx5QWfILKnISsb.inputs.item"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "Rczx5QWfILKnISsb.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1616.5,
+                    "y": -108.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "Rczx5QWfILKnISsb",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "PaVl4S5gC2wgVcOM.outputs.true"
+                        ]
+                    },
+                    "item": {
+                        "ids": [
+                            "PaVl4S5gC2wgVcOM.outputs.item"
+                        ]
+                    }
+                },
+                "key": "delete-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "mleiVocfLOWfiXu1.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1849,
+                    "y": -198.25
+                },
+                "type": "action"
+            },
+            {
+                "_id": "v2lrhTw9bTp0qAGI",
+                "inputs": {
+                    "identifier": {
+                        "ids": [
+                            "W3lJLyYdJiAmMONs.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "mleiVocfLOWfiXu1.outputs.true"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "nBmlWexjpCAAcnzA.outputs.output"
+                        ]
+                    },
+                    "trigger": {
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "remove-temporary",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "eiDbJNFw4Ts2mkVT.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2307,
+                    "y": -172.25
+                },
+                "type": "action"
+            },
+            {
+                "_id": "nBmlWexjpCAAcnzA",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "v2lrhTw9bTp0qAGI.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2140.5,
+                    "y": -129.75
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "mleiVocfLOWfiXu1",
+                "inputs": {
+                    "identifier": {
+                        "ids": [
+                            "0FGC5LwTZ9LQO3kz.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "Rczx5QWfILKnISsb.outputs.out",
+                            "PaVl4S5gC2wgVcOM.outputs.false"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "uF9VzOyZxhjPAS9s.outputs.output"
+                        ]
+                    },
+                    "trigger": {
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "has-temporary",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "eiDbJNFw4Ts2mkVT.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "v2lrhTw9bTp0qAGI.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2039,
+                    "y": -78.25
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "uF9VzOyZxhjPAS9s",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "mleiVocfLOWfiXu1.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1884.5,
+                    "y": -10.75
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "pnw1zav9EdDFhoEh",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "f5yGh0NKZoowIBzE.outputs.target"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "HFgUNq2baloIob0p.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "f5yGh0NKZoowIBzE.outputs.out"
+                        ]
+                    }
+                },
+                "key": "eq-actor",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "XjMKUgaFcdTOXhzY.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 3636,
+                    "y": -18.25
+                },
+                "type": "logic"
+            },
+            {
+                "_id": "HFgUNq2baloIob0p",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "pnw1zav9EdDFhoEh.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3495.5,
+                    "y": 89.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "cK2QPSfJfwHfQ4BG",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "XjMKUgaFcdTOXhzY.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3691.5,
+                    "y": 138.25
+                },
+                "target": "f5yGh0NKZoowIBzE.outputs.target",
+                "type": "variable"
+            },
+            {
+                "_id": "5qOmcjptKeAvVlsz",
+                "custom": {
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "signature",
+                            "label": "Trigger Target Signature",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "blqtNYcXhNNgJaVq.outputs.true"
+                        ]
+                    },
+                    "input": {
+                        "ids": [
+                            "3WKtxukX9fHZNoLX.outputs.output"
+                        ]
+                    }
+                },
+                "key": "actor-splitter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "Lism53kxaElkbJ3S.inputs.in"
+                        ]
+                    },
+                    "signature": {
+                        "ids": [
+                            "Lism53kxaElkbJ3S.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 770,
+                    "y": 218.23000000000002
+                },
+                "type": "splitter"
+            },
+            {
+                "_id": "3WKtxukX9fHZNoLX",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "5qOmcjptKeAvVlsz.inputs.input"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 624.5,
+                    "y": 334.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.this",
+                "type": "variable"
+            },
+            {
+                "_id": "Lism53kxaElkbJ3S",
+                "inputs": {
+                    "a": {
+                        "value": "sword-and-pistol"
+                    },
+                    "b": {
+                        "ids": [
+                            "5qOmcjptKeAvVlsz.outputs.signature"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "5qOmcjptKeAvVlsz.outputs.out"
+                        ]
+                    },
+                    "separator": {
+                        "value": "-"
+                    }
+                },
+                "key": "concat-texts",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "gXTJTiYahg6FR4ES.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1040,
+                    "y": 182.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "yDYM3yyZouhzwISV",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "D4lXGwUfS2ccDBsv.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2444.5,
+                    "y": 688.25
+                },
+                "target": "Lism53kxaElkbJ3S.outputs.result",
+                "type": "variable"
+            },
+            {
+                "_id": "jS9kdyx7LWNc2hwG",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "O6EhnhcnbbljbQxW.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2883.5,
+                    "y": 42.25
+                },
+                "target": "Lism53kxaElkbJ3S.outputs.result",
+                "type": "variable"
+            },
+            {
+                "_id": "4LGR2FzED1RQVcQp",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "XjMKUgaFcdTOXhzY.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3709.5,
+                    "y": 102.25
+                },
+                "target": "Lism53kxaElkbJ3S.outputs.result",
+                "type": "variable"
+            },
+            {
+                "_id": "W3lJLyYdJiAmMONs",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "v2lrhTw9bTp0qAGI.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2164.5,
+                    "y": -167.75
+                },
+                "target": "Lism53kxaElkbJ3S.outputs.result",
+                "type": "variable"
+            },
+            {
+                "_id": "0FGC5LwTZ9LQO3kz",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "mleiVocfLOWfiXu1.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1924.5,
+                    "y": 72.25
+                },
+                "target": "Lism53kxaElkbJ3S.outputs.result",
+                "type": "variable"
+            },
+            {
+                "_id": "tLZuAeeM60lZoyi8",
+                "inputs": {
+                    "prefix": {
+                        "value": "Effect: Off-Guard from Sword and Pistol"
+                    },
+                    "target": {
+                        "ids": [
+                            "LNVr8IMGol5iHKAy.outputs.output"
+                        ]
+                    }
+                },
+                "key": "named-label-actor",
+                "outputs": {
+                    "label": {
+                        "ids": [
+                            "e3CRnzKpKswI7S1l.inputs.label"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2514.5,
+                    "y": -434.75
+                },
+                "type": "value"
+            },
+            {
+                "_id": "LNVr8IMGol5iHKAy",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "tLZuAeeM60lZoyi8.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2357.5,
+                    "y": -387.75
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.this",
+                "type": "variable"
+            },
+            {
+                "_id": "KbHO1sEUWKTGyy0S",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "FyNJxeTnkpQcvWHA.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2684.5,
+                    "y": 484.25
+                },
+                "target": "Lism53kxaElkbJ3S.outputs.result",
+                "type": "variable"
+            },
+            {
+                "_id": "0Xh9AmkIaBJq4juP",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "g8oTTcLuYAWv9XO6.outputs.false"
+                        ]
+                    },
+                    "uuid": {
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
+                    }
+                },
+                "key": "remove-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "hQxh4Z7RGlHsNeZL.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1914.5,
+                    "y": 404.25
+                },
+                "type": "action"
+            },
+            {
+                "_id": "Xz3bI704AORMXCTF",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "mAfUwdAdxmDnOo5Q.outputs.false"
+                        ]
+                    },
+                    "uuid": {
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.FtGFGixXEES9Zeky"
+                    }
+                },
+                "key": "remove-item",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "FyNJxeTnkpQcvWHA.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2543.5,
+                    "y": 347.25
+                },
+                "type": "action"
+            },
+            {
+                "_id": "2wA4UenXhAAEOmKL",
+                "inputs": {
+                    "effect": {
+                        "ids": [
+                            "qoGpxqBUATmB7mJO.outputs.output"
+                        ]
+                    },
+                    "identifier": {
+                        "ids": [
+                            "XFEF0xJP1K6ipezx.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "8X64MtwO4M2l8Gsa.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "U7RP8f6UIrHB1GoA.outputs.output"
+                        ]
+                    }
+                },
+                "key": "add-temporary",
+                "position": {
+                    "x": 3248,
+                    "y": 159.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "XFEF0xJP1K6ipezx",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "2wA4UenXhAAEOmKL.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3126.5,
+                    "y": 242.25
+                },
+                "target": "Lism53kxaElkbJ3S.outputs.result",
+                "type": "variable"
+            },
+            {
+                "_id": "qoGpxqBUATmB7mJO",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "effect"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "2wA4UenXhAAEOmKL.inputs.effect"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3069.5,
+                    "y": 280.25
+                },
+                "target": "e3CRnzKpKswI7S1l.outputs.effect",
+                "type": "variable"
+            },
+            {
+                "_id": "U7RP8f6UIrHB1GoA",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "2wA4UenXhAAEOmKL.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 3106.5,
+                    "y": 317.25
+                },
+                "target": "clQGNEOJEaTXuSTZ.outputs.other",
+                "type": "variable"
             }
-        ]
+        ],
+        "variables": {
+            "e3CRnzKpKswI7S1l.outputs.effect": {
+                "global": false,
+                "label": "Trigger Effect Data",
+                "type": "effect"
+            },
+            "f5yGh0NKZoowIBzE.outputs.target": {
+                "global": false,
+                "label": "Scene Token",
+                "type": "target"
+            },
+            "Lism53kxaElkbJ3S.outputs.result": {
+                "global": false,
+                "label": "Identifier",
+                "type": "text"
+            }
+        }
     },
     {
         "_id": "4hY8icoXNd0qd1Zb",
-        "description": "<p>Checks if damage taken is from a valid Sword and Pistol melee attack and removes the associated effects.</p>",
+        "description": "<p>When a character with Sword and Pistol deals damage with a one-handed melee weapon to an enemy that was off-guard as a result of their Sword and Pistol feat, remove the auxiliary effect on the attacker, and the trigger effect on the target.</p>",
         "folder": "Feats & Features",
         "name": "Sword and Pistol (Damage Taken)",
         "nodes": [
@@ -930,16 +1713,16 @@
                 "key": "damage-taken",
                 "outputs": {
                     "options": {
-                        "ids": [
-                            "qKuagkSMnctlPVBb.inputs.list"
-                        ]
+                        "ids": []
                     },
                     "other": {
-                        "ids": []
+                        "ids": [
+                            "3pjQNle9VsMBAzAj.inputs.input"
+                        ]
                     },
                     "out": {
                         "ids": [
-                            "qKuagkSMnctlPVBb.inputs.in"
+                            "3pjQNle9VsMBAzAj.inputs.in"
                         ]
                     },
                     "this": {
@@ -957,17 +1740,17 @@
                 "inputs": {
                     "in": {
                         "ids": [
-                            "p5EDEPXRZVlHHyBX.outputs.out"
+                            "BtBHP0bGVgIj5vnu.outputs.true"
                         ]
                     },
                     "list": {
                         "ids": [
-                            "p5EDEPXRZVlHHyBX.outputs.options"
+                            "cNZYGtOT5juac8lg.outputs.output"
                         ]
                     },
                     "predicate": {
                         "ids": [],
-                        "value": "[\n  \"item:melee\",\n  \"item:hands-held:1\",\n  \"self:effect:pc-lvt-omb-lu-fs5csv-sword-and-pistol\"\n]"
+                        "value": "[\n  \"item:melee\",\n  \"item:hands-held:1\"\n]"
                     }
                 },
                 "key": "match-predicate",
@@ -982,8 +1765,8 @@
                     }
                 },
                 "position": {
-                    "x": 529.5,
-                    "y": 197.75
+                    "x": 1308.5,
+                    "y": 205.75
                 },
                 "type": "condition"
             },
@@ -1009,18 +1792,18 @@
                 "outputs": {
                     "item": {
                         "ids": [
-                            "LK5pPLozpuEmBmoE.inputs.uuid"
+                            "dmH5MNaEM4y8NsvY.inputs.item"
                         ]
                     },
                     "true": {
                         "ids": [
-                            "LK5pPLozpuEmBmoE.inputs.in"
+                            "dmH5MNaEM4y8NsvY.inputs.in"
                         ]
                     }
                 },
                 "position": {
-                    "x": 758,
-                    "y": 196.75
+                    "x": 1552,
+                    "y": 205.75
                 },
                 "type": "condition"
             },
@@ -1042,141 +1825,256 @@
                 "outputs": {
                     "output": {
                         "ids": [
-                            "HLrkueWiWvvfkPeh.inputs.target",
-                            "LK5pPLozpuEmBmoE.inputs.target"
+                            "HLrkueWiWvvfkPeh.inputs.target"
                         ]
                     }
                 },
                 "position": {
-                    "x": 631.5,
-                    "y": 327.75
+                    "x": 1394.5,
+                    "y": 353.75
                 },
                 "target": "p5EDEPXRZVlHHyBX.outputs.other",
                 "type": "variable"
             },
             {
-                "_id": "LK5pPLozpuEmBmoE",
+                "_id": "dmH5MNaEM4y8NsvY",
                 "inputs": {
                     "in": {
                         "ids": [
                             "HLrkueWiWvvfkPeh.outputs.true"
                         ]
                     },
-                    "target": {
-                        "ids": [
-                            "CmOjWX1KHH9mjtGP.outputs.output"
-                        ]
-                    },
-                    "uuid": {
+                    "item": {
                         "ids": [
                             "HLrkueWiWvvfkPeh.outputs.item"
                         ]
                     }
                 },
-                "key": "remove-item",
+                "key": "delete-item",
                 "outputs": {
                     "out": {
                         "ids": [
-                            "a2u3BpglEcxeJ88y.inputs.in"
+                            "DojcTsoGQ0mMXuIY.inputs.in"
                         ]
                     }
                 },
                 "position": {
-                    "x": 986,
-                    "y": 196.75
+                    "x": 1805,
+                    "y": 208.5
                 },
                 "type": "action"
             },
             {
-                "_id": "a2u3BpglEcxeJ88y",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "LK5pPLozpuEmBmoE.outputs.out"
-                        ]
-                    }
-                },
-                "key": "scene-tokens",
-                "outputs": {
-                    "other": {
-                        "ids": [
-                            "rPoqfd0AkGYQmXWq.inputs.multi"
-                        ]
-                    },
-                    "out": {
-                        "ids": [
-                            "rPoqfd0AkGYQmXWq.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 1204,
-                    "y": 197.75
-                },
-                "type": "action"
-            },
-            {
-                "_id": "rPoqfd0AkGYQmXWq",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "a2u3BpglEcxeJ88y.outputs.out"
-                        ]
-                    },
-                    "multi": {
-                        "ids": [
-                            "a2u3BpglEcxeJ88y.outputs.other"
-                        ]
-                    }
-                },
-                "key": "loop-targets",
-                "outputs": {
-                    "out": {
-                        "ids": [
-                            "GP9tInhIINXy7EQW.inputs.in"
-                        ]
-                    },
-                    "target": {
-                        "ids": [
-                            "GP9tInhIINXy7EQW.inputs.target"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 1383.5,
-                    "y": 198.23000000000002
-                },
-                "type": "action"
-            },
-            {
-                "_id": "GP9tInhIINXy7EQW",
+                "_id": "DojcTsoGQ0mMXuIY",
                 "inputs": {
                     "identifier": {
-                        "ids": [],
-                        "value": "sword-and-pistol"
+                        "ids": [
+                            "Z2C1hEjQdRW0LzgA.outputs.output"
+                        ]
                     },
                     "in": {
                         "ids": [
-                            "rPoqfd0AkGYQmXWq.outputs.out"
+                            "dmH5MNaEM4y8NsvY.outputs.out"
                         ]
                     },
                     "target": {
-                        "ids": [
-                            "rPoqfd0AkGYQmXWq.outputs.target"
-                        ]
+                        "ids": []
                     },
                     "trigger": {
-                        "ids": [],
                         "value": "PcLvtOmbLuFS5Csv"
                     }
                 },
                 "key": "remove-temporary",
+                "outputs": {
+                    "out": {
+                        "ids": []
+                    }
+                },
                 "position": {
-                    "x": 1567,
-                    "y": 198.75
+                    "x": 2008,
+                    "y": 216.75
                 },
                 "type": "action"
+            },
+            {
+                "_id": "3pjQNle9VsMBAzAj",
+                "custom": {
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "signature",
+                            "label": "Damage Origin Signature",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "p5EDEPXRZVlHHyBX.outputs.out"
+                        ]
+                    },
+                    "input": {
+                        "ids": [
+                            "p5EDEPXRZVlHHyBX.outputs.other"
+                        ]
+                    }
+                },
+                "key": "actor-splitter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "5H7jDlGTeBRFr0Nt.inputs.in"
+                        ]
+                    },
+                    "signature": {
+                        "ids": [
+                            "5H7jDlGTeBRFr0Nt.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 535.39,
+                    "y": 222.24
+                },
+                "type": "splitter"
+            },
+            {
+                "_id": "5H7jDlGTeBRFr0Nt",
+                "inputs": {
+                    "a": {
+                        "value": "sword-and-pistol"
+                    },
+                    "b": {
+                        "ids": [
+                            "3pjQNle9VsMBAzAj.outputs.signature"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "3pjQNle9VsMBAzAj.outputs.out"
+                        ]
+                    },
+                    "separator": {
+                        "value": "-"
+                    }
+                },
+                "key": "concat-texts",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "BtBHP0bGVgIj5vnu.inputs.in"
+                        ]
+                    },
+                    "result": {
+                        "ids": [
+                            "BtBHP0bGVgIj5vnu.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 813,
+                    "y": 210.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "BtBHP0bGVgIj5vnu",
+                "inputs": {
+                    "identifier": {
+                        "ids": [
+                            "5H7jDlGTeBRFr0Nt.outputs.result"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "5H7jDlGTeBRFr0Nt.outputs.out"
+                        ]
+                    },
+                    "trigger": {
+                        "value": "PcLvtOmbLuFS5Csv"
+                    }
+                },
+                "key": "has-temporary",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "qKuagkSMnctlPVBb.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1058.5,
+                    "y": 206
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "cNZYGtOT5juac8lg",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "list"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "qKuagkSMnctlPVBb.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1170.5,
+                    "y": 363.25
+                },
+                "target": "p5EDEPXRZVlHHyBX.outputs.options",
+                "type": "variable"
+            },
+            {
+                "_id": "Z2C1hEjQdRW0LzgA",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "DojcTsoGQ0mMXuIY.inputs.identifier"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1886.5,
+                    "y": 332.25
+                },
+                "target": "5H7jDlGTeBRFr0Nt.outputs.result",
+                "type": "variable"
             }
-        ]
+        ],
+        "variables": {
+            "5H7jDlGTeBRFr0Nt.outputs.result": {
+                "global": false,
+                "label": "Identifier",
+                "type": "text"
+            }
+        }
     }
 ]

@@ -12,33 +12,40 @@
       }
     },
     "description": {
-      "value": "<p>The target of your ranged strike will be @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against your next one-handed melee attack.</p>",
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi]{Sword and Pistol} trigger</p><p>The target of your ranged strike will be @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against your next melee Strike with a one-handed weapon.</p>",
       "gm": ""
     },
     "publication": {
-      "title": "Pathfinder Guns & Gears",
+      "title": "PF2e Trigger Trove",
       "authors": "",
-      "license": "ORC",
-      "remaster": true
+      "license": "OGL",
+      "remaster": false
     },
     "rules": [
-      {
-        "key": "TokenMark",
-        "slug": "sword-and-pistol",
-        "uuid": ""
-      },
       {
         "key": "EphemeralEffect",
         "predicate": [
           "item:melee",
           "item:hands-held:1",
-          "target:effect:pc-lvt-omb-lu-fs5csv-sword-and-pistol"
+          "target:effect:pc-lvt-omb-lu-fs5csv-sword-and-pistol-{actor|signature}"
         ],
-        "selectors": "melee-attack-roll",
+        "selectors": [
+          "melee-strike-attack-roll",
+          "melee-strike-damage"
+        ],
         "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg"
+      },
+      {
+        "key": "RollOption",
+        "option": "target-has-trigger-effect",
+        "predicate": [
+          "item:melee",
+          "item:hands-held:1",
+          "target:effect:pc-lvt-omb-lu-fs5csv-sword-and-pistol-{actor|signature}"
+        ]
       }
     ],
-    "slug": "aux-sword-and-pistol",
+    "slug": "aux-effect-sword-and-pistol-trigger",
     "traits": {
       "otherTags": [],
       "value": []
@@ -71,7 +78,7 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "pf2e",
     "systemVersion": "7.7.4"
   },
