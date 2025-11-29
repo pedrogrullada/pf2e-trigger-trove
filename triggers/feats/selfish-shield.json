@@ -1,0 +1,204 @@
+{
+    "_id": "z5q4uyzVU9ZULV5x",
+    "description": "<p>@Localize[TRIGGERTROVE.SelfishShield.Trigger.DamageTaken.Description]</p>",
+    "folder": "Feats & Features",
+    "name": "Selfish Shield (Damage Taken)",
+    "nodes": [
+        {
+            "_id": "rl9s9MeVBWzVe8Ue",
+            "key": "damage-taken",
+            "outputs": {
+                "negated": {
+                    "ids": []
+                },
+                "other": {
+                    "ids": []
+                },
+                "out": {
+                    "ids": [
+                        "JW0hRQBIOScSLUM5.inputs.in"
+                    ]
+                },
+                "this": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "JW0hRQBIOScSLUM5",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "rl9s9MeVBWzVe8Ue.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": []
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feat-effects.Item.h6nyMp4dtPXBfCJc"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "item": {
+                    "ids": [
+                        "RAlqWjZMiwzYO5SO.inputs.item"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "sajaz7GGT049udj4.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 553,
+                "y": 199.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "RAlqWjZMiwzYO5SO",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "sajaz7GGT049udj4.outputs.false"
+                    ]
+                },
+                "item": {
+                    "ids": [
+                        "JW0hRQBIOScSLUM5.outputs.item"
+                    ]
+                }
+            },
+            "key": "delete-item",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "gD8EFXUxZ8zfDIME.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1002,
+                "y": 225.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "gD8EFXUxZ8zfDIME",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "RAlqWjZMiwzYO5SO.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": []
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feat-effects.Item.2a6fuugiPpICe3Li"
+                }
+            },
+            "key": "create-item",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "PGFYNmdkN1trRDA8.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1203,
+                "y": 225.23
+            },
+            "type": "action"
+        },
+        {
+            "_id": "PGFYNmdkN1trRDA8",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "gD8EFXUxZ8zfDIME.outputs.out"
+                    ]
+                },
+                "message": {
+                    "ids": [],
+                    "value": "TRIGGERTROVE.SelfishShield.Trigger.DamageTaken.Note"
+                }
+            },
+            "key": "create-message",
+            "position": {
+                "x": 1472,
+                "y": 224.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "sajaz7GGT049udj4",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "JW0hRQBIOScSLUM5.outputs.true"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "uIJEpcl8NKhR4eEF.outputs.output"
+                    ]
+                }
+            },
+            "key": "boolean-splitter",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "RAlqWjZMiwzYO5SO.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 801,
+                "y": 215.5
+            },
+            "type": "splitter"
+        },
+        {
+            "_id": "uIJEpcl8NKhR4eEF",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "boolean"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "sajaz7GGT049udj4.inputs.input"
+                    ]
+                }
+            },
+            "position": {
+                "x": 802.5,
+                "y": 177.25
+            },
+            "target": "rl9s9MeVBWzVe8Ue.outputs.heal",
+            "type": "variable"
+        }
+    ]
+}

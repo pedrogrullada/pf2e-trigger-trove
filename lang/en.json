@@ -228,6 +228,14 @@
                 }
             }
         },
+        "SelfishShield": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "<p>Automatically remove @UUID[Compendium.pf2e.actionspf2e.Item.enQieRrITuEQZxx2]{Selfish Shield}'s effect after taking damage. Additionally, add @UUID[Compendium.pf2e.feat-effects.Item.2a6fuugiPpICe3Li]{Effect: Champion's Extra Damage} effect automatically. The source of the damage must be targeted after the effect is added in order to work correctly.</p>",
+                    "Note": "<p><strong>Trigger Trove Note</strong> An effect for Selfish Shield's extra damage has been added! Target the source of the damage to activate it.</p>"
+                }
+            }
+        },
         "SharedStratagem": {
             "Trigger": {
                 "AttackRolled": {
