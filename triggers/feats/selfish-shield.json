@@ -118,8 +118,8 @@
                 }
             },
             "position": {
-                "x": 1203,
-                "y": 225.23
+                "x": 1198,
+                "y": 226.23000000000002
             },
             "type": "action"
         },
@@ -137,9 +137,16 @@
                 }
             },
             "key": "create-message",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "JSs15VcPDMPYMFJ4.inputs.in"
+                    ]
+                }
+            },
             "position": {
-                "x": 1472,
-                "y": 224.75
+                "x": 1464,
+                "y": 227.75
             },
             "type": "action"
         },
@@ -199,6 +206,59 @@
             },
             "target": "rl9s9MeVBWzVe8Ue.outputs.heal",
             "type": "variable"
+        },
+        {
+            "_id": "JSs15VcPDMPYMFJ4",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "PGFYNmdkN1trRDA8.outputs.out"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feats-srd.Item.MRMW0EiuOO20pzG2"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "dv3XjaNQOhfyBEsT.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1687,
+                "y": 226.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "dv3XjaNQOhfyBEsT",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "JSs15VcPDMPYMFJ4.outputs.true"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feat-effects.Item.seOQfjfjrDyK6rCo"
+                }
+            },
+            "key": "create-item",
+            "outputs": {
+                "out": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 1923,
+                "y": 224.23000000000002
+            },
+            "type": "action"
         }
     ]
 }
