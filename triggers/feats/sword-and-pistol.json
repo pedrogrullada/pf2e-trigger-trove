@@ -1,7 +1,7 @@
 [
     {
         "_id": "PcLvtOmbLuFS5Csv",
-        "description": "<p>When a character with @UUID[Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi]{Sword and Pistol} makes a successful ranged Strike against an enemy within their reach—as indicated by the toggle in their sheet—with a one-handed firearm or crossbow, an auxiliary effect is added that makes the target @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to their next melee attack with a one-handed melee weapon. A trigger effect is also added to the target of this attack for tracking purposes.</p>",
+        "description": "@Localize[TRIGGERTROVE.SwordAndPistol.Trigger.AttackRolled.Description]",
         "folder": "Feats & Features",
         "name": "Sword and Pistol (Attack Rolled)",
         "nodes": [
@@ -1704,7 +1704,7 @@
     },
     {
         "_id": "4hY8icoXNd0qd1Zb",
-        "description": "<p>When a character with Sword and Pistol deals damage with a one-handed melee weapon to an enemy that was off-guard as a result of their Sword and Pistol feat, remove the auxiliary effect on the attacker, and the trigger effect on the target.</p>",
+        "description": "@Localize[TRIGGERTROVE.SwordAndPistol.Trigger.DamageTaken.Description]",
         "folder": "Feats & Features",
         "name": "Sword and Pistol (Damage Taken)",
         "nodes": [
