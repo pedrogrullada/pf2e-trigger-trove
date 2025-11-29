@@ -522,6 +522,11 @@
           "prompt": {
             "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Prompt"
           },
+          "target": {
+            "ids": [
+              "bPuR2n8m6AsBHPMV.outputs.output"
+            ]
+          },
           "title": {
             "ids": [
               "EhfqBZio9rjNDuNQ.outputs.label"
@@ -596,8 +601,8 @@
           }
         },
         "position": {
-          "x": 489.5,
-          "y": 104.25
+          "x": 459.5,
+          "y": 103.25
         },
         "target": "0C0CWofkY1Da3cgR.outputs.TaDZdchy0pXIY3cK",
         "type": "variable"
@@ -842,6 +847,35 @@
           "y": 437.25
         },
         "target": "boOQYZuSJwutR74m.outputs.duration",
+        "type": "variable"
+      },
+      {
+        "_id": "bPuR2n8m6AsBHPMV",
+        "custom": {
+          "inputs": [],
+          "outputs": [
+            {
+              "custom": false,
+              "group": "",
+              "key": "output",
+              "type": "target"
+            }
+          ],
+          "outs": []
+        },
+        "key": "variable-getter",
+        "outputs": {
+          "output": {
+            "ids": [
+              "yymyAROTE38lTnUI.inputs.target"
+            ]
+          }
+        },
+        "position": {
+          "x": 824.5,
+          "y": 215.25
+        },
+        "target": "0C0CWofkY1Da3cgR.outputs.TaDZdchy0pXIY3cK",
         "type": "variable"
       }
     ],
