@@ -26,7 +26,13 @@
         "ChampionsResistance": {
             "Trigger": {
                 "DamageTaken": {
-                    "Description": "Automatycznie usuwa efekt Odporności Czempiona po otrzymaniu obrażeń."
+                    "Description": "<p>Automatycznie usuń efekt Odporności Czempiona po otrzymaniu obrażeń.</p><p>Jeśli źródłowy czempion posiada zdolność @UUID[Compendium.pf2e.classfeatures.Item.UyuwFp0jQqYL2AdF], źródło obrażeń również zostaje osłabione do końca następnej tury. Jeśli posiada on atut @UUID[Compendium.pf2e.feats-srd.Item.2c9awqDem5OLK47S], czempion może zdecydować, czy zastosować stan ogłupienia, czy osłabienia.</p>",
+                    "Redemption": {
+                        "AwaitConfirmation": {
+                            "Prompt": "Czy użyjesz Ciężaru Winy, aby ogłupić wroga, zamiast go osłabić?",
+                            "Title": "Ciężar Winy"
+                        }
+                    }
                 }
             }
         },
@@ -214,6 +220,13 @@
                 }
             }
         },
+        "ReplenishmentOfWar": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Jeśli źródłem obrażeń jest Uzupełnianie Zapasów Wojennych, a obrażenia wynikają z Ataku bronią preferowaną przez bóstwo, przyznaj Tymczasowe Punkty Wytrzymałości wynikające z Uzupełnienia Zapasów Wojennych, odpowiednie do wyniku Ataku."
+                }
+            }
+        },
         "RevitalizingFinisher": {
             "Trigger": {
                 "AttackRolled": {
@@ -225,6 +238,14 @@
             "Subtrigger": {
                 "Check": {
                     "Addendum": "Istota może nie podlegać działaniu tego wyzwalacza poprzez przeciągnięcie na nią efektu @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd] <strong>z karty kinetyka</strong>."
+                }
+            }
+        },
+        "SelfishShield": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "<p>Automatycznie usuń efekt @UUID[Compendium.pf2e.actionspf2e.Item.enQieRrITuEQZxx2] po otrzymaniu obrażeń. Dodatkowo automatycznie dodaj efekt @UUID[Compendium.pf2e.feat-effects.Item.2a6fuugiPpICe3Li]. Aby efekt działał poprawnie, po jego dodaniu należy wybrać źródło obrażeń.</p><p>Jeśli cel aktywacji posiada @UUID[Compendium.pf2e.feats-srd.Item.MRMW0EiuOO20pzG2], jego efekt zostanie dodany automatycznie.</p>",
+                    "Note": "<p><strong>Uwaga Trigger Trove</strong> Dodano efekt dodatkowych obrażeń dla Samolubnej Tarczy! Aby go aktywować, wybierz źródło obrażeń.</p>"
                 }
             }
         },
@@ -297,6 +318,16 @@
                 },
                 "DamageTaken": {
                     "Description": "Usuń efekt Polotu ze źródła obrażeń, gdy zadane zostaną obrażenia Ciosu Kończącego."
+                }
+            }
+        },
+        "SwordAndPistol": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy postać z atutem @UUID[Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi] wykona udany Atak z dystansu przeciwko wrogowi znajdującemu się w zasięgu – zgodnie z zaznaczeniem w karcie postaci – przy użyciu broni palnej lub kuszy jednoręcznej, dodawany jest efekt dodatkowy, który sprawia, że cel staje się @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Odsłonięty} dla następnego ataku wręcz bronią jednoręczną. Do celu tego ataku dodawany jest również efekt wyzwalający w celu śledzenia."
+                },
+                "DamageTaken": {
+                    "Description": "Kiedy postać z atutem @UUID[Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi] zadaje obrażenia bronią białą jednoręczną przeciwnikowi, który był odsłonięty w wyniku tego atutu, usuń efekt pomocniczy z atakującego oraz efekt wyzwalający z celu."
                 }
             }
         },
