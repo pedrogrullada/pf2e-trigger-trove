@@ -1,8 +1,8 @@
 {
     "_id": "MEuDDRgi0tYGe8rj",
-    "description": "@Localize[TRIGGERTROVE.ReplenishmentOfWar.Trigger.DamageTaken.Description]",
+    "description": "<p>@Localize[TRIGGERTROVE.ReplenishmentOfWar.Trigger.DamageTaken.Description]</p>",
     "folder": "Feats & Features",
-    "name": "Replenishment of War",
+    "name": "Replenishment of War (Damage Taken)",
     "nodes": [
         {
             "_id": "IubEKiF2WIwfAXFA",
@@ -39,6 +39,7 @@
                     ]
                 },
                 "uuid": {
+                    "ids": [],
                     "value": "Compendium.pf2e.feats-srd.Item.aMef2VM4mSxl0pmy"
                 }
             },
@@ -46,7 +47,7 @@
             "outputs": {
                 "true": {
                     "ids": [
-                        "ZcN6M4jEKt1sboSu.inputs.in"
+                        "xe2ULkNBqbWktqdG.inputs.in"
                     ]
                 }
             },
@@ -79,8 +80,8 @@
                 }
             },
             "position": {
-                "x": 648.5,
-                "y": 336.25
+                "x": 874.5,
+                "y": 339.25
             },
             "target": "IubEKiF2WIwfAXFA.outputs.options",
             "type": "variable"
@@ -90,7 +91,7 @@
             "inputs": {
                 "in": {
                     "ids": [
-                        "QXQMWK4RGpuGtbm1.outputs.true"
+                        "xe2ULkNBqbWktqdG.outputs.false"
                     ]
                 },
                 "list": {
@@ -99,6 +100,7 @@
                     ]
                 },
                 "predicate": {
+                    "ids": [],
                     "value": "[\n  \"item:deity-favored\",\n  \"origin:action:slug:strike\"\n]"
                 }
             },
@@ -111,8 +113,8 @@
                 }
             },
             "position": {
-                "x": 786.5,
-                "y": 200.25
+                "x": 1014.5,
+                "y": 201.25
             },
             "type": "condition"
         },
@@ -120,6 +122,7 @@
             "_id": "YSwvPRP8NK42nlAn",
             "inputs": {
                 "entry": {
+                    "ids": [],
                     "value": "check:outcome:success"
                 },
                 "in": {
@@ -147,8 +150,8 @@
                 }
             },
             "position": {
-                "x": 1041,
-                "y": 198.75
+                "x": 1253,
+                "y": 197.75
             },
             "type": "condition"
         },
@@ -163,10 +166,13 @@
                         "label": "outcome",
                         "type": "text"
                     }
-                ]
+                ],
+                "outputs": [],
+                "outs": []
             },
             "inputs": {
                 "74CgSFHfI00ddjcS": {
+                    "ids": [],
                     "value": ""
                 },
                 "8gpxoiPKUO8UWR44": {
@@ -175,6 +181,7 @@
                     ]
                 },
                 "duplicate": {
+                    "ids": [],
                     "value": true
                 },
                 "in": {
@@ -188,6 +195,7 @@
                     ]
                 },
                 "uuid": {
+                    "ids": [],
                     "value": "Compendium.pf2e.feat-effects.Item.BJc494USeyM011p3"
                 },
                 "ZWRl8xG8U9hUzGWv": {
@@ -202,8 +210,8 @@
                 }
             },
             "position": {
-                "x": 1529.3899999999999,
-                "y": -10.259999999999991
+                "x": 1674.3899999999999,
+                "y": 102.74000000000001
             },
             "type": "action"
         },
@@ -237,6 +245,7 @@
                     "value": true
                 },
                 "g7yAl60wY7OBmBvb": {
+                    "ids": [],
                     "value": "flag:outcome:1"
                 },
                 "in": {
@@ -265,8 +274,8 @@
                 }
             },
             "position": {
-                "x": 1535.3899999999999,
-                "y": 295.74
+                "x": 1764.3899999999999,
+                "y": 363.74
             },
             "type": "action"
         },
@@ -293,8 +302,8 @@
                 }
             },
             "position": {
-                "x": 1355.5,
-                "y": 186.25
+                "x": 1517.5,
+                "y": 252.25
             },
             "target": "IubEKiF2WIwfAXFA.outputs.other",
             "type": "variable"
@@ -322,8 +331,8 @@
                 }
             },
             "position": {
-                "x": 1373.5,
-                "y": 440.25
+                "x": 1605.5,
+                "y": 487.25
             },
             "target": "IubEKiF2WIwfAXFA.outputs.other",
             "type": "variable"
@@ -352,8 +361,8 @@
                 }
             },
             "position": {
-                "x": 896.5,
-                "y": 357.25
+                "x": 1120.5,
+                "y": 379.25
             },
             "target": "IubEKiF2WIwfAXFA.outputs.options",
             "type": "variable"
@@ -385,10 +394,73 @@
                 }
             },
             "position": {
-                "x": 1286,
-                "y": 292.75
+                "x": 1522,
+                "y": 338.75
             },
             "type": "condition"
+        },
+        {
+            "_id": "xe2ULkNBqbWktqdG",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "QXQMWK4RGpuGtbm1.outputs.true"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "nwXFgmsa66G0F3E8.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feats-srd.Item.mTkbgFOHJUBl0Qwg"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "ZcN6M4jEKt1sboSu.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 778,
+                "y": 198.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "nwXFgmsa66G0F3E8",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "xe2ULkNBqbWktqdG.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 607.5,
+                "y": 334.25
+            },
+            "target": "IubEKiF2WIwfAXFA.outputs.other",
+            "type": "variable"
         }
     ]
 }

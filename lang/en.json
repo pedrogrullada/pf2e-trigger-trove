@@ -223,7 +223,7 @@
         "ReplenishmentOfWar": {
             "Trigger": {
                 "DamageTaken": {
-                    "Description": "If the damage origin has Replenishment of War and its damage comes from a Strike with its deity's favored weapon, then grant Replenishment of War's temporary Hit Points appropriate for the outcome of the Strike."
+                    "Description": "If the damage origin has Replenishment of War and its damage comes from a Strike with its deity's favored weapon, then grant Replenishment of War's temporary Hit Points appropriate for the outcome of the Strike. If the damage origin has Shared Replenishment, this trigger will be disabled."
                 }
             }
         },
