@@ -12,13 +12,17 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Critical Specialization
         + Bow, Spear, and Sword only
    - Feats & Features
+     - Air Aura Junction
      - Amulet's Abeyance
      - Aura of Courage
      - Champion's Resistance
         + Special Glimpse of Redemption support
      - Crowned in Tempest's Fury
+     - Elegant Buckler
      - Energy Shot
+     - Extravagant Parry
      - Finishing Follow-Through
+     - Flashy Dodge
      - Goblin Scuttle
      - Inviolable
      - Martial Performance
