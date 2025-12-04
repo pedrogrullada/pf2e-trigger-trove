@@ -66,6 +66,13 @@
                 }
             }
         },
+        "ElegantBuckler": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "When an attack critically misses against a target benefitting from @UUID[Compendium.pf2e.feats-srd.Item.C5tSxOwDILefw4zq]{Elegant Buckler}, that target gains panache until the end of their next turn."
+                }
+            }
+        },
         "EnergyShot": {
             "Item": {
                 "ResourceLabel": "Energy Shots"
@@ -81,10 +88,24 @@
                 }
             }
         },
+        "ExtravagantParry": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "When an attack misses against a target benefitting from @UUID[Compendium.pf2e.feats-srd.Item.WcY7H7mRiK2VDquV]{Extravagant Parry}, that target gains panache until the end of their next turn."
+                }
+            }
+        },
         "FinishingFollowThrough": {
             "Trigger": {
                 "DamageTaken": {
                     "Description": "When a creature is brought to 0 Hit Points from a finisher, if the damage origin has @UUID[Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ]{Finishing Follow-Through}, it gains panache."
+                }
+            }
+        },
+        "FlashyDodge": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "When an attack misses against a target benefitting from @UUID[Compendium.pf2e.feats-srd.Item.TnYHtN9gQASqOnii]{Flashy Dodge}, that target gains panache until the end of their next turn."
                 }
             }
         },

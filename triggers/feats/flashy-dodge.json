@@ -1,0 +1,259 @@
+{
+    "_id": "riFocw7wV1NdAlja",
+    "description": "@Localize[TRIGGERTROVE.FlashyDodge.Trigger.AttackRolled.Description]",
+    "folder": "Feats & Features",
+    "name": "Flashy Dodge (Attack Rolled)",
+    "nodes": [
+        {
+            "_id": "QzlgDMINRSBRKbHX",
+            "key": "attack-roll",
+            "outputs": {
+                "other": {
+                    "ids": [
+                        "7QPJcMlWGBqa97Gt.inputs.target"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "7QPJcMlWGBqa97Gt.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "7QPJcMlWGBqa97Gt",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "QzlgDMINRSBRKbHX.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "QzlgDMINRSBRKbHX.outputs.other"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feats-srd.Item.TnYHtN9gQASqOnii"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "ERHIwVJXtYSD0R87.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 541,
+                "y": 200.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "ERHIwVJXtYSD0R87",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "7QPJcMlWGBqa97Gt.outputs.true"
+                    ]
+                },
+                "option": {
+                    "value": "flashy-dodge"
+                },
+                "target": {
+                    "ids": [
+                        "AY8Gswobt4jeJ99Y.outputs.output"
+                    ]
+                }
+            },
+            "key": "has-option",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "YnkPdNRA2S2KeEh9.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 776,
+                "y": 200.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "AY8Gswobt4jeJ99Y",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "ERHIwVJXtYSD0R87.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 641.5,
+                "y": 332.25
+            },
+            "target": "QzlgDMINRSBRKbHX.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "YnkPdNRA2S2KeEh9",
+            "inputs": {
+                "a": {
+                    "ids": [
+                        "zIEXXs8iBa3Iy4Ew.outputs.output"
+                    ]
+                },
+                "b": {
+                    "ids": [
+                        "lyEFVmSsyrua2s3U.outputs.value"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "ERHIwVJXtYSD0R87.outputs.true"
+                    ]
+                }
+            },
+            "key": "lte-number",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "xC8p6mqHmjff9Zpw.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1015,
+                "y": 215.75
+            },
+            "type": "logic"
+        },
+        {
+            "_id": "zIEXXs8iBa3Iy4Ew",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "number"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "YnkPdNRA2S2KeEh9.inputs.a"
+                    ]
+                }
+            },
+            "position": {
+                "x": 896.5,
+                "y": 331.25
+            },
+            "target": "QzlgDMINRSBRKbHX.outputs.outcome",
+            "type": "variable"
+        },
+        {
+            "_id": "lyEFVmSsyrua2s3U",
+            "inputs": {
+                "input": {
+                    "value": "failure"
+                }
+            },
+            "key": "success-value",
+            "outputs": {
+                "value": {
+                    "ids": [
+                        "YnkPdNRA2S2KeEh9.inputs.b"
+                    ]
+                }
+            },
+            "position": {
+                "x": 805.5,
+                "y": 368.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "xC8p6mqHmjff9Zpw",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "YnkPdNRA2S2KeEh9.outputs.true"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "1I7EB1SeZPjf3tDo.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feat-effects.Item.paKKHPds77fq5VTH"
+                }
+            },
+            "key": "create-item",
+            "position": {
+                "x": 1210,
+                "y": 200.23000000000002
+            },
+            "type": "action"
+        },
+        {
+            "_id": "1I7EB1SeZPjf3tDo",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "xC8p6mqHmjff9Zpw.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1081.5,
+                "y": 359.25
+            },
+            "target": "QzlgDMINRSBRKbHX.outputs.other",
+            "type": "variable"
+        }
+    ]
+}

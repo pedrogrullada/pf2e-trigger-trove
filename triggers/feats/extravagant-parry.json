@@ -1,0 +1,202 @@
+{
+    "_id": "Hs9Efj1iu4B418QX",
+    "description": "@Localize[TRIGGERTROVE.ExtravagantParry.Trigger.AttackRolled.Description]",
+    "folder": "Feats & Features",
+    "name": "Extravagant Parry (Attack Rolled)",
+    "nodes": [
+        {
+            "_id": "QzlgDMINRSBRKbHX",
+            "key": "attack-roll",
+            "outputs": {
+                "other": {
+                    "ids": [
+                        "slkGUcIwkAuo7IPr.inputs.target"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "slkGUcIwkAuo7IPr.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "YnkPdNRA2S2KeEh9",
+            "inputs": {
+                "a": {
+                    "ids": [
+                        "zIEXXs8iBa3Iy4Ew.outputs.output"
+                    ]
+                },
+                "b": {
+                    "ids": [
+                        "lyEFVmSsyrua2s3U.outputs.value"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "slkGUcIwkAuo7IPr.outputs.true"
+                    ]
+                }
+            },
+            "key": "lte-number",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "xC8p6mqHmjff9Zpw.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 781,
+                "y": 214.75
+            },
+            "type": "logic"
+        },
+        {
+            "_id": "zIEXXs8iBa3Iy4Ew",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "number"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "YnkPdNRA2S2KeEh9.inputs.a"
+                    ]
+                }
+            },
+            "position": {
+                "x": 635.5,
+                "y": 337.25
+            },
+            "target": "QzlgDMINRSBRKbHX.outputs.outcome",
+            "type": "variable"
+        },
+        {
+            "_id": "lyEFVmSsyrua2s3U",
+            "inputs": {
+                "input": {
+                    "ids": [],
+                    "value": "failure"
+                }
+            },
+            "key": "success-value",
+            "outputs": {
+                "value": {
+                    "ids": [
+                        "YnkPdNRA2S2KeEh9.inputs.b"
+                    ]
+                }
+            },
+            "position": {
+                "x": 563.5,
+                "y": 375.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "xC8p6mqHmjff9Zpw",
+            "inputs": {
+                "duplicate": {
+                    "ids": [],
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "YnkPdNRA2S2KeEh9.outputs.true"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "1I7EB1SeZPjf3tDo.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.feat-effects.Item.paKKHPds77fq5VTH"
+                }
+            },
+            "key": "create-item",
+            "position": {
+                "x": 970,
+                "y": 200.23000000000002
+            },
+            "type": "action"
+        },
+        {
+            "_id": "1I7EB1SeZPjf3tDo",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "xC8p6mqHmjff9Zpw.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 815.5,
+                "y": 346.25
+            },
+            "target": "QzlgDMINRSBRKbHX.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "slkGUcIwkAuo7IPr",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "QzlgDMINRSBRKbHX.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "QzlgDMINRSBRKbHX.outputs.other"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feat-effects.Item.FkouUFpwUrPjhMNw"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "YnkPdNRA2S2KeEh9.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 543.5,
+                "y": 199.25
+            },
+            "type": "condition"
+        }
+    ]
+}
