@@ -1,5 +1,12 @@
 {
     "TRIGGERTROVE": {
+        "AirAuraJunction": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "<p>When a character starts their turn within the kinetic aura of an @UUID[Compendium.pf2e.classfeatures.Item.X11Y3T1IzmtNqGMV]{Air Gate} kineticist with its aura junction, grant that character the corresponding bonus to their Speeds via an auxiliary effect until the end of their turn.</p><p>This benefit overlaps with the system's effect when inside the aura, but persists once the character leaves the aura until the end of their turn.</p>"
+                }
+            }
+        },
         "AmuletsAbeyance": {
             "Trigger": {
                 "DamageTaken": {
