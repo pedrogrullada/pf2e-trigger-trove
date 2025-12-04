@@ -1,0 +1,630 @@
+[
+    {
+        "_id": "DvyjHAaq0TgEovsB",
+        "description": "@Localize[TRIGGERTROVE.Defend.Trigger.CombatantJoined.Description]",
+        "folder": "Core Rules",
+        "name": "Defend (Combatant Joined)",
+        "nodes": [
+            {
+                "_id": "RtteNwD9yyJ3Ejil",
+                "key": "combatant-create",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "s6hmtXIipuDNksX3.inputs.in"
+                        ]
+                    },
+                    "this": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "ISVbiUgzVhJGviaz",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "id",
+                            "label": "Defend Id",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "s6hmtXIipuDNksX3.outputs.true"
+                        ]
+                    },
+                    "input": {
+                        "ids": [
+                            "s6hmtXIipuDNksX3.outputs.item"
+                        ]
+                    }
+                },
+                "key": "item-splitter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "DFOIskgshYj06pVD.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 782,
+                    "y": 226.23000000000002
+                },
+                "type": "splitter"
+            },
+            {
+                "_id": "DFOIskgshYj06pVD",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "system|exploration",
+                            "label": "Exploration Activities",
+                            "type": "list"
+                        },
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "system|details|alliance",
+                            "label": "Origin Alliance",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "ISVbiUgzVhJGviaz.outputs.out"
+                        ]
+                    },
+                    "input": {
+                        "ids": [
+                            "NxCerfzcgnuiS7xq.outputs.output"
+                        ]
+                    }
+                },
+                "key": "actor-splitter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "7gvq0Svd3DgTR8b1.inputs.in"
+                        ]
+                    },
+                    "system|exploration": {
+                        "ids": [
+                            "7gvq0Svd3DgTR8b1.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 971,
+                    "y": 225.23000000000002
+                },
+                "type": "splitter"
+            },
+            {
+                "_id": "NxCerfzcgnuiS7xq",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "DFOIskgshYj06pVD.inputs.input"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 826.5,
+                    "y": 340.25
+                },
+                "target": "RtteNwD9yyJ3Ejil.outputs.this",
+                "type": "variable"
+            },
+            {
+                "_id": "7gvq0Svd3DgTR8b1",
+                "inputs": {
+                    "entry": {
+                        "ids": [
+                            "9EeTZerWPtzYapZ8.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "DFOIskgshYj06pVD.outputs.out"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "DFOIskgshYj06pVD.outputs.system|exploration"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "kiTOdtU3OP7aNb99.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1234.5,
+                    "y": 208.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "s6hmtXIipuDNksX3",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "RtteNwD9yyJ3Ejil.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": []
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "item": {
+                        "ids": [
+                            "ISVbiUgzVhJGviaz.inputs.input"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "ISVbiUgzVhJGviaz.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 541,
+                    "y": 199.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "9EeTZerWPtzYapZ8",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "7gvq0Svd3DgTR8b1.inputs.entry"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1102.5,
+                    "y": 360.25
+                },
+                "target": "ISVbiUgzVhJGviaz.outputs.id",
+                "type": "variable"
+            },
+            {
+                "_id": "kiTOdtU3OP7aNb99",
+                "inputs": {
+                    "duplicate": {
+                        "value": false
+                    },
+                    "in": {
+                        "ids": [
+                            "7gvq0Svd3DgTR8b1.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "value": "Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr"
+                    }
+                },
+                "key": "create-item",
+                "outputs": {
+                    "item": {
+                        "ids": []
+                    },
+                    "out": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 1480,
+                    "y": 206.23000000000002
+                },
+                "type": "action"
+            }
+        ],
+        "variables": {
+            "DFOIskgshYj06pVD.outputs.system|details|alliance": {
+                "global": false,
+                "label": "Origin Alliance",
+                "locked": false,
+                "type": "text"
+            },
+            "ISVbiUgzVhJGviaz.outputs.id": {
+                "global": false,
+                "label": "Defend Id",
+                "type": "text"
+            },
+            "s6hmtXIipuDNksX3.outputs.item": {
+                "global": false,
+                "label": "Scout's Warning",
+                "locked": false,
+                "type": "item"
+            }
+        }
+    },
+    {
+        "_id": "sUDzDL1pR1tj8TKF",
+        "description": "@Localize[TRIGGERTROVE.Defend.Trigger.TurnStarted.Description]",
+        "folder": "Core Rules",
+        "name": "Defend (Turn Started)",
+        "nodes": [
+            {
+                "_id": "4uinorDfrl3Vsugc",
+                "key": "turn-start",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "yAKRnEc4F85I6Dk7.inputs.in"
+                        ]
+                    },
+                    "this": {
+                        "ids": [
+                            "yAKRnEc4F85I6Dk7.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "FDHrcUI7OlkruveG",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "EgxQ4tzv26srPEDf.outputs.true"
+                        ]
+                    },
+                    "option": {
+                        "value": "encounter:round:1"
+                    }
+                },
+                "key": "has-option",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "6AcQmk0JfKg1FqFd.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1451,
+                    "y": 199.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "yAKRnEc4F85I6Dk7",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "4uinorDfrl3Vsugc.outputs.out"
+                        ]
+                    },
+                    "target": {
+                        "ids": [
+                            "4uinorDfrl3Vsugc.outputs.this"
+                        ]
+                    },
+                    "uuid": {
+                        "value": "Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "item": {
+                        "ids": [
+                            "IysuEXdjbssBJHmG.inputs.input"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "IysuEXdjbssBJHmG.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 539,
+                    "y": 199.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "IysuEXdjbssBJHmG",
+                "custom": {
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "id",
+                            "label": "Defend Id",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "yAKRnEc4F85I6Dk7.outputs.true"
+                        ]
+                    },
+                    "input": {
+                        "ids": [
+                            "yAKRnEc4F85I6Dk7.outputs.item"
+                        ]
+                    }
+                },
+                "key": "item-splitter",
+                "outputs": {
+                    "id": {
+                        "ids": []
+                    },
+                    "out": {
+                        "ids": [
+                            "EnFmDTDN4OPd0QGX.inputs.in"
+                        ]
+                    },
+                    "system|exploration": {
+                        "ids": [
+                            "EgxQ4tzv26srPEDf.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 772.5,
+                    "y": 215.23000000000002
+                },
+                "type": "splitter"
+            },
+            {
+                "_id": "EgxQ4tzv26srPEDf",
+                "inputs": {
+                    "entry": {
+                        "ids": [
+                            "rCpU545diZ34WtZj.outputs.output"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "EnFmDTDN4OPd0QGX.outputs.out"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "EnFmDTDN4OPd0QGX.outputs.system|exploration"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "FDHrcUI7OlkruveG.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1216,
+                    "y": 199.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "EnFmDTDN4OPd0QGX",
+                "custom": {
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "system|exploration",
+                            "label": "Exploration Activities",
+                            "type": "list"
+                        }
+                    ]
+                },
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "IysuEXdjbssBJHmG.outputs.out"
+                        ]
+                    },
+                    "input": {
+                        "ids": [
+                            "CrAUGFhryP1lNJHv.outputs.output"
+                        ]
+                    }
+                },
+                "key": "actor-splitter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "EgxQ4tzv26srPEDf.inputs.in"
+                        ]
+                    },
+                    "system|exploration": {
+                        "ids": [
+                            "EgxQ4tzv26srPEDf.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 960.39,
+                    "y": 215.24
+                },
+                "type": "splitter"
+            },
+            {
+                "_id": "CrAUGFhryP1lNJHv",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "EnFmDTDN4OPd0QGX.inputs.input"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 834.5,
+                    "y": 308.25
+                },
+                "target": "4uinorDfrl3Vsugc.outputs.this",
+                "type": "variable"
+            },
+            {
+                "_id": "rCpU545diZ34WtZj",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "text"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "EgxQ4tzv26srPEDf.inputs.entry"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1092.5,
+                    "y": 308.25
+                },
+                "target": "IysuEXdjbssBJHmG.outputs.id",
+                "type": "variable"
+            },
+            {
+                "_id": "6AcQmk0JfKg1FqFd",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "FDHrcUI7OlkruveG.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "value": "Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "item": {
+                        "ids": [
+                            "AlZN1Gjy9MERd4Yq.inputs.item"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "AlZN1Gjy9MERd4Yq.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1685,
+                    "y": 199.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "AlZN1Gjy9MERd4Yq",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "6AcQmk0JfKg1FqFd.outputs.true"
+                        ]
+                    },
+                    "item": {
+                        "ids": [
+                            "6AcQmk0JfKg1FqFd.outputs.item"
+                        ]
+                    }
+                },
+                "key": "delete-item",
+                "position": {
+                    "x": 1919,
+                    "y": 198.75
+                },
+                "type": "action"
+            }
+        ],
+        "variables": {
+            "IysuEXdjbssBJHmG.outputs.id": {
+                "global": false,
+                "label": "Defend Id",
+                "type": "text"
+            }
+        }
+    }
+]

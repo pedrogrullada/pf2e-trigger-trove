@@ -66,6 +66,16 @@
                 }
             }
         },
+        "Defend": {
+            "Trigger": {
+                "CombatantJoined": {
+                    "Description": "When a character that is @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0]{Defending} joins a combat, raise their shield."
+                },
+                "TurnStarted": {
+                    "Description": "When a @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0]{Defending} character starts its first turn with their shield raised, remove that effect."
+                }
+            }
+        },
         "DreadFlickering": {
             "Trigger": {
                 "TurnEnded": {
@@ -266,6 +276,24 @@
             "Subtrigger": {
                 "Check": {
                     "Addendum": "A creature can be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong>"
+                }
+            }
+        },
+        "Scout": {
+            "Trigger": {
+                "CombatantJoined": {
+                    "Description": "When a character that is @UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb]{Scouting} joins combat, add its effect to all allied scene tokens. If the character has @UUID[Compendium.pf2e.feats-srd.Item.aFoVHsuInMOkTZoQ]{Incredible Scout}, its effect will be given."
+                }
+            }
+        },
+        "ScoutsWarning": {
+            "Label": "Scout's Warning",
+            "Trigger": {
+                "CombatantJoined": {
+                    "AwaitConfirmation": {
+                        "Prompt": "Will you use Scout's Warning? You must roll a Perception, Stealth, or Survival check for initiative."
+                    },
+                    "Description": "A character with Scout's Warning can confirm whether they will use Scout's Warning. If they will, its effect will be added to all scene tokens that share its alliance."
                 }
             }
         },
