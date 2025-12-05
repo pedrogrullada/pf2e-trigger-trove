@@ -382,6 +382,7 @@
       {
         "_id": "0C0CWofkY1Da3cgR",
         "custom": {
+          "inputs": [],
           "outputs": [
             {
               "custom": true,
@@ -397,7 +398,8 @@
               "label": "Damage Origin",
               "type": "target"
             }
-          ]
+          ],
+          "outs": []
         },
         "key": "subtrigger-input",
         "outputs": {
@@ -449,6 +451,7 @@
             ]
           },
           "uuid": {
+            "ids": [],
             "value": "Compendium.pf2e.feats-srd.Item.2c9awqDem5OLK47S"
           }
         },
@@ -475,9 +478,11 @@
         "_id": "wqMKUibl0dvvy9XW",
         "inputs": {
           "condition": {
+            "ids": [],
             "value": "enfeebled"
           },
           "counter": {
+            "ids": [],
             "value": 2
           },
           "effect": {
@@ -520,6 +525,7 @@
             ]
           },
           "prompt": {
+            "ids": [],
             "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Prompt"
           },
           "target": {
@@ -528,9 +534,8 @@
             ]
           },
           "title": {
-            "ids": [
-              "EhfqBZio9rjNDuNQ.outputs.label"
-            ]
+            "ids": [],
+            "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Title"
           }
         },
         "key": "await-confirm",
@@ -553,67 +558,14 @@
         "type": "action"
       },
       {
-        "_id": "EhfqBZio9rjNDuNQ",
-        "inputs": {
-          "prefix": {
-            "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Title"
-          },
-          "target": {
-            "ids": [
-              "WZun9c51GuHtuRLx.outputs.output"
-            ]
-          }
-        },
-        "key": "named-label-actor",
-        "outputs": {
-          "label": {
-            "ids": [
-              "yymyAROTE38lTnUI.inputs.title"
-            ]
-          }
-        },
-        "position": {
-          "x": 588.5,
-          "y": 52.25
-        },
-        "type": "value"
-      },
-      {
-        "_id": "WZun9c51GuHtuRLx",
-        "custom": {
-          "inputs": [],
-          "outputs": [
-            {
-              "custom": false,
-              "group": "",
-              "key": "output",
-              "type": "target"
-            }
-          ],
-          "outs": []
-        },
-        "key": "variable-getter",
-        "outputs": {
-          "output": {
-            "ids": [
-              "EhfqBZio9rjNDuNQ.inputs.target"
-            ]
-          }
-        },
-        "position": {
-          "x": 459.5,
-          "y": 103.25
-        },
-        "target": "0C0CWofkY1Da3cgR.outputs.TaDZdchy0pXIY3cK",
-        "type": "variable"
-      },
-      {
         "_id": "653vlEYigPVJvjNf",
         "inputs": {
           "condition": {
+            "ids": [],
             "value": "stupefied"
           },
           "counter": {
+            "ids": [],
             "value": 2
           },
           "effect": {
@@ -713,9 +665,11 @@
             ]
           },
           "image": {
+            "ids": [],
             "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
           },
           "label": {
+            "ids": [],
             "value": "Effect: Glimpse of Redemption (Stupefied)"
           }
         },
@@ -737,6 +691,7 @@
         "_id": "boOQYZuSJwutR74m",
         "inputs": {
           "expiry": {
+            "ids": [],
             "value": "turn-end"
           },
           "origin": {
@@ -745,6 +700,7 @@
             ]
           },
           "value": {
+            "ids": [],
             "value": 1
           }
         },
@@ -800,9 +756,11 @@
             ]
           },
           "image": {
+            "ids": [],
             "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
           },
           "label": {
+            "ids": [],
             "value": "Effect: Glimpse of Redemption (Enfeebled)"
           }
         },
@@ -883,6 +841,7 @@
       "boOQYZuSJwutR74m.outputs.duration": {
         "global": false,
         "label": "Duration",
+        "locked": false,
         "type": "duration"
       }
     }
