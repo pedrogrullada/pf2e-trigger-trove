@@ -1,3 +1,32 @@
+## 0.9.0
+- **New Triggers**
+  - (Ettio) Sword and Pistol
+    - _Attack Rolled:_ When a character with Sword and Pistol makes a successful ranged Strike against an enemy within their reach—as indicated by the toggle in their sheet—with a one-handed firearm or crossbow, an auxiliary effect is added that makes the target off-guard to their next melee attack with a one-handed melee weapon. A trigger effect is also added to the target of this attack for tracking purposes.
+    - _Damage Taken:_ When a character with Sword and Pistol deals damage with a one-handed melee weapon to an enemy that was off-guard as a result of that feat, remove the auxiliary effect on the attacker, and the trigger effect on the target.
+  - Air Aura Junction
+    - _Turn Started:_ When a character starts their turn within the kinetic aura of an Air Gate kineticist with its aura junction, grant that character the corresponding bonus to their Speeds via an auxiliary effect until the end of their turn. This benefit overlaps with the system's effect when inside the aura, but persists once the character leaves the aura until the end of their turn.
+  - Elegant Buckler, Extravagant Parry, and Flashy Dodge
+    - _Attack Rolled:_ When an attack misses (or critically misses in Elegant Buckler's case) against a target benefitting from the corresponding feat, that target gains panache until the end of their next turn.
+  - Exploration Activities
+    - Defend
+      - _Combatant Joined:_ When a character that is Defending joins a combat, their shield is raised.
+      - _Turn Started:_ When a Defending character starts their first turn with their shield raised, remove that effect.
+    - Scout
+      - _Combatant Joined:_ When a character that is Scouting joins combat, add its effect to all allied scene tokens. If the character has Incredible Scout, its effect will be given instead.
+  - Martial Performance
+    - _Damage Taken:_ If a character with Martial Performance deals damage to an enemy, and they are under the effects of _courageous anthem_, _rallying anthem_, or _song of strength_; then the duration of these effects is extended by 1 round. Afterwards, an effect is added that prevents that same composition from benefitting again. For this trigger to work correctly, the composition effect must have been dragged from the triggering character's chat card.
+  - Replenishment of War
+    - _Damage Taken:_ If the damage origin has Replenishment of War and its damage comes from a Strike with its deity's favored weapon, then grant Replenishment of War's temporary Hit Points appropriate for the outcome of the Strike. Disable this trigger if they have Shared Replenishment, as it would be a nuisance!
+  - Scout's Warning
+    - _Combatant Joined:_ A character with Scout's Warning can confirm whether they will use the feat. If they will, its effect will be added to all scene tokens that share its alliance.
+  - Selfish Shield
+    - _Damage Taken:_ Remove Selfish Shield's effect after taking damage. Additionally, add Champion's Extra Damage effect afterwards. The source of the damage must be targeted after the effect is added in order to work correctly. If the trigger target has Ongoing Selfishness, its effect will be added automatically as well.
+- **Updated Triggers**
+  - Champion's Resistance
+    - Now has specific support for Glimpse of Redemption. The trigger will  add enfeebled 2 to the damage origin. If the champion has Weight of Guilt, then they will be prompted to decide if they want to make the damage origin stupefied instead.
+- **Localization**
+  - (Lioheart) Update polish localization
+
 ## 0.8.0
 - **Localization**
   - (Lioheart) Add polish localization
