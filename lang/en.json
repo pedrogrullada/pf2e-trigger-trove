@@ -72,7 +72,7 @@
                     "Description": "When a character that is @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0]{Defending} joins a combat, raise their shield."
                 },
                 "TurnStarted": {
-                    "Description": "When a @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0]{Defending} character starts its first turn with their shield raised, remove that effect."
+                    "Description": "When a @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0]{Defending} character starts their first turn with their shield raised, remove that effect."
                 }
             }
         },
@@ -282,7 +282,7 @@
         "Scout": {
             "Trigger": {
                 "CombatantJoined": {
-                    "Description": "When a character that is @UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb]{Scouting} joins combat, add its effect to all allied scene tokens. If the character has @UUID[Compendium.pf2e.feats-srd.Item.aFoVHsuInMOkTZoQ]{Incredible Scout}, its effect will be given."
+                    "Description": "When a character that is @UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb]{Scouting} joins combat, add its effect to all allied scene tokens. If the character has @UUID[Compendium.pf2e.feats-srd.Item.aFoVHsuInMOkTZoQ]{Incredible Scout}, its effect will be given instead."
                 }
             }
         },
@@ -293,7 +293,7 @@
                     "AwaitConfirmation": {
                         "Prompt": "Will you use Scout's Warning? You must roll a Perception, Stealth, or Survival check for initiative."
                     },
-                    "Description": "A character with Scout's Warning can confirm whether they will use Scout's Warning. If they will, its effect will be added to all scene tokens that share its alliance."
+                    "Description": "A character with Scout's Warning can confirm whether they will use that feat. If they will, its effect will be added to all scene tokens that share its alliance."
                 }
             }
         },
