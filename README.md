@@ -8,6 +8,9 @@ Here's the list of abilities currently handled by triggers in some capacity.
 <details>
   <summary>The List (As of 0.9.0)</summary>
 
+   - Core Rules
+     - Defend
+     - Scout
    - Equipment
      - Critical Specialization
         + Bow, Spear, and Sword only
@@ -24,11 +27,13 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Finishing Follow-Through
      - Flashy Dodge
      - Goblin Scuttle
+     - Incredible Scout
      - Inviolable
      - Martial Performance
      - One Shot, One Kill
      - Ravel of Thorns
      - Revitalizing Finisher
+     - Scout's Warning
      - Selfish Shield
         - Ongoing Selfishness
      - Shared Stratagem
