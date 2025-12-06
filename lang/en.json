@@ -76,6 +76,19 @@
                 }
             }
         },
+        "DiamondDust": {
+            "Item": {
+                "ToggleLabel": "Diamond Dust — Aura is active"
+            },
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "<p>When a character enters a @UUID[Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5]{Diamond Dust} aura, roll its damage and add an effect to make the character immune to further instances of this trigger.</p><p>For this trigger to work, the spellcaster must have @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.fyKmMJganeNRIVWi]{Aux Effect: Diamond Dust} applied to them, dragged from the spell when posted to chat. Link this effect in the spell's description.</p>"
+                },
+                "TurnEnded": {
+                    "Description": "<p>When a character ends their turn inside a @UUID[Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5]{Diamond Dust} aura, roll its damage. If a character has the immunity effect added by the Aura Entered trigger, remove that effect.</p><p>For this trigger to work, the spellcaster must have @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.fyKmMJganeNRIVWi]{Aux Effect: Diamond Dust} applied to them, dragged from the spell when posted to chat. Link this effect in the spell's description.</p>"
+                }
+            }
+        },
         "DreadFlickering": {
             "Trigger": {
                 "TurnEnded": {

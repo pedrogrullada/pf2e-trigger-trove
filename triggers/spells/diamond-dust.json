@@ -1,0 +1,400 @@
+[
+    {
+        "_id": "MY1g7tnEndXtBVyR",
+        "description": "TRIGGERTROVE.DiamondDust.Trigger.AuraEntered.Description",
+        "folder": "Spells",
+        "name": "Diamond Dust (Aura Entered)",
+        "nodes": [
+            {
+                "_id": "3Xo8GL5BkTXx1VD8",
+                "inputs": {
+                    "slug": {
+                        "value": "diamond-dust"
+                    },
+                    "targets": {
+                        "value": "all"
+                    },
+                    "turn": {
+                        "value": false
+                    }
+                },
+                "key": "aura-enter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "RJVB5WBiiuaj3mcR.inputs.in"
+                        ]
+                    },
+                    "source": {
+                        "ids": [
+                            "2fAtgnFSGdQzdzGP.inputs.origin"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "0uKQOElnQ86NQ1zd",
+                "inputs": {
+                    "formula": {
+                        "value": "(ceil((@actor.level - 2)/ 4))d6[cold]"
+                    },
+                    "in": {
+                        "ids": [
+                            "RJVB5WBiiuaj3mcR.outputs.false"
+                        ]
+                    },
+                    "roll": {
+                        "ids": [
+                            "2fAtgnFSGdQzdzGP.outputs.roll"
+                        ]
+                    },
+                    "target": {
+                        "ids": []
+                    }
+                },
+                "key": "roll-damage",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "Hts6xFHZB3zoSp10.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 896,
+                    "y": 188.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "2fAtgnFSGdQzdzGP",
+                "inputs": {
+                    "item": {
+                        "ids": [
+                            "oxurUf4zwS0ZM6Ki.outputs.item"
+                        ]
+                    },
+                    "origin": {
+                        "ids": [
+                            "3Xo8GL5BkTXx1VD8.outputs.source"
+                        ]
+                    }
+                },
+                "key": "roll-data",
+                "outputs": {
+                    "roll": {
+                        "ids": [
+                            "0uKQOElnQ86NQ1zd.inputs.roll"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 650.5,
+                    "y": 304.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "oxurUf4zwS0ZM6Ki",
+                "inputs": {
+                    "uuid": {
+                        "value": "Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5"
+                    }
+                },
+                "key": "item-source",
+                "outputs": {
+                    "item": {
+                        "ids": [
+                            "2fAtgnFSGdQzdzGP.inputs.item"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 419.5,
+                    "y": 360.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "Hts6xFHZB3zoSp10",
+                "inputs": {
+                    "effect": {
+                        "ids": [
+                            "gacCiSzbmMZsvhjC.outputs.effect"
+                        ]
+                    },
+                    "identifier": {
+                        "value": "diamond-dust"
+                    },
+                    "in": {
+                        "ids": [
+                            "0uKQOElnQ86NQ1zd.outputs.out"
+                        ]
+                    }
+                },
+                "key": "add-temporary",
+                "position": {
+                    "x": 1122,
+                    "y": 189.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "gacCiSzbmMZsvhjC",
+                "inputs": {
+                    "duration": {
+                        "ids": []
+                    },
+                    "image": {
+                        "value": "icons/magic/water/tendrils-ice-growth.webp"
+                    },
+                    "label": {
+                        "value": "Effect: Diamond Dust Immunity"
+                    }
+                },
+                "key": "effect-data",
+                "outputs": {
+                    "effect": {
+                        "ids": [
+                            "Hts6xFHZB3zoSp10.inputs.effect"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 884.5,
+                    "y": 353.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "RJVB5WBiiuaj3mcR",
+                "inputs": {
+                    "identifier": {
+                        "value": "diamond-dust"
+                    },
+                    "in": {
+                        "ids": [
+                            "3Xo8GL5BkTXx1VD8.outputs.out"
+                        ]
+                    },
+                    "trigger": {
+                        "value": "MY1g7tnEndXtBVyR"
+                    }
+                },
+                "key": "has-temporary",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "0uKQOElnQ86NQ1zd.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 652,
+                    "y": 133.75
+                },
+                "type": "condition"
+            }
+        ]
+    },
+    {
+        "_id": "rkLcIjeQch8DTykJ",
+        "description": "TRIGGERTROVE.DiamondDust.Trigger.TurnEnded.Description",
+        "folder": "Spells",
+        "name": "Diamond Dust (Turn Ended)",
+        "nodes": [
+            {
+                "_id": "ugWK2FpogakNjy1Q",
+                "key": "turn-end",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "1CPYcTtTIr1JLwI7.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "7j2nrSuswJycsQjj",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "1CPYcTtTIr1JLwI7.outputs.false"
+                        ]
+                    },
+                    "slug": {
+                        "value": "diamond-dust"
+                    },
+                    "targets": {
+                        "value": "all"
+                    }
+                },
+                "key": "inside-aura",
+                "outputs": {
+                    "source": {
+                        "ids": [
+                            "lFGX9IfvDFug8rT9.inputs.origin"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "2BamN72nKoAGok70.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 796,
+                    "y": 302.23
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "1CPYcTtTIr1JLwI7",
+                "inputs": {
+                    "identifier": {
+                        "value": "diamond-dust"
+                    },
+                    "in": {
+                        "ids": [
+                            "ugWK2FpogakNjy1Q.outputs.out"
+                        ]
+                    },
+                    "trigger": {
+                        "value": "MY1g7tnEndXtBVyR"
+                    }
+                },
+                "key": "has-temporary",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "7j2nrSuswJycsQjj.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "zt1RCtucb9VG0YAy.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 545,
+                    "y": 200.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "2BamN72nKoAGok70",
+                "inputs": {
+                    "formula": {
+                        "value": "(ceil((@actor.level - 2)/ 4))d6[cold]"
+                    },
+                    "in": {
+                        "ids": [
+                            "7j2nrSuswJycsQjj.outputs.true"
+                        ]
+                    },
+                    "roll": {
+                        "ids": [
+                            "lFGX9IfvDFug8rT9.outputs.roll"
+                        ]
+                    }
+                },
+                "key": "roll-damage",
+                "position": {
+                    "x": 1104,
+                    "y": 299.75
+                },
+                "type": "action"
+            },
+            {
+                "_id": "lFGX9IfvDFug8rT9",
+                "inputs": {
+                    "item": {
+                        "ids": [
+                            "y9tCALisXEv6WLCg.outputs.item"
+                        ]
+                    },
+                    "origin": {
+                        "ids": [
+                            "7j2nrSuswJycsQjj.outputs.source"
+                        ]
+                    }
+                },
+                "key": "roll-data",
+                "outputs": {
+                    "roll": {
+                        "ids": [
+                            "2BamN72nKoAGok70.inputs.roll"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 988.5,
+                    "y": 464.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "y9tCALisXEv6WLCg",
+                "inputs": {
+                    "uuid": {
+                        "value": "Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5"
+                    }
+                },
+                "key": "item-source",
+                "outputs": {
+                    "item": {
+                        "ids": [
+                            "lFGX9IfvDFug8rT9.inputs.item"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 779.5,
+                    "y": 491.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "zt1RCtucb9VG0YAy",
+                "inputs": {
+                    "identifier": {
+                        "value": "diamond-dust"
+                    },
+                    "in": {
+                        "ids": [
+                            "1CPYcTtTIr1JLwI7.outputs.true"
+                        ]
+                    },
+                    "trigger": {
+                        "value": "MY1g7tnEndXtBVyR"
+                    }
+                },
+                "key": "remove-temporary",
+                "outputs": {
+                    "out": {
+                        "ids": []
+                    }
+                },
+                "position": {
+                    "x": 802,
+                    "y": 126.75
+                },
+                "type": "action"
+            }
+        ]
+    }
+]
