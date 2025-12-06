@@ -1,7 +1,7 @@
 [
     {
         "_id": "MY1g7tnEndXtBVyR",
-        "description": "TRIGGERTROVE.DiamondDust.Trigger.AuraEntered.Description",
+        "description": "@Localize[TRIGGERTROVE.DiamondDust.Trigger.AuraEntered.Description]",
         "folder": "Spells",
         "name": "Diamond Dust (Aura Entered)",
         "nodes": [
@@ -207,7 +207,7 @@
     },
     {
         "_id": "rkLcIjeQch8DTykJ",
-        "description": "TRIGGERTROVE.DiamondDust.Trigger.TurnEnded.Description",
+        "description": "@Localize[TRIGGERTROVE.DiamondDust.Trigger.TurnEnded.Description]",
         "folder": "Spells",
         "name": "Diamond Dust (Turn Ended)",
         "nodes": [
