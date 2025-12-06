@@ -1,5 +1,12 @@
 {
     "TRIGGERTROVE": {
+        "AirAuraJunction": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "<p>Kiedy postać rozpoczyna swoją turę w kinetycznej aurze @UUID[Compendium.pf2e.classfeatures.Item.X11Y3T1IzmtNqGMV] kinetyka z jej połączeniem aury, przyznaj tej postaci odpowiednią premię do jej szybkości poprzez efekt pomocniczy do końca jej tury.</p><p>Ta korzyść pokrywa się z efektem systemu, gdy postać znajduje się w aurze, ale utrzymuje się po opuszczeniu aury do końca tury postaci.</p>"
+                }
+            }
+        },
         "AmuletsAbeyance": {
             "Trigger": {
                 "DamageTaken": {
@@ -59,10 +66,40 @@
                 }
             }
         },
+        "Defend": {
+            "Trigger": {
+                "CombatantJoined": {
+                    "Description": "Kiedy postać aktywująca akcję @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0] dołącza do walki, podnieś jej tarczę."
+                },
+                "TurnStarted": {
+                    "Description": "Kiedy postać z @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0] rozpoczyna swoją pierwszą turę z podniesioną tarczą, usuń ten efekt."
+                }
+            }
+        },
+        "DiamondDust": {
+            "Item": {
+                "ToggleLabel": "Diamentowy Pył - Aura jest aktywna"
+            },
+            "Trigger": {
+                "AuraEntered": {
+                    "Description": "<p>Kiedy postać wejdzie w aurę @UUID[Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5], rzuć kostką, aby określić obrażenia, i dodaj efekt, który uczyni postać niewrażliwą na kolejne wystąpienia tego wyzwalacza.</p><p>Aby ten wyzwalacz zadziałał, rzucający zaklęcie musi mieć zastosowany efekt @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.fyKmMJganeNRIVWi], przeciągnięty z zaklęcia po opublikowaniu go na czacie. Podaj link do tego efektu w opisie zaklęcia.</p>"
+                },
+                "TurnEnded": {
+                    "Description": "<p>Kiedy postać kończy swoją turę w obszarze działania aury @UUID[Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5], rzuć kostką, aby określić jej obrażenia. Jeśli postać posiada efekt niewrażliwości dodany przez wyzwalacz „Wejście w obszar działania aury”, usuń ten efekt.</p><p>Aby ten wyzwalacz zadziałał, rzucający zaklęcie musi mieć zastosowany efekt @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.fyKmMJganeNRIVWi], przeciągnięty z zaklęcia po opublikowaniu go na czacie. Połącz ten efekt z opisem zaklęcia.</p>"
+                }
+            }
+        },
         "DreadFlickering": {
             "Trigger": {
                 "TurnEnded": {
                     "Description": "Kiedy postać nieposiadająca niewrażliwości kończy swoją turę w obszarze działania aury Przerażające Migotanie, wyślij zdolność na czat wraz z dodatkowym efektem niewrażliwości, który zostanie zastosowany w przypadku krytycznego sukcesu rzutu obronnego."
+                }
+            }
+        },
+        "ElegantBuckler": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy atak krytycznie nie trafia w cel korzystający z @UUID[Compendium.pf2e.feats-srd.Item.C5tSxOwDILefw4zq], cel ten zyskuje polot do końca swojej następnej tury."
                 }
             }
         },
@@ -81,10 +118,24 @@
                 }
             }
         },
+        "ExtravagantParry": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy atak nie trafi w cel korzystający z @UUID[Compendium.pf2e.feats-srd.Item.WcY7H7mRiK2VDquV], cel ten zyskuje polot do końca swojej następnej tury."
+                }
+            }
+        },
         "FinishingFollowThrough": {
             "Trigger": {
                 "DamageTaken": {
                     "Description": "Kiedy Punkty Wytrzymałości stworzenia spadną do 0 w wyniku Ciosu Kończącego, jeśli źródłem obrażeń jest @UUID[Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ], zyskuje ono polot."
+                }
+            }
+        },
+        "FlashyDodge": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy atak nie trafi w cel korzystający z @UUID[Compendium.pf2e.feats-srd.Item.TnYHtN9gQASqOnii], cel ten zyskuje polot do końca swojej następnej tury."
                 }
             }
         },
@@ -223,7 +274,7 @@
         "ReplenishmentOfWar": {
             "Trigger": {
                 "DamageTaken": {
-                    "Description": "Jeśli źródłem obrażeń jest Uzupełnianie Zapasów Wojennych, a obrażenia wynikają z Ataku bronią preferowaną przez bóstwo, przyznaj Tymczasowe Punkty Wytrzymałości wynikające z Uzupełnienia Zapasów Wojennych, odpowiednie do wyniku Ataku."
+                    "Description": "Jeśli źródło obrażeń posiada zdolność Uzupełnianie Zapasów Wojennych, a obrażenia wynikają z ataku bronią preferowaną przez bóstwo, przyznaj tymczasowe Punkty Wytrzymałości źródle zdolności Uzupełnianie Zapasów Wojennych odpowiednie do wyniku Ataku. Jeśli źródło obrażeń posiada zdolność Wspólne Uzupełnianie Zapasów, ta zdolność zostanie wyłączona."
                 }
             }
         },
@@ -238,6 +289,24 @@
             "Subtrigger": {
                 "Check": {
                     "Addendum": "Istota może nie podlegać działaniu tego wyzwalacza poprzez przeciągnięcie na nią efektu @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd] <strong>z karty kinetyka</strong>."
+                }
+            }
+        },
+        "Scout": {
+            "Trigger": {
+                "CombatantJoined": {
+                    "Description": "Kiedy postać z aktywną akcją @UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb] dołącza do walki, dodaj jej efekt do wszystkich sojuszniczych tokenów sceny. Jeśli postać posiada @UUID[Compendium.pf2e.feats-srd.Item.aFoVHsuInMOkTZoQ], zostanie zastosowany jej efekt."
+                }
+            }
+        },
+        "ScoutsWarning": {
+            "Label": "Ostrzeżenie Zwiadowcy",
+            "Trigger": {
+                "CombatantJoined": {
+                    "AwaitConfirmation": {
+                        "Prompt": "Czy używasz Ostrzeżenia Zwiadowcy? Musisz zrobić rzut na Percepcję, Ukrycie lub Przetrwanie, żeby ustalić inicjatywę."
+                    },
+                    "Description": "Postać posiadająca atut Ostrzeżenie Zwiadowcy może potwierdzić, czy zamierza użyć tej zdolności. Jeśli tak, jej efekt zostanie dodany do wszystkich tokenów sceny, które należą do tej samej frakcji."
                 }
             }
         },
