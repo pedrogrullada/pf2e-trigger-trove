@@ -1,0 +1,72 @@
+{
+  "name": "Aux Effect: Scars of Steel",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.953,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.feats-srd.Item.j8ycCi7ghTtpRjEW]{Scars of Steel}</p><p>This effect activates the roll option for Scars of Steel's resistance </p>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "PF2e Trigger Trove",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "option": "scars-of-steel",
+        "value": true,
+        "priority": 51
+      }
+    ],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 4
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": null,
+    "fromSpell": false,
+    "context": null
+  },
+  "_id": "ht9DI0M08okeF6Nq",
+  "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "lBn9t2oEMiiJjyzv": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.7.4"
+  },
+  "_key": "!items!ht9DI0M08okeF6Nq"
+}

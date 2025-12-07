@@ -292,6 +292,17 @@
                 }
             }
         },
+        "ScarsOfSteel": {
+            "Label": "Scars of Steel",
+            "Trigger": {
+                "AttackRolled": {
+                    "AwaitConfirmation": {
+                        "Prompt": "An opponent critically hits you with an attack that deals physical damage. Will you use Scars of Steel?"
+                    },
+                    "Description": ""
+                }
+            }
+        },
         "Scout": {
             "Trigger": {
                 "CombatantJoined": {
