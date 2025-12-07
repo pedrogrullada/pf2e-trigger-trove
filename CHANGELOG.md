@@ -1,3 +1,12 @@
+## 0.9.1
+- **New Trigger**
+  - Diamond Dust
+    - _Aura Entered:_ When a character enters a Diamond Dust aura, roll its damage and add an effect to make the character immune to further instances of this trigger.
+    - _Turn Ended:_ When a character ends their turn inside a Diamond Dust aura, roll its damage. If a character has the immunity effect added by the Aura Entered trigger, remove that effect.
+    - For either of these triggers to work, the spellcaster must have Aux Effect: Diamond Dust applied to them, dragged from the spell when posted to chat. Link this effect in the spell's description.
+- **Localization**
+  - (Lioheart) Update polish localization. 
+
 ## 0.9.0
 - **New Triggers**
   - (Ettio) Sword and Pistol
