@@ -6,7 +6,7 @@ Enable the module and you will see this module's triggers. They are **disabled**
 
 Here's the list of abilities currently handled by triggers in some capacity.
 <details>
-  <summary>The List (As of 0.9.0)</summary>
+  <summary>The List (As of 0.9.1)</summary>
 
    - Core Rules
      - Defend
@@ -52,6 +52,7 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Intense Heat
      - Stench
    - Spells
+     - Diamond Dust 
      - Incendiary Aura
      - Mirror Image
      - Mountain Resilience
