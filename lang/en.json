@@ -292,6 +292,20 @@
                 }
             }
         },
+        "ScarsOfSteel": {
+            "Label": "Scars of Steel",
+            "Trigger": {
+                "AttackRolled": {
+                    "AwaitConfirmation": {
+                        "Prompt": "An opponent critically hits you with an attack that deals physical damage. Will you use Scars of Steel?"
+                    },
+                    "Description": "When a raging character is critically hit by an attack that deals physical damage, and that character has @UUID[Compendium.pf2e.feats-srd.Item.j8ycCi7ghTtpRjEW]{Scars of Steel} with available uses left, confirm whether they will use the ability and add an auxiliary effect that enables its resistance if so."
+                },
+                "DamageTaken": {
+                    "Description": "When a character with the auxiliary effect given by the Scars of Steel (Attack Rolled) trigger takes physical damage, remove that auxiliary effect."
+                }
+            }
+        },
         "Scout": {
             "Trigger": {
                 "CombatantJoined": {
