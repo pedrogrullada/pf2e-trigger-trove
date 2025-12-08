@@ -64,8 +64,8 @@
         }
       },
       "position": {
-        "x": 557,
-        "y": 193.23000000000002
+        "x": 539,
+        "y": 199.23000000000002
       },
       "type": "condition"
     },
@@ -94,13 +94,13 @@
         },
         "true": {
           "ids": [
-            "ZoWPq43S0e5H2qtj.inputs.in"
+            "ad58p6tng7rU7jFy.inputs.in"
           ]
         }
       },
       "position": {
-        "x": 957,
-        "y": -136.25
+        "x": 1041,
+        "y": 7.75
       },
       "type": "condition"
     },
@@ -113,7 +113,7 @@
         },
         "in": {
           "ids": [
-            "3z6epIrvHjth3ocH.outputs.true"
+            "seKRGZzAUnWzSkbX.outputs.out"
           ]
         },
         "roll": {
@@ -124,8 +124,8 @@
       },
       "key": "roll-damage",
       "position": {
-        "x": 1222,
-        "y": -141.25
+        "x": 1805,
+        "y": -56.25
       },
       "type": "action"
     },
@@ -139,7 +139,12 @@
         },
         "origin": {
           "ids": [
-            "tl1uJ3fhqHsp9kkB.outputs.output"
+            "hVng74W30sFPM5wC.outputs.output"
+          ]
+        },
+        "traits": {
+          "ids": [
+            "zIZUxtAKNwlPo1rL.outputs.output"
           ]
         }
       },
@@ -152,8 +157,8 @@
         }
       },
       "position": {
-        "x": 1208.5,
-        "y": 21.25
+        "x": 1548.5,
+        "y": 101.25
       },
       "type": "value"
     },
@@ -174,8 +179,8 @@
         }
       },
       "position": {
-        "x": 1000.5,
-        "y": 68.25
+        "x": 1334.5,
+        "y": 166.25
       },
       "type": "value"
     },
@@ -211,8 +216,8 @@
         }
       },
       "position": {
-        "x": 922,
-        "y": 431.75
+        "x": 938,
+        "y": 304.75
       },
       "type": "condition"
     },
@@ -239,39 +244,10 @@
         }
       },
       "position": {
-        "x": 807.5,
-        "y": -73.75
+        "x": 877.5,
+        "y": 53.25
       },
       "target": "5Ffw8tb8P1fX3zzQ.outputs.other",
-      "type": "variable"
-    },
-    {
-      "_id": "tl1uJ3fhqHsp9kkB",
-      "custom": {
-        "inputs": [],
-        "outputs": [
-          {
-            "custom": false,
-            "group": "",
-            "key": "output",
-            "type": "target"
-          }
-        ],
-        "outs": []
-      },
-      "key": "variable-getter",
-      "outputs": {
-        "output": {
-          "ids": [
-            "rGd4unBXiWFF7tG3.inputs.origin"
-          ]
-        }
-      },
-      "position": {
-        "x": 1072.5,
-        "y": 29.25
-      },
-      "target": "ZoR39yPBKP5eE5PN.outputs.source",
       "type": "variable"
     },
     {
@@ -297,8 +273,8 @@
         }
       },
       "position": {
-        "x": 754.5,
-        "y": 524.25
+        "x": 790.5,
+        "y": 397.25
       },
       "target": "5Ffw8tb8P1fX3zzQ.outputs.other",
       "type": "variable"
@@ -306,6 +282,7 @@
     {
       "_id": "npAxlPredpvfI9pQ",
       "custom": {
+        "inputs": [],
         "outputs": [
           {
             "custom": true,
@@ -321,7 +298,8 @@
             "label": "Effect Origin Level",
             "type": "number"
           }
-        ]
+        ],
+        "outs": []
       },
       "inputs": {
         "in": {
@@ -337,20 +315,23 @@
       },
       "key": "item-splitter",
       "outputs": {
-        "origin|level": {
+        "origin": {
           "ids": [
-            "rxBQzyFP70pmmskq.inputs.x"
+            "ttT5uOSJHIVWcjqe.inputs.target"
           ]
+        },
+        "origin|level": {
+          "ids": []
         },
         "out": {
           "ids": [
-            "rxBQzyFP70pmmskq.inputs.in"
+            "ttT5uOSJHIVWcjqe.inputs.in"
           ]
         }
       },
       "position": {
-        "x": 1193,
-        "y": 449.23
+        "x": 1195,
+        "y": 327.23
       },
       "type": "splitter"
     },
@@ -358,16 +339,17 @@
       "_id": "rxBQzyFP70pmmskq",
       "inputs": {
         "formula": {
+          "ids": [],
           "value": "(ceil(@x/4))d4[spirit]"
         },
         "in": {
           "ids": [
-            "npAxlPredpvfI9pQ.outputs.out"
+            "iA7n0qgoLt3mHJWa.outputs.out"
           ]
         },
         "x": {
           "ids": [
-            "npAxlPredpvfI9pQ.outputs.origin|level"
+            "ij4V6PRrf10Ba0Sm.outputs.output"
           ]
         }
       },
@@ -385,8 +367,8 @@
         }
       },
       "position": {
-        "x": 1466,
-        "y": 430.75
+        "x": 1940,
+        "y": 308.75
       },
       "type": "action"
     },
@@ -411,8 +393,8 @@
       },
       "key": "roll-damage",
       "position": {
-        "x": 1722,
-        "y": 430.75
+        "x": 2189,
+        "y": 307.75
       },
       "type": "action"
     },
@@ -428,6 +410,11 @@
           "ids": [
             "3J8XfsXkC25eXtkZ.outputs.output"
           ]
+        },
+        "traits": {
+          "ids": [
+            "gzaY0VALYw1rzra5.outputs.output"
+          ]
         }
       },
       "key": "roll-data",
@@ -439,8 +426,8 @@
         }
       },
       "position": {
-        "x": 1486.5,
-        "y": 572.25
+        "x": 1993.5,
+        "y": 480.25
       },
       "type": "value"
     },
@@ -467,8 +454,8 @@
         }
       },
       "position": {
-        "x": 1295.5,
-        "y": 650.25
+        "x": 1801.5,
+        "y": 565.25
       },
       "target": "uT28rwo8zhoZSFnX.outputs.item",
       "type": "variable"
@@ -496,27 +483,296 @@
         }
       },
       "position": {
-        "x": 1341.5,
-        "y": 599.25
+        "x": 1842.5,
+        "y": 524.25
       },
       "target": "npAxlPredpvfI9pQ.outputs.origin",
+      "type": "variable"
+    },
+    {
+      "_id": "iA7n0qgoLt3mHJWa",
+      "inputs": {
+        "flag": {
+          "value": "sanctification"
+        },
+        "in": {
+          "ids": [
+            "ttT5uOSJHIVWcjqe.outputs.true"
+          ]
+        },
+        "item": {
+          "ids": [
+            "ttT5uOSJHIVWcjqe.outputs.item"
+          ]
+        }
+      },
+      "key": "get-choiceset",
+      "outputs": {
+        "out": {
+          "ids": [
+            "rxBQzyFP70pmmskq.inputs.in"
+          ]
+        },
+        "selection": {
+          "ids": []
+        }
+      },
+      "position": {
+        "x": 1672,
+        "y": 310.75
+      },
+      "type": "action"
+    },
+    {
+      "_id": "ttT5uOSJHIVWcjqe",
+      "inputs": {
+        "in": {
+          "ids": [
+            "npAxlPredpvfI9pQ.outputs.out"
+          ]
+        },
+        "target": {
+          "ids": [
+            "npAxlPredpvfI9pQ.outputs.origin"
+          ]
+        },
+        "uuid": {
+          "value": "Compendium.pf2e.classfeatures.Item.ehL7mnkqxN5wIkgu"
+        }
+      },
+      "key": "has-item",
+      "outputs": {
+        "item": {
+          "ids": [
+            "iA7n0qgoLt3mHJWa.inputs.item"
+          ]
+        },
+        "true": {
+          "ids": [
+            "iA7n0qgoLt3mHJWa.inputs.in"
+          ]
+        }
+      },
+      "position": {
+        "x": 1433.5,
+        "y": 311.25
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "gzaY0VALYw1rzra5",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": false,
+            "group": "",
+            "key": "output",
+            "type": "text"
+          }
+        ],
+        "outs": []
+      },
+      "key": "variable-getter",
+      "outputs": {
+        "output": {
+          "ids": [
+            "JC9UAxnfFMyWgaMa.inputs.traits"
+          ]
+        }
+      },
+      "position": {
+        "x": 1751.5,
+        "y": 605.25
+      },
+      "target": "iA7n0qgoLt3mHJWa.outputs.selection",
+      "type": "variable"
+    },
+    {
+      "_id": "ij4V6PRrf10Ba0Sm",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": false,
+            "group": "",
+            "key": "output",
+            "type": "number"
+          }
+        ],
+        "outs": []
+      },
+      "key": "variable-getter",
+      "outputs": {
+        "output": {
+          "ids": [
+            "rxBQzyFP70pmmskq.inputs.x"
+          ]
+        }
+      },
+      "position": {
+        "x": 1784.5,
+        "y": 474.25
+      },
+      "target": "npAxlPredpvfI9pQ.outputs.origin|level",
+      "type": "variable"
+    },
+    {
+      "_id": "ad58p6tng7rU7jFy",
+      "inputs": {
+        "in": {
+          "ids": [
+            "3z6epIrvHjth3ocH.outputs.true"
+          ]
+        },
+        "target": {
+          "ids": [
+            "hVng74W30sFPM5wC.outputs.output"
+          ]
+        },
+        "uuid": {
+          "ids": [],
+          "value": "Compendium.pf2e.classfeatures.Item.ehL7mnkqxN5wIkgu"
+        }
+      },
+      "key": "has-item",
+      "outputs": {
+        "item": {
+          "ids": [
+            "seKRGZzAUnWzSkbX.inputs.item"
+          ]
+        },
+        "true": {
+          "ids": [
+            "seKRGZzAUnWzSkbX.inputs.in"
+          ]
+        }
+      },
+      "position": {
+        "x": 1303.5,
+        "y": -21.75
+      },
+      "type": "condition"
+    },
+    {
+      "_id": "hVng74W30sFPM5wC",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": false,
+            "group": "",
+            "key": "output",
+            "type": "target"
+          }
+        ],
+        "outs": []
+      },
+      "key": "variable-getter",
+      "outputs": {
+        "output": {
+          "ids": [
+            "ad58p6tng7rU7jFy.inputs.target",
+            "rGd4unBXiWFF7tG3.inputs.origin"
+          ]
+        }
+      },
+      "position": {
+        "x": 1340.5,
+        "y": 122.25
+      },
+      "target": "ZoR39yPBKP5eE5PN.outputs.source",
+      "type": "variable"
+    },
+    {
+      "_id": "seKRGZzAUnWzSkbX",
+      "inputs": {
+        "flag": {
+          "ids": [],
+          "value": "sanctification"
+        },
+        "in": {
+          "ids": [
+            "ad58p6tng7rU7jFy.outputs.true"
+          ]
+        },
+        "item": {
+          "ids": [
+            "ad58p6tng7rU7jFy.outputs.item"
+          ]
+        }
+      },
+      "key": "get-choiceset",
+      "outputs": {
+        "out": {
+          "ids": [
+            "ZoWPq43S0e5H2qtj.inputs.in"
+          ]
+        }
+      },
+      "position": {
+        "x": 1539,
+        "y": -51.25
+      },
+      "type": "action"
+    },
+    {
+      "_id": "zIZUxtAKNwlPo1rL",
+      "custom": {
+        "inputs": [],
+        "outputs": [
+          {
+            "custom": false,
+            "group": "",
+            "key": "output",
+            "type": "text"
+          }
+        ],
+        "outs": []
+      },
+      "key": "variable-getter",
+      "outputs": {
+        "output": {
+          "ids": [
+            "rGd4unBXiWFF7tG3.inputs.traits"
+          ]
+        }
+      },
+      "position": {
+        "x": 1315.5,
+        "y": 230.25
+      },
+      "target": "seKRGZzAUnWzSkbX.outputs.selection",
       "type": "variable"
     }
   ],
   "variables": {
+    "iA7n0qgoLt3mHJWa.outputs.selection": {
+      "global": false,
+      "label": "Effect Origin Sanctification",
+      "type": "text"
+    },
     "npAxlPredpvfI9pQ.outputs.origin": {
       "global": false,
       "label": "Effect Origin",
+      "locked": false,
       "type": "target"
     },
     "npAxlPredpvfI9pQ.outputs.origin|level": {
       "global": false,
       "label": "Effect Origin Level",
+      "locked": false,
       "type": "number"
+    },
+    "seKRGZzAUnWzSkbX.outputs.selection": {
+      "global": false,
+      "label": "Aura Source Sanctification",
+      "type": "text"
     },
     "uT28rwo8zhoZSFnX.outputs.item": {
       "global": false,
       "label": "Shields of the Spirit",
+      "locked": false,
       "type": "item"
     },
     "ZoR39yPBKP5eE5PN.outputs.source": {
