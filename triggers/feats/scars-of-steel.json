@@ -1,583 +1,580 @@
-{
-    "items": [],
-    "triggers": [
-        {
-            "_id": "j6nkT4tE3AAFEDnz",
-            "description": "TRIGGERTROVE.ScarsOfSteel.Trigger.AttackRolled.Description",
-            "folder": "Feats & Features",
-            "name": "Scars of Steel (Attack Rolled)",
-            "nodes": [
-                {
-                    "_id": "V8ztGA6Xi6W6CUTq",
-                    "key": "attack-roll",
-                    "outputs": {
-                        "options": {
-                            "ids": []
-                        },
-                        "out": {
-                            "ids": [
-                                "0dYDnfB9hW9JFkvc.inputs.in"
-                            ]
-                        },
-                        "outcome": {
-                            "ids": [
-                                "0dYDnfB9hW9JFkvc.inputs.a"
-                            ]
-                        }
+[
+    {
+        "_id": "j6nkT4tE3AAFEDnz",
+        "description": "TRIGGERTROVE.ScarsOfSteel.Trigger.AttackRolled.Description",
+        "folder": "Feats & Features",
+        "name": "Scars of Steel (Attack Rolled)",
+        "nodes": [
+            {
+                "_id": "V8ztGA6Xi6W6CUTq",
+                "key": "attack-roll",
+                "outputs": {
+                    "options": {
+                        "ids": []
                     },
-                    "position": {
-                        "x": 350,
-                        "y": 200
+                    "out": {
+                        "ids": [
+                            "0dYDnfB9hW9JFkvc.inputs.in"
+                        ]
                     },
-                    "type": "event"
+                    "outcome": {
+                        "ids": [
+                            "0dYDnfB9hW9JFkvc.inputs.a"
+                        ]
+                    }
                 },
-                {
-                    "_id": "mH8stn18EBI75fjT",
-                    "inputs": {
-                        "in": {
-                            "ids": [
-                                "UgiiUJ7lGqyMvBBR.outputs.true"
-                            ]
-                        },
-                        "target": {
-                            "ids": [
-                                "c1m4zwi2E6wlz44v.outputs.output"
-                            ]
-                        },
-                        "uuid": {
-                            "ids": [],
-                            "value": "Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr"
-                        }
-                    },
-                    "key": "has-item",
-                    "outputs": {
-                        "true": {
-                            "ids": [
-                                "uxXnTgxbt7oz9zKx.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 974,
-                        "y": 239.75
-                    },
-                    "type": "condition"
+                "position": {
+                    "x": 350,
+                    "y": 200
                 },
-                {
-                    "_id": "uxXnTgxbt7oz9zKx",
-                    "inputs": {
-                        "in": {
-                            "ids": [
-                                "mH8stn18EBI75fjT.outputs.true"
-                            ]
-                        },
-                        "target": {
-                            "ids": [
-                                "lrxYI7oHIcfj3ZaF.outputs.output"
-                            ]
-                        },
-                        "uuid": {
-                            "ids": [],
-                            "value": "Compendium.pf2e.feats-srd.Item.j8ycCi7ghTtpRjEW"
-                        }
+                "type": "event"
+            },
+            {
+                "_id": "mH8stn18EBI75fjT",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "UgiiUJ7lGqyMvBBR.outputs.true"
+                        ]
                     },
-                    "key": "has-item",
-                    "outputs": {
-                        "item": {
-                            "ids": [
-                                "bA3bkRyvD1XVJmte.inputs.input"
-                            ]
-                        },
-                        "true": {
-                            "ids": [
-                                "bA3bkRyvD1XVJmte.inputs.in"
-                            ]
-                        }
+                    "target": {
+                        "ids": [
+                            "c1m4zwi2E6wlz44v.outputs.output"
+                        ]
                     },
-                    "position": {
-                        "x": 1212,
-                        "y": 239.75
-                    },
-                    "type": "condition"
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr"
+                    }
                 },
-                {
-                    "_id": "bA3bkRyvD1XVJmte",
-                    "custom": {
-                        "inputs": [],
-                        "outputs": [
-                            {
-                                "custom": true,
-                                "group": "",
-                                "key": "system|frequency|value",
-                                "label": "Frequency Value",
-                                "type": "number"
-                            }
-                        ],
-                        "outs": []
-                    },
-                    "inputs": {
-                        "in": {
-                            "ids": [
-                                "uxXnTgxbt7oz9zKx.outputs.true"
-                            ]
-                        },
-                        "input": {
-                            "ids": [
-                                "uxXnTgxbt7oz9zKx.outputs.item"
-                            ]
-                        }
-                    },
-                    "key": "item-splitter",
-                    "outputs": {
-                        "out": {
-                            "ids": [
-                                "WMYwndbfYFWc3UpC.inputs.in"
-                            ]
-                        },
-                        "system|frequency|value": {
-                            "ids": [
-                                "WMYwndbfYFWc3UpC.inputs.a"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 1451.5,
-                        "y": 256.23
-                    },
-                    "type": "splitter"
+                "key": "has-item",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "uxXnTgxbt7oz9zKx.inputs.in"
+                        ]
+                    }
                 },
-                {
-                    "_id": "WMYwndbfYFWc3UpC",
-                    "inputs": {
-                        "a": {
-                            "ids": [
-                                "bA3bkRyvD1XVJmte.outputs.system|frequency|value"
-                            ]
-                        },
-                        "in": {
-                            "ids": [
-                                "bA3bkRyvD1XVJmte.outputs.out"
-                            ]
-                        }
-                    },
-                    "key": "eq-number",
-                    "outputs": {
-                        "false": {
-                            "ids": [
-                                "Vh1bBIVhKCggjVRS.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 1675,
-                        "y": 256.75
-                    },
-                    "type": "logic"
+                "position": {
+                    "x": 974,
+                    "y": 239.75
                 },
-                {
-                    "_id": "Vh1bBIVhKCggjVRS",
-                    "inputs": {
-                        "in": {
-                            "ids": [
-                                "WMYwndbfYFWc3UpC.outputs.false"
-                            ]
-                        },
-                        "prompt": {
-                            "value": "TRIGGERTROVE.ScarsOfSteel.Trigger.AttackRolled.AwaitConfirmation.Prompt"
-                        },
-                        "target": {
-                            "ids": [
-                                "uyrLG0ClA0JWeNbM.outputs.output"
-                            ]
-                        },
-                        "title": {
-                            "value": "TRIGGERTROVE.ScarsOfSteel.Label"
-                        }
+                "type": "condition"
+            },
+            {
+                "_id": "uxXnTgxbt7oz9zKx",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "mH8stn18EBI75fjT.outputs.true"
+                        ]
                     },
-                    "key": "await-confirm",
-                    "outputs": {
-                        "true": {
-                            "ids": [
-                                "jIE4fd4eqvH6Eggu.inputs.in"
-                            ]
-                        }
+                    "target": {
+                        "ids": [
+                            "lrxYI7oHIcfj3ZaF.outputs.output"
+                        ]
                     },
-                    "position": {
-                        "x": 1861,
-                        "y": 266.23
-                    },
-                    "type": "action"
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feats-srd.Item.j8ycCi7ghTtpRjEW"
+                    }
                 },
-                {
-                    "_id": "c1m4zwi2E6wlz44v",
-                    "custom": {
-                        "inputs": [],
-                        "outputs": [
-                            {
-                                "custom": false,
-                                "group": "",
-                                "key": "output",
-                                "type": "target"
-                            }
-                        ],
-                        "outs": []
+                "key": "has-item",
+                "outputs": {
+                    "item": {
+                        "ids": [
+                            "bA3bkRyvD1XVJmte.inputs.input"
+                        ]
                     },
-                    "key": "variable-getter",
-                    "outputs": {
-                        "output": {
-                            "ids": [
-                                "mH8stn18EBI75fjT.inputs.target"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 831.5,
-                        "y": 380.25
-                    },
-                    "target": "V8ztGA6Xi6W6CUTq.outputs.other",
-                    "type": "variable"
+                    "true": {
+                        "ids": [
+                            "bA3bkRyvD1XVJmte.inputs.in"
+                        ]
+                    }
                 },
-                {
-                    "_id": "lrxYI7oHIcfj3ZaF",
-                    "custom": {
-                        "inputs": [],
-                        "outputs": [
-                            {
-                                "custom": false,
-                                "group": "",
-                                "key": "output",
-                                "type": "target"
-                            }
-                        ],
-                        "outs": []
-                    },
-                    "key": "variable-getter",
-                    "outputs": {
-                        "output": {
-                            "ids": [
-                                "uxXnTgxbt7oz9zKx.inputs.target"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 1078.5,
-                        "y": 375.25
-                    },
-                    "target": "V8ztGA6Xi6W6CUTq.outputs.other",
-                    "type": "variable"
+                "position": {
+                    "x": 1212,
+                    "y": 239.75
                 },
-                {
-                    "_id": "uyrLG0ClA0JWeNbM",
-                    "custom": {
-                        "inputs": [],
-                        "outputs": [
-                            {
-                                "custom": false,
-                                "group": "",
-                                "key": "output",
-                                "type": "target"
-                            }
-                        ],
-                        "outs": []
-                    },
-                    "key": "variable-getter",
-                    "outputs": {
-                        "output": {
-                            "ids": [
-                                "Vh1bBIVhKCggjVRS.inputs.target"
-                            ]
+                "type": "condition"
+            },
+            {
+                "_id": "bA3bkRyvD1XVJmte",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": true,
+                            "group": "",
+                            "key": "system|frequency|value",
+                            "label": "Frequency Value",
+                            "type": "number"
                         }
-                    },
-                    "position": {
-                        "x": 1716.5,
-                        "y": 427.25
-                    },
-                    "target": "V8ztGA6Xi6W6CUTq.outputs.other",
-                    "type": "variable"
+                    ],
+                    "outs": []
                 },
-                {
-                    "_id": "jIE4fd4eqvH6Eggu",
-                    "inputs": {
-                        "duplicate": {
-                            "value": false
-                        },
-                        "in": {
-                            "ids": [
-                                "Vh1bBIVhKCggjVRS.outputs.true"
-                            ]
-                        },
-                        "target": {
-                            "ids": [
-                                "8fXqw5DdbnhDJ47q.outputs.output"
-                            ]
-                        },
-                        "uuid": {
-                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.ht9DI0M08okeF6Nq"
-                        }
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "uxXnTgxbt7oz9zKx.outputs.true"
+                        ]
                     },
-                    "key": "create-item",
-                    "position": {
-                        "x": 2132,
-                        "y": 265.23
-                    },
-                    "type": "action"
+                    "input": {
+                        "ids": [
+                            "uxXnTgxbt7oz9zKx.outputs.item"
+                        ]
+                    }
                 },
-                {
-                    "_id": "8fXqw5DdbnhDJ47q",
-                    "custom": {
-                        "inputs": [],
-                        "outputs": [
-                            {
-                                "custom": false,
-                                "group": "",
-                                "key": "output",
-                                "type": "target"
-                            }
-                        ],
-                        "outs": []
+                "key": "item-splitter",
+                "outputs": {
+                    "out": {
+                        "ids": [
+                            "WMYwndbfYFWc3UpC.inputs.in"
+                        ]
                     },
-                    "key": "variable-getter",
-                    "outputs": {
-                        "output": {
-                            "ids": [
-                                "jIE4fd4eqvH6Eggu.inputs.target"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 2002.5,
-                        "y": 432.25
-                    },
-                    "target": "V8ztGA6Xi6W6CUTq.outputs.other",
-                    "type": "variable"
+                    "system|frequency|value": {
+                        "ids": [
+                            "WMYwndbfYFWc3UpC.inputs.a"
+                        ]
+                    }
                 },
-                {
-                    "_id": "0dYDnfB9hW9JFkvc",
-                    "inputs": {
-                        "a": {
-                            "ids": [
-                                "V8ztGA6Xi6W6CUTq.outputs.outcome"
-                            ]
-                        },
-                        "b": {
-                            "ids": [
-                                "JJVnqO7hDT5jdqlT.outputs.value"
-                            ]
-                        },
-                        "in": {
-                            "ids": [
-                                "V8ztGA6Xi6W6CUTq.outputs.out"
-                            ]
-                        }
-                    },
-                    "key": "gte-number",
-                    "outputs": {
-                        "true": {
-                            "ids": [
-                                "UgiiUJ7lGqyMvBBR.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 547,
-                        "y": 254.25
-                    },
-                    "type": "logic"
+                "position": {
+                    "x": 1451.5,
+                    "y": 256.23
                 },
-                {
-                    "_id": "JJVnqO7hDT5jdqlT",
-                    "inputs": {
-                        "input": {
-                            "value": "criticalSuccess"
-                        }
+                "type": "splitter"
+            },
+            {
+                "_id": "WMYwndbfYFWc3UpC",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "bA3bkRyvD1XVJmte.outputs.system|frequency|value"
+                        ]
                     },
-                    "key": "success-value",
-                    "outputs": {
-                        "value": {
-                            "ids": [
-                                "0dYDnfB9hW9JFkvc.inputs.b"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 329.5,
-                        "y": 439.25
-                    },
-                    "type": "value"
+                    "in": {
+                        "ids": [
+                            "bA3bkRyvD1XVJmte.outputs.out"
+                        ]
+                    }
                 },
-                {
-                    "_id": "UgiiUJ7lGqyMvBBR",
-                    "inputs": {
-                        "entry": {
-                            "value": "item:damage:category:physical"
-                        },
-                        "in": {
-                            "ids": [
-                                "0dYDnfB9hW9JFkvc.outputs.true"
-                            ]
-                        },
-                        "list": {
-                            "ids": [
-                                "zoqWaeOW7pre1V1k.outputs.output"
-                            ]
-                        }
-                    },
-                    "key": "contains-entry",
-                    "outputs": {
-                        "true": {
-                            "ids": [
-                                "mH8stn18EBI75fjT.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 737,
-                        "y": 239.75
-                    },
-                    "type": "condition"
+                "key": "eq-number",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "Vh1bBIVhKCggjVRS.inputs.in"
+                        ]
+                    }
                 },
-                {
-                    "_id": "zoqWaeOW7pre1V1k",
-                    "custom": {
-                        "inputs": [],
-                        "outputs": [
-                            {
-                                "custom": false,
-                                "group": "",
-                                "key": "output",
-                                "type": "list"
-                            }
-                        ],
-                        "outs": []
-                    },
-                    "key": "variable-getter",
-                    "outputs": {
-                        "output": {
-                            "ids": [
-                                "UgiiUJ7lGqyMvBBR.inputs.list"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 603.5,
-                        "y": 376.25
-                    },
-                    "target": "V8ztGA6Xi6W6CUTq.outputs.options",
-                    "type": "variable"
-                }
-            ]
-        },
-        {
-            "_id": "laiH5IsBUVqep3FM",
-            "description": "TRIGGERTROVE.ScarsOfSteel.Trigger.DamageTaken.Description",
-            "folder": "Feats & Features",
-            "name": "Scars of Steel (Damage Taken)",
-            "nodes": [
-                {
-                    "_id": "PP3iBeucKjsYx9JB",
-                    "key": "damage-taken",
-                    "outputs": {
-                        "options": {
-                            "ids": [
-                                "fmC6CCE5OTrjCQbN.inputs.list"
-                            ]
-                        },
-                        "out": {
-                            "ids": [
-                                "fmC6CCE5OTrjCQbN.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 350,
-                        "y": 200
-                    },
-                    "type": "event"
+                "position": {
+                    "x": 1675,
+                    "y": 256.75
                 },
-                {
-                    "_id": "y0o4LqbGXAZ3hyZj",
-                    "inputs": {
-                        "in": {
-                            "ids": [
-                                "fmC6CCE5OTrjCQbN.outputs.true"
-                            ]
-                        },
-                        "uuid": {
-                            "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.ht9DI0M08okeF6Nq"
-                        }
+                "type": "logic"
+            },
+            {
+                "_id": "Vh1bBIVhKCggjVRS",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "WMYwndbfYFWc3UpC.outputs.false"
+                        ]
                     },
-                    "key": "has-item",
-                    "outputs": {
-                        "item": {
-                            "ids": [
-                                "S7POV3MYvZ3d5xQN.inputs.item"
-                            ]
-                        },
-                        "true": {
-                            "ids": [
-                                "S7POV3MYvZ3d5xQN.inputs.in"
-                            ]
-                        }
+                    "prompt": {
+                        "value": "TRIGGERTROVE.ScarsOfSteel.Trigger.AttackRolled.AwaitConfirmation.Prompt"
                     },
-                    "position": {
-                        "x": 779,
-                        "y": 201.75
+                    "target": {
+                        "ids": [
+                            "uyrLG0ClA0JWeNbM.outputs.output"
+                        ]
                     },
-                    "type": "condition"
+                    "title": {
+                        "value": "TRIGGERTROVE.ScarsOfSteel.Label"
+                    }
                 },
-                {
-                    "_id": "fmC6CCE5OTrjCQbN",
-                    "inputs": {
-                        "entry": {
-                            "value": "item:damage:category:physical"
-                        },
-                        "in": {
-                            "ids": [
-                                "PP3iBeucKjsYx9JB.outputs.out"
-                            ]
-                        },
-                        "list": {
-                            "ids": [
-                                "PP3iBeucKjsYx9JB.outputs.options"
-                            ]
-                        }
-                    },
-                    "key": "contains-entry",
-                    "outputs": {
-                        "true": {
-                            "ids": [
-                                "y0o4LqbGXAZ3hyZj.inputs.in"
-                            ]
-                        }
-                    },
-                    "position": {
-                        "x": 540.5,
-                        "y": 200.25
-                    },
-                    "type": "condition"
+                "key": "await-confirm",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "jIE4fd4eqvH6Eggu.inputs.in"
+                        ]
+                    }
                 },
-                {
-                    "_id": "S7POV3MYvZ3d5xQN",
-                    "inputs": {
-                        "in": {
-                            "ids": [
-                                "y0o4LqbGXAZ3hyZj.outputs.true"
-                            ]
-                        },
-                        "item": {
-                            "ids": [
-                                "y0o4LqbGXAZ3hyZj.outputs.item"
-                            ]
+                "position": {
+                    "x": 1861,
+                    "y": 266.23
+                },
+                "type": "action"
+            },
+            {
+                "_id": "c1m4zwi2E6wlz44v",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
                         }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "mH8stn18EBI75fjT.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 831.5,
+                    "y": 380.25
+                },
+                "target": "V8ztGA6Xi6W6CUTq.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "lrxYI7oHIcfj3ZaF",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "uxXnTgxbt7oz9zKx.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1078.5,
+                    "y": 375.25
+                },
+                "target": "V8ztGA6Xi6W6CUTq.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "uyrLG0ClA0JWeNbM",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "Vh1bBIVhKCggjVRS.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1716.5,
+                    "y": 427.25
+                },
+                "target": "V8ztGA6Xi6W6CUTq.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "jIE4fd4eqvH6Eggu",
+                "inputs": {
+                    "duplicate": {
+                        "value": false
                     },
-                    "key": "delete-item",
-                    "position": {
-                        "x": 1018,
-                        "y": 200.75
+                    "in": {
+                        "ids": [
+                            "Vh1bBIVhKCggjVRS.outputs.true"
+                        ]
                     },
-                    "type": "action"
-                }
-            ]
-        }
-    ]
-}
+                    "target": {
+                        "ids": [
+                            "8fXqw5DdbnhDJ47q.outputs.output"
+                        ]
+                    },
+                    "uuid": {
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.ht9DI0M08okeF6Nq"
+                    }
+                },
+                "key": "create-item",
+                "position": {
+                    "x": 2132,
+                    "y": 265.23
+                },
+                "type": "action"
+            },
+            {
+                "_id": "8fXqw5DdbnhDJ47q",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "target"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "jIE4fd4eqvH6Eggu.inputs.target"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 2002.5,
+                    "y": 432.25
+                },
+                "target": "V8ztGA6Xi6W6CUTq.outputs.other",
+                "type": "variable"
+            },
+            {
+                "_id": "0dYDnfB9hW9JFkvc",
+                "inputs": {
+                    "a": {
+                        "ids": [
+                            "V8ztGA6Xi6W6CUTq.outputs.outcome"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "JJVnqO7hDT5jdqlT.outputs.value"
+                        ]
+                    },
+                    "in": {
+                        "ids": [
+                            "V8ztGA6Xi6W6CUTq.outputs.out"
+                        ]
+                    }
+                },
+                "key": "gte-number",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "UgiiUJ7lGqyMvBBR.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 547,
+                    "y": 254.25
+                },
+                "type": "logic"
+            },
+            {
+                "_id": "JJVnqO7hDT5jdqlT",
+                "inputs": {
+                    "input": {
+                        "value": "criticalSuccess"
+                    }
+                },
+                "key": "success-value",
+                "outputs": {
+                    "value": {
+                        "ids": [
+                            "0dYDnfB9hW9JFkvc.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 329.5,
+                    "y": 439.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "UgiiUJ7lGqyMvBBR",
+                "inputs": {
+                    "entry": {
+                        "value": "item:damage:category:physical"
+                    },
+                    "in": {
+                        "ids": [
+                            "0dYDnfB9hW9JFkvc.outputs.true"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "zoqWaeOW7pre1V1k.outputs.output"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "mH8stn18EBI75fjT.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 737,
+                    "y": 239.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "zoqWaeOW7pre1V1k",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "list"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "UgiiUJ7lGqyMvBBR.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 603.5,
+                    "y": 376.25
+                },
+                "target": "V8ztGA6Xi6W6CUTq.outputs.options",
+                "type": "variable"
+            }
+        ]
+    },
+    {
+        "_id": "laiH5IsBUVqep3FM",
+        "description": "TRIGGERTROVE.ScarsOfSteel.Trigger.DamageTaken.Description",
+        "folder": "Feats & Features",
+        "name": "Scars of Steel (Damage Taken)",
+        "nodes": [
+            {
+                "_id": "PP3iBeucKjsYx9JB",
+                "key": "damage-taken",
+                "outputs": {
+                    "options": {
+                        "ids": [
+                            "fmC6CCE5OTrjCQbN.inputs.list"
+                        ]
+                    },
+                    "out": {
+                        "ids": [
+                            "fmC6CCE5OTrjCQbN.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 350,
+                    "y": 200
+                },
+                "type": "event"
+            },
+            {
+                "_id": "y0o4LqbGXAZ3hyZj",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "fmC6CCE5OTrjCQbN.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.ht9DI0M08okeF6Nq"
+                    }
+                },
+                "key": "has-item",
+                "outputs": {
+                    "item": {
+                        "ids": [
+                            "S7POV3MYvZ3d5xQN.inputs.item"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "S7POV3MYvZ3d5xQN.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 779,
+                    "y": 201.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "fmC6CCE5OTrjCQbN",
+                "inputs": {
+                    "entry": {
+                        "value": "item:damage:category:physical"
+                    },
+                    "in": {
+                        "ids": [
+                            "PP3iBeucKjsYx9JB.outputs.out"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "PP3iBeucKjsYx9JB.outputs.options"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "y0o4LqbGXAZ3hyZj.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 540.5,
+                    "y": 200.25
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "S7POV3MYvZ3d5xQN",
+                "inputs": {
+                    "in": {
+                        "ids": [
+                            "y0o4LqbGXAZ3hyZj.outputs.true"
+                        ]
+                    },
+                    "item": {
+                        "ids": [
+                            "y0o4LqbGXAZ3hyZj.outputs.item"
+                        ]
+                    }
+                },
+                "key": "delete-item",
+                "position": {
+                    "x": 1018,
+                    "y": 200.75
+                },
+                "type": "action"
+            }
+        ]
+    }
+]
