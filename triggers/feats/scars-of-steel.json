@@ -3,7 +3,7 @@
     "triggers": [
         {
             "_id": "j6nkT4tE3AAFEDnz",
-            "description": "",
+            "description": "TRIGGERTROVE.ScarsOfSteel.Trigger.AttackRolled.Description",
             "folder": "Feats & Features",
             "name": "Scars of Steel (Attack Rolled)",
             "nodes": [
@@ -469,7 +469,7 @@
         },
         {
             "_id": "laiH5IsBUVqep3FM",
-            "description": "",
+            "description": "TRIGGERTROVE.ScarsOfSteel.Trigger.DamageTaken.Description",
             "folder": "Feats & Features",
             "name": "Scars of Steel (Damage Taken)",
             "nodes": [
