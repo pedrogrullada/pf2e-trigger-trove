@@ -118,6 +118,13 @@
                 }
             }
         },
+        "EngulfAndSwallowWhole": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": "When a creature that is @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]{Engulfed} or @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]{Swallowed Whole} ends their turn, roll that ability's damage."
+                }
+            }
+        },
         "ExtravagantParry": {
             "Trigger": {
                 "AttackRolled": {

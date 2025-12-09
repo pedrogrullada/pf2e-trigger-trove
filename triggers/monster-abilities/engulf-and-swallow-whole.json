@@ -1,0 +1,482 @@
+{
+    "_id": "JVZG9aq55xwM30SK",
+    "description": "@Localize[TRIGGERTROVE.EngulfAndSwallowWhole.Trigger.TurnEnded.Description]",
+    "folder": "Monster Abilities",
+    "name": "Engulf & Swallow Whole (Turn Ended)",
+    "nodes": [
+        {
+            "_id": "hXSNhohhA9Vm442J",
+            "key": "turn-end",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "H274f7hPenHEL4gB.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "H274f7hPenHEL4gB",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "hXSNhohhA9Vm442J.outputs.out"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.bestiary-effects.Item.1cbIe569UD6paXad"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "item": {
+                    "ids": [
+                        "upUcadNeyH5xDcmp.inputs.input"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "upUcadNeyH5xDcmp.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 536,
+                "y": 198.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "upUcadNeyH5xDcmp",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": true,
+                        "group": "",
+                        "key": "origin",
+                        "label": "Effect Origin",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "H274f7hPenHEL4gB.outputs.true"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "H274f7hPenHEL4gB.outputs.item"
+                    ]
+                }
+            },
+            "key": "item-splitter",
+            "outputs": {
+                "origin": {
+                    "ids": [
+                        "xFK0VE92lfCqOErr.inputs.target"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "xFK0VE92lfCqOErr.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 795,
+                "y": 216.23000000000002
+            },
+            "type": "splitter"
+        },
+        {
+            "_id": "xFK0VE92lfCqOErr",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "upUcadNeyH5xDcmp.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "upUcadNeyH5xDcmp.outputs.origin"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "f9wmBFXKoZVadixn.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "uemwsTQIZjaT17hi.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 997,
+                "y": 199.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "f9wmBFXKoZVadixn",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "xFK0VE92lfCqOErr.outputs.false"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "7cNVMJvQUvwIBTw2.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "item": {
+                    "ids": [
+                        "5lxhVWxrM54uWsuG.inputs.item",
+                        "Vw9tc34ojwblf799.inputs.item"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "5lxhVWxrM54uWsuG.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1230,
+                "y": 302.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "uemwsTQIZjaT17hi",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "xFK0VE92lfCqOErr.outputs.true"
+                    ]
+                },
+                "item": {
+                    "ids": [
+                        "p3Ngp9he5Aufsci6.outputs.output"
+                    ]
+                }
+            },
+            "key": "extract-formula",
+            "outputs": {
+                "formula": {
+                    "ids": [
+                        "0nAkMo3ebDYfNQRK.inputs.formula"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "0nAkMo3ebDYfNQRK.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1476.5,
+                "y": -118.5
+            },
+            "type": "action"
+        },
+        {
+            "_id": "5lxhVWxrM54uWsuG",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "f9wmBFXKoZVadixn.outputs.true"
+                    ]
+                },
+                "item": {
+                    "ids": [
+                        "f9wmBFXKoZVadixn.outputs.item"
+                    ]
+                }
+            },
+            "key": "extract-formula",
+            "outputs": {
+                "formula": {
+                    "ids": [
+                        "qqPfV8lNvD3SnPG9.inputs.formula"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "qqPfV8lNvD3SnPG9.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1473.5,
+                "y": 300.5
+            },
+            "type": "action"
+        },
+        {
+            "_id": "p3Ngp9he5Aufsci6",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "item"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "uemwsTQIZjaT17hi.inputs.item",
+                        "1ONWZbqsegpAvamG.inputs.item"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1386.5,
+                "y": 69.25
+            },
+            "target": "xFK0VE92lfCqOErr.outputs.item",
+            "type": "variable"
+        },
+        {
+            "_id": "0nAkMo3ebDYfNQRK",
+            "inputs": {
+                "formula": {
+                    "ids": [
+                        "uemwsTQIZjaT17hi.outputs.formula"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "uemwsTQIZjaT17hi.outputs.out"
+                    ]
+                },
+                "roll": {
+                    "ids": [
+                        "1ONWZbqsegpAvamG.outputs.roll"
+                    ]
+                }
+            },
+            "key": "roll-damage",
+            "position": {
+                "x": 1729,
+                "y": -117.25
+            },
+            "type": "action"
+        },
+        {
+            "_id": "qqPfV8lNvD3SnPG9",
+            "inputs": {
+                "formula": {
+                    "ids": [
+                        "5lxhVWxrM54uWsuG.outputs.formula"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "5lxhVWxrM54uWsuG.outputs.out"
+                    ]
+                },
+                "roll": {
+                    "ids": [
+                        "Vw9tc34ojwblf799.outputs.roll"
+                    ]
+                }
+            },
+            "key": "roll-damage",
+            "position": {
+                "x": 1822,
+                "y": 302.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "1ONWZbqsegpAvamG",
+            "inputs": {
+                "item": {
+                    "ids": [
+                        "p3Ngp9he5Aufsci6.outputs.output"
+                    ]
+                },
+                "origin": {
+                    "ids": [
+                        "pIrpdTDALTIrG5Ii.outputs.output"
+                    ]
+                }
+            },
+            "key": "roll-data",
+            "outputs": {
+                "roll": {
+                    "ids": [
+                        "0nAkMo3ebDYfNQRK.inputs.roll"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1613.5,
+                "y": 56.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "pIrpdTDALTIrG5Ii",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "1ONWZbqsegpAvamG.inputs.origin"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1395.5,
+                "y": 112.25
+            },
+            "target": "upUcadNeyH5xDcmp.outputs.origin",
+            "type": "variable"
+        },
+        {
+            "_id": "7cNVMJvQUvwIBTw2",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "f9wmBFXKoZVadixn.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1075.5,
+                "y": 400.25
+            },
+            "target": "upUcadNeyH5xDcmp.outputs.origin",
+            "type": "variable"
+        },
+        {
+            "_id": "Vw9tc34ojwblf799",
+            "inputs": {
+                "item": {
+                    "ids": [
+                        "f9wmBFXKoZVadixn.outputs.item"
+                    ]
+                },
+                "origin": {
+                    "ids": [
+                        "PzfvAtiKiMB0WEmB.outputs.output"
+                    ]
+                }
+            },
+            "key": "roll-data",
+            "outputs": {
+                "roll": {
+                    "ids": [
+                        "qqPfV8lNvD3SnPG9.inputs.roll"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1584.5,
+                "y": 466.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "PzfvAtiKiMB0WEmB",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "Vw9tc34ojwblf799.inputs.origin"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1443.5,
+                "y": 520.25
+            },
+            "target": "upUcadNeyH5xDcmp.outputs.origin",
+            "type": "variable"
+        }
+    ],
+    "variables": {
+        "upUcadNeyH5xDcmp.outputs.origin": {
+            "global": false,
+            "label": "Effect Origin",
+            "locked": false,
+            "type": "target"
+        },
+        "xFK0VE92lfCqOErr.outputs.item": {
+            "global": false,
+            "label": "Swallow Whole",
+            "locked": false,
+            "type": "item"
+        }
+    }
+}
