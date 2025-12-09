@@ -103,6 +103,13 @@
                 }
             }
         },
+        "EnduringMight": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Remove @UUID[Compendium.pf2e.spells-srd.Item.eG1fBodYwolaXK98]{Enduring Might}'s effect when damage is taken."
+                }
+            }
+        },
         "EnergyShot": {
             "Item": {
                 "ResourceLabel": "Energy Shots"
@@ -136,6 +143,13 @@
             "Trigger": {
                 "DamageTaken": {
                     "Description": "When a creature is brought to 0 Hit Points from a finisher, if the damage origin has @UUID[Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ]{Finishing Follow-Through}, it gains panache."
+                }
+            }
+        },
+        "FlameBarrier": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Remove @UUID[Compendium.pf2e.spells-srd.Item.y7Tusv3CieZktkkV]{Flame Barrier}'s effect when damage is taken."
                 }
             }
         },
@@ -467,6 +481,13 @@
             "Trigger": {
                 "AttackRolled": {
                     "Description": "Roll @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorns}' damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent creature."
+                }
+            }
+        },
+        "WarningStripes": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "If a character affected by @UUID[Compendium.pf2e.spells-srd.Item.D4kArD91fFiREvC6]{Warning Stripes}, as determined by the presence of its auxiliary effect, is hit with a melee unarmed attack, roll the spell's damage."
                 }
             }
         },

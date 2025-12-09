@@ -1,0 +1,166 @@
+{
+    "_id": "fysjPwRThEP9GJIG",
+    "description": "@Localize[TRIGGERTROVE.FlameBarrier.Trigger.DamageTaken.Description]",
+    "folder": "Spells",
+    "name": "Flame Barrier (Damage Taken)",
+    "nodes": [
+        {
+            "_id": "MmGp1TvW92NM7pYD",
+            "key": "damage-taken",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "0N9wriEPIw55tIZQ.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "0N9wriEPIw55tIZQ",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "MmGp1TvW92NM7pYD.outputs.out"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.spell-effects.Item.UXdt1WVA66oZOoZS"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "QzIg84Yf6p2XmoKG.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 534,
+                "y": 200.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "DOF6i2ExcDKh60VJ",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "QzIg84Yf6p2XmoKG.outputs.true"
+                    ]
+                },
+                "item": {
+                    "ids": [
+                        "8WQbwadEsQQF1HDG.outputs.output"
+                    ]
+                }
+            },
+            "key": "delete-item",
+            "position": {
+                "x": 953,
+                "y": 204.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "QzIg84Yf6p2XmoKG",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "0N9wriEPIw55tIZQ.outputs.true"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "ANUcYzd2M8sqchuf.outputs.output"
+                    ]
+                }
+            },
+            "key": "boolean-splitter",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "DOF6i2ExcDKh60VJ.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 769,
+                "y": 219.75
+            },
+            "type": "splitter"
+        },
+        {
+            "_id": "ANUcYzd2M8sqchuf",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "boolean"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "QzIg84Yf6p2XmoKG.inputs.input"
+                    ]
+                }
+            },
+            "position": {
+                "x": 641.5,
+                "y": 330.25
+            },
+            "target": "MmGp1TvW92NM7pYD.outputs.heal",
+            "type": "variable"
+        },
+        {
+            "_id": "8WQbwadEsQQF1HDG",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "item"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "DOF6i2ExcDKh60VJ.inputs.item"
+                    ]
+                }
+            },
+            "position": {
+                "x": 860.5,
+                "y": 321.25
+            },
+            "target": "0N9wriEPIw55tIZQ.outputs.item",
+            "type": "variable"
+        }
+    ],
+    "variables": {
+        "0N9wriEPIw55tIZQ.outputs.item": {
+            "global": false,
+            "label": "Effect",
+            "locked": false,
+            "type": "item"
+        }
+    }
+}
