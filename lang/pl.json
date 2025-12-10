@@ -30,6 +30,13 @@
                 "Description": "Wyślij zdolność na czat. Nazwa zdolności i jej pochodzenie są ustawione w wyzwalaczu nadrzędnym."
             }
         },
+        "BrutalBeating": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Kiedy postać z @UUID[Compendium.pf2e.feats-srd.Item.DYUlMxh7TDgEh9xB]{Brutalnym Laniem} zadaje celowi obrażenia krytyczne, cel ten staje się przestraszony 1."
+                }
+            }
+        },
         "ChampionsResistance": {
             "Trigger": {
                 "DamageTaken": {
@@ -66,6 +73,13 @@
                 }
             }
         },
+        "Crushing": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy postać zadaje krytyczne trafienie, a jej broń posiada runę @UUID[Compendium.pf2e.equipment-srd.Item.JY8X4RSfg6xIqAC9] {Miażdżenia} lub @UUID[Compendium.pf2e.equipment-srd.Item.t6SSQYruLsDWj5Tl]{Większego Miażdżenia}, jej cel staje się niezdarny i osłabiony."
+                }
+            }
+        },
         "Defend": {
             "Trigger": {
                 "CombatantJoined": {
@@ -89,6 +103,13 @@
                 }
             }
         },
+        "DistractingShot": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Kiedy postać z @UUID[Compendium.pf2e.feats-srd.Item.BQrhDpLIp9zjbjEP]{Rozpraszającym Strzałem} zadaje krytyczne trafienie swojej naznaczonej ofiary lub trafia ją dwukrotnie w tej samej turze, cel ten staje się odsłonięty aż do początku następnej tury postaci, która wywołała ten efekt.</p><p>Jeśli postać posiada @UUID[Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA]{Większy Rozpraszający Strzał}, efekt ten trwa do końca jej następnej tury, a jej naznaczona ofiara staje się odsłonięta do początku swojej następnej tury po trafieniu.</p>"
+                }
+            }
+        },
         "DreadFlickering": {
             "Trigger": {
                 "TurnEnded": {
@@ -100,6 +121,13 @@
             "Trigger": {
                 "AttackRolled": {
                     "Description": "Kiedy atak krytycznie nie trafia w cel korzystający z @UUID[Compendium.pf2e.feats-srd.Item.C5tSxOwDILefw4zq], cel ten zyskuje polot do końca swojej następnej tury."
+                }
+            }
+        },
+        "EnduringMight": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Usuń efekt @UUID[Compendium.pf2e.spells-srd.Item.eG1fBodYwolaXK98] po otrzymaniu obrażeń."
                 }
             }
         },
@@ -118,10 +146,24 @@
                 }
             }
         },
+        "EngulfAndSwallowWhole": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": "Kiedy stworzenie, które jest @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]{Pochłonięte} lub @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]{Połknięty w Całości}, rzut kośćmi, aby określić obrażenia zadawane przez tę zdolność."
+                }
+            }
+        },
         "ExtravagantParry": {
             "Trigger": {
                 "AttackRolled": {
                     "Description": "Kiedy atak nie trafi w cel korzystający z @UUID[Compendium.pf2e.feats-srd.Item.WcY7H7mRiK2VDquV], cel ten zyskuje polot do końca swojej następnej tury."
+                }
+            }
+        },
+        "Fearsome": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy postać zadaje krytyczne trafienie, a jej broń posiada runę @UUID[Compendium.pf2e.equipment-srd.Item.P6v2AtJw7AUwaDzf]{Przerażenia} lub @UUID[Compendium.pf2e.equipment-srd.Item.uz3JCjRvkE44jxMd]{Większego Przerażenia}, jej cel zostaje odpowiednio przestraszony 1 lub 2."
                 }
             }
         },
@@ -132,10 +174,25 @@
                 }
             }
         },
+        "FlameBarrier": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Usuń efekt @UUID[Compendium.pf2e.spells-srd.Item.y7Tusv3CieZktkkV] po otrzymaniu obrażeń."
+                }
+            }
+        },
         "FlashyDodge": {
             "Trigger": {
                 "AttackRolled": {
                     "Description": "Kiedy atak nie trafi w cel korzystający z @UUID[Compendium.pf2e.feats-srd.Item.TnYHtN9gQASqOnii], cel ten zyskuje polot do końca swojej następnej tury."
+                }
+            }
+        },
+        "Fortification": {
+            "Trigger": {
+                "AttackRolled": {
+                    "CreateChatMessage": "<p><strong>Notatka Trigger Trove</strong> W przypadku sukcesu, dzięki runie <em>fortyfikacji</em>, to krytyczne trafienie staje się zwykłym trafieniem!</p>",
+                    "Description": "Kiedy postać, której zbroja posiada runę @UUID[Compendium.pf2e.equipment-srd.Item.8buhFcGwuaJRrp0y]{Fortyfikacji} lub @UUID[Compendium.pf2e.equipment-srd.Item.ujWnpVMkbTljMGN9]{Większej Fortyfikacji}, należy wykonać rzut na odpowiedni ST."
                 }
             }
         },
@@ -285,10 +342,39 @@
                 }
             }
         },
+        "Rooting": {
+            "Item": {
+                "DescriptionOverride": {
+                    "Basic": "Cel ataku zostaje unieruchomiony ([[/act escape dc=23]]) i staje się niezdarny 1 na czas trwania unieruchomienia.",
+                    "Greater": "Cel ataku zostaje unieruchomiony ([[/act escape dc=28]]) i staje się niezdarny 1 na czas trwania unieruchomienia.",
+                    "Major": "Cel ataku zostaje unieruchomiony ([[/act escape dc=34]]) i staje się niezdarny 1 na czas trwania unieruchomienia.",
+                    "True": "Cel ataku zostaje unieruchomiony ([[/act escape dc=41]]) i staje się niezdarny 1 na czas trwania unieruchomienia."
+                }
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy postać zadaje trafienie krytyczne, a jej broń posiada runę @UUID[Compendium.pf2e.equipment-srd.Item.yGgsoSA8EaaEsYZn]{Zakorzenienia}, jej cel zostaje unieruchomiony i staje się niezdarny."
+                }
+            }
+        },
         "SafeElements": {
             "Subtrigger": {
                 "Check": {
                     "Addendum": "Istota może nie podlegać działaniu tego wyzwalacza poprzez przeciągnięcie na nią efektu @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd] <strong>z karty kinetyka</strong>."
+                }
+            }
+        },
+        "ScarsOfSteel": {
+            "Label": "Stalowe Blizny",
+            "Trigger": {
+                "AttackRolled": {
+                    "AwaitConfirmation": {
+                        "Prompt": "Przeciwnik zadaje ci krytyczne trafienie, które powoduje obrażenia fizyczne. Czy użyjesz Stalowych Blizn?"
+                    },
+                    "Description": "Kiedy postać w stanie szału zostanie krytycznie trafiona atakiem zadającym obrażenia fizyczne, a postać ta posiada @UUID[Compendium.pf2e.feats-srd.Item.j8ycCi7ghTtpRjEW] z dostępnymi użyciami, potwierdź, czy użyje ona tej zdolności, a jeśli tak, dodaj efekt pomocniczy, który umożliwia jej odporność."
+                },
+                "DamageTaken": {
+                    "Description": "Kiedy postać z efektem pomocniczym nadanym przez wyzwalacz Stalowych Blizn (rzut na atak) otrzymuje obrażenia fizyczne, usuń ten efekt pomocniczy."
                 }
             }
         },
@@ -432,6 +518,13 @@
                 }
             }
         },
+        "UnbalancingBlow": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Kiedy postać z @UUID[Compendium.pf2e.feats-srd.Item.4f65nrWVzTG8Njj8]{Destabilizującym Ciosem} zadaje obrażenia krytyczne, cel staje się odsłonięty wobec ataków tej postaci do końca swojej następnej tury."
+                }
+            }
+        },
         "UnbalancingFinisher": {
             "Trigger": {
                 "DamageTaken": {
@@ -446,6 +539,20 @@
             "Trigger": {
                 "AttackRolled": {
                     "Description": "Rzuć na cel obrażenia zaklęcia @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL], gdy cel zaklęcia zostanie trafiony atakiem bez broni lub atakiem wręcz przez sąsiednią istotę."
+                }
+            }
+        },
+        "Vitalizing": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Kiedy postać z runą @UUID[Compendium.pf2e.equipment-srd.Item.LwQb7ryTC8FlOXgX]{Witalności} zadaje krytyczne trafienie nieumarłemu, ten nieumarły zostaje osłabiony o 1 do końca następnej tury tej postaci.</p><p>Jeśli postać posiada runę @UUID[Compendium.pf2e.equipment-srd.Item.oVrVzML63VFvVfKk]{Większej Witalności}, nieumarły otrzymuje osłabienie 1 i postać staje się ogłupiona.</p>"
+                }
+            }
+        },
+        "WarningStripes": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>Jeśli postać dotknięta efektem @UUID[Compendium.pf2e.spells-srd.Item.D4kArD91fFiREvC6]{Ostrzegawczych Pasków}, zgodnie z obecnością jego efektu pomocniczego, zostanie trafiona atakiem wręcz bez broni, rzuć kostką, aby określić obrażenia zaklęcia.</p><p>Aby ten wyzwalacz zadziałał, odbiorca zaklęcia musi mieć zastosowany efekt @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.0qQV2XvX2kaOt8yj]. Efekt ten musi być powiązany z opisem zaklęcia, aby ułatwić dostęp do niego i ustawić prawidłowe dane źródłowe.</p>"
                 }
             }
         },
