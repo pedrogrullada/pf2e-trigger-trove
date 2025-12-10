@@ -30,6 +30,13 @@
                 "Description": "Send an ability to chat. The ability's slug and its origin are set in the parent trigger."
             }
         },
+        "BrutalBeating": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "When a character with @UUID[Compendium.pf2e.feats-srd.Item.DYUlMxh7TDgEh9xB]{Brutal Beating} deals critical hit damage to a target, that target becomes frightened 1."
+                }
+            }
+        },
         "ChampionsResistance": {
             "Trigger": {
                 "DamageTaken": {

@@ -1,0 +1,199 @@
+{
+    "_id": "C03nHY9JCSlKoeAS",
+    "description": "@Localize[TRIGGERTROVE.BrutalBeating.Trigger.DamageTaken.Description]",
+    "folder": "Feats & Features",
+    "name": "Brutal Beating (Damage Taken)",
+    "nodes": [
+        {
+            "_id": "vAkzbgpwzmu2v3nZ",
+            "key": "damage-taken",
+            "outputs": {
+                "other": {
+                    "ids": [
+                        "1Kjj7u89tVneQe4e.inputs.target"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "1Kjj7u89tVneQe4e.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "1Kjj7u89tVneQe4e",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "vAkzbgpwzmu2v3nZ.outputs.out"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "vAkzbgpwzmu2v3nZ.outputs.other"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feats-srd.Item.DYUlMxh7TDgEh9xB"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "3gOSi3sImMIE2Olk.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 542,
+                "y": 199.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "ZzTGpA1XQNxiS8Y0",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "list"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "3gOSi3sImMIE2Olk.inputs.list"
+                    ]
+                }
+            },
+            "position": {
+                "x": 644.5,
+                "y": 333.25
+            },
+            "target": "vAkzbgpwzmu2v3nZ.outputs.options",
+            "type": "variable"
+        },
+        {
+            "_id": "pZa1IeY5wxaaqKFH",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "3gOSi3sImMIE2Olk.outputs.true"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "0f6e0vNZeAfqwy39.outputs.output"
+                    ]
+                }
+            },
+            "key": "boolean-splitter",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "w8CT8cE9z1SvSaXQ.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 1007,
+                "y": 215.75
+            },
+            "type": "splitter"
+        },
+        {
+            "_id": "0f6e0vNZeAfqwy39",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "boolean"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "pZa1IeY5wxaaqKFH.inputs.input"
+                    ]
+                }
+            },
+            "position": {
+                "x": 882.5,
+                "y": 331.25
+            },
+            "target": "vAkzbgpwzmu2v3nZ.outputs.negated",
+            "type": "variable"
+        },
+        {
+            "_id": "w8CT8cE9z1SvSaXQ",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "in": {
+                    "ids": [
+                        "pZa1IeY5wxaaqKFH.outputs.false"
+                    ]
+                }
+            },
+            "key": "add-condition",
+            "position": {
+                "x": 1193,
+                "y": 199.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "3gOSi3sImMIE2Olk",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "1Kjj7u89tVneQe4e.outputs.true"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "ZzTGpA1XQNxiS8Y0.outputs.output"
+                    ]
+                },
+                "predicate": {
+                    "value": "[\n  \"check:outcome:critical-success\",\n  {\n    \"not\": \"self:condition:frightened\"\n  }\n]"
+                }
+            },
+            "key": "match-predicate",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "pZa1IeY5wxaaqKFH.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 772.5,
+                "y": 199.25
+            },
+            "type": "condition"
+        }
+    ]
+}
