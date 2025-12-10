@@ -89,6 +89,13 @@
                 }
             }
         },
+        "DistractingShot": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>When a character with @UUID[Compendium.pf2e.feats-srd.Item.BQrhDpLIp9zjbjEP]{Distracting Shot} critically hits their hunted prey, or if they hit their hunted prey twice in the same turn, that target becomes off-guard until the start of the triggering character's next turn.</p><p>If the character has @UUID[Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA]{Greater Distracting Shot}, this effect lasts until the end of their next turn instead, and their hunted prey becomes off-guard until the start of their next turn on a hit.</p>"
+                }
+            }
+        },
         "DreadFlickering": {
             "Trigger": {
                 "TurnEnded": {

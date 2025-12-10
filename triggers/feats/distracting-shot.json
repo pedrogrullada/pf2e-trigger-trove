@@ -1,0 +1,780 @@
+{
+    "_id": "pvmAlf4nCPtTSXsE",
+    "description": "@Localize[TRIGGERTROVE.DistractingShot.Trigger.AttackRolled.Description]",
+    "folder": "Feats & Features",
+    "name": "Distracting Shot (Attack Rolled)",
+    "nodes": [
+        {
+            "_id": "HjVvHkQtvy1dcLQi",
+            "key": "attack-roll",
+            "outputs": {
+                "options": {
+                    "ids": [
+                        "b8ga5gay4YxaFdpH.inputs.list"
+                    ]
+                },
+                "out": {
+                    "ids": [
+                        "i7PVSzyRvqjTJClV.inputs.in"
+                    ]
+                },
+                "outcome": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "REhlnZNQrrSxDyHq",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "b8ga5gay4YxaFdpH.outputs.true"
+                    ]
+                },
+                "input": {
+                    "ids": [
+                        "EERFovh4ffCtoH8l.outputs.output"
+                    ]
+                }
+            },
+            "key": "success-splitter",
+            "outputs": {
+                "criticalSuccess": {
+                    "ids": [
+                        "mPBZwS44kV8dLsCe.inputs.in"
+                    ]
+                },
+                "success": {
+                    "ids": [
+                        "XyaoZYmWnls6Tt9N.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1005.5,
+                "y": 216.75
+            },
+            "type": "splitter"
+        },
+        {
+            "_id": "gSAMCns4L0vjcWX4",
+            "inputs": {
+                "effect": {
+                    "ids": [
+                        "SsOMSngeVOWC9XlY.outputs.output"
+                    ]
+                },
+                "identifier": {
+                    "value": "distracting-shot-hit"
+                },
+                "in": {
+                    "ids": [
+                        "XyaoZYmWnls6Tt9N.outputs.false"
+                    ]
+                }
+            },
+            "key": "add-temporary",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "kWmxTECMvRU3gFPb.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1562,
+                "y": 146.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "XyaoZYmWnls6Tt9N",
+            "inputs": {
+                "identifier": {
+                    "value": "distracting-shot-hit"
+                },
+                "in": {
+                    "ids": [
+                        "REhlnZNQrrSxDyHq.outputs.success"
+                    ]
+                },
+                "trigger": {
+                    "value": "pvmAlf4nCPtTSXsE"
+                }
+            },
+            "key": "has-temporary",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "gSAMCns4L0vjcWX4.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "Vnu0p8It29Ldy0lW.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1274,
+                "y": 107.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "A3FxDe8J0Kjjtubo",
+            "inputs": {
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "origin": {
+                    "ids": [
+                        "zzsr2f2YDAjWRhIa.outputs.output"
+                    ]
+                },
+                "value": {
+                    "value": 0
+                }
+            },
+            "key": "duration-unit",
+            "outputs": {
+                "duration": {
+                    "ids": [
+                        "NEjns9SVA84pBHUZ.inputs.duration"
+                    ]
+                }
+            },
+            "position": {
+                "x": 549,
+                "y": 45
+            },
+            "type": "value"
+        },
+        {
+            "_id": "b8ga5gay4YxaFdpH",
+            "inputs": {
+                "entry": {
+                    "value": "target:mark:hunted-prey"
+                },
+                "in": {
+                    "ids": [
+                        "i7PVSzyRvqjTJClV.outputs.true"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "HjVvHkQtvy1dcLQi.outputs.options"
+                    ]
+                }
+            },
+            "key": "contains-entry",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "REhlnZNQrrSxDyHq.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 770,
+                "y": 200.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "EERFovh4ffCtoH8l",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "number"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "REhlnZNQrrSxDyHq.inputs.input"
+                    ]
+                }
+            },
+            "position": {
+                "x": 892.5,
+                "y": 351.25
+            },
+            "target": "HjVvHkQtvy1dcLQi.outputs.outcome",
+            "type": "variable"
+        },
+        {
+            "_id": "i7PVSzyRvqjTJClV",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "HjVvHkQtvy1dcLQi.outputs.out"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feats-srd.Item.BQrhDpLIp9zjbjEP"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "b8ga5gay4YxaFdpH.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 539,
+                "y": 200.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "NEjns9SVA84pBHUZ",
+            "inputs": {
+                "duration": {
+                    "ids": [
+                        "A3FxDe8J0Kjjtubo.outputs.duration"
+                    ]
+                },
+                "image": {
+                    "value": "icons/skills/ranged/person-archery-bow-attack-gray.webp"
+                },
+                "label": {
+                    "value": "Effect: Distracting Shot (Hit Counter)"
+                }
+            },
+            "key": "effect-data",
+            "position": {
+                "x": 806.5,
+                "y": 44
+            },
+            "type": "value"
+        },
+        {
+            "_id": "SsOMSngeVOWC9XlY",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "effect"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "gSAMCns4L0vjcWX4.inputs.effect"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1391.5,
+                "y": 269.25
+            },
+            "target": "NEjns9SVA84pBHUZ.outputs.effect",
+            "type": "variable"
+        },
+        {
+            "_id": "H8GnA6AmYZv4mB57",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "Vnu0p8It29Ldy0lW.outputs.out"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "bZz7UOD4Vqgc07tS.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "3RTeRPtNY0OiV1fE.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1808,
+                "y": -17.25
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "3RTeRPtNY0OiV1fE",
+            "inputs": {
+                "condition": {
+                    "value": "off-guard"
+                },
+                "effect": {
+                    "ids": [
+                        "LrXHio44VXH0tFEf.outputs.output"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "8rwo0AplOjpNxHjk.outputs.true",
+                        "H8GnA6AmYZv4mB57.outputs.true"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "KwnDXmshRB2mVkAz.outputs.output"
+                    ]
+                }
+            },
+            "key": "add-condition",
+            "position": {
+                "x": 2344,
+                "y": 115.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "3VqCsfK4O3IgqMys",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "bZz7UOD4Vqgc07tS.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 2036.5,
+                "y": 502.25
+            },
+            "target": "HjVvHkQtvy1dcLQi.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "bZz7UOD4Vqgc07tS",
+            "inputs": {
+                "condition": {
+                    "value": "off-guard"
+                },
+                "effect": {
+                    "ids": [
+                        "yAg3FMXY3ZYt8TbG.outputs.output"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "H8GnA6AmYZv4mB57.outputs.false",
+                        "8rwo0AplOjpNxHjk.outputs.false",
+                        "kWmxTECMvRU3gFPb.outputs.true"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "3VqCsfK4O3IgqMys.outputs.output"
+                    ]
+                }
+            },
+            "key": "add-condition",
+            "position": {
+                "x": 2186,
+                "y": 338.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "vMkMGpEU4V2vXe14",
+            "inputs": {
+                "duration": {
+                    "ids": [
+                        "aEHaCTHmEK4YmGmG.outputs.duration"
+                    ]
+                },
+                "image": {
+                    "value": "icons/skills/ranged/person-archery-bow-attack-gray.webp"
+                },
+                "label": {
+                    "value": "Effect: Off-Guard from Distracting Shot (Turn Start)"
+                }
+            },
+            "key": "effect-data",
+            "position": {
+                "x": 805.5,
+                "y": -105
+            },
+            "type": "value"
+        },
+        {
+            "_id": "nq5Gq2AI4EFg9kX8",
+            "inputs": {
+                "expiry": {
+                    "ids": [],
+                    "value": "turn-end"
+                },
+                "origin": {
+                    "ids": [
+                        "zzsr2f2YDAjWRhIa.outputs.output"
+                    ]
+                },
+                "value": {
+                    "ids": [],
+                    "value": 1
+                }
+            },
+            "key": "duration-unit",
+            "outputs": {
+                "duration": {
+                    "ids": [
+                        "opC0art91ovgQtgj.inputs.duration"
+                    ]
+                }
+            },
+            "position": {
+                "x": 550,
+                "y": -250
+            },
+            "type": "value"
+        },
+        {
+            "_id": "aEHaCTHmEK4YmGmG",
+            "inputs": {
+                "expiry": {
+                    "ids": [],
+                    "value": "turn-start"
+                },
+                "origin": {
+                    "ids": [
+                        "zzsr2f2YDAjWRhIa.outputs.output"
+                    ]
+                },
+                "value": {
+                    "ids": [],
+                    "value": 1
+                }
+            },
+            "key": "duration-unit",
+            "outputs": {
+                "duration": {
+                    "ids": [
+                        "vMkMGpEU4V2vXe14.inputs.duration"
+                    ]
+                }
+            },
+            "position": {
+                "x": 550,
+                "y": -104
+            },
+            "type": "value"
+        },
+        {
+            "_id": "opC0art91ovgQtgj",
+            "inputs": {
+                "duration": {
+                    "ids": [
+                        "nq5Gq2AI4EFg9kX8.outputs.duration"
+                    ]
+                },
+                "image": {
+                    "ids": [],
+                    "value": "icons/skills/ranged/person-archery-bow-attack-gray.webp"
+                },
+                "label": {
+                    "ids": [],
+                    "value": "Effect: Off-Guard from Distracting Shot (Turn End)"
+                }
+            },
+            "key": "effect-data",
+            "position": {
+                "x": 806.5,
+                "y": -247
+            },
+            "type": "value"
+        },
+        {
+            "_id": "LrXHio44VXH0tFEf",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "effect"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "3RTeRPtNY0OiV1fE.inputs.effect"
+                    ]
+                }
+            },
+            "position": {
+                "x": 2185.5,
+                "y": 242.25
+            },
+            "target": "opC0art91ovgQtgj.outputs.effect",
+            "type": "variable"
+        },
+        {
+            "_id": "yAg3FMXY3ZYt8TbG",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "effect"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "bZz7UOD4Vqgc07tS.inputs.effect"
+                    ]
+                }
+            },
+            "position": {
+                "x": 2015.5,
+                "y": 462.25
+            },
+            "target": "vMkMGpEU4V2vXe14.outputs.effect",
+            "type": "variable"
+        },
+        {
+            "_id": "8rwo0AplOjpNxHjk",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "mPBZwS44kV8dLsCe.outputs.out"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "bZz7UOD4Vqgc07tS.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "3RTeRPtNY0OiV1fE.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1521,
+                "y": 323.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "KwnDXmshRB2mVkAz",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "inputs": {},
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "3RTeRPtNY0OiV1fE.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 2197.5,
+                "y": 282.25
+            },
+            "target": "HjVvHkQtvy1dcLQi.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "Vnu0p8It29Ldy0lW",
+            "inputs": {
+                "identifier": {
+                    "value": "distracting-shot-hit"
+                },
+                "in": {
+                    "ids": [
+                        "XyaoZYmWnls6Tt9N.outputs.true"
+                    ]
+                },
+                "trigger": {
+                    "value": "pvmAlf4nCPtTSXsE"
+                }
+            },
+            "key": "remove-temporary",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "H8GnA6AmYZv4mB57.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1560,
+                "y": -15.25
+            },
+            "type": "action"
+        },
+        {
+            "_id": "mPBZwS44kV8dLsCe",
+            "inputs": {
+                "identifier": {
+                    "ids": [],
+                    "value": "distracting-shot-hit"
+                },
+                "in": {
+                    "ids": [
+                        "REhlnZNQrrSxDyHq.outputs.criticalSuccess"
+                    ]
+                },
+                "trigger": {
+                    "ids": [],
+                    "value": "pvmAlf4nCPtTSXsE"
+                }
+            },
+            "key": "remove-temporary",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "8rwo0AplOjpNxHjk.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1270,
+                "y": 322.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "zzsr2f2YDAjWRhIa",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "nq5Gq2AI4EFg9kX8.inputs.origin",
+                        "aEHaCTHmEK4YmGmG.inputs.origin",
+                        "A3FxDe8J0Kjjtubo.inputs.origin"
+                    ]
+                }
+            },
+            "position": {
+                "x": 384.5,
+                "y": -77.75
+            },
+            "target": "HjVvHkQtvy1dcLQi.outputs.this",
+            "type": "variable"
+        },
+        {
+            "_id": "kWmxTECMvRU3gFPb",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "gSAMCns4L0vjcWX4.outputs.out"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "bZz7UOD4Vqgc07tS.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1786,
+                "y": 146.75
+            },
+            "type": "condition"
+        }
+    ],
+    "variables": {
+        "NEjns9SVA84pBHUZ.outputs.effect": {
+            "global": false,
+            "label": "Counter Effect",
+            "type": "effect"
+        },
+        "opC0art91ovgQtgj.outputs.effect": {
+            "global": false,
+            "label": "Turn End Effect",
+            "type": "effect"
+        },
+        "vMkMGpEU4V2vXe14.outputs.effect": {
+            "global": false,
+            "label": "Turn Start Effect",
+            "type": "effect"
+        }
+    }
+}
