@@ -73,6 +73,13 @@
                 }
             }
         },
+        "Crushing": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "When a character critically hits and their weapon has a @UUID[Compendium.pf2e.equipment-srd.Item.JY8X4RSfg6xIqAC9]{Crushing} or @UUID[Compendium.pf2e.equipment-srd.Item.t6SSQYruLsDWj5Tl]{Greater Crushing} rune, their target becomes clumsy and enfeebled."
+                }
+            }
+        },
         "Defend": {
             "Trigger": {
                 "CombatantJoined": {
