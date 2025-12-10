@@ -1,3 +1,7 @@
+## 0.10.2
+- **Updated Triggers**
+  - Actually add auxiliary effect for _rooting_ rune 
+
 ## 0.10.1
 - **Updated Triggers**
   - Fix typo in _fortification_ rune trigger description
