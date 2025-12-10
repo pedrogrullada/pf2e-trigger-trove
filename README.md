@@ -6,7 +6,7 @@ Enable the module and you will see this module's triggers. They are **disabled**
 
 Here's the list of abilities currently handled by triggers in some capacity.
 <details>
-  <summary>The List (As of 0.9.1)</summary>
+  <summary>The List (As of 0.10.0)</summary>
 
    - Core Rules
      - Defend
@@ -14,13 +14,20 @@ Here's the list of abilities currently handled by triggers in some capacity.
    - Equipment
      - Critical Specialization
         + Bow, Spear, and Sword only
+     - Crushing
+     - Fearsome
+     - Fortification
+     - Rooting
+     - Vitalizing
    - Feats & Features
      - Air Aura Junction
      - Amulet's Abeyance
      - Aura of Courage
+     - Brutal Beating
      - Champion's Resistance
         + Special Glimpse of Redemption support
      - Crowned in Tempest's Fury
+     - Distracting Shot
      - Elegant Buckler
      - Energy Shot
      - Extravagant Parry
@@ -33,6 +40,7 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - One Shot, One Kill
      - Ravel of Thorns
      - Revitalizing Finisher
+     - Scars of Steel
      - Scout's Warning
      - Selfish Shield
         - Ongoing Selfishness
@@ -43,16 +51,20 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Swashbuckler Finisher
      - Sword and Pistol
      - Taunt
+     - Unbalancing Blow
      - Unbalancing Finisher
      - Thermal Nimbus
    - Monster Abilities
-     - Dread Flickering 
+     - Dread Flickering
+     - Engulf & Swallow Whole 
      - Frightful Presence
      - Gibbering
      - Intense Heat
      - Stench
    - Spells
-     - Diamond Dust 
+     - Diamond Dust
+     - Enduring Might
+     - Flame Barrier 
      - Incendiary Aura
      - Mirror Image
      - Mountain Resilience
@@ -63,6 +75,7 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Spirit Link
      - Trickster's Mirrors
      - Vibrant Thorns
+     - Warning Stripes
      - Warping Pull
 </details>
 
