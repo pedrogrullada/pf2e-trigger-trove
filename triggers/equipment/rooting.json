@@ -1,0 +1,577 @@
+{
+    "_id": "iBQutygM5RtqG6h1",
+    "description": "@Localize[TRIGGERTROVE.Rooting.Trigger.AttackRolled.Description]",
+    "folder": "Equipment",
+    "name": "Rooting (Attack Rolled)",
+    "nodes": [
+        {
+            "_id": "IFE9vVv3nTHKBLMP",
+            "key": "attack-roll",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "DgwxIKTxwL8JAxZE.inputs.in"
+                    ]
+                },
+                "outcome": {
+                    "ids": [
+                        "DgwxIKTxwL8JAxZE.inputs.a"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "DgwxIKTxwL8JAxZE",
+            "inputs": {
+                "a": {
+                    "ids": [
+                        "IFE9vVv3nTHKBLMP.outputs.outcome"
+                    ]
+                },
+                "b": {
+                    "ids": [
+                        "RXJviq7oqhbm9hq1.outputs.value"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "IFE9vVv3nTHKBLMP.outputs.out"
+                    ]
+                }
+            },
+            "key": "gte-number",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "zNHjB3hDvsdgquGd.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 545.5,
+                "y": 215.75
+            },
+            "type": "logic"
+        },
+        {
+            "_id": "RXJviq7oqhbm9hq1",
+            "inputs": {
+                "input": {
+                    "value": "criticalSuccess"
+                }
+            },
+            "key": "success-value",
+            "outputs": {
+                "value": {
+                    "ids": [
+                        "DgwxIKTxwL8JAxZE.inputs.b"
+                    ]
+                }
+            },
+            "position": {
+                "x": 332.5,
+                "y": 442.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "f58TmKJtS4yagR2Q",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "list"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "zNHjB3hDvsdgquGd.inputs.list",
+                        "5Yc7SacmZaBPvYeI.inputs.list"
+                    ]
+                }
+            },
+            "position": {
+                "x": 577.5,
+                "y": 348.25
+            },
+            "target": "IFE9vVv3nTHKBLMP.outputs.options",
+            "type": "variable"
+        },
+        {
+            "_id": "keVgmsFCl4sbDqBQ",
+            "custom": {
+                "inputs": [
+                    {
+                        "custom": true,
+                        "group": "choices",
+                        "key": "JMduNLsKooSToYJF",
+                        "label": "Variety",
+                        "type": "text"
+                    }
+                ]
+            },
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "zNHjB3hDvsdgquGd.outputs.true"
+                    ]
+                },
+                "JMduNLsKooSToYJF": {
+                    "value": "rollOption:rooting-variety:0"
+                },
+                "target": {
+                    "ids": [
+                        "Rt5WLQS2xjlAoDAs.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.IkF3dIsiDOQDjMod"
+                }
+            },
+            "key": "create-item",
+            "position": {
+                "x": 1025.3899999999999,
+                "y": 121.74000000000001
+            },
+            "type": "action"
+        },
+        {
+            "_id": "zNHjB3hDvsdgquGd",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:rooting"
+                },
+                "in": {
+                    "ids": [
+                        "DgwxIKTxwL8JAxZE.outputs.true"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "f58TmKJtS4yagR2Q.outputs.output"
+                    ]
+                }
+            },
+            "key": "contains-entry",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "5Yc7SacmZaBPvYeI.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "keVgmsFCl4sbDqBQ.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 739.5,
+                "y": 196.25
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "5Yc7SacmZaBPvYeI",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:greater-rooting"
+                },
+                "in": {
+                    "ids": [
+                        "zNHjB3hDvsdgquGd.outputs.false"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "f58TmKJtS4yagR2Q.outputs.output"
+                    ]
+                }
+            },
+            "key": "contains-entry",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "Z59BqkGlxj6xbFJA.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "5gSJt2PmnAFnVmud.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 739.5,
+                "y": 381.25
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "Z59BqkGlxj6xbFJA",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:major-rooting"
+                },
+                "in": {
+                    "ids": [
+                        "5Yc7SacmZaBPvYeI.outputs.false"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "LxjQpGcAaH6hNtP6.outputs.output"
+                    ]
+                }
+            },
+            "key": "contains-entry",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "ihzCfYvfTw879iWO.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "XOpDbI2GM5xg2R0I.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 736.5,
+                "y": 547.25
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "ihzCfYvfTw879iWO",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:true-rooting"
+                },
+                "in": {
+                    "ids": [
+                        "Z59BqkGlxj6xbFJA.outputs.false"
+                    ]
+                },
+                "list": {
+                    "ids": [
+                        "LxjQpGcAaH6hNtP6.outputs.output"
+                    ]
+                }
+            },
+            "key": "contains-entry",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "PtvK1UWltxYfkVQC.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 730.5,
+                "y": 714.25
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "LzIDPAH2dMVo8RiZ",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "5gSJt2PmnAFnVmud.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 876.5,
+                "y": 512.25
+            },
+            "target": "IFE9vVv3nTHKBLMP.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "5gSJt2PmnAFnVmud",
+            "custom": {
+                "inputs": [
+                    {
+                        "custom": true,
+                        "group": "choices",
+                        "key": "JMduNLsKooSToYJF",
+                        "label": "Variety",
+                        "type": "text"
+                    }
+                ],
+                "outputs": [],
+                "outs": []
+            },
+            "inputs": {
+                "duplicate": {
+                    "ids": [],
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "5Yc7SacmZaBPvYeI.outputs.true"
+                    ]
+                },
+                "JMduNLsKooSToYJF": {
+                    "ids": [],
+                    "value": "rollOption:rooting-variety:1"
+                },
+                "target": {
+                    "ids": [
+                        "LzIDPAH2dMVo8RiZ.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.IkF3dIsiDOQDjMod"
+                }
+            },
+            "key": "create-item",
+            "position": {
+                "x": 1026.3899999999999,
+                "y": 333.74
+            },
+            "type": "action"
+        },
+        {
+            "_id": "XOpDbI2GM5xg2R0I",
+            "custom": {
+                "inputs": [
+                    {
+                        "custom": true,
+                        "group": "choices",
+                        "key": "JMduNLsKooSToYJF",
+                        "label": "Variety",
+                        "type": "text"
+                    }
+                ],
+                "outputs": [],
+                "outs": []
+            },
+            "inputs": {
+                "duplicate": {
+                    "ids": [],
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "Z59BqkGlxj6xbFJA.outputs.true"
+                    ]
+                },
+                "JMduNLsKooSToYJF": {
+                    "ids": [],
+                    "value": "rollOption:rooting-variety:2"
+                },
+                "target": {
+                    "ids": [
+                        "5XxOrtGCHU5mmh9d.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.IkF3dIsiDOQDjMod"
+                }
+            },
+            "key": "create-item",
+            "position": {
+                "x": 1025.3899999999999,
+                "y": 544.74
+            },
+            "type": "action"
+        },
+        {
+            "_id": "PtvK1UWltxYfkVQC",
+            "custom": {
+                "inputs": [
+                    {
+                        "custom": true,
+                        "group": "choices",
+                        "key": "JMduNLsKooSToYJF",
+                        "label": "Variety",
+                        "type": "text"
+                    }
+                ],
+                "outputs": [],
+                "outs": []
+            },
+            "inputs": {
+                "duplicate": {
+                    "ids": [],
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "ihzCfYvfTw879iWO.outputs.true"
+                    ]
+                },
+                "JMduNLsKooSToYJF": {
+                    "ids": [],
+                    "value": "rollOption:rooting-variety:3"
+                },
+                "target": {
+                    "ids": [
+                        "bn9Gubgy0D4E4pGo.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.IkF3dIsiDOQDjMod"
+                }
+            },
+            "key": "create-item",
+            "position": {
+                "x": 1024.3899999999999,
+                "y": 756.74
+            },
+            "type": "action"
+        },
+        {
+            "_id": "bn9Gubgy0D4E4pGo",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "PtvK1UWltxYfkVQC.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 880.5,
+                "y": 891.25
+            },
+            "target": "IFE9vVv3nTHKBLMP.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "5XxOrtGCHU5mmh9d",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "XOpDbI2GM5xg2R0I.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 874.5,
+                "y": 679.25
+            },
+            "target": "IFE9vVv3nTHKBLMP.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "Rt5WLQS2xjlAoDAs",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "keVgmsFCl4sbDqBQ.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 878.5,
+                "y": 329.25
+            },
+            "target": "IFE9vVv3nTHKBLMP.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "LxjQpGcAaH6hNtP6",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "list"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "Z59BqkGlxj6xbFJA.inputs.list",
+                        "ihzCfYvfTw879iWO.inputs.list"
+                    ]
+                }
+            },
+            "position": {
+                "x": 578.5,
+                "y": 681.25
+            },
+            "target": "IFE9vVv3nTHKBLMP.outputs.options",
+            "type": "variable"
+        }
+    ]
+}

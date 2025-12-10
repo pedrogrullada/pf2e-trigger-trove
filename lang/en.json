@@ -327,6 +327,21 @@
                 }
             }
         },
+        "Rooting": {
+            "Item": {
+                "DescriptionOverride": {
+                    "Basic": "The attack target becomes immobilized ([[/act escape dc=23]]) and clumsy 1 for as long as the immobilization lasts.",
+                    "Greater": "The attack target becomes immobilized ([[/act escape dc=28]]) and clumsy 1 for as long as the immobilization lasts.",
+                    "Major": "The attack target becomes immobilized ([[/act escape dc=34]]) and clumsy 1 for as long as the immobilization lasts.",
+                    "True": "The attack target becomes immobilized ([[/act escape dc=41]]) and clumsy 1 for as long as the immobilization lasts."
+                }
+            },
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "When a character critically hits and their weapon has a @UUID[Compendium.pf2e.equipment-srd.Item.yGgsoSA8EaaEsYZn]{Rooting} rune, their target becomes immobilized and clumsy."
+                }
+            }
+        },
         "SafeElements": {
             "Subtrigger": {
                 "Check": {
