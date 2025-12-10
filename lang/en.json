@@ -534,6 +534,13 @@
                 }
             }
         },
+        "Vitalizing": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "<p>When a character with a @UUID[Compendium.pf2e.equipment-srd.Item.LwQb7ryTC8FlOXgX]{Vitalizing} rune critically hits an undead, that undead becomes enfeebled 1 until the end of that character's next turn.</p><p>If the character has a @UUID[Compendium.pf2e.equipment-srd.Item.oVrVzML63VFvVfKk]{Greater Vitalizing} rune, that character becomes enfeebled 1 and stupefied 1 instead.</p>"
+                }
+            }
+        },
         "WarningStripes": {
             "Trigger": {
                 "AttackRolled": {
