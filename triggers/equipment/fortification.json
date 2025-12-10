@@ -1,0 +1,386 @@
+{
+    "_id": "dE9EA8Brga9Xndpt",
+    "description": "@Localize[TRIGGERTROVE.Fortification.Trigger.AttackRolled.Description]",
+    "folder": "Equipment",
+    "name": "Fortification (Attack Rolled)",
+    "nodes": [
+        {
+            "_id": "RsZFc5myn7ObM4Ja",
+            "key": "attack-roll",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "NXL40xnZZwSex4Si.inputs.in"
+                    ]
+                },
+                "outcome": {
+                    "ids": [
+                        "NXL40xnZZwSex4Si.inputs.a"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "NXL40xnZZwSex4Si",
+            "inputs": {
+                "a": {
+                    "ids": [
+                        "RsZFc5myn7ObM4Ja.outputs.outcome"
+                    ]
+                },
+                "b": {
+                    "ids": [
+                        "cjawCXgBCH09CGou.outputs.value"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "RsZFc5myn7ObM4Ja.outputs.out"
+                    ]
+                }
+            },
+            "key": "gte-number",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "ME299APgRcxYiP62.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 543,
+                "y": 215.75
+            },
+            "type": "logic"
+        },
+        {
+            "_id": "cjawCXgBCH09CGou",
+            "inputs": {
+                "input": {
+                    "ids": [],
+                    "value": "criticalSuccess"
+                }
+            },
+            "key": "success-value",
+            "outputs": {
+                "value": {
+                    "ids": [
+                        "NXL40xnZZwSex4Si.inputs.b"
+                    ]
+                }
+            },
+            "position": {
+                "x": 346.5,
+                "y": 440.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "ME299APgRcxYiP62",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "NXL40xnZZwSex4Si.outputs.true"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e.feats-srd.Item.oYzkopbXguiwfNTx"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "C6Iro9r7Shj8auz7.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 734,
+                "y": 199.75
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "EqYgzP9PHUudVx5H",
+            "inputs": {
+                "dc": {
+                    "ids": [],
+                    "value": 17
+                },
+                "in": {
+                    "ids": [
+                        "C6Iro9r7Shj8auz7.outputs.true"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "d557oYWjaK1O9UEp.outputs.output"
+                    ]
+                }
+            },
+            "key": "roll-flat",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "i6h6qj4wc9bf5vGI.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1250,
+                "y": 81.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "d557oYWjaK1O9UEp",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "EqYgzP9PHUudVx5H.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1251.5,
+                "y": 214.25
+            },
+            "target": "RsZFc5myn7ObM4Ja.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "w53h4L9IJeZ4Ko34",
+            "inputs": {
+                "dc": {
+                    "ids": [],
+                    "value": 14
+                },
+                "in": {
+                    "ids": [
+                        "sly3tV3IksMZCzAG.outputs.true"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "XlYD4URIRgMVDCIE.outputs.output"
+                    ]
+                }
+            },
+            "key": "roll-flat",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "i6h6qj4wc9bf5vGI.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1445,
+                "y": 283.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "XlYD4URIRgMVDCIE",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "w53h4L9IJeZ4Ko34.inputs.target",
+                        "i6h6qj4wc9bf5vGI.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1447.5,
+                "y": 420.25
+            },
+            "target": "RsZFc5myn7ObM4Ja.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "i6h6qj4wc9bf5vGI",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "EqYgzP9PHUudVx5H.outputs.out",
+                        "w53h4L9IJeZ4Ko34.outputs.out"
+                    ]
+                },
+                "message": {
+                    "value": "TRIGGERTROVE.Fortification.Trigger.AttackRolled.CreateChatMessage"
+                },
+                "target": {
+                    "ids": [
+                        "XlYD4URIRgMVDCIE.outputs.output"
+                    ]
+                }
+            },
+            "key": "create-message",
+            "position": {
+                "x": 1686,
+                "y": 256.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "C6Iro9r7Shj8auz7",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "ME299APgRcxYiP62.outputs.false"
+                    ]
+                },
+                "option": {
+                    "ids": [],
+                    "value": "armor:rune:property:fortification"
+                },
+                "target": {
+                    "ids": [
+                        "qKGpSDB66tF02rJD.outputs.output"
+                    ]
+                }
+            },
+            "key": "has-option",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "sly3tV3IksMZCzAG.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": [
+                        "EqYgzP9PHUudVx5H.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 973.5,
+                "y": 226.25
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "qKGpSDB66tF02rJD",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "C6Iro9r7Shj8auz7.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 822.5,
+                "y": 336.25
+            },
+            "target": "RsZFc5myn7ObM4Ja.outputs.other",
+            "type": "variable"
+        },
+        {
+            "_id": "sly3tV3IksMZCzAG",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "C6Iro9r7Shj8auz7.outputs.false"
+                    ]
+                },
+                "option": {
+                    "ids": [],
+                    "value": "armor:rune:property:greater-fortification"
+                },
+                "target": {
+                    "ids": [
+                        "F4GJRCmFLZf7FmOs.outputs.output"
+                    ]
+                }
+            },
+            "key": "has-option",
+            "outputs": {
+                "true": {
+                    "ids": [
+                        "w53h4L9IJeZ4Ko34.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1210.5,
+                "y": 284.25
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "F4GJRCmFLZf7FmOs",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "sly3tV3IksMZCzAG.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1062.5,
+                "y": 375.25
+            },
+            "target": "RsZFc5myn7ObM4Ja.outputs.other",
+            "type": "variable"
+        }
+    ]
+}
