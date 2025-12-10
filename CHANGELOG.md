@@ -1,3 +1,7 @@
+## 0.10.3
+- **Localization**
+  - (Lioheart) Updated polish localization
+
 ## 0.10.2
 - **Updated Triggers**
   - Actually add auxiliary effect for _rooting_ rune 
