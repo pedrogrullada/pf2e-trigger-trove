@@ -1,3 +1,30 @@
+## 0.10.0
+- **New Triggers**
+  - Brutal Beating
+    - _Damage Taken:_ When a character with Brutal Beating deals critical hit damage to a target, that target becomes frightened 1.
+  - Crushing, Fearsome, Rooting, and Vitalizing runes
+    - _Attack Rolled:_ On a critical hit, apply these runes respective conditions and effects.
+  - Distracting Shot
+    - _Damage Taken:_ When a character with Distracting Shot critically hits their hunted prey, or if they hit their hunted prey twice in the same turn, that target becomes off-guard until the start of the triggering character's next turn. If the character has Greater Distracting Shot, this effect lasts until the end of their next turn instead, and their hunted prey becomes off-guard until the start of their next turn on a hit.
+  - Engulf & Swallow Whole
+    - _Turn Ended:_ When a creature that is Engulfed or Swallowed Whole ends their turn, roll that ability's damage. 
+  - Enduring Might and Flame Barrier
+    - _Damage Taken:_ Remove these spells' effects when damage is taken.
+  - Fortification
+    - _Attack Rolled:_ On a critical hit against a character with this rune, roll a flat check.
+  - Scars of Steel
+    - _Attack Rolled:_ When a raging character is critically hit by an attack that deals physical damage, and that character has Scars of Steel with available uses left, confirm whether they will use the ability and add an auxiliary effect that enables its resistance if so.
+    - _Damage Taken:_ Remove the previously mentioned effect.
+  - Unbalancing Blow
+    - _Damage Taken:_ When a character with Unbalancing Blow deals critical hit damage, the target becomes off-guard against the character's attacks until the end of their next turn.
+  - Warning Stripes:
+  	- _Attack Rolled:_ If a character affected by Warning Stripes, as determined by the presence of its auxiliary effect, is hit with a melee unarmed attack, roll the spell's damage.
+- **Updated Triggers**
+  - Shields of the Spirit
+    - Now accounts for origin's sanctification!  
+- **Localization**
+  - (Lioheart) Update polish localization.
+
 ## 0.9.1
 - **New Trigger**
   - Diamond Dust
