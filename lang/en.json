@@ -192,7 +192,7 @@
             "Trigger": {
                 "AttackRolled": {
                     "CreateChatMessage": "<p><strong>Trigger Trove Note</strong> On a success, this critical hit becomes a normal hit thanks to your <em>fortification</em> rune!</p>",
-                    "Description": "When a character whose armor has a @UUID[Compendium.pf2e.equipment-srd.Item.8buhFcGwuaJRrp0y]{Fortification} or greater @UUID[Compendium.pf2e.equipment-srd.Item.ujWnpVMkbTljMGN9]{Greater Fortification} rune etched onto it is critically hit, roll a flat check with the appropriate DC."
+                    "Description": "When a character whose armor has a @UUID[Compendium.pf2e.equipment-srd.Item.8buhFcGwuaJRrp0y]{Fortification} or @UUID[Compendium.pf2e.equipment-srd.Item.ujWnpVMkbTljMGN9]{Greater Fortification} rune etched onto it is critically hit, roll a flat check with the appropriate DC."
                 }
             }
         },
