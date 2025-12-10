@@ -1,3 +1,8 @@
+## 0.10.1
+- **Updated Triggers**
+  - Fix typo in _fortification_ rune trigger description
+  - Provide further information in _warning stripes_ trigger description
+
 ## 0.10.0
 - **New Triggers**
   - Brutal Beating
