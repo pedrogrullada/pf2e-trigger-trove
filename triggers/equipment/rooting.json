@@ -62,6 +62,7 @@
             "_id": "RXJviq7oqhbm9hq1",
             "inputs": {
                 "input": {
+                    "ids": [],
                     "value": "criticalSuccess"
                 }
             },
@@ -120,10 +121,13 @@
                         "label": "Variety",
                         "type": "text"
                     }
-                ]
+                ],
+                "outputs": [],
+                "outs": []
             },
             "inputs": {
                 "duplicate": {
+                    "ids": [],
                     "value": false
                 },
                 "in": {
@@ -132,6 +136,7 @@
                     ]
                 },
                 "JMduNLsKooSToYJF": {
+                    "ids": [],
                     "value": "rollOption:rooting-variety:0"
                 },
                 "target": {
@@ -140,7 +145,8 @@
                     ]
                 },
                 "uuid": {
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.IkF3dIsiDOQDjMod"
+                    "ids": [],
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.y5hYMrNRGW0apVTo"
                 }
             },
             "key": "create-item",
@@ -154,6 +160,7 @@
             "_id": "zNHjB3hDvsdgquGd",
             "inputs": {
                 "entry": {
+                    "ids": [],
                     "value": "item:rune:property:rooting"
                 },
                 "in": {
@@ -190,6 +197,7 @@
             "_id": "5Yc7SacmZaBPvYeI",
             "inputs": {
                 "entry": {
+                    "ids": [],
                     "value": "item:rune:property:greater-rooting"
                 },
                 "in": {
@@ -226,6 +234,7 @@
             "_id": "Z59BqkGlxj6xbFJA",
             "inputs": {
                 "entry": {
+                    "ids": [],
                     "value": "item:rune:property:major-rooting"
                 },
                 "in": {
@@ -262,6 +271,7 @@
             "_id": "ihzCfYvfTw879iWO",
             "inputs": {
                 "entry": {
+                    "ids": [],
                     "value": "item:rune:property:true-rooting"
                 },
                 "in": {
@@ -354,7 +364,7 @@
                 },
                 "uuid": {
                     "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.IkF3dIsiDOQDjMod"
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.y5hYMrNRGW0apVTo"
                 }
             },
             "key": "create-item",
@@ -400,7 +410,7 @@
                 },
                 "uuid": {
                     "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.IkF3dIsiDOQDjMod"
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.y5hYMrNRGW0apVTo"
                 }
             },
             "key": "create-item",
@@ -446,7 +456,7 @@
                 },
                 "uuid": {
                     "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.IkF3dIsiDOQDjMod"
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.y5hYMrNRGW0apVTo"
                 }
             },
             "key": "create-item",

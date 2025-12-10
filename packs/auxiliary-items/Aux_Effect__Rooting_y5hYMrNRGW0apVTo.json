@@ -1,0 +1,127 @@
+{
+  "name": "Aux Effect: Rooting",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.953,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.equipment-srd.Item.yGgsoSA8EaaEsYZn]{Rooting} rune and its varieties.</p>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "rules": [
+      {
+        "adjustName": false,
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "value": "Compendium.pf2e.equipment-srd.Item.yGgsoSA8EaaEsYZn"
+          },
+          {
+            "value": "Compendium.pf2e.equipment-srd.Item.T5KifnxLN3vWuUJa"
+          },
+          {
+            "value": "Compendium.pf2e.equipment-srd.Item.h4n9PdQrOkCrJ9sY"
+          },
+          {
+            "value": "Compendium.pf2e.equipment-srd.Item.aXqCFjLSSjC3a1Mq"
+          }
+        ],
+        "rollOption": "rooting-variety"
+      },
+      {
+        "key": "ItemAlteration",
+        "mode": "override",
+        "property": "description",
+        "itemId": "{item|id}",
+        "value": [
+          {
+            "text": "TRIGGERTROVE.Rooting.Item.DescriptionOverride.Basic",
+            "predicate": [
+              "rooting-variety:rooting"
+            ]
+          },
+          {
+            "text": "TRIGGERTROVE.Rooting.Item.DescriptionOverride.Greater",
+            "predicate": [
+              "rooting-variety:rooting-greater"
+            ]
+          },
+          {
+            "text": "TRIGGERTROVE.Rooting.Item.DescriptionOverride.Major",
+            "predicate": [
+              "rooting-variety:rooting-major"
+            ]
+          },
+          {
+            "text": "TRIGGERTROVE.Rooting.Item.DescriptionOverride.True",
+            "predicate": [
+              "rooting-variety:rooting-true"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe",
+        "inMemoryOnly": true
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm",
+        "inMemoryOnly": true
+      }
+    ],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 7
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": null,
+    "fromSpell": false,
+    "context": null
+  },
+  "_id": "y5hYMrNRGW0apVTo",
+  "img": "icons/magic/nature/root-vine-entangled-humanoid.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "lBn9t2oEMiiJjyzv": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.8.0"
+  },
+  "_key": "!items!y5hYMrNRGW0apVTo"
+}
