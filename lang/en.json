@@ -552,7 +552,7 @@
         "WarningStripes": {
             "Trigger": {
                 "AttackRolled": {
-                    "Description": "If a character affected by @UUID[Compendium.pf2e.spells-srd.Item.D4kArD91fFiREvC6]{Warning Stripes}, as determined by the presence of its auxiliary effect, is hit with a melee unarmed attack, roll the spell's damage."
+                    "Description": "<p>If a character affected by @UUID[Compendium.pf2e.spells-srd.Item.D4kArD91fFiREvC6]{Warning Stripes}, as determined by the presence of its auxiliary effect, is hit with a melee unarmed attack, roll the spell's damage.</p><p>For this trigger to work, the spell recipient needs @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.0qQV2XvX2kaOt8yj]{Aux Effect: Warning Stripes} applied to them. This effect must be linked in the spell's description for ease of access and to set the correct origin data on it.</p>"
                 }
             }
         },
