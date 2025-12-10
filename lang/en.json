@@ -481,6 +481,13 @@
                 }
             }
         },
+        "UnbalancingBlow": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "When a character with @UUID[Compendium.pf2e.feats-srd.Item.4f65nrWVzTG8Njj8]{Unbalancing Blow} deals critical hit damage, the target becomes off-guard against the character's attacks until the end of their next turn."
+                }
+            }
+        },
         "UnbalancingFinisher": {
             "Trigger": {
                 "DamageTaken": {
