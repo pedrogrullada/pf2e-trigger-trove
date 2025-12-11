@@ -328,6 +328,13 @@
                 }
             }
         },
+        "RegaliaInitiate": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": "When a character with @UUID[Compendium.pf2e.classfeatures.Item.3eRkOQa7h1MWmzBh]{Initiate Benefit (Regalia)} ends their turn, reduce the frightened value of all frightened allies within their inspiring aura by 1."
+                }
+            }
+        },
         "ReplenishmentOfWar": {
             "Trigger": {
                 "DamageTaken": {
