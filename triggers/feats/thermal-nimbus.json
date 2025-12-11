@@ -264,7 +264,7 @@
   },
   {
     "_id": "GnfoPAyuICXUktw2",
-    "description": "<p>@Localize[TRIGGERTROVE.ThermalNimbus.Trigger.AuraEntered.Description]</p><p>@Localize[TRIGGERTROVE.SafeElements.Subtrigger.Check.Addendum]</p>",
+    "description": "<p>@Localize[TRIGGERTROVE.ThermalNimbus.Trigger.TurnStarted.Description]</p><p>@Localize[TRIGGERTROVE.SafeElements.Subtrigger.Check.Addendum]</p>",
     "folder": "Feats & Features",
     "name": "Thermal Nimbus (Turn Started)",
     "nodes": [
