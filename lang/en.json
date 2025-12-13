@@ -455,6 +455,13 @@
                 }
             }
         },
+        "StaggeringFire": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "When a character using @UUID[Compendium.pf2e.feats-srd.Item.fngPLUD4Sltho2kn]{Staggering Fire} hits or critically hits with a ranged Strike using a weapon in the bow group, the attack target receives the appropriate speed penalty."
+                }
+            }
+        },
         "SteamKnight": {
             "Trigger": {
                 "TurnStarted": {
