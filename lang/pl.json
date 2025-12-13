@@ -328,6 +328,13 @@
                 }
             }
         },
+        "RegaliaInitiate": {
+            "Trigger": {
+                "TurnEnded": {
+                    "Description": "Kiedy postać z @UUID[Compendium.pf2e.classfeatures.Item.3eRkOQa7h1MWmzBh] kończy swoją turę, zmniejsz wartość Przestraszony wszystkich przestraszonych sojuszników znajdujących się w jej inspirującej aurze o 1."
+                }
+            }
+        },
         "ReplenishmentOfWar": {
             "Trigger": {
                 "DamageTaken": {
