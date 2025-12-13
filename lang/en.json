@@ -7,6 +7,13 @@
                 }
             }
         },
+        "AldoriSwordlord": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "When a character with the @UUID[Compendium.pf2e.feats-srd.Item.BEgz2GnG2MKmmaZX]{Aldori Swordlord} feat hits or critically hits with an attack using an <em>aldori dueling sword</em>, they receive the corresponding number of temporary Hit Points."
+                }
+            }
+        },
         "AmuletsAbeyance": {
             "Trigger": {
                 "DamageTaken": {
