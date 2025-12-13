@@ -342,6 +342,13 @@
                 }
             }
         },
+        "RejuvenatingTouch": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "When the target of a @UUID[Compendium.pf2e.spells-srd.Item.zNN9212H2FGfM7VS]{Lay on Hands} spell is healed by the spell and its origin has the @UUID[Compendium.pf2e.feats-srd.Item.xZrTjUub7V09sXZF]{Rejuvenating Touch} feat, that target receives its temporary Hit Points."
+                }
+            }
+        },
         "ReplenishmentOfWar": {
             "Trigger": {
                 "DamageTaken": {
