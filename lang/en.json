@@ -37,6 +37,13 @@
                 "Description": "Send an ability to chat. The ability's slug and its origin are set in the parent trigger."
             }
         },
+        "BlindingAura": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "When a character starts their turn within a @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.ePJcp2ADOjJYYQ5Q]{Shining Child}'s Blinding Aura, send that ability to chat, as well as its immunity effect."
+                }
+            }
+        },
         "BrutalBeating": {
             "Trigger": {
                 "DamageTaken": {
@@ -54,6 +61,13 @@
                             "Title": "Weight of Guilt"
                         }
                     }
+                }
+            }
+        },
+        "CommandingPresence": {
+            "Trgger": {
+                "AuraEntered": {
+                    "Description": "When a character enters a @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.Ccjg08wVRO43YlTf]{Jann}'s Commanding Presence, send that ability to chat and add an immunity effect to the triggering character. If that character is a non-jann genie, also add an auxiliary effect with a penalty to their save."
                 }
             }
         },

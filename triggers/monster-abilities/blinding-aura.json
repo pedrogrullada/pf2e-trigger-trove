@@ -1,0 +1,343 @@
+{
+    "_id": "gYp4kM0g8mQsKdns",
+    "description": "<p>@Localize[TRIGGERTROVE.BlindingAura.Trigger.TurnStarted.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
+    "folder": "Monster Abilities",
+    "name": "Blinding Aura (Turn Started)",
+    "nodes": [
+        {
+            "_id": "YRESqNtDAMZVeH1L",
+            "key": "turn-start",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "SdMeUnH2ZD43FwU9.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "type": "event"
+        },
+        {
+            "_id": "SdMeUnH2ZD43FwU9",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "YRESqNtDAMZVeH1L.outputs.out"
+                    ]
+                },
+                "slug": {
+                    "ids": [
+                        "F88Wv1bKQAcuyPi1.outputs.value"
+                    ]
+                },
+                "targets": {
+                    "ids": [],
+                    "value": "all"
+                }
+            },
+            "key": "inside-aura",
+            "outputs": {
+                "source": {
+                    "ids": []
+                },
+                "true": {
+                    "ids": [
+                        "ulZERH0BXhc9J1ck.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 537,
+                "y": 192.23000000000002
+            },
+            "type": "condition"
+        },
+        {
+            "_id": "Nccg7C7GtUf4cxmE",
+            "inputs": {
+                "HhJmeS0b8RW20qN7": {
+                    "ids": [
+                        "9ZwMvw5NhzPO2O6e.outputs.output"
+                    ]
+                },
+                "in": {
+                    "ids": [
+                        "7JyKbPOpwY5sUOZ8.outputs.out"
+                    ]
+                },
+                "PAWVQq94ohe1Jwsj": {
+                    "ids": [
+                        "rs7Cse3fl8OOf0Pu.outputs.output"
+                    ]
+                }
+            },
+            "key": "subtrigger-node",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "JMMR3jw4YOrANxjm.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1332,
+                "y": 222.23000000000002
+            },
+            "target": "KbmYmEm4rMEedc9N",
+            "type": "subtrigger"
+        },
+        {
+            "_id": "F88Wv1bKQAcuyPi1",
+            "inputs": {
+                "input": {
+                    "ids": [],
+                    "value": "blinding-aura"
+                }
+            },
+            "key": "text-value",
+            "outputs": {
+                "value": {
+                    "ids": [
+                        "SdMeUnH2ZD43FwU9.inputs.slug"
+                    ]
+                }
+            },
+            "position": {
+                "x": 317.5,
+                "y": 307.25
+            },
+            "type": "value"
+        },
+        {
+            "_id": "9ZwMvw5NhzPO2O6e",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "text"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "Nccg7C7GtUf4cxmE.inputs.HhJmeS0b8RW20qN7"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1201.5,
+                "y": 413.25
+            },
+            "target": "F88Wv1bKQAcuyPi1.outputs.value",
+            "type": "variable"
+        },
+        {
+            "_id": "rs7Cse3fl8OOf0Pu",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "Nccg7C7GtUf4cxmE.inputs.PAWVQq94ohe1Jwsj"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1197.5,
+                "y": 377.25
+            },
+            "target": "SdMeUnH2ZD43FwU9.outputs.source",
+            "type": "variable"
+        },
+        {
+            "_id": "7JyKbPOpwY5sUOZ8",
+            "inputs": {
+                "duplicate": {
+                    "ids": [],
+                    "value": false
+                },
+                "in": {
+                    "ids": [
+                        "ulZERH0BXhc9J1ck.outputs.false"
+                    ]
+                },
+                "target": {
+                    "ids": [
+                        "CNON9UFm7TdvYIex.outputs.output"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.yzKEjzgPxqrH2Q59"
+                }
+            },
+            "key": "create-item",
+            "outputs": {
+                "out": {
+                    "ids": [
+                        "Nccg7C7GtUf4cxmE.inputs.in"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1074,
+                "y": 219.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "JMMR3jw4YOrANxjm",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "Nccg7C7GtUf4cxmE.outputs.out"
+                    ]
+                },
+                "item": {
+                    "ids": [
+                        "kWIVsNGZemx4wu0E.outputs.output"
+                    ]
+                }
+            },
+            "key": "delete-item",
+            "outputs": {
+                "out": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 1587,
+                "y": 222.75
+            },
+            "type": "action"
+        },
+        {
+            "_id": "kWIVsNGZemx4wu0E",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "item"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "JMMR3jw4YOrANxjm.inputs.item"
+                    ]
+                }
+            },
+            "position": {
+                "x": 1459.5,
+                "y": 365.25
+            },
+            "target": "7JyKbPOpwY5sUOZ8.outputs.item",
+            "type": "variable"
+        },
+        {
+            "_id": "CNON9UFm7TdvYIex",
+            "custom": {
+                "inputs": [],
+                "outputs": [
+                    {
+                        "custom": false,
+                        "group": "",
+                        "key": "output",
+                        "type": "target"
+                    }
+                ],
+                "outs": []
+            },
+            "key": "variable-getter",
+            "outputs": {
+                "output": {
+                    "ids": [
+                        "7JyKbPOpwY5sUOZ8.inputs.target"
+                    ]
+                }
+            },
+            "position": {
+                "x": 933.5,
+                "y": 343.25
+            },
+            "target": "SdMeUnH2ZD43FwU9.outputs.source",
+            "type": "variable"
+        },
+        {
+            "_id": "ulZERH0BXhc9J1ck",
+            "inputs": {
+                "in": {
+                    "ids": [
+                        "SdMeUnH2ZD43FwU9.outputs.true"
+                    ]
+                },
+                "uuid": {
+                    "ids": [],
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.vgpkEhxc3gGQ8207"
+                }
+            },
+            "key": "has-item",
+            "outputs": {
+                "false": {
+                    "ids": [
+                        "7JyKbPOpwY5sUOZ8.inputs.in"
+                    ]
+                },
+                "true": {
+                    "ids": []
+                }
+            },
+            "position": {
+                "x": 819.5,
+                "y": 193.25
+            },
+            "type": "condition"
+        }
+    ],
+    "variables": {
+        "7JyKbPOpwY5sUOZ8.outputs.item": {
+            "global": false,
+            "label": "Addendum",
+            "locked": false,
+            "type": "item"
+        },
+        "F88Wv1bKQAcuyPi1.outputs.value": {
+            "global": false,
+            "label": "Blinding Aura",
+            "locked": false,
+            "type": "text"
+        },
+        "SdMeUnH2ZD43FwU9.outputs.source": {
+            "global": false,
+            "label": "Aura Source",
+            "locked": false,
+            "type": "target"
+        }
+    }
+}

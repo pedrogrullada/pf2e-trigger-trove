@@ -1,5 +1,5 @@
 {
-  "name": "Aux Effect: Stench Addendum",
+  "name": "Aux Effect: Blinding Aura Addendum",
   "type": "effect",
   "effects": [],
   "system": {
@@ -8,42 +8,30 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.PqGX4Dgy9siZJitH]{Stench} trigger</p><p>This effect will temporarily add a description addendum to Stench, including its immunity effect.</p>",
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.ePJcp2ADOjJYYQ5Q]{Shining Child}'s Blinding Aura</p><p>This effect will temporarily add a description addendum to Blinding Aura, including its immunity effect.</p>",
       "gm": ""
     },
     "publication": {
-      "title": "PF2E Trigger Trove",
+      "title": "PF2e Trigger Trove",
       "authors": "",
       "license": "OGL",
       "remaster": false
     },
     "rules": [
       {
-        "key": "RollOption",
-        "option": "stench-addendum",
-        "count": true
-      },
-      {
         "key": "ItemAlteration",
         "mode": "add",
         "property": "description",
         "itemType": "action",
         "predicate": [
-          "item:slug:stench",
-          "stench-addendum:1"
+          "item:slug:blinding-aura"
         ],
         "value": [
           {
-            "text": "TRIGGERTROVE.Generic.Immunity.Addendum.Success",
-            "predicate": [
-              "item:slug:stench"
-            ]
+            "text": "TRIGGERTROVE.Generic.Immunity.Addendum.Success"
           },
           {
-            "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.OA1UJSmD1YBVkS91]{Aux Effect: Stench Immunity}",
-            "predicate": [
-              "item:slug:stench"
-            ]
+            "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.vgpkEhxc3gGQ8207]{Aux Effect: Blinding Aura Immunity}"
           }
         ],
         "label": "TRIGGERTROVE.Generic.Note.Label"
@@ -55,12 +43,12 @@
       "value": []
     },
     "level": {
-      "value": 1
+      "value": 12
     },
     "duration": {
-      "value": -1,
-      "unit": "unlimited",
-      "expiry": null,
+      "value": 24,
+      "unit": "hours",
+      "expiry": "turn-start",
       "sustained": false
     },
     "tokenIcon": {
@@ -75,8 +63,8 @@
     "fromSpell": false,
     "context": null
   },
-  "_id": "QEx9wzYZkWEfc3J1",
-  "img": "icons/consumables/eggs/egg-broken-spotted-white.webp",
+  "_id": "yzKEjzgPxqrH2Q59",
+  "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
   "folder": null,
   "sort": 0,
   "ownership": {
@@ -92,5 +80,5 @@
     "systemId": "pf2e",
     "systemVersion": "7.8.0"
   },
-  "_key": "!items!QEx9wzYZkWEfc3J1"
+  "_key": "!items!yzKEjzgPxqrH2Q59"
 }

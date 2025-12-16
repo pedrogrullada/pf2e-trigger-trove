@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.abomination-vaults-bestiary.Actor.2TOXR7nKS6xPng2Y]{Dread Wisp}'s Dread Flickering trigger</p><p>It will temporarily add a description addendum to Dread Flickering, including its immunity effect.</p>",
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.abomination-vaults-bestiary.Actor.2TOXR7nKS6xPng2Y]{Dread Wisp}'s Dread Flickering trigger</p><p>This effect will temporarily add a description addendum to Dread Flickering, including its immunity effect.</p>",
       "gm": ""
     },
     "publication": {
@@ -24,37 +24,14 @@
         "property": "description",
         "itemType": "action",
         "predicate": [
-          {
-            "or": [
-              "item:slug:dread-flickering",
-              "item:slug:gibbering"
-            ]
-          }
+          "item:slug:dread-flickering"
         ],
         "value": [
           {
-            "text": "TRIGGERTROVE.Generic.Immunity.Addendum.CriticalSuccess",
-            "predicate": [
-              "item:slug:dread-flickering"
-            ]
+            "text": "TRIGGERTROVE.Generic.Immunity.Addendum.CriticalSuccess"
           },
           {
-            "text": "TRIGGERTROVE.Generic.Immunity.Addendum.Success",
-            "predicate": [
-              "item:slug:gibbering"
-            ]
-          },
-          {
-            "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.1D7YdXwRsOncOhcW]{Aux Effect: Dread Flickering Immunity}",
-            "predicate": [
-              "item:slug:dread-flickering"
-            ]
-          },
-          {
-            "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.lab3fNjYMH2OdJuX]{Aux Effect: Gibbering}",
-            "predicate": [
-              "item:slug:gibbering"
-            ]
+            "text": "@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.1D7YdXwRsOncOhcW]{Aux Effect: Dread Flickering Immunity}"
           }
         ],
         "label": "TRIGGERTROVE.Generic.Note.Label"
@@ -101,7 +78,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.4"
+    "systemVersion": "7.8.0"
   },
   "_key": "!items!WrV9fZMETFDXqawL"
 }
