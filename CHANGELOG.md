@@ -1,4 +1,6 @@
 ## 0.10.4
+- Housekeeping
+  - Updates minimum PF2e Trigger version to 2.21.0, which fixes some effects being applied to non-character tokens. 
 - New Triggers
   - Aldori Swordlord
     - _Attack Rolled:_ When a character with this feat hits or critically hits with an attack using an _aldori dueling sword_, they receive the corresponding number of temporary Hit Points.
