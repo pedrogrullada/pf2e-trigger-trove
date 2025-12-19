@@ -1,3 +1,22 @@
+## 0.10.4
+- New Triggers
+  - Aldori Swordlord
+    - _Attack Rolled:_ When a character with this feat hits or critically hits with an attack using an _aldori dueling sword_, they receive the corresponding number of temporary Hit Points.
+  - Blinding Aura
+    - _Turn Started:_ When a character starts their turn within the Shining Child's Bliding Aura, post its description to chat, alongside an immunity effect if needed.
+  - Commanding Presence
+    - _Aura Entered:_ When a character enters a Jann's Commanding Presence, send that ability to chat and add an immunity effect to the triggering character. If that character is a non-jann genie, also add an auxiliary effect with a penalty to their save.
+  - Regalia Initiate Benefit
+    - _Turn Ended:_ Reduce the frightened value of all allies within the aura.
+  - Rejuvenating Touch
+    - _Damage Taken:_ (but actually *healing* taken) When the target of a _lay on hands_ spell is healed by the spell and its origin has the Rejuvenating Touch feat, that target receives its temporary Hit Points.
+  - Staggering Shot
+    - _Attack Rolled:_ When a character using Staggering Fire hits or critically hits with a ranged Strike using a weapon in the bow group, the attack target receives the appropriate speed penalty.
+  - Treat Wounds
+    - _Damage Taken:_ (but actually _healing_ taken) When a character receives healing from Treat Wounds, remove the wounded condition and add its immunity-tracking effect.
+- Localization
+  - (Lioheart) Updated polish localization 
+
 ## 0.10.3
 - **Localization**
   - (Lioheart) Updated polish localization
