@@ -1,4 +1,4 @@
-## 0.10.4
+## 0.11.0
 - Housekeeping
   - Updates minimum PF2e Trigger version to 2.21.0, which fixes some effects being applied to non-character tokens. 
 - New Triggers
