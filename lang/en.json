@@ -545,6 +545,13 @@
                 }
             }
         },
+        "TreatWounds": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "When a character receives healing from @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}, remove the wounded condition and add its immunity tracking effect."
+                }
+            }
+        },
         "TrickstersMirrors": {
             "Item": {
                 "Note": "A damaging effect that affects all targets within your space destroys all of the mirrors.",
