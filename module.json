@@ -52,7 +52,7 @@
         "manifest": "https://raw.githubusercontent.com/reonZ/pf2e-trigger/master/module.json",
         "type": "module",
         "compatibility": {
-          "minimum": "2.20.2"
+          "minimum": "2.21.0"
         }
       }
     ]
@@ -77,4 +77,5 @@
     }
   ]
 }
+
 
