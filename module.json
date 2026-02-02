@@ -10,6 +10,9 @@
     "verified": "13"
   },
   "description": "A collection of triggers to use with the Trigger Engine module.",
+  "esmodules": [
+    "register.mjs"
+  ],
   "flags": {
     "pf2e-trigger-trove": {
       "triggers": "triggers/pf2e-trigger-trove.json"
