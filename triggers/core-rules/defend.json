@@ -1,0 +1,303 @@
+{
+    "folder": "Core Rules",
+    "id": "sgGPcs00huSzZ1oV",
+    "name": "Defend",
+    "nodes": [
+        {
+            "id": "rwdcX79vEkbrKlF4",
+            "outs": {
+                "out": {
+                    "connection": "vF36Ux2YKjZmU2Mq:ins:in"
+                }
+            },
+            "position": {
+                "x": 342,
+                "y": 425
+            },
+            "type": "create-combatant-event"
+        },
+        {
+            "id": "vF36Ux2YKjZmU2Mq",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0"
+                },
+                "target": {
+                    "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "HUiiu7ZERiquPGME:ins:in"
+                }
+            },
+            "position": {
+                "x": 558.4945054945056,
+                "y": 386.4
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "ccvLuI6m3jz6dmLm": {
+                        "id": "ccvLuI6m3jz6dmLm",
+                        "input": "id",
+                        "isArray": false,
+                        "label": "Defend ID",
+                        "slug": "path",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "HUiiu7ZERiquPGME",
+            "inputs": {
+                "input": {
+                    "connection": "vF36Ux2YKjZmU2Mq:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "w1mLOtH5cgy3CKFl:ins:in"
+                }
+            },
+            "position": {
+                "x": 826.7802197802199,
+                "y": 364.97142857142853
+            },
+            "type": "extract-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "WUTvEm00TaDbSIvW": {
+                        "id": "WUTvEm00TaDbSIvW",
+                        "input": "system.exploration",
+                        "isArray": true,
+                        "label": "Exploration Activities",
+                        "slug": "path",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "w1mLOtH5cgy3CKFl",
+            "inputs": {
+                "input": {
+                    "connection": "xgIZ2PAYSlhe1KCm:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "xRSQVTdd5Sh3Lt91:ins:in"
+                }
+            },
+            "position": {
+                "x": 1043.7802197802198,
+                "y": 332.6142857142857
+            },
+            "type": "extract-actor"
+        },
+        {
+            "id": "xRSQVTdd5Sh3Lt91",
+            "inputs": {
+                "entry": {
+                    "connection": "K09aRHch8jBQIp5T:outputs:entry"
+                },
+                "list": {
+                    "connection": "w1mLOtH5cgy3CKFl:outputs:WUTvEm00TaDbSIvW"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "b0hxSZ5cTD002kqs:ins:in"
+                }
+            },
+            "position": {
+                "x": 1328.7802197802198,
+                "y": 277.07142857142856
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "JASN9pgwy7TsLIcZ",
+            "outs": {
+                "out": {
+                    "connection": "m672H2XscTTGN9m3:ins:in"
+                }
+            },
+            "position": {
+                "x": 342.1428571428571,
+                "y": 585.8571428571429
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "m672H2XscTTGN9m3",
+            "inputs": {
+                "a": {
+                    "connection": "JASN9pgwy7TsLIcZ:outputs:round"
+                },
+                "b": {
+                    "value": 1
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "6BG2vnO4YLA7r19o:ins:in"
+                }
+            },
+            "position": {
+                "x": 568.8373288218485,
+                "y": 561.758256449433
+            },
+            "type": "compare-numbers"
+        },
+        {
+            "id": "xgIZ2PAYSlhe1KCm",
+            "inputs": {
+                "entry": {
+                    "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 853.2087912087911,
+                "y": 467.82142857142867
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "GGUL3kmq0AnY80qG",
+            "inputs": {
+                "entry": {
+                    "connection": "JASN9pgwy7TsLIcZ:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 622.5714285714286,
+                "y": 712.8928571428572
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "K09aRHch8jBQIp5T",
+            "inputs": {
+                "entry": {
+                    "connection": "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm"
+                }
+            },
+            "position": {
+                "x": 1165.8571428571431,
+                "y": 425.17857142857144
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dB2ZS5woMWqxXYNy": {
+                        "id": "dB2ZS5woMWqxXYNy",
+                        "label": "Grant",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "b0hxSZ5cTD002kqs",
+            "inputs": {
+                "dB2ZS5woMWqxXYNy": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr\",\n  \"allowDuplicates\": false,\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+                },
+                "img": {
+                    "value": "icons/skills/melee/shield-block-gray-orange.webp"
+                },
+                "name": {
+                    "value": "Effect: Defend"
+                },
+                "origin": {
+                    "connection": "z97lyS4JFrvSlqn8:outputs:entry"
+                },
+                "slug": {
+                    "value": "effect-defend-trigger-trove"
+                },
+                "target": {
+                    "connection": "z97lyS4JFrvSlqn8:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1554.706959706959,
+                "y": 239.00732600732582
+            },
+            "state": "fixed",
+            "type": "create-effect"
+        },
+        {
+            "id": "z97lyS4JFrvSlqn8",
+            "inputs": {
+                "entry": {
+                    "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1370.8489010989003,
+                "y": 421.43589743589723
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "6BG2vnO4YLA7r19o",
+            "inputs": {
+                "slug": {
+                    "value": "effect-defend-trigger-trove"
+                },
+                "target": {
+                    "connection": "GGUL3kmq0AnY80qG:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "iDeo7kxASFCUHXWH:ins:in"
+                }
+            },
+            "position": {
+                "x": 795.3187645687639,
+                "y": 615.5281218781219
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "iDeo7kxASFCUHXWH",
+            "inputs": {
+                "item": {
+                    "connection": "6BG2vnO4YLA7r19o:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1068.3242590742584,
+                "y": 548.7590742590744
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm": {
+            "isArray": false,
+            "label": "Defend ID",
+            "type": "text"
+        },
+        "JASN9pgwy7TsLIcZ:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant (TS)",
+            "type": "target"
+        },
+        "rwdcX79vEkbrKlF4:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant (CC)",
+            "type": "target"
+        }
+    }
+}
