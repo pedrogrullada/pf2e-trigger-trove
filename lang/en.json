@@ -502,7 +502,13 @@
             }
         },
         "SwaggeringInitiative": {
+            "Label": "Swaggering Initiative",
             "Trigger": {
+                "CombatantCreated": {
+                    "AwaitConfirmation": {
+                        "Prompt": "Will you use Swaggering Initiative in this encounter?"
+                    }
+                },
                 "TurnStarted": {
                     "Description": "When a character using @UUID[Compendium.pf2e.feats-srd.Item.NHheDmNB7L4REmlr]{Swaggering Initiative} is the first one to take a turn in combat, they receive panache."
                 }
