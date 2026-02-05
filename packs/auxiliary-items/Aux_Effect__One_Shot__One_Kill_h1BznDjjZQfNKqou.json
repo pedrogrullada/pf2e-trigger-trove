@@ -1,0 +1,118 @@
+{
+  "name": "Aux Effect: One Shot, One Kill",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.955,
+      "previous": null
+    },
+    "description": {
+      "value": "",
+      "gm": ""
+    },
+    "publication": {
+      "title": "PF2e Trigger Trove",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": {
+          "ownedItems": true,
+          "types": [
+            "weapon"
+          ],
+          "predicate": [
+            {
+              "or": [
+                "item:group:crossbow",
+                "item:group:firearm"
+              ]
+            }
+          ]
+        },
+        "flag": "weapon",
+        "prompt": "PF2E.SpecificRule.Prompt.Weapon"
+      },
+      {
+        "key": "RollOption",
+        "option": "one-shot-one-kill",
+        "domain": "strike-damage",
+        "priority": 51,
+        "toggleable": true,
+        "disabledIf": [
+          "parent:type:effect"
+        ],
+        "disabledValue": true
+      },
+      {
+        "key": "ItemAlteration",
+        "mode": "add",
+        "property": "other-tags",
+        "itemId": "{item|flags.pf2e.rulesSelections.weapon}",
+        "value": "one-shot-one-kill"
+      },
+      {
+        "key": "DamageAlteration",
+        "selectors": [
+          "weapon-damage"
+        ],
+        "slug": "one-shot-one-kill",
+        "mode": "downgrade",
+        "property": "dice-number",
+        "value": 0,
+        "predicate": [
+          {
+            "not": "item:tag:one-shot-one-kill"
+          }
+        ]
+      }
+    ],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "encounter",
+      "expiry": null,
+      "sustained": false
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": null,
+    "fromSpell": false,
+    "context": null
+  },
+  "_id": "h1BznDjjZQfNKqou",
+  "img": "icons/skills/ranged/projectile-strike-impale-gray.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "lBn9t2oEMiiJjyzv": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.9.1"
+  },
+  "_key": "!items!h1BznDjjZQfNKqou"
+}
