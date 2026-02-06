@@ -1,0 +1,55 @@
+{
+    "folder": "Feats & Features",
+    "id": "E7hicPPDwAU3AIGR",
+    "name": "Champion's Resistance",
+    "nodes": [
+        {
+            "id": "e5AEGHgEYhvuegPO",
+            "outs": {
+                "out": {
+                    "connection": "A5nYw6br9Qu4xgN7:ins:in"
+                }
+            },
+            "position": {
+                "x": 447,
+                "y": 369
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "A5nYw6br9Qu4xgN7",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.DawVHfoPKbPJsz4k"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "2aeaXxScjmPmKgOU:ins:in"
+                }
+            },
+            "position": {
+                "x": 693.9230769230769,
+                "y": 334.73333333333323
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "2aeaXxScjmPmKgOU",
+            "inputs": {
+                "item": {
+                    "connection": "A5nYw6br9Qu4xgN7:outputs:item"
+                }
+            },
+            "position": {
+                "x": 964.444444444444,
+                "y": 299.69444444444434
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ]
+}

@@ -1,0 +1,317 @@
+{
+    "folder": "Feats & Features",
+    "id": "dw2vqLVDL1gXe73m",
+    "name": "Inviolable",
+    "nodes": [
+        {
+            "id": "tceFm8was9P2xu0E",
+            "outs": {
+                "out": {
+                    "connection": "6ZKhCseLTZIaDlHN:ins:in"
+                }
+            },
+            "position": {
+                "x": 364,
+                "y": 464
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "6ZKhCseLTZIaDlHN",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.jtstZYC8S4YmAbIE"
+                },
+                "target": {
+                    "connection": "tceFm8was9P2xu0E:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "RYwYjAkNzvnXjDF7:ins:in"
+                }
+            },
+            "position": {
+                "x": 630.9230769230769,
+                "y": 382.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "RYwYjAkNzvnXjDF7",
+            "inputs": {
+                "a": {
+                    "connection": "zCxZUVE9JUdQdzYM:outputs:entry"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "zLheGYHdNpfOlV5f:ins:in"
+                }
+            },
+            "position": {
+                "x": 927.9230769230769,
+                "y": 441.5
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "zCxZUVE9JUdQdzYM",
+            "inputs": {
+                "entry": {
+                    "connection": "tceFm8was9P2xu0E:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 783,
+                "y": 548.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "zLheGYHdNpfOlV5f",
+            "inputs": {
+                "entry": {
+                    "value": "target:trait:holy"
+                },
+                "list": {
+                    "connection": "tceFm8was9P2xu0E:outputs:options"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "pquZ4BnTSFvXmC47:ins:in"
+                },
+                "true": {
+                    "connection": "UuVyBuMlJXgJYZaK:ins:in"
+                }
+            },
+            "position": {
+                "x": 1219.6666666666665,
+                "y": 555.4722222222222
+            },
+            "type": "list-contains"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "76OZA4uwWDSTccKo": {
+                        "id": "76OZA4uwWDSTccKo",
+                        "isArray": false,
+                        "label": "Trait",
+                        "slug": "entry",
+                        "type": "text"
+                    }
+                },
+                "title": "Roll Damage"
+            },
+            "id": "QUE0IuSqpWGEsLxj",
+            "outs": {
+                "out": {
+                    "connection": "xCgXTBdmZyidHRyI:ins:in"
+                }
+            },
+            "position": {
+                "x": 372.6666666666664,
+                "y": 846.5555555555554
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "76OZA4uwWDSTccKo": {
+                        "id": "76OZA4uwWDSTccKo",
+                        "isArray": false,
+                        "label": "Trait",
+                        "slug": "entry",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "UuVyBuMlJXgJYZaK",
+            "inputs": {
+                "76OZA4uwWDSTccKo": {
+                    "value": "holy"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "QUE0IuSqpWGEsLxj:ins:in"
+                }
+            },
+            "position": {
+                "x": 1468.8119658119651,
+                "y": 385.722222222222
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "pquZ4BnTSFvXmC47",
+            "inputs": {
+                "entry": {
+                    "value": "target:trait:unholy"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "W6SIQ5yxkLVAT8AY:ins:in"
+                },
+                "true": {
+                    "connection": "gZ17WNHvfN7nXx6A:ins:in"
+                }
+            },
+            "position": {
+                "x": 1459.6666666666665,
+                "y": 643.2499999999998
+            },
+            "type": "list-contains"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "76OZA4uwWDSTccKo": {
+                        "id": "76OZA4uwWDSTccKo",
+                        "isArray": false,
+                        "label": "Trait",
+                        "slug": "entry",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "gZ17WNHvfN7nXx6A",
+            "inputs": {
+                "76OZA4uwWDSTccKo": {
+                    "value": "unholy"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "QUE0IuSqpWGEsLxj:ins:in"
+                }
+            },
+            "position": {
+                "x": 1679.923076923077,
+                "y": 574.6111111111111
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "76OZA4uwWDSTccKo": {
+                        "id": "76OZA4uwWDSTccKo",
+                        "isArray": false,
+                        "label": "Trait",
+                        "slug": "entry",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "W6SIQ5yxkLVAT8AY",
+            "outs": {
+                "out": {
+                    "connection": "QUE0IuSqpWGEsLxj:ins:in"
+                }
+            },
+            "position": {
+                "x": 1698.8119658119656,
+                "y": 705.7222222222222
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "xCgXTBdmZyidHRyI",
+            "inputs": {
+                "formula": {
+                    "value": "3d6[spirit]"
+                },
+                "item": {
+                    "connection": "opIH5gI9U4xY9HDc:outputs:entry"
+                },
+                "origin": {
+                    "connection": "8Rxfk4sGV6ioYgPB:outputs:entry"
+                },
+                "targets": {
+                    "connection": "non2SDWq6BJAmHkr:outputs:entry"
+                },
+                "traits": {
+                    "connection": "QUE0IuSqpWGEsLxj:outputs:76OZA4uwWDSTccKo"
+                }
+            },
+            "position": {
+                "x": 787.7008547008543,
+                "y": 756.9555555555551
+            },
+            "type": "roll-damage"
+        },
+        {
+            "id": "8Rxfk4sGV6ioYgPB",
+            "inputs": {
+                "entry": {
+                    "connection": "tceFm8was9P2xu0E:outputs:target"
+                }
+            },
+            "position": {
+                "x": 576.7777777777777,
+                "y": 744.6388888888888
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "non2SDWq6BJAmHkr",
+            "inputs": {
+                "entry": {
+                    "connection": "tceFm8was9P2xu0E:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 591.2222222222221,
+                "y": 1011.3055555555553
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "opIH5gI9U4xY9HDc",
+            "inputs": {
+                "entry": {
+                    "connection": "6ZKhCseLTZIaDlHN:outputs:item"
+                }
+            },
+            "position": {
+                "x": 585.4444444444443,
+                "y": 1056.861111111111
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "6ZKhCseLTZIaDlHN:outputs:item": {
+            "isArray": false,
+            "label": "Inviolable",
+            "type": "item"
+        },
+        "tceFm8was9P2xu0E:outputs:origin": {
+            "isArray": false,
+            "label": "Attacker",
+            "type": "target"
+        },
+        "tceFm8was9P2xu0E:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "tceFm8was9P2xu0E:outputs:target": {
+            "isArray": false,
+            "label": "Attack Target",
+            "type": "target"
+        }
+    }
+}

@@ -1,0 +1,330 @@
+{
+    "folder": "Feats & Features",
+    "id": "swPIa9DmWZo1tKCR",
+    "name": "Ravel of Thorns",
+    "nodes": [
+        {
+            "id": "wPpq9D5ey0O94ioT",
+            "outs": {
+                "out": {
+                    "connection": "U6G1IzCZxBC39dPl:ins:in"
+                }
+            },
+            "position": {
+                "x": 490,
+                "y": 398
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "U6G1IzCZxBC39dPl",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "kinetic-aura"
+                },
+                "target": {
+                    "connection": "wPpq9D5ey0O94ioT:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "7QSZyjatwGXANf46:ins:in"
+                }
+            },
+            "position": {
+                "x": 725,
+                "y": 441.15
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "7QSZyjatwGXANf46",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.JW93FDTAOUNuCgIu"
+                },
+                "target": {
+                    "connection": "U6G1IzCZxBC39dPl:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "KkrtM4WcTeop9vrA:ins:in"
+                }
+            },
+            "position": {
+                "x": 1055,
+                "y": 382.15
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "KkrtM4WcTeop9vrA",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd"
+                },
+                "target": {
+                    "connection": "2Lg0024R2QOGBmZ3:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "P4SvvcZTGuxoiBga:ins:in"
+                },
+                "true": {
+                    "connection": "VMYvFwfEhH9tllBm:ins:in"
+                }
+            },
+            "position": {
+                "x": 1338,
+                "y": 430
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "YPIhYEDQSUT2XxFg": {
+                        "id": "YPIhYEDQSUT2XxFg",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "SE Origin",
+                        "slug": "path",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "VMYvFwfEhH9tllBm",
+            "inputs": {
+                "input": {
+                    "connection": "KkrtM4WcTeop9vrA:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "fQ8PRjVpHEYr8Klh:ins:in"
+                }
+            },
+            "position": {
+                "x": 1653.592074592074,
+                "y": 372.62878787878805
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "fQ8PRjVpHEYr8Klh",
+            "inputs": {
+                "a": {
+                    "connection": "VMYvFwfEhH9tllBm:outputs:YPIhYEDQSUT2XxFg"
+                },
+                "b": {
+                    "connection": "S6WoLrMsCnumcKSS:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "P4SvvcZTGuxoiBga:ins:in"
+                }
+            },
+            "position": {
+                "x": 1915.7869361031112,
+                "y": 299.63992086345024
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "2Lg0024R2QOGBmZ3",
+            "inputs": {
+                "entry": {
+                    "connection": "wPpq9D5ey0O94ioT:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1167,
+                "y": 542.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "S6WoLrMsCnumcKSS",
+            "inputs": {
+                "entry": {
+                    "connection": "U6G1IzCZxBC39dPl:outputs:source"
+                }
+            },
+            "position": {
+                "x": 1760,
+                "y": 470.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "LsRgiRYCMPKL175A": {
+                        "id": "LsRgiRYCMPKL175A",
+                        "label": "Speed Penalty",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "P4SvvcZTGuxoiBga",
+            "inputs": {
+                "LsRgiRYCMPKL175A": {
+                    "value": "{\n  \"key\": \"FlatModifier\",\n  \"value\": -10,\n  \"type\": \"circumstance\",\n  \"selector\": [\n    \"all-speeds\"\n  ],\n  \"slug\": \"ravel-of-thorns\"\n}"
+                },
+                "name": {
+                    "value": "Aux Effect: Ravel of Thorns"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/nature/vines-thorned-entwined-glow-teal-purple.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-ravel-of-thorns"
+                },
+                "target": {
+                    "connection": "uHYBxVE6HpS3kyOK:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2168,
+                "y": 532.7777777777776
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "uHYBxVE6HpS3kyOK",
+            "inputs": {
+                "entry": {
+                    "connection": "wPpq9D5ey0O94ioT:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1993.888888888889,
+                "y": 631.9722222222224
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "I9DQUsGPqlD9BJQx",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "kinetic-aura"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "iSUlngq5lOlvC6Y6:ins:in"
+                }
+            },
+            "position": {
+                "x": 430.2222222222226,
+                "y": 757.2222222222222
+            },
+            "type": "aura-leave-event"
+        },
+        {
+            "id": "iSUlngq5lOlvC6Y6",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.JW93FDTAOUNuCgIu"
+                },
+                "target": {
+                    "connection": "I9DQUsGPqlD9BJQx:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "y5rAcRapsZYTLOtZ:ins:in"
+                }
+            },
+            "position": {
+                "x": 738.6666666666671,
+                "y": 703.3722222222221
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "y5rAcRapsZYTLOtZ",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-ravel-of-thorns"
+                },
+                "target": {
+                    "connection": "47CbbKwoVQP2aepG:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "ZGUvP7KZvmQWLtGY:ins:in"
+                }
+            },
+            "position": {
+                "x": 1018.6984126984123,
+                "y": 762.1587301587306
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "ZGUvP7KZvmQWLtGY",
+            "inputs": {
+                "item": {
+                    "connection": "y5rAcRapsZYTLOtZ:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1303.8095238095234,
+                "y": 830.4087301587308
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "47CbbKwoVQP2aepG",
+            "inputs": {
+                "entry": {
+                    "connection": "I9DQUsGPqlD9BJQx:outputs:target"
+                }
+            },
+            "position": {
+                "x": 875.9206349206344,
+                "y": 883.5753968253973
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "I9DQUsGPqlD9BJQx:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        },
+        "U6G1IzCZxBC39dPl:outputs:source": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        },
+        "wPpq9D5ey0O94ioT:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        }
+    }
+}

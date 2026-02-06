@@ -1,167 +1,58 @@
 {
-    "_id": "IzF3aVEPKkQROFUA",
-    "description": "@Localize[TRIGGERTROVE.PhaseFamiliar.Trigger.DamageTaken.Description]",
     "folder": "Spells",
-    "name": "Phase Familiar (Damage Taken)",
+    "id": "bGSn90k9pvNHC2r4",
+    "name": "Phase Familiar",
     "nodes": [
         {
-            "_id": "0PbCXeix0PnW2Jhc",
-            "key": "damage-taken",
-            "outputs": {
+            "id": "CirbsbDeJo9gawXa",
+            "outs": {
                 "out": {
-                    "ids": [
-                        "UcxKar95r9uMnBL2.inputs.in"
-                    ]
+                    "connection": "7bZOBQzrJN9CDm4P:ins:in"
                 }
             },
             "position": {
-                "x": 350,
-                "y": 200
+                "x": 336,
+                "y": 317
             },
-            "type": "event"
+            "type": "damage-taken-event"
         },
         {
-            "_id": "UcxKar95r9uMnBL2",
+            "id": "7bZOBQzrJN9CDm4P",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "0PbCXeix0PnW2Jhc.outputs.out"
-                    ]
-                },
-                "uuid": {
+                "pf2e": {
                     "value": "Compendium.pf2e.spell-effects.Item.61Hl31nyzt63vvX9"
+                },
+                "target": {
+                    "connection": "CirbsbDeJo9gawXa:outputs:target"
                 }
             },
-            "key": "has-item",
-            "outputs": {
-                "item": {
-                    "ids": []
-                },
+            "outs": {
                 "true": {
-                    "ids": [
-                        "xVR3PW1ouytB0Pxd.inputs.in"
-                    ]
+                    "connection": "jQgoW8Cv0f54TtTI:ins:in"
                 }
             },
             "position": {
-                "x": 551,
-                "y": 199.75
+                "x": 597.9230769230769,
+                "y": 341.4
             },
-            "type": "condition"
+            "type": "has-item"
         },
         {
-            "_id": "lx1szYE3a0etxE9d",
+            "id": "jQgoW8Cv0f54TtTI",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "xVR3PW1ouytB0Pxd.outputs.false"
-                    ]
-                },
                 "item": {
-                    "ids": [
-                        "juYQ3OuKl1smUHJl.outputs.output"
-                    ]
-                }
-            },
-            "key": "delete-item",
-            "position": {
-                "x": 991,
-                "y": 209.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "xVR3PW1ouytB0Pxd",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "UcxKar95r9uMnBL2.outputs.true"
-                    ]
-                },
-                "input": {
-                    "ids": [
-                        "OeOQtVRrCmvupST6.outputs.output"
-                    ]
-                }
-            },
-            "key": "boolean-splitter",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "lx1szYE3a0etxE9d.inputs.in"
-                    ]
+                    "connection": "7bZOBQzrJN9CDm4P:outputs:item"
                 }
             },
             "position": {
-                "x": 794,
-                "y": 215.75
+                "x": 867,
+                "y": 335.25
             },
-            "type": "splitter"
-        },
-        {
-            "_id": "OeOQtVRrCmvupST6",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "boolean"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "xVR3PW1ouytB0Pxd.inputs.input"
-                    ]
-                }
-            },
-            "position": {
-                "x": 672.5,
-                "y": 340.25
-            },
-            "target": "0PbCXeix0PnW2Jhc.outputs.heal",
-            "type": "variable"
-        },
-        {
-            "_id": "juYQ3OuKl1smUHJl",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "item"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "lx1szYE3a0etxE9d.inputs.item"
-                    ]
-                }
-            },
-            "position": {
-                "x": 861.5,
-                "y": 323.25
-            },
-            "target": "UcxKar95r9uMnBL2.outputs.item",
-            "type": "variable"
+            "type": "delete-item"
         }
     ],
-    "variables": {
-        "UcxKar95r9uMnBL2.outputs.item": {
-            "global": false,
-            "label": "Phase Familiar",
-            "type": "item"
-        }
-    }
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ]
 }

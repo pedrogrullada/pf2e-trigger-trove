@@ -1,0 +1,222 @@
+{
+    "folder": "Feats & Features",
+    "id": "Cmw8Fea7T6v1tm6u",
+    "name": "Scout's Warning",
+    "nodes": [
+        {
+            "id": "2tKhZoiC2oWDJtei",
+            "outs": {
+                "out": {
+                    "connection": "hvOlg8onfnF4KZiH:ins:in"
+                }
+            },
+            "position": {
+                "x": 434,
+                "y": 405
+            },
+            "type": "create-combatant-event"
+        },
+        {
+            "id": "hvOlg8onfnF4KZiH",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.Tpcq3Lk7qEOZ3LDP"
+                },
+                "target": {
+                    "connection": "2tKhZoiC2oWDJtei:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "hXHY0tYDLSPoi7Ra:ins:in"
+                }
+            },
+            "position": {
+                "x": 653,
+                "y": 439
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "hXHY0tYDLSPoi7Ra",
+            "inputs": {
+                "localization": {
+                    "value": "TRIGGERTROVE.ScoutsWarning.Trigger.CombatantJoined.AwaitConfirmation.Prompt"
+                },
+                "title": {
+                    "value": "TRIGGERTROVE.ScoutsWarning.Label"
+                },
+                "user": {
+                    "connection": "1wtD1KBznOGQuB88:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "PaYOHGUh4lH2wjdA:ins:in"
+                }
+            },
+            "position": {
+                "x": 939.9230769230769,
+                "y": 491.4
+            },
+            "state": "localization",
+            "type": "await-confirm"
+        },
+        {
+            "id": "1wtD1KBznOGQuB88",
+            "inputs": {
+                "entry": {
+                    "connection": "2tKhZoiC2oWDJtei:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 777,
+                "y": 671
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "PaYOHGUh4lH2wjdA",
+            "inputs": {
+                "targets": {
+                    "connection": "H0TistY8A7N5YK7a:outputs:targets"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "774Bw2CmgeaJN8hT:ins:in"
+                }
+            },
+            "position": {
+                "x": 1217.923076923077,
+                "y": 553.4
+            },
+            "state": "loop",
+            "type": "filter-targets"
+        },
+        {
+            "id": "H0TistY8A7N5YK7a",
+            "position": {
+                "x": 939,
+                "y": 695.75
+            },
+            "type": "scene-targets"
+        },
+        {
+            "id": "774Bw2CmgeaJN8hT",
+            "inputs": {
+                "a": {
+                    "connection": "PaYOHGUh4lH2wjdA:outputs:current"
+                },
+                "b": {
+                    "connection": "IX6Mph8gdrEHcy5P:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "OpERhio9VGWPyKdU:ins:in"
+                }
+            },
+            "position": {
+                "x": 1478.923076923077,
+                "y": 596.5
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "IX6Mph8gdrEHcy5P",
+            "inputs": {
+                "entry": {
+                    "connection": "2tKhZoiC2oWDJtei:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1292,
+                "y": 720.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "OpERhio9VGWPyKdU",
+            "inputs": {
+                "a": {
+                    "connection": "IX6Mph8gdrEHcy5P:outputs:entry"
+                },
+                "b": {
+                    "connection": "560eiurWDVb9AHNA:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Y7kn7pJpxfB2Wshb:ins:in"
+                }
+            },
+            "position": {
+                "x": 1723.923076923077,
+                "y": 726.5
+            },
+            "type": "compare-alliances"
+        },
+        {
+            "id": "560eiurWDVb9AHNA",
+            "inputs": {
+                "entry": {
+                    "connection": "PaYOHGUh4lH2wjdA:outputs:current"
+                }
+            },
+            "position": {
+                "x": 1549,
+                "y": 849.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Y7kn7pJpxfB2Wshb",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.RxDDXK52lwyHXl7v"
+                },
+                "target": {
+                    "connection": "14iLnP9qsIXJ4cnj:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1986.423076923077,
+                "y": 707.9
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "14iLnP9qsIXJ4cnj",
+            "inputs": {
+                "entry": {
+                    "connection": "PaYOHGUh4lH2wjdA:outputs:current"
+                }
+            },
+            "position": {
+                "x": 1807.9999999999995,
+                "y": 898.25
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "2tKhZoiC2oWDJtei:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        },
+        "PaYOHGUh4lH2wjdA:outputs:current": {
+            "isArray": false,
+            "label": "Scene Target",
+            "type": "target"
+        }
+    }
+}

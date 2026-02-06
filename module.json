@@ -9,7 +9,10 @@
     "minimum": "13",
     "verified": "13"
   },
-  "description": "A collection of triggers to use with the PF2e Trigger module.",
+  "description": "A collection of triggers to use with the Trigger Engine module.",
+  "esmodules": [
+    "scripts/register.mjs"
+  ],
   "flags": {
     "pf2e-trigger-trove": {
       "triggers": "triggers/pf2e-trigger-trove.json"
@@ -47,12 +50,12 @@
     ],
     "requires": [
       {
-        "id": "pf2e-trigger",
-        "name": "PF2e Trigger",
-        "manifest": "https://raw.githubusercontent.com/reonZ/pf2e-trigger/master/module.json",
+        "id": "trigger-engine",
+        "name": "Trigger Engine",
+        "manifest": "https://raw.githubusercontent.com/reonZ/trigger-engine/master/module.json",
         "type": "module",
         "compatibility": {
-          "minimum": "2.21.0"
+          "minimum": "1.0.2"
         }
       }
     ]

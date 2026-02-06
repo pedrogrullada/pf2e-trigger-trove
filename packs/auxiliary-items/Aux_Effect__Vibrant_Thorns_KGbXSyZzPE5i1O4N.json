@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorn}</p><p>When a character has this effect and the Nettleskin trigger is enabled, damage will be rolled automatically when adjacent creatures that hit them with a melee attack, as well as creatures that hit them with unarmed attacks.</p>",
+      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorn}</p><p>When a character has this effect and the Vibrant Thorns trigger is enabled, damage will be rolled automatically when adjacent creatures that hit them with a melee attack, as well as creatures that hit them with unarmed attacks.</p>",
       "gm": ""
     },
     "publication": {
@@ -78,7 +78,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.4"
+    "systemVersion": "7.10.0"
   },
   "_key": "!items!KGbXSyZzPE5i1O4N"
 }

@@ -1,0 +1,584 @@
+{
+    "folder": "Feats & Features",
+    "id": "XAQyJMTXoi56BRFh",
+    "name": "Shared Stratagem",
+    "nodes": [
+        {
+            "id": "37m6PJvj3ZMP9x0C",
+            "outs": {
+                "out": {
+                    "connection": "XY5rrRxwgyPqvPx3:ins:in"
+                }
+            },
+            "position": {
+                "x": -81.11111111111148,
+                "y": 353.99999999999983
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "vFPYU02DnGhBUa6c",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.N4wCUZH2KG6FoGqh"
+                },
+                "target": {
+                    "connection": "ZeKDUIJWzlo0ZdW2:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "2EfJQ9qIoyaPPkzP:ins:in"
+                }
+            },
+            "position": {
+                "x": 411.7777777777774,
+                "y": 516.0388888888886
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "th3ULldKnBu0dKRD",
+            "inputs": {
+                "a": {
+                    "connection": "IwCHLeRwVEt6yUIZ:outputs:entry"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "OB83rtN0sz1UlCLK:ins:in"
+                }
+            },
+            "position": {
+                "x": 980.7008547008545,
+                "y": 718.3888888888887
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "2EfJQ9qIoyaPPkzP",
+            "inputs": {
+                "identifier": {
+                    "value": "shared-stratagem"
+                },
+                "target": {
+                    "connection": "dhMlOZCITQ1enzXf:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "th3ULldKnBu0dKRD:ins:in"
+                }
+            },
+            "position": {
+                "x": 700.7008547008545,
+                "y": 626.3888888888887
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "OB83rtN0sz1UlCLK",
+            "inputs": {
+                "entry": {
+                    "value": "target:mark:devise-a-stratagem"
+                },
+                "list": {
+                    "connection": "U7mPMZBakipLQMkA:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Hfa0K26jNat7b25w:ins:in"
+                }
+            },
+            "position": {
+                "x": 1257.7008547008545,
+                "y": 800.3888888888887
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "Hfa0K26jNat7b25w",
+            "inputs": {
+                "author": {
+                    "connection": "PpM4U1WyZTkVSxIx:outputs:entry"
+                },
+                "localization": {
+                    "value": "TRIGGERTROVE.SharedStratagem.Trigger.AttackRolled.Investigator.ChatMessage"
+                },
+                "speaker": {
+                    "connection": "PpM4U1WyZTkVSxIx:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Fqxnq5ALNI9nQs6A:ins:in"
+                }
+            },
+            "position": {
+                "x": 1512.4786324786323,
+                "y": 839.3999999999996
+            },
+            "state": "localization",
+            "type": "create-message"
+        },
+        {
+            "id": "PpM4U1WyZTkVSxIx",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1347.7460317460318,
+                "y": 963.4920634920635
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Fqxnq5ALNI9nQs6A",
+            "inputs": {
+                "identifier": {
+                    "value": "shared-stratagem"
+                },
+                "origin": {
+                    "connection": "i0KJNz579bxQJcYr:outputs:entry"
+                },
+                "target": {
+                    "connection": "VAatgk9GLAXOcLsB:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1735.7484737484735,
+                "y": 924.0825396825393
+            },
+            "type": "create-temporary"
+        },
+        {
+            "id": "VAatgk9GLAXOcLsB",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1490.4884004884004,
+                "y": 1091.7988400488398
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "i0KJNz579bxQJcYr",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1496.1623931623926,
+                "y": 1137.195665445665
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "dhMlOZCITQ1enzXf",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:target"
+                }
+            },
+            "position": {
+                "x": 581.6666666666656,
+                "y": 737.3055555555552
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ZeKDUIJWzlo0ZdW2",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 294.99999999999955,
+                "y": 626.1944444444443
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "IwCHLeRwVEt6yUIZ",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 853.3333333333326,
+                "y": 797.3055555555554
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "U7mPMZBakipLQMkA",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:options"
+                }
+            },
+            "position": {
+                "x": 1093.444444444444,
+                "y": 905.0833333333333
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "XY5rrRxwgyPqvPx3",
+            "inputs": {
+                "entry": {
+                    "value": "self:effect:shared-stratagem"
+                },
+                "list": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:options"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "vFPYU02DnGhBUa6c:ins:in"
+                },
+                "true": {
+                    "connection": "J6dDnIRptCNZto0k:ins:in"
+                }
+            },
+            "position": {
+                "x": 159.47222222222172,
+                "y": 400.027777777778
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "J6dDnIRptCNZto0k",
+            "inputs": {
+                "identifier": {
+                    "value": "shared-stratagem"
+                },
+                "target": {
+                    "connection": "qfkfYlUGCOVMo8YN:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "kmnCWWEW0CSc5i9v:ins:in"
+                }
+            },
+            "position": {
+                "x": 489.367521367521,
+                "y": 339.38888888888914
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "qfkfYlUGCOVMo8YN",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:target"
+                }
+            },
+            "position": {
+                "x": 369.33333333333326,
+                "y": 463.8611111111115
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "kmnCWWEW0CSc5i9v",
+            "inputs": {
+                "a": {
+                    "connection": "hrYBzEDw5ttKeDNL:outputs:entry"
+                },
+                "b": {
+                    "value": "failure"
+                },
+                "compare": {
+                    "value": "lte"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "ezKO4Wrc3myjESvT:ins:in"
+                },
+                "true": {
+                    "connection": "zyskZ1gdrWpvlFFE:ins:in"
+                }
+            },
+            "position": {
+                "x": 758.2564102564097,
+                "y": 393.9444444444442
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "hrYBzEDw5ttKeDNL",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 618.7329059829059,
+                "y": 468.4572649572655
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "zyskZ1gdrWpvlFFE",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3"
+                },
+                "target": {
+                    "connection": "g0WBY7FHcF1mz82g:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "506dzba9m7L0Wdm5:ins:in"
+                }
+            },
+            "position": {
+                "x": 1060.809829059829,
+                "y": 327.6884615384621
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "506dzba9m7L0Wdm5",
+            "inputs": {
+                "item": {
+                    "connection": "zyskZ1gdrWpvlFFE:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1330.9697802197802,
+                "y": 305.8669108669115
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "g0WBY7FHcF1mz82g",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:target"
+                }
+            },
+            "position": {
+                "x": 912.4313186813188,
+                "y": 345.9822954822961
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ezKO4Wrc3myjESvT",
+            "inputs": {
+                "entry": {
+                    "value": "check:reroll"
+                },
+                "list": {
+                    "connection": "zmmyOUKu4bL70zLB:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "lIa2OsXjKv36788c:ins:in"
+                }
+            },
+            "position": {
+                "x": 1077.3818681318685,
+                "y": 486.7515262515267
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "zmmyOUKu4bL70zLB",
+            "inputs": {
+                "entry": {
+                    "connection": "37m6PJvj3ZMP9x0C:outputs:options"
+                }
+            },
+            "position": {
+                "x": 927.0741758241761,
+                "y": 572.0784493284498
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "lIa2OsXjKv36788c",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3"
+                }
+            },
+            "position": {
+                "x": 1302.7664835164842,
+                "y": 538.4976800976806
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "2wc1iYSEZqr4YWsq",
+            "outs": {
+                "out": {
+                    "connection": "aKEkSQ5kvaBHmol2:ins:in"
+                }
+            },
+            "position": {
+                "x": -89.74023199023054,
+                "y": 999.0378510378515
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "aKEkSQ5kvaBHmol2",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3"
+                },
+                "target": {
+                    "connection": "2wc1iYSEZqr4YWsq:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "lnTE1dImMabtahN7:ins:in"
+                }
+            },
+            "position": {
+                "x": 185.73229548229688,
+                "y": 1034.7922466422472
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "lnTE1dImMabtahN7",
+            "inputs": {
+                "identifier": {
+                    "value": "shared-stratagem"
+                },
+                "target": {
+                    "connection": "kpWRKxyIoPgQzkmE:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "tNvfar6zpwjKSCYm:ins:in"
+                }
+            },
+            "position": {
+                "x": 478.73229548229654,
+                "y": 1087.2960927960933
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "kpWRKxyIoPgQzkmE",
+            "inputs": {
+                "entry": {
+                    "connection": "2wc1iYSEZqr4YWsq:outputs:target"
+                }
+            },
+            "position": {
+                "x": 293.73229548229693,
+                "y": 1198.0076312576318
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "tNvfar6zpwjKSCYm",
+            "inputs": {
+                "item": {
+                    "connection": "lnTE1dImMabtahN7:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Qlb2cqpv4rXFtFfg:ins:in"
+                }
+            },
+            "position": {
+                "x": 750.3476800976811,
+                "y": 1086.892246642247
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "Qlb2cqpv4rXFtFfg",
+            "inputs": {
+                "item": {
+                    "connection": "ev1ddVB9EHd0Hged:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 959.4385891885901,
+                "y": 1087.801337551338
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "ev1ddVB9EHd0Hged",
+            "inputs": {
+                "entry": {
+                    "connection": "aKEkSQ5kvaBHmol2:outputs:item"
+                }
+            },
+            "position": {
+                "x": 833.266095016096,
+                "y": 1203.4272116772127
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "2wc1iYSEZqr4YWsq:outputs:target": {
+            "isArray": false,
+            "label": "Damage Target",
+            "type": "target"
+        },
+        "37m6PJvj3ZMP9x0C:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "37m6PJvj3ZMP9x0C:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "37m6PJvj3ZMP9x0C:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "37m6PJvj3ZMP9x0C:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        },
+        "aKEkSQ5kvaBHmol2:outputs:item": {
+            "isArray": false,
+            "label": "Aux Effect",
+            "type": "item"
+        }
+    }
+}

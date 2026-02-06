@@ -1,0 +1,378 @@
+{
+    "folder": "Feats & Features",
+    "id": "7WhQSiTiixb8R33k",
+    "name": "Energy Shot",
+    "nodes": [
+        {
+            "id": "hzOy2jjab6aOgZr7",
+            "outs": {
+                "out": {
+                    "connection": "ndJanmg4v84ZaSUp:ins:in"
+                }
+            },
+            "position": {
+                "x": 511,
+                "y": 334
+            },
+            "type": "create-combatant-event"
+        },
+        {
+            "id": "ndJanmg4v84ZaSUp",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.actionspf2e.Item.TSDbyYRQwhIyY2Oq"
+                },
+                "target": {
+                    "connection": "hzOy2jjab6aOgZr7:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "R350eRzcQL26BMVn:ins:in"
+                }
+            },
+            "position": {
+                "x": 801.4230769230767,
+                "y": 233.52499999999986
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "R350eRzcQL26BMVn",
+            "inputs": {
+                "localization": {
+                    "value": "TRIGGERTROVE.EnergyShot.Trigger.CombatantJoined.Prompt"
+                },
+                "title": {
+                    "value": "TRIGGERTROVE.EnergyShot.Label"
+                },
+                "user": {
+                    "connection": "hzOy2jjab6aOgZr7:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "rO5ZLNcXdim7T010:ins:in"
+                }
+            },
+            "position": {
+                "x": 1147.1617132867132,
+                "y": 279.4454545454545
+            },
+            "state": "localization",
+            "type": "await-confirm"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "2Hr3qQYmJeZFiiIo": {
+                        "id": "2Hr3qQYmJeZFiiIo",
+                        "label": "Grant Item",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "ncPZ8OCh4dMvh7We": {
+                        "id": "ncPZ8OCh4dMvh7We",
+                        "label": "Special Resource",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "rO5ZLNcXdim7T010",
+            "inputs": {
+                "2Hr3qQYmJeZFiiIo": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.feat-effects.Item.zocU4IYIlWwRKUuE\",\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+                },
+                "fixed": {
+                    "value": "encounter"
+                },
+                "name": {
+                    "value": "Aux Effect: Energy Shot"
+                },
+                "ncPZ8OCh4dMvh7We": {
+                    "value": "{\n  \"key\": \"SpecialResource\",\n  \"label\": \"TRIGGERTROVE.EnergyShot.Item.ResourceLabel\",\n  \"max\": 3,\n  \"slug\": \"energy-shots\"\n}"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/ranged/projectile-strike-egg-blue.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-energy-shot"
+                },
+                "target": {
+                    "connection": "LWb1bJ4MWQJPO6kb:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "67b5QwwhAYkeQoow:ins:in"
+                }
+            },
+            "position": {
+                "x": 1460.305819180819,
+                "y": 336.1512237762238
+            },
+            "state": "fixed",
+            "type": "create-effect"
+        },
+        {
+            "id": "LWb1bJ4MWQJPO6kb",
+            "inputs": {
+                "entry": {
+                    "connection": "hzOy2jjab6aOgZr7:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1243.305819180819,
+                "y": 492.9012237762238
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "67b5QwwhAYkeQoow",
+            "inputs": {
+                "item": {
+                    "connection": "ye9UnLqWBUlx0rX7:outputs:entry"
+                },
+                "parent": {
+                    "connection": "ZTLl60ifbmUD9oAL:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1805.228896103896,
+                "y": 369.6512237762238
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "ye9UnLqWBUlx0rX7",
+            "inputs": {
+                "entry": {
+                    "connection": "ndJanmg4v84ZaSUp:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1693.305819180819,
+                "y": 459.9012237762238
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ZTLl60ifbmUD9oAL",
+            "inputs": {
+                "entry": {
+                    "connection": "hzOy2jjab6aOgZr7:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1664.305819180819,
+                "y": 509.9012237762238
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "uy72YXMMvHQyK71k",
+            "outs": {
+                "out": {
+                    "connection": "jQgCgQmK8PI0NDH9:ins:in"
+                }
+            },
+            "position": {
+                "x": 512.6391525141524,
+                "y": 607.7464618714619
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "jQgCgQmK8PI0NDH9",
+            "inputs": {
+                "options": {
+                    "connection": "uy72YXMMvHQyK71k:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  {\n    \"not\": \"check:reroll\"\n  },\n  {\n    \"or\": [\n      \"item:group:crossbow\",\n      \"item:group:firearm\"\n    ]\n  }\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Hf46Mzc68TMxptBG:ins:in"
+                }
+            },
+            "position": {
+                "x": 738.9486763236762,
+                "y": 681.8536047286045
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "Hf46Mzc68TMxptBG",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-energy-shot"
+                },
+                "target": {
+                    "connection": "ayusi6FOrFD4qB6D:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "GBZLxxPqasf7jXlw:ins:in"
+                }
+            },
+            "position": {
+                "x": 968.8717532467531,
+                "y": 722.0036047286045
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "ayusi6FOrFD4qB6D",
+            "inputs": {
+                "entry": {
+                    "connection": "uy72YXMMvHQyK71k:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 828.9486763236762,
+                "y": 856.3536047286045
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "JrulpsPf9KrfZZlz": {
+                        "id": "JrulpsPf9KrfZZlz",
+                        "input": "system.resources.energyShots.value",
+                        "isArray": false,
+                        "label": "Energy Shots",
+                        "slug": "path",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "GBZLxxPqasf7jXlw",
+            "inputs": {
+                "input": {
+                    "connection": "ayusi6FOrFD4qB6D:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "2wTtZi2xiw7eEgvn:ins:in"
+                }
+            },
+            "position": {
+                "x": 1285.871753246753,
+                "y": 838.0036047286044
+            },
+            "type": "extract-actor"
+        },
+        {
+            "id": "2wTtZi2xiw7eEgvn",
+            "inputs": {
+                "a": {
+                    "connection": "GBZLxxPqasf7jXlw:outputs:JrulpsPf9KrfZZlz"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "9Y0vWZkrOsxiw2Yh:ins:in"
+                },
+                "true": {
+                    "connection": "HdEqi6prP01pdGfS:ins:in"
+                }
+            },
+            "position": {
+                "x": 1503.9486763236762,
+                "y": 801.8536047286045
+            },
+            "type": "compare-numbers"
+        },
+        {
+            "id": "HdEqi6prP01pdGfS",
+            "inputs": {
+                "item": {
+                    "connection": "tIvGt35Ino2hS3Ow:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1958.6495310245307,
+                "y": 690.1036047286044
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "tIvGt35Ino2hS3Ow",
+            "inputs": {
+                "entry": {
+                    "connection": "Hf46Mzc68TMxptBG:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1825.3931207681205,
+                "y": 819.4647158397155
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "9Y0vWZkrOsxiw2Yh",
+            "inputs": {
+                "by": {
+                    "value": -1
+                },
+                "slug": {
+                    "value": "energy-shots"
+                },
+                "target": {
+                    "connection": "2E066UpMBvVzdd3C:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1811.3003246753246,
+                "y": 906.262334887334
+            },
+            "type": "update-resource"
+        },
+        {
+            "id": "2E066UpMBvVzdd3C",
+            "inputs": {
+                "entry": {
+                    "connection": "uy72YXMMvHQyK71k:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1690.1550255300256,
+                "y": 1001.8456682206679
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "Hf46Mzc68TMxptBG:outputs:item": {
+            "isArray": false,
+            "label": "Aux Effect",
+            "type": "item"
+        },
+        "hzOy2jjab6aOgZr7:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        },
+        "ndJanmg4v84ZaSUp:outputs:item": {
+            "isArray": false,
+            "label": "Item",
+            "type": "item"
+        },
+        "uy72YXMMvHQyK71k:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        }
+    }
+}

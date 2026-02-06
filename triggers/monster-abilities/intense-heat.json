@@ -1,140 +1,174 @@
-[
-  {
-    "_id": "fmy4uug0XjFiB9BR",
-    "description": "<p>@Localize[TRIGGERTROVE.IntenseHeat.Trigger.AuraEntered.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
+{
     "folder": "Monster Abilities",
-    "name": "Intense Heat (Aura Entered)",
+    "id": "w93aoiI4fY81sqYj",
+    "name": "Intense Heat",
     "nodes": [
-      {
-        "_id": "9vK4AZRg130Ww4c3",
-        "inputs": {
-          "slug": {
-            "ids": [],
-            "value": "intense-heat"
-          },
-          "targets": {
-            "ids": [],
-            "value": "all"
-          },
-          "turn": {
-            "ids": [],
-            "value": false
-          }
+        {
+            "id": "tRoXVDYEBVV4tNHB",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "intense-heat"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "uEwiQ4fhbizoEZ9j:ins:in"
+                }
+            },
+            "position": {
+                "x": 370.0000000000001,
+                "y": 354.00000000000006
+            },
+            "type": "aura-enter-event"
         },
-        "key": "aura-enter",
-        "outputs": {
-          "out": {
-            "ids": ["D2RZzrx5D9SGQM8R.inputs.in"]
-          },
-          "source": {
-            "ids": ["D2RZzrx5D9SGQM8R.inputs.PAWVQq94ohe1Jwsj"]
-          }
+        {
+            "id": "uEwiQ4fhbizoEZ9j",
+            "inputs": {
+                "slug": {
+                    "value": "intense-heat"
+                },
+                "target": {
+                    "connection": "tRoXVDYEBVV4tNHB:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "cPoJf6OA87X0eNeV:ins:in"
+                }
+            },
+            "position": {
+                "x": 678.9230769230767,
+                "y": 299.0666666666666
+            },
+            "state": "slug",
+            "type": "has-item"
         },
-        "position": {
-          "x": 350,
-          "y": 200
+        {
+            "id": "cPoJf6OA87X0eNeV",
+            "inputs": {
+                "item": {
+                    "connection": "uEwiQ4fhbizoEZ9j:outputs:item"
+                },
+                "parent": {
+                    "connection": "uEwiQ4fhbizoEZ9j:outputs:item"
+                },
+                "targets": {
+                    "connection": "tRoXVDYEBVV4tNHB:outputs:target"
+                }
+            },
+            "position": {
+                "x": 969.6666666666664,
+                "y": 381.5833333333332
+            },
+            "type": "send-chat"
         },
-        "type": "event"
-      },
-      {
-        "_id": "D2RZzrx5D9SGQM8R",
-        "inputs": {
-          "ENRCMPZjXaVhJQta": {
-            "ids": ["9vK4AZRg130Ww4c3.outputs.source"]
-          },
-          "HhJmeS0b8RW20qN7": {
-            "ids": [],
-            "value": "intense-heat"
-          },
-          "in": {
-            "ids": ["9vK4AZRg130Ww4c3.outputs.out"]
-          },
-          "PAWVQq94ohe1Jwsj": {
-            "ids": ["9vK4AZRg130Ww4c3.outputs.source"]
-          }
+        {
+            "id": "KZadi2k777NYIXcQ",
+            "inputs": {
+                "slug": {
+                    "value": "intense-heat"
+                },
+                "target": {
+                    "connection": "PWCuut3sGDYY6xWN:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "NSeLJoJT89DJ3HNy:ins:in"
+                }
+            },
+            "position": {
+                "x": 890.2033799533791,
+                "y": 613.4277777777775
+            },
+            "state": "slug",
+            "type": "has-item"
         },
-        "key": "subtrigger-node",
-        "position": {
-          "x": 630,
-          "y": 207.75
+        {
+            "id": "NSeLJoJT89DJ3HNy",
+            "inputs": {
+                "item": {
+                    "connection": "KZadi2k777NYIXcQ:outputs:item"
+                },
+                "parent": {
+                    "connection": "KZadi2k777NYIXcQ:outputs:item"
+                },
+                "targets": {
+                    "connection": "gTtS1AwWXirenNGb:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1189.8358585858577,
+                "y": 662.6111111111107
+            },
+            "type": "send-chat"
         },
-        "target": "KbmYmEm4rMEedc9N",
-        "type": "subtrigger"
-      }
-    ]
-  },
-  {
-    "_id": "QTlb6cOxsdi3TAY9",
-    "description": "<p>@Localize[TRIGGERTROVE.IntenseHeat.Trigger.TurnStarted.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
-    "folder": "Monster Abilities",
-    "name": "Intense Heat (Turn Started)",
-    "nodes": [
-      {
-        "_id": "LTD1CLZ6jWQVsHuH",
-        "key": "turn-start",
-        "outputs": {
-          "out": {
-            "ids": ["7M3EHWmPBnPEJrzy.inputs.in"]
-          }
+        {
+            "id": "sV9v678cDc103c41",
+            "outs": {
+                "out": {
+                    "connection": "PWCuut3sGDYY6xWN:ins:in"
+                }
+            },
+            "position": {
+                "x": 365.4172494172492,
+                "y": 524.6730769230771
+            },
+            "type": "turn-start-event"
         },
-        "position": {
-          "x": 350,
-          "y": 200
+        {
+            "id": "PWCuut3sGDYY6xWN",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "intense-heat"
+                },
+                "target": {
+                    "connection": "sV9v678cDc103c41:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "KZadi2k777NYIXcQ:ins:in"
+                }
+            },
+            "position": {
+                "x": 576.4248251748251,
+                "y": 561.5554001554001
+            },
+            "type": "inside-aura"
         },
-        "type": "event"
-      },
-      {
-        "_id": "7M3EHWmPBnPEJrzy",
-        "inputs": {
-          "in": {
-            "ids": ["LTD1CLZ6jWQVsHuH.outputs.out"]
-          },
-          "slug": {
-            "ids": [],
-            "value": "intense-heat"
-          },
-          "targets": {
-            "ids": [],
-            "value": "all"
-          }
-        },
-        "key": "inside-aura",
-        "outputs": {
-          "source": {
-            "ids": ["HMxdtUqPXbYAngfs.inputs.PAWVQq94ohe1Jwsj"]
-          },
-          "true": {
-            "ids": ["HMxdtUqPXbYAngfs.inputs.in"]
-          }
-        },
-        "position": {
-          "x": 531,
-          "y": 199.23000000000002
-        },
-        "type": "condition"
-      },
-      {
-        "_id": "HMxdtUqPXbYAngfs",
-        "inputs": {
-          "HhJmeS0b8RW20qN7": {
-            "ids": [],
-            "value": "intense-heat"
-          },
-          "in": {
-            "ids": ["7M3EHWmPBnPEJrzy.outputs.true"]
-          },
-          "PAWVQq94ohe1Jwsj": {
-            "ids": ["7M3EHWmPBnPEJrzy.outputs.source"]
-          }
-        },
-        "key": "subtrigger-node",
-        "position": {
-          "x": 810,
-          "y": 199.75
-        },
-        "target": "KbmYmEm4rMEedc9N",
-        "type": "subtrigger"
-      }
-    ]
-  }
-]
+        {
+            "id": "gTtS1AwWXirenNGb",
+            "inputs": {
+                "entry": {
+                    "connection": "sV9v678cDc103c41:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 998.4904817404816,
+                "y": 742.2892385392383
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "sV9v678cDc103c41:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        }
+    }
+}

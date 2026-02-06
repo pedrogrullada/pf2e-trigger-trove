@@ -1,0 +1,136 @@
+{
+    "folder": "Feats & Features",
+    "id": "KvCY9f2g6kBPhpR9",
+    "name": "Unbalancing Blow",
+    "nodes": [
+        {
+            "id": "x0TebZ8JMPgsjzg1",
+            "outs": {
+                "out": {
+                    "connection": "0Dx5XMryLHLXiTYw:ins:in"
+                }
+            },
+            "position": {
+                "x": 485,
+                "y": 298
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "0Dx5XMryLHLXiTYw",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.4f65nrWVzTG8Njj8"
+                },
+                "target": {
+                    "connection": "x0TebZ8JMPgsjzg1:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "ktqY51PvjGONxsvk:ins:in"
+                }
+            },
+            "position": {
+                "x": 764,
+                "y": 244.14999999999998
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "ktqY51PvjGONxsvk",
+            "inputs": {
+                "entry": {
+                    "value": "check:outcome:critical-success"
+                },
+                "list": {
+                    "connection": "x0TebZ8JMPgsjzg1:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "mnXcEKjnV8Upsj5Q:ins:in"
+                }
+            },
+            "position": {
+                "x": 1045,
+                "y": 374.25
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "mnXcEKjnV8Upsj5Q",
+            "inputs": {
+                "condition": {
+                    "value": "off-guard"
+                },
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "name": {
+                    "value": "Effect: Off-Guard from Unbalancing Blow"
+                },
+                "origin": {
+                    "connection": "pTGLegu48w7E4ZKy:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/melee/shield-damaged-broken-brown.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-unbalancing-blow"
+                },
+                "target": {
+                    "connection": "IyubaTquUWRYsqJA:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1320.923076923077,
+                "y": 321.4
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "pTGLegu48w7E4ZKy",
+            "inputs": {
+                "entry": {
+                    "connection": "x0TebZ8JMPgsjzg1:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1167,
+                "y": 546.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "IyubaTquUWRYsqJA",
+            "inputs": {
+                "entry": {
+                    "connection": "x0TebZ8JMPgsjzg1:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1164,
+                "y": 505.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "x0TebZ8JMPgsjzg1:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "x0TebZ8JMPgsjzg1:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

@@ -1,0 +1,172 @@
+{
+    "folder": "Feats & Features",
+    "id": "GobSqyzICH9LjSOi",
+    "name": "Steam Knight",
+    "nodes": [
+        {
+            "id": "XNskevqpP9XKlweC",
+            "outs": {
+                "out": {
+                    "connection": "mLOvw9EPAbgpDH6F:ins:in"
+                }
+            },
+            "position": {
+                "x": 326,
+                "y": 347
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "mLOvw9EPAbgpDH6F",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.cmCLIMgtd4TLA23p"
+                },
+                "target": {
+                    "connection": "XNskevqpP9XKlweC:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "VH3qL2Hy05zoXQ1F:ins:in"
+                }
+            },
+            "position": {
+                "x": 564,
+                "y": 403
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "VH3qL2Hy05zoXQ1F",
+            "inputs": {
+                "slug": {
+                    "value": "kinetic-aura"
+                },
+                "target": {
+                    "connection": "zodXKdy14hAcNv2I:outputs:targets"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "4GPNq3vg8YeKrrar:ins:in"
+                }
+            },
+            "position": {
+                "x": 851.4786324786323,
+                "y": 460.28888888888883
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "4GPNq3vg8YeKrrar",
+            "inputs": {
+                "a": {
+                    "connection": "VH3qL2Hy05zoXQ1F:outputs:source"
+                },
+                "b": {
+                    "connection": "eMKUSCPDv7PugBCb:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "6vNXVKlX2YUtEIQD:ins:in"
+                }
+            },
+            "position": {
+                "x": 1179.7222222222222,
+                "y": 553.3611111111112
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "eMKUSCPDv7PugBCb",
+            "inputs": {
+                "entry": {
+                    "connection": "XNskevqpP9XKlweC:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1010.7777777777776,
+                "y": 667.6388888888889
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "6vNXVKlX2YUtEIQD",
+            "inputs": {
+                "formula": {
+                    "value": "(floor((@actor.level -6)/5)+2)d6[fire]"
+                },
+                "index": {
+                    "value": 2
+                },
+                "item": {
+                    "connection": "EKfgiAQVPG2HKnsY:outputs:item"
+                },
+                "note": {
+                    "value": "<p>@Localize[TRIGGERTROVE.SteamKnight.Trigger.TurnStarted.Note]</p>"
+                },
+                "origin": {
+                    "connection": "HWWHv4wUT3iZwACk:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1417.3978243978243,
+                "y": 574.0060606060603
+            },
+            "state": "item",
+            "type": "roll-damage"
+        },
+        {
+            "id": "EKfgiAQVPG2HKnsY",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.7PjBANpMMoBxTYq3"
+                }
+            },
+            "position": {
+                "x": 1152.1388888888887,
+                "y": 838.1111111111107
+            },
+            "type": "item-value"
+        },
+        {
+            "id": "HWWHv4wUT3iZwACk",
+            "inputs": {
+                "entry": {
+                    "connection": "XNskevqpP9XKlweC:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1225.6666666666667,
+                "y": 664.9166666666663
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "zodXKdy14hAcNv2I",
+            "inputs": {
+                "callback": {
+                    "value": "/**\n * @param {{actor: Actor; token: TokenDocument}} target\n * @returns {boolean}\n *\n * @example\n * return target.actor.type === \"npc\";\n */\n{{actor: Actor; token: TokenDocument}} target\n\nreturn target.actor.system.details.alliance == \"opposition\";"
+                }
+            },
+            "position": {
+                "x": 554.1666666666677,
+                "y": 632.0555555555561
+            },
+            "type": "scene-targets"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "XNskevqpP9XKlweC:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        }
+    }
+}

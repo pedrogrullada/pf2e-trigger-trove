@@ -1,0 +1,157 @@
+{
+    "folder": "Feats & Features",
+    "id": "58lqGVVMPwdbEnSN",
+    "name": "Elegant Buckler",
+    "nodes": [
+        {
+            "id": "cM1FveRDlOKURsDN",
+            "outs": {
+                "out": {
+                    "connection": "IEhXmXcGx4FK4wAl:ins:in"
+                }
+            },
+            "position": {
+                "x": 380,
+                "y": 291
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "IEhXmXcGx4FK4wAl",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.C5tSxOwDILefw4zq"
+                },
+                "target": {
+                    "connection": "cM1FveRDlOKURsDN:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Yuj8nzb7zJUIAhOr:ins:in"
+                }
+            },
+            "position": {
+                "x": 601.9230769230769,
+                "y": 338.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "Yuj8nzb7zJUIAhOr",
+            "inputs": {
+                "option": {
+                    "value": "elegant-buckler"
+                },
+                "target": {
+                    "connection": "YZKEzVExQAG7WDHx:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "ujaKW4AOabGvrEQ8:ins:in"
+                }
+            },
+            "position": {
+                "x": 881,
+                "y": 394
+            },
+            "type": "has-option"
+        },
+        {
+            "id": "YZKEzVExQAG7WDHx",
+            "inputs": {
+                "entry": {
+                    "connection": "cM1FveRDlOKURsDN:outputs:target"
+                }
+            },
+            "position": {
+                "x": 763,
+                "y": 507.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ujaKW4AOabGvrEQ8",
+            "inputs": {
+                "a": {
+                    "connection": "FnQIVY6na65KCNHy:outputs:entry"
+                },
+                "b": {
+                    "value": "criticalFailure"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "ECU7jqs462Tk1lQj:ins:in"
+                }
+            },
+            "position": {
+                "x": 1094,
+                "y": 457
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "FnQIVY6na65KCNHy",
+            "inputs": {
+                "entry": {
+                    "connection": "cM1FveRDlOKURsDN:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 970,
+                "y": 530.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ECU7jqs462Tk1lQj",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.paKKHPds77fq5VTH"
+                },
+                "target": {
+                    "connection": "nm1TnwZkyNSbU7wZ:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1378.923076923077,
+                "y": 495.4
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "nm1TnwZkyNSbU7wZ",
+            "inputs": {
+                "entry": {
+                    "connection": "cM1FveRDlOKURsDN:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1247,
+                "y": 671.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "cM1FveRDlOKURsDN:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "cM1FveRDlOKURsDN:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

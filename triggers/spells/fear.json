@@ -1,0 +1,240 @@
+{
+    "folder": "Spells",
+    "id": "BP9DPkkkWstegKqR",
+    "name": "Fear",
+    "nodes": [
+        {
+            "id": "5Zk6OuqPQTUZjuIW",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "oCCIxa44C7FVmthz:ins:in"
+                }
+            },
+            "position": {
+                "x": 360,
+                "y": 286
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "oCCIxa44C7FVmthz",
+            "inputs": {
+                "options": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:type:spell\",\n  \"item:slug:fear\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "U80Tabm7jNohQrX1:ins:in"
+                }
+            },
+            "position": {
+                "x": 616,
+                "y": 343
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "U80Tabm7jNohQrX1",
+            "inputs": {
+                "input": {
+                    "connection": "LrRabhMPUpozsnvQ:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "0dqrUhJhUYKugTUU:ins:in"
+                },
+                "failure": {
+                    "connection": "61AXbWhTHYTiEbAP:ins:in"
+                },
+                "success": {
+                    "connection": "TE3CMHcwGOrdkI3L:ins:in"
+                }
+            },
+            "position": {
+                "x": 857.9230769230769,
+                "y": 380.5
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "LrRabhMPUpozsnvQ",
+            "inputs": {
+                "entry": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 704,
+                "y": 462.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "0dqrUhJhUYKugTUU",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 3
+                },
+                "target": {
+                    "connection": "HPz7vhZcaEv6NkAk:outputs:entry"
+                },
+                "value": {
+                    "value": 3
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "8ENa1yr5DviwRr3p:ins:in"
+                }
+            },
+            "position": {
+                "x": 1221.6373626373627,
+                "y": 192.50000000000003
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "HPz7vhZcaEv6NkAk",
+            "inputs": {
+                "entry": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1089.2857142857147,
+                "y": 479.89285714285717
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "8ENa1yr5DviwRr3p",
+            "inputs": {
+                "condition": {
+                    "value": "fleeing"
+                },
+                "name": {
+                    "value": "Effect: Fear (Critical Failure)"
+                },
+                "origin": {
+                    "connection": "udFZPz0XLFE7fU0t:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "systems/pf2e/icons/spells/fear.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-fear"
+                },
+                "target": {
+                    "connection": "VX3YqBBrLOTbErEb:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1500.923076923077,
+                "y": 36.400000000000006
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "udFZPz0XLFE7fU0t",
+            "inputs": {
+                "entry": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1320,
+                "y": 370
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "61AXbWhTHYTiEbAP",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "HPz7vhZcaEv6NkAk:outputs:entry"
+                },
+                "value": {
+                    "value": 2
+                }
+            },
+            "position": {
+                "x": 1220.7802197802198,
+                "y": 412.50000000000006
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "TE3CMHcwGOrdkI3L",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "HPz7vhZcaEv6NkAk:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1222.2087912087914,
+                "y": 593.9285714285716
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "VX3YqBBrLOTbErEb",
+            "inputs": {
+                "entry": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1290.4285714285716,
+                "y": 92.28571428571415
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "5Zk6OuqPQTUZjuIW:outputs:item": {
+            "isArray": false,
+            "label": "Spell",
+            "type": "item"
+        },
+        "5Zk6OuqPQTUZjuIW:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "5Zk6OuqPQTUZjuIW:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        }
+    }
+}

@@ -1,0 +1,156 @@
+{
+    "folder": "Feats & Features",
+    "id": "Jm5DnllL7bR7d8Yu",
+    "name": "Finishing Follow-Through",
+    "nodes": [
+        {
+            "id": "XuvCFfXh1ikTnieF",
+            "outs": {
+                "out": {
+                    "connection": "63Y6jU7Lqqm6AwhB:ins:in"
+                }
+            },
+            "position": {
+                "x": 476,
+                "y": 272
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "63Y6jU7Lqqm6AwhB",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ"
+                },
+                "target": {
+                    "connection": "XuvCFfXh1ikTnieF:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Fh2R2J31HfhcKWJG:ins:in"
+                }
+            },
+            "position": {
+                "x": 770.9230769230769,
+                "y": 207.39999999999998
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "Fh2R2J31HfhcKWJG",
+            "inputs": {
+                "entry": {
+                    "value": "finisher"
+                },
+                "list": {
+                    "connection": "XuvCFfXh1ikTnieF:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "7VD8D8ot5kbu8XVw:ins:in"
+                }
+            },
+            "position": {
+                "x": 1056,
+                "y": 295.25
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "7VD8D8ot5kbu8XVw",
+            "inputs": {
+                "target": {
+                    "connection": "KyHs8R62ECEBRsZh:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "ELqgRqiAzNmIIzi0:ins:in"
+                }
+            },
+            "position": {
+                "x": 1305.923076923077,
+                "y": 371.5
+            },
+            "type": "is-dead"
+        },
+        {
+            "id": "KyHs8R62ECEBRsZh",
+            "inputs": {
+                "entry": {
+                    "connection": "XuvCFfXh1ikTnieF:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1175,
+                "y": 479.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ELqgRqiAzNmIIzi0",
+            "inputs": {
+                "item": {
+                    "connection": "1iW7SNxnz1y227Zs:outputs:entry"
+                },
+                "parent": {
+                    "connection": "gDnwu6sYZk76cM1Q:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1540.923076923077,
+                "y": 451.5
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "1iW7SNxnz1y227Zs",
+            "inputs": {
+                "entry": {
+                    "connection": "63Y6jU7Lqqm6AwhB:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1413,
+                "y": 501.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "gDnwu6sYZk76cM1Q",
+            "inputs": {
+                "entry": {
+                    "connection": "XuvCFfXh1ikTnieF:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1414,
+                "y": 542.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "63Y6jU7Lqqm6AwhB:outputs:item": {
+            "isArray": false,
+            "label": "Item",
+            "type": "item"
+        },
+        "XuvCFfXh1ikTnieF:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "XuvCFfXh1ikTnieF:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

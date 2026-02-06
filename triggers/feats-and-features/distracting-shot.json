@@ -1,0 +1,516 @@
+{
+    "folder": "Feats & Features",
+    "id": "gtKRywh18WVEw7JN",
+    "name": "Distracting Shot",
+    "nodes": [
+        {
+            "id": "NMiT4L2WFZWXEewk",
+            "outs": {
+                "out": {
+                    "connection": "Es04I7xYAAbAQTg4:ins:in"
+                }
+            },
+            "position": {
+                "x": 321,
+                "y": 246
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "Es04I7xYAAbAQTg4",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.BQrhDpLIp9zjbjEP"
+                },
+                "target": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Mnvvh62GdeOI2JQ5:ins:in"
+                }
+            },
+            "position": {
+                "x": 550.9230769230769,
+                "y": 298.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "NSYWAbcC1NbWSXZ1",
+            "inputs": {
+                "input": {
+                    "connection": "Sq3dHpvPOLYRsBLg:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalSuccess": {
+                    "connection": "NDI1NMdxZ2MpjBli:ins:in"
+                },
+                "success": {
+                    "connection": "4xKsOnxvB7z8xd21:ins:in"
+                }
+            },
+            "position": {
+                "x": 1046.923076923077,
+                "y": 471.5
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "Sq3dHpvPOLYRsBLg",
+            "inputs": {
+                "entry": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 909,
+                "y": 558.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "4xKsOnxvB7z8xd21",
+            "inputs": {
+                "identifier": {
+                    "value": "distracting-shot-hit"
+                },
+                "target": {
+                    "connection": "rwF3VxW4WW1U9KdU:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "eNamk24Stv5FdVDE:ins:in"
+                },
+                "true": {
+                    "connection": "VVsNP5JlzAwQ1dgU:ins:in"
+                }
+            },
+            "position": {
+                "x": 1365.923076923077,
+                "y": 235.83333333333326
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "NDI1NMdxZ2MpjBli",
+            "inputs": {
+                "identifier": {
+                    "value": "distracting-shot-hit"
+                },
+                "target": {
+                    "connection": "mzKjhFguryXtUOw4:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "6zk0YfbaDIh3AbaV:ins:in"
+                },
+                "true": {
+                    "connection": "HvguhShw7xd4F4ty:ins:in"
+                }
+            },
+            "position": {
+                "x": 1315.923076923077,
+                "y": 601.5
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "VVsNP5JlzAwQ1dgU",
+            "inputs": {
+                "item": {
+                    "connection": "4xKsOnxvB7z8xd21:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "JRuGsEaa5HAOUaRZ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1651,
+                "y": 178.58333333333326
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "eNamk24Stv5FdVDE",
+            "inputs": {
+                "identifier": {
+                    "value": "distracting-shot-hit"
+                },
+                "origin": {
+                    "connection": "zBjps3DuljaCdPK9:outputs:entry"
+                },
+                "target": {
+                    "connection": "zBjps3DuljaCdPK9:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "jpQQNBRFO4rNh1Ff:ins:in"
+                }
+            },
+            "position": {
+                "x": 1648.923076923077,
+                "y": 302.73333333333323
+            },
+            "state": "fixed",
+            "type": "create-temporary"
+        },
+        {
+            "id": "zBjps3DuljaCdPK9",
+            "inputs": {
+                "entry": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1509,
+                "y": 403.08333333333326
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "JRuGsEaa5HAOUaRZ",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA"
+                },
+                "target": {
+                    "connection": "yBmKMB5zq8A0kPap:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "3R7VaFT5KHoZejfr:ins:in"
+                },
+                "true": {
+                    "connection": "rcSYSk46VfgQQoGL:ins:in"
+                }
+            },
+            "position": {
+                "x": 2039.9230769230771,
+                "y": 170.73333333333323
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "yBmKMB5zq8A0kPap",
+            "inputs": {
+                "entry": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1876,
+                "y": 306.08333333333326
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "jpQQNBRFO4rNh1Ff",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA"
+                },
+                "target": {
+                    "connection": "yBmKMB5zq8A0kPap:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "3R7VaFT5KHoZejfr:ins:in"
+                }
+            },
+            "position": {
+                "x": 2040.9230769230771,
+                "y": 333.73333333333323
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "rcSYSk46VfgQQoGL",
+            "inputs": {
+                "condition": {
+                    "value": "off-guard"
+                },
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "name": {
+                    "value": "Effect: Distracting Shot (End of Turn)"
+                },
+                "origin": {
+                    "connection": "QkBTObf0LyeWHGGE:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/ranged/person-archery-bow-attack-gray.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/ranged/person-archery-bow-attack-gray.webp"
+                },
+                "target": {
+                    "connection": "dja7HLLQDXrBND2v:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2686.923076923076,
+                "y": 186.733333333333
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "QkBTObf0LyeWHGGE",
+            "inputs": {
+                "entry": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 2994.666666666666,
+                "y": 693.4166666666662
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "dja7HLLQDXrBND2v",
+            "inputs": {
+                "entry": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:target"
+                }
+            },
+            "position": {
+                "x": 2997.333333333333,
+                "y": 526.0833333333328
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "3R7VaFT5KHoZejfr",
+            "inputs": {
+                "condition": {
+                    "value": "off-guard"
+                },
+                "name": {
+                    "value": "Effect: Distracting Shot (Start of Turn)"
+                },
+                "origin": {
+                    "connection": "QkBTObf0LyeWHGGE:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/ranged/person-archery-bow-attack-gray.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/ranged/person-archery-bow-attack-gray.webp"
+                },
+                "target": {
+                    "connection": "dja7HLLQDXrBND2v:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2685.25641025641,
+                "y": 744.8999999999994
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "HvguhShw7xd4F4ty",
+            "inputs": {
+                "item": {
+                    "connection": "NDI1NMdxZ2MpjBli:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "6zk0YfbaDIh3AbaV:ins:in"
+                }
+            },
+            "position": {
+                "x": 1585.9999999999995,
+                "y": 570.5833333333331
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "6zk0YfbaDIh3AbaV",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA"
+                },
+                "target": {
+                    "connection": "hGUBaXdntWCYsDj8:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "3R7VaFT5KHoZejfr:ins:in"
+                },
+                "true": {
+                    "connection": "rcSYSk46VfgQQoGL:ins:in"
+                }
+            },
+            "position": {
+                "x": 1899.9230769230771,
+                "y": 649.4833333333331
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "hGUBaXdntWCYsDj8",
+            "inputs": {
+                "entry": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1743.250000000001,
+                "y": 769.9999999999999
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "mzKjhFguryXtUOw4",
+            "inputs": {
+                "entry": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1192.3333333333337,
+                "y": 692.4166666666666
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "rwF3VxW4WW1U9KdU",
+            "inputs": {
+                "entry": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1184.75,
+                "y": 340.24999999999994
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Mnvvh62GdeOI2JQ5",
+            "inputs": {
+                "options": {
+                    "connection": "NMiT4L2WFZWXEewk:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:ranged\",\n  \"target:mark:hunted-prey\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "NSYWAbcC1NbWSXZ1:ins:in"
+                }
+            },
+            "position": {
+                "x": 829,
+                "y": 412
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "WxQxLuZ0fzeZ3LDB",
+            "outs": {
+                "out": {
+                    "connection": "tFkeTIRcuYnxRP4E:ins:in"
+                }
+            },
+            "position": {
+                "x": 311.85714285714266,
+                "y": 583
+            },
+            "type": "turn-end-event"
+        },
+        {
+            "id": "tFkeTIRcuYnxRP4E",
+            "inputs": {
+                "targets": {
+                    "connection": "KoKadv5AJUQEiHmZ:outputs:targets"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "z9hEJVnjDXvspX3p:ins:in"
+                }
+            },
+            "position": {
+                "x": 548.1611721611721,
+                "y": 637.138095238095
+            },
+            "state": "loop",
+            "type": "filter-targets"
+        },
+        {
+            "id": "KoKadv5AJUQEiHmZ",
+            "position": {
+                "x": 270.9047619047617,
+                "y": 701.1547619047617
+            },
+            "type": "scene-targets"
+        },
+        {
+            "id": "z9hEJVnjDXvspX3p",
+            "inputs": {
+                "identifier": {
+                    "value": "distracting-shot-hit"
+                },
+                "target": {
+                    "connection": "tFkeTIRcuYnxRP4E:outputs:current"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "YQ1UR9FGtl4mKNM8:ins:in"
+                }
+            },
+            "position": {
+                "x": 793.161172161172,
+                "y": 689.0714285714284
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "YQ1UR9FGtl4mKNM8",
+            "inputs": {
+                "item": {
+                    "connection": "z9hEJVnjDXvspX3p:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1066.5714285714284,
+                "y": 755.9880952380954
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "variables": {
+        "NMiT4L2WFZWXEewk:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "NMiT4L2WFZWXEewk:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "NMiT4L2WFZWXEewk:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

@@ -1,386 +1,258 @@
 {
-    "_id": "dE9EA8Brga9Xndpt",
-    "description": "@Localize[TRIGGERTROVE.Fortification.Trigger.AttackRolled.Description]",
     "folder": "Equipment",
-    "name": "Fortification (Attack Rolled)",
+    "id": "X32DeTp4mBzqQUtK",
+    "name": "Fortification",
     "nodes": [
         {
-            "_id": "RsZFc5myn7ObM4Ja",
-            "key": "attack-roll",
-            "outputs": {
+            "id": "uTrTa15m4bAvf7ev",
+            "outs": {
                 "out": {
-                    "ids": [
-                        "NXL40xnZZwSex4Si.inputs.in"
-                    ]
-                },
-                "outcome": {
-                    "ids": [
-                        "NXL40xnZZwSex4Si.inputs.a"
-                    ]
+                    "connection": "GZRksHuciWNNt1dO:ins:in"
                 }
             },
             "position": {
-                "x": 350,
-                "y": 200
+                "x": 397,
+                "y": 176
             },
-            "type": "event"
+            "type": "attack-roll-event"
         },
         {
-            "_id": "NXL40xnZZwSex4Si",
+            "id": "GZRksHuciWNNt1dO",
             "inputs": {
                 "a": {
-                    "ids": [
-                        "RsZFc5myn7ObM4Ja.outputs.outcome"
-                    ]
+                    "connection": "uTrTa15m4bAvf7ev:outputs:outcome"
                 },
                 "b": {
-                    "ids": [
-                        "cjawCXgBCH09CGou.outputs.value"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "RsZFc5myn7ObM4Ja.outputs.out"
-                    ]
-                }
-            },
-            "key": "gte-number",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "ME299APgRcxYiP62.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 543,
-                "y": 215.75
-            },
-            "type": "logic"
-        },
-        {
-            "_id": "cjawCXgBCH09CGou",
-            "inputs": {
-                "input": {
-                    "ids": [],
                     "value": "criticalSuccess"
                 }
             },
-            "key": "success-value",
-            "outputs": {
-                "value": {
-                    "ids": [
-                        "NXL40xnZZwSex4Si.inputs.b"
-                    ]
+            "outs": {
+                "true": {
+                    "connection": "1k2L22rj29jf1PA2:ins:in"
                 }
             },
             "position": {
-                "x": 346.5,
-                "y": 440.25
+                "x": 658,
+                "y": 213.25
             },
-            "type": "value"
+            "type": "compare-outcomes"
         },
         {
-            "_id": "ME299APgRcxYiP62",
+            "id": "1k2L22rj29jf1PA2",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "NXL40xnZZwSex4Si.outputs.true"
-                    ]
-                },
-                "uuid": {
-                    "ids": [],
+                "pf2e": {
                     "value": "Compendium.pf2e.feats-srd.Item.oYzkopbXguiwfNTx"
+                },
+                "target": {
+                    "connection": "jDi7PfhVYloOxbfN:outputs:entry"
                 }
             },
-            "key": "has-item",
-            "outputs": {
+            "outs": {
                 "false": {
-                    "ids": [
-                        "C6Iro9r7Shj8auz7.inputs.in"
-                    ]
+                    "connection": "1Wexlj07kIY9ASsd:ins:in"
                 }
             },
             "position": {
-                "x": 734,
-                "y": 199.75
+                "x": 929.5897435897434,
+                "y": 221.84444444444438
             },
-            "type": "condition"
+            "type": "has-item"
         },
         {
-            "_id": "EqYgzP9PHUudVx5H",
+            "id": "1Wexlj07kIY9ASsd",
             "inputs": {
-                "dc": {
-                    "ids": [],
-                    "value": 17
-                },
-                "in": {
-                    "ids": [
-                        "C6Iro9r7Shj8auz7.outputs.true"
-                    ]
-                },
-                "target": {
-                    "ids": [
-                        "d557oYWjaK1O9UEp.outputs.output"
-                    ]
-                }
-            },
-            "key": "roll-flat",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "i6h6qj4wc9bf5vGI.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1250,
-                "y": 81.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "d557oYWjaK1O9UEp",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "EqYgzP9PHUudVx5H.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1251.5,
-                "y": 214.25
-            },
-            "target": "RsZFc5myn7ObM4Ja.outputs.other",
-            "type": "variable"
-        },
-        {
-            "_id": "w53h4L9IJeZ4Ko34",
-            "inputs": {
-                "dc": {
-                    "ids": [],
-                    "value": 14
-                },
-                "in": {
-                    "ids": [
-                        "sly3tV3IksMZCzAG.outputs.true"
-                    ]
-                },
-                "target": {
-                    "ids": [
-                        "XlYD4URIRgMVDCIE.outputs.output"
-                    ]
-                }
-            },
-            "key": "roll-flat",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "i6h6qj4wc9bf5vGI.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1445,
-                "y": 283.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "XlYD4URIRgMVDCIE",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "w53h4L9IJeZ4Ko34.inputs.target",
-                        "i6h6qj4wc9bf5vGI.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1447.5,
-                "y": 420.25
-            },
-            "target": "RsZFc5myn7ObM4Ja.outputs.other",
-            "type": "variable"
-        },
-        {
-            "_id": "i6h6qj4wc9bf5vGI",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "EqYgzP9PHUudVx5H.outputs.out",
-                        "w53h4L9IJeZ4Ko34.outputs.out"
-                    ]
-                },
-                "message": {
-                    "value": "TRIGGERTROVE.Fortification.Trigger.AttackRolled.CreateChatMessage"
-                },
-                "target": {
-                    "ids": [
-                        "XlYD4URIRgMVDCIE.outputs.output"
-                    ]
-                }
-            },
-            "key": "create-message",
-            "position": {
-                "x": 1686,
-                "y": 256.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "C6Iro9r7Shj8auz7",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "ME299APgRcxYiP62.outputs.false"
-                    ]
-                },
                 "option": {
-                    "ids": [],
                     "value": "armor:rune:property:fortification"
                 },
                 "target": {
-                    "ids": [
-                        "qKGpSDB66tF02rJD.outputs.output"
-                    ]
+                    "connection": "UPk6ynCBBHyM2Zv3:outputs:entry"
                 }
             },
-            "key": "has-option",
-            "outputs": {
+            "outs": {
                 "false": {
-                    "ids": [
-                        "sly3tV3IksMZCzAG.inputs.in"
-                    ]
+                    "connection": "EyZqXxSKLPxhxQbl:ins:in"
                 },
                 "true": {
-                    "ids": [
-                        "EqYgzP9PHUudVx5H.inputs.in"
-                    ]
+                    "connection": "r06TOjQMi6gW0meC:ins:in"
                 }
             },
             "position": {
-                "x": 973.5,
-                "y": 226.25
+                "x": 1206.923076923077,
+                "y": 261.5
             },
-            "type": "condition"
+            "type": "has-option"
         },
         {
-            "_id": "qKGpSDB66tF02rJD",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "C6Iro9r7Shj8auz7.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 822.5,
-                "y": 336.25
-            },
-            "target": "RsZFc5myn7ObM4Ja.outputs.other",
-            "type": "variable"
-        },
-        {
-            "_id": "sly3tV3IksMZCzAG",
+            "id": "UPk6ynCBBHyM2Zv3",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "C6Iro9r7Shj8auz7.outputs.false"
-                    ]
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1080,
+                "y": 375.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "r06TOjQMi6gW0meC",
+            "inputs": {
+                "dc": {
+                    "value": 17
                 },
+                "target": {
+                    "connection": "A8jq1RPIZc1GB9Y8:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "KH5aQLBFt96jtv2j:ins:in"
+                }
+            },
+            "position": {
+                "x": 1603.145299145299,
+                "y": 34.94444444444443
+            },
+            "type": "roll-flat"
+        },
+        {
+            "id": "A8jq1RPIZc1GB9Y8",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1527.8888888888887,
+                "y": 259.6388888888888
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "EyZqXxSKLPxhxQbl",
+            "inputs": {
                 "option": {
-                    "ids": [],
                     "value": "armor:rune:property:greater-fortification"
                 },
                 "target": {
-                    "ids": [
-                        "F4GJRCmFLZf7FmOs.outputs.output"
-                    ]
+                    "connection": "MtXV8KeSntTa0Lvu:outputs:entry"
                 }
             },
-            "key": "has-option",
-            "outputs": {
+            "outs": {
                 "true": {
-                    "ids": [
-                        "w53h4L9IJeZ4Ko34.inputs.in"
-                    ]
+                    "connection": "MEmi6mNbfOUfrJWa:ins:in"
                 }
             },
             "position": {
-                "x": 1210.5,
-                "y": 284.25
+                "x": 1455.8119658119658,
+                "y": 359.2777777777776
             },
-            "type": "condition"
+            "type": "has-option"
         },
         {
-            "_id": "F4GJRCmFLZf7FmOs",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "sly3tV3IksMZCzAG.inputs.target"
-                    ]
+            "id": "MtXV8KeSntTa0Lvu",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:target"
                 }
             },
             "position": {
-                "x": 1062.5,
-                "y": 375.25
+                "x": 1327.8888888888887,
+                "y": 486.30555555555566
             },
-            "target": "RsZFc5myn7ObM4Ja.outputs.other",
-            "type": "variable"
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "MEmi6mNbfOUfrJWa",
+            "inputs": {
+                "dc": {
+                    "value": 14
+                },
+                "target": {
+                    "connection": "A8jq1RPIZc1GB9Y8:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "KH5aQLBFt96jtv2j:ins:in"
+                }
+            },
+            "position": {
+                "x": 1708.7008547008545,
+                "y": 351.61111111111103
+            },
+            "type": "roll-flat"
+        },
+        {
+            "id": "KH5aQLBFt96jtv2j",
+            "inputs": {
+                "author": {
+                    "connection": "FoFLKWRMoWFk3WIh:outputs:user"
+                },
+                "localization": {
+                    "value": "TRIGGERTROVE.Fortification.Trigger.AttackRolled.CreateChatMessage"
+                },
+                "speaker": {
+                    "connection": "uCd0vduyMsheW9Oh:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1991.2564102564097,
+                "y": 39.73333333333335
+            },
+            "state": "localization",
+            "type": "create-message"
+        },
+        {
+            "id": "FoFLKWRMoWFk3WIh",
+            "position": {
+                "x": 1708.777777777777,
+                "y": 184.75000000000006
+            },
+            "type": "user-value"
+        },
+        {
+            "id": "uCd0vduyMsheW9Oh",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1854.555555555555,
+                "y": 257.41666666666663
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "jDi7PfhVYloOxbfN",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:target"
+                }
+            },
+            "position": {
+                "x": 817.8888888888891,
+                "y": 360.7500000000001
+            },
+            "type": "__variable_getter__"
         }
-    ]
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "uTrTa15m4bAvf7ev:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "uTrTa15m4bAvf7ev:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
 }

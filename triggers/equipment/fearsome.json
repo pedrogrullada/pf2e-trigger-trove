@@ -1,363 +1,169 @@
 {
-    "_id": "dRpnDnX9xS8U1VoA",
-    "description": "@Localize[TRIGGERTROVE.Fearsome.Trigger.AttackRolled.Description]",
     "folder": "Equipment",
-    "name": "Fearsome (Attack Rolled)",
+    "id": "0CKu9GNVl1CcAY9h",
+    "name": "Fearsome",
     "nodes": [
         {
-            "_id": "AgdzBAGMsMm8joWv",
-            "key": "attack-roll",
-            "outputs": {
-                "options": {
-                    "ids": []
-                },
+            "id": "KN813QQDDJD4vu5O",
+            "outs": {
                 "out": {
-                    "ids": [
-                        "AfRPlQ55S95JONGA.inputs.in"
-                    ]
-                },
-                "outcome": {
-                    "ids": [
-                        "AfRPlQ55S95JONGA.inputs.a"
-                    ]
+                    "connection": "p1O6P361TzUbmrlS:ins:in"
                 }
             },
             "position": {
-                "x": 350,
-                "y": 200
+                "x": 386.3333333333333,
+                "y": 246.55555555555543
             },
-            "type": "event"
+            "type": "attack-roll-event"
         },
         {
-            "_id": "AfRPlQ55S95JONGA",
+            "id": "p1O6P361TzUbmrlS",
             "inputs": {
                 "a": {
-                    "ids": [
-                        "AgdzBAGMsMm8joWv.outputs.outcome"
-                    ]
+                    "connection": "KN813QQDDJD4vu5O:outputs:outcome"
                 },
                 "b": {
-                    "ids": [
-                        "ue7WBJzvM3rkyEdt.outputs.value"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "AgdzBAGMsMm8joWv.outputs.out"
-                    ]
-                }
-            },
-            "key": "gte-number",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "fpRVPMAvrTl4FuXU.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 541.5,
-                "y": 214.75
-            },
-            "type": "logic"
-        },
-        {
-            "_id": "ue7WBJzvM3rkyEdt",
-            "inputs": {
-                "input": {
                     "value": "criticalSuccess"
                 }
             },
-            "key": "success-value",
-            "outputs": {
-                "value": {
-                    "ids": [
-                        "AfRPlQ55S95JONGA.inputs.b"
-                    ]
+            "outs": {
+                "true": {
+                    "connection": "Poyo5MGBbs92TlGe:ins:in"
                 }
             },
             "position": {
-                "x": 339.5,
-                "y": 435.25
+                "x": 652,
+                "y": 297.25
             },
-            "type": "value"
+            "type": "compare-outcomes"
         },
         {
-            "_id": "irA1a6xFQxmVBOW6",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "list"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "fpRVPMAvrTl4FuXU.inputs.list",
-                        "1OapBubTgN2EyWtJ.inputs.list"
-                    ]
-                }
-            },
-            "position": {
-                "x": 605.5,
-                "y": 342.25
-            },
-            "target": "AgdzBAGMsMm8joWv.outputs.options",
-            "type": "variable"
-        },
-        {
-            "_id": "Lumb2gnAFMxaLf3N",
+            "id": "N87NbkQLwM9XyHP8",
             "inputs": {
                 "condition": {
                     "value": "frightened"
                 },
-                "effect": {
-                    "ids": []
-                },
-                "in": {
-                    "ids": [
-                        "fpRVPMAvrTl4FuXU.outputs.true",
-                        "iDmiTLVJHJm0xzgt.outputs.true"
-                    ]
+                "max": {
+                    "value": 1
                 },
                 "target": {
-                    "ids": [
-                        "yEYcw5RkR8dXxIGb.outputs.output"
-                    ]
-                }
-            },
-            "key": "add-condition",
-            "position": {
-                "x": 1506,
-                "y": 110.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "yEYcw5RkR8dXxIGb",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "Lumb2gnAFMxaLf3N.inputs.target"
-                    ]
+                    "connection": "zYfpDTl0KkIpLv55:outputs:entry"
                 }
             },
             "position": {
-                "x": 1360.5,
-                "y": 245.25
+                "x": 1462.8992673992677,
+                "y": 102.41594516594512
             },
-            "target": "AgdzBAGMsMm8joWv.outputs.other",
-            "type": "variable"
+            "type": "increase-condition"
         },
         {
-            "_id": "gYOp1kJn6w3LcK7p",
+            "id": "mHA2VIBdfTLGgdma",
             "inputs": {
                 "condition": {
-                    "ids": [],
                     "value": "frightened"
                 },
-                "counter": {
+                "max": {
                     "value": 2
                 },
-                "in": {
-                    "ids": [
-                        "iDmiTLVJHJm0xzgt.outputs.false"
-                    ]
-                },
                 "target": {
-                    "ids": [
-                        "BNaQv7KJJ45KQc8N.outputs.output"
-                    ]
-                }
-            },
-            "key": "add-condition",
-            "position": {
-                "x": 1502,
-                "y": 335.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "fpRVPMAvrTl4FuXU",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "AfRPlQ55S95JONGA.outputs.true"
-                    ]
+                    "connection": "zYfpDTl0KkIpLv55:outputs:entry"
                 },
-                "list": {
-                    "ids": [
-                        "irA1a6xFQxmVBOW6.outputs.output"
-                    ]
-                },
-                "predicate": {
-                    "value": "[\n  \"item:rune:property:fearsome\",\n  {\n    \"not\": \"target:condition:frightened\"\n  }\n]"
-                }
-            },
-            "key": "match-predicate",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "1OapBubTgN2EyWtJ.inputs.in"
-                    ]
-                },
-                "true": {
-                    "ids": [
-                        "Lumb2gnAFMxaLf3N.inputs.in"
-                    ]
+                "value": {
+                    "value": 2
                 }
             },
             "position": {
-                "x": 728.5,
-                "y": 196.25
+                "x": 1463.2942890442887,
+                "y": 346.71212121212085
             },
-            "type": "condition"
+            "type": "increase-condition"
         },
         {
-            "_id": "1OapBubTgN2EyWtJ",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "fpRVPMAvrTl4FuXU.outputs.false"
-                    ]
-                },
-                "list": {
-                    "ids": [
-                        "irA1a6xFQxmVBOW6.outputs.output"
-                    ]
-                },
-                "predicate": {
-                    "ids": [],
-                    "value": "[\n  \"item:rune:property:greater-fearsome\",\n  {\n    \"not\": {\n      \"gte\": [\n        \"target:condition:frightened\",\n        2\n      ]\n    }\n  }\n]"
-                }
-            },
-            "key": "match-predicate",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "iDmiTLVJHJm0xzgt.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 973.5,
-                "y": 288.25
-            },
-            "type": "condition"
-        },
-        {
-            "_id": "BNaQv7KJJ45KQc8N",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "gYOp1kJn6w3LcK7p.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1351.5,
-                "y": 493.25
-            },
-            "target": "AgdzBAGMsMm8joWv.outputs.other",
-            "type": "variable"
-        },
-        {
-            "_id": "iDmiTLVJHJm0xzgt",
+            "id": "zYfpDTl0KkIpLv55",
             "inputs": {
                 "entry": {
-                    "value": "target:condition:frightened:1"
-                },
-                "in": {
-                    "ids": [
-                        "1OapBubTgN2EyWtJ.outputs.true"
-                    ]
-                },
-                "list": {
-                    "ids": [
-                        "PbJ2EbnC8CVuM9Oo.outputs.output"
-                    ]
-                }
-            },
-            "key": "contains-entry",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "gYOp1kJn6w3LcK7p.inputs.in"
-                    ]
-                },
-                "true": {
-                    "ids": [
-                        "Lumb2gnAFMxaLf3N.inputs.in"
-                    ]
+                    "connection": "KN813QQDDJD4vu5O:outputs:target"
                 }
             },
             "position": {
-                "x": 1218,
-                "y": 288.75
+                "x": 1319.9848484848492,
+                "y": 288.7337662337663
             },
-            "type": "condition"
+            "type": "__variable_getter__"
         },
         {
-            "_id": "PbJ2EbnC8CVuM9Oo",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "list"
-                    }
-                ],
-                "outs": []
+            "id": "Poyo5MGBbs92TlGe",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:fearsome"
+                },
+                "list": {
+                    "connection": "UAdRHhmFnChH50VD:outputs:entry"
+                }
             },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "iDmiTLVJHJm0xzgt.inputs.list"
-                    ]
+            "outs": {
+                "false": {
+                    "connection": "70dTjBwvQAJdXZHT:ins:in"
+                },
+                "true": {
+                    "connection": "N87NbkQLwM9XyHP8:ins:in"
                 }
             },
             "position": {
-                "x": 1084.5,
-                "y": 425.25
+                "x": 941.9365079365078,
+                "y": 281.0436507936508
             },
-            "target": "AgdzBAGMsMm8joWv.outputs.options",
-            "type": "variable"
+            "type": "list-contains"
+        },
+        {
+            "id": "UAdRHhmFnChH50VD",
+            "inputs": {
+                "entry": {
+                    "connection": "KN813QQDDJD4vu5O:outputs:options"
+                }
+            },
+            "position": {
+                "x": 780.168831168831,
+                "y": 479.86688311688306
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "70dTjBwvQAJdXZHT",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:fearsome"
+                },
+                "list": {
+                    "connection": "UAdRHhmFnChH50VD:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "mHA2VIBdfTLGgdma:ins:in"
+                }
+            },
+            "position": {
+                "x": 1190.118326118326,
+                "y": 409.22546897546886
+            },
+            "type": "list-contains"
         }
-    ]
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "KN813QQDDJD4vu5O:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "KN813QQDDJD4vu5O:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
 }

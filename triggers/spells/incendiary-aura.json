@@ -1,416 +1,204 @@
 {
-    "_id": "K8GYPAHnB7XZKlHD",
-    "description": "@Localize[TRIGGERTROVE.IncendiaryAura.Trigger.DamageTaken.Description]",
     "folder": "Spells",
-    "name": "Incendiary Aura (Damage Taken)",
+    "id": "qpLYXJhtEOf9CWeJ",
+    "name": "Incendiary Aura",
     "nodes": [
         {
-            "_id": "Gk1TCrQU7KShADph",
-            "key": "damage-taken",
-            "outputs": {
-                "options": {
-                    "ids": []
-                },
+            "id": "D20BKw9dToe1hFvr",
+            "outs": {
                 "out": {
-                    "ids": [
-                        "vIVj1DekKykYMU2c.inputs.in"
-                    ]
-                },
-                "this": {
-                    "ids": [
-                        "vIVj1DekKykYMU2c.inputs.target"
-                    ]
+                    "connection": "uBR07vJ1fvzNNogn:ins:in"
                 }
             },
             "position": {
-                "x": 350,
-                "y": 200
+                "x": 453,
+                "y": 201
             },
-            "type": "event"
+            "type": "damage-taken-event"
         },
         {
-            "_id": "vIVj1DekKykYMU2c",
+            "id": "uBR07vJ1fvzNNogn",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "Gk1TCrQU7KShADph.outputs.out"
-                    ]
+                "affects": {
+                    "value": "all"
                 },
                 "slug": {
-                    "ids": [],
                     "value": "incendiary-aura"
                 },
                 "target": {
-                    "ids": [
-                        "Gk1TCrQU7KShADph.outputs.this"
-                    ]
-                },
-                "targets": {
-                    "ids": [],
-                    "value": "all"
+                    "connection": "D20BKw9dToe1hFvr:outputs:origin"
                 }
             },
-            "key": "inside-aura",
-            "outputs": {
-                "source": {
-                    "ids": []
-                },
+            "outs": {
                 "true": {
-                    "ids": [
-                        "45eDDtBxxKNfOI5l.inputs.in"
-                    ]
+                    "connection": "DAiCiAC4s62g5BIB:ins:in"
                 }
             },
             "position": {
-                "x": 535,
-                "y": 201.23000000000002
+                "x": 735.4786324786324,
+                "y": 272.0666666666666
             },
-            "type": "condition"
+            "type": "inside-aura"
         },
         {
-            "_id": "Sy2J1AXMjWQiVzR9",
+            "id": "QzhKjlhxvufEDMNP",
             "inputs": {
                 "formula": {
-                    "ids": [],
-                    "value": "(ceil(@x/4)+1)d4[persistent,fire]"
+                    "connection": "DGuLC5iblrP4corC:outputs:formula"
                 },
-                "in": {
-                    "ids": [
-                        "j5525TTAlWaXgkJ6.outputs.out"
-                    ]
-                },
-                "x": {
-                    "ids": [
-                        "j5525TTAlWaXgkJ6.outputs.level"
-                    ]
-                }
-            },
-            "key": "replace-x",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "5DN6EyKcOZ3t60kS.inputs.in"
-                    ]
-                },
-                "result": {
-                    "ids": [
-                        "5DN6EyKcOZ3t60kS.inputs.formula"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1419,
-                "y": 295.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "j5525TTAlWaXgkJ6",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": true,
-                        "group": "",
-                        "key": "level",
-                        "label": "Caster's Level",
-                        "type": "number"
-                    }
-                ],
-                "outs": []
-            },
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "uPjkkD6WJIlr4xVi.outputs.false"
-                    ]
-                },
-                "input": {
-                    "ids": [
-                        "fselTo6IrqbC6rcE.outputs.output"
-                    ]
-                }
-            },
-            "key": "actor-splitter",
-            "outputs": {
-                "level": {
-                    "ids": [
-                        "Sy2J1AXMjWQiVzR9.inputs.x"
-                    ]
-                },
-                "out": {
-                    "ids": [
-                        "Sy2J1AXMjWQiVzR9.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1202.5,
-                "y": 291.23
-            },
-            "type": "splitter"
-        },
-        {
-            "_id": "5DN6EyKcOZ3t60kS",
-            "inputs": {
-                "formula": {
-                    "ids": [
-                        "Sy2J1AXMjWQiVzR9.outputs.result"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "Sy2J1AXMjWQiVzR9.outputs.out"
-                    ]
-                },
-                "roll": {
-                    "ids": [
-                        "HX2anZaTYCVxImqr.outputs.roll"
-                    ]
-                }
-            },
-            "key": "roll-damage",
-            "position": {
-                "x": 1681,
-                "y": 315.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "HX2anZaTYCVxImqr",
-            "inputs": {
                 "item": {
-                    "ids": [
-                        "dKq9pzJDP9TUDg7g.outputs.item"
-                    ]
-                },
-                "note": {
-                    "ids": [],
-                    "value": "TRIGGERTROVE.IncendiaryAura.Trigger.DamageTaken.Note"
+                    "connection": "VHlVSNChvSFMmGne:outputs:item"
                 },
                 "origin": {
-                    "ids": [
-                        "XFe2mYBT0LzeU6Dk.outputs.output"
-                    ]
-                }
-            },
-            "key": "roll-data",
-            "outputs": {
-                "roll": {
-                    "ids": [
-                        "5DN6EyKcOZ3t60kS.inputs.roll"
-                    ]
+                    "connection": "uBR07vJ1fvzNNogn:outputs:source"
+                },
+                "targets": {
+                    "connection": "FwJ0ykOeL5XOGhWB:outputs:entry"
                 }
             },
             "position": {
-                "x": 1451.5,
-                "y": 432.25
+                "x": 1934.4444444444443,
+                "y": 261.1111111111111
             },
-            "type": "value"
+            "type": "roll-damage"
         },
         {
-            "_id": "dKq9pzJDP9TUDg7g",
+            "id": "VHlVSNChvSFMmGne",
             "inputs": {
-                "uuid": {
-                    "ids": [],
+                "pf2e": {
                     "value": "Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0"
                 }
             },
-            "key": "item-source",
-            "outputs": {
-                "item": {
-                    "ids": [
-                        "HX2anZaTYCVxImqr.inputs.item"
-                    ]
-                }
-            },
             "position": {
-                "x": 1242.5,
-                "y": 496.25
+                "x": 1675,
+                "y": 473.6388888888889
             },
-            "type": "value"
+            "type": "item-value"
         },
         {
-            "_id": "fselTo6IrqbC6rcE",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "j5525TTAlWaXgkJ6.inputs.input"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1080.5,
-                "y": 386.25
-            },
-            "target": "vIVj1DekKykYMU2c.outputs.source",
-            "type": "variable"
-        },
-        {
-            "_id": "45eDDtBxxKNfOI5l",
+            "id": "FwJ0ykOeL5XOGhWB",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "vIVj1DekKykYMU2c.outputs.true"
-                    ]
-                },
-                "input": {
-                    "ids": [
-                        "K69iMkdl3yVT76Tl.outputs.output"
-                    ]
-                }
-            },
-            "key": "boolean-splitter",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "uPjkkD6WJIlr4xVi.inputs.in"
-                    ]
+                "entry": {
+                    "connection": "D20BKw9dToe1hFvr:outputs:target"
                 }
             },
             "position": {
-                "x": 823,
-                "y": 216.75
+                "x": 1796,
+                "y": 429.6388888888889
             },
-            "type": "splitter"
+            "type": "__variable_getter__"
         },
         {
-            "_id": "K69iMkdl3yVT76Tl",
             "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "boolean"
+                "outputs": {
+                    "nGn9CoKibSgCinx1": {
+                        "id": "nGn9CoKibSgCinx1",
+                        "input": "level",
+                        "isArray": false,
+                        "label": "Aura Source Level",
+                        "slug": "path",
+                        "type": "number"
                     }
-                ],
-                "outs": []
+                }
             },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "45eDDtBxxKNfOI5l.inputs.input"
-                    ]
+            "id": "vyucI8sPZCY8Wrl0",
+            "inputs": {
+                "input": {
+                    "connection": "uBR07vJ1fvzNNogn:outputs:source"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "DGuLC5iblrP4corC:ins:in"
                 }
             },
             "position": {
-                "x": 707.5,
-                "y": 361.25
+                "x": 1365.2222222222217,
+                "y": 246.37222222222206
             },
-            "target": "Gk1TCrQU7KShADph.outputs.negated",
-            "type": "variable"
+            "type": "extract-actor"
         },
         {
-            "_id": "uPjkkD6WJIlr4xVi",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "45eDDtBxxKNfOI5l.outputs.false"
-                    ]
-                },
-                "input": {
-                    "ids": [
-                        "FJegUeNTZPd4A089.outputs.output"
-                    ]
+            "custom": {
+                "inputs": {
+                    "l07s9wgGvZ2vRgNO": {
+                        "id": "l07s9wgGvZ2vRgNO",
+                        "input": "n",
+                        "label": "n",
+                        "slug": "variable",
+                        "type": "number"
+                    }
                 }
             },
-            "key": "boolean-splitter",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "j5525TTAlWaXgkJ6.inputs.in"
-                    ]
+            "id": "DGuLC5iblrP4corC",
+            "inputs": {
+                "formula": {
+                    "value": "(ceil(@n/4)+1)d4[persistent,fire]"
                 },
+                "l07s9wgGvZ2vRgNO": {
+                    "connection": "vyucI8sPZCY8Wrl0:outputs:nGn9CoKibSgCinx1"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "QzhKjlhxvufEDMNP:ins:in"
+                }
+            },
+            "position": {
+                "x": 1622.333333333333,
+                "y": 217.77777777777771
+            },
+            "state": "formula",
+            "type": "resolve-formula"
+        },
+        {
+            "id": "DAiCiAC4s62g5BIB",
+            "inputs": {
+                "entry": {
+                    "value": "item:damage:type:fire"
+                },
+                "list": {
+                    "connection": "zHLtzDKKK71X79U7:outputs:entry"
+                }
+            },
+            "outs": {
                 "true": {
-                    "ids": []
+                    "connection": "vyucI8sPZCY8Wrl0:ins:in"
                 }
             },
             "position": {
-                "x": 1007,
-                "y": 257.75
+                "x": 1122.4444444444443,
+                "y": 159.91666666666626
             },
-            "type": "splitter"
+            "type": "list-contains"
         },
         {
-            "_id": "FJegUeNTZPd4A089",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "boolean"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "uPjkkD6WJIlr4xVi.inputs.input"
-                    ]
+            "id": "zHLtzDKKK71X79U7",
+            "inputs": {
+                "entry": {
+                    "connection": "D20BKw9dToe1hFvr:outputs:options"
                 }
             },
             "position": {
-                "x": 879.5,
-                "y": 311.25
+                "x": 936.3333333333336,
+                "y": 167.5277777777776
             },
-            "target": "Gk1TCrQU7KShADph.outputs.heal",
-            "type": "variable"
-        },
-        {
-            "_id": "XFe2mYBT0LzeU6Dk",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "HX2anZaTYCVxImqr.inputs.origin"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1313.5,
-                "y": 454.25
-            },
-            "target": "vIVj1DekKykYMU2c.outputs.source",
-            "type": "variable"
+            "type": "__variable_getter__"
         }
     ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
     "variables": {
-        "vIVj1DekKykYMU2c.outputs.source": {
-            "global": false,
-            "label": "Aura Source",
-            "locked": false,
+        "D20BKw9dToe1hFvr:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "D20BKw9dToe1hFvr:outputs:target": {
+            "isArray": false,
+            "label": "Target",
             "type": "target"
         }
     }

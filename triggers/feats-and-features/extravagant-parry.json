@@ -1,0 +1,110 @@
+{
+    "folder": "Feats & Features",
+    "id": "1uece55CwcZFxmIQ",
+    "name": "Extravagant Parry",
+    "nodes": [
+        {
+            "id": "dcMsG1nSIv6YyXgK",
+            "outs": {
+                "out": {
+                    "connection": "rA2NRtA2ZrkFsVVv:ins:in"
+                }
+            },
+            "position": {
+                "x": 549,
+                "y": 533
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "rA2NRtA2ZrkFsVVv",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.FkouUFpwUrPjhMNw"
+                },
+                "target": {
+                    "connection": "dcMsG1nSIv6YyXgK:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "GEkI7df2lLjbJmKO:ins:in"
+                }
+            },
+            "position": {
+                "x": 817.9230769230769,
+                "y": 414.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "GEkI7df2lLjbJmKO",
+            "inputs": {
+                "a": {
+                    "connection": "u3WH2vAPFyvBuJUk:outputs:entry"
+                },
+                "b": {
+                    "value": "failure"
+                },
+                "compare": {
+                    "value": "lte"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "v5Lr9fOMyhI1DqLR:ins:in"
+                }
+            },
+            "position": {
+                "x": 1118.923076923077,
+                "y": 394.5
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "u3WH2vAPFyvBuJUk",
+            "inputs": {
+                "entry": {
+                    "connection": "dcMsG1nSIv6YyXgK:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 975,
+                "y": 569.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "v5Lr9fOMyhI1DqLR",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.paKKHPds77fq5VTH"
+                },
+                "target": {
+                    "connection": "dcMsG1nSIv6YyXgK:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1435.923076923077,
+                "y": 508.4
+            },
+            "type": "create-item"
+        }
+    ],
+    "priority": 0,
+    "variables": {
+        "dcMsG1nSIv6YyXgK:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "dcMsG1nSIv6YyXgK:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

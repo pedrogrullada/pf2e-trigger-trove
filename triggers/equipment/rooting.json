@@ -1,587 +1,367 @@
 {
-    "_id": "iBQutygM5RtqG6h1",
-    "description": "@Localize[TRIGGERTROVE.Rooting.Trigger.AttackRolled.Description]",
     "folder": "Equipment",
-    "name": "Rooting (Attack Rolled)",
+    "id": "fMUmzNvlb7zSNvf7",
+    "name": "Rooting",
     "nodes": [
         {
-            "_id": "IFE9vVv3nTHKBLMP",
-            "key": "attack-roll",
-            "outputs": {
+            "id": "2v667MGoPXco8vyv",
+            "outs": {
                 "out": {
-                    "ids": [
-                        "DgwxIKTxwL8JAxZE.inputs.in"
-                    ]
-                },
-                "outcome": {
-                    "ids": [
-                        "DgwxIKTxwL8JAxZE.inputs.a"
-                    ]
+                    "connection": "T6D0EaWIzHYqLNXW:ins:in"
                 }
             },
             "position": {
-                "x": 350,
-                "y": 200
+                "x": 431,
+                "y": 383
             },
-            "type": "event"
+            "type": "attack-roll-event"
         },
         {
-            "_id": "DgwxIKTxwL8JAxZE",
+            "id": "T6D0EaWIzHYqLNXW",
             "inputs": {
                 "a": {
-                    "ids": [
-                        "IFE9vVv3nTHKBLMP.outputs.outcome"
-                    ]
+                    "connection": "2v667MGoPXco8vyv:outputs:outcome"
                 },
                 "b": {
-                    "ids": [
-                        "RXJviq7oqhbm9hq1.outputs.value"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "IFE9vVv3nTHKBLMP.outputs.out"
-                    ]
-                }
-            },
-            "key": "gte-number",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "zNHjB3hDvsdgquGd.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 545.5,
-                "y": 215.75
-            },
-            "type": "logic"
-        },
-        {
-            "_id": "RXJviq7oqhbm9hq1",
-            "inputs": {
-                "input": {
-                    "ids": [],
                     "value": "criticalSuccess"
                 }
             },
-            "key": "success-value",
-            "outputs": {
-                "value": {
-                    "ids": [
-                        "DgwxIKTxwL8JAxZE.inputs.b"
-                    ]
+            "outs": {
+                "true": {
+                    "connection": "hpXlwA6fqqQLnhzU:ins:in"
                 }
             },
             "position": {
-                "x": 332.5,
-                "y": 442.25
+                "x": 660,
+                "y": 436.25
             },
-            "type": "value"
+            "type": "compare-outcomes"
         },
         {
-            "_id": "f58TmKJtS4yagR2Q",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "list"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "zNHjB3hDvsdgquGd.inputs.list",
-                        "5Yc7SacmZaBPvYeI.inputs.list"
-                    ]
-                }
-            },
-            "position": {
-                "x": 577.5,
-                "y": 348.25
-            },
-            "target": "IFE9vVv3nTHKBLMP.outputs.options",
-            "type": "variable"
-        },
-        {
-            "_id": "keVgmsFCl4sbDqBQ",
-            "custom": {
-                "inputs": [
-                    {
-                        "custom": true,
-                        "group": "choices",
-                        "key": "JMduNLsKooSToYJF",
-                        "label": "Variety",
-                        "type": "text"
-                    }
-                ],
-                "outputs": [],
-                "outs": []
-            },
-            "inputs": {
-                "duplicate": {
-                    "ids": [],
-                    "value": false
-                },
-                "in": {
-                    "ids": [
-                        "zNHjB3hDvsdgquGd.outputs.true"
-                    ]
-                },
-                "JMduNLsKooSToYJF": {
-                    "ids": [],
-                    "value": "rollOption:rooting-variety:0"
-                },
-                "target": {
-                    "ids": [
-                        "Rt5WLQS2xjlAoDAs.outputs.output"
-                    ]
-                },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.y5hYMrNRGW0apVTo"
-                }
-            },
-            "key": "create-item",
-            "position": {
-                "x": 1025.3899999999999,
-                "y": 121.74000000000001
-            },
-            "type": "action"
-        },
-        {
-            "_id": "zNHjB3hDvsdgquGd",
+            "id": "hpXlwA6fqqQLnhzU",
             "inputs": {
                 "entry": {
-                    "ids": [],
                     "value": "item:rune:property:rooting"
                 },
-                "in": {
-                    "ids": [
-                        "DgwxIKTxwL8JAxZE.outputs.true"
-                    ]
-                },
                 "list": {
-                    "ids": [
-                        "f58TmKJtS4yagR2Q.outputs.output"
-                    ]
+                    "connection": "62ZpywIm9yjRz1Ru:outputs:entry"
                 }
             },
-            "key": "contains-entry",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "5Yc7SacmZaBPvYeI.inputs.in"
-                    ]
-                },
+            "outs": {
                 "true": {
-                    "ids": [
-                        "keVgmsFCl4sbDqBQ.inputs.in"
-                    ]
+                    "connection": "PQZ7es2UsM0tTw38:ins:in"
                 }
             },
             "position": {
-                "x": 739.5,
-                "y": 196.25
+                "x": 985.4285714285713,
+                "y": 343.8571428571428
             },
-            "type": "condition"
+            "type": "list-contains"
         },
         {
-            "_id": "5Yc7SacmZaBPvYeI",
+            "id": "WcXWA6NnrcXFrD28",
             "inputs": {
                 "entry": {
-                    "ids": [],
                     "value": "item:rune:property:greater-rooting"
                 },
-                "in": {
-                    "ids": [
-                        "zNHjB3hDvsdgquGd.outputs.false"
-                    ]
-                },
                 "list": {
-                    "ids": [
-                        "f58TmKJtS4yagR2Q.outputs.output"
-                    ]
+                    "connection": "62ZpywIm9yjRz1Ru:outputs:entry"
                 }
             },
-            "key": "contains-entry",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "Z59BqkGlxj6xbFJA.inputs.in"
-                    ]
-                },
+            "outs": {
                 "true": {
-                    "ids": [
-                        "5gSJt2PmnAFnVmud.inputs.in"
-                    ]
+                    "connection": "rVqQIaWzG7FKGI3J:ins:in"
                 }
             },
             "position": {
-                "x": 739.5,
-                "y": 381.25
+                "x": 986,
+                "y": 477
             },
-            "type": "condition"
+            "type": "list-contains"
         },
         {
-            "_id": "Z59BqkGlxj6xbFJA",
+            "id": "TEaFtbHXBV8kNecL",
             "inputs": {
                 "entry": {
-                    "ids": [],
                     "value": "item:rune:property:major-rooting"
                 },
-                "in": {
-                    "ids": [
-                        "5Yc7SacmZaBPvYeI.outputs.false"
-                    ]
-                },
                 "list": {
-                    "ids": [
-                        "LxjQpGcAaH6hNtP6.outputs.output"
-                    ]
+                    "connection": "62ZpywIm9yjRz1Ru:outputs:entry"
                 }
             },
-            "key": "contains-entry",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "ihzCfYvfTw879iWO.inputs.in"
-                    ]
-                },
+            "outs": {
                 "true": {
-                    "ids": [
-                        "XOpDbI2GM5xg2R0I.inputs.in"
-                    ]
+                    "connection": "z1FwWIiL8ea1sZGv:ins:in"
                 }
             },
             "position": {
-                "x": 736.5,
-                "y": 547.25
+                "x": 988,
+                "y": 608
             },
-            "type": "condition"
+            "type": "list-contains"
         },
         {
-            "_id": "ihzCfYvfTw879iWO",
+            "id": "X0DGKy5WuP3TouyF",
             "inputs": {
                 "entry": {
-                    "ids": [],
                     "value": "item:rune:property:true-rooting"
                 },
-                "in": {
-                    "ids": [
-                        "Z59BqkGlxj6xbFJA.outputs.false"
-                    ]
-                },
                 "list": {
-                    "ids": [
-                        "LxjQpGcAaH6hNtP6.outputs.output"
-                    ]
+                    "connection": "62ZpywIm9yjRz1Ru:outputs:entry"
                 }
             },
-            "key": "contains-entry",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "PtvK1UWltxYfkVQC.inputs.in"
-                    ]
+            "outs": {
+                "false": {
+                    "connection": "FCSH8SZBSFAjnGPp:ins:in"
                 }
             },
             "position": {
-                "x": 730.5,
-                "y": 714.25
+                "x": 989,
+                "y": 739
             },
-            "type": "condition"
+            "type": "list-contains"
         },
         {
-            "_id": "LzIDPAH2dMVo8RiZ",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "5gSJt2PmnAFnVmud.inputs.target"
-                    ]
+            "id": "62ZpywIm9yjRz1Ru",
+            "inputs": {
+                "entry": {
+                    "connection": "2v667MGoPXco8vyv:outputs:options"
                 }
             },
             "position": {
-                "x": 876.5,
-                "y": 512.25
+                "x": 776,
+                "y": 599.75
             },
-            "target": "IFE9vVv3nTHKBLMP.outputs.other",
-            "type": "variable"
+            "type": "__variable_getter__"
         },
         {
-            "_id": "5gSJt2PmnAFnVmud",
             "custom": {
-                "inputs": [
-                    {
-                        "custom": true,
-                        "group": "choices",
-                        "key": "JMduNLsKooSToYJF",
-                        "label": "Variety",
+                "inputs": {
+                    "dkxDmdEpdsV7UfQi": {
+                        "id": "dkxDmdEpdsV7UfQi",
+                        "label": "Description Override",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "PQ6kF3wdFE1ChYJe": {
+                        "id": "PQ6kF3wdFE1ChYJe",
+                        "label": "Grant Immobilized",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "SWKsaNyJgBMFBIeP": {
+                        "id": "SWKsaNyJgBMFBIeP",
+                        "label": "Grant Clumsy",
+                        "slug": "rule",
                         "type": "text"
                     }
-                ],
-                "outputs": [],
-                "outs": []
-            },
-            "inputs": {
-                "duplicate": {
-                    "ids": [],
-                    "value": false
-                },
-                "in": {
-                    "ids": [
-                        "5Yc7SacmZaBPvYeI.outputs.true"
-                    ]
-                },
-                "JMduNLsKooSToYJF": {
-                    "ids": [],
-                    "value": "rollOption:rooting-variety:1"
-                },
-                "target": {
-                    "ids": [
-                        "LzIDPAH2dMVo8RiZ.outputs.output"
-                    ]
-                },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.y5hYMrNRGW0apVTo"
                 }
             },
-            "key": "create-item",
-            "position": {
-                "x": 1026.3899999999999,
-                "y": 333.74
+            "id": "PQZ7es2UsM0tTw38",
+            "inputs": {
+                "dkxDmdEpdsV7UfQi": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.Rooting.Item.DescriptionOverride.Basic\"\n    }\n  ]\n}"
+                },
+                "img": {
+                    "value": "icons/magic/nature/root-vine-entangled-humanoid.webp"
+                },
+                "name": {
+                    "value": "Aux Effect: Rooting"
+                },
+                "PQ6kF3wdFE1ChYJe": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "SWKsaNyJgBMFBIeP": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "target": {
+                    "connection": "f6m43T2HdLfUnFs9:outputs:entry"
+                }
             },
-            "type": "action"
+            "position": {
+                "x": 1331.637362637362,
+                "y": 120.57857142857128
+            },
+            "type": "create-effect"
         },
         {
-            "_id": "XOpDbI2GM5xg2R0I",
             "custom": {
-                "inputs": [
-                    {
-                        "custom": true,
-                        "group": "choices",
-                        "key": "JMduNLsKooSToYJF",
-                        "label": "Variety",
+                "inputs": {
+                    "dkxDmdEpdsV7UfQi": {
+                        "id": "dkxDmdEpdsV7UfQi",
+                        "label": "Description Override",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "PQ6kF3wdFE1ChYJe": {
+                        "id": "PQ6kF3wdFE1ChYJe",
+                        "label": "Grant Immobilized",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "SWKsaNyJgBMFBIeP": {
+                        "id": "SWKsaNyJgBMFBIeP",
+                        "label": "Grant Clumsy",
+                        "slug": "rule",
                         "type": "text"
                     }
-                ],
-                "outputs": [],
-                "outs": []
-            },
-            "inputs": {
-                "duplicate": {
-                    "ids": [],
-                    "value": false
-                },
-                "in": {
-                    "ids": [
-                        "Z59BqkGlxj6xbFJA.outputs.true"
-                    ]
-                },
-                "JMduNLsKooSToYJF": {
-                    "ids": [],
-                    "value": "rollOption:rooting-variety:2"
-                },
-                "target": {
-                    "ids": [
-                        "5XxOrtGCHU5mmh9d.outputs.output"
-                    ]
-                },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.y5hYMrNRGW0apVTo"
                 }
             },
-            "key": "create-item",
-            "position": {
-                "x": 1025.3899999999999,
-                "y": 544.74
+            "id": "rVqQIaWzG7FKGI3J",
+            "inputs": {
+                "dkxDmdEpdsV7UfQi": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.Rooting.Item.DescriptionOverride.Greater\"\n    }\n  ]\n}"
+                },
+                "img": {
+                    "value": "icons/magic/nature/root-vine-entangled-humanoid.webp"
+                },
+                "name": {
+                    "value": "Aux Effect: Rooting"
+                },
+                "PQ6kF3wdFE1ChYJe": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "SWKsaNyJgBMFBIeP": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "target": {
+                    "connection": "f6m43T2HdLfUnFs9:outputs:entry"
+                }
             },
-            "type": "action"
+            "position": {
+                "x": 1579.7326007325996,
+                "y": 260.3523809523809
+            },
+            "type": "create-effect"
         },
         {
-            "_id": "PtvK1UWltxYfkVQC",
             "custom": {
-                "inputs": [
-                    {
-                        "custom": true,
-                        "group": "choices",
-                        "key": "JMduNLsKooSToYJF",
-                        "label": "Variety",
+                "inputs": {
+                    "dkxDmdEpdsV7UfQi": {
+                        "id": "dkxDmdEpdsV7UfQi",
+                        "label": "Description Override",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "PQ6kF3wdFE1ChYJe": {
+                        "id": "PQ6kF3wdFE1ChYJe",
+                        "label": "Grant Immobilized",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "SWKsaNyJgBMFBIeP": {
+                        "id": "SWKsaNyJgBMFBIeP",
+                        "label": "Grant Clumsy",
+                        "slug": "rule",
                         "type": "text"
                     }
-                ],
-                "outputs": [],
-                "outs": []
+                }
             },
+            "id": "z1FwWIiL8ea1sZGv",
             "inputs": {
-                "duplicate": {
-                    "ids": [],
-                    "value": false
+                "dkxDmdEpdsV7UfQi": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.Rooting.Item.DescriptionOverride.Major\"\n    }\n  ]\n}"
                 },
-                "in": {
-                    "ids": [
-                        "ihzCfYvfTw879iWO.outputs.true"
-                    ]
+                "img": {
+                    "value": "icons/magic/nature/root-vine-entangled-humanoid.webp"
                 },
-                "JMduNLsKooSToYJF": {
-                    "ids": [],
-                    "value": "rollOption:rooting-variety:3"
+                "name": {
+                    "value": "Aux Effect: Rooting"
+                },
+                "PQ6kF3wdFE1ChYJe": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "SWKsaNyJgBMFBIeP": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
                 },
                 "target": {
-                    "ids": [
-                        "bn9Gubgy0D4E4pGo.outputs.output"
-                    ]
+                    "connection": "f6m43T2HdLfUnFs9:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1826.1254578754572,
+                "y": 388.5547619047618
+            },
+            "type": "create-effect"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dkxDmdEpdsV7UfQi": {
+                        "id": "dkxDmdEpdsV7UfQi",
+                        "label": "Description Override",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "PQ6kF3wdFE1ChYJe": {
+                        "id": "PQ6kF3wdFE1ChYJe",
+                        "label": "Grant Immobilized",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "SWKsaNyJgBMFBIeP": {
+                        "id": "SWKsaNyJgBMFBIeP",
+                        "label": "Grant Clumsy",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "FCSH8SZBSFAjnGPp",
+            "inputs": {
+                "dkxDmdEpdsV7UfQi": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.Rooting.Item.DescriptionOverride.True\"\n    }\n  ]\n}"
                 },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.y5hYMrNRGW0apVTo"
+                "img": {
+                    "value": "icons/magic/nature/root-vine-entangled-humanoid.webp"
+                },
+                "name": {
+                    "value": "Aux Effect: Rooting"
+                },
+                "PQ6kF3wdFE1ChYJe": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "SWKsaNyJgBMFBIeP": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "target": {
+                    "connection": "f6m43T2HdLfUnFs9:outputs:entry"
                 }
             },
-            "key": "create-item",
             "position": {
-                "x": 1024.3899999999999,
-                "y": 756.74
+                "x": 2062.244505494505,
+                "y": 497.61428571428576
             },
-            "type": "action"
+            "type": "create-effect"
         },
         {
-            "_id": "bn9Gubgy0D4E4pGo",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "PtvK1UWltxYfkVQC.inputs.target"
-                    ]
+            "id": "f6m43T2HdLfUnFs9",
+            "inputs": {
+                "entry": {
+                    "connection": "2v667MGoPXco8vyv:outputs:target"
                 }
             },
             "position": {
-                "x": 880.5,
-                "y": 891.25
+                "x": 1712.5887445887445,
+                "y": 50.43614718614779
             },
-            "target": "IFE9vVv3nTHKBLMP.outputs.other",
-            "type": "variable"
-        },
-        {
-            "_id": "5XxOrtGCHU5mmh9d",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "XOpDbI2GM5xg2R0I.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 874.5,
-                "y": 679.25
-            },
-            "target": "IFE9vVv3nTHKBLMP.outputs.other",
-            "type": "variable"
-        },
-        {
-            "_id": "Rt5WLQS2xjlAoDAs",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "keVgmsFCl4sbDqBQ.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 878.5,
-                "y": 329.25
-            },
-            "target": "IFE9vVv3nTHKBLMP.outputs.other",
-            "type": "variable"
-        },
-        {
-            "_id": "LxjQpGcAaH6hNtP6",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "list"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "Z59BqkGlxj6xbFJA.inputs.list",
-                        "ihzCfYvfTw879iWO.inputs.list"
-                    ]
-                }
-            },
-            "position": {
-                "x": 578.5,
-                "y": 681.25
-            },
-            "target": "IFE9vVv3nTHKBLMP.outputs.options",
-            "type": "variable"
+            "type": "__variable_getter__"
         }
-    ]
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "2v667MGoPXco8vyv:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "2v667MGoPXco8vyv:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
 }

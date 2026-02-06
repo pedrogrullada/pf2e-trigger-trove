@@ -1,0 +1,266 @@
+{
+    "folder": "Core Rules",
+    "id": "487ngkeYPd2oltg4",
+    "name": "Demoralize",
+    "nodes": [
+        {
+            "id": "3k2ZG8A5xizFhZaK",
+            "inputs": {
+                "for": {
+                    "value": "skill-check"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Srbnvb1kan6DVvjD:ins:in"
+                }
+            },
+            "position": {
+                "x": 364.1111111111111,
+                "y": 130.66666666666663
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "AKAaJHfiMbvrAgyN",
+            "inputs": {
+                "input": {
+                    "connection": "MabqFo4V8byLSAxN:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "JvcMQmpiqrCqqTYk:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "oVm8jO9mmWnmTOTG:ins:in"
+                },
+                "failure": {
+                    "connection": "JvcMQmpiqrCqqTYk:ins:in"
+                },
+                "success": {
+                    "connection": "oVm8jO9mmWnmTOTG:ins:in"
+                }
+            },
+            "position": {
+                "x": 895.212121212121,
+                "y": 179.1944444444443
+            },
+            "type": "split-outcome"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "4FjnooL1TR4rfvpU": {
+                        "id": "4FjnooL1TR4rfvpU",
+                        "input": "name",
+                        "isArray": false,
+                        "label": "Name",
+                        "slug": "path",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "JvcMQmpiqrCqqTYk",
+            "inputs": {
+                "input": {
+                    "connection": "FLfefWUlAF9KJOTr:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "RS5LAiqv99XWKApD:ins:in"
+                }
+            },
+            "position": {
+                "x": 1439.3268398268406,
+                "y": 176.08694083694098
+            },
+            "type": "extract-actor"
+        },
+        {
+            "id": "FLfefWUlAF9KJOTr",
+            "inputs": {
+                "entry": {
+                    "connection": "3k2ZG8A5xizFhZaK:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1254.7561327561332,
+                "y": 278.0844155844157
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "pKFn7Ma8c0WbYchA": {
+                        "id": "pKFn7Ma8c0WbYchA",
+                        "input": "name",
+                        "label": "name",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "RS5LAiqv99XWKApD",
+            "inputs": {
+                "pKFn7Ma8c0WbYchA": {
+                    "connection": "JvcMQmpiqrCqqTYk:outputs:4FjnooL1TR4rfvpU"
+                },
+                "plain": {
+                    "value": "Effect: Immune to Demoralize by @name"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "fh7CD0oH9UNF5U5X:ins:in"
+                }
+            },
+            "position": {
+                "x": 1731.303751803753,
+                "y": 92.31378066378082
+            },
+            "state": "plain",
+            "type": "format-text"
+        },
+        {
+            "id": "fh7CD0oH9UNF5U5X",
+            "inputs": {
+                "duration": {
+                    "value": 10
+                },
+                "img": {
+                    "connection": "JvcMQmpiqrCqqTYk:outputs:UxPXLLewEgJLf2D8"
+                },
+                "name": {
+                    "connection": "RS5LAiqv99XWKApD:outputs:result"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/control/fear-fright-mask-orange.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/control/fear-fright-mask-orange.webp"
+                },
+                "target": {
+                    "connection": "Pq8TfbWoJpa4vnHg:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 2117.058802308805,
+                "y": 144.48196248196217
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "Pq8TfbWoJpa4vnHg",
+            "inputs": {
+                "entry": {
+                    "connection": "3k2ZG8A5xizFhZaK:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1978.5386002886012,
+                "y": 232.3860028860026
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "oVm8jO9mmWnmTOTG",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "DQWAjPL8NVTnBIMS:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "JvcMQmpiqrCqqTYk:ins:in"
+                }
+            },
+            "position": {
+                "x": 1169.6219336219347,
+                "y": 337.40367965367966
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "DQWAjPL8NVTnBIMS",
+            "inputs": {
+                "entry": {
+                    "connection": "3k2ZG8A5xizFhZaK:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1066.4830447330446,
+                "y": 441.62590187590195
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Srbnvb1kan6DVvjD",
+            "inputs": {
+                "entry": {
+                    "value": "action:demoralize"
+                },
+                "list": {
+                    "connection": "3k2ZG8A5xizFhZaK:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "AKAaJHfiMbvrAgyN:ins:in"
+                }
+            },
+            "position": {
+                "x": 634.0000000000001,
+                "y": 161.4722222222224
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "MabqFo4V8byLSAxN",
+            "inputs": {
+                "entry": {
+                    "connection": "3k2ZG8A5xizFhZaK:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 716.6666666666666,
+                "y": 301.3055555555556
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e",
+        "sf2e"
+    ],
+    "variables": {
+        "3k2ZG8A5xizFhZaK:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "3k2ZG8A5xizFhZaK:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "3k2ZG8A5xizFhZaK:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

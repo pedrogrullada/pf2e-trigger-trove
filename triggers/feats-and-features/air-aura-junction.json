@@ -1,0 +1,130 @@
+{
+    "folder": "Feats & Features",
+    "id": "fS9X6zv6GP5xzbHD",
+    "name": "Air Aura Junction",
+    "nodes": [
+        {
+            "id": "jhhl52BtLNhXWLXN",
+            "outs": {
+                "out": {
+                    "connection": "06DbFPsJpKrxj8ry:ins:in"
+                }
+            },
+            "position": {
+                "x": 579,
+                "y": 226
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "06DbFPsJpKrxj8ry",
+            "inputs": {
+                "affects": {
+                    "value": "allies"
+                },
+                "slug": {
+                    "value": "kinetic-aura"
+                },
+                "target": {
+                    "connection": "jhhl52BtLNhXWLXN:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "9iZPooepg52UuAGu:ins:in"
+                }
+            },
+            "position": {
+                "x": 789.1862348178133,
+                "y": 225.6631578947366
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "9iZPooepg52UuAGu",
+            "inputs": {
+                "option": {
+                    "value": "junction:air:aura"
+                },
+                "target": {
+                    "connection": "06DbFPsJpKrxj8ry:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "g6JHvUMbGHbm73B4:ins:in"
+                }
+            },
+            "position": {
+                "x": 1106.729062475192,
+                "y": 205.7923976608185
+            },
+            "type": "has-option"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "TSJrsDGxP0m2AZfQ": {
+                        "id": "TSJrsDGxP0m2AZfQ",
+                        "label": "Text",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "g6JHvUMbGHbm73B4",
+            "inputs": {
+                "duration": {
+                    "value": 0
+                },
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "img": {
+                    "value": "icons/magic/air/wind-tornado-funnel-blue.webp"
+                },
+                "name": {
+                    "value": "Aux Effect: Aura Junction (Air)"
+                },
+                "origin": {
+                    "connection": "2Rpe8gWTPUsj7pW9:outputs:entry"
+                },
+                "target": {
+                    "connection": "2Rpe8gWTPUsj7pW9:outputs:entry"
+                },
+                "TSJrsDGxP0m2AZfQ": {
+                    "value": "{\n  \"key\": \"FlatModifier\",\n  \"selector\": [\n    \"land-speed\",\n    \"fly-speed\"\n  ],\n  \"type\": \"status\",\n  \"value\": 10,\n  \"slug\": \"aura-junction-air\"\n}"
+                }
+            },
+            "position": {
+                "x": 1348.4936312397615,
+                "y": 198.3940293624504
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "2Rpe8gWTPUsj7pW9",
+            "inputs": {
+                "entry": {
+                    "connection": "jhhl52BtLNhXWLXN:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1185.5705543166846,
+                "y": 356.7440293624504
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "jhhl52BtLNhXWLXN:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        }
+    }
+}

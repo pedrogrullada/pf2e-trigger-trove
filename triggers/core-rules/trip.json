@@ -1,0 +1,261 @@
+{
+    "folder": "Core Rules",
+    "id": "Ita8kRgcY3SqkFG7",
+    "name": "Trip",
+    "nodes": [
+        {
+            "id": "JE2Shlmv2tUDSUbj",
+            "outs": {
+                "out": {
+                    "connection": "Ac1zPScFH42Nv3rD:ins:in"
+                }
+            },
+            "position": {
+                "x": 543,
+                "y": 390
+            },
+            "type": "check-roll-event"
+        },
+        {
+            "id": "Ac1zPScFH42Nv3rD",
+            "inputs": {
+                "entry": {
+                    "value": "action:trip"
+                },
+                "list": {
+                    "connection": "JE2Shlmv2tUDSUbj:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "SnVG7U4mIDAyaQZN:ins:in"
+                }
+            },
+            "position": {
+                "x": 760.6842105263156,
+                "y": 451.4868421052631
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "iScZlKjJ1aTjRNLd",
+            "inputs": {
+                "entry": {
+                    "connection": "JE2Shlmv2tUDSUbj:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 843.7953216374266,
+                "y": 612.0979532163743
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ecJqBPqBkTC3ApTh",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60"
+                },
+                "target": {
+                    "connection": "dWyuZwODThtZVhxG:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Y2MQsp03CjkJRu0q:ins:in"
+                }
+            },
+            "position": {
+                "x": 1326.2183985605043,
+                "y": 598.8035087719302
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "SnVG7U4mIDAyaQZN",
+            "inputs": {
+                "input": {
+                    "connection": "iScZlKjJ1aTjRNLd:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "IfUVSuOPGnfx6W7b:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "ecJqBPqBkTC3ApTh:ins:in"
+                },
+                "success": {
+                    "connection": "ecJqBPqBkTC3ApTh:ins:in"
+                }
+            },
+            "position": {
+                "x": 1001.2953216374278,
+                "y": 532.0701754385967
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "dWyuZwODThtZVhxG",
+            "inputs": {
+                "entry": {
+                    "connection": "JE2Shlmv2tUDSUbj:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1206.9619883040946,
+                "y": 740.3201754385968
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "IfUVSuOPGnfx6W7b",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60"
+                },
+                "target": {
+                    "connection": "OSFk0iP69b4qSA8g:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1471.8850652271717,
+                "y": 344.9701754385969
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "OSFk0iP69b4qSA8g",
+            "inputs": {
+                "entry": {
+                    "connection": "JE2Shlmv2tUDSUbj:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1327.128654970761,
+                "y": 529.3201754385966
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Y2MQsp03CjkJRu0q",
+            "inputs": {
+                "a": {
+                    "value": "criticalSuccess"
+                },
+                "b": {
+                    "connection": "TDIQ28kiYVXvtP9X:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "jQH1b2ve2rtBa9NU:ins:in"
+                }
+            },
+            "position": {
+                "x": 1608.3850652271722,
+                "y": 655.0701754385968
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "TDIQ28kiYVXvtP9X",
+            "inputs": {
+                "entry": {
+                    "connection": "JE2Shlmv2tUDSUbj:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 1473.461988304095,
+                "y": 790.320175438597
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "jQH1b2ve2rtBa9NU",
+            "inputs": {
+                "formula": {
+                    "value": "1d6[bludgeoning]"
+                },
+                "item": {
+                    "connection": "mid63cpdwUY1zVih:outputs:item"
+                },
+                "origin": {
+                    "connection": "7tdqE3EEAnJWKyRC:outputs:entry"
+                },
+                "targets": {
+                    "connection": "EXrzvChK7un2gq4v:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1917.8850652271724,
+                "y": 704.4701754385969
+            },
+            "type": "roll-damage"
+        },
+        {
+            "id": "7tdqE3EEAnJWKyRC",
+            "inputs": {
+                "entry": {
+                    "connection": "JE2Shlmv2tUDSUbj:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1751.4619883040957,
+                "y": 804.5701754385973
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "EXrzvChK7un2gq4v",
+            "inputs": {
+                "entry": {
+                    "connection": "JE2Shlmv2tUDSUbj:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1752.295321637429,
+                "y": 848.8757309941527
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "mid63cpdwUY1zVih",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP"
+                }
+            },
+            "position": {
+                "x": 1624.5215121136189,
+                "y": 900.8122389306604
+            },
+            "type": "item-value"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e",
+        "sf2e"
+    ],
+    "variables": {
+        "JE2Shlmv2tUDSUbj:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "JE2Shlmv2tUDSUbj:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "JE2Shlmv2tUDSUbj:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

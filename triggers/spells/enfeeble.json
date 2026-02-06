@@ -1,0 +1,314 @@
+{
+    "folder": "Spells",
+    "id": "fHAXQOccfig3GqLP",
+    "name": "Enfeeble",
+    "nodes": [
+        {
+            "id": "5Zk6OuqPQTUZjuIW",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "oCCIxa44C7FVmthz:ins:in"
+                }
+            },
+            "position": {
+                "x": 360,
+                "y": 286
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "oCCIxa44C7FVmthz",
+            "inputs": {
+                "options": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:type:spell\",\n  \"item:slug:enfeeble\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "U80Tabm7jNohQrX1:ins:in"
+                }
+            },
+            "position": {
+                "x": 616,
+                "y": 343
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "U80Tabm7jNohQrX1",
+            "inputs": {
+                "input": {
+                    "connection": "LrRabhMPUpozsnvQ:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "2CMlT329znsVqQ5O:ins:in"
+                },
+                "failure": {
+                    "connection": "DHm9l2pgR0tk7jr0:ins:in"
+                },
+                "success": {
+                    "connection": "M8rAHCnD2jjsixJh:ins:in"
+                }
+            },
+            "position": {
+                "x": 846.6730769230769,
+                "y": 389.5
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "LrRabhMPUpozsnvQ",
+            "inputs": {
+                "entry": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 701.5,
+                "y": 486.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "XXbLGFl4y2kW4rNg",
+            "inputs": {
+                "condition": {
+                    "value": "enfeebled"
+                },
+                "duration": {
+                    "connection": "gWYb42N06zTBBYt3:outputs:XMNPgInQP2ifTHbZ"
+                },
+                "name": {
+                    "value": "Spell Effect: Enfeeble"
+                },
+                "origin": {
+                    "connection": "0ZUpVux3WkGMf39I:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "systems/pf2e/icons/spells/ray-of-enfeeblement.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-enfeeble"
+                },
+                "target": {
+                    "connection": "OPq9AdkKCcx9YLAQ:outputs:entry"
+                },
+                "value": {
+                    "connection": "gWYb42N06zTBBYt3:outputs:MXr1TPSmGDepSOJP"
+                }
+            },
+            "position": {
+                "x": 662.7087912087911,
+                "y": 633.1857142857143
+            },
+            "type": "create-condition"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "MXr1TPSmGDepSOJP": {
+                        "id": "MXr1TPSmGDepSOJP",
+                        "isArray": false,
+                        "label": "Value",
+                        "slug": "entry",
+                        "type": "number"
+                    },
+                    "XMNPgInQP2ifTHbZ": {
+                        "id": "XMNPgInQP2ifTHbZ",
+                        "isArray": false,
+                        "label": "Rounds",
+                        "slug": "entry",
+                        "type": "number"
+                    }
+                },
+                "title": "Add Slowed"
+            },
+            "id": "gWYb42N06zTBBYt3",
+            "outs": {
+                "out": {
+                    "connection": "XXbLGFl4y2kW4rNg:ins:in"
+                }
+            },
+            "position": {
+                "x": 354.7857142857142,
+                "y": 753.7857142857144
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "id": "OPq9AdkKCcx9YLAQ",
+            "inputs": {
+                "entry": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 539.7857142857142,
+                "y": 626.5357142857144
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "MXr1TPSmGDepSOJP": {
+                        "id": "MXr1TPSmGDepSOJP",
+                        "isArray": false,
+                        "label": "Value",
+                        "slug": "entry",
+                        "type": "number"
+                    },
+                    "XMNPgInQP2ifTHbZ": {
+                        "id": "XMNPgInQP2ifTHbZ",
+                        "isArray": false,
+                        "label": "Rounds",
+                        "slug": "entry",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "DHm9l2pgR0tk7jr0",
+            "inputs": {
+                "MXr1TPSmGDepSOJP": {
+                    "value": 2
+                },
+                "XMNPgInQP2ifTHbZ": {
+                    "value": 10
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "gWYb42N06zTBBYt3:ins:in"
+                }
+            },
+            "position": {
+                "x": 1124.423076923077,
+                "y": 442.5
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "MXr1TPSmGDepSOJP": {
+                        "id": "MXr1TPSmGDepSOJP",
+                        "isArray": false,
+                        "label": "Value",
+                        "slug": "entry",
+                        "type": "number"
+                    },
+                    "XMNPgInQP2ifTHbZ": {
+                        "id": "XMNPgInQP2ifTHbZ",
+                        "isArray": false,
+                        "label": "Rounds",
+                        "slug": "entry",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "2CMlT329znsVqQ5O",
+            "inputs": {
+                "MXr1TPSmGDepSOJP": {
+                    "value": 3
+                },
+                "XMNPgInQP2ifTHbZ": {
+                    "value": 10
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "gWYb42N06zTBBYt3:ins:in"
+                }
+            },
+            "position": {
+                "x": 1127.423076923077,
+                "y": 269.5
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "MXr1TPSmGDepSOJP": {
+                        "id": "MXr1TPSmGDepSOJP",
+                        "isArray": false,
+                        "label": "Value",
+                        "slug": "entry",
+                        "type": "number"
+                    },
+                    "XMNPgInQP2ifTHbZ": {
+                        "id": "XMNPgInQP2ifTHbZ",
+                        "isArray": false,
+                        "label": "Rounds",
+                        "slug": "entry",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "M8rAHCnD2jjsixJh",
+            "inputs": {
+                "MXr1TPSmGDepSOJP": {
+                    "value": 1
+                },
+                "XMNPgInQP2ifTHbZ": {
+                    "value": 1
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "gWYb42N06zTBBYt3:ins:in"
+                }
+            },
+            "position": {
+                "x": 1125.423076923077,
+                "y": 610.5
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "0ZUpVux3WkGMf39I",
+            "inputs": {
+                "entry": {
+                    "connection": "5Zk6OuqPQTUZjuIW:outputs:item"
+                }
+            },
+            "position": {
+                "x": 537.1428571428571,
+                "y": 998.7142857142858
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "5Zk6OuqPQTUZjuIW:outputs:item": {
+            "isArray": false,
+            "label": "Spell",
+            "type": "item"
+        },
+        "5Zk6OuqPQTUZjuIW:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "5Zk6OuqPQTUZjuIW:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        }
+    }
+}

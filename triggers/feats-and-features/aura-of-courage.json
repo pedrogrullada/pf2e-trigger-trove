@@ -1,0 +1,205 @@
+{
+    "folder": "Feats & Features",
+    "id": "wx4WSo5siR5FO0hy",
+    "name": "Aura of Courage",
+    "nodes": [
+        {
+            "id": "0lgvSzyRjgLlF9On",
+            "outs": {
+                "out": {
+                    "connection": "v5p2js2z8UisvAOf:ins:in"
+                }
+            },
+            "position": {
+                "x": 421,
+                "y": 478
+            },
+            "type": "turn-end-event"
+        },
+        {
+            "id": "v5p2js2z8UisvAOf",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.TIwk07T0OxSbcOpJ"
+                },
+                "target": {
+                    "connection": "0lgvSzyRjgLlF9On:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "kHHpWrog8qDnoPWV:ins:in"
+                }
+            },
+            "position": {
+                "x": 641.9230769230769,
+                "y": 495.9
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "kHHpWrog8qDnoPWV",
+            "inputs": {
+                "targets": {
+                    "connection": "HtX6dgWwOFMoqCrd:outputs:targets"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "zAb9DM8I0UMoXOKz:ins:in"
+                }
+            },
+            "position": {
+                "x": 909.8333333333334,
+                "y": 575.3888888888887
+            },
+            "state": "loop",
+            "type": "filter-targets"
+        },
+        {
+            "id": "HtX6dgWwOFMoqCrd",
+            "position": {
+                "x": 644.6904761904764,
+                "y": 666.8531746031747
+            },
+            "type": "scene-targets"
+        },
+        {
+            "id": "zAb9DM8I0UMoXOKz",
+            "inputs": {
+                "affects": {
+                    "value": "allies"
+                },
+                "slug": {
+                    "value": "champions-aura"
+                },
+                "target": {
+                    "connection": "kHHpWrog8qDnoPWV:outputs:current"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "aE9vtMz4TFAV7Hso:ins:in"
+                }
+            },
+            "position": {
+                "x": 1130.923076923077,
+                "y": 621.4
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "aE9vtMz4TFAV7Hso",
+            "inputs": {
+                "a": {
+                    "connection": "zAb9DM8I0UMoXOKz:outputs:source"
+                },
+                "b": {
+                    "connection": "dcnTmYJ0w8xTOBL3:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "9QK6eVcZfQXQUOHs:ins:in"
+                }
+            },
+            "position": {
+                "x": 1467.4444444444443,
+                "y": 713.6944444444443
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "dcnTmYJ0w8xTOBL3",
+            "inputs": {
+                "entry": {
+                    "connection": "0lgvSzyRjgLlF9On:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1304,
+                "y": 823.5277777777777
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "9QK6eVcZfQXQUOHs",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "target": {
+                    "connection": "yARfJCeqKwrNOBGL:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "ITqqH4bcA03qjevL:ins:in"
+                }
+            },
+            "position": {
+                "x": 1689.811965811966,
+                "y": 757.9444444444443
+            },
+            "type": "has-condition"
+        },
+        {
+            "id": "yARfJCeqKwrNOBGL",
+            "inputs": {
+                "entry": {
+                    "connection": "kHHpWrog8qDnoPWV:outputs:current"
+                }
+            },
+            "position": {
+                "x": 1537.6363636363644,
+                "y": 863.1540404040402
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ITqqH4bcA03qjevL",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "target": {
+                    "connection": "EQHRIUWh2PsVZ8Ij:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1915.5594405594413,
+                "y": 825.9040404040402
+            },
+            "type": "decrease-condition"
+        },
+        {
+            "id": "EQHRIUWh2PsVZ8Ij",
+            "inputs": {
+                "entry": {
+                    "connection": "kHHpWrog8qDnoPWV:outputs:current"
+                }
+            },
+            "position": {
+                "x": 1756.6363636363644,
+                "y": 939.1540404040402
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "0lgvSzyRjgLlF9On:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        },
+        "kHHpWrog8qDnoPWV:outputs:current": {
+            "isArray": false,
+            "label": "Loop Target",
+            "type": "target"
+        }
+    }
+}

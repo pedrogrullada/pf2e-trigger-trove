@@ -472,7 +472,8 @@
         "SpiritLink": {
             "Trigger": {
                 "TurnStarted": {
-                    "Description": "<p>When a creature starts their turn and they have a @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e]{Spirit Link} auxiliary effect that originated from themselves, then check scene tokens for other creatures with an identical effect. If there is such a creature, check if they're not at their Hit Point maximum and if so, send a damage-healing-hybrid roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD]{Aux Effect: Spirit Link} to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.</p>"
+                    "Description": "<p>When a creature starts their turn and they have a @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e]{Spirit Link} auxiliary effect that originated from themselves, then check scene tokens for other creatures with an identical effect. If there is such a creature, check if they're not at their Hit Point maximum and if so, send a damage-healing-hybrid roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD]{Aux Effect: Spirit Link} to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.</p>",
+                    "Note": "<p>At the start of each of your turns, if the target is below maximum Hit Points, it regains 2 Hit Points per spell rank of <em>spirit link</em> (or the difference between its current and maximum Hit Points, if that's lower). You lose as many Hit Points as the target regained.</p>"
                 }
             }
         },
@@ -502,7 +503,13 @@
             }
         },
         "SwaggeringInitiative": {
+            "Label": "Swaggering Initiative",
             "Trigger": {
+                "CombatantCreated": {
+                    "AwaitConfirmation": {
+                        "Prompt": "Will you use Swaggering Initiative in this encounter?"
+                    }
+                },
                 "TurnStarted": {
                     "Description": "When a character using @UUID[Compendium.pf2e.feats-srd.Item.NHheDmNB7L4REmlr]{Swaggering Initiative} is the first one to take a turn in combat, they receive panache."
                 }
@@ -563,7 +570,8 @@
                 },
                 "Note": {
                     "Hit": "<strong>Trickster's Mirror</strong> The attack hits you! All your mirrors remain.",
-                    "Miss": "<p>The attack misses you! One of your mirrors is destroyed. If the attacker was within 5 feet, they must succeed at a @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] save or take mental damage as they believe themselves cut by a shower of glass shards from the breaking mirror.</p>"
+                    "Miss": "<p>The attack misses you! One of your mirrors is destroyed. If the attacker was within 5 feet, they must succeed at a @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] save or take mental damage as they believe themselves cut by a shower of glass shards from the breaking mirror.</p>",
+                    "MissNoDamage": "<p><strong>Trickster's Mirror</strong> The attack misses you! One of your mirrors is destroyed.</p>"
                 }
             }
         },

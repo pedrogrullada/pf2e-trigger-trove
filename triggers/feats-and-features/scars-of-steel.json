@@ -1,0 +1,406 @@
+{
+    "folder": "Feats & Features",
+    "id": "vohaZDhT8Zf1qBck",
+    "name": "Scars of Steel",
+    "nodes": [
+        {
+            "id": "WIiHvDBTHnyAMzkA",
+            "outs": {
+                "out": {
+                    "connection": "a5CGo84jzQO2n1ea:ins:in"
+                }
+            },
+            "position": {
+                "x": 370,
+                "y": 335
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "a5CGo84jzQO2n1ea",
+            "inputs": {
+                "a": {
+                    "connection": "WIiHvDBTHnyAMzkA:outputs:outcome"
+                },
+                "b": {
+                    "value": "criticalSuccess"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "hNftfqYlzcDcWZnC:ins:in"
+                }
+            },
+            "position": {
+                "x": 611,
+                "y": 383.25
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "hNftfqYlzcDcWZnC",
+            "inputs": {
+                "entry": {
+                    "value": "item:damage:category:physical"
+                },
+                "list": {
+                    "connection": "WIiHvDBTHnyAMzkA:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "SKfxvn6rNS6l3NLV:ins:in"
+                }
+            },
+            "position": {
+                "x": 881.9230769230769,
+                "y": 457.5
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "SKfxvn6rNS6l3NLV",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr"
+                },
+                "target": {
+                    "connection": "YsdMrjPNcDrHKxBe:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "qJqW40Iolsq79KEe:ins:in"
+                }
+            },
+            "position": {
+                "x": 1107.923076923077,
+                "y": 505.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "YsdMrjPNcDrHKxBe",
+            "inputs": {
+                "entry": {
+                    "connection": "WIiHvDBTHnyAMzkA:outputs:target"
+                }
+            },
+            "position": {
+                "x": 980,
+                "y": 612.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "qJqW40Iolsq79KEe",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.j8ycCi7ghTtpRjEW"
+                },
+                "target": {
+                    "connection": "HLXfLAAbTxiQfBDX:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "YhGvSABG4j5FdkfY:ins:in"
+                }
+            },
+            "position": {
+                "x": 1381.923076923077,
+                "y": 576.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "HLXfLAAbTxiQfBDX",
+            "inputs": {
+                "entry": {
+                    "connection": "WIiHvDBTHnyAMzkA:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1260,
+                "y": 674.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "OO7G15q3Kbb74Vpd": {
+                        "id": "OO7G15q3Kbb74Vpd",
+                        "input": "system.frequency.value",
+                        "isArray": false,
+                        "label": "Frequency Value",
+                        "slug": "path",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "YhGvSABG4j5FdkfY",
+            "inputs": {
+                "input": {
+                    "connection": "qJqW40Iolsq79KEe:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "QbmnlqO22x8ruq9F:ins:in"
+                }
+            },
+            "position": {
+                "x": 1648.923076923077,
+                "y": 659.4
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "QbmnlqO22x8ruq9F",
+            "inputs": {
+                "a": {
+                    "connection": "YhGvSABG4j5FdkfY:outputs:OO7G15q3Kbb74Vpd"
+                },
+                "compare": {
+                    "value": "gt"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Fh1PV8zS7l5XCVvN:ins:in"
+                }
+            },
+            "position": {
+                "x": 1889,
+                "y": 699.25
+            },
+            "type": "compare-numbers"
+        },
+        {
+            "id": "Fh1PV8zS7l5XCVvN",
+            "inputs": {
+                "localization": {
+                    "value": "TRIGGERTROVE.ScarsOfSteel.Trigger.AttackRolled.AwaitConfirmation.Prompt"
+                },
+                "title": {
+                    "value": "TRIGGERTROVE.ScarsOfSteel.Label"
+                },
+                "user": {
+                    "connection": "Rg1e6s7sF93ZUyXE:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "I4opH8uh3EdiOrk8:ins:in"
+                }
+            },
+            "position": {
+                "x": 2117.923076923077,
+                "y": 749.4
+            },
+            "state": "localization",
+            "type": "await-confirm"
+        },
+        {
+            "id": "Rg1e6s7sF93ZUyXE",
+            "inputs": {
+                "entry": {
+                    "connection": "WIiHvDBTHnyAMzkA:outputs:target"
+                }
+            },
+            "position": {
+                "x": 2270,
+                "y": 964
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "UL8ThaRjY4bNN6pc": {
+                        "id": "UL8ThaRjY4bNN6pc",
+                        "label": "Text",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "I4opH8uh3EdiOrk8",
+            "inputs": {
+                "name": {
+                    "value": "Aux Effect: Scars of Steel"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/wounds/injury-pain-body-orange.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-scars-of-steel"
+                },
+                "target": {
+                    "connection": "Rg1e6s7sF93ZUyXE:outputs:entry"
+                },
+                "UL8ThaRjY4bNN6pc": {
+                    "value": "{\n  \"key\": \"RollOption\",\n  \"option\": \"scars-of-steel\",\n  \"value\": true,\n  \"priority\": 51,\n  \"disabledValue\": true,\n  \"disabledIf\": [\n    \"parent:type:effect\"\n  ],\n  \"toggleable\": true\n}"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "DJXURPkXOFWF5Ywk:ins:in"
+                }
+            },
+            "position": {
+                "x": 2431.923076923077,
+                "y": 694.4
+            },
+            "state": "fixed",
+            "type": "create-effect"
+        },
+        {
+            "id": "LMyZu8230bzj7t1g",
+            "inputs": {
+                "item": {
+                    "connection": "H7S4xKnyDZU5giQJ:outputs:entry"
+                },
+                "path": {
+                    "value": "system.frequency.value"
+                },
+                "value": {
+                    "connection": "DJXURPkXOFWF5Ywk:outputs:value"
+                }
+            },
+            "position": {
+                "x": 3020.3040293040294,
+                "y": 894.8047619047621
+            },
+            "type": "update-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "FHJkxqOw9sgnivD2": {
+                        "id": "FHJkxqOw9sgnivD2",
+                        "input": "n",
+                        "label": "n",
+                        "slug": "variable",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "DJXURPkXOFWF5Ywk",
+            "inputs": {
+                "FHJkxqOw9sgnivD2": {
+                    "connection": "jIg7i0AKKLnMene5:outputs:entry"
+                },
+                "formula": {
+                    "value": "@n - 1"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "LMyZu8230bzj7t1g:ins:in"
+                }
+            },
+            "position": {
+                "x": 2685.9468864468863,
+                "y": 853.1380952380954
+            },
+            "type": "resolve-formula"
+        },
+        {
+            "id": "jIg7i0AKKLnMene5",
+            "inputs": {
+                "entry": {
+                    "connection": "YhGvSABG4j5FdkfY:outputs:OO7G15q3Kbb74Vpd"
+                }
+            },
+            "position": {
+                "x": 2474.023809523809,
+                "y": 1051.4880952380954
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "H7S4xKnyDZU5giQJ",
+            "inputs": {
+                "entry": {
+                    "connection": "qJqW40Iolsq79KEe:outputs:item"
+                }
+            },
+            "position": {
+                "x": 2861.4523809523803,
+                "y": 1007.2023809523807
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "tbXK7wLNVmDcRfiv",
+            "outs": {
+                "out": {
+                    "connection": "FoddiJ0DN7ZDNatX:ins:in"
+                }
+            },
+            "position": {
+                "x": 370.9004329004314,
+                "y": 626.6017316017313
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "FoddiJ0DN7ZDNatX",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-scars-of-steel"
+                },
+                "target": {
+                    "connection": "tbXK7wLNVmDcRfiv:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "etyi9uSHj1B79DrR:ins:in"
+                }
+            },
+            "position": {
+                "x": 631.8235098235083,
+                "y": 679.0017316017313
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "etyi9uSHj1B79DrR",
+            "inputs": {
+                "item": {
+                    "connection": "FoddiJ0DN7ZDNatX:outputs:item"
+                }
+            },
+            "position": {
+                "x": 903.9004329004314,
+                "y": 704.8517316017313
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "qJqW40Iolsq79KEe:outputs:item": {
+            "isArray": false,
+            "label": "Item",
+            "type": "item"
+        },
+        "WIiHvDBTHnyAMzkA:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        },
+        "YhGvSABG4j5FdkfY:outputs:OO7G15q3Kbb74Vpd": {
+            "isArray": false,
+            "label": "Frequency Value",
+            "type": "number"
+        }
+    }
+}

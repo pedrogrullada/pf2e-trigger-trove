@@ -1,0 +1,58 @@
+{
+    "folder": "Feats & Features",
+    "id": "MvKyjrJYVAsOjqXx",
+    "name": "Amulet's Abeyance",
+    "nodes": [
+        {
+            "id": "pn644Em2KtyCZMCt",
+            "outs": {
+                "out": {
+                    "connection": "kGQmX0VDenrADCbW:ins:in"
+                }
+            },
+            "position": {
+                "x": 340,
+                "y": 206
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "kGQmX0VDenrADCbW",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.90dTxPhFtbhK6Nv4"
+                },
+                "target": {
+                    "connection": "pn644Em2KtyCZMCt:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "xpYBzzWlnMjwbcvc:ins:in"
+                }
+            },
+            "position": {
+                "x": 584.9230769230769,
+                "y": 211.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "xpYBzzWlnMjwbcvc",
+            "inputs": {
+                "item": {
+                    "connection": "kGQmX0VDenrADCbW:outputs:item"
+                }
+            },
+            "position": {
+                "x": 841,
+                "y": 223.25
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ]
+}

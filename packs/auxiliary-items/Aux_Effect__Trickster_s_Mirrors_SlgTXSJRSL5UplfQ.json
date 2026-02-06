@@ -19,13 +19,6 @@
     },
     "rules": [
       {
-        "key": "SpecialResource",
-        "max": 3,
-        "value": 1,
-        "label": "TRIGGERTROVE.TrickstersMirrors.Item.ResourceLabel",
-        "slug": "tricksters-mirrors"
-      },
-      {
         "key": "Note",
         "selector": [
           "damage-received"
@@ -64,7 +57,14 @@
       "value": 0,
       "initiative": null
     },
-    "badge": null,
+    "badge": {
+      "type": "counter",
+      "value": 1,
+      "labels": null,
+      "loop": false,
+      "min": null,
+      "max": 3
+    },
     "fromSpell": false,
     "context": null
   },
@@ -83,7 +83,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.4"
+    "systemVersion": "7.10.0"
   },
   "_key": "!items!SlgTXSJRSL5UplfQ"
 }

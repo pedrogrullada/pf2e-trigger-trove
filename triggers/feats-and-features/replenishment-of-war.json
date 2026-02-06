@@ -1,0 +1,236 @@
+{
+    "folder": "Feats & Features",
+    "id": "vF3ozWabOa9G9bWF",
+    "name": "Replenishment of War",
+    "nodes": [
+        {
+            "id": "bhhsqOpofO8PovM6",
+            "outs": {
+                "out": {
+                    "connection": "DnW0PznHeSKthPMF:ins:in"
+                }
+            },
+            "position": {
+                "x": 520,
+                "y": 269
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "DnW0PznHeSKthPMF",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.aMef2VM4mSxl0pmy"
+                },
+                "target": {
+                    "connection": "bhhsqOpofO8PovM6:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "vFqS2loUBrBKt4vK:ins:in"
+                }
+            },
+            "position": {
+                "x": 788,
+                "y": 222.14999999999998
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "vFqS2loUBrBKt4vK",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.mTkbgFOHJUBl0Qwg"
+                },
+                "target": {
+                    "connection": "bhhsqOpofO8PovM6:outputs:origin"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "HnEyEBZOO8S1Ghza:ins:in"
+                }
+            },
+            "position": {
+                "x": 1053.923076923077,
+                "y": 336.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "HnEyEBZOO8S1Ghza",
+            "inputs": {
+                "options": {
+                    "connection": "8b13R1IsWf3dfdmV:outputs:entry"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:deity-favored\",\n  \"origin:action:slug:strike\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "C8r8WxaGgSi8Nf08:ins:in"
+                }
+            },
+            "position": {
+                "x": 1328.923076923077,
+                "y": 480.5
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "C8r8WxaGgSi8Nf08",
+            "inputs": {
+                "entry": {
+                    "value": "check:outcome:success"
+                },
+                "list": {
+                    "connection": "8b13R1IsWf3dfdmV:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "bJDZsX325W561RKn:ins:in"
+                },
+                "true": {
+                    "connection": "Sc0jL8CxaRAsV5vA:ins:in"
+                }
+            },
+            "position": {
+                "x": 1552.923076923077,
+                "y": 579.5
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "8b13R1IsWf3dfdmV",
+            "inputs": {
+                "entry": {
+                    "connection": "bhhsqOpofO8PovM6:outputs:options"
+                }
+            },
+            "position": {
+                "x": 1150,
+                "y": 619.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "bJDZsX325W561RKn",
+            "inputs": {
+                "entry": {
+                    "value": "check:outcome:critical-success"
+                },
+                "list": {
+                    "connection": "8b13R1IsWf3dfdmV:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "kpw0LQfRBRr5QQDf:ins:in"
+                }
+            },
+            "position": {
+                "x": 1770.923076923077,
+                "y": 721.5
+            },
+            "type": "list-contains"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "3TvNhhyTXDTC0nLm": {
+                        "id": "3TvNhhyTXDTC0nLm",
+                        "label": "Text",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "Sc0jL8CxaRAsV5vA",
+            "inputs": {
+                "3TvNhhyTXDTC0nLm": {
+                    "value": "flag:outcome:0"
+                },
+                "target": {
+                    "connection": "zEUKgTdesI9T06fL:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2022.923076923077,
+                "y": 403.4
+            },
+            "type": "create-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "3TvNhhyTXDTC0nLm": {
+                        "id": "3TvNhhyTXDTC0nLm",
+                        "label": "Text",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "kpw0LQfRBRr5QQDf",
+            "inputs": {
+                "3TvNhhyTXDTC0nLm": {
+                    "value": "flag:outcome:1"
+                },
+                "target": {
+                    "connection": "isG4E0h7ESPjN5aj:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2015.9230769230771,
+                "y": 776.4
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "zEUKgTdesI9T06fL",
+            "inputs": {
+                "entry": {
+                    "connection": "bhhsqOpofO8PovM6:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1904,
+                "y": 555.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "isG4E0h7ESPjN5aj",
+            "inputs": {
+                "entry": {
+                    "connection": "bhhsqOpofO8PovM6:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1880,
+                "y": 915.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "bhhsqOpofO8PovM6:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "bhhsqOpofO8PovM6:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        }
+    }
+}

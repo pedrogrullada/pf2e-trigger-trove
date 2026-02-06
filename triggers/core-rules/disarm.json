@@ -1,0 +1,180 @@
+{
+    "folder": "Core Rules",
+    "id": "M7QIwJzNZDQf8ziQ",
+    "name": "Disarm",
+    "nodes": [
+        {
+            "id": "gfixDbMh5hu3sHn7",
+            "outs": {
+                "out": {
+                    "connection": "OY2mqfRqdUN4pRFI:ins:in"
+                }
+            },
+            "position": {
+                "x": 447,
+                "y": 293
+            },
+            "type": "check-roll-event"
+        },
+        {
+            "id": "WN3sNbgrl5np1uc4",
+            "inputs": {
+                "input": {
+                    "connection": "0lT5iPQgJT5e7uyt:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "ssvgr5HBvfW1qDTi:ins:in"
+                },
+                "success": {
+                    "connection": "wKsTkI2G4RCjNZn9:ins:in"
+                }
+            },
+            "position": {
+                "x": 904,
+                "y": 412.25
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "OY2mqfRqdUN4pRFI",
+            "inputs": {
+                "entry": {
+                    "value": "action:disarm"
+                },
+                "list": {
+                    "connection": "gfixDbMh5hu3sHn7:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "WN3sNbgrl5np1uc4:ins:in"
+                }
+            },
+            "position": {
+                "x": 670,
+                "y": 351.25
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "0lT5iPQgJT5e7uyt",
+            "inputs": {
+                "entry": {
+                    "connection": "gfixDbMh5hu3sHn7:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 750,
+                "y": 503.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ssvgr5HBvfW1qDTi",
+            "inputs": {
+                "condition": {
+                    "value": "off-guard"
+                },
+                "img": {
+                    "value": "icons/skills/melee/sword-damaged-broken-glow-red.webp"
+                },
+                "name": {
+                    "value": "Effect: Disarm (Critical Failure)"
+                },
+                "origin": {
+                    "connection": "G5jPQE0o9LoPnOmz:outputs:entry"
+                },
+                "target": {
+                    "connection": "dhslnVKLGLqe9Md8:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1302.923076923077,
+                "y": 45.39999999999998
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "G5jPQE0o9LoPnOmz",
+            "inputs": {
+                "entry": {
+                    "connection": "gfixDbMh5hu3sHn7:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1192,
+                "y": 355.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "dhslnVKLGLqe9Md8",
+            "inputs": {
+                "entry": {
+                    "connection": "gfixDbMh5hu3sHn7:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1192,
+                "y": 164.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "wKsTkI2G4RCjNZn9",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.other-effects.Item.PuDS0DEq0CnaSIFV"
+                },
+                "target": {
+                    "connection": "8PZ5xHaT8XlWLtJT:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1216.923076923077,
+                "y": 542.4
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "8PZ5xHaT8XlWLtJT",
+            "inputs": {
+                "entry": {
+                    "connection": "gfixDbMh5hu3sHn7:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1075.7142857142856,
+                "y": 691.3214285714284
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e",
+        "sf2e"
+    ],
+    "variables": {
+        "gfixDbMh5hu3sHn7:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "gfixDbMh5hu3sHn7:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "gfixDbMh5hu3sHn7:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

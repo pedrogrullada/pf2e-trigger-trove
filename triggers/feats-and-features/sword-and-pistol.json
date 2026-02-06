@@ -1,0 +1,1296 @@
+{
+    "folder": "Feats & Features",
+    "id": "xMB0NfG3hchOcO8o",
+    "name": "Sword and Pistol",
+    "nodes": [
+        {
+            "id": "0YqkS4Jm1yq9ieRn",
+            "outs": {
+                "out": {
+                    "connection": "gDLCemrO0bhtOjwa:ins:in"
+                }
+            },
+            "position": {
+                "x": 257,
+                "y": 485
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "gDLCemrO0bhtOjwa",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi"
+                },
+                "target": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "y096V0sdcpbOuKs5:ins:in"
+                }
+            },
+            "position": {
+                "x": 485.9230769230769,
+                "y": 446.4
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "st0hY6gdRjKa45QV": {
+                        "id": "st0hY6gdRjKa45QV",
+                        "input": "signature",
+                        "isArray": false,
+                        "label": "Signature",
+                        "slug": "path",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "y096V0sdcpbOuKs5",
+            "inputs": {
+                "input": {
+                    "connection": "9ZHjBSLHYQmSLgBK:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Q9yJYgJhiMuqJYKO:ins:in"
+                }
+            },
+            "position": {
+                "x": 757.9230769230769,
+                "y": 514.4
+            },
+            "type": "extract-actor"
+        },
+        {
+            "id": "9ZHjBSLHYQmSLgBK",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 638,
+                "y": 613.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "W2qPiQS5sfPwqGkc": {
+                        "id": "W2qPiQS5sfPwqGkc",
+                        "input": "s",
+                        "label": "s",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "Q9yJYgJhiMuqJYKO",
+            "inputs": {
+                "plain": {
+                    "value": "sword-and-pistol-@s"
+                },
+                "W2qPiQS5sfPwqGkc": {
+                    "connection": "y096V0sdcpbOuKs5:outputs:st0hY6gdRjKa45QV"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "JYN6LcV6m5yKWTLh:ins:in"
+                }
+            },
+            "position": {
+                "x": 987.9230769230769,
+                "y": 559.4
+            },
+            "type": "format-text"
+        },
+        {
+            "id": "JYN6LcV6m5yKWTLh",
+            "inputs": {
+                "options": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:hands-held:1\",\n  \"item:ranged\",\n  \"sword-and-pistol-reach\",\n  {\n    \"or\": [\n      \"item:group:crossbow\",\n      \"item:group:firearm\"\n    ]\n  }\n]"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "pLIZYHDPa9lDFqrU:ins:in"
+                },
+                "true": {
+                    "connection": "xicOJL9vbkpzmaR9:ins:in"
+                }
+            },
+            "position": {
+                "x": 1293,
+                "y": 630
+            },
+            "type": "match-predicate"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "qiPiLXpq3tWmttQB": {
+                        "id": "qiPiLXpq3tWmttQB",
+                        "isArray": false,
+                        "label": "Perform Clean Up?",
+                        "slug": "entry",
+                        "type": "boolean"
+                    }
+                },
+                "title": "Create S&P Effect"
+            },
+            "id": "Flje4kv6UT0V1Y5A",
+            "outs": {
+                "out": {
+                    "connection": "D1TRPaQwqv0DmZUd:ins:in"
+                }
+            },
+            "position": {
+                "x": 280.6666666666667,
+                "y": -48
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "Ejm5N2rcU0vVeNyE": {
+                        "id": "Ejm5N2rcU0vVeNyE",
+                        "label": "RollOption",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "sFRYVxHb0pt6FaR6": {
+                        "id": "sFRYVxHb0pt6FaR6",
+                        "label": "EphemeralEffect",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "D1TRPaQwqv0DmZUd",
+            "inputs": {
+                "Ejm5N2rcU0vVeNyE": {
+                    "value": "{\n  \"key\": \"RollOption\",\n  \"option\": \"target-has-trigger-effect\",\n  \"predicate\": [\n    \"item:melee\",\n    \"item:hands-held:1\",\n    \"trigger-engine-pf2e-trigger-x-mb0nf-g3hch-oc-o8o-sword-and-pistol-{actor|signature}\"\n  ]\n}"
+                },
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "name": {
+                    "value": "Aux Effect: Sword and Pistol"
+                },
+                "origin": {
+                    "connection": "UqQpjyBiEKFj9cgJ:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/weapons/guns/gun-pistol-brown.webp"
+                },
+                "sFRYVxHb0pt6FaR6": {
+                    "value": "{\n  \"key\": \"EphemeralEffect\",\n  \"predicate\": [\n    \"item:melee\",\n    \"item:hands-held:1\",\n    \"target:effect:trigger-engine-pf2e-trigger-x-mb0nf-g3hch-oc-o8o-sword-and-pistol-{actor|signature}\"\n  ],\n  \"selectors\": [\n    \"melee-strike-attack-roll\",\n    \"melee-strike-damage\"\n  ],\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg\"\n}"
+                },
+                "slug": {
+                    "value": "trigger-trove-sword-and-pistol"
+                },
+                "target": {
+                    "connection": "UqQpjyBiEKFj9cgJ:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "fJxNivoSoLGvWSAh:ins:in"
+                }
+            },
+            "position": {
+                "x": 542.673076923077,
+                "y": -64.60000000000008
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "UqQpjyBiEKFj9cgJ",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 378.33333333333326,
+                "y": 90.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "xicOJL9vbkpzmaR9",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-sword-and-pistol"
+                },
+                "target": {
+                    "connection": "J44H8AQyUyiGnODa:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "sN3Byx5GTPJRdVhl:ins:in"
+                },
+                "true": {
+                    "connection": "iB4iS7KioUIebE2m:ins:in"
+                }
+            },
+            "position": {
+                "x": 1556.2564102564102,
+                "y": 384.3166666666666
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "J44H8AQyUyiGnODa",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1367.6969696969695,
+                "y": 506.030303030303
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "iB4iS7KioUIebE2m",
+            "inputs": {
+                "item": {
+                    "connection": "xicOJL9vbkpzmaR9:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "sN3Byx5GTPJRdVhl:ins:in"
+                }
+            },
+            "position": {
+                "x": 1834.2564102564102,
+                "y": 306.41666666666663
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "mqegQznghbCQXFM2",
+            "inputs": {
+                "entry": {
+                    "connection": "Q9yJYgJhiMuqJYKO:outputs:result"
+                }
+            },
+            "position": {
+                "x": 1928.3333333333333,
+                "y": 521.6666666666666
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "sN3Byx5GTPJRdVhl",
+            "inputs": {
+                "identifier": {
+                    "connection": "mqegQznghbCQXFM2:outputs:entry"
+                },
+                "target": {
+                    "connection": "nUfy230eRZk8C8V0:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "OF0QmVuhxFEE8Vd1:ins:in"
+                },
+                "true": {
+                    "connection": "evz8BCb1NlKQjoRM:ins:in"
+                }
+            },
+            "position": {
+                "x": 2065.4545454545455,
+                "y": 384.9999999999998
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "nUfy230eRZk8C8V0",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1899.3636363636365,
+                "y": 481.5681818181816
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "evz8BCb1NlKQjoRM",
+            "inputs": {
+                "item": {
+                    "connection": "sN3Byx5GTPJRdVhl:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "OF0QmVuhxFEE8Vd1:ins:in"
+                }
+            },
+            "position": {
+                "x": 2343.9230769230776,
+                "y": 316.5909090909089
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "OF0QmVuhxFEE8Vd1",
+            "inputs": {
+                "a": {
+                    "connection": "AskugdHTkgKLV4qE:outputs:entry"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "oVhPcS52ejoBkPZF:ins:in"
+                },
+                "true": {
+                    "connection": "Z6AE809WGlSnZB5W:ins:in"
+                }
+            },
+            "position": {
+                "x": 2584.832167832168,
+                "y": 425.8863636363635
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "AskugdHTkgKLV4qE",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 2436.233766233767,
+                "y": 480.85389610389586
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "title": "Clean Up Scene Tokens"
+            },
+            "id": "DwQPtd21JGazpuaW",
+            "outs": {
+                "out": {
+                    "connection": "UzrX5vMGI5yqCPyl:ins:in"
+                }
+            },
+            "position": {
+                "x": 279.87265512265594,
+                "y": -378.8405483405486
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "id": "UzrX5vMGI5yqCPyl",
+            "inputs": {
+                "targets": {
+                    "connection": "Al7xXcwwh6nq9186:outputs:targets"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "0Y2smaGC5lpYQ61i:ins:in"
+                }
+            },
+            "position": {
+                "x": 540.6012876012878,
+                "y": -338.96832611832656
+            },
+            "state": "loop",
+            "type": "filter-targets"
+        },
+        {
+            "id": "Al7xXcwwh6nq9186",
+            "position": {
+                "x": 267.78932178932246,
+                "y": -277.7294372294374
+            },
+            "type": "scene-targets"
+        },
+        {
+            "id": "0Y2smaGC5lpYQ61i",
+            "inputs": {
+                "a": {
+                    "connection": "UzrX5vMGI5yqCPyl:outputs:current"
+                },
+                "b": {
+                    "connection": "SKqka1xjbeQ7vl6v:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "nG6EYD1A4wXhDnxA:ins:in"
+                }
+            },
+            "position": {
+                "x": 780.6782106782107,
+                "y": -292.2294372294374
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "SKqka1xjbeQ7vl6v",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:target"
+                }
+            },
+            "position": {
+                "x": 606.3448773448772,
+                "y": -177.28499278499316
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "nG6EYD1A4wXhDnxA",
+            "inputs": {
+                "identifier": {
+                    "connection": "EBIqXcew4P2qPX86:outputs:entry"
+                },
+                "target": {
+                    "connection": "TOkdlxEyvSvEePVl:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "J8wkg6h9o1J2bLft:ins:in"
+                }
+            },
+            "position": {
+                "x": 998.3790653790657,
+                "y": -286.2016594516597
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "EBIqXcew4P2qPX86",
+            "inputs": {
+                "entry": {
+                    "connection": "Q9yJYgJhiMuqJYKO:outputs:result"
+                }
+            },
+            "position": {
+                "x": 872.455988455989,
+                "y": -120.61832611832631
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "J8wkg6h9o1J2bLft",
+            "inputs": {
+                "item": {
+                    "connection": "nG6EYD1A4wXhDnxA:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1266.2337662337668,
+                "y": -261.56277056277077
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "TOkdlxEyvSvEePVl",
+            "inputs": {
+                "entry": {
+                    "connection": "UzrX5vMGI5yqCPyl:outputs:current"
+                }
+            },
+            "position": {
+                "x": 852.3448773448786,
+                "y": -173.95165945165968
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "3yOOanLzM4n8C2Op",
+            "outs": {
+                "out": {
+                    "connection": "DwQPtd21JGazpuaW:ins:in"
+                }
+            },
+            "position": {
+                "x": 1381.7401764901792,
+                "y": 75.15945165945152
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "oVhPcS52ejoBkPZF",
+            "outs": {
+                "out": {
+                    "connection": "DwQPtd21JGazpuaW:ins:in"
+                }
+            },
+            "position": {
+                "x": 2925.490176490178,
+                "y": 521.6594516594516
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "pLIZYHDPa9lDFqrU",
+            "inputs": {
+                "options": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:melee\",\n  \"item:hands-held:1\",\n  \"self:effect:sword-and-pistol-trigger\",\n  \"target-has-trigger-effect\"\n]"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "8XUtQal4Rk1Asvs2:ins:in"
+                },
+                "true": {
+                    "connection": "6xBy9nTx9zRZJsm3:ins:in"
+                }
+            },
+            "position": {
+                "x": 1528.126540126542,
+                "y": 957.5306637806639
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "6xBy9nTx9zRZJsm3",
+            "inputs": {
+                "a": {
+                    "connection": "4xHaH5LsiNc7GNmM:outputs:entry"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "CmF06Kvy6J6bVCuy:ins:in"
+                },
+                "true": {
+                    "connection": "DULri797G33r9zmy:ins:in"
+                }
+            },
+            "position": {
+                "x": 1957.5204795204818,
+                "y": 949.9549062049063
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "4xHaH5LsiNc7GNmM",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 1793.0923520923543,
+                "y": 1057.3968253968255
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "DULri797G33r9zmy",
+            "inputs": {
+                "entry": {
+                    "value": "check:reroll"
+                },
+                "list": {
+                    "connection": "nqVlY13PT449g0Aw:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "n9zJFwow2iGVCSlp:ins:in"
+                }
+            },
+            "position": {
+                "x": 2281.964923964927,
+                "y": 787.5912698412699
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "nqVlY13PT449g0Aw",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:options"
+                }
+            },
+            "position": {
+                "x": 2115.2034632034674,
+                "y": 820.386724386724
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "qiPiLXpq3tWmttQB": {
+                        "id": "qiPiLXpq3tWmttQB",
+                        "isArray": false,
+                        "label": "Perform Clean Up?",
+                        "slug": "entry",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "id": "n9zJFwow2iGVCSlp",
+            "inputs": {
+                "20dHIbclWa5oHWjC": {
+                    "value": true
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Flje4kv6UT0V1Y5A:ins:in"
+                }
+            },
+            "position": {
+                "x": 2540.5002775002818,
+                "y": 691.3059163059163
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "qiPiLXpq3tWmttQB": {
+                        "id": "qiPiLXpq3tWmttQB",
+                        "isArray": false,
+                        "label": "Perform Clean Up?",
+                        "slug": "entry",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "id": "Z6AE809WGlSnZB5W",
+            "inputs": {
+                "20dHIbclWa5oHWjC": {
+                    "value": true
+                },
+                "qiPiLXpq3tWmttQB": {
+                    "value": true
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Flje4kv6UT0V1Y5A:ins:in"
+                }
+            },
+            "position": {
+                "x": 2932.0280552780596,
+                "y": 347.8336940836942
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "fJxNivoSoLGvWSAh",
+            "inputs": {
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "identifier": {
+                    "connection": "RRNyJKpcjQQJBZDk:outputs:entry"
+                },
+                "origin": {
+                    "connection": "HXEg7dJnTsF7lDCD:outputs:entry"
+                },
+                "target": {
+                    "connection": "leuLIm9MqT5KfMx7:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Tx5gHN0SDW1qDRFr:ins:in"
+                }
+            },
+            "position": {
+                "x": 909.1730769230771,
+                "y": 27.400000000000205
+            },
+            "type": "create-temporary"
+        },
+        {
+            "id": "RRNyJKpcjQQJBZDk",
+            "inputs": {
+                "entry": {
+                    "connection": "Q9yJYgJhiMuqJYKO:outputs:result"
+                }
+            },
+            "position": {
+                "x": 775.0000000000003,
+                "y": 153.25000000000023
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "leuLIm9MqT5KfMx7",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:target"
+                }
+            },
+            "position": {
+                "x": 755.916666666667,
+                "y": 105.91666666666697
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "HXEg7dJnTsF7lDCD",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 758.2500000000005,
+                "y": 205.75000000000045
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "CmF06Kvy6J6bVCuy",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-sword-and-pistol"
+                },
+                "target": {
+                    "connection": "TxAflzY8EkbWc8pK:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "7vwWU9iry2YyOTMF:ins:in"
+                }
+            },
+            "position": {
+                "x": 2337.9230769230767,
+                "y": 977.3444444444438
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "TxAflzY8EkbWc8pK",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 2215.6666666666665,
+                "y": 1070.5833333333326
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "7vwWU9iry2YyOTMF",
+            "inputs": {
+                "item": {
+                    "connection": "CmF06Kvy6J6bVCuy:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "juFt4QXMC7Dp9eaL:ins:in"
+                }
+            },
+            "position": {
+                "x": 2611.333333333333,
+                "y": 966.3055555555551
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "juFt4QXMC7Dp9eaL",
+            "inputs": {
+                "identifier": {
+                    "connection": "AJ6SZ7WFvISht17n:outputs:entry"
+                },
+                "target": {
+                    "connection": "jNvPiG6DuIUIRHt8:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "esltGlxufKzQEo4Z:ins:in"
+                }
+            },
+            "position": {
+                "x": 2835.7008547008545,
+                "y": 997.2222222222218
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "AJ6SZ7WFvISht17n",
+            "inputs": {
+                "entry": {
+                    "connection": "Q9yJYgJhiMuqJYKO:outputs:result"
+                }
+            },
+            "position": {
+                "x": 2702,
+                "y": 1117.2499999999995
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "jNvPiG6DuIUIRHt8",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:target"
+                }
+            },
+            "position": {
+                "x": 2682.555555555555,
+                "y": 1073.9166666666663
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "esltGlxufKzQEo4Z",
+            "inputs": {
+                "item": {
+                    "connection": "juFt4QXMC7Dp9eaL:outputs:item"
+                }
+            },
+            "position": {
+                "x": 3095.7777777777774,
+                "y": 986.3055555555552
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "8XUtQal4Rk1Asvs2",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-sword-and-pistol"
+                },
+                "target": {
+                    "connection": "tUeMkRrgvcbfgjLr:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "FIs7MKfujqfzPNzd:ins:in"
+                }
+            },
+            "position": {
+                "x": 1815.7008547008545,
+                "y": 1210.677777777777
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "FIs7MKfujqfzPNzd",
+            "inputs": {
+                "item": {
+                    "connection": "8XUtQal4Rk1Asvs2:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "0AZrbfPht3mAJ1aR:ins:in"
+                }
+            },
+            "position": {
+                "x": 2089.111111111111,
+                "y": 1199.6388888888882
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "tUeMkRrgvcbfgjLr",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1688.9999999999998,
+                "y": 1268.3611111111104
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "0AZrbfPht3mAJ1aR",
+            "outs": {
+                "out": {
+                    "connection": "DwQPtd21JGazpuaW:ins:in"
+                }
+            },
+            "position": {
+                "x": 2320.145299145299,
+                "y": 1281.6666666666658
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "Tx5gHN0SDW1qDRFr",
+            "inputs": {
+                "input": {
+                    "connection": "V0OStvvekGeJZ9N7:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "3yOOanLzM4n8C2Op:ins:in"
+                }
+            },
+            "position": {
+                "x": 1152.66910866911,
+                "y": 130.71825396825432
+            },
+            "type": "split-boolean"
+        },
+        {
+            "id": "V0OStvvekGeJZ9N7",
+            "inputs": {
+                "entry": {
+                    "connection": "Flje4kv6UT0V1Y5A:outputs:qiPiLXpq3tWmttQB"
+                }
+            },
+            "position": {
+                "x": 930.2460317460327,
+                "y": 283.21825396825454
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "pdCaobvllMNuCtGu",
+            "outs": {
+                "out": {
+                    "connection": "wZYUhdefd2vH29g0:ins:in"
+                }
+            },
+            "position": {
+                "x": 282.20634920635325,
+                "y": -671.5198412698412
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "st0hY6gdRjKa45QV": {
+                        "id": "st0hY6gdRjKa45QV",
+                        "input": "signature",
+                        "isArray": false,
+                        "label": "Signature",
+                        "slug": "path",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "wZYUhdefd2vH29g0",
+            "inputs": {
+                "input": {
+                    "connection": "pdCaobvllMNuCtGu:outputs:origin"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "WhUJGHOZFC4aD8al:ins:in"
+                }
+            },
+            "position": {
+                "x": 602.0897435897441,
+                "y": -597.0166666666664
+            },
+            "type": "extract-actor"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "W2qPiQS5sfPwqGkc": {
+                        "id": "W2qPiQS5sfPwqGkc",
+                        "input": "s",
+                        "label": "s",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "WhUJGHOZFC4aD8al",
+            "inputs": {
+                "plain": {
+                    "value": "sword-and-pistol-@s"
+                },
+                "W2qPiQS5sfPwqGkc": {
+                    "connection": "wZYUhdefd2vH29g0:outputs:st0hY6gdRjKa45QV"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "OWqmaTflCT9ihsjc:ins:in"
+                }
+            },
+            "position": {
+                "x": 828.9230769230776,
+                "y": -563.8499999999999
+            },
+            "type": "format-text"
+        },
+        {
+            "id": "OWqmaTflCT9ihsjc",
+            "inputs": {
+                "identifier": {
+                    "connection": "WhUJGHOZFC4aD8al:outputs:result"
+                },
+                "target": {
+                    "connection": "j74qUYTmKVpm5jpW:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "osk3WZdtriHx9weS:ins:in"
+                }
+            },
+            "position": {
+                "x": 1172.5674603174643,
+                "y": -545.436507936508
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "j74qUYTmKVpm5jpW",
+            "inputs": {
+                "entry": {
+                    "connection": "pdCaobvllMNuCtGu:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 997.5674603174646,
+                "y": -440.43650793650795
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "osk3WZdtriHx9weS",
+            "inputs": {
+                "options": {
+                    "connection": "pyF5K2HzQSHfmHUy:outputs:entry"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:melee\",\n  \"item:hands-held:1\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "3PDWJgHfJtiABSxV:ins:in"
+                }
+            },
+            "position": {
+                "x": 1476.7405372405415,
+                "y": -518.1865079365082
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "pyF5K2HzQSHfmHUy",
+            "inputs": {
+                "entry": {
+                    "connection": "0YqkS4Jm1yq9ieRn:outputs:options"
+                }
+            },
+            "position": {
+                "x": 1296.8174603174643,
+                "y": -389.9365079365082
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "3PDWJgHfJtiABSxV",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-sword-and-pistol"
+                },
+                "target": {
+                    "connection": "ITKpuQUna1qQfdBx:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "gM4ITrEkPAkXDS67:ins:in"
+                }
+            },
+            "position": {
+                "x": 1703.1810134310176,
+                "y": -494.0603174603177
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "ITKpuQUna1qQfdBx",
+            "inputs": {
+                "entry": {
+                    "connection": "pdCaobvllMNuCtGu:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1513.4246031746075,
+                "y": -374.3769841269843
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "gM4ITrEkPAkXDS67",
+            "inputs": {
+                "item": {
+                    "connection": "3PDWJgHfJtiABSxV:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "vtksE9UM6o0XwtHB:ins:in"
+                }
+            },
+            "position": {
+                "x": 1965.7579365079412,
+                "y": -449.54365079365107
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "vtksE9UM6o0XwtHB",
+            "inputs": {
+                "identifier": {
+                    "connection": "8mnFhPgmvQsX8Gkt:outputs:entry"
+                },
+                "target": {
+                    "connection": "DD6QGD7Mm3on2ufy:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "e4lghYHq8XBRf0eO:ins:in"
+                }
+            },
+            "position": {
+                "x": 2169.6810134310176,
+                "y": -407.9603174603176
+            },
+            "type": "has-temporary"
+        },
+        {
+            "id": "8mnFhPgmvQsX8Gkt",
+            "inputs": {
+                "entry": {
+                    "connection": "Q9yJYgJhiMuqJYKO:outputs:result"
+                }
+            },
+            "position": {
+                "x": 2018.591269841274,
+                "y": -282.3769841269843
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "DD6QGD7Mm3on2ufy",
+            "inputs": {
+                "entry": {
+                    "connection": "pdCaobvllMNuCtGu:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1986.091269841274,
+                "y": -319.2103174603176
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "e4lghYHq8XBRf0eO",
+            "inputs": {
+                "item": {
+                    "connection": "vtksE9UM6o0XwtHB:outputs:item"
+                }
+            },
+            "position": {
+                "x": 2438.424603174608,
+                "y": -378.2103174603176
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "0YqkS4Jm1yq9ieRn:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "0YqkS4Jm1yq9ieRn:outputs:origin": {
+            "isArray": false,
+            "label": "Attack Origin",
+            "type": "target"
+        },
+        "0YqkS4Jm1yq9ieRn:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "0YqkS4Jm1yq9ieRn:outputs:target": {
+            "isArray": false,
+            "label": "Attack Target",
+            "type": "target"
+        },
+        "Flje4kv6UT0V1Y5A:outputs:qiPiLXpq3tWmttQB": {
+            "isArray": false,
+            "label": "Perform Clean Up?",
+            "type": "boolean"
+        },
+        "pdCaobvllMNuCtGu:outputs:origin": {
+            "isArray": false,
+            "label": "Damage Origin",
+            "type": "target"
+        },
+        "pdCaobvllMNuCtGu:outputs:target": {
+            "isArray": false,
+            "label": "Damage Target",
+            "type": "target"
+        },
+        "Q9yJYgJhiMuqJYKO:outputs:result": {
+            "isArray": false,
+            "label": "Identifier",
+            "type": "text"
+        },
+        "UzrX5vMGI5yqCPyl:outputs:current": {
+            "isArray": false,
+            "label": "Scene Token",
+            "type": "target"
+        }
+    }
+}

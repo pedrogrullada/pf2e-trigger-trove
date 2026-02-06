@@ -1,455 +1,385 @@
 {
-    "_id": "nMWxoyx3mJeElz9t",
-    "description": "@Localize[TRIGGERTROVE.DreadFlickering.Trigger.TurnEnded.Description]",
     "folder": "Monster Abilities",
-    "name": "Dread Flickering (Turn Ended)",
+    "id": "7lwgGMDffXhhr2cT",
+    "name": "Dread Flickering",
     "nodes": [
         {
-            "_id": "KReqUDL4XmQLkve6",
-            "key": "turn-end",
-            "outputs": {
+            "id": "La4veEWSwRpPDRR9",
+            "outs": {
                 "out": {
-                    "ids": [
-                        "u04SErV2hheSEzyX.inputs.in"
-                    ]
+                    "connection": "8OrQNo9QY8PqXOtc:ins:in"
                 }
             },
             "position": {
-                "x": 350,
-                "y": 200
+                "x": 337,
+                "y": 331
             },
-            "type": "event"
+            "type": "turn-end-event"
         },
         {
-            "_id": "y35nm7RSdUtdyWBp",
+            "id": "8OrQNo9QY8PqXOtc",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "u04SErV2hheSEzyX.outputs.false"
-                    ]
+                "slug": {
+                    "value": "trigger-trove-dread-flickering-immunity"
+                },
+                "target": {
+                    "connection": "La4veEWSwRpPDRR9:outputs:combatant"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "7pdqMD0r4IwYd3gb:ins:in"
+                }
+            },
+            "position": {
+                "x": 594.6503496503497,
+                "y": 262.85454545454536
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "7pdqMD0r4IwYd3gb",
+            "inputs": {
+                "affects": {
+                    "value": "all"
                 },
                 "slug": {
-                    "ids": [
-                        "2KHbLYKMXhjvTJjO.outputs.value"
-                    ]
+                    "value": "dread-flickering"
+                },
+                "target": {
+                    "connection": "La4veEWSwRpPDRR9:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "3GU6HdX54PXq1s1q:ins:in"
+                }
+            },
+            "position": {
+                "x": 871.4685314685313,
+                "y": 334.03636363636355
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "3GU6HdX54PXq1s1q",
+            "inputs": {
+                "slug": {
+                    "value": "dread-flickering"
+                },
+                "target": {
+                    "connection": "7pdqMD0r4IwYd3gb:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "JxmAXNvBQe2tNoJl:ins:in"
+                }
+            },
+            "position": {
+                "x": 1193.1503496503497,
+                "y": 396.9909090909091
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "JxmAXNvBQe2tNoJl",
+            "inputs": {
+                "option": {
+                    "value": "self:mode:living"
+                },
+                "target": {
+                    "connection": "86uWlDJMymQaUz75:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "FFTv8VLdN1klDJMZ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1556.2639860139861,
+                "y": 453.409090909091
+            },
+            "type": "has-option"
+        },
+        {
+            "id": "FFTv8VLdN1klDJMZ",
+            "inputs": {
+                "item": {
+                    "connection": "9lWYxBGqJg7AtGco:outputs:entry"
+                },
+                "parent": {
+                    "connection": "8A41xqVxGvDis6IQ:outputs:entry"
                 },
                 "targets": {
-                    "ids": [],
-                    "value": "all"
-                }
-            },
-            "key": "inside-aura",
-            "outputs": {
-                "source": {
-                    "ids": []
-                },
-                "true": {
-                    "ids": [
-                        "G1huxS4DipA6tUye.inputs.in"
-                    ]
+                    "connection": "4AechiZXg1xmlHEK:outputs:entry"
                 }
             },
             "position": {
-                "x": 792,
-                "y": 238.23000000000002
+                "x": 1811.5139860139861,
+                "y": 506.659090909091
             },
-            "type": "condition"
+            "type": "send-chat"
         },
         {
-            "_id": "Iah1Ts4b2cEmz80C",
+            "id": "86uWlDJMymQaUz75",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "G1huxS4DipA6tUye.outputs.true"
-                    ]
-                },
-                "option": {
-                    "ids": [],
-                    "value": "self:mode:living"
-                }
-            },
-            "key": "has-option",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "t8u51y1V87zvftb9.inputs.in"
-                    ]
+                "entry": {
+                    "connection": "La4veEWSwRpPDRR9:outputs:combatant"
                 }
             },
             "position": {
-                "x": 1316,
-                "y": 312.75
+                "x": 1397.3409090909092,
+                "y": 561.909090909091
             },
-            "type": "condition"
+            "type": "__variable_getter__"
         },
         {
-            "_id": "TuCwCaRqVJ9dAqYo",
+            "id": "4AechiZXg1xmlHEK",
             "inputs": {
-                "HhJmeS0b8RW20qN7": {
-                    "ids": [
-                        "lsmXwkCvO0q29HnS.outputs.output"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "t8u51y1V87zvftb9.outputs.out"
-                    ]
-                },
-                "PAWVQq94ohe1Jwsj": {
-                    "ids": [
-                        "nOYIBtHbbpUisWQk.outputs.output"
-                    ]
+                "entry": {
+                    "connection": "La4veEWSwRpPDRR9:outputs:combatant"
                 }
             },
-            "key": "subtrigger-node",
-            "outputs": {
+            "position": {
+                "x": 1597.5909090909092,
+                "y": 680.909090909091
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "8A41xqVxGvDis6IQ",
+            "inputs": {
+                "entry": {
+                    "connection": "7pdqMD0r4IwYd3gb:outputs:source"
+                }
+            },
+            "position": {
+                "x": 1608.5909090909092,
+                "y": 640.909090909091
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "9lWYxBGqJg7AtGco",
+            "inputs": {
+                "entry": {
+                    "connection": "3GU6HdX54PXq1s1q:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1604.5909090909092,
+                "y": 594.909090909091
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "D1XshKIRTB7111Nj",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
                 "out": {
-                    "ids": [
-                        "vNHRH4yR1I1p6vjh.inputs.in"
-                    ]
+                    "connection": "WMmKrTuaXZJokOOZ:ins:in"
                 }
             },
             "position": {
-                "x": 1813,
-                "y": 367.23
+                "x": 323.507575757576,
+                "y": -60.507575757575296
             },
-            "target": "KbmYmEm4rMEedc9N",
-            "type": "subtrigger"
+            "state": "check",
+            "type": "check-roll-event"
         },
         {
-            "_id": "nOYIBtHbbpUisWQk",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
+            "id": "WMmKrTuaXZJokOOZ",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:dread-flickering"
+                },
+                "list": {
+                    "connection": "D1XshKIRTB7111Nj:outputs:options"
+                }
             },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "TuCwCaRqVJ9dAqYo.inputs.PAWVQq94ohe1Jwsj"
-                    ]
+            "outs": {
+                "true": {
+                    "connection": "sDPKX1oV50gvc3v1:ins:in"
                 }
             },
             "position": {
-                "x": 1636.5,
-                "y": 505.25
+                "x": 619.161421911422,
+                "y": -14.73834498834458
             },
-            "target": "y35nm7RSdUtdyWBp.outputs.source",
-            "type": "variable"
+            "type": "list-contains"
         },
         {
-            "_id": "2KHbLYKMXhjvTJjO",
+            "id": "sDPKX1oV50gvc3v1",
             "inputs": {
                 "input": {
-                    "ids": [],
-                    "value": "dread-flickering"
+                    "connection": "ufIyDmsfPSMS3oPW:outputs:entry"
                 }
             },
-            "key": "text-value",
-            "outputs": {
-                "value": {
-                    "ids": [
-                        "y35nm7RSdUtdyWBp.inputs.slug"
-                    ]
-                }
-            },
-            "position": {
-                "x": 572.5,
-                "y": 348.25
-            },
-            "type": "value"
-        },
-        {
-            "_id": "lsmXwkCvO0q29HnS",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "text"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "TuCwCaRqVJ9dAqYo.inputs.HhJmeS0b8RW20qN7"
-                    ]
+            "outs": {
+                "criticalFailure": {
+                    "connection": "tBloucIlqTxkV9hl:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "Lr88rkzoLcZpMvJs:ins:in"
+                },
+                "failure": {
+                    "connection": "DspFmV4esnotAj5a:ins:in"
                 }
             },
             "position": {
-                "x": 1603.5,
-                "y": 556.25
+                "x": 884.5652680652678,
+                "y": -68.36013986013958
             },
-            "target": "2KHbLYKMXhjvTJjO.outputs.value",
-            "type": "variable"
+            "type": "split-outcome"
         },
         {
-            "_id": "G1huxS4DipA6tUye",
+            "id": "ufIyDmsfPSMS3oPW",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "y35nm7RSdUtdyWBp.outputs.true"
-                    ]
+                "entry": {
+                    "connection": "D1XshKIRTB7111Nj:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 697.0652680652679,
+                "y": 126.3898601398605
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "tBloucIlqTxkV9hl",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "fxAwmeE0RVaErAbV:outputs:entry"
+                },
+                "value": {
+                    "value": 2
+                }
+            },
+            "position": {
+                "x": 1205.9125874125875,
+                "y": -393.43589743589706
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "fxAwmeE0RVaErAbV",
+            "inputs": {
+                "entry": {
+                    "connection": "D1XshKIRTB7111Nj:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1025.1713286713289,
+                "y": -225.73135198135157
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "DspFmV4esnotAj5a",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "fxAwmeE0RVaErAbV:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1203.1853146853148,
+                "y": -207.0722610722608
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "Lr88rkzoLcZpMvJs",
+            "inputs": {
+                "duration": {
+                    "value": 10
+                },
+                "name": {
+                    "value": "Effect: Dread Flickering Immunity"
+                },
+                "origin": {
+                    "connection": "FrfGULjA1BGsf4y5:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/control/fear-fright-mask-yellow.webp"
                 },
                 "slug": {
-                    "ids": [
-                        "lj06A7MqZBSF7UPU.outputs.output"
-                    ]
+                    "value": "trigger-trove-dread-flickering-immunity"
                 },
                 "target": {
-                    "ids": [
-                        "81DsJafttKUdmmfj.outputs.output"
-                    ]
-                }
-            },
-            "key": "has-item-slug",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "Iah1Ts4b2cEmz80C.inputs.in"
-                    ]
+                    "connection": "FrfGULjA1BGsf4y5:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
                 }
             },
             "position": {
-                "x": 1082,
-                "y": 286.75
+                "x": 1199.5489510489513,
+                "y": -15.53589743589697
             },
-            "type": "condition"
+            "type": "create-effect"
         },
         {
-            "_id": "lj06A7MqZBSF7UPU",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "text"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "G1huxS4DipA6tUye.inputs.slug"
-                    ]
-                }
-            },
-            "position": {
-                "x": 907.5,
-                "y": 450.25
-            },
-            "target": "2KHbLYKMXhjvTJjO.outputs.value",
-            "type": "variable"
-        },
-        {
-            "_id": "u04SErV2hheSEzyX",
+            "id": "FrfGULjA1BGsf4y5",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "KReqUDL4XmQLkve6.outputs.out"
-                    ]
-                },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.1D7YdXwRsOncOhcW"
-                }
-            },
-            "key": "has-item",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "y35nm7RSdUtdyWBp.inputs.in"
-                    ]
+                "entry": {
+                    "connection": "D1XshKIRTB7111Nj:outputs:roller"
                 }
             },
             "position": {
-                "x": 536,
-                "y": 216.75
+                "x": 1074.2622377622379,
+                "y": 156.995920745921
             },
-            "type": "condition"
-        },
-        {
-            "_id": "81DsJafttKUdmmfj",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "G1huxS4DipA6tUye.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 927.5,
-                "y": 412.25
-            },
-            "target": "y35nm7RSdUtdyWBp.outputs.source",
-            "type": "variable"
-        },
-        {
-            "_id": "t8u51y1V87zvftb9",
-            "inputs": {
-                "duplicate": {
-                    "ids": [],
-                    "value": false
-                },
-                "in": {
-                    "ids": [
-                        "Iah1Ts4b2cEmz80C.outputs.true"
-                    ]
-                },
-                "target": {
-                    "ids": [
-                        "8xdjXQc30wU2d8lM.outputs.output"
-                    ]
-                },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.WrV9fZMETFDXqawL"
-                }
-            },
-            "key": "create-item",
-            "outputs": {
-                "item": {
-                    "ids": []
-                },
-                "out": {
-                    "ids": [
-                        "TuCwCaRqVJ9dAqYo.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1551,
-                "y": 333.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "8xdjXQc30wU2d8lM",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "t8u51y1V87zvftb9.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1410.5,
-                "y": 482.25
-            },
-            "target": "y35nm7RSdUtdyWBp.outputs.source",
-            "type": "variable"
-        },
-        {
-            "_id": "vNHRH4yR1I1p6vjh",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "TuCwCaRqVJ9dAqYo.outputs.out"
-                    ]
-                },
-                "item": {
-                    "ids": [
-                        "0JilKyxB7qydTHNP.outputs.output"
-                    ]
-                }
-            },
-            "key": "delete-item",
-            "position": {
-                "x": 2075,
-                "y": 409.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "0JilKyxB7qydTHNP",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "item"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "vNHRH4yR1I1p6vjh.inputs.item"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1926.5,
-                "y": 518.25
-            },
-            "target": "t8u51y1V87zvftb9.outputs.item",
-            "type": "variable"
+            "type": "__variable_getter__"
         }
     ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
     "variables": {
-        "2KHbLYKMXhjvTJjO.outputs.value": {
-            "global": false,
+        "3GU6HdX54PXq1s1q:outputs:item": {
+            "isArray": false,
             "label": "Dread Flickering",
-            "locked": false,
-            "type": "text"
-        },
-        "t8u51y1V87zvftb9.outputs.item": {
-            "global": false,
-            "label": "Addendum",
-            "locked": false,
             "type": "item"
         },
-        "y35nm7RSdUtdyWBp.outputs.source": {
-            "global": false,
+        "7pdqMD0r4IwYd3gb:outputs:source": {
+            "isArray": false,
             "label": "Aura Source",
-            "locked": false,
+            "type": "target"
+        },
+        "D1XshKIRTB7111Nj:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "D1XshKIRTB7111Nj:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "La4veEWSwRpPDRR9:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
             "type": "target"
         }
     }

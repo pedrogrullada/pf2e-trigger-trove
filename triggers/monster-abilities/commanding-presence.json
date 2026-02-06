@@ -1,492 +1,304 @@
 {
-    "_id": "viFIEEhmpxdGEb6X",
-    "description": "<p>@Localize[TRIGGERTROVE.CommandingPresence.Trgger.AuraEntered.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
     "folder": "Monster Abilities",
-    "name": "Commanding Presence (Aura Entered)",
+    "id": "V1PLolsPjOaYB3NL",
+    "name": "Commanding Presence",
     "nodes": [
         {
-            "_id": "idGibSI2owSwpkSR",
+            "id": "DgiagzLCuKzszo3V",
+            "inputs": {
+                "affects": {
+                    "value": "allies"
+                },
+                "slug": {
+                    "value": "commanding-presence"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "TiYGpwz3xRtKgUXH:ins:in"
+                }
+            },
+            "position": {
+                "x": 323.5,
+                "y": 237
+            },
+            "type": "aura-enter-event"
+        },
+        {
+            "id": "TiYGpwz3xRtKgUXH",
             "inputs": {
                 "slug": {
-                    "ids": [],
-                    "value": "commanding-presence"
-                },
-                "targets": {
-                    "ids": [],
-                    "value": "all"
-                },
-                "turn": {
-                    "ids": [],
-                    "value": false
-                }
-            },
-            "key": "aura-enter",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "OkG37bz0cCQ6wsbk.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 350,
-                "y": 200
-            },
-            "type": "event"
-        },
-        {
-            "_id": "OkG37bz0cCQ6wsbk",
-            "inputs": {
-                "identifier": {
-                    "ids": [
-                        "U1YEi1O6gS2z0eUr.outputs.value"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "idGibSI2owSwpkSR.outputs.out"
-                    ]
-                },
-                "trigger": {
-                    "ids": [],
-                    "value": "viFIEEhmpxdGEb6X"
-                }
-            },
-            "key": "has-temporary",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "AaAgeALG6uGyQ96l.inputs.in"
-                    ]
-                },
-                "true": {
-                    "ids": []
-                }
-            },
-            "position": {
-                "x": 622,
-                "y": 199.75
-            },
-            "type": "condition"
-        },
-        {
-            "_id": "AaAgeALG6uGyQ96l",
-            "inputs": {
-                "HhJmeS0b8RW20qN7": {
-                    "ids": [
-                        "eUo3ksy7V50LpkGc.outputs.output"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "OkG37bz0cCQ6wsbk.outputs.false"
-                    ]
-                },
-                "PAWVQq94ohe1Jwsj": {
-                    "ids": [
-                        "f15YxXmtdbOp7mzY.outputs.output"
-                    ]
-                }
-            },
-            "key": "subtrigger-node",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "mDGhPk3WaPFgjz8T.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 883,
-                "y": 198.23000000000002
-            },
-            "target": "KbmYmEm4rMEedc9N",
-            "type": "subtrigger"
-        },
-        {
-            "_id": "U1YEi1O6gS2z0eUr",
-            "inputs": {
-                "input": {
-                    "ids": [],
-                    "value": "commanding-presence"
-                }
-            },
-            "key": "text-value",
-            "outputs": {
-                "value": {
-                    "ids": [
-                        "OkG37bz0cCQ6wsbk.inputs.identifier"
-                    ]
-                }
-            },
-            "position": {
-                "x": 404.5,
-                "y": 333.25
-            },
-            "type": "value"
-        },
-        {
-            "_id": "eUo3ksy7V50LpkGc",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "text"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "AaAgeALG6uGyQ96l.inputs.HhJmeS0b8RW20qN7"
-                    ]
-                }
-            },
-            "position": {
-                "x": 693.5,
-                "y": 394.25
-            },
-            "target": "U1YEi1O6gS2z0eUr.outputs.value",
-            "type": "variable"
-        },
-        {
-            "_id": "HlrZiK1kcu9hjbWK",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "mDGhPk3WaPFgjz8T.outputs.out"
-                    ]
-                },
-                "option": {
-                    "ids": [],
-                    "value": "self:trait:genie"
+                    "value": "trigger-trove-commanding-presence-immunity"
                 },
                 "target": {
-                    "ids": []
+                    "connection": "DgiagzLCuKzszo3V:outputs:target"
                 }
             },
-            "key": "has-option",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "zqPLQqL9BKODrKWJ.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1358,
-                "y": 196.75
-            },
-            "type": "condition"
-        },
-        {
-            "_id": "zqPLQqL9BKODrKWJ",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": true,
-                        "group": "",
-                        "key": "_id",
-                        "label": "Id",
-                        "type": "text"
-                    }
-                ],
-                "outs": []
-            },
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "HlrZiK1kcu9hjbWK.outputs.true"
-                    ]
-                },
-                "input": {
-                    "ids": [
-                        "LZILnE39LWwWhZf0.outputs.output"
-                    ]
-                }
-            },
-            "key": "actor-splitter",
-            "outputs": {
-                "_id": {
-                    "ids": [
-                        "jmNAIcKaEDWPybiu.inputs.a"
-                    ]
-                },
-                "out": {
-                    "ids": [
-                        "jmNAIcKaEDWPybiu.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1588,
-                "y": 212.23000000000002
-            },
-            "type": "splitter"
-        },
-        {
-            "_id": "LZILnE39LWwWhZf0",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "zqPLQqL9BKODrKWJ.inputs.input"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1456.5,
-                "y": 328.25
-            },
-            "target": "idGibSI2owSwpkSR.outputs.this",
-            "type": "variable"
-        },
-        {
-            "_id": "jmNAIcKaEDWPybiu",
-            "inputs": {
-                "a": {
-                    "ids": [
-                        "zqPLQqL9BKODrKWJ.outputs._id"
-                    ]
-                },
-                "b": {
-                    "ids": [],
-                    "value": "Ccjg08wVRO43YlTf"
-                },
-                "in": {
-                    "ids": [
-                        "zqPLQqL9BKODrKWJ.outputs.out"
-                    ]
-                }
-            },
-            "key": "eq-text",
-            "outputs": {
+            "outs": {
                 "false": {
-                    "ids": [
-                        "mz0EScWkHwl8JLWR.inputs.in"
-                    ]
+                    "connection": "dZvPAbYWVxETMOyr:ins:in"
                 }
             },
             "position": {
-                "x": 1772,
-                "y": 211.75
+                "x": 638.1153846153845,
+                "y": 168.36153846153846
             },
-            "type": "logic"
+            "state": "slug",
+            "type": "has-item"
         },
         {
-            "_id": "mz0EScWkHwl8JLWR",
+            "id": "AeBNAiBtwoqlCLdD",
             "inputs": {
-                "duplicate": {
-                    "ids": [],
-                    "value": false
+                "name": {
+                    "value": "Effect: Commanding Presence Immunity"
                 },
-                "in": {
-                    "ids": [
-                        "jmNAIcKaEDWPybiu.outputs.false"
-                    ]
+                "origin": {
+                    "connection": "tq5mIZNglJtd59IZ:outputs:entry"
                 },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.r6jduSWCaaB3XhbK"
-                }
-            },
-            "key": "create-item",
-            "position": {
-                "x": 2004,
-                "y": 221.23000000000002
-            },
-            "type": "action"
-        },
-        {
-            "_id": "mDGhPk3WaPFgjz8T",
-            "inputs": {
-                "effect": {
-                    "ids": [
-                        "PUQQSBRDnAcDZQ2u.outputs.effect"
-                    ]
-                },
-                "identifier": {
-                    "ids": [
-                        "7y11jRK4xZAWIeva.outputs.output"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "AaAgeALG6uGyQ96l.outputs.out"
-                    ]
-                }
-            },
-            "key": "add-temporary",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "HlrZiK1kcu9hjbWK.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1137,
-                "y": 197.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "7y11jRK4xZAWIeva",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "text"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "mDGhPk3WaPFgjz8T.inputs.identifier"
-                    ]
-                }
-            },
-            "position": {
-                "x": 933.5,
-                "y": 336.25
-            },
-            "target": "U1YEi1O6gS2z0eUr.outputs.value",
-            "type": "variable"
-        },
-        {
-            "_id": "PUQQSBRDnAcDZQ2u",
-            "inputs": {
-                "duration": {
-                    "ids": [
-                        "dJV4xC5Ez8o0Li4R.outputs.duration"
-                    ]
-                },
-                "image": {
-                    "ids": [],
+                "pf2eImg": {
                     "value": "icons/creatures/magical/spirit-fire-orange.webp"
                 },
-                "label": {
-                    "ids": [],
-                    "value": "Effect: Commanding Presence Immunity"
-                }
-            },
-            "key": "effect-data",
-            "outputs": {
-                "effect": {
-                    "ids": [
-                        "mDGhPk3WaPFgjz8T.inputs.effect"
-                    ]
-                }
-            },
-            "position": {
-                "x": 905.5,
-                "y": 372.25
-            },
-            "type": "value"
-        },
-        {
-            "_id": "dJV4xC5Ez8o0Li4R",
-            "inputs": {
-                "origin": {
-                    "ids": [
-                        "nzS48DPXg5VNsFZ8.outputs.combatant"
-                    ]
+                "slug": {
+                    "value": "trigger-trove-commanding-presence-immunity"
+                },
+                "target": {
+                    "connection": "mUIKl7Ywn9SRSljt:outputs:entry"
                 },
                 "unit": {
-                    "ids": [],
                     "value": "minutes"
-                }
-            },
-            "key": "duration-unit",
-            "outputs": {
-                "duration": {
-                    "ids": [
-                        "PUQQSBRDnAcDZQ2u.inputs.duration"
-                    ]
+                },
+                "Ww1H78dxsTqR0VNQ": {
+                    "value": "{\n  \"key\": \"FlatModifier\",\n  \"value\": -4,\n  \"type\": \"circumstance\",\n  \"selector\": [\n    \"saving-throw\"\n  ],\n  \"predicate\": [\n    \"item:slug:commanding-presence\",\n    \"compendium-presence-genie:Compendium.pf2e.pathfinder-monster-core.Actor.Ccjg08wVRO43YlTf\"\n  ],\n  \"removeAfterRoll\": \"if-enabled\"\n}"
                 }
             },
             "position": {
-                "x": 648.5,
-                "y": 451.25
+                "x": 1421.1421225832992,
+                "y": 400.0213492389963
             },
-            "type": "value"
+            "type": "create-effect"
         },
         {
-            "_id": "nzS48DPXg5VNsFZ8",
-            "key": "current-combatant",
-            "outputs": {
-                "combatant": {
-                    "ids": [
-                        "dJV4xC5Ez8o0Li4R.inputs.origin"
-                    ]
+            "id": "5ZnyRrYLKCCFULBd",
+            "inputs": {
+                "item": {
+                    "connection": "dZvPAbYWVxETMOyr:outputs:item"
+                },
+                "parent": {
+                    "connection": "dZvPAbYWVxETMOyr:outputs:item"
+                },
+                "targets": {
+                    "connection": "mUIKl7Ywn9SRSljt:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "AeBNAiBtwoqlCLdD:ins:in"
                 }
             },
             "position": {
-                "x": 464.5,
-                "y": 451.25
+                "x": 1188.493521184698,
+                "y": 314.9709995886467
             },
-            "type": "value"
+            "type": "send-chat"
         },
         {
-            "_id": "f15YxXmtdbOp7mzY",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
+            "id": "dZvPAbYWVxETMOyr",
+            "inputs": {
+                "slug": {
+                    "value": "commanding-presence"
+                },
+                "target": {
+                    "connection": "DgiagzLCuKzszo3V:outputs:source"
+                }
             },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "AaAgeALG6uGyQ96l.inputs.PAWVQq94ohe1Jwsj"
-                    ]
+            "outs": {
+                "true": {
+                    "connection": "5ZnyRrYLKCCFULBd:ins:in"
                 }
             },
             "position": {
-                "x": 748.5,
-                "y": 359.25
+                "x": 907.0162484574248,
+                "y": 261.28009049773755
             },
-            "target": "idGibSI2owSwpkSR.outputs.source",
-            "type": "variable"
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "mUIKl7Ywn9SRSljt",
+            "inputs": {
+                "entry": {
+                    "connection": "DgiagzLCuKzszo3V:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1225.9340806252578,
+                "y": 515.1755450431925
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "tq5mIZNglJtd59IZ",
+            "inputs": {
+                "entry": {
+                    "connection": "DgiagzLCuKzszo3V:outputs:source"
+                }
+            },
+            "position": {
+                "x": 1242.1840806252578,
+                "y": 566.4255450431926
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "TRCeqjyXhKfCpmnM",
+            "outs": {
+                "out": {
+                    "connection": "U8Jsh6pSJykcvuFN:ins:in"
+                }
+            },
+            "position": {
+                "x": 318.43408062525714,
+                "y": -134.5744549568081
+            },
+            "type": "check-roll-event"
+        },
+        {
+            "id": "U8Jsh6pSJykcvuFN",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:commanding-presence"
+                },
+                "list": {
+                    "connection": "TRCeqjyXhKfCpmnM:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "nbM2awZb49XFDENY:ins:in"
+                }
+            },
+            "position": {
+                "x": 577.4340806252573,
+                "y": -96.32445495680801
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "nbM2awZb49XFDENY",
+            "inputs": {
+                "input": {
+                    "connection": "yJI77WrkWGqvNLgf:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "EzSHpwErgvSROKki:ins:in"
+                },
+                "failure": {
+                    "connection": "ob5qSNAQOsNphvtA:ins:in"
+                }
+            },
+            "position": {
+                "x": 838.6071575483344,
+                "y": -116.07445495680798
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "yJI77WrkWGqvNLgf",
+            "inputs": {
+                "entry": {
+                    "connection": "TRCeqjyXhKfCpmnM:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 669.6840806252576,
+                "y": 41.42554504319207
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ob5qSNAQOsNphvtA",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "W80Ro0AzOPTJ8pc8:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1281.107157548335,
+                "y": -2.07445495680804
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "W80Ro0AzOPTJ8pc8",
+            "inputs": {
+                "entry": {
+                    "connection": "TRCeqjyXhKfCpmnM:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1159.6840806252578,
+                "y": -28.574454956808097
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "EzSHpwErgvSROKki",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "W80Ro0AzOPTJ8pc8:outputs:entry"
+                },
+                "value": {
+                    "value": 2
+                }
+            },
+            "position": {
+                "x": 1281.1071575483347,
+                "y": -184.57445495680832
+            },
+            "type": "increase-condition"
         }
     ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
     "variables": {
-        "U1YEi1O6gS2z0eUr.outputs.value": {
-            "global": false,
-            "label": "Commanding Presence",
-            "locked": false,
-            "type": "text"
+        "DgiagzLCuKzszo3V:outputs:source": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        },
+        "DgiagzLCuKzszo3V:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        },
+        "TRCeqjyXhKfCpmnM:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "TRCeqjyXhKfCpmnM:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
         }
     }
 }

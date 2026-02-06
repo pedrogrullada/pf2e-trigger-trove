@@ -1,534 +1,244 @@
 {
-    "_id": "YtI2kWy3gDScuvcs",
-    "description": "@Localize[TRIGGERTROVE.Vitalizing.Trigger.AttackRolled.Description]",
     "folder": "Equipment",
-    "name": "Vitalizing (Attack Rolled)",
+    "id": "QQD7bYI6E4fpWNSf",
+    "name": "Vitalizing",
     "nodes": [
         {
-            "_id": "gCbzo4CM5xqpVTLA",
-            "key": "attack-roll",
-            "outputs": {
+            "id": "lQ3KnJYWEa4cHbTS",
+            "outs": {
                 "out": {
-                    "ids": [
-                        "0L09ei7s6uc464pX.inputs.in"
-                    ]
-                },
-                "outcome": {
-                    "ids": [
-                        "0L09ei7s6uc464pX.inputs.a"
-                    ]
+                    "connection": "1QZuEFZwAVD8KXE2:ins:in"
                 }
             },
             "position": {
-                "x": 350,
-                "y": 200
+                "x": 277,
+                "y": 303
             },
-            "type": "event"
+            "type": "attack-roll-event"
         },
         {
-            "_id": "0L09ei7s6uc464pX",
+            "id": "1QZuEFZwAVD8KXE2",
             "inputs": {
                 "a": {
-                    "ids": [
-                        "gCbzo4CM5xqpVTLA.outputs.outcome"
-                    ]
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:outcome"
                 },
                 "b": {
-                    "ids": [
-                        "G8kk0rtOHzIYhjI5.outputs.value"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "gCbzo4CM5xqpVTLA.outputs.out"
-                    ]
-                }
-            },
-            "key": "gte-number",
-            "outputs": {
-                "true": {
-                    "ids": [
-                        "Vk21lyKSS9f4h60Y.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 551.5,
-                "y": 216.75
-            },
-            "type": "logic"
-        },
-        {
-            "_id": "G8kk0rtOHzIYhjI5",
-            "inputs": {
-                "input": {
                     "value": "criticalSuccess"
                 }
             },
-            "key": "success-value",
-            "outputs": {
-                "value": {
-                    "ids": [
-                        "0L09ei7s6uc464pX.inputs.b"
-                    ]
-                }
-            },
-            "position": {
-                "x": 352.5,
-                "y": 441.25
-            },
-            "type": "value"
-        },
-        {
-            "_id": "GoYYtZEbxSYZiHaJ",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "list"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "Vk21lyKSS9f4h60Y.inputs.list",
-                        "h8adyNj6drQWlxSq.inputs.list"
-                    ]
-                }
-            },
-            "position": {
-                "x": 604.5,
-                "y": 335.25
-            },
-            "target": "gCbzo4CM5xqpVTLA.outputs.options",
-            "type": "variable"
-        },
-        {
-            "_id": "Cab10MiisNkxAODF",
-            "inputs": {
-                "condition": {
-                    "value": "enfeebled"
-                },
-                "effect": {
-                    "ids": [
-                        "kzDxZwFYc4qlDfVR.outputs.effect"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "Vk21lyKSS9f4h60Y.outputs.true"
-                    ]
-                },
-                "target": {
-                    "ids": [
-                        "yCqGoAXuzK38u9gF.outputs.output"
-                    ]
-                }
-            },
-            "key": "add-condition",
-            "position": {
-                "x": 1143,
-                "y": 58.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "kzDxZwFYc4qlDfVR",
-            "inputs": {
-                "duration": {
-                    "ids": [
-                        "vAfslPUae8CXz4Gv.outputs.duration"
-                    ]
-                },
-                "image": {
-                    "value": "icons/skills/melee/strike-sword-dagger-runes-yellow.webp"
-                },
-                "label": {
-                    "value": "Effect: Enfeebled from Vitalizing"
-                }
-            },
-            "key": "effect-data",
-            "outputs": {
-                "effect": {
-                    "ids": [
-                        "Cab10MiisNkxAODF.inputs.effect"
-                    ]
-                }
-            },
-            "position": {
-                "x": 750.5,
-                "y": 55.25
-            },
-            "type": "value"
-        },
-        {
-            "_id": "vAfslPUae8CXz4Gv",
-            "inputs": {
-                "expiry": {
-                    "value": "turn-end"
-                },
-                "origin": {
-                    "ids": [
-                        "HTbN1dFcfcJeUVvj.outputs.output"
-                    ]
-                }
-            },
-            "key": "duration-unit",
-            "outputs": {
-                "duration": {
-                    "ids": [
-                        "kzDxZwFYc4qlDfVR.inputs.duration"
-                    ]
-                }
-            },
-            "position": {
-                "x": 493.5,
-                "y": 51.25
-            },
-            "type": "value"
-        },
-        {
-            "_id": "HTbN1dFcfcJeUVvj",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "vAfslPUae8CXz4Gv.inputs.origin"
-                    ]
-                }
-            },
-            "position": {
-                "x": 344.5,
-                "y": 78.25
-            },
-            "target": "gCbzo4CM5xqpVTLA.outputs.this",
-            "type": "variable"
-        },
-        {
-            "_id": "XYipyyAdTZtna9ri",
-            "inputs": {
-                "condition": {
-                    "value": "enfeebled"
-                },
-                "in": {
-                    "ids": [
-                        "h8adyNj6drQWlxSq.outputs.true"
-                    ]
-                },
-                "target": {
-                    "ids": [
-                        "bRT4fXgZAXMtWeHR.outputs.output"
-                    ]
-                }
-            },
-            "key": "has-condition",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "m8FG3BpPvh5WlH3h.inputs.in"
-                    ]
-                },
+            "outs": {
                 "true": {
-                    "ids": [
-                        "oMFCs1YgSWuy9jlR.inputs.in"
-                    ]
+                    "connection": "upl6gKuDyYUcnb0l:ins:in"
                 }
             },
             "position": {
-                "x": 1242,
-                "y": 265.75
+                "x": 503,
+                "y": 351.25
             },
-            "type": "condition"
+            "type": "compare-outcomes"
         },
         {
-            "_id": "m8FG3BpPvh5WlH3h",
+            "id": "upl6gKuDyYUcnb0l",
             "inputs": {
-                "condition": {
-                    "value": "enfeebled"
-                },
-                "in": {
-                    "ids": [
-                        "XYipyyAdTZtna9ri.outputs.false"
-                    ]
-                },
-                "target": {
-                    "ids": [
-                        "Qs4zQhRLPUjHgdGz.outputs.output"
-                    ]
-                }
-            },
-            "key": "add-condition",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "oMFCs1YgSWuy9jlR.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1485,
-                "y": 339.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "oMFCs1YgSWuy9jlR",
-            "inputs": {
-                "condition": {
-                    "value": "stupefied"
-                },
-                "in": {
-                    "ids": [
-                        "XYipyyAdTZtna9ri.outputs.true",
-                        "m8FG3BpPvh5WlH3h.outputs.out"
-                    ]
-                },
-                "target": {
-                    "ids": [
-                        "13Xw2qI3QAIvWdnc.outputs.output"
-                    ]
-                }
-            },
-            "key": "has-condition",
-            "outputs": {
-                "false": {
-                    "ids": [
-                        "KzCw6GHpuSG2FteU.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1710,
-                "y": 265.75
-            },
-            "type": "condition"
-        },
-        {
-            "_id": "KzCw6GHpuSG2FteU",
-            "inputs": {
-                "condition": {
-                    "ids": [],
-                    "value": "stupefied"
-                },
-                "in": {
-                    "ids": [
-                        "oMFCs1YgSWuy9jlR.outputs.false"
-                    ]
-                },
-                "target": {
-                    "ids": [
-                        "13Xw2qI3QAIvWdnc.outputs.output"
-                    ]
-                }
-            },
-            "key": "add-condition",
-            "position": {
-                "x": 1944,
-                "y": 292.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "Vk21lyKSS9f4h60Y",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "0L09ei7s6uc464pX.outputs.true"
-                    ]
-                },
-                "list": {
-                    "ids": [
-                        "GoYYtZEbxSYZiHaJ.outputs.output"
-                    ]
+                "options": {
+                    "connection": "dbcETUobr3Rb0655:outputs:entry"
                 },
                 "predicate": {
                     "value": "[\n  \"item:rune:property:disrupting\",\n  \"target:mode:undead\"\n]"
                 }
             },
-            "key": "match-predicate",
-            "outputs": {
+            "outs": {
                 "false": {
-                    "ids": [
-                        "h8adyNj6drQWlxSq.inputs.in"
-                    ]
+                    "connection": "r8J9yJccX49oNpGq:ins:in"
                 },
                 "true": {
-                    "ids": [
-                        "Cab10MiisNkxAODF.inputs.in"
-                    ]
+                    "connection": "Hm9g2QSXvbsyNEFk:ins:in"
                 }
             },
             "position": {
-                "x": 740.5,
-                "y": 200.25
+                "x": 800.9230769230769,
+                "y": 379.5
             },
-            "type": "condition"
+            "type": "match-predicate"
         },
         {
-            "_id": "h8adyNj6drQWlxSq",
+            "id": "dbcETUobr3Rb0655",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "Vk21lyKSS9f4h60Y.outputs.false"
-                    ]
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:options"
+                }
+            },
+            "position": {
+                "x": 646,
+                "y": 497.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Hm9g2QSXvbsyNEFk",
+            "inputs": {
+                "condition": {
+                    "value": "enfeebled"
                 },
-                "list": {
-                    "ids": [
-                        "GoYYtZEbxSYZiHaJ.outputs.output"
-                    ]
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "img": {
+                    "value": "systems/pf2e/icons/equipment/runes/weapon-property-runes/weapon-property-runes.webp"
+                },
+                "name": {
+                    "value": "Effect: Vitalizing"
+                },
+                "origin": {
+                    "connection": "SZBCi5sPWhqt5wI1:outputs:entry"
+                },
+                "target": {
+                    "connection": "j80a4CmlMRARIoWP:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1232,
+                "y": -84
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "SZBCi5sPWhqt5wI1",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1115.3333333333333,
+                "y": 235.3055555555555
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "j80a4CmlMRARIoWP",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1119,
+                "y": 26.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "r8J9yJccX49oNpGq",
+            "inputs": {
+                "options": {
+                    "connection": "dbcETUobr3Rb0655:outputs:entry"
                 },
                 "predicate": {
                     "value": "[\n  \"item:rune:property:greater-disrupting\",\n  \"target:mode:undead\"\n]"
                 }
             },
-            "key": "match-predicate",
-            "outputs": {
+            "outs": {
                 "true": {
-                    "ids": [
-                        "XYipyyAdTZtna9ri.inputs.in"
-                    ]
+                    "connection": "SugiVmsINvVLgtEP:ins:in"
                 }
             },
             "position": {
-                "x": 995.5,
-                "y": 266.25
+                "x": 1036.423076923077,
+                "y": 445.75
             },
-            "type": "condition"
+            "type": "match-predicate"
         },
         {
-            "_id": "bRT4fXgZAXMtWeHR",
             "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
+                "inputs": {
+                    "1WpMR24pFes5BVhf": {
+                        "id": "1WpMR24pFes5BVhf",
+                        "label": "Enfeebled",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "ddeRQRhFrj1R5HTs": {
+                        "id": "ddeRQRhFrj1R5HTs",
+                        "label": "Stupefied",
+                        "slug": "rule",
+                        "type": "text"
                     }
-                ],
-                "outs": []
+                }
             },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "XYipyyAdTZtna9ri.inputs.target"
-                    ]
+            "id": "SugiVmsINvVLgtEP",
+            "inputs": {
+                "1WpMR24pFes5BVhf": {
+                    "value": "{\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7\",\n  \"key\": \"GrantItem\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "ddeRQRhFrj1R5HTs": {
+                    "value": "{\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg\",\n  \"key\": \"GrantItem\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "img": {
+                    "value": "systems/pf2e/icons/equipment/runes/weapon-property-runes/weapon-property-runes.webp"
+                },
+                "name": {
+                    "value": "Effect: Greater Vitalizing"
+                },
+                "origin": {
+                    "connection": "2ekFZMkRFEuh1Sn0:outputs:entry"
+                },
+                "target": {
+                    "connection": "L4LhLv4BesjLmBGZ:outputs:entry"
                 }
             },
             "position": {
-                "x": 1096.5,
-                "y": 401.25
+                "x": 1269.5897435897436,
+                "y": 430.73333333333323
             },
-            "target": "gCbzo4CM5xqpVTLA.outputs.other",
-            "type": "variable"
+            "type": "create-effect"
         },
         {
-            "_id": "Qs4zQhRLPUjHgdGz",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "m8FG3BpPvh5WlH3h.inputs.target"
-                    ]
+            "id": "2ekFZMkRFEuh1Sn0",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:origin"
                 }
             },
             "position": {
-                "x": 1338.5,
-                "y": 489.25
+                "x": 1145.1111111111109,
+                "y": 613.9722222222221
             },
-            "target": "gCbzo4CM5xqpVTLA.outputs.other",
-            "type": "variable"
+            "type": "__variable_getter__"
         },
         {
-            "_id": "13Xw2qI3QAIvWdnc",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "KzCw6GHpuSG2FteU.inputs.target",
-                        "oMFCs1YgSWuy9jlR.inputs.target"
-                    ]
+            "id": "L4LhLv4BesjLmBGZ",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:target"
                 }
             },
             "position": {
-                "x": 1717.5,
-                "y": 438.25
+                "x": 1145.1111111111109,
+                "y": 567.3055555555555
             },
-            "target": "gCbzo4CM5xqpVTLA.outputs.other",
-            "type": "variable"
-        },
-        {
-            "_id": "yCqGoAXuzK38u9gF",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "Cab10MiisNkxAODF.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 999.5,
-                "y": 227.25
-            },
-            "target": "gCbzo4CM5xqpVTLA.outputs.other",
-            "type": "variable"
+            "type": "__variable_getter__"
         }
-    ]
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "lQ3KnJYWEa4cHbTS:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "lQ3KnJYWEa4cHbTS:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "lQ3KnJYWEa4cHbTS:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
 }

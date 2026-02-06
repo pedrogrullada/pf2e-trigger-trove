@@ -1,342 +1,315 @@
 {
-    "_id": "DwC7O1VgVDsTxugS",
-    "description": "<p>@Localize[TRIGGERTROVE.Gibbering.Trigger.TurnStarted.Description]</p><p>@Localize[TRIGGERTROVE.AuxiliarySubtriggers.SendAbilityToChat.Addendum]</p>",
     "folder": "Monster Abilities",
-    "name": "Gibbering (Turn Started)",
+    "id": "oKqj0KcFXQMoYCGH",
+    "name": "Gibbering",
     "nodes": [
         {
-            "_id": "YRESqNtDAMZVeH1L",
-            "key": "turn-start",
-            "outputs": {
+            "id": "SROeXfVlc1um29tB",
+            "outs": {
                 "out": {
-                    "ids": [
-                        "SdMeUnH2ZD43FwU9.inputs.in"
-                    ]
+                    "connection": "s1Not0rp94mjFKo6:ins:in"
                 }
             },
             "position": {
-                "x": 350,
-                "y": 200
+                "x": 406,
+                "y": 375
             },
-            "type": "event"
+            "type": "turn-start-event"
         },
         {
-            "_id": "SdMeUnH2ZD43FwU9",
+            "id": "s1Not0rp94mjFKo6",
             "inputs": {
-                "in": {
-                    "ids": [
-                        "YRESqNtDAMZVeH1L.outputs.out"
-                    ]
-                },
                 "slug": {
-                    "ids": [
-                        "F88Wv1bKQAcuyPi1.outputs.value"
-                    ]
-                },
-                "targets": {
-                    "ids": [],
-                    "value": "all"
-                }
-            },
-            "key": "inside-aura",
-            "outputs": {
-                "source": {
-                    "ids": []
-                },
-                "true": {
-                    "ids": [
-                        "ulZERH0BXhc9J1ck.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 537,
-                "y": 192.23000000000002
-            },
-            "type": "condition"
-        },
-        {
-            "_id": "Nccg7C7GtUf4cxmE",
-            "inputs": {
-                "HhJmeS0b8RW20qN7": {
-                    "ids": [
-                        "9ZwMvw5NhzPO2O6e.outputs.output"
-                    ]
-                },
-                "in": {
-                    "ids": [
-                        "7JyKbPOpwY5sUOZ8.outputs.out"
-                    ]
-                },
-                "PAWVQq94ohe1Jwsj": {
-                    "ids": [
-                        "rs7Cse3fl8OOf0Pu.outputs.output"
-                    ]
-                }
-            },
-            "key": "subtrigger-node",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "JMMR3jw4YOrANxjm.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1332,
-                "y": 222.23000000000002
-            },
-            "target": "KbmYmEm4rMEedc9N",
-            "type": "subtrigger"
-        },
-        {
-            "_id": "F88Wv1bKQAcuyPi1",
-            "inputs": {
-                "input": {
-                    "ids": [],
-                    "value": "gibbering"
-                }
-            },
-            "key": "text-value",
-            "outputs": {
-                "value": {
-                    "ids": [
-                        "SdMeUnH2ZD43FwU9.inputs.slug"
-                    ]
-                }
-            },
-            "position": {
-                "x": 320.5,
-                "y": 322.25
-            },
-            "type": "value"
-        },
-        {
-            "_id": "9ZwMvw5NhzPO2O6e",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "text"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "Nccg7C7GtUf4cxmE.inputs.HhJmeS0b8RW20qN7"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1256.5,
-                "y": 424.25
-            },
-            "target": "F88Wv1bKQAcuyPi1.outputs.value",
-            "type": "variable"
-        },
-        {
-            "_id": "rs7Cse3fl8OOf0Pu",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "Nccg7C7GtUf4cxmE.inputs.PAWVQq94ohe1Jwsj"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1199.5,
-                "y": 384.25
-            },
-            "target": "SdMeUnH2ZD43FwU9.outputs.source",
-            "type": "variable"
-        },
-        {
-            "_id": "7JyKbPOpwY5sUOZ8",
-            "inputs": {
-                "duplicate": {
-                    "ids": [],
-                    "value": false
-                },
-                "in": {
-                    "ids": [
-                        "ulZERH0BXhc9J1ck.outputs.false"
-                    ]
+                    "value": "trigger-trove-gibbering-immunity"
                 },
                 "target": {
-                    "ids": [
-                        "CNON9UFm7TdvYIex.outputs.output"
-                    ]
-                },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.jdEV7JRBLzh3jZd7"
+                    "connection": "SROeXfVlc1um29tB:outputs:combatant"
                 }
             },
-            "key": "create-item",
-            "outputs": {
-                "out": {
-                    "ids": [
-                        "Nccg7C7GtUf4cxmE.inputs.in"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1074,
-                "y": 219.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "JMMR3jw4YOrANxjm",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "Nccg7C7GtUf4cxmE.outputs.out"
-                    ]
-                },
-                "item": {
-                    "ids": [
-                        "kWIVsNGZemx4wu0E.outputs.output"
-                    ]
-                }
-            },
-            "key": "delete-item",
-            "outputs": {
-                "out": {
-                    "ids": []
-                }
-            },
-            "position": {
-                "x": 1587,
-                "y": 222.75
-            },
-            "type": "action"
-        },
-        {
-            "_id": "kWIVsNGZemx4wu0E",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "item"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "JMMR3jw4YOrANxjm.inputs.item"
-                    ]
-                }
-            },
-            "position": {
-                "x": 1459.5,
-                "y": 365.25
-            },
-            "target": "7JyKbPOpwY5sUOZ8.outputs.item",
-            "type": "variable"
-        },
-        {
-            "_id": "CNON9UFm7TdvYIex",
-            "custom": {
-                "inputs": [],
-                "outputs": [
-                    {
-                        "custom": false,
-                        "group": "",
-                        "key": "output",
-                        "type": "target"
-                    }
-                ],
-                "outs": []
-            },
-            "key": "variable-getter",
-            "outputs": {
-                "output": {
-                    "ids": [
-                        "7JyKbPOpwY5sUOZ8.inputs.target"
-                    ]
-                }
-            },
-            "position": {
-                "x": 925.5,
-                "y": 367.25
-            },
-            "target": "SdMeUnH2ZD43FwU9.outputs.source",
-            "type": "variable"
-        },
-        {
-            "_id": "ulZERH0BXhc9J1ck",
-            "inputs": {
-                "in": {
-                    "ids": [
-                        "SdMeUnH2ZD43FwU9.outputs.true"
-                    ]
-                },
-                "uuid": {
-                    "ids": [],
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.lab3fNjYMH2OdJuX"
-                }
-            },
-            "key": "has-item",
-            "outputs": {
+            "outs": {
                 "false": {
-                    "ids": [
-                        "7JyKbPOpwY5sUOZ8.inputs.in"
-                    ]
-                },
-                "true": {
-                    "ids": []
+                    "connection": "EBZj31fSFR0bNEYc:ins:in"
                 }
             },
             "position": {
-                "x": 819.5,
-                "y": 193.25
+                "x": 628.5,
+                "y": 382
             },
-            "type": "condition"
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "EBZj31fSFR0bNEYc",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "gibbering"
+                },
+                "target": {
+                    "connection": "Opr1EMWgt5k8WSlD:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "uL9O4bkQ5Miu9p7D:ins:in"
+                }
+            },
+            "position": {
+                "x": 888.6515151515149,
+                "y": 466.5151515151514
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "uL9O4bkQ5Miu9p7D",
+            "inputs": {
+                "slug": {
+                    "value": "gibbering"
+                },
+                "target": {
+                    "connection": "EBZj31fSFR0bNEYc:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Xr4e58jUSHXCZlzS:ins:in"
+                }
+            },
+            "position": {
+                "x": 1213.25,
+                "y": 519.8863636363637
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "Xr4e58jUSHXCZlzS",
+            "inputs": {
+                "item": {
+                    "connection": "uL9O4bkQ5Miu9p7D:outputs:item"
+                },
+                "parent": {
+                    "connection": "uL9O4bkQ5Miu9p7D:outputs:item"
+                },
+                "targets": {
+                    "connection": "jtnhwmHbaYxT1HSz:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1501.6136363636365,
+                "y": 588.3045454545456
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "jtnhwmHbaYxT1HSz",
+            "inputs": {
+                "entry": {
+                    "connection": "SROeXfVlc1um29tB:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1348.8888888888891,
+                "y": 767.1111111111111
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "5eDdCLvZc8Ua9QEh",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "w4JZ2g5XKNRQRbdp:ins:in"
+                }
+            },
+            "position": {
+                "x": 413.55555555555554,
+                "y": 50.97222222222223
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "w4JZ2g5XKNRQRbdp",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:gibbering"
+                },
+                "list": {
+                    "connection": "5eDdCLvZc8Ua9QEh:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "hDxKSNp9p5tk1oKM:ins:in"
+                }
+            },
+            "position": {
+                "x": 656.4444444444445,
+                "y": 105.88888888888891
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "hDxKSNp9p5tk1oKM",
+            "inputs": {
+                "input": {
+                    "connection": "yhSSdCpEY2Ww6Rkb:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "1Aqasfdgjycj2xfz:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "FbNk5H4bvd4gNUMK:ins:in"
+                },
+                "failure": {
+                    "connection": "1Aqasfdgjycj2xfz:ins:in"
+                },
+                "success": {
+                    "connection": "FbNk5H4bvd4gNUMK:ins:in"
+                }
+            },
+            "position": {
+                "x": 936.9230769230768,
+                "y": 72.58333333333343
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "yhSSdCpEY2Ww6Rkb",
+            "inputs": {
+                "entry": {
+                    "connection": "5eDdCLvZc8Ua9QEh:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 763.7777777777777,
+                "y": 242.49999999999997
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "FbNk5H4bvd4gNUMK",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Gibbering Immunity"
+                },
+                "origin": {
+                    "connection": "mGt8uZSNOjiLFyMK:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/creatures/eyes/slime-single-red.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-gibbering-immunity"
+                },
+                "target": {
+                    "connection": "mGt8uZSNOjiLFyMK:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 1500.8119658119654,
+                "y": 200.26111111111106
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "mGt8uZSNOjiLFyMK",
+            "inputs": {
+                "entry": {
+                    "connection": "5eDdCLvZc8Ua9QEh:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1350.361111111111,
+                "y": 381.77777777777794
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Opr1EMWgt5k8WSlD",
+            "inputs": {
+                "entry": {
+                    "connection": "SROeXfVlc1um29tB:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 747.944444444444,
+                "y": 581.0277777777777
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "1Aqasfdgjycj2xfz",
+            "inputs": {
+                "condition": {
+                    "value": "confused"
+                },
+                "name": {
+                    "value": "Effect: Gibbering"
+                },
+                "origin": {
+                    "connection": "HaPmIUtBwcAWw51J:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/creatures/eyes/slime-single-red.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-gibbering"
+                },
+                "target": {
+                    "connection": "HaPmIUtBwcAWw51J:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1306.923076923077,
+                "y": -275.6
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "HaPmIUtBwcAWw51J",
+            "inputs": {
+                "entry": {
+                    "connection": "5eDdCLvZc8Ua9QEh:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1079,
+                "y": -89.25
+            },
+            "type": "__variable_getter__"
         }
     ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
     "variables": {
-        "7JyKbPOpwY5sUOZ8.outputs.item": {
-            "global": false,
-            "label": "Addendum",
-            "locked": false,
-            "type": "item"
+        "5eDdCLvZc8Ua9QEh:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
         },
-        "F88Wv1bKQAcuyPi1.outputs.value": {
-            "global": false,
-            "label": "Gibbering",
-            "locked": false,
-            "type": "text"
+        "5eDdCLvZc8Ua9QEh:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
         },
-        "SdMeUnH2ZD43FwU9.outputs.source": {
-            "global": false,
-            "label": "Aura Source",
-            "locked": false,
+        "SROeXfVlc1um29tB:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
             "type": "target"
         }
     }

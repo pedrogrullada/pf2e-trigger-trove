@@ -19,7 +19,7 @@ function getAllJsonFiles(dir) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       files.push(...getAllJsonFiles(fullPath));
-    } else if (entry.isFile() && entry.name.endsWith(".json")) {
+    } else if (entry.isFile() && entry.name.endsWith(".json") && entry.name !== "pf2e-trigger-trove.json") {
       files.push(fullPath);
     }
   }
@@ -34,10 +34,7 @@ function getAllJsonFiles(dir) {
  * @returns {Object} Combined triggers object with {items: [], triggers: []}
  */
 function combineTriggers(triggersDir = "./triggers", outputFile = null) {
-  const combined = {
-    items: [],
-    triggers: [],
-  };
+  const combined = [];
 
   const jsonFiles = getAllJsonFiles(triggersDir);
   console.log(`Found ${jsonFiles.length} JSON files`);
@@ -47,14 +44,9 @@ function combineTriggers(triggersDir = "./triggers", outputFile = null) {
       const content = fs.readFileSync(file, "utf8");
       const data = JSON.parse(content);
 
-      // If the file is an array, add each element
-      if (Array.isArray(data)) {
-        combined.triggers.push(...data);
-        console.log(`Added ${data.length} triggers from array in ${file}`);
-      }
       // If the file itself is a trigger object (has _id, nodes, etc.)
-      else if (data._id && data.nodes) {
-        combined.triggers.push(data);
+      if (data.id && data.nodes) {
+        combined.push(data);
         console.log(`Added trigger from ${file}`);
       }
     } catch (error) {
@@ -62,7 +54,7 @@ function combineTriggers(triggersDir = "./triggers", outputFile = null) {
     }
   }
 
-  console.log(`\nCombined ${combined.triggers.length} triggers total`);
+  console.log(`\nCombined ${combined.length} triggers total`);
 
   if (outputFile) {
     const outputDir = path.dirname(outputFile);

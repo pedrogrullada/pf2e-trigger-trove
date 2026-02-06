@@ -1,0 +1,144 @@
+{
+    "folder": "Feats & Features",
+    "id": "VeDZ22ydyZTzRIq4",
+    "name": "Rejuvenating Touch",
+    "nodes": [
+        {
+            "id": "N5g5uDKj2CcxpnMQ",
+            "inputs": {
+                "for": {
+                    "value": "heal"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "vMKklBuGl7wEW7lP:ins:in"
+                }
+            },
+            "position": {
+                "x": 369,
+                "y": 287
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "vMKklBuGl7wEW7lP",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.xZrTjUub7V09sXZF"
+                },
+                "target": {
+                    "connection": "N5g5uDKj2CcxpnMQ:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "2QxdX89QKms9tThH:ins:in"
+                }
+            },
+            "position": {
+                "x": 635.9230769230769,
+                "y": 237.39999999999998
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "2QxdX89QKms9tThH",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:lay-on-hands"
+                },
+                "list": {
+                    "connection": "N5g5uDKj2CcxpnMQ:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "WHJtZQbxKLuanHMA:ins:in"
+                }
+            },
+            "position": {
+                "x": 926,
+                "y": 319.25
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "WHJtZQbxKLuanHMA",
+            "inputs": {
+                "a": {
+                    "connection": "N5g5uDKj2CcxpnMQ:outputs:origin"
+                },
+                "b": {
+                    "connection": "N5g5uDKj2CcxpnMQ:outputs:target"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "8N5GWu614SxFmTm0:ins:in"
+                }
+            },
+            "position": {
+                "x": 1138.923076923077,
+                "y": 434.5
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "8N5GWu614SxFmTm0",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.0jKdU1YdER9dLBdx"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "yH6QEBLlc27pGjIx:ins:in"
+                },
+                "true": {
+                    "connection": "OkkNqTPr43pGmw2S:ins:in"
+                }
+            },
+            "position": {
+                "x": 1380.923076923077,
+                "y": 396.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "OkkNqTPr43pGmw2S",
+            "inputs": {
+                "item": {
+                    "connection": "8N5GWu614SxFmTm0:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "yH6QEBLlc27pGjIx:ins:in"
+                }
+            },
+            "position": {
+                "x": 1673.923076923077,
+                "y": 362.5
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "yH6QEBLlc27pGjIx",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.0jKdU1YdER9dLBdx"
+                }
+            },
+            "position": {
+                "x": 1919.923076923077,
+                "y": 472.4
+            },
+            "type": "create-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ]
+}
