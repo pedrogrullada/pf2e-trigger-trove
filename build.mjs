@@ -44,7 +44,7 @@ const files = [
   "README.md",
   "LICENSE",
   "CHANGELOG.md",
-  "register.mjs"
+  "scripts/register.mjs"
 ];
 for (const file of files) {
   await fs.cp(file, path.resolve(outDir, file), { recursive: true });
