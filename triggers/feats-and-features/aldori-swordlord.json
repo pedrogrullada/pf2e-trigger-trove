@@ -1,0 +1,186 @@
+{
+    "folder": "Feats & Features",
+    "id": "k84ZX1XYsmDnIhkg",
+    "name": "Aldori Swordlord",
+    "nodes": [
+        {
+            "id": "RIw6ala9EjAeJZgF",
+            "outs": {
+                "out": {
+                    "connection": "dBlFjkTEEKP1Wxmj:ins:in"
+                }
+            },
+            "position": {
+                "x": 600,
+                "y": 181
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "dBlFjkTEEKP1Wxmj",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.BEgz2GnG2MKmmaZX"
+                },
+                "target": {
+                    "connection": "RIw6ala9EjAeJZgF:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "53Ha5R5mBMHmg1Ac:ins:in"
+                }
+            },
+            "position": {
+                "x": 807.4524886877824,
+                "y": 180.98823529411754
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "53Ha5R5mBMHmg1Ac",
+            "inputs": {
+                "entry": {
+                    "value": "item:base:aldori-dueling-sword"
+                },
+                "list": {
+                    "connection": "RIw6ala9EjAeJZgF:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "D1quPFVGuDPE8843:ins:in"
+                }
+            },
+            "position": {
+                "x": 1078.0952380952376,
+                "y": 261.0007002801121
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "D1quPFVGuDPE8843",
+            "inputs": {
+                "input": {
+                    "connection": "oVyBP6eK3vpJB58b:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalSuccess": {
+                    "connection": "LOMjQxNcmTqw9N02:ins:in"
+                },
+                "success": {
+                    "connection": "5sGaT46DYIsiED3U:ins:in"
+                }
+            },
+            "position": {
+                "x": 1313.923076923077,
+                "y": 309.29831932773124
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "oVyBP6eK3vpJB58b",
+            "inputs": {
+                "entry": {
+                    "connection": "RIw6ala9EjAeJZgF:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 1163.5714285714287,
+                "y": 416.9768907563026
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "HSNIFYfxwMEq1Get": {
+                        "id": "HSNIFYfxwMEq1Get",
+                        "label": "Text",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "5sGaT46DYIsiED3U",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "HSNIFYfxwMEq1Get": {
+                    "value": "flag:tempHP:1"
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.eJyyBqrXLOE4R9JI"
+                },
+                "target": {
+                    "connection": "VYxqguHVs3ysxi65:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1672.0183150183145,
+                "y": 201.8332399626517
+            },
+            "type": "create-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "eADwnFxHtbgpH5Z1": {
+                        "id": "eADwnFxHtbgpH5Z1",
+                        "label": "Text",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "LOMjQxNcmTqw9N02",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "eADwnFxHtbgpH5Z1": {
+                    "value": "flag:tempHP:0"
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.eJyyBqrXLOE4R9JI"
+                },
+                "target": {
+                    "connection": "VYxqguHVs3ysxi65:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1668.8437118437116,
+                "y": 527.5475256769374
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "VYxqguHVs3ysxi65",
+            "inputs": {
+                "entry": {
+                    "connection": "RIw6ala9EjAeJZgF:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1412.6190476190473,
+                "y": 485.15149393090576
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "variables": {
+        "RIw6ala9EjAeJZgF:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "RIw6ala9EjAeJZgF:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        }
+    }
+}

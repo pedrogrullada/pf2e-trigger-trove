@@ -1,0 +1,503 @@
+{
+    "folder": "Spells",
+    "id": "vEdXfL6ElgNUo85I",
+    "name": "Shields of the Spirit",
+    "nodes": [
+        {
+            "id": "7yKftUXeWkE9Qpyp",
+            "outs": {
+                "out": {
+                    "connection": "KUl8OkthKAy6E5GW:ins:in"
+                }
+            },
+            "position": {
+                "x": 385.5,
+                "y": 377.5
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "KUl8OkthKAy6E5GW",
+            "inputs": {
+                "affects": {
+                    "value": "allies"
+                },
+                "slug": {
+                    "value": "champions-aura"
+                },
+                "target": {
+                    "connection": "7yKftUXeWkE9Qpyp:outputs:target"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "cKj5Pla8kyO1DAK5:ins:in"
+                },
+                "true": {
+                    "connection": "tOTjYzUS0YSmzUdi:ins:in"
+                }
+            },
+            "position": {
+                "x": 660.3571428571435,
+                "y": 280.5071428571428
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "tOTjYzUS0YSmzUdi",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spell-effects.Item.mlvDokpnQBhvQrSk"
+                },
+                "target": {
+                    "connection": "grPBF7kGSTOdwSqL:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "ETcooP9zgfW9aEVE:ins:in"
+                }
+            },
+            "position": {
+                "x": 1030.7802197802202,
+                "y": 191.25714285714318
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "mw58ntbL7XuQEWhQ": {
+                        "id": "mw58ntbL7XuQEWhQ",
+                        "isArray": false,
+                        "label": "Source Level",
+                        "slug": "entry",
+                        "type": "number"
+                    },
+                    "YLcsqB558JEtNo0z": {
+                        "id": "YLcsqB558JEtNo0z",
+                        "isArray": false,
+                        "label": "Source Actor",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                },
+                "title": "Shields of the Spirit Damage"
+            },
+            "id": "6rZxKLUKqudo4ue9",
+            "outs": {
+                "out": {
+                    "connection": "OiADRYpIFtkIURxI:ins:in"
+                }
+            },
+            "position": {
+                "x": 384.31109022556336,
+                "y": 750.1378446115295
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "id": "OiADRYpIFtkIURxI",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.classfeatures.Item.ehL7mnkqxN5wIkgu"
+                },
+                "target": {
+                    "connection": "6rZxKLUKqudo4ue9:outputs:YLcsqB558JEtNo0z"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "7TSgWRIHnOjzDEyg:ins:in"
+                }
+            },
+            "position": {
+                "x": 645.5675004819744,
+                "y": 777.4545112781958
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "7TSgWRIHnOjzDEyg",
+            "inputs": {
+                "flag": {
+                    "value": "sanctification"
+                },
+                "item": {
+                    "connection": "OiADRYpIFtkIURxI:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "6Vw9BDZrrZ1uLZ9S:ins:in"
+                }
+            },
+            "position": {
+                "x": 953.1444235588971,
+                "y": 711.804511278196
+            },
+            "type": "choiceset-selection"
+        },
+        {
+            "id": "qwptxc9qZysscURr",
+            "inputs": {
+                "formula": {
+                    "connection": "6Vw9BDZrrZ1uLZ9S:outputs:formula"
+                },
+                "item": {
+                    "connection": "5TFeWnAYOTJ9Wdi0:outputs:item"
+                },
+                "origin": {
+                    "connection": "4joponsFQHW1jP0H:outputs:entry"
+                },
+                "targets": {
+                    "connection": "99g6vXmr73UNfICU:outputs:entry"
+                },
+                "traits": {
+                    "connection": "7TSgWRIHnOjzDEyg:outputs:selection"
+                }
+            },
+            "position": {
+                "x": 1537.956389370863,
+                "y": 710.732289055974
+            },
+            "type": "roll-damage"
+        },
+        {
+            "id": "5TFeWnAYOTJ9Wdi0",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spells-srd.Item.ZL97DcoJ8us6EwAF"
+                }
+            },
+            "position": {
+                "x": 1006.4222013366747,
+                "y": 938.1378446115294
+            },
+            "type": "item-value"
+        },
+        {
+            "id": "cKj5Pla8kyO1DAK5",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spell-effects.Item.5AIV3cCLUt442Mmp"
+                },
+                "target": {
+                    "connection": "T5x47gfESvyuKYhr:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "l5xiwu5LUz22oS7S:ins:in"
+                }
+            },
+            "position": {
+                "x": 1009.5302197802206,
+                "y": 436.25714285714326
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "grPBF7kGSTOdwSqL",
+            "inputs": {
+                "entry": {
+                    "connection": "7yKftUXeWkE9Qpyp:outputs:target"
+                }
+            },
+            "position": {
+                "x": 831.5333124477853,
+                "y": 206.33228905597412
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "T5x47gfESvyuKYhr",
+            "inputs": {
+                "entry": {
+                    "connection": "7yKftUXeWkE9Qpyp:outputs:target"
+                }
+            },
+            "position": {
+                "x": 856.5333124477856,
+                "y": 520.0822890559739
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "l7axgWcF18fIMzEk": {
+                        "id": "l7axgWcF18fIMzEk",
+                        "input": "origin.level",
+                        "isArray": false,
+                        "label": "Level",
+                        "slug": "path",
+                        "type": "number"
+                    },
+                    "YpOYwlVjD5zvqNSh": {
+                        "id": "YpOYwlVjD5zvqNSh",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "Origin",
+                        "slug": "path",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "l5xiwu5LUz22oS7S",
+            "inputs": {
+                "input": {
+                    "connection": "cKj5Pla8kyO1DAK5:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "cEEwWa1Lg7sQ81RQ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1345.0333124477856,
+                "y": 437.4822890559742
+            },
+            "type": "extract-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "Y4yw1BOrkNh0cZ09": {
+                        "id": "Y4yw1BOrkNh0cZ09",
+                        "input": "level",
+                        "isArray": false,
+                        "label": "Level",
+                        "slug": "path",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "ETcooP9zgfW9aEVE",
+            "inputs": {
+                "input": {
+                    "connection": "a6hXu6v37GcCvXb0:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "CiYoM6yUx96Vjr78:ins:in"
+                }
+            },
+            "position": {
+                "x": 1304.456389370862,
+                "y": 174.48228905597432
+            },
+            "type": "extract-actor"
+        },
+        {
+            "id": "a6hXu6v37GcCvXb0",
+            "inputs": {
+                "entry": {
+                    "connection": "KUl8OkthKAy6E5GW:outputs:source"
+                }
+            },
+            "position": {
+                "x": 1114.5333124477852,
+                "y": 143.33228905597434
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "VzwtyPThEPBF0xPL",
+            "inputs": {
+                "entry": {
+                    "connection": "KUl8OkthKAy6E5GW:outputs:source"
+                }
+            },
+            "position": {
+                "x": 1361.5,
+                "y": 266.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "4joponsFQHW1jP0H",
+            "inputs": {
+                "entry": {
+                    "connection": "6rZxKLUKqudo4ue9:outputs:YLcsqB558JEtNo0z"
+                }
+            },
+            "position": {
+                "x": 1021.6444235588973,
+                "y": 860.1100668337521
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "99g6vXmr73UNfICU",
+            "inputs": {
+                "entry": {
+                    "connection": "7yKftUXeWkE9Qpyp:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1019.6444235588972,
+                "y": 896.1100668337521
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "eWB39YtdeuJmsKJI": {
+                        "id": "eWB39YtdeuJmsKJI",
+                        "input": "n",
+                        "label": "n",
+                        "slug": "variable",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "6Vw9BDZrrZ1uLZ9S",
+            "inputs": {
+                "eWB39YtdeuJmsKJI": {
+                    "connection": "gVpd4u2MRlfkTjWi:outputs:entry"
+                },
+                "formula": {
+                    "value": "(ceil(@actor.level/4))d4[spirit]"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "qwptxc9qZysscURr:ins:in"
+                }
+            },
+            "position": {
+                "x": 1208.567500481974,
+                "y": 665.760066833752
+            },
+            "state": "formula",
+            "type": "resolve-formula"
+        },
+        {
+            "id": "gVpd4u2MRlfkTjWi",
+            "inputs": {
+                "entry": {
+                    "connection": "6rZxKLUKqudo4ue9:outputs:mw58ntbL7XuQEWhQ"
+                }
+            },
+            "position": {
+                "x": 1000.6444235588972,
+                "y": 668.1100668337521
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "mw58ntbL7XuQEWhQ": {
+                        "id": "mw58ntbL7XuQEWhQ",
+                        "isArray": false,
+                        "label": "Source Level",
+                        "slug": "entry",
+                        "type": "number"
+                    },
+                    "YLcsqB558JEtNo0z": {
+                        "id": "YLcsqB558JEtNo0z",
+                        "isArray": false,
+                        "label": "Source Actor",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "cEEwWa1Lg7sQ81RQ",
+            "inputs": {
+                "mw58ntbL7XuQEWhQ": {
+                    "connection": "l5xiwu5LUz22oS7S:outputs:l7axgWcF18fIMzEk"
+                },
+                "PN21iVoeWTJTK3Kj": {
+                    "connection": "cKj5Pla8kyO1DAK5:outputs:item"
+                },
+                "YLcsqB558JEtNo0z": {
+                    "connection": "l5xiwu5LUz22oS7S:outputs:YpOYwlVjD5zvqNSh"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "6rZxKLUKqudo4ue9:ins:in"
+                }
+            },
+            "position": {
+                "x": 1602.5675004819743,
+                "y": 444.7767335004187
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "mw58ntbL7XuQEWhQ": {
+                        "id": "mw58ntbL7XuQEWhQ",
+                        "isArray": false,
+                        "label": "Source Level",
+                        "slug": "entry",
+                        "type": "number"
+                    },
+                    "YLcsqB558JEtNo0z": {
+                        "id": "YLcsqB558JEtNo0z",
+                        "isArray": false,
+                        "label": "Source Actor",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "CiYoM6yUx96Vjr78",
+            "inputs": {
+                "mw58ntbL7XuQEWhQ": {
+                    "connection": "ETcooP9zgfW9aEVE:outputs:Y4yw1BOrkNh0cZ09"
+                },
+                "PN21iVoeWTJTK3Kj": {
+                    "connection": "tOTjYzUS0YSmzUdi:outputs:item"
+                },
+                "YLcsqB558JEtNo0z": {
+                    "connection": "VzwtyPThEPBF0xPL:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "6rZxKLUKqudo4ue9:ins:in"
+                }
+            },
+            "position": {
+                "x": 1577.5675004819743,
+                "y": 192.27673350041871
+            },
+            "type": "__gate_entry__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "6rZxKLUKqudo4ue9:outputs:mw58ntbL7XuQEWhQ": {
+            "isArray": false,
+            "label": "Source Level",
+            "type": "number"
+        },
+        "6rZxKLUKqudo4ue9:outputs:YLcsqB558JEtNo0z": {
+            "isArray": false,
+            "label": "Source Actor",
+            "type": "target"
+        },
+        "7yKftUXeWkE9Qpyp:outputs:target": {
+            "isArray": false,
+            "label": "Attack Target",
+            "type": "target"
+        },
+        "KUl8OkthKAy6E5GW:outputs:source": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        }
+    }
+}

@@ -1,0 +1,105 @@
+{
+    "folder": "Feats & Features",
+    "id": "HCgZeaz8OQL7ZqKA",
+    "name": "Brutal Beating",
+    "nodes": [
+        {
+            "id": "J4AaMNNp49u55tT9",
+            "outs": {
+                "out": {
+                    "connection": "6uIuoqtlgGLd1lHp:ins:in"
+                }
+            },
+            "position": {
+                "x": 398,
+                "y": 367
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "6uIuoqtlgGLd1lHp",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.DYUlMxh7TDgEh9xB"
+                },
+                "target": {
+                    "connection": "J4AaMNNp49u55tT9:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "N8Y19Yw4FIxF5zgq:ins:in"
+                }
+            },
+            "position": {
+                "x": 649.9524886877828,
+                "y": 338.48823529411766
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "DMha9gwullVg9nxW",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "UTIJ9LYwn1rNyO0s:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1153.9072398190046,
+                "y": 516.0113122171945
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "N8Y19Yw4FIxF5zgq",
+            "inputs": {
+                "entry": {
+                    "value": "\"check:outcome:critical-success\""
+                },
+                "list": {
+                    "connection": "J4AaMNNp49u55tT9:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "DMha9gwullVg9nxW:ins:in"
+                }
+            },
+            "position": {
+                "x": 928,
+                "y": 467.25
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "UTIJ9LYwn1rNyO0s",
+            "inputs": {
+                "entry": {
+                    "connection": "J4AaMNNp49u55tT9:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1016,
+                "y": 618.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "J4AaMNNp49u55tT9:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

@@ -1,0 +1,243 @@
+{
+    "folder": "Feats & Features",
+    "id": "8FJd3xsvnR8t0qOv",
+    "name": "One Shot, One Kill",
+    "nodes": [
+        {
+            "id": "W4oyOLPQW8sCgGR3",
+            "outs": {
+                "out": {
+                    "connection": "RHTTiU4ppskEsftz:ins:in"
+                }
+            },
+            "position": {
+                "x": 395,
+                "y": 321
+            },
+            "type": "create-combatant-event"
+        },
+        {
+            "id": "RHTTiU4ppskEsftz",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.actionspf2e.Item.Tlrde2xh7AhesXNB"
+                },
+                "target": {
+                    "connection": "W4oyOLPQW8sCgGR3:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "qMhITxSfvsCVNz8e:ins:in"
+                }
+            },
+            "position": {
+                "x": 656.9230769230769,
+                "y": 258.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "qMhITxSfvsCVNz8e",
+            "inputs": {
+                "localization": {
+                    "value": "TRIGGERTROVE.OneShotOneKill.Trigger.CombatantJoined.Prompt"
+                },
+                "title": {
+                    "value": "TRIGGERTROVE.OneShotOneKill.Label"
+                },
+                "user": {
+                    "connection": "W4oyOLPQW8sCgGR3:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "mRB96oQ3XYsPZNb4:ins:in"
+                }
+            },
+            "position": {
+                "x": 963.4230769230769,
+                "y": 298.9
+            },
+            "state": "localization",
+            "type": "await-confirm"
+        },
+        {
+            "id": "aqlNu4VZZreBFYNb",
+            "outs": {
+                "out": {
+                    "connection": "eficVJPGgO9f8z6U:ins:in"
+                }
+            },
+            "position": {
+                "x": 338.5,
+                "y": -73.5
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "eficVJPGgO9f8z6U",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.h1BznDjjZQfNKqou"
+                },
+                "target": {
+                    "connection": "aqlNu4VZZreBFYNb:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "PgnwAy4lPNM09Wlx:ins:in"
+                }
+            },
+            "position": {
+                "x": 640.1016483516485,
+                "y": -110.06428571428546
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "FMIeMfmmPRRzcR56",
+            "inputs": {
+                "item": {
+                    "connection": "xUt0ZemJi5hoTxZO:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1171.3722943722948,
+                "y": 32.15151515151547
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "PgnwAy4lPNM09Wlx",
+            "inputs": {
+                "options": {
+                    "connection": "aqlNu4VZZreBFYNb:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:tag:one-shot-one-kill\",\n  \"action:strike\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "FMIeMfmmPRRzcR56:ins:in"
+                }
+            },
+            "position": {
+                "x": 933.7748917748936,
+                "y": -26.059523809523284
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "xUt0ZemJi5hoTxZO",
+            "inputs": {
+                "entry": {
+                    "connection": "eficVJPGgO9f8z6U:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1037.6320346320356,
+                "y": 137.1190476190481
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "1tQEIuY8XLtyr6u3": {
+                        "id": "1tQEIuY8XLtyr6u3",
+                        "label": "Tag",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "n4VH3saUMtyVF7n9": {
+                        "id": "n4VH3saUMtyVF7n9",
+                        "label": "Damage Alteration",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "sT0cXvdBHVnGP0Fs": {
+                        "id": "sT0cXvdBHVnGP0Fs",
+                        "label": "Roll Option",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "P5HnqHnvqYjXuH10",
+            "inputs": {
+                "0hHo0E1l048F0C4b": {
+                    "value": "{\n  \"key\": \"ChoiceSet\",\n  \"choices\": {\n    \"ownedItems\": true,\n    \"types\": [\n      \"weapon\"\n    ],\n    \"predicate\": [\n      {\n        \"or\": [\n          \"item:group:crossbow\",\n          \"item:group:firearm\"\n        ]\n      }\n    ]\n  },\n  \"flag\": \"weapon\"\n}"
+                },
+                "1tQEIuY8XLtyr6u3": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"add\",\n  \"property\": \"other-tags\",\n  \"itemId\": \"{item|flags.pf2e.rulesSelections.weapon}\",\n  \"value\": \"one-shot-one-kill\"\n}"
+                },
+                "bha2QyQ9d3eH0RyG": {
+                    "value": "{\n  \"key\": \"DamageAlteration\",\n  \"selectors\": [\n    \"weapon-damage\"\n  ],\n  \"slug\": \"one-shot-one-kill\",\n  \"mode\": \"downgrade\",\n  \"property\": \"dice-number\",\n  \"value\": 0,\n  \"predicate\": [\n    {\n      \"not\": \"item:id:{item|flags.pf2e.rulesSelections.weapon}\"\n    }\n  ]\n}"
+                },
+                "fixed": {
+                    "value": "encounter"
+                },
+                "n4VH3saUMtyVF7n9": {
+                    "value": "{\n  \"key\": \"DamageAlteration\",\n  \"selectors\": [\n    \"weapon-damage\"\n  ],\n  \"slug\": \"one-shot-one-kill\",\n  \"mode\": \"downgrade\",\n  \"property\": \"dice-number\",\n  \"value\": 0,\n  \"predicate\": [\n    {\n      \"not\": \"item:id:{item|flags.pf2e.rulesSelections.weapon}\"\n    }\n  ]\n}"
+                },
+                "name": {
+                    "value": "Aux Effect: One Shot, One Kill"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/ranged/projectile-strike-impale-gray.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-one-shot-one-kill"
+                },
+                "sT0cXvdBHVnGP0Fs": {
+                    "value": "{\n  \"key\": \"RollOption\",\n  \"option\": \"one-shot-one-kill\",\n  \"domain\": \"strike-damage\",\n  \"priority\": 51,\n  \"toggleable\": true,\n  \"disabledIf\": [\n    \"parent:type:effect\"\n  ],\n  \"disabledValue\": true\n}"
+                }
+            },
+            "position": {
+                "x": 1196.923076923077,
+                "y": 995.4714285714285
+            },
+            "state": "fixed",
+            "type": "create-effect"
+        },
+        {
+            "id": "mRB96oQ3XYsPZNb4",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.h1BznDjjZQfNKqou"
+                },
+                "target": {
+                    "connection": "W4oyOLPQW8sCgGR3:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1276.6329503829513,
+                "y": 514.7023809523814
+            },
+            "type": "create-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "eficVJPGgO9f8z6U:outputs:item": {
+            "isArray": false,
+            "label": "Effect",
+            "type": "item"
+        },
+        "RHTTiU4ppskEsftz:outputs:item": {
+            "isArray": false,
+            "label": "Item",
+            "type": "item"
+        }
+    }
+}

@@ -1,0 +1,391 @@
+{
+    "folder": "Feats & Features",
+    "id": "SklU32D8fErMRcLx",
+    "name": "Thermal Nimbus",
+    "nodes": [
+        {
+            "id": "gkilQ4Xxt5M9h5xX",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "kinetic-aura"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "bFdUZJIBjvBn4HHi:ins:in"
+                }
+            },
+            "position": {
+                "x": 380.14285714285734,
+                "y": 280.0000000000001
+            },
+            "type": "aura-enter-event"
+        },
+        {
+            "id": "Ak8L6A29ih9w8DF1",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.XJCsa3UbQtsKcqve"
+                },
+                "target": {
+                    "connection": "ZpxfzCF9H4Gwc6qN:outputs:zgft0ZWAW772mB29"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "J5ZeuDPJPHyDuOHa:ins:in"
+                }
+            },
+            "position": {
+                "x": 649.1428571428573,
+                "y": 801.5785714285714
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "J5ZeuDPJPHyDuOHa",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.2EMak2C8x6pFwoUi"
+                },
+                "target": {
+                    "connection": "ZpxfzCF9H4Gwc6qN:outputs:zgft0ZWAW772mB29"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "20iz9HmFGrm2eVk0:ins:in"
+                }
+            },
+            "position": {
+                "x": 1017.0659340659342,
+                "y": 888.1619047619047
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "xYEkHUk0vYkmWyZ3": {
+                        "id": "xYEkHUk0vYkmWyZ3",
+                        "isArray": false,
+                        "label": "Damage Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "zgft0ZWAW772mB29": {
+                        "id": "zgft0ZWAW772mB29",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                },
+                "title": "Thermal Nimbus"
+            },
+            "id": "ZpxfzCF9H4Gwc6qN",
+            "outs": {
+                "out": {
+                    "connection": "Ak8L6A29ih9w8DF1:ins:in"
+                }
+            },
+            "position": {
+                "x": 380.14285714285734,
+                "y": 877.4285714285714
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "zgft0ZWAW772mB29": {
+                        "id": "zgft0ZWAW772mB29",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "bFdUZJIBjvBn4HHi",
+            "inputs": {
+                "xYEkHUk0vYkmWyZ3": {
+                    "connection": "gkilQ4Xxt5M9h5xX:outputs:target"
+                },
+                "zgft0ZWAW772mB29": {
+                    "connection": "gkilQ4Xxt5M9h5xX:outputs:source"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "ZpxfzCF9H4Gwc6qN:ins:in"
+                }
+            },
+            "position": {
+                "x": 698.1034482758621,
+                "y": 280.25
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "Ox9OTE3oyFgsSOOS",
+            "outs": {
+                "out": {
+                    "connection": "XzywUQgtldtDc3Jw:ins:in"
+                }
+            },
+            "position": {
+                "x": 382.4545454545455,
+                "y": 577.6136363636364
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "XzywUQgtldtDc3Jw",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "kinetic-aura"
+                },
+                "target": {
+                    "connection": "Ox9OTE3oyFgsSOOS:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "7hZl8Rfv8W97tRGY:ins:in"
+                }
+            },
+            "position": {
+                "x": 771.7272727272727,
+                "y": 484.69545454545437
+            },
+            "type": "inside-aura"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "zgft0ZWAW772mB29": {
+                        "id": "zgft0ZWAW772mB29",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "7hZl8Rfv8W97tRGY",
+            "inputs": {
+                "xYEkHUk0vYkmWyZ3": {
+                    "connection": "Ox9OTE3oyFgsSOOS:outputs:combatant"
+                },
+                "zgft0ZWAW772mB29": {
+                    "connection": "XzywUQgtldtDc3Jw:outputs:source"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "ZpxfzCF9H4Gwc6qN:ins:in"
+                }
+            },
+            "position": {
+                "x": 1150.5125391849529,
+                "y": 630.2954545454543
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "20iz9HmFGrm2eVk0",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd"
+                },
+                "target": {
+                    "connection": "W2x0hXgtDqcnwN4Q:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "jtLNK0XkfS0dJqFX:ins:in"
+                },
+                "true": {
+                    "connection": "jprtteqnvZ2Sn0f6:ins:in"
+                }
+            },
+            "position": {
+                "x": 1288,
+                "y": 916.3333333333333
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "YPIhYEDQSUT2XxFg": {
+                        "id": "YPIhYEDQSUT2XxFg",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "SE Origin",
+                        "slug": "path",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "jprtteqnvZ2Sn0f6",
+            "inputs": {
+                "input": {
+                    "connection": "20iz9HmFGrm2eVk0:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "iiY5ZDXjbYksg7OE:ins:in"
+                }
+            },
+            "position": {
+                "x": 1575.342074592074,
+                "y": 880.9621212121212
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "iiY5ZDXjbYksg7OE",
+            "inputs": {
+                "a": {
+                    "connection": "jprtteqnvZ2Sn0f6:outputs:YPIhYEDQSUT2XxFg"
+                },
+                "b": {
+                    "connection": "C0UGDZucGtHGjcNH:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "jtLNK0XkfS0dJqFX:ins:in"
+                }
+            },
+            "position": {
+                "x": 1802.2869361031112,
+                "y": 847.9732541967835
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "C0UGDZucGtHGjcNH",
+            "inputs": {
+                "entry": {
+                    "connection": "ZpxfzCF9H4Gwc6qN:outputs:zgft0ZWAW772mB29"
+                }
+            },
+            "position": {
+                "x": 1654.5,
+                "y": 984.3333333333333
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "jtLNK0XkfS0dJqFX",
+            "inputs": {
+                "formula": {
+                    "value": "(floor(@actor.level/2))[@actor.flags.pf2e.kineticist.thermalNimbus]"
+                },
+                "item": {
+                    "connection": "p7syelYyQ9xLwede:outputs:entry"
+                },
+                "origin": {
+                    "connection": "3mZKxpAGMCo717Dt:outputs:entry"
+                },
+                "targets": {
+                    "connection": "5TQIRStRWF7b8Gdf:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2088.8397435897436,
+                "y": 1056.5666666666666
+            },
+            "state": "none",
+            "type": "roll-damage"
+        },
+        {
+            "id": "p7syelYyQ9xLwede",
+            "inputs": {
+                "entry": {
+                    "connection": "Ak8L6A29ih9w8DF1:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1881.2348484848487,
+                "y": 1259.4166666666665
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "3mZKxpAGMCo717Dt",
+            "inputs": {
+                "entry": {
+                    "connection": "ZpxfzCF9H4Gwc6qN:outputs:zgft0ZWAW772mB29"
+                }
+            },
+            "position": {
+                "x": 1912.6666666666667,
+                "y": 1172.1666666666667
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "W2x0hXgtDqcnwN4Q",
+            "inputs": {
+                "entry": {
+                    "connection": "ZpxfzCF9H4Gwc6qN:outputs:xYEkHUk0vYkmWyZ3"
+                }
+            },
+            "position": {
+                "x": 1111.3333333333335,
+                "y": 1050.3333333333335
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "5TQIRStRWF7b8Gdf",
+            "inputs": {
+                "entry": {
+                    "connection": "ZpxfzCF9H4Gwc6qN:outputs:xYEkHUk0vYkmWyZ3"
+                }
+            },
+            "position": {
+                "x": 1891.3141025641025,
+                "y": 1217.5448717948716
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "Ak8L6A29ih9w8DF1:outputs:item": {
+            "isArray": false,
+            "label": "Thermal Nimbus",
+            "type": "item"
+        },
+        "ZpxfzCF9H4Gwc6qN:outputs:xYEkHUk0vYkmWyZ3": {
+            "isArray": false,
+            "label": "Damage Target",
+            "type": "target"
+        },
+        "ZpxfzCF9H4Gwc6qN:outputs:zgft0ZWAW772mB29": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        }
+    }
+}

@@ -1,0 +1,310 @@
+{
+    "folder": "Feats & Features",
+    "id": "zOGEIqqa4yjdVL14",
+    "name": "Swaggering Initiative",
+    "nodes": [
+        {
+            "id": "sltlzW6yjAOwGnlS",
+            "outs": {
+                "out": {
+                    "connection": "wPz36djaWsLutikP:ins:in"
+                }
+            },
+            "position": {
+                "x": 505,
+                "y": 375
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "sPhn81Z8u9IfUD9s",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.NHheDmNB7L4REmlr"
+                },
+                "target": {
+                    "connection": "I5vqBH15VpLGTWo2:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "T3Cw2RMB4fb1kRi2:ins:in"
+                }
+            },
+            "position": {
+                "x": 1433.3675213675212,
+                "y": 531.7333333333333
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "cCY1PedU4ZsMxe7v",
+            "inputs": {
+                "a": {
+                    "value": 1
+                },
+                "b": {
+                    "connection": "0MOigU2wNoFgEnAx:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "sPhn81Z8u9IfUD9s:ins:in"
+                }
+            },
+            "position": {
+                "x": 1196.8888888888887,
+                "y": 509.69444444444406
+            },
+            "type": "compare-numbers"
+        },
+        {
+            "id": "I5vqBH15VpLGTWo2",
+            "inputs": {
+                "entry": {
+                    "connection": "sltlzW6yjAOwGnlS:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1266.2222222222217,
+                "y": 650.9722222222222
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "T3Cw2RMB4fb1kRi2",
+            "inputs": {
+                "option": {
+                    "value": "encounter:turn:1"
+                },
+                "target": {
+                    "connection": "aN9uHlmJYWEt3KKv:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "pJyInguuVj94s3Ld:ins:in"
+                }
+            },
+            "position": {
+                "x": 1693.367521367521,
+                "y": 595.3888888888889
+            },
+            "type": "has-option"
+        },
+        {
+            "id": "aN9uHlmJYWEt3KKv",
+            "inputs": {
+                "entry": {
+                    "connection": "sltlzW6yjAOwGnlS:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1532.5555555555557,
+                "y": 716.9722222222222
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "8jzqRiPJHCTkY8nL",
+            "outs": {
+                "out": {
+                    "connection": "zY43Re6m5GDmHEPM:ins:in"
+                }
+            },
+            "position": {
+                "x": 496.8888888888887,
+                "y": 675.6666666666665
+            },
+            "type": "create-combatant-event"
+        },
+        {
+            "id": "Q50kssEVa28zR5Zs",
+            "inputs": {
+                "localization": {
+                    "value": "TRIGGERTROVE.SwaggeringInitiative.Trigger.CombatantCreated.AwaitConfirmation.Prompt"
+                },
+                "title": {
+                    "value": "TRIGGERTROVE.SwaggeringInitiative.Label"
+                },
+                "user": {
+                    "connection": "8jzqRiPJHCTkY8nL:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "D62pWB4yWw0sUTX4:ins:in"
+                }
+            },
+            "position": {
+                "x": 1032.8119658119656,
+                "y": 745.0666666666665
+            },
+            "state": "localization",
+            "type": "await-confirm"
+        },
+        {
+            "id": "zY43Re6m5GDmHEPM",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.NHheDmNB7L4REmlr"
+                },
+                "target": {
+                    "connection": "8jzqRiPJHCTkY8nL:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Q50kssEVa28zR5Zs:ins:in"
+                }
+            },
+            "position": {
+                "x": 759.8119658119656,
+                "y": 616.0666666666665
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "G1oZPSJjScOdlGkD": {
+                        "id": "G1oZPSJjScOdlGkD",
+                        "label": "Text",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "D62pWB4yWw0sUTX4",
+            "inputs": {
+                "G1oZPSJjScOdlGkD": {
+                    "value": "{\n  \"key\": \"RollOption\",\n  \"option\": \"swaggering-initiative\",\n  \"domain\": \"initiative\",\n  \"priority\": 51,\n  \"toggleable\": true,\n  \"disabledIf\": \n  [\n    \"parent:type:effect\"\n  ],\n  \"disabledValue\": true\n}"
+                },
+                "name": {
+                    "value": "Aux Effect: Swaggering Initiative"
+                },
+                "pf2eImg": {
+                    "value": "icons/sundries/books/book-red-exclamation.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-swaggering-initiative"
+                },
+                "target": {
+                    "connection": "VWMV1Tab5pQvSd3q:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1313.8888888888887,
+                "y": 806.6666666666665
+            },
+            "state": "fixed",
+            "type": "create-effect"
+        },
+        {
+            "id": "wPz36djaWsLutikP",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-swaggering-initiative"
+                },
+                "target": {
+                    "connection": "sltlzW6yjAOwGnlS:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "t4pxNDsmoI2tvRKB:ins:in"
+                }
+            },
+            "position": {
+                "x": 728.034188034188,
+                "y": 415.2888888888888
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "t4pxNDsmoI2tvRKB",
+            "inputs": {
+                "item": {
+                    "connection": "wPz36djaWsLutikP:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "cCY1PedU4ZsMxe7v:ins:in"
+                }
+            },
+            "position": {
+                "x": 986.9230769230769,
+                "y": 459.61111111111086
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "0MOigU2wNoFgEnAx",
+            "inputs": {
+                "entry": {
+                    "connection": "sltlzW6yjAOwGnlS:outputs:round"
+                }
+            },
+            "position": {
+                "x": 1081.3333333333333,
+                "y": 566.3055555555552
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "pJyInguuVj94s3Ld",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj"
+                },
+                "target": {
+                    "connection": "aN9uHlmJYWEt3KKv:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1914.6882284382284,
+                "y": 625.0515151515151
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "VWMV1Tab5pQvSd3q",
+            "inputs": {
+                "entry": {
+                    "connection": "8jzqRiPJHCTkY8nL:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1117,
+                "y": 932.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "8jzqRiPJHCTkY8nL:outputs:combatant": {
+            "isArray": false,
+            "label": "Created Combatant",
+            "type": "target"
+        },
+        "sltlzW6yjAOwGnlS:outputs:combatant": {
+            "isArray": false,
+            "label": "Turn Starter",
+            "type": "target"
+        },
+        "sltlzW6yjAOwGnlS:outputs:round": {
+            "isArray": false,
+            "label": "Round",
+            "type": "number"
+        }
+    }
+}

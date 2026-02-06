@@ -1,0 +1,335 @@
+{
+    "folder": "Monster Abilities",
+    "id": "lR14O9W9IJMTUT5T",
+    "name": "Blinding Aura",
+    "nodes": [
+        {
+            "id": "SROeXfVlc1um29tB",
+            "outs": {
+                "out": {
+                    "connection": "s1Not0rp94mjFKo6:ins:in"
+                }
+            },
+            "position": {
+                "x": 406,
+                "y": 375
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "s1Not0rp94mjFKo6",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-bliding-aura-immunity"
+                },
+                "target": {
+                    "connection": "SROeXfVlc1um29tB:outputs:combatant"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "EBZj31fSFR0bNEYc:ins:in"
+                }
+            },
+            "position": {
+                "x": 628.5,
+                "y": 382
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "EBZj31fSFR0bNEYc",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "blinding-aura"
+                },
+                "target": {
+                    "connection": "Opr1EMWgt5k8WSlD:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "uL9O4bkQ5Miu9p7D:ins:in"
+                }
+            },
+            "position": {
+                "x": 888.6515151515149,
+                "y": 466.5151515151514
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "uL9O4bkQ5Miu9p7D",
+            "inputs": {
+                "slug": {
+                    "value": "blinding-aura"
+                },
+                "target": {
+                    "connection": "EBZj31fSFR0bNEYc:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Xr4e58jUSHXCZlzS:ins:in"
+                }
+            },
+            "position": {
+                "x": 1213.25,
+                "y": 519.8863636363637
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "Xr4e58jUSHXCZlzS",
+            "inputs": {
+                "item": {
+                    "connection": "uL9O4bkQ5Miu9p7D:outputs:item"
+                },
+                "parent": {
+                    "connection": "uL9O4bkQ5Miu9p7D:outputs:item"
+                },
+                "targets": {
+                    "connection": "jtnhwmHbaYxT1HSz:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1501.6136363636365,
+                "y": 588.3045454545456
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "jtnhwmHbaYxT1HSz",
+            "inputs": {
+                "entry": {
+                    "connection": "SROeXfVlc1um29tB:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1348.8888888888891,
+                "y": 767.1111111111111
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "5eDdCLvZc8Ua9QEh",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "w4JZ2g5XKNRQRbdp:ins:in"
+                }
+            },
+            "position": {
+                "x": 413.55555555555554,
+                "y": 50.97222222222223
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "w4JZ2g5XKNRQRbdp",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:blinding-aura"
+                },
+                "list": {
+                    "connection": "5eDdCLvZc8Ua9QEh:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "hDxKSNp9p5tk1oKM:ins:in"
+                }
+            },
+            "position": {
+                "x": 656.4444444444445,
+                "y": 105.88888888888891
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "hDxKSNp9p5tk1oKM",
+            "inputs": {
+                "input": {
+                    "connection": "yhSSdCpEY2Ww6Rkb:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "xIcQon7IqS8p2CPW:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "FbNk5H4bvd4gNUMK:ins:in"
+                },
+                "failure": {
+                    "connection": "X7Gvst1m8vJFb30B:ins:in"
+                }
+            },
+            "position": {
+                "x": 871.9230769230768,
+                "y": 160.58333333333343
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "yhSSdCpEY2Ww6Rkb",
+            "inputs": {
+                "entry": {
+                    "connection": "5eDdCLvZc8Ua9QEh:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 745.7777777777777,
+                "y": 243.49999999999997
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "X7Gvst1m8vJFb30B",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Blinding Aura"
+                },
+                "origin": {
+                    "connection": "C7vvURmOYR3ZlxME:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/light/explosion-star-glow-silhouette.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-blinding-aura"
+                },
+                "target": {
+                    "connection": "C7vvURmOYR3ZlxME:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 1558.0341880341878,
+                "y": -294.1833333333332
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "C7vvURmOYR3ZlxME",
+            "inputs": {
+                "entry": {
+                    "connection": "5eDdCLvZc8Ua9QEh:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1413.5555555555547,
+                "y": -99.8333333333336
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "xIcQon7IqS8p2CPW",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2"
+                },
+                "target": {
+                    "connection": "C7vvURmOYR3ZlxME:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1233.5897435897432,
+                "y": -404.1833333333333
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "FbNk5H4bvd4gNUMK",
+            "inputs": {
+                "duration": {
+                    "value": 24
+                },
+                "name": {
+                    "value": "Effect: Blinding Aura Immunity"
+                },
+                "origin": {
+                    "connection": "mGt8uZSNOjiLFyMK:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/light/explosion-star-glow-silhouette.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-blinding-aura-immunity"
+                },
+                "target": {
+                    "connection": "mGt8uZSNOjiLFyMK:outputs:entry"
+                },
+                "unit": {
+                    "value": "hours"
+                }
+            },
+            "position": {
+                "x": 1555.8119658119654,
+                "y": 145.26111111111106
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "mGt8uZSNOjiLFyMK",
+            "inputs": {
+                "entry": {
+                    "connection": "5eDdCLvZc8Ua9QEh:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1405.361111111111,
+                "y": 326.77777777777794
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Opr1EMWgt5k8WSlD",
+            "inputs": {
+                "entry": {
+                    "connection": "SROeXfVlc1um29tB:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 747.944444444444,
+                "y": 581.0277777777777
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "5eDdCLvZc8Ua9QEh:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "5eDdCLvZc8Ua9QEh:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "SROeXfVlc1um29tB:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        }
+    }
+}

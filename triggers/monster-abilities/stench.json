@@ -1,0 +1,455 @@
+{
+    "folder": "Monster Abilities",
+    "id": "a9f8PWrXz6lUEgzA",
+    "name": "Stench",
+    "nodes": [
+        {
+            "id": "SokFMQS6GUX9qnbY",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "stench"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Sr7aWjAPJKeP0OCO:ins:in"
+                }
+            },
+            "position": {
+                "x": 276.82539682539675,
+                "y": 472.90476190476187
+            },
+            "type": "aura-enter-event"
+        },
+        {
+            "id": "pSunQDE1rq0hfdrf",
+            "outs": {
+                "out": {
+                    "connection": "nVXhBDZDNnBXsPDF:ins:in"
+                }
+            },
+            "position": {
+                "x": 271,
+                "y": 721
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "nVXhBDZDNnBXsPDF",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "stench"
+                },
+                "target": {
+                    "connection": "pSunQDE1rq0hfdrf:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "J6VUai2nvPqxBX3O:ins:in"
+                }
+            },
+            "position": {
+                "x": 514.9230769230769,
+                "y": 644.4
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "sJgdFxEyznUewBCF",
+            "inputs": {
+                "slug": {
+                    "value": "stench"
+                },
+                "target": {
+                    "connection": "4KCSpLG6kGl5eQNM:outputs:QGjkvhZzHGUeD7QF"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "R3RK1te1QX3eJHWq:ins:in"
+                }
+            },
+            "position": {
+                "x": 777.4603174603176,
+                "y": 991.3722222222225
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "7khkVsLv6oLkI1cX": {
+                        "id": "7khkVsLv6oLkI1cX",
+                        "isArray": false,
+                        "label": "Stench Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "QGjkvhZzHGUeD7QF": {
+                        "id": "QGjkvhZzHGUeD7QF",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                },
+                "title": "Stench"
+            },
+            "id": "4KCSpLG6kGl5eQNM",
+            "outs": {
+                "out": {
+                    "connection": "ftLV49Wghqycsy3u:ins:in"
+                }
+            },
+            "position": {
+                "x": 274.4603174603176,
+                "y": 959.2222222222224
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "id": "ftLV49Wghqycsy3u",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-stench-immunity"
+                },
+                "target": {
+                    "connection": "4KCSpLG6kGl5eQNM:outputs:7khkVsLv6oLkI1cX"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "sJgdFxEyznUewBCF:ins:in"
+                }
+            },
+            "position": {
+                "x": 504.3833943833945,
+                "y": 898.6222222222225
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "R3RK1te1QX3eJHWq",
+            "inputs": {
+                "item": {
+                    "connection": "sJgdFxEyznUewBCF:outputs:item"
+                },
+                "parent": {
+                    "connection": "sJgdFxEyznUewBCF:outputs:item"
+                },
+                "targets": {
+                    "connection": "4KCSpLG6kGl5eQNM:outputs:7khkVsLv6oLkI1cX"
+                }
+            },
+            "position": {
+                "x": 1074.4603174603176,
+                "y": 1081.4722222222222
+            },
+            "type": "send-chat"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "7khkVsLv6oLkI1cX": {
+                        "id": "7khkVsLv6oLkI1cX",
+                        "isArray": false,
+                        "label": "Stench Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "QGjkvhZzHGUeD7QF": {
+                        "id": "QGjkvhZzHGUeD7QF",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "Sr7aWjAPJKeP0OCO",
+            "inputs": {
+                "7khkVsLv6oLkI1cX": {
+                    "connection": "SokFMQS6GUX9qnbY:outputs:target"
+                },
+                "QGjkvhZzHGUeD7QF": {
+                    "connection": "SokFMQS6GUX9qnbY:outputs:source"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "4KCSpLG6kGl5eQNM:ins:in"
+                }
+            },
+            "position": {
+                "x": 575.5579975579972,
+                "y": 472.34126984127
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "7khkVsLv6oLkI1cX": {
+                        "id": "7khkVsLv6oLkI1cX",
+                        "isArray": false,
+                        "label": "Stench Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "QGjkvhZzHGUeD7QF": {
+                        "id": "QGjkvhZzHGUeD7QF",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "J6VUai2nvPqxBX3O",
+            "inputs": {
+                "7khkVsLv6oLkI1cX": {
+                    "connection": "xNHfV0D6pRfcMKB4:outputs:entry"
+                },
+                "QGjkvhZzHGUeD7QF": {
+                    "connection": "nVXhBDZDNnBXsPDF:outputs:source"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "4KCSpLG6kGl5eQNM:ins:in"
+                }
+            },
+            "position": {
+                "x": 835.7383689107824,
+                "y": 679.2023809523811
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "xNHfV0D6pRfcMKB4",
+            "inputs": {
+                "entry": {
+                    "connection": "pSunQDE1rq0hfdrf:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 684.1904761904763,
+                "y": 824.5912698412699
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "MNHJLdInXvDnlmJN",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "2pVKr1IazVDv8fQi:ins:in"
+                }
+            },
+            "position": {
+                "x": 280.52380952380963,
+                "y": 183.6190476190477
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "2pVKr1IazVDv8fQi",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:stench"
+                },
+                "list": {
+                    "connection": "MNHJLdInXvDnlmJN:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "YneI1WsN1bGyy9q5:ins:in"
+                }
+            },
+            "position": {
+                "x": 522.3015873015872,
+                "y": 232.9801587301588
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "YneI1WsN1bGyy9q5",
+            "inputs": {
+                "input": {
+                    "connection": "Nwy1debX1pnQAxVq:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "bxLQWa9dXTQ3pmXd:ins:in"
+                },
+                "failure": {
+                    "connection": "X5AZON0PRlKYfjH8:ins:in"
+                },
+                "success": {
+                    "connection": "y0cojrXFbjXOab4d:ins:in"
+                }
+            },
+            "position": {
+                "x": 747.7802197802198,
+                "y": 293.2301587301588
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "Nwy1debX1pnQAxVq",
+            "inputs": {
+                "entry": {
+                    "connection": "MNHJLdInXvDnlmJN:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 608.3015873015872,
+                "y": 388.3690476190477
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "X5AZON0PRlKYfjH8",
+            "inputs": {
+                "condition": {
+                    "value": "sickened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "hoBtupBeWFTusMJD:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1121.113553113553,
+                "y": 250.56349206349194
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "bxLQWa9dXTQ3pmXd",
+            "inputs": {
+                "condition": {
+                    "value": "sickened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "hoBtupBeWFTusMJD:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "FGyahdvExJWfpf0r:ins:in"
+                }
+            },
+            "position": {
+                "x": 1111.113553113553,
+                "y": 65.00793650793628
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "hoBtupBeWFTusMJD",
+            "inputs": {
+                "entry": {
+                    "connection": "MNHJLdInXvDnlmJN:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 964.4126984126981,
+                "y": 300.5912698412698
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "FGyahdvExJWfpf0r",
+            "inputs": {
+                "condition": {
+                    "value": "slowed"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "hoBtupBeWFTusMJD:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1328.8913308913309,
+                "y": 66.1190476190477
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "y0cojrXFbjXOab4d",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Stench Immunity"
+                },
+                "origin": {
+                    "connection": "hoBtupBeWFTusMJD:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/consumables/eggs/egg-broken-spotted-white.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-stench-immunity"
+                },
+                "target": {
+                    "connection": "hoBtupBeWFTusMJD:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 1112.2246642246641,
+                "y": 438.46349206349214
+            },
+            "type": "create-effect"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "MNHJLdInXvDnlmJN:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "MNHJLdInXvDnlmJN:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "pSunQDE1rq0hfdrf:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        }
+    }
+}

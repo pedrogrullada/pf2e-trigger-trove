@@ -1,0 +1,169 @@
+{
+    "folder": "Equipment",
+    "id": "0CKu9GNVl1CcAY9h",
+    "name": "Fearsome",
+    "nodes": [
+        {
+            "id": "KN813QQDDJD4vu5O",
+            "outs": {
+                "out": {
+                    "connection": "p1O6P361TzUbmrlS:ins:in"
+                }
+            },
+            "position": {
+                "x": 386.3333333333333,
+                "y": 246.55555555555543
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "p1O6P361TzUbmrlS",
+            "inputs": {
+                "a": {
+                    "connection": "KN813QQDDJD4vu5O:outputs:outcome"
+                },
+                "b": {
+                    "value": "criticalSuccess"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Poyo5MGBbs92TlGe:ins:in"
+                }
+            },
+            "position": {
+                "x": 652,
+                "y": 297.25
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "N87NbkQLwM9XyHP8",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "zYfpDTl0KkIpLv55:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1462.8992673992677,
+                "y": 102.41594516594512
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "mHA2VIBdfTLGgdma",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "zYfpDTl0KkIpLv55:outputs:entry"
+                },
+                "value": {
+                    "value": 2
+                }
+            },
+            "position": {
+                "x": 1463.2942890442887,
+                "y": 346.71212121212085
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "zYfpDTl0KkIpLv55",
+            "inputs": {
+                "entry": {
+                    "connection": "KN813QQDDJD4vu5O:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1319.9848484848492,
+                "y": 288.7337662337663
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Poyo5MGBbs92TlGe",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:fearsome"
+                },
+                "list": {
+                    "connection": "UAdRHhmFnChH50VD:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "70dTjBwvQAJdXZHT:ins:in"
+                },
+                "true": {
+                    "connection": "N87NbkQLwM9XyHP8:ins:in"
+                }
+            },
+            "position": {
+                "x": 941.9365079365078,
+                "y": 281.0436507936508
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "UAdRHhmFnChH50VD",
+            "inputs": {
+                "entry": {
+                    "connection": "KN813QQDDJD4vu5O:outputs:options"
+                }
+            },
+            "position": {
+                "x": 780.168831168831,
+                "y": 479.86688311688306
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "70dTjBwvQAJdXZHT",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:fearsome"
+                },
+                "list": {
+                    "connection": "UAdRHhmFnChH50VD:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "mHA2VIBdfTLGgdma:ins:in"
+                }
+            },
+            "position": {
+                "x": 1190.118326118326,
+                "y": 409.22546897546886
+            },
+            "type": "list-contains"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "KN813QQDDJD4vu5O:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "KN813QQDDJD4vu5O:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

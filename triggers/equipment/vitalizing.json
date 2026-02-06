@@ -1,0 +1,244 @@
+{
+    "folder": "Equipment",
+    "id": "QQD7bYI6E4fpWNSf",
+    "name": "Vitalizing",
+    "nodes": [
+        {
+            "id": "lQ3KnJYWEa4cHbTS",
+            "outs": {
+                "out": {
+                    "connection": "1QZuEFZwAVD8KXE2:ins:in"
+                }
+            },
+            "position": {
+                "x": 277,
+                "y": 303
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "1QZuEFZwAVD8KXE2",
+            "inputs": {
+                "a": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:outcome"
+                },
+                "b": {
+                    "value": "criticalSuccess"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "upl6gKuDyYUcnb0l:ins:in"
+                }
+            },
+            "position": {
+                "x": 503,
+                "y": 351.25
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "upl6gKuDyYUcnb0l",
+            "inputs": {
+                "options": {
+                    "connection": "dbcETUobr3Rb0655:outputs:entry"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:rune:property:disrupting\",\n  \"target:mode:undead\"\n]"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "r8J9yJccX49oNpGq:ins:in"
+                },
+                "true": {
+                    "connection": "Hm9g2QSXvbsyNEFk:ins:in"
+                }
+            },
+            "position": {
+                "x": 800.9230769230769,
+                "y": 379.5
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "dbcETUobr3Rb0655",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:options"
+                }
+            },
+            "position": {
+                "x": 646,
+                "y": 497.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Hm9g2QSXvbsyNEFk",
+            "inputs": {
+                "condition": {
+                    "value": "enfeebled"
+                },
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "img": {
+                    "value": "systems/pf2e/icons/equipment/runes/weapon-property-runes/weapon-property-runes.webp"
+                },
+                "name": {
+                    "value": "Effect: Vitalizing"
+                },
+                "origin": {
+                    "connection": "SZBCi5sPWhqt5wI1:outputs:entry"
+                },
+                "target": {
+                    "connection": "j80a4CmlMRARIoWP:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1232,
+                "y": -84
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "SZBCi5sPWhqt5wI1",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1115.3333333333333,
+                "y": 235.3055555555555
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "j80a4CmlMRARIoWP",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1119,
+                "y": 26.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "r8J9yJccX49oNpGq",
+            "inputs": {
+                "options": {
+                    "connection": "dbcETUobr3Rb0655:outputs:entry"
+                },
+                "predicate": {
+                    "value": "[\n  \"item:rune:property:greater-disrupting\",\n  \"target:mode:undead\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "SugiVmsINvVLgtEP:ins:in"
+                }
+            },
+            "position": {
+                "x": 1036.423076923077,
+                "y": 445.75
+            },
+            "type": "match-predicate"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "1WpMR24pFes5BVhf": {
+                        "id": "1WpMR24pFes5BVhf",
+                        "label": "Enfeebled",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "ddeRQRhFrj1R5HTs": {
+                        "id": "ddeRQRhFrj1R5HTs",
+                        "label": "Stupefied",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "SugiVmsINvVLgtEP",
+            "inputs": {
+                "1WpMR24pFes5BVhf": {
+                    "value": "{\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7\",\n  \"key\": \"GrantItem\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "ddeRQRhFrj1R5HTs": {
+                    "value": "{\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg\",\n  \"key\": \"GrantItem\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "img": {
+                    "value": "systems/pf2e/icons/equipment/runes/weapon-property-runes/weapon-property-runes.webp"
+                },
+                "name": {
+                    "value": "Effect: Greater Vitalizing"
+                },
+                "origin": {
+                    "connection": "2ekFZMkRFEuh1Sn0:outputs:entry"
+                },
+                "target": {
+                    "connection": "L4LhLv4BesjLmBGZ:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1269.5897435897436,
+                "y": 430.73333333333323
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "2ekFZMkRFEuh1Sn0",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1145.1111111111109,
+                "y": 613.9722222222221
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "L4LhLv4BesjLmBGZ",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1145.1111111111109,
+                "y": 567.3055555555555
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "lQ3KnJYWEa4cHbTS:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "lQ3KnJYWEa4cHbTS:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "lQ3KnJYWEa4cHbTS:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

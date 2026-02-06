@@ -1,0 +1,149 @@
+{
+    "folder": "Core Rules",
+    "id": "ft4xvxXIULcSavMR",
+    "name": "Grapple",
+    "nodes": [
+        {
+            "id": "i1zgJ2aIHFL6Dla2",
+            "inputs": {
+                "for": {
+                    "value": "skill-check"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Ds7terr8lXT596LE:ins:in"
+                }
+            },
+            "position": {
+                "x": 533,
+                "y": 298
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "3njsbGCyxIWOHigE",
+            "inputs": {
+                "input": {
+                    "connection": "6CJnBF4qSynm0cCr:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalSuccess": {
+                    "connection": "tx4lz02HhQ3xsE83:ins:in"
+                },
+                "success": {
+                    "connection": "0IkSGzOScmUGqrVe:ins:in"
+                }
+            },
+            "position": {
+                "x": 1031.6666666666665,
+                "y": 410.5833333333333
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "0IkSGzOScmUGqrVe",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei"
+                },
+                "target": {
+                    "connection": "gEXlmr9yWOPbzHaD:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1511.5897435897436,
+                "y": 292.7333333333333
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "tx4lz02HhQ3xsE83",
+            "inputs": {
+                "duplicate": {
+                    "value": false
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM"
+                },
+                "target": {
+                    "connection": "gEXlmr9yWOPbzHaD:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1513.9230769230767,
+                "y": 609.0666666666666
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "gEXlmr9yWOPbzHaD",
+            "inputs": {
+                "entry": {
+                    "connection": "i1zgJ2aIHFL6Dla2:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1381.3333333333335,
+                "y": 522.9166666666665
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Ds7terr8lXT596LE",
+            "inputs": {
+                "entry": {
+                    "value": "action:grapple"
+                },
+                "list": {
+                    "connection": "i1zgJ2aIHFL6Dla2:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "3njsbGCyxIWOHigE:ins:in"
+                }
+            },
+            "position": {
+                "x": 791.5,
+                "y": 332.08333333333326
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "6CJnBF4qSynm0cCr",
+            "inputs": {
+                "entry": {
+                    "connection": "i1zgJ2aIHFL6Dla2:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 883.5,
+                "y": 512.5833333333333
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e",
+        "sf2e"
+    ],
+    "variables": {
+        "i1zgJ2aIHFL6Dla2:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "i1zgJ2aIHFL6Dla2:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

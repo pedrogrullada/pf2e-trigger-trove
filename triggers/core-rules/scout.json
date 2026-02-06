@@ -1,6 +1,6 @@
 {
     "folder": "Core Rules",
-    "id": "LQygyGUQqx6LKexQ",
+    "id": "hydjexiUT8eU1CjP",
     "name": "Scout",
     "nodes": [
         {
@@ -127,12 +127,12 @@
             },
             "outs": {
                 "out": {
-                    "connection": "REN3NUq7L8kbBrvJ:ins:in"
+                    "connection": "lbLY3r3fAxF7E3mD:ins:in"
                 }
             },
             "position": {
-                "x": 1666.560023310024,
-                "y": 201.44691142191147
+                "x": 1724.060023310024,
+                "y": 185.44691142191147
             },
             "state": "loop",
             "type": "filter-targets"
@@ -151,8 +151,8 @@
                 }
             },
             "position": {
-                "x": 2149.727411477412,
-                "y": 202.46120268620297
+                "x": 2344.727411477412,
+                "y": 169.96120268620297
             },
             "type": "create-item"
         },
@@ -178,10 +178,13 @@
             "type": "__variable_getter__"
         },
         {
-            "id": "REN3NUq7L8kbBrvJ",
+            "id": "lbLY3r3fAxF7E3mD",
             "inputs": {
-                "target": {
+                "a": {
                     "connection": "UWmLYpbeXgHgRwWi:outputs:current"
+                },
+                "b": {
+                    "connection": "I92pGhThykCOlnmp:outputs:entry"
                 }
             },
             "outs": {
@@ -190,13 +193,77 @@
                 }
             },
             "position": {
-                "x": 1927.4230769230771,
-                "y": 102.75
+                "x": 2120,
+                "y": 59.75
             },
-            "type": "is-alliance"
+            "type": "compare-alliances"
+        },
+        {
+            "id": "I92pGhThykCOlnmp",
+            "inputs": {
+                "entry": {
+                    "connection": "Oox2GcNDxE8fnUrb:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 2005.75,
+                "y": 211.99999999999994
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "86DtVeOr07CFlfxO": {
+                        "id": "86DtVeOr07CFlfxO",
+                        "label": "Text",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "FdTISLQJUocnEnVO",
+            "inputs": {
+                "86DtVeOr07CFlfxO": {
+                    "value": "{\n  \"key\": \"AdjustModifier\",\n  \"slug\": \"scouting-bonus\",\n  \"value\": 2,\n  \"selector\": \"initiative\",\n  \"mode\": \"upgrade\"\n}"
+                },
+                "name": {
+                    "value": "Aux Effect: Scout Improvement"
+                },
+                "pf2eImg": {
+                    "value": "icons/sundries/books/book-red-exclamation.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-scout-dedication"
+                }
+            },
+            "position": {
+                "x": 3657.650793650792,
+                "y": 307.63888888888823
+            },
+            "state": "fixed",
+            "type": "create-effect"
+        },
+        {
+            "id": "3YAU2DXQervYSG9b",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.other-effects.Item.EMqGwUi3VMhCjTlF"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "FdTISLQJUocnEnVO:ins:in"
+                }
+            },
+            "position": {
+                "x": 3384.673076923077,
+                "y": 231.64999999999998
+            },
+            "type": "has-item"
         }
     ],
-    "priority": 0,
+    "priority": 100,
     "tags": [
         "pf2e",
         "sf2e"

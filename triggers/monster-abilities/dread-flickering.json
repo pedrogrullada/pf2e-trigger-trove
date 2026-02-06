@@ -1,0 +1,386 @@
+{
+    "folder": "Monster Abilities",
+    "id": "7lwgGMDffXhhr2cT",
+    "name": "Dread Flickering",
+    "nodes": [
+        {
+            "id": "La4veEWSwRpPDRR9",
+            "outs": {
+                "out": {
+                    "connection": "8OrQNo9QY8PqXOtc:ins:in"
+                }
+            },
+            "position": {
+                "x": 337,
+                "y": 331
+            },
+            "type": "turn-end-event"
+        },
+        {
+            "id": "8OrQNo9QY8PqXOtc",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-dread-flickering-immunity"
+                },
+                "target": {
+                    "connection": "La4veEWSwRpPDRR9:outputs:combatant"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "7pdqMD0r4IwYd3gb:ins:in"
+                }
+            },
+            "position": {
+                "x": 594.6503496503497,
+                "y": 262.85454545454536
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "7pdqMD0r4IwYd3gb",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "dread-flickering"
+                },
+                "target": {
+                    "connection": "La4veEWSwRpPDRR9:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "3GU6HdX54PXq1s1q:ins:in"
+                }
+            },
+            "position": {
+                "x": 871.4685314685313,
+                "y": 334.03636363636355
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "3GU6HdX54PXq1s1q",
+            "inputs": {
+                "slug": {
+                    "value": "dread-flickering"
+                },
+                "target": {
+                    "connection": "7pdqMD0r4IwYd3gb:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "JxmAXNvBQe2tNoJl:ins:in"
+                }
+            },
+            "position": {
+                "x": 1193.1503496503497,
+                "y": 396.9909090909091
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "JxmAXNvBQe2tNoJl",
+            "inputs": {
+                "option": {
+                    "value": "self:mode:living"
+                },
+                "target": {
+                    "connection": "86uWlDJMymQaUz75:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "FFTv8VLdN1klDJMZ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1556.2639860139861,
+                "y": 453.409090909091
+            },
+            "type": "has-option"
+        },
+        {
+            "id": "FFTv8VLdN1klDJMZ",
+            "inputs": {
+                "item": {
+                    "connection": "9lWYxBGqJg7AtGco:outputs:entry"
+                },
+                "parent": {
+                    "connection": "8A41xqVxGvDis6IQ:outputs:entry"
+                },
+                "targets": {
+                    "connection": "4AechiZXg1xmlHEK:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1811.5139860139861,
+                "y": 506.659090909091
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "86uWlDJMymQaUz75",
+            "inputs": {
+                "entry": {
+                    "connection": "La4veEWSwRpPDRR9:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1397.3409090909092,
+                "y": 561.909090909091
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "4AechiZXg1xmlHEK",
+            "inputs": {
+                "entry": {
+                    "connection": "La4veEWSwRpPDRR9:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1597.5909090909092,
+                "y": 680.909090909091
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "8A41xqVxGvDis6IQ",
+            "inputs": {
+                "entry": {
+                    "connection": "7pdqMD0r4IwYd3gb:outputs:source"
+                }
+            },
+            "position": {
+                "x": 1608.5909090909092,
+                "y": 640.909090909091
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "9lWYxBGqJg7AtGco",
+            "inputs": {
+                "entry": {
+                    "connection": "3GU6HdX54PXq1s1q:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1604.5909090909092,
+                "y": 594.909090909091
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "D1XshKIRTB7111Nj",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "WMmKrTuaXZJokOOZ:ins:in"
+                }
+            },
+            "position": {
+                "x": 323.507575757576,
+                "y": -60.507575757575296
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "WMmKrTuaXZJokOOZ",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:dread-flickering"
+                },
+                "list": {
+                    "connection": "D1XshKIRTB7111Nj:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "sDPKX1oV50gvc3v1:ins:in"
+                }
+            },
+            "position": {
+                "x": 619.161421911422,
+                "y": -14.73834498834458
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "sDPKX1oV50gvc3v1",
+            "inputs": {
+                "input": {
+                    "connection": "ufIyDmsfPSMS3oPW:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "tBloucIlqTxkV9hl:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "Lr88rkzoLcZpMvJs:ins:in"
+                },
+                "failure": {
+                    "connection": "DspFmV4esnotAj5a:ins:in"
+                }
+            },
+            "position": {
+                "x": 884.5652680652678,
+                "y": -68.36013986013958
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "ufIyDmsfPSMS3oPW",
+            "inputs": {
+                "entry": {
+                    "connection": "D1XshKIRTB7111Nj:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 697.0652680652679,
+                "y": 126.3898601398605
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "tBloucIlqTxkV9hl",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "fxAwmeE0RVaErAbV:outputs:entry"
+                },
+                "value": {
+                    "value": 2
+                }
+            },
+            "position": {
+                "x": 1205.9125874125875,
+                "y": -393.43589743589706
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "fxAwmeE0RVaErAbV",
+            "inputs": {
+                "entry": {
+                    "connection": "D1XshKIRTB7111Nj:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1025.1713286713289,
+                "y": -225.73135198135157
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "DspFmV4esnotAj5a",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "fxAwmeE0RVaErAbV:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1203.1853146853148,
+                "y": -207.0722610722608
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "Lr88rkzoLcZpMvJs",
+            "inputs": {
+                "duration": {
+                    "value": 10
+                },
+                "name": {
+                    "value": "Effect: Dread Flickering Immunity"
+                },
+                "origin": {
+                    "connection": "FrfGULjA1BGsf4y5:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/control/fear-fright-mask-yellow.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-dread-flickering-immunity"
+                },
+                "target": {
+                    "connection": "FrfGULjA1BGsf4y5:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 1199.5489510489513,
+                "y": -15.53589743589697
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "FrfGULjA1BGsf4y5",
+            "inputs": {
+                "entry": {
+                    "connection": "D1XshKIRTB7111Nj:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1074.2622377622379,
+                "y": 156.995920745921
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "3GU6HdX54PXq1s1q:outputs:item": {
+            "isArray": false,
+            "label": "Dread Flickering",
+            "type": "item"
+        },
+        "7pdqMD0r4IwYd3gb:outputs:source": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        },
+        "D1XshKIRTB7111Nj:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "D1XshKIRTB7111Nj:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "La4veEWSwRpPDRR9:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        }
+    }
+}

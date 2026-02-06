@@ -1,0 +1,304 @@
+{
+    "folder": "Monster Abilities",
+    "id": "V1PLolsPjOaYB3NL",
+    "name": "Commanding Presence",
+    "nodes": [
+        {
+            "id": "DgiagzLCuKzszo3V",
+            "inputs": {
+                "affects": {
+                    "value": "allies"
+                },
+                "slug": {
+                    "value": "commanding-presence"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "TiYGpwz3xRtKgUXH:ins:in"
+                }
+            },
+            "position": {
+                "x": 323.5,
+                "y": 237
+            },
+            "type": "aura-enter-event"
+        },
+        {
+            "id": "TiYGpwz3xRtKgUXH",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-commanding-presence-immunity"
+                },
+                "target": {
+                    "connection": "DgiagzLCuKzszo3V:outputs:target"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "dZvPAbYWVxETMOyr:ins:in"
+                }
+            },
+            "position": {
+                "x": 638.1153846153845,
+                "y": 168.36153846153846
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "AeBNAiBtwoqlCLdD",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Commanding Presence Immunity"
+                },
+                "origin": {
+                    "connection": "tq5mIZNglJtd59IZ:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/creatures/magical/spirit-fire-orange.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-commanding-presence-immunity"
+                },
+                "target": {
+                    "connection": "mUIKl7Ywn9SRSljt:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                },
+                "Ww1H78dxsTqR0VNQ": {
+                    "value": "{\n  \"key\": \"FlatModifier\",\n  \"value\": -4,\n  \"type\": \"circumstance\",\n  \"selector\": [\n    \"saving-throw\"\n  ],\n  \"predicate\": [\n    \"item:slug:commanding-presence\",\n    \"compendium-presence-genie:Compendium.pf2e.pathfinder-monster-core.Actor.Ccjg08wVRO43YlTf\"\n  ],\n  \"removeAfterRoll\": \"if-enabled\"\n}"
+                }
+            },
+            "position": {
+                "x": 1421.1421225832992,
+                "y": 400.0213492389963
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "5ZnyRrYLKCCFULBd",
+            "inputs": {
+                "item": {
+                    "connection": "dZvPAbYWVxETMOyr:outputs:item"
+                },
+                "parent": {
+                    "connection": "dZvPAbYWVxETMOyr:outputs:item"
+                },
+                "targets": {
+                    "connection": "mUIKl7Ywn9SRSljt:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "AeBNAiBtwoqlCLdD:ins:in"
+                }
+            },
+            "position": {
+                "x": 1188.493521184698,
+                "y": 314.9709995886467
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "dZvPAbYWVxETMOyr",
+            "inputs": {
+                "slug": {
+                    "value": "commanding-presence"
+                },
+                "target": {
+                    "connection": "DgiagzLCuKzszo3V:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "5ZnyRrYLKCCFULBd:ins:in"
+                }
+            },
+            "position": {
+                "x": 907.0162484574248,
+                "y": 261.28009049773755
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "mUIKl7Ywn9SRSljt",
+            "inputs": {
+                "entry": {
+                    "connection": "DgiagzLCuKzszo3V:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1225.9340806252578,
+                "y": 515.1755450431925
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "tq5mIZNglJtd59IZ",
+            "inputs": {
+                "entry": {
+                    "connection": "DgiagzLCuKzszo3V:outputs:source"
+                }
+            },
+            "position": {
+                "x": 1242.1840806252578,
+                "y": 566.4255450431926
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "TRCeqjyXhKfCpmnM",
+            "outs": {
+                "out": {
+                    "connection": "U8Jsh6pSJykcvuFN:ins:in"
+                }
+            },
+            "position": {
+                "x": 318.43408062525714,
+                "y": -134.5744549568081
+            },
+            "type": "check-roll-event"
+        },
+        {
+            "id": "U8Jsh6pSJykcvuFN",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:commanding-presence"
+                },
+                "list": {
+                    "connection": "TRCeqjyXhKfCpmnM:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "nbM2awZb49XFDENY:ins:in"
+                }
+            },
+            "position": {
+                "x": 577.4340806252573,
+                "y": -96.32445495680801
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "nbM2awZb49XFDENY",
+            "inputs": {
+                "input": {
+                    "connection": "yJI77WrkWGqvNLgf:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "EzSHpwErgvSROKki:ins:in"
+                },
+                "failure": {
+                    "connection": "ob5qSNAQOsNphvtA:ins:in"
+                }
+            },
+            "position": {
+                "x": 838.6071575483344,
+                "y": -116.07445495680798
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "yJI77WrkWGqvNLgf",
+            "inputs": {
+                "entry": {
+                    "connection": "TRCeqjyXhKfCpmnM:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 669.6840806252576,
+                "y": 41.42554504319207
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ob5qSNAQOsNphvtA",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "W80Ro0AzOPTJ8pc8:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1281.107157548335,
+                "y": -2.07445495680804
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "W80Ro0AzOPTJ8pc8",
+            "inputs": {
+                "entry": {
+                    "connection": "TRCeqjyXhKfCpmnM:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1159.6840806252578,
+                "y": -28.574454956808097
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "EzSHpwErgvSROKki",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "W80Ro0AzOPTJ8pc8:outputs:entry"
+                },
+                "value": {
+                    "value": 2
+                }
+            },
+            "position": {
+                "x": 1281.1071575483347,
+                "y": -184.57445495680832
+            },
+            "type": "increase-condition"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "DgiagzLCuKzszo3V:outputs:source": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        },
+        "DgiagzLCuKzszo3V:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        },
+        "TRCeqjyXhKfCpmnM:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "TRCeqjyXhKfCpmnM:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        }
+    }
+}

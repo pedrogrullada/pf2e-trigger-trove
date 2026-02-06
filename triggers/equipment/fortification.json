@@ -1,0 +1,258 @@
+{
+    "folder": "Equipment",
+    "id": "X32DeTp4mBzqQUtK",
+    "name": "Fortification",
+    "nodes": [
+        {
+            "id": "uTrTa15m4bAvf7ev",
+            "outs": {
+                "out": {
+                    "connection": "GZRksHuciWNNt1dO:ins:in"
+                }
+            },
+            "position": {
+                "x": 397,
+                "y": 176
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "GZRksHuciWNNt1dO",
+            "inputs": {
+                "a": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:outcome"
+                },
+                "b": {
+                    "value": "criticalSuccess"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "1k2L22rj29jf1PA2:ins:in"
+                }
+            },
+            "position": {
+                "x": 658,
+                "y": 213.25
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "1k2L22rj29jf1PA2",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.oYzkopbXguiwfNTx"
+                },
+                "target": {
+                    "connection": "jDi7PfhVYloOxbfN:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "1Wexlj07kIY9ASsd:ins:in"
+                }
+            },
+            "position": {
+                "x": 929.5897435897434,
+                "y": 221.84444444444438
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "1Wexlj07kIY9ASsd",
+            "inputs": {
+                "option": {
+                    "value": "armor:rune:property:fortification"
+                },
+                "target": {
+                    "connection": "UPk6ynCBBHyM2Zv3:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "EyZqXxSKLPxhxQbl:ins:in"
+                },
+                "true": {
+                    "connection": "r06TOjQMi6gW0meC:ins:in"
+                }
+            },
+            "position": {
+                "x": 1206.923076923077,
+                "y": 261.5
+            },
+            "type": "has-option"
+        },
+        {
+            "id": "UPk6ynCBBHyM2Zv3",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1080,
+                "y": 375.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "r06TOjQMi6gW0meC",
+            "inputs": {
+                "dc": {
+                    "value": 17
+                },
+                "target": {
+                    "connection": "A8jq1RPIZc1GB9Y8:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "KH5aQLBFt96jtv2j:ins:in"
+                }
+            },
+            "position": {
+                "x": 1603.145299145299,
+                "y": 34.94444444444443
+            },
+            "type": "roll-flat"
+        },
+        {
+            "id": "A8jq1RPIZc1GB9Y8",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1527.8888888888887,
+                "y": 259.6388888888888
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "EyZqXxSKLPxhxQbl",
+            "inputs": {
+                "option": {
+                    "value": "armor:rune:property:greater-fortification"
+                },
+                "target": {
+                    "connection": "MtXV8KeSntTa0Lvu:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "MEmi6mNbfOUfrJWa:ins:in"
+                }
+            },
+            "position": {
+                "x": 1455.8119658119658,
+                "y": 359.2777777777776
+            },
+            "type": "has-option"
+        },
+        {
+            "id": "MtXV8KeSntTa0Lvu",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1327.8888888888887,
+                "y": 486.30555555555566
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "MEmi6mNbfOUfrJWa",
+            "inputs": {
+                "dc": {
+                    "value": 14
+                },
+                "target": {
+                    "connection": "A8jq1RPIZc1GB9Y8:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "KH5aQLBFt96jtv2j:ins:in"
+                }
+            },
+            "position": {
+                "x": 1708.7008547008545,
+                "y": 351.61111111111103
+            },
+            "type": "roll-flat"
+        },
+        {
+            "id": "KH5aQLBFt96jtv2j",
+            "inputs": {
+                "author": {
+                    "connection": "FoFLKWRMoWFk3WIh:outputs:user"
+                },
+                "localization": {
+                    "value": "TRIGGERTROVE.Fortification.Trigger.AttackRolled.CreateChatMessage"
+                },
+                "speaker": {
+                    "connection": "uCd0vduyMsheW9Oh:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1991.2564102564097,
+                "y": 39.73333333333335
+            },
+            "state": "localization",
+            "type": "create-message"
+        },
+        {
+            "id": "FoFLKWRMoWFk3WIh",
+            "position": {
+                "x": 1708.777777777777,
+                "y": 184.75000000000006
+            },
+            "type": "user-value"
+        },
+        {
+            "id": "uCd0vduyMsheW9Oh",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1854.555555555555,
+                "y": 257.41666666666663
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "jDi7PfhVYloOxbfN",
+            "inputs": {
+                "entry": {
+                    "connection": "uTrTa15m4bAvf7ev:outputs:target"
+                }
+            },
+            "position": {
+                "x": 817.8888888888891,
+                "y": 360.7500000000001
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "uTrTa15m4bAvf7ev:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "uTrTa15m4bAvf7ev:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

@@ -1,0 +1,319 @@
+{
+    "folder": "Monster Abilities",
+    "id": "74Cpvh2e4fquwb7y",
+    "name": "Frightful Presence",
+    "nodes": [
+        {
+            "id": "piytUEB6IEI1ozfV",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "frightful-presence"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "XQepDiTneS0N2IYf:ins:in"
+                }
+            },
+            "position": {
+                "x": 485,
+                "y": 300
+            },
+            "type": "aura-enter-event"
+        },
+        {
+            "id": "XQepDiTneS0N2IYf",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-frightful-presence-immunity"
+                },
+                "target": {
+                    "connection": "piytUEB6IEI1ozfV:outputs:target"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "9YEiJkHJhscROlDb:ins:in"
+                }
+            },
+            "position": {
+                "x": 828.9230769230769,
+                "y": 197.39999999999998
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "JuqVMiBPmNuSBfs5",
+            "inputs": {
+                "item": {
+                    "connection": "9YEiJkHJhscROlDb:outputs:item"
+                },
+                "parent": {
+                    "connection": "9YEiJkHJhscROlDb:outputs:item"
+                },
+                "targets": {
+                    "connection": "J6Hd4mJVnwVqFolb:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "G3P8DappG0rPKTpZ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1392.923076923077,
+                "y": 384.5
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "9YEiJkHJhscROlDb",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu"
+                },
+                "target": {
+                    "connection": "piytUEB6IEI1ozfV:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "JuqVMiBPmNuSBfs5:ins:in"
+                }
+            },
+            "position": {
+                "x": 1103.923076923077,
+                "y": 321.4
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "J6Hd4mJVnwVqFolb",
+            "inputs": {
+                "entry": {
+                    "connection": "piytUEB6IEI1ozfV:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1276,
+                "y": 565.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "G3P8DappG0rPKTpZ",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Frightful Presence Immunity"
+                },
+                "origin": {
+                    "connection": "J6Hd4mJVnwVqFolb:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/control/fear-fright-monster-grin-red-orange.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-frightful-presence-immunity"
+                },
+                "target": {
+                    "connection": "J6Hd4mJVnwVqFolb:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 1615.6373626373627,
+                "y": 500.11428571428564
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "3OdiErldhVldb5lD",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:frightful-presence"
+                },
+                "list": {
+                    "connection": "lY5M22SS7dhfI3ic:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Oo1OvuWP4YKQwedo:ins:in"
+                }
+            },
+            "position": {
+                "x": 757.9166666666664,
+                "y": -146.66666666666646
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "Oo1OvuWP4YKQwedo",
+            "inputs": {
+                "input": {
+                    "connection": "vQ9GsYT8O391pqmK:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "0Ula7f8P3MmRN8je:ins:in"
+                },
+                "failure": {
+                    "connection": "FDC3uZW3mfoQzPYB:ins:in"
+                },
+                "success": {
+                    "connection": "2hGEC0M4truYuwUz:ins:in"
+                }
+            },
+            "position": {
+                "x": 982.4230769230769,
+                "y": -151.41666666666652
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "FDC3uZW3mfoQzPYB",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "bZ03b6tTd6Z67Hkg:outputs:entry"
+                },
+                "value": {
+                    "value": 2
+                }
+            },
+            "position": {
+                "x": 1399.200854700855,
+                "y": -118.24999999999994
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "0Ula7f8P3MmRN8je",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 4
+                },
+                "target": {
+                    "connection": "bZ03b6tTd6Z67Hkg:outputs:entry"
+                },
+                "value": {
+                    "value": 4
+                }
+            },
+            "position": {
+                "x": 1401.2008547008547,
+                "y": -291.527777777778
+            },
+            "type": "increase-condition"
+        },
+        {
+            "id": "lY5M22SS7dhfI3ic",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "3OdiErldhVldb5lD:ins:in"
+                }
+            },
+            "position": {
+                "x": 497.91666666666646,
+                "y": -174.16666666666652
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "vQ9GsYT8O391pqmK",
+            "inputs": {
+                "entry": {
+                    "connection": "lY5M22SS7dhfI3ic:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 837.083333333333,
+                "y": -0.2499999999998863
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "bZ03b6tTd6Z67Hkg",
+            "inputs": {
+                "entry": {
+                    "connection": "lY5M22SS7dhfI3ic:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1660.2225829725824,
+                "y": -48.85858585858591
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "2hGEC0M4truYuwUz",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 1
+                },
+                "target": {
+                    "connection": "bZ03b6tTd6Z67Hkg:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1402.200854700855,
+                "y": 58.75
+            },
+            "type": "increase-condition"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "lY5M22SS7dhfI3ic:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "lY5M22SS7dhfI3ic:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "piytUEB6IEI1ozfV:outputs:source": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        },
+        "piytUEB6IEI1ozfV:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

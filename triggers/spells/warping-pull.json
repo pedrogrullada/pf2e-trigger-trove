@@ -1,0 +1,58 @@
+{
+    "folder": "Spells",
+    "id": "lf3sXStkes61DBGV",
+    "name": "Warping Pull",
+    "nodes": [
+        {
+            "id": "CirbsbDeJo9gawXa",
+            "outs": {
+                "out": {
+                    "connection": "7bZOBQzrJN9CDm4P:ins:in"
+                }
+            },
+            "position": {
+                "x": 336,
+                "y": 317
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "7bZOBQzrJN9CDm4P",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spell-effects.Item.uHNehgyXeNsdd3or"
+                },
+                "target": {
+                    "connection": "CirbsbDeJo9gawXa:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "jQgoW8Cv0f54TtTI:ins:in"
+                }
+            },
+            "position": {
+                "x": 597.9230769230769,
+                "y": 341.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "jQgoW8Cv0f54TtTI",
+            "inputs": {
+                "item": {
+                    "connection": "7bZOBQzrJN9CDm4P:outputs:item"
+                }
+            },
+            "position": {
+                "x": 867,
+                "y": 335.25
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ]
+}

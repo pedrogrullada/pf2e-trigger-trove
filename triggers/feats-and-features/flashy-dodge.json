@@ -1,0 +1,126 @@
+{
+    "folder": "Feats & Features",
+    "id": "y9XaexhBp081KwLb",
+    "name": "Flashy Dodge",
+    "nodes": [
+        {
+            "id": "VvG8oEHxRsAaZSEy",
+            "outs": {
+                "out": {
+                    "connection": "OP5ExTcAgADD0LGB:ins:in"
+                }
+            },
+            "position": {
+                "x": 428,
+                "y": 355
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "OP5ExTcAgADD0LGB",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.TnYHtN9gQASqOnii"
+                },
+                "target": {
+                    "connection": "VvG8oEHxRsAaZSEy:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "fDzF92rxxMWdcglh:ins:in"
+                }
+            },
+            "position": {
+                "x": 667.25,
+                "y": 303.75
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "fDzF92rxxMWdcglh",
+            "inputs": {
+                "option": {
+                    "value": "flashy-dodge"
+                },
+                "target": {
+                    "connection": "VvG8oEHxRsAaZSEy:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "0pcBaVdtdt9HiWcL:ins:in"
+                }
+            },
+            "position": {
+                "x": 944.9230769230769,
+                "y": 444.5
+            },
+            "type": "has-option"
+        },
+        {
+            "id": "0pcBaVdtdt9HiWcL",
+            "inputs": {
+                "a": {
+                    "value": "failure"
+                },
+                "b": {
+                    "connection": "VvG8oEHxRsAaZSEy:outputs:outcome"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Rocyhr1Vz1huYBDx:ins:in"
+                }
+            },
+            "position": {
+                "x": 1173.923076923077,
+                "y": 521.5
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "Rocyhr1Vz1huYBDx",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.paKKHPds77fq5VTH"
+                },
+                "target": {
+                    "connection": "mJ7P8UdWCDT3bc3f:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1470,
+                "y": 560
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "mJ7P8UdWCDT3bc3f",
+            "inputs": {
+                "entry": {
+                    "connection": "VvG8oEHxRsAaZSEy:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1354,
+                "y": 663.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "VvG8oEHxRsAaZSEy:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

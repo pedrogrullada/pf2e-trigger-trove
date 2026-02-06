@@ -1,0 +1,367 @@
+{
+    "folder": "Equipment",
+    "id": "fMUmzNvlb7zSNvf7",
+    "name": "Rooting",
+    "nodes": [
+        {
+            "id": "2v667MGoPXco8vyv",
+            "outs": {
+                "out": {
+                    "connection": "T6D0EaWIzHYqLNXW:ins:in"
+                }
+            },
+            "position": {
+                "x": 431,
+                "y": 383
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "T6D0EaWIzHYqLNXW",
+            "inputs": {
+                "a": {
+                    "connection": "2v667MGoPXco8vyv:outputs:outcome"
+                },
+                "b": {
+                    "value": "criticalSuccess"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "hpXlwA6fqqQLnhzU:ins:in"
+                }
+            },
+            "position": {
+                "x": 660,
+                "y": 436.25
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "hpXlwA6fqqQLnhzU",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:rooting"
+                },
+                "list": {
+                    "connection": "62ZpywIm9yjRz1Ru:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "PQZ7es2UsM0tTw38:ins:in"
+                }
+            },
+            "position": {
+                "x": 985.4285714285713,
+                "y": 343.8571428571428
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "WcXWA6NnrcXFrD28",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:greater-rooting"
+                },
+                "list": {
+                    "connection": "62ZpywIm9yjRz1Ru:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "rVqQIaWzG7FKGI3J:ins:in"
+                }
+            },
+            "position": {
+                "x": 986,
+                "y": 477
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "TEaFtbHXBV8kNecL",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:major-rooting"
+                },
+                "list": {
+                    "connection": "62ZpywIm9yjRz1Ru:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "z1FwWIiL8ea1sZGv:ins:in"
+                }
+            },
+            "position": {
+                "x": 988,
+                "y": 608
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "X0DGKy5WuP3TouyF",
+            "inputs": {
+                "entry": {
+                    "value": "item:rune:property:true-rooting"
+                },
+                "list": {
+                    "connection": "62ZpywIm9yjRz1Ru:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "FCSH8SZBSFAjnGPp:ins:in"
+                }
+            },
+            "position": {
+                "x": 989,
+                "y": 739
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "62ZpywIm9yjRz1Ru",
+            "inputs": {
+                "entry": {
+                    "connection": "2v667MGoPXco8vyv:outputs:options"
+                }
+            },
+            "position": {
+                "x": 776,
+                "y": 599.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dkxDmdEpdsV7UfQi": {
+                        "id": "dkxDmdEpdsV7UfQi",
+                        "label": "Description Override",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "PQ6kF3wdFE1ChYJe": {
+                        "id": "PQ6kF3wdFE1ChYJe",
+                        "label": "Grant Immobilized",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "SWKsaNyJgBMFBIeP": {
+                        "id": "SWKsaNyJgBMFBIeP",
+                        "label": "Grant Clumsy",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "PQZ7es2UsM0tTw38",
+            "inputs": {
+                "dkxDmdEpdsV7UfQi": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.Rooting.Item.DescriptionOverride.Basic\"\n    }\n  ]\n}"
+                },
+                "img": {
+                    "value": "icons/magic/nature/root-vine-entangled-humanoid.webp"
+                },
+                "name": {
+                    "value": "Aux Effect: Rooting"
+                },
+                "PQ6kF3wdFE1ChYJe": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "SWKsaNyJgBMFBIeP": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "target": {
+                    "connection": "f6m43T2HdLfUnFs9:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1331.637362637362,
+                "y": 120.57857142857128
+            },
+            "type": "create-effect"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dkxDmdEpdsV7UfQi": {
+                        "id": "dkxDmdEpdsV7UfQi",
+                        "label": "Description Override",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "PQ6kF3wdFE1ChYJe": {
+                        "id": "PQ6kF3wdFE1ChYJe",
+                        "label": "Grant Immobilized",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "SWKsaNyJgBMFBIeP": {
+                        "id": "SWKsaNyJgBMFBIeP",
+                        "label": "Grant Clumsy",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "rVqQIaWzG7FKGI3J",
+            "inputs": {
+                "dkxDmdEpdsV7UfQi": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.Rooting.Item.DescriptionOverride.Greater\"\n    }\n  ]\n}"
+                },
+                "img": {
+                    "value": "icons/magic/nature/root-vine-entangled-humanoid.webp"
+                },
+                "name": {
+                    "value": "Aux Effect: Rooting"
+                },
+                "PQ6kF3wdFE1ChYJe": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "SWKsaNyJgBMFBIeP": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "target": {
+                    "connection": "f6m43T2HdLfUnFs9:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1579.7326007325996,
+                "y": 260.3523809523809
+            },
+            "type": "create-effect"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dkxDmdEpdsV7UfQi": {
+                        "id": "dkxDmdEpdsV7UfQi",
+                        "label": "Description Override",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "PQ6kF3wdFE1ChYJe": {
+                        "id": "PQ6kF3wdFE1ChYJe",
+                        "label": "Grant Immobilized",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "SWKsaNyJgBMFBIeP": {
+                        "id": "SWKsaNyJgBMFBIeP",
+                        "label": "Grant Clumsy",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "z1FwWIiL8ea1sZGv",
+            "inputs": {
+                "dkxDmdEpdsV7UfQi": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.Rooting.Item.DescriptionOverride.Major\"\n    }\n  ]\n}"
+                },
+                "img": {
+                    "value": "icons/magic/nature/root-vine-entangled-humanoid.webp"
+                },
+                "name": {
+                    "value": "Aux Effect: Rooting"
+                },
+                "PQ6kF3wdFE1ChYJe": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "SWKsaNyJgBMFBIeP": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "target": {
+                    "connection": "f6m43T2HdLfUnFs9:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1826.1254578754572,
+                "y": 388.5547619047618
+            },
+            "type": "create-effect"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dkxDmdEpdsV7UfQi": {
+                        "id": "dkxDmdEpdsV7UfQi",
+                        "label": "Description Override",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "PQ6kF3wdFE1ChYJe": {
+                        "id": "PQ6kF3wdFE1ChYJe",
+                        "label": "Grant Immobilized",
+                        "slug": "rule",
+                        "type": "text"
+                    },
+                    "SWKsaNyJgBMFBIeP": {
+                        "id": "SWKsaNyJgBMFBIeP",
+                        "label": "Grant Clumsy",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "FCSH8SZBSFAjnGPp",
+            "inputs": {
+                "dkxDmdEpdsV7UfQi": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.Rooting.Item.DescriptionOverride.True\"\n    }\n  ]\n}"
+                },
+                "img": {
+                    "value": "icons/magic/nature/root-vine-entangled-humanoid.webp"
+                },
+                "name": {
+                    "value": "Aux Effect: Rooting"
+                },
+                "PQ6kF3wdFE1ChYJe": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "SWKsaNyJgBMFBIeP": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "target": {
+                    "connection": "f6m43T2HdLfUnFs9:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2062.244505494505,
+                "y": 497.61428571428576
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "f6m43T2HdLfUnFs9",
+            "inputs": {
+                "entry": {
+                    "connection": "2v667MGoPXco8vyv:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1712.5887445887445,
+                "y": 50.43614718614779
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "2v667MGoPXco8vyv:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "2v667MGoPXco8vyv:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

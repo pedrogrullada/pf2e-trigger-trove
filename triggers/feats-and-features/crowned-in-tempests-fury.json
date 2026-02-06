@@ -1,0 +1,416 @@
+{
+    "folder": "Feats & Features",
+    "id": "26iLhTbqxsouOlkK",
+    "name": "Crowned in Tempest's Fury",
+    "nodes": [
+        {
+            "id": "jnD1RusZkyr3aDTY",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "kinetic-aura"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "S3Bm9FNqL8smuAJj:ins:in"
+                }
+            },
+            "position": {
+                "x": 389.9999999999999,
+                "y": 411.1666666666666
+            },
+            "type": "aura-enter-event"
+        },
+        {
+            "id": "TYtjt5HVE0B7NjI9",
+            "outs": {
+                "out": {
+                    "connection": "M2GLMbRsgW6GDBZe:ins:in"
+                }
+            },
+            "position": {
+                "x": 395.86580086580057,
+                "y": 717.6893939393938
+            },
+            "type": "turn-end-event"
+        },
+        {
+            "id": "M2GLMbRsgW6GDBZe",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "kinetic-aura"
+                },
+                "target": {
+                    "connection": "TYtjt5HVE0B7NjI9:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "jQ3WJL6T4KPkhkzu:ins:in"
+                }
+            },
+            "position": {
+                "x": 645.5464535464533,
+                "y": 567.9378787878786
+            },
+            "type": "inside-aura"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "5Rxrw90zCnb2SP8d": {
+                        "id": "5Rxrw90zCnb2SP8d",
+                        "isArray": false,
+                        "label": "Damage Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "q9ZqzN08bWrL2ibx": {
+                        "id": "q9ZqzN08bWrL2ibx",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                },
+                "title": "Confirm Damage"
+            },
+            "id": "mgpBr0Pnyinna11t",
+            "outs": {
+                "out": {
+                    "connection": "Irfb9oMynsqbhuI4:ins:in"
+                }
+            },
+            "position": {
+                "x": 388.08333333333326,
+                "y": 852.9166666666664
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "id": "Irfb9oMynsqbhuI4",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.8iHpUB0bYaHh86Kk"
+                },
+                "target": {
+                    "connection": "mgpBr0Pnyinna11t:outputs:q9ZqzN08bWrL2ibx"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "TR0rKViCCDguDbIz:ins:in"
+                }
+            },
+            "position": {
+                "x": 636.1547619047617,
+                "y": 867.8095238095235
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "TR0rKViCCDguDbIz",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.woKCbf1kXPrPjeZG"
+                },
+                "target": {
+                    "connection": "yu1xlXV8zhCqRI6x:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "QvwfqJi8TwH0M1za:ins:in"
+                }
+            },
+            "position": {
+                "x": 901.8556166056164,
+                "y": 891.542857142857
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "QvwfqJi8TwH0M1za",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd"
+                },
+                "target": {
+                    "connection": "mMxbG1mSmpDetOdq:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "LPWUeMX00seu9CAz:ins:in"
+                },
+                "true": {
+                    "connection": "2aWThNVuw596fg1i:ins:in"
+                }
+            },
+            "position": {
+                "x": 1173.5541403041402,
+                "y": 947.2654678654675
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "YPIhYEDQSUT2XxFg": {
+                        "id": "YPIhYEDQSUT2XxFg",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "SE Origin",
+                        "slug": "path",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "2aWThNVuw596fg1i",
+            "inputs": {
+                "input": {
+                    "connection": "QvwfqJi8TwH0M1za:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "kEjx6o2gycf24zkF:ins:in"
+                }
+            },
+            "position": {
+                "x": 1490.1462148962141,
+                "y": 879.8942557442554
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "LPWUeMX00seu9CAz",
+            "inputs": {
+                "formula": {
+                    "value": "2d12[electricity]"
+                },
+                "item": {
+                    "connection": "gLTpFz4ZumSS3EYl:outputs:entry"
+                },
+                "origin": {
+                    "connection": "VDWjtfEky5gWfuIM:outputs:entry"
+                },
+                "targets": {
+                    "connection": "SstBqc9qQkfL9GAl:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1994.2916346209674,
+                "y": 950.8818640080243
+            },
+            "type": "roll-damage"
+        },
+        {
+            "id": "kEjx6o2gycf24zkF",
+            "inputs": {
+                "a": {
+                    "connection": "2aWThNVuw596fg1i:outputs:YPIhYEDQSUT2XxFg"
+                },
+                "b": {
+                    "connection": "7sStFoIZ6K1y2Yt0:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "LPWUeMX00seu9CAz:ins:in"
+                }
+            },
+            "position": {
+                "x": 1722.3410764072516,
+                "y": 824.9053887289176
+            },
+            "type": "actors-match"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "5Rxrw90zCnb2SP8d": {
+                        "id": "5Rxrw90zCnb2SP8d",
+                        "isArray": false,
+                        "label": "Damage Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "q9ZqzN08bWrL2ibx": {
+                        "id": "q9ZqzN08bWrL2ibx",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "S3Bm9FNqL8smuAJj",
+            "inputs": {
+                "5Rxrw90zCnb2SP8d": {
+                    "connection": "jnD1RusZkyr3aDTY:outputs:target"
+                },
+                "q9ZqzN08bWrL2ibx": {
+                    "connection": "jnD1RusZkyr3aDTY:outputs:source"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "mgpBr0Pnyinna11t:ins:in"
+                }
+            },
+            "position": {
+                "x": 697.9577922077918,
+                "y": 410.28427128427126
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "5Rxrw90zCnb2SP8d": {
+                        "id": "5Rxrw90zCnb2SP8d",
+                        "isArray": false,
+                        "label": "Damage Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "q9ZqzN08bWrL2ibx": {
+                        "id": "q9ZqzN08bWrL2ibx",
+                        "isArray": false,
+                        "label": "Aura Source",
+                        "slug": "entry",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "jQ3WJL6T4KPkhkzu",
+            "inputs": {
+                "5Rxrw90zCnb2SP8d": {
+                    "connection": "TYtjt5HVE0B7NjI9:outputs:combatant"
+                },
+                "q9ZqzN08bWrL2ibx": {
+                    "connection": "M2GLMbRsgW6GDBZe:outputs:source"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "mgpBr0Pnyinna11t:ins:in"
+                }
+            },
+            "position": {
+                "x": 1007.9414751914751,
+                "y": 701.2691197691198
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "yu1xlXV8zhCqRI6x",
+            "inputs": {
+                "entry": {
+                    "connection": "mgpBr0Pnyinna11t:outputs:q9ZqzN08bWrL2ibx"
+                }
+            },
+            "position": {
+                "x": 735.2608225108228,
+                "y": 1040.3676046176047
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "mMxbG1mSmpDetOdq",
+            "inputs": {
+                "entry": {
+                    "connection": "mgpBr0Pnyinna11t:outputs:5Rxrw90zCnb2SP8d"
+                }
+            },
+            "position": {
+                "x": 1003.3517316017318,
+                "y": 1063.8221500721502
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "7sStFoIZ6K1y2Yt0",
+            "inputs": {
+                "entry": {
+                    "connection": "mgpBr0Pnyinna11t:outputs:q9ZqzN08bWrL2ibx"
+                }
+            },
+            "position": {
+                "x": 1568.6244588744587,
+                "y": 972.9130591630593
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "VDWjtfEky5gWfuIM",
+            "inputs": {
+                "entry": {
+                    "connection": "mgpBr0Pnyinna11t:outputs:q9ZqzN08bWrL2ibx"
+                }
+            },
+            "position": {
+                "x": 1824.0790043290044,
+                "y": 1077.4585137085137
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "SstBqc9qQkfL9GAl",
+            "inputs": {
+                "entry": {
+                    "connection": "mgpBr0Pnyinna11t:outputs:5Rxrw90zCnb2SP8d"
+                }
+            },
+            "position": {
+                "x": 1806.988095238095,
+                "y": 1117.4585137085141
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "gLTpFz4ZumSS3EYl",
+            "inputs": {
+                "entry": {
+                    "connection": "Irfb9oMynsqbhuI4:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1862.715367965368,
+                "y": 1167.4585137085141
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "Irfb9oMynsqbhuI4:outputs:item": {
+            "isArray": false,
+            "label": "Item",
+            "type": "item"
+        },
+        "mgpBr0Pnyinna11t:outputs:5Rxrw90zCnb2SP8d": {
+            "isArray": false,
+            "label": "Damage Target",
+            "type": "target"
+        },
+        "mgpBr0Pnyinna11t:outputs:q9ZqzN08bWrL2ibx": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        }
+    }
+}

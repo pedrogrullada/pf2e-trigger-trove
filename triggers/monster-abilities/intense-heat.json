@@ -1,0 +1,174 @@
+{
+    "folder": "Monster Abilities",
+    "id": "w93aoiI4fY81sqYj",
+    "name": "Intense Heat",
+    "nodes": [
+        {
+            "id": "tRoXVDYEBVV4tNHB",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "intense-heat"
+                },
+                "when": {
+                    "value": "combat"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "uEwiQ4fhbizoEZ9j:ins:in"
+                }
+            },
+            "position": {
+                "x": 370.0000000000001,
+                "y": 354.00000000000006
+            },
+            "type": "aura-enter-event"
+        },
+        {
+            "id": "uEwiQ4fhbizoEZ9j",
+            "inputs": {
+                "slug": {
+                    "value": "intense-heat"
+                },
+                "target": {
+                    "connection": "tRoXVDYEBVV4tNHB:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "cPoJf6OA87X0eNeV:ins:in"
+                }
+            },
+            "position": {
+                "x": 678.9230769230767,
+                "y": 299.0666666666666
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "cPoJf6OA87X0eNeV",
+            "inputs": {
+                "item": {
+                    "connection": "uEwiQ4fhbizoEZ9j:outputs:item"
+                },
+                "parent": {
+                    "connection": "uEwiQ4fhbizoEZ9j:outputs:item"
+                },
+                "targets": {
+                    "connection": "tRoXVDYEBVV4tNHB:outputs:target"
+                }
+            },
+            "position": {
+                "x": 969.6666666666664,
+                "y": 381.5833333333332
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "KZadi2k777NYIXcQ",
+            "inputs": {
+                "slug": {
+                    "value": "intense-heat"
+                },
+                "target": {
+                    "connection": "PWCuut3sGDYY6xWN:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "NSeLJoJT89DJ3HNy:ins:in"
+                }
+            },
+            "position": {
+                "x": 890.2033799533791,
+                "y": 613.4277777777775
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "NSeLJoJT89DJ3HNy",
+            "inputs": {
+                "item": {
+                    "connection": "KZadi2k777NYIXcQ:outputs:item"
+                },
+                "parent": {
+                    "connection": "KZadi2k777NYIXcQ:outputs:item"
+                },
+                "targets": {
+                    "connection": "gTtS1AwWXirenNGb:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1189.8358585858577,
+                "y": 662.6111111111107
+            },
+            "type": "send-chat"
+        },
+        {
+            "id": "sV9v678cDc103c41",
+            "outs": {
+                "out": {
+                    "connection": "PWCuut3sGDYY6xWN:ins:in"
+                }
+            },
+            "position": {
+                "x": 365.4172494172492,
+                "y": 524.6730769230771
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "PWCuut3sGDYY6xWN",
+            "inputs": {
+                "affects": {
+                    "value": "all"
+                },
+                "slug": {
+                    "value": "intense-heat"
+                },
+                "target": {
+                    "connection": "sV9v678cDc103c41:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "KZadi2k777NYIXcQ:ins:in"
+                }
+            },
+            "position": {
+                "x": 576.4248251748251,
+                "y": 561.5554001554001
+            },
+            "type": "inside-aura"
+        },
+        {
+            "id": "gTtS1AwWXirenNGb",
+            "inputs": {
+                "entry": {
+                    "connection": "sV9v678cDc103c41:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 998.4904817404816,
+                "y": 742.2892385392383
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "sV9v678cDc103c41:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        }
+    }
+}

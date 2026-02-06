@@ -1,0 +1,58 @@
+{
+    "folder": "Spells",
+    "id": "8YJWoyjpK3wDkrkA",
+    "name": "Flame Barrier",
+    "nodes": [
+        {
+            "id": "se3LzbJHcKsjNrXh",
+            "outs": {
+                "out": {
+                    "connection": "inOLToivKytDoDl6:ins:in"
+                }
+            },
+            "position": {
+                "x": 451,
+                "y": 189
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "inOLToivKytDoDl6",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spell-effects.Item.UXdt1WVA66oZOoZS"
+                },
+                "target": {
+                    "connection": "se3LzbJHcKsjNrXh:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "yqplF8j1SHHKUdCP:ins:in"
+                }
+            },
+            "position": {
+                "x": 712,
+                "y": 225
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "yqplF8j1SHHKUdCP",
+            "inputs": {
+                "item": {
+                    "connection": "inOLToivKytDoDl6:outputs:item"
+                }
+            },
+            "position": {
+                "x": 983,
+                "y": 267.25
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ]
+}

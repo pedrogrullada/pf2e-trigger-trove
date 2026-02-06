@@ -1,7 +1,7 @@
 {
     "folder": "Spells",
-    "id": "YLvgeM3yhtoR7EdZ",
-    "name": "Mirror Image",
+    "id": "JxSdkq01f4OJAy6b",
+    "name": "Trickster's Mirrors",
     "nodes": [
         {
             "id": "LJxG8nsNHbiHTMa9",
@@ -20,7 +20,7 @@
             "id": "b54icspwqq7bgwSv",
             "inputs": {
                 "pf2e": {
-                    "value": "Compendium.pf2e.spell-effects.Item.0PO5mFRhh9HxGAtv"
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ"
                 },
                 "target": {
                     "connection": "LJxG8nsNHbiHTMa9:outputs:target"
@@ -84,7 +84,7 @@
                     "connection": "hvN98bW8tkG2fEXb:outputs:entry"
                 },
                 "pf2e": {
-                    "value": "Compendium.pf2e.spell-effects.Item.0PO5mFRhh9HxGAtv"
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ"
                 },
                 "target": {
                     "connection": "3PQWWDOlmmuEiYUs:outputs:entry"
@@ -92,7 +92,7 @@
             },
             "outs": {
                 "out": {
-                    "connection": "ZHKnZ4zptzbWkNyF:ins:in"
+                    "connection": "2b96izvFqjBjGKta:ins:in"
                 }
             },
             "position": {
@@ -236,44 +236,6 @@
             "type": "__variable_getter__"
         },
         {
-            "id": "ZHKnZ4zptzbWkNyF",
-            "inputs": {
-                "author": {
-                    "connection": "LMTmtv1rPDbcQDxf:outputs:entry"
-                },
-                "localization": {
-                    "value": "TRIGGERTROVE.MirrorImage.Trigger.AttackRolled.Note.Miss"
-                },
-                "speaker": {
-                    "connection": "LMTmtv1rPDbcQDxf:outputs:entry"
-                }
-            },
-            "outs": {
-                "out": {
-                    "connection": "bjM5o4jG7gWoDlpm:ins:in"
-                }
-            },
-            "position": {
-                "x": 2392.7582972582986,
-                "y": 361.0411758176467
-            },
-            "state": "localization",
-            "type": "create-message"
-        },
-        {
-            "id": "LMTmtv1rPDbcQDxf",
-            "inputs": {
-                "entry": {
-                    "connection": "LJxG8nsNHbiHTMa9:outputs:target"
-                }
-            },
-            "position": {
-                "x": 2218,
-                "y": 527.75
-            },
-            "type": "__variable_getter__"
-        },
-        {
             "custom": {
                 "outputs": {
                     "vw6axQUnYKwWIz0c": {
@@ -298,8 +260,8 @@
                 }
             },
             "position": {
-                "x": 2624.5104895104896,
-                "y": 412.13986013985993
+                "x": 3487.704933954934,
+                "y": 546.0287490287487
             },
             "type": "extract-item"
         },
@@ -311,8 +273,8 @@
                 }
             },
             "position": {
-                "x": 2508,
-                "y": 548.75
+                "x": 3370.0833333333335,
+                "y": 677.0833333333333
             },
             "type": "__variable_getter__"
         },
@@ -329,8 +291,8 @@
                 }
             },
             "position": {
-                "x": 2860,
-                "y": 458.25
+                "x": 3722.0833333333335,
+                "y": 586.5833333333333
             },
             "type": "compare-numbers"
         },
@@ -342,8 +304,8 @@
                 }
             },
             "position": {
-                "x": 3105.923076923077,
-                "y": 498.5
+                "x": 3968.0064102564106,
+                "y": 626.8333333333333
             },
             "type": "delete-item"
         },
@@ -355,8 +317,8 @@
                 }
             },
             "position": {
-                "x": 2988,
-                "y": 618.75
+                "x": 3850.0833333333335,
+                "y": 747.0833333333333
             },
             "type": "__variable_getter__"
         },
@@ -372,6 +334,197 @@
                 "y": 417.75
             },
             "type": "__variable_getter__"
+        },
+        {
+            "id": "cNlGMYR10xuSdkE6",
+            "inputs": {
+                "basic": {
+                    "value": true
+                },
+                "formula": {
+                    "value": "(ceil(@actor.level / 2))d4[mental]"
+                },
+                "item": {
+                    "connection": "9bOBUgE1WI6wxfuS:outputs:item"
+                },
+                "note": {
+                    "value": "<p>@Localize[TRIGGERTROVE.TrickstersMirrors.Trigger.Note.Miss]</p>"
+                },
+                "origin": {
+                    "connection": "fkB4gutwgv6vwNWR:outputs:entry"
+                },
+                "save": {
+                    "value": "will"
+                },
+                "targets": {
+                    "connection": "WQr6QCE089mg3i55:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "bjM5o4jG7gWoDlpm:ins:in"
+                }
+            },
+            "position": {
+                "x": 3185.8321678321677,
+                "y": 245.21818181818188
+            },
+            "state": "none",
+            "type": "roll-damage"
+        },
+        {
+            "id": "9bOBUgE1WI6wxfuS",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spells-srd.Item.cuKVbWWNzJj1GDpZ"
+                }
+            },
+            "position": {
+                "x": 2735.969696969697,
+                "y": 293.4040404040403
+            },
+            "type": "item-value"
+        },
+        {
+            "id": "2b96izvFqjBjGKta",
+            "inputs": {
+                "a": {
+                    "connection": "2o6PbmJKvZVvGH4l:outputs:entry"
+                },
+                "b": {
+                    "connection": "ubh4IUWg3UbZ2BZk:outputs:entry"
+                },
+                "strict": {
+                    "value": true
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "qabKYEgG3GGyo22T:ins:in"
+                }
+            },
+            "position": {
+                "x": 2359.939310689311,
+                "y": 373.47467532467533
+            },
+            "type": "distance-between"
+        },
+        {
+            "id": "2o6PbmJKvZVvGH4l",
+            "inputs": {
+                "entry": {
+                    "connection": "LJxG8nsNHbiHTMa9:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 2214.392857142857,
+                "y": 497.1493506493508
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ubh4IUWg3UbZ2BZk",
+            "inputs": {
+                "entry": {
+                    "connection": "LJxG8nsNHbiHTMa9:outputs:target"
+                }
+            },
+            "position": {
+                "x": 2214.392857142857,
+                "y": 535.9805194805198
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "qabKYEgG3GGyo22T",
+            "inputs": {
+                "a": {
+                    "connection": "2b96izvFqjBjGKta:outputs:distance"
+                },
+                "b": {
+                    "value": 5
+                },
+                "compare": {
+                    "value": "lte"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "rTu0Q7UvoRczXi6I:ins:in"
+                },
+                "true": {
+                    "connection": "cNlGMYR10xuSdkE6:ins:in"
+                }
+            },
+            "position": {
+                "x": 2650.146103896104,
+                "y": 441.58441558441564
+            },
+            "type": "compare-numbers"
+        },
+        {
+            "id": "WQr6QCE089mg3i55",
+            "inputs": {
+                "entry": {
+                    "connection": "LJxG8nsNHbiHTMa9:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 2990.886363636363,
+                "y": 407.4090909090911
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "fkB4gutwgv6vwNWR",
+            "inputs": {
+                "entry": {
+                    "connection": "LJxG8nsNHbiHTMa9:outputs:target"
+                }
+            },
+            "position": {
+                "x": 2991.7954545454545,
+                "y": 281.9545454545457
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "rTu0Q7UvoRczXi6I",
+            "inputs": {
+                "author": {
+                    "connection": "vBtXPgv8JPbAy0nz:outputs:entry"
+                },
+                "localization": {
+                    "value": "TRIGGERTROVE.TrickstersMirrors.Trigger.Note.MissNoDamage"
+                },
+                "speaker": {
+                    "connection": "vBtXPgv8JPbAy0nz:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "bjM5o4jG7gWoDlpm:ins:in"
+                }
+            },
+            "position": {
+                "x": 3014.1149961149968,
+                "y": 658.3675324675328
+            },
+            "state": "localization",
+            "type": "create-message"
+        },
+        {
+            "id": "vBtXPgv8JPbAy0nz",
+            "inputs": {
+                "entry": {
+                    "connection": "LJxG8nsNHbiHTMa9:outputs:target"
+                }
+            },
+            "position": {
+                "x": 2803.720057720058,
+                "y": 788.027777777778
+            },
+            "type": "__variable_getter__"
         }
     ],
     "priority": 0,
@@ -383,6 +536,11 @@
             "isArray": false,
             "label": "Item",
             "type": "item"
+        },
+        "LJxG8nsNHbiHTMa9:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
         },
         "LJxG8nsNHbiHTMa9:outputs:outcome": {
             "isArray": false,
