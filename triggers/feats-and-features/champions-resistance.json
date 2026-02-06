@@ -21,6 +21,9 @@
             "inputs": {
                 "pf2e": {
                     "value": "Compendium.pf2e.feat-effects.Item.DawVHfoPKbPJsz4k"
+                },
+                "target": {
+                    "connection": "e5AEGHgEYhvuegPO:outputs:target"
                 }
             },
             "outs": {
@@ -41,15 +44,256 @@
                     "connection": "A5nYw6br9Qu4xgN7:outputs:item"
                 }
             },
+            "outs": {
+                "out": {
+                    "connection": "EZTatzbIcNSNAPV3:ins:in"
+                }
+            },
             "position": {
                 "x": 964.444444444444,
                 "y": 299.69444444444434
             },
             "type": "delete-item"
+        },
+        {
+            "id": "xvzWuZc1ftFTNkB4",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.actionspf2e.Item.tuZnRWHixLArvaIf"
+                },
+                "target": {
+                    "connection": "EZTatzbIcNSNAPV3:outputs:wluUAbMcMcCfQEvF"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "R8btMrjuR6ILiJXy:ins:in"
+                }
+            },
+            "position": {
+                "x": 1386.923076923077,
+                "y": 413.4
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "wluUAbMcMcCfQEvF": {
+                        "id": "wluUAbMcMcCfQEvF",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "Effect Origin",
+                        "slug": "path",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "EZTatzbIcNSNAPV3",
+            "inputs": {
+                "input": {
+                    "connection": "A5nYw6br9Qu4xgN7:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "xvzWuZc1ftFTNkB4:ins:in"
+                }
+            },
+            "position": {
+                "x": 1170.923076923077,
+                "y": 378.4
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "R8btMrjuR6ILiJXy",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.2c9awqDem5OLK47S"
+                },
+                "target": {
+                    "connection": "oNFVwpE1bqRsZMcF:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "xeKAIrtbPnXMwvNe:ins:in"
+                },
+                "true": {
+                    "connection": "HaSRrzoN73iOtUPr:ins:in"
+                }
+            },
+            "position": {
+                "x": 1661.923076923077,
+                "y": 249.39999999999998
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "oNFVwpE1bqRsZMcF",
+            "inputs": {
+                "entry": {
+                    "connection": "EZTatzbIcNSNAPV3:outputs:wluUAbMcMcCfQEvF"
+                }
+            },
+            "position": {
+                "x": 1498.5357142857144,
+                "y": 209.42857142857156
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "HaSRrzoN73iOtUPr",
+            "inputs": {
+                "localization": {
+                    "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Prompt"
+                },
+                "title": {
+                    "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Title"
+                },
+                "user": {
+                    "connection": "oNFVwpE1bqRsZMcF:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "xeKAIrtbPnXMwvNe:ins:in"
+                },
+                "true": {
+                    "connection": "6ch6M3N1iqwGKpC5:ins:in"
+                }
+            },
+            "position": {
+                "x": 2053.7629870129877,
+                "y": 142.39500499500525
+            },
+            "state": "localization",
+            "type": "await-confirm"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "wgNHGLOcB7g0N0pc": {
+                        "id": "wgNHGLOcB7g0N0pc",
+                        "label": "GrantItem",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "xeKAIrtbPnXMwvNe",
+            "inputs": {
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "name": {
+                    "value": "Effect: Glimpse of Redemption (Enfeebled)"
+                },
+                "origin": {
+                    "connection": "LbegBIDcWOhkw3v3:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-glimpse-of-redemption-enfeebled"
+                },
+                "target": {
+                    "connection": "LbegBIDcWOhkw3v3:outputs:entry"
+                },
+                "wgNHGLOcB7g0N0pc": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7\",\n  \"inMemoryOnly\": true,\n  \"alterations\": [\n    {\n      \"mode\": \"upgrade\",\n      \"value\": 2,\n      \"property\": \"badge-value\"\n    }\n  ]\n}"
+                }
+            },
+            "position": {
+                "x": 2446.367687867688,
+                "y": 276.4394494394497
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "LbegBIDcWOhkw3v3",
+            "inputs": {
+                "entry": {
+                    "connection": "e5AEGHgEYhvuegPO:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 2286.3045565545567,
+                "y": 439.8510656010658
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "wgNHGLOcB7g0N0pc": {
+                        "id": "wgNHGLOcB7g0N0pc",
+                        "label": "GrantItem",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "6ch6M3N1iqwGKpC5",
+            "inputs": {
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "name": {
+                    "value": "Effect: Glimpse of Redemption (Stupefied)"
+                },
+                "origin": {
+                    "connection": "nZIHMGMqcZiC8NUU:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-glimpse-of-redemption-stupefied"
+                },
+                "target": {
+                    "connection": "nZIHMGMqcZiC8NUU:outputs:entry"
+                },
+                "wgNHGLOcB7g0N0pc": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg\",\n  \"inMemoryOnly\": true,\n  \"alterations\": [\n    {\n      \"mode\": \"upgrade\",\n      \"value\": 2,\n      \"property\": \"badge-value\"\n    }\n  ]\n}"
+                }
+            },
+            "position": {
+                "x": 2451.9232434232435,
+                "y": -170.22721722721704
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "nZIHMGMqcZiC8NUU",
+            "inputs": {
+                "entry": {
+                    "connection": "e5AEGHgEYhvuegPO:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 2277.0116272616265,
+                "y": -9.340853590853271
+            },
+            "type": "__variable_getter__"
         }
     ],
     "priority": 0,
     "tags": [
         "pf2e"
-    ]
+    ],
+    "variables": {
+        "e5AEGHgEYhvuegPO:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "EZTatzbIcNSNAPV3:outputs:wluUAbMcMcCfQEvF": {
+            "isArray": false,
+            "label": "Effect Origin",
+            "type": "target"
+        }
+    }
 }

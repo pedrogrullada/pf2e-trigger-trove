@@ -1,0 +1,282 @@
+{
+    "folder": "Spells",
+    "id": "0vQIIQVLeVsOXeYt",
+    "name": "Nettleskin",
+    "nodes": [
+        {
+            "id": "PK2LxpKSt3jgxq4W",
+            "outs": {
+                "out": {
+                    "connection": "LMGEeCThgLZjDgkT:ins:in"
+                }
+            },
+            "position": {
+                "x": 252.75000000000023,
+                "y": 494.1071428571429
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "4ZDnFzLtzlLusonl",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.QrCwY1ylvvuzW7mb"
+                },
+                "target": {
+                    "connection": "isgqiGtzTYAWxNOD:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Umy3QNSzXAYvWQIN:ins:in"
+                }
+            },
+            "position": {
+                "x": 470.3461538461536,
+                "y": 751.8560439560435
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "elSuHg8rYIPbP4Nf",
+            "inputs": {
+                "options": {
+                    "connection": "UzRj4ZLUseU466rE:outputs:entry"
+                },
+                "predicate": {
+                    "value": "[\n  {\n    \"or\": [\n      \"item:melee\",\n      \"item:category:unarmed\"\n    ]\n  }\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "yLIB21Epd20d1scH:ins:in"
+                }
+            },
+            "position": {
+                "x": 1275.5556208497396,
+                "y": 955.2026355996948
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "yLIB21Epd20d1scH",
+            "inputs": {
+                "formula": {
+                    "value": "(ceil(@actor.level / 2))d4[piercing]"
+                },
+                "item": {
+                    "connection": "v3L1C9uhlrYQEugX:outputs:item"
+                },
+                "origin": {
+                    "connection": "Eli3yXw9QgmJe7BH:outputs:entry"
+                },
+                "targets": {
+                    "connection": "6ltOk6v3T5G05y7u:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1521.5556208497396,
+                "y": 975.3753628724223
+            },
+            "type": "roll-damage"
+        },
+        {
+            "id": "v3L1C9uhlrYQEugX",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spells-srd.Item.BA143r8fCqmSjdRf"
+                }
+            },
+            "position": {
+                "x": 1259.1779984721175,
+                "y": 1185.8162719633312
+            },
+            "type": "item-value"
+        },
+        {
+            "id": "LMGEeCThgLZjDgkT",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:nettleskin"
+                },
+                "list": {
+                    "connection": "PK2LxpKSt3jgxq4W:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "BFedss5wrlv97mII:ins:in"
+                }
+            },
+            "position": {
+                "x": 519.1271326712508,
+                "y": 435.0323614294207
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "BFedss5wrlv97mII",
+            "inputs": {
+                "by": {
+                    "value": -1
+                },
+                "effect": {
+                    "connection": "bJZ33cv6vKk050fG:outputs:item"
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.QrCwY1ylvvuzW7mb"
+                },
+                "target": {
+                    "connection": "PK2LxpKSt3jgxq4W:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 742.4453144894323,
+                "y": 538.667209914269
+            },
+            "state": "uuid",
+            "type": "effect-duration"
+        },
+        {
+            "id": "isgqiGtzTYAWxNOD",
+            "outs": {
+                "out": {
+                    "connection": "4ZDnFzLtzlLusonl:ins:in"
+                }
+            },
+            "position": {
+                "x": 245,
+                "y": 778.75
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "Umy3QNSzXAYvWQIN",
+            "inputs": {
+                "a": {
+                    "connection": "isgqiGtzTYAWxNOD:outputs:outcome"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "vPhZzf28d3VSHcKt:ins:in"
+                }
+            },
+            "position": {
+                "x": 744.2681090838984,
+                "y": 845.0755691676737
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "UzRj4ZLUseU466rE",
+            "inputs": {
+                "entry": {
+                    "connection": "isgqiGtzTYAWxNOD:outputs:options"
+                }
+            },
+            "position": {
+                "x": 1110,
+                "y": 1064.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Eli3yXw9QgmJe7BH",
+            "inputs": {
+                "entry": {
+                    "connection": "isgqiGtzTYAWxNOD:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1356,
+                "y": 1092.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "6ltOk6v3T5G05y7u",
+            "inputs": {
+                "entry": {
+                    "connection": "isgqiGtzTYAWxNOD:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1356,
+                "y": 1135.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "XgQpGcTsWecBoika",
+            "inputs": {
+                "entry": {
+                    "connection": "isgqiGtzTYAWxNOD:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 906.75,
+                "y": 1013
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "MjkoWmE2q76DwZIq",
+            "inputs": {
+                "entry": {
+                    "connection": "isgqiGtzTYAWxNOD:outputs:target"
+                }
+            },
+            "position": {
+                "x": 897.75,
+                "y": 1052
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "vPhZzf28d3VSHcKt",
+            "inputs": {
+                "origin": {
+                    "connection": "MjkoWmE2q76DwZIq:outputs:entry"
+                },
+                "target": {
+                    "connection": "XgQpGcTsWecBoika:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "elSuHg8rYIPbP4Nf:ins:in"
+                }
+            },
+            "position": {
+                "x": 1041,
+                "y": 906
+            },
+            "type": "in-range"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "isgqiGtzTYAWxNOD:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "isgqiGtzTYAWxNOD:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "isgqiGtzTYAWxNOD:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

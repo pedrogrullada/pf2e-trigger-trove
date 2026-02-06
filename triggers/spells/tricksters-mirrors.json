@@ -81,10 +81,7 @@
                     "value": -1
                 },
                 "effect": {
-                    "connection": "hvN98bW8tkG2fEXb:outputs:entry"
-                },
-                "pf2e": {
-                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ"
+                    "connection": "0T8YiQM7Xr8x0OFw:outputs:entry"
                 },
                 "target": {
                     "connection": "3PQWWDOlmmuEiYUs:outputs:entry"
@@ -99,7 +96,7 @@
                 "x": 2100.5951825951834,
                 "y": 311.6812742812742
             },
-            "state": "uuid",
+            "state": "item",
             "type": "effect-badge"
         },
         {
@@ -323,19 +320,6 @@
             "type": "__variable_getter__"
         },
         {
-            "id": "3PQWWDOlmmuEiYUs",
-            "inputs": {
-                "entry": {
-                    "connection": "LJxG8nsNHbiHTMa9:outputs:target"
-                }
-            },
-            "position": {
-                "x": 1898,
-                "y": 417.75
-            },
-            "type": "__variable_getter__"
-        },
-        {
             "id": "cNlGMYR10xuSdkE6",
             "inputs": {
                 "basic": {
@@ -523,6 +507,19 @@
             "position": {
                 "x": 2803.720057720058,
                 "y": 788.027777777778
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "0T8YiQM7Xr8x0OFw",
+            "inputs": {
+                "entry": {
+                    "connection": "b54icspwqq7bgwSv:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1930,
+                "y": 405.75
             },
             "type": "__variable_getter__"
         }

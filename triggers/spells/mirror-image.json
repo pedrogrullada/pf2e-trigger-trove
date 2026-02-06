@@ -81,10 +81,7 @@
                     "value": -1
                 },
                 "effect": {
-                    "connection": "hvN98bW8tkG2fEXb:outputs:entry"
-                },
-                "pf2e": {
-                    "value": "Compendium.pf2e.spell-effects.Item.0PO5mFRhh9HxGAtv"
+                    "connection": "UAHwwcPWpcOcCSbe:outputs:entry"
                 },
                 "target": {
                     "connection": "3PQWWDOlmmuEiYUs:outputs:entry"
@@ -99,7 +96,7 @@
                 "x": 2100.5951825951834,
                 "y": 311.6812742812742
             },
-            "state": "uuid",
+            "state": "item",
             "type": "effect-badge"
         },
         {
@@ -361,15 +358,15 @@
             "type": "__variable_getter__"
         },
         {
-            "id": "3PQWWDOlmmuEiYUs",
+            "id": "UAHwwcPWpcOcCSbe",
             "inputs": {
                 "entry": {
-                    "connection": "LJxG8nsNHbiHTMa9:outputs:target"
+                    "connection": "b54icspwqq7bgwSv:outputs:item"
                 }
             },
             "position": {
-                "x": 1898,
-                "y": 417.75
+                "x": 1923.666666666666,
+                "y": 417.19444444444434
             },
             "type": "__variable_getter__"
         }

@@ -1,0 +1,334 @@
+{
+    "folder": "Spells",
+    "id": "Hph9ffdsQvdJpuYI",
+    "name": "Vibrant Thorns",
+    "nodes": [
+        {
+            "id": "fxWQxeRkIeQ8TGES",
+            "outs": {
+                "out": {
+                    "connection": "5y2zP2133XroQlW4:ins:in"
+                }
+            },
+            "position": {
+                "x": 371,
+                "y": 242
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "5y2zP2133XroQlW4",
+            "inputs": {
+                "a": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:outcome"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "3nvV96SvKLpzMbZ5:ins:in"
+                }
+            },
+            "position": {
+                "x": 606,
+                "y": 288.25
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "3nvV96SvKLpzMbZ5",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.KGbXSyZzPE5i1O4N"
+                },
+                "target": {
+                    "connection": "t7dqN1EUtyp8vjwT:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "hxBx25Q1rvRWDv7A:ins:in"
+                }
+            },
+            "position": {
+                "x": 875.9230769230769,
+                "y": 305.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "t7dqN1EUtyp8vjwT",
+            "inputs": {
+                "entry": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:target"
+                }
+            },
+            "position": {
+                "x": 764,
+                "y": 430.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "hxBx25Q1rvRWDv7A",
+            "inputs": {
+                "entry": {
+                    "value": "item:melee"
+                },
+                "list": {
+                    "connection": "H5qpMgUtRzizlT0I:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "dZP3RbyLy9iMXvsa:ins:in"
+                }
+            },
+            "position": {
+                "x": 1151.923076923077,
+                "y": 337.5
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "H5qpMgUtRzizlT0I",
+            "inputs": {
+                "entry": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:options"
+                }
+            },
+            "position": {
+                "x": 988,
+                "y": 458.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "cQhCe3kgTIq0WVju",
+            "inputs": {
+                "entry": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1261,
+                "y": 237.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "r5ALiGFXbNbiD0Hj",
+            "inputs": {
+                "entry": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1260,
+                "y": 276.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "dZP3RbyLy9iMXvsa",
+            "inputs": {
+                "origin": {
+                    "connection": "r5ALiGFXbNbiD0Hj:outputs:entry"
+                },
+                "target": {
+                    "connection": "cQhCe3kgTIq0WVju:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "5vULJiycS2IrGEjM:ins:in"
+                },
+                "true": {
+                    "connection": "Wei9t4hRARcq84ZQ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1394,
+                "y": 239.25
+            },
+            "type": "in-range"
+        },
+        {
+            "id": "5vULJiycS2IrGEjM",
+            "inputs": {
+                "entry": {
+                    "value": "item:category:unarmed"
+                },
+                "list": {
+                    "connection": "ZjpxL92x6PnZJCGG:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Wei9t4hRARcq84ZQ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1613.923076923077,
+                "y": 344.5
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "ZjpxL92x6PnZJCGG",
+            "inputs": {
+                "entry": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:options"
+                }
+            },
+            "position": {
+                "x": 1458,
+                "y": 454.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Wei9t4hRARcq84ZQ",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.tMv3au5iEzSGOWxN"
+                },
+                "target": {
+                    "connection": "fVODmPlbNTwlJL98:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "eW7CZmbjp5KFmM7H:ins:in"
+                },
+                "true": {
+                    "connection": "YLEHnHKzjzLaUVoo:ins:in"
+                }
+            },
+            "position": {
+                "x": 1851,
+                "y": 240
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "fVODmPlbNTwlJL98",
+            "inputs": {
+                "entry": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1697,
+                "y": 239.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "YLEHnHKzjzLaUVoo",
+            "inputs": {
+                "formula": {
+                    "value": "((1 + ceil(@actor.level / 2))d6)[piercing]"
+                },
+                "item": {
+                    "connection": "HQi0GnwEifinrF73:outputs:item"
+                },
+                "origin": {
+                    "connection": "WX7DIoMZHoOKfKvS:outputs:entry"
+                },
+                "targets": {
+                    "connection": "bFhSE048nNeVcGsg:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2407.923076923077,
+                "y": 180.4
+            },
+            "type": "roll-damage"
+        },
+        {
+            "id": "eW7CZmbjp5KFmM7H",
+            "inputs": {
+                "formula": {
+                    "value": "(1 + ceil(@actor.level / 2))[piercing]"
+                },
+                "item": {
+                    "connection": "HQi0GnwEifinrF73:outputs:item"
+                },
+                "origin": {
+                    "connection": "WX7DIoMZHoOKfKvS:outputs:entry"
+                },
+                "targets": {
+                    "connection": "bFhSE048nNeVcGsg:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2405.923076923077,
+                "y": 484.4
+            },
+            "type": "roll-damage"
+        },
+        {
+            "id": "HQi0GnwEifinrF73",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL"
+                }
+            },
+            "position": {
+                "x": 1867,
+                "y": 468.75
+            },
+            "type": "item-value"
+        },
+        {
+            "id": "bFhSE048nNeVcGsg",
+            "inputs": {
+                "entry": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 2242,
+                "y": 447.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "WX7DIoMZHoOKfKvS",
+            "inputs": {
+                "entry": {
+                    "connection": "fxWQxeRkIeQ8TGES:outputs:target"
+                }
+            },
+            "position": {
+                "x": 2241,
+                "y": 406.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "fxWQxeRkIeQ8TGES:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "fxWQxeRkIeQ8TGES:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "fxWQxeRkIeQ8TGES:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

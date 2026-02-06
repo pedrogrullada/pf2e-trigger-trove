@@ -1,0 +1,82 @@
+{
+    "folder": "Spells",
+    "id": "9qpu2XJYTk5RGP4u",
+    "name": "Mountain Resilience",
+    "nodes": [
+        {
+            "id": "20pBrCfA3qgFwP2K",
+            "outs": {
+                "out": {
+                    "connection": "JzmkfAakrw3vlAGr:ins:in"
+                }
+            },
+            "position": {
+                "x": 432,
+                "y": 360
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "JzmkfAakrw3vlAGr",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spell-effects.Item.JHpYudY14g0H4VWU"
+                },
+                "target": {
+                    "connection": "20pBrCfA3qgFwP2K:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "uQf3maykjZRF9PD5:ins:in"
+                }
+            },
+            "position": {
+                "x": 695.9230769230769,
+                "y": 327.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "uQf3maykjZRF9PD5",
+            "inputs": {
+                "options": {
+                    "connection": "20pBrCfA3qgFwP2K:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  {\n    \"or\": [\n      \"item:damage:type:bludgeoning\",\n      \"item:damage:type:piercing\",\n      \"item:damage:type:slashing\"\n    ]\n  }\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "SovzZjvPRfywTRtM:ins:in"
+                }
+            },
+            "position": {
+                "x": 988.8333333333331,
+                "y": 422
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "SovzZjvPRfywTRtM",
+            "inputs": {
+                "by": {
+                    "value": -1
+                },
+                "effect": {
+                    "connection": "JzmkfAakrw3vlAGr:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1245.7564102564102,
+                "y": 284.0666666666667
+            },
+            "type": "effect-duration"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ]
+}
