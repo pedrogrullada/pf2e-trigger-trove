@@ -6,11 +6,12 @@ Enable the module and you will see this module's triggers. They are **disabled**
 
 Here's the list of abilities currently handled by triggers in some capacity.
 <details>
-  <summary>The List (As of 0.10.0)</summary>
+  <summary>The List (As of 0.11.0)</summary>
 
    - Core Rules
      - Defend
      - Scout
+     - Treat Wounds
    - Equipment
      - Critical Specialization
         + Bow, Spear, and Sword only
@@ -21,6 +22,7 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Vitalizing
    - Feats & Features
      - Air Aura Junction
+     - Aldori Swordlord
      - Amulet's Abeyance
      - Aura of Courage
      - Brutal Beating
@@ -39,6 +41,8 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Martial Performance
      - One Shot, One Kill
      - Ravel of Thorns
+     - Regalia Initiate Benefit
+     - Rejuvenating Touch
      - Revitalizing Finisher
      - Scars of Steel
      - Scout's Warning
@@ -46,6 +50,7 @@ Here's the list of abilities currently handled by triggers in some capacity.
         - Ongoing Selfishness
      - Shared Stratagem
      - Spike Skin
+     - Staggering Shot
      - Steam Knight
      - Swaggering Initiative
      - Swashbuckler Finisher
@@ -55,6 +60,8 @@ Here's the list of abilities currently handled by triggers in some capacity.
      - Unbalancing Finisher
      - Thermal Nimbus
    - Monster Abilities
+     - Blinding Aura
+     - Commanding Presence 
      - Dread Flickering
      - Engulf & Swallow Whole 
      - Frightful Presence

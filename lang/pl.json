@@ -7,6 +7,13 @@
                 }
             }
         },
+        "AldoriSwordlord": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy postać posiadająca atut @UUID[Compendium.pf2e.feats-srd.Item.BEgz2GnG2MKmmaZX] trafi lub zada krytyczne trafienie atakiem przy użyciu <em>szabli pojedynkowych Aldorich</em>, otrzymuje odpowiednią liczbę tymczasowych punktów Wytrzymałości."
+                }
+            }
+        },
         "AmuletsAbeyance": {
             "Trigger": {
                 "DamageTaken": {
@@ -30,6 +37,13 @@
                 "Description": "Wyślij zdolność na czat. Nazwa zdolności i jej pochodzenie są ustawione w wyzwalaczu nadrzędnym."
             }
         },
+        "BlindingAura": {
+            "Trigger": {
+                "TurnStarted": {
+                    "Description": "Kiedy postać rozpoczyna swoją turę w obszarze działania zdolności oślepiającej aury @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.ePJcp2ADOjJYYQ5Q], wyślij tę zdolność na czat wraz z jej efektem niewrażliwości."
+                }
+            }
+        },
         "BrutalBeating": {
             "Trigger": {
                 "DamageTaken": {
@@ -47,6 +61,13 @@
                             "Title": "Ciężar Winy"
                         }
                     }
+                }
+            }
+        },
+        "CommandingPresence": {
+            "Trgger": {
+                "AuraEntered": {
+                    "Description": "Kiedy postać wejdzie w obszar działania zdolności @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.Ccjg08wVRO43YlTf], wyślij tę zdolność na czat i dodaj efekt niewrażliwości do postaci, która ją wywołała. Jeśli ta postać nie jest dżinem jann, dodaj również efekt dodatkowy z karą do jej rzutu obronnego."
                 }
             }
         },
@@ -335,6 +356,13 @@
                 }
             }
         },
+        "RejuvenatingTouch": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Kiedy cel zaklęcia @UUID[Compendium.pf2e.spells-srd.Item.zNN9212H2FGfM7VS] zostaje uleczony przez zaklęcie, a jego źródło posiada atut @UUID[Compendium.pf2e.feats-srd.Item.xZrTjUub7V09sXZF], cel otrzymuje tymczasowe Punkty Wytrzymałości."
+                }
+            }
+        },
         "ReplenishmentOfWar": {
             "Trigger": {
                 "DamageTaken": {
@@ -448,6 +476,13 @@
                 }
             }
         },
+        "StaggeringFire": {
+            "Trigger": {
+                "AttackRolled": {
+                    "Description": "Kiedy postać używająca @UUID[Compendium.pf2e.feats-srd.Item.fngPLUD4Sltho2kn] trafi lub zadaje krytyczne trafienie atakiem dystansowym przy użyciu broni z grupy łuków, cel ataku otrzymuje odpowiednią karę do szybkości."
+                }
+            }
+        },
         "SteamKnight": {
             "Trigger": {
                 "TurnStarted": {
@@ -507,6 +542,13 @@
                 },
                 "TurnStarted": {
                     "Description": "Rzuć na obrażenia Termicznej Otuliny kinetyka, gdy stworzenie kończy swoją turę w jego aurze kinetycznej, gdy jego postawa jest aktywna."
+                }
+            }
+        },
+        "TreatWounds": {
+            "Trigger": {
+                "DamageTaken": {
+                    "Description": "Kiedy postać otrzyma leczenie od zdolności @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9], usuń stan ranny i dodaj efekt śledzenia niewrażliwości."
                 }
             }
         },
