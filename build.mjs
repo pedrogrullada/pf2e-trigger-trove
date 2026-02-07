@@ -21,11 +21,22 @@ console.log("Clean Finished");
 
 console.log("Combining Triggers and adding the file to the build");
 
-const triggersOutputPath = path.resolve(
+const baseTriggersOutputPath = path.resolve(
   outDir,
-  "triggers/pf2e-trigger-trove.json"
+  "triggers/base-triggers.json"
 );
-combineTriggers("./triggers", triggersOutputPath);
+
+const pf2eTriggersOutputPath = path.resolve(
+  outDir,
+  "triggers/pf2e-triggers.json"
+);
+
+const sf2eTriggersOutputPath = path.resolve(
+  outDir,
+  "triggers/sf2e-triggers.json"
+);
+
+combineTriggers("./triggers", baseTriggersOutputPath, pf2eTriggersOutputPath, sf2eTriggersOutputPath);
 
 console.log("Triggers Combined");
 
