@@ -472,7 +472,8 @@
         "SpiritLink": {
             "Trigger": {
                 "TurnStarted": {
-                    "Description": "<p>Kiedy stworzenie rozpoczyna swoją turę i posiada efekt pomocniczy @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e], który pochodzi od niego samego, sprawdź tokeny sceny pod kątem innych stworzeń o identycznym efekcie. Jeśli takie stworzenie istnieje, sprawdź, czy nie osiągnęło maksymalnej liczby Punktów Wytrzymałości, a jeśli tak, wyślij do czatu rzut hybrydowy obrażenia-leczenia dla obu stron połączenia duchowego, aby zastosować go do siebie.</p><p>Aby ten wyzwalacz działał poprawnie, musisz dodać @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD] do opisu zaklęcia i przeciągnąć go <strong>z karty czatu zaklęcia</strong> zarówno do rzucającego zaklęcie, jak i do celu.</p>"
+                    "Description": "<p>Kiedy stworzenie rozpoczyna swoją turę i posiada efekt pomocniczy @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e], który pochodzi od niego samego, sprawdź tokeny sceny pod kątem innych stworzeń o identycznym efekcie. Jeśli takie stworzenie istnieje, sprawdź, czy nie osiągnęło maksymalnej liczby Punktów Wytrzymałości, a jeśli tak, wyślij do czatu rzut hybrydowy obrażenia-leczenia dla obu stron połączenia duchowego, aby zastosować go do siebie.</p><p>Aby ten wyzwalacz działał poprawnie, musisz dodać @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD] do opisu zaklęcia i przeciągnąć go <strong>z karty czatu zaklęcia</strong> zarówno do rzucającego zaklęcie, jak i do celu.</p>",
+                    "Note": "<p>Na początku każdej twojej tury, jeśli cel ma mniej niż maksymalną liczbę Punktów Wytrzymałości, odzyskuje 2 Punkty Wytrzymałości na każdy poziom zaklęcia <em>Duchowej Więzi</em> (lub różnicę między aktualną a maksymalną liczbą Punktów Wytrzymałości, jeśli jest ona niższa). Tracisz tyle Punktów Wytrzymałości, ile odzyskał cel.</p>"
                 }
             }
         },
@@ -502,7 +503,13 @@
             }
         },
         "SwaggeringInitiative": {
+            "Label": "Zuchwała Inicjatywa",
             "Trigger": {
+                "CombatantCreated": {
+                    "AwaitConfirmation": {
+                        "Prompt": "Czy użyjesz Zuchwałą Inicjatywę w tej potyczce?"
+                    }
+                },
                 "TurnStarted": {
                     "Description": "Kiedy postać używająca @UUID[Compendium.pf2e.feats-srd.Item.NHheDmNB7L4REmlr] jako pierwsza wykonuje swoją turę w walce, otrzymuje polot."
                 }
@@ -563,7 +570,8 @@
                 },
                 "Note": {
                     "Hit": "<strong>Lustro Oszusta</strong> Atak cię trafia! Wszystkie twoje lustra pozostają na swoim miejscu.",
-                    "Miss": "<p>Atak cię nie dosięga! Jedno z twoich luster zostaje zniszczone. Jeśli atakujący znajdował się w odległości mniejszej niż 5 stóp, musi wykonać rzut obronny @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] lub otrzymać obrażenia psychiczne, ponieważ wydaje mu się, że został skaleczony przez deszcz odłamków szkła z rozbitego lustra.</p>"
+                    "Miss": "<p>Atak cię nie dosięga! Jedno z twoich luster zostaje zniszczone. Jeśli atakujący znajdował się w odległości mniejszej niż 5 stóp, musi wykonać rzut obronny @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] lub otrzymać obrażenia psychiczne, ponieważ wydaje mu się, że został skaleczony przez deszcz odłamków szkła z rozbitego lustra.</p>",
+                    "MissNoDamage": "<p><strong>Lustro Oszusta</strong> Atak cię nie dosięga! Jedno z twoich luster zostało zniszczone.</p>"
                 }
             }
         },
