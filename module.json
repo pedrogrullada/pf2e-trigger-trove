@@ -23,7 +23,13 @@
     {
       "folders": [],
       "name": "PF2e Trigger Trove",
-      "packs": ["auxiliary-items","sf2e-auxiliary-items"],
+      "packs": ["auxiliary-items"],
+      "sorting": "a"
+    },
+    {
+      "folders": [],
+      "name": "SF2e Trigger Trove",
+      "packs": ["sf2e-auxiliary-items"],
       "sorting": "a"
     }
   ],
