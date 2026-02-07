@@ -38,6 +38,17 @@
       "path": "packs/auxiliary-items",
       "system": "pf2e",
       "type": "Item"
+    },
+    {
+      "label": "Auxiliary Items",
+      "name": "sf2e-auxiliary-items",
+      "ownership": {
+        "ASSISTANT": "OWNER",
+        "PLAYER": "OBSERVER"
+      },
+      "path": "packs/sf2e-auxiliary-items",
+      "system": "sf2e",
+      "type": "Item"
     }
   ],
   "relationships": {
@@ -45,6 +56,11 @@
       {
         "compatibility": {},
         "id": "pf2e",
+        "type": "system"
+      },
+      {
+        "compatibility": {},
+        "id": "sf2e",
         "type": "system"
       }
     ],
