@@ -202,6 +202,12 @@
                         "label": "Grant",
                         "slug": "rule",
                         "type": "text"
+                    },
+                    "MTn19UGCaixCoVM2": {
+                        "id": "MTn19UGCaixCoVM2",
+                        "label": "Grant",
+                        "slug": "rule",
+                        "type": "text"
                     }
                 }
             },
@@ -212,6 +218,9 @@
                 },
                 "img": {
                     "value": "icons/skills/melee/shield-block-gray-orange.webp"
+                },
+                "MTn19UGCaixCoVM2": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.sf2e.equipment-effects.Item.2YgXoHvJfrDHucMr\",\n  \"allowDuplicates\": false,\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
                 },
                 "name": {
                     "value": "Effect: Defend"
@@ -290,7 +299,8 @@
     ],
     "priority": 0,
     "tags": [
-        "pf2e"
+        "pf2e",
+        "sf2e"
     ],
     "variables": {
         "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm": {
