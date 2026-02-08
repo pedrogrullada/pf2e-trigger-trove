@@ -1,0 +1,151 @@
+{
+    "folder": "Feats & Features",
+    "id": "ITKVGewaMJHkWxhs",
+    "name": "Suppressing Fire",
+    "nodes": [
+        {
+            "id": "EWQj9DktAFeRubRy",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "c0xpv2mtP6SVsUzq:ins:in"
+                }
+            },
+            "position": {
+                "x": 589,
+                "y": 363
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "c0xpv2mtP6SVsUzq",
+            "inputs": {
+                "sf2e": {
+                    "value": "Compendium.sf2e.class-features.Item.cJ8j2FKJxmL8HZG2"
+                },
+                "target": {
+                    "connection": "EWQj9DktAFeRubRy:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "J1mTfpNXrRKUTMGO:ins:in"
+                }
+            },
+            "position": {
+                "x": 867.9230769230769,
+                "y": 290.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "J1mTfpNXrRKUTMGO",
+            "inputs": {
+                "a": {
+                    "value": "failure"
+                },
+                "b": {
+                    "connection": "ZblPq2aKos2QnA3b:outputs:entry"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "9OYOKxJu3XLIeeW2:ins:in"
+                }
+            },
+            "position": {
+                "x": 1143.923076923077,
+                "y": 336.5
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "ZblPq2aKos2QnA3b",
+            "inputs": {
+                "entry": {
+                    "connection": "EWQj9DktAFeRubRy:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 1019,
+                "y": 481.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Y7gEyLkDrqxAXbQf",
+            "inputs": {
+                "entry": {
+                    "connection": "EWQj9DktAFeRubRy:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1292,
+                "y": 500.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "DbQDybDfA3QXLAIR": {
+                        "id": "DbQDybDfA3QXLAIR",
+                        "label": "Grant",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "9OYOKxJu3XLIeeW2",
+            "inputs": {
+                "DbQDybDfA3QXLAIR": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF\",\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+                },
+                "name": {
+                    "value": "Effect: Suppressing Fire"
+                },
+                "origin": {
+                    "connection": "EWQj9DktAFeRubRy:outputs:target"
+                },
+                "sf2eImg": {
+                    "value": "systems/sf2e/icons/abilities/red-bullets-in-flight.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-suppressing-fire"
+                },
+                "target": {
+                    "connection": "Y7gEyLkDrqxAXbQf:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1439,
+                "y": 405
+            },
+            "type": "create-effect"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "sf2e"
+    ],
+    "variables": {
+        "EWQj9DktAFeRubRy:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "EWQj9DktAFeRubRy:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        }
+    }
+}

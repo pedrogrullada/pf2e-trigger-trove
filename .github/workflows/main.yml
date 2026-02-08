@@ -87,7 +87,7 @@ jobs:
 
       # Build
       - name: Build
-        run: node ./scripts/build-packs.js
+        run: node ./scripts/build/build-packs.js
 
       # Combine individual trigger files into a single file
       - name: Combine Trigger Files
@@ -138,7 +138,9 @@ jobs:
             lang/                                \
             config/                              \
             resources/                           \
-            scripts/register.mjs                 \
+            scripts/main.mjs                     \
+            scripts/macros                       \
+            scripts/api.js                       \
           # Don't forget to add a backslash at the end of the line for any
           # additional files or directories!
       # Update the GitHub release with the manifest and module archive files.

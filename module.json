@@ -11,7 +11,7 @@
   },
   "description": "A collection of triggers to use with the Trigger Engine module.",
   "esmodules": [
-    "scripts/register.mjs"
+    "scripts/main.mjs"
   ],
   "flags": {
     "pf2e-trigger-trove": {
@@ -29,7 +29,7 @@
     {
       "folders": [],
       "name": "SF2e Trigger Trove",
-      "packs": ["sf2e-auxiliary-items"],
+      "packs": ["sf2e-auxiliary-items","sf2e-trigger-macros"],
       "sorting": "a"
     }
   ],
@@ -55,6 +55,17 @@
       "path": "packs/sf2e-auxiliary-items",
       "system": "sf2e",
       "type": "Item"
+    },
+    {
+      "label": "SF2e Macros",
+      "name": "sf2e-trigger-macros",
+      "ownership": {
+        "ASSISTANT": "OWNER",
+        "PLAYER": "OBSERVER"
+      },
+      "path": "packs/sf2e-trigger-macros",
+      "system": "sf2e",
+      "type": "Macro"
     }
   ],
   "relationships": {

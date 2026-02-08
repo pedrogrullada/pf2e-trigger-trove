@@ -1,0 +1,25 @@
+{
+  "name": "Vitality Network",
+  "type": "script",
+  "command": "/* YOU MUST ENABLE THE VITALITY NETWORK TRIGGER TO USE THIS MACRO\n * Select the token with vitality network\n * Target the token that will receive the transfer\n * Use the slider to select how many Hit Points to transfer\n * Upon confirmation, the Hit Points will be deducted from your vitality network and sent as a healing roll to chat. PF2e Toolbelt is recommended for targetting goodness.\n*/\ngame.triggerTrove.api.transferVitality();",
+  "img": "icons/magic/life/heart-area-circle-red-green.webp",
+  "author": "aFB5cis1KjjFO8v2",
+  "scope": "global",
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "aFB5cis1KjjFO8v2": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "sf2e",
+    "systemVersion": "0.0.4"
+  },
+  "_id": "RUvBFAHgPeitdrYC",
+  "sort": 0,
+  "_key": "!macros!RUvBFAHgPeitdrYC"
+}

@@ -2,7 +2,7 @@ import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { existsSync } from "fs";
 import fs from "fs/promises";
 import path from "path";
-import { combineTriggers } from "./scripts/combine-triggers.js";
+import { combineTriggers } from "./scripts/build/combine-triggers.js";
 
 // Clean output directory, or create build directory
 const outDir = path.resolve(process.cwd(), "build");
@@ -55,7 +55,9 @@ const files = [
   "README.md",
   "LICENSE",
   "CHANGELOG.md",
-  "scripts/register.mjs"
+  "scripts/macros",
+  "scripts/api.js",
+  "scripts/main.mjs"
 ];
 for (const file of files) {
   await fs.cp(file, path.resolve(outDir, file), { recursive: true });
