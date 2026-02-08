@@ -34,7 +34,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "J1mTfpNXrRKUTMGO:ins:in"
+                    "connection": "EwyGg4XgTiwmbKr7:ins:in"
                 }
             },
             "position": {
@@ -62,8 +62,8 @@
                 }
             },
             "position": {
-                "x": 1143.923076923077,
-                "y": 336.5
+                "x": 1408.923076923077,
+                "y": 396.5
             },
             "type": "compare-outcomes"
         },
@@ -75,8 +75,8 @@
                 }
             },
             "position": {
-                "x": 1019,
-                "y": 481.75
+                "x": 1278,
+                "y": 528.75
             },
             "type": "__variable_getter__"
         },
@@ -88,8 +88,8 @@
                 }
             },
             "position": {
-                "x": 1292,
-                "y": 500.75
+                "x": 1568,
+                "y": 542.75
             },
             "type": "__variable_getter__"
         },
@@ -126,10 +126,31 @@
                 }
             },
             "position": {
-                "x": 1439,
-                "y": 405
+                "x": 1728,
+                "y": 459
             },
             "type": "create-effect"
+        },
+        {
+            "id": "EwyGg4XgTiwmbKr7",
+            "inputs": {
+                "entry": {
+                    "value": "item:trait:area"
+                },
+                "list": {
+                    "connection": "EWQj9DktAFeRubRy:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "J1mTfpNXrRKUTMGO:ins:in"
+                }
+            },
+            "position": {
+                "x": 1136,
+                "y": 382.25
+            },
+            "type": "list-contains"
         }
     ],
     "priority": 0,
