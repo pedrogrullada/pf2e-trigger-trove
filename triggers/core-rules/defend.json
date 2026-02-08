@@ -22,6 +22,9 @@
                 "pf2e": {
                     "value": "Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0"
                 },
+                "sf2e": {
+                    "value": "Compendium.sf2e.actions.Item.cYtYKa1gDEl7y2N0"
+                },
                 "target": {
                     "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
                 }
@@ -216,6 +219,12 @@
                 "origin": {
                     "connection": "z97lyS4JFrvSlqn8:outputs:entry"
                 },
+                "pf2eImg": {
+                    "value": "icons/equipment/shield/heater-wooden-steel-boss.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/equipment/shield/heater-wooden-steel-boss.webp"
+                },
                 "slug": {
                     "value": "effect-defend-trigger-trove"
                 },
@@ -281,7 +290,8 @@
     ],
     "priority": 0,
     "tags": [
-        "pf2e"
+        "pf2e",
+        "sf2e"
     ],
     "variables": {
         "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm": {

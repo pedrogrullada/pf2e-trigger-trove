@@ -117,6 +117,12 @@
                 "name": {
                     "value": "Effect: Bow Critical Specialization"
                 },
+                "pf2eImg": {
+                    "value": "icons/skills/ranged/projectile-strike-impale-gray.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/ranged/projectile-strike-impale-gray.webp"
+                },
                 "target": {
                     "connection": "xyl2HZiGy0tkiFTR:outputs:entry"
                 }
@@ -241,6 +247,12 @@
                 "origin": {
                     "connection": "V3lVG2rdIdL5hzi8:outputs:combatant"
                 },
+                "pf2eImg": {
+                    "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
+                },
                 "target": {
                     "connection": "RIjE2piI5tvHXhPT:outputs:entry"
                 }
@@ -287,6 +299,12 @@
                 "origin": {
                     "connection": "V3lVG2rdIdL5hzi8:outputs:combatant"
                 },
+                "pf2eImg": {
+                    "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
+                },
                 "target": {
                     "connection": "RIjE2piI5tvHXhPT:outputs:entry"
                 }
@@ -314,6 +332,12 @@
                 },
                 "origin": {
                     "connection": "ld1XmRNAnf9nKfPC:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
                 },
                 "target": {
                     "connection": "I7CLcZCKMyyFqUv5:outputs:entry"
@@ -352,6 +376,12 @@
                 },
                 "origin": {
                     "connection": "ld1XmRNAnf9nKfPC:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
                 },
                 "target": {
                     "connection": "I7CLcZCKMyyFqUv5:outputs:entry"

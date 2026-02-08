@@ -52,6 +52,9 @@
                 "pf2e": {
                     "value": "Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei"
                 },
+                "sf2e": {
+                    "value": "Compendium.sf2e.conditions.Item.kWc1fhmv9LBiTuei"
+                },
                 "target": {
                     "connection": "gEXlmr9yWOPbzHaD:outputs:entry"
                 }
@@ -70,6 +73,9 @@
                 },
                 "pf2e": {
                     "value": "Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM"
+                },
+                "sf2e": {
+                    "value": "Compendium.sf2e.conditions.Item.VcDeM8A5oI6VqhbM"
                 },
                 "target": {
                     "connection": "gEXlmr9yWOPbzHaD:outputs:entry"

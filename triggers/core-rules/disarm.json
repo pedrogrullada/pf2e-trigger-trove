@@ -86,6 +86,12 @@
                 "origin": {
                     "connection": "G5jPQE0o9LoPnOmz:outputs:entry"
                 },
+                "pf2eImg": {
+                    "value": "icons/skills/melee/sword-damaged-broken-glow-red.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/melee/sword-damaged-broken-glow-red.webp"
+                },
                 "target": {
                     "connection": "dhslnVKLGLqe9Md8:outputs:entry"
                 }
@@ -130,6 +136,9 @@
                 },
                 "pf2e": {
                     "value": "Compendium.pf2e.other-effects.Item.PuDS0DEq0CnaSIFV"
+                },
+                "sf2e": {
+                    "value": "Compendium.sf2e.other-effects.Item.PuDS0DEq0CnaSIFV"
                 },
                 "target": {
                     "connection": "8PZ5xHaT8XlWLtJT:outputs:entry"
