@@ -77,7 +77,7 @@
         "manifest": "https://raw.githubusercontent.com/reonZ/trigger-engine/master/module.json",
         "type": "module",
         "compatibility": {
-          "minimum": "1.1.0"
+          "minimum": "1.2.0"
         }
       }
     ]
