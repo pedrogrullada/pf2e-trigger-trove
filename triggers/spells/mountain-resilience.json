@@ -22,6 +22,9 @@
                 "pf2e": {
                     "value": "Compendium.pf2e.spell-effects.Item.JHpYudY14g0H4VWU"
                 },
+                "sf2e": {
+                    "value": "Compendium.sf2e.spell-effects.Item.JHpYudY14g0H4VWU"
+                },
                 "target": {
                     "connection": "20pBrCfA3qgFwP2K:outputs:target"
                 }
@@ -77,6 +80,7 @@
     ],
     "priority": 0,
     "tags": [
-        "pf2e"
+        "pf2e",
+        "sf2e"
     ]
 }

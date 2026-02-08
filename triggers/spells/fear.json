@@ -135,6 +135,9 @@
                 "pf2eImg": {
                     "value": "systems/pf2e/icons/spells/fear.webp"
                 },
+                "sf2eImg": {
+                    "value": "systems/sf2e/icons/spells/fear.webp"
+                },
                 "slug": {
                     "value": "trigger-trove-fear"
                 },
@@ -218,7 +221,8 @@
     ],
     "priority": 0,
     "tags": [
-        "pf2e"
+        "pf2e",
+        "sf2e"
     ],
     "variables": {
         "5Zk6OuqPQTUZjuIW:outputs:item": {

@@ -98,6 +98,9 @@
                 "pf2eImg": {
                     "value": "systems/pf2e/icons/spells/ray-of-enfeeblement.webp"
                 },
+                "sf2eImg": {
+                    "value": "systems/sf2e/icons/spells/ray-of-enfeeblement.webp"
+                },
                 "slug": {
                     "value": "trigger-trove-enfeeble"
                 },
@@ -292,7 +295,8 @@
     ],
     "priority": 0,
     "tags": [
-        "pf2e"
+        "pf2e",
+        "sf2e"
     ],
     "variables": {
         "5Zk6OuqPQTUZjuIW:outputs:item": {

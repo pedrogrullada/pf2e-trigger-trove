@@ -22,6 +22,9 @@
                 "pf2e": {
                     "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD"
                 },
+                "sf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.sf2e-auxiliary-items.Item.rn7KiPMH6u7C6mUD"
+                },
                 "target": {
                     "connection": "5SsBDAMk56utfpQK:outputs:combatant"
                 }
@@ -175,6 +178,9 @@
             "inputs": {
                 "pf2e": {
                     "value": "Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD"
+                },
+                "sf2e": {
+                    "value": "Compendium.pf2e-trigger-trove.sf2e-auxiliary-items.Item.rn7KiPMH6u7C6mUD"
                 },
                 "target": {
                     "connection": "n4Ku8BmzjJX0u9jv:outputs:entry"
@@ -683,6 +689,9 @@
             "inputs": {
                 "pf2e": {
                     "value": "Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e"
+                },
+                "sf2e": {
+                    "value": "Compendium.sf2e.spells.Item.yHujiDQPdtXW797e"
                 }
             },
             "position": {
@@ -720,7 +729,8 @@
     ],
     "priority": 0,
     "tags": [
-        "pf2e"
+        "pf2e",
+        "sf2e"
     ],
     "variables": {
         "4juvTbEx4b5hbCm7:outputs:enSLpWdNQKnAJRrx": {

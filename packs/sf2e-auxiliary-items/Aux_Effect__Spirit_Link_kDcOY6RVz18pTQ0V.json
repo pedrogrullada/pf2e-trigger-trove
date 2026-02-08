@@ -1,0 +1,65 @@
+{
+  "name": "Aux Effect: Spirit Link",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.954,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Auxiliary effect for @UUID[Compendium.sf2e.spells.Item.yHujiDQPdtXW797e]{Spirit Link}</p><p>The effect must be added to both the spellcaster and the target.</p>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "PF2e Trigger Trove",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "rules": [],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 10,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": null,
+    "fromSpell": false,
+    "context": null
+  },
+  "_id": "rn7KiPMH6u7C6mUD",
+  "img": "icons/magic/control/energy-stream-link-teal.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "aFB5cis1KjjFO8v2": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "sf2e",
+    "systemVersion": "0.0.4"
+  },
+  "_key": "!items!rn7KiPMH6u7C6mUD"
+}
