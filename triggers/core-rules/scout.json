@@ -1,6 +1,6 @@
 {
     "folder": "Core Rules",
-    "id": "hydjexiUT8eU1CjP",
+    "id": "FifdrgdNCDjkyRVS",
     "name": "Scout",
     "nodes": [
         {
@@ -21,6 +21,9 @@
             "inputs": {
                 "pf2e": {
                     "value": "Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb"
+                },
+                "sf2e": {
+                    "value": "Compendium.sf2e.actions.Item.kV3XM0YJeS2KCSOb"
                 },
                 "target": {
                     "connection": "Oox2GcNDxE8fnUrb:outputs:combatant"
@@ -145,6 +148,9 @@
                 },
                 "pf2e": {
                     "value": "Compendium.pf2e.other-effects.Item.EMqGwUi3VMhCjTlF"
+                },
+                "sf2e": {
+                    "value": "Compendium.sf2e.other-effects.Item.EMqGwUi3VMhCjTlF"
                 },
                 "target": {
                     "connection": "UWmLYpbeXgHgRwWi:outputs:current"

@@ -1,6 +1,6 @@
 {
     "folder": "Core Rules",
-    "id": "487ngkeYPd2oltg4",
+    "id": "Mcgzp8gfxF7yFZcG",
     "name": "Demoralize",
     "nodes": [
         {
@@ -34,7 +34,7 @@
                     "connection": "JvcMQmpiqrCqqTYk:ins:in"
                 },
                 "criticalSuccess": {
-                    "connection": "oVm8jO9mmWnmTOTG:ins:in"
+                    "connection": "kaiA7EUgANzzMb0S:ins:in"
                 },
                 "failure": {
                     "connection": "JvcMQmpiqrCqqTYk:ins:in"
@@ -74,8 +74,8 @@
                 }
             },
             "position": {
-                "x": 1439.3268398268406,
-                "y": 176.08694083694098
+                "x": 1416.3268398268406,
+                "y": 39.08694083694098
             },
             "type": "extract-actor"
         },
@@ -88,7 +88,7 @@
             },
             "position": {
                 "x": 1254.7561327561332,
-                "y": 278.0844155844157
+                "y": 21.084415584415694
             },
             "type": "__variable_getter__"
         },
@@ -176,7 +176,7 @@
                     "value": "frightened"
                 },
                 "max": {
-                    "value": 2
+                    "value": 1
                 },
                 "target": {
                     "connection": "DQWAjPL8NVTnBIMS:outputs:entry"
@@ -188,8 +188,8 @@
                 }
             },
             "position": {
-                "x": 1169.6219336219347,
-                "y": 337.40367965367966
+                "x": 1168.6219336219347,
+                "y": 280.40367965367966
             },
             "type": "increase-condition"
         },
@@ -201,8 +201,8 @@
                 }
             },
             "position": {
-                "x": 1066.4830447330446,
-                "y": 441.62590187590195
+                "x": 985.4830447330446,
+                "y": 437.62590187590195
             },
             "type": "__variable_getter__"
         },
@@ -239,6 +239,28 @@
                 "y": 301.3055555555556
             },
             "type": "__variable_getter__"
+        },
+        {
+            "id": "kaiA7EUgANzzMb0S",
+            "inputs": {
+                "condition": {
+                    "value": "frightened"
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "DQWAjPL8NVTnBIMS:outputs:entry"
+                },
+                "value": {
+                    "value": 2
+                }
+            },
+            "position": {
+                "x": 1170.6219336219347,
+                "y": 476.40367965367966
+            },
+            "type": "increase-condition"
         }
     ],
     "priority": 0,

@@ -1,6 +1,6 @@
 {
     "folder": "Core Rules",
-    "id": "WIaPmTA1A6pGDmfC",
+    "id": "aMWcJbAfeTIOGMWd",
     "name": "Defend",
     "nodes": [
         {
@@ -290,8 +290,7 @@
     ],
     "priority": 0,
     "tags": [
-        "pf2e",
-        "sf2e"
+        "pf2e"
     ],
     "variables": {
         "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm": {
