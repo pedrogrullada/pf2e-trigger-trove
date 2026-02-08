@@ -256,6 +256,11 @@
                     "value": 2
                 }
             },
+            "outs": {
+                "out": {
+                    "connection": "JvcMQmpiqrCqqTYk:ins:in"
+                }
+            },
             "position": {
                 "x": 1170.6219336219347,
                 "y": 476.40367965367966
