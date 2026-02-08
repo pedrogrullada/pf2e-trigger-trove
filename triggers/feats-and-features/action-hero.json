@@ -1,0 +1,181 @@
+{
+    "folder": "Feats & Features",
+    "id": "sMGLya583h07EoHN",
+    "name": "Action Hero",
+    "nodes": [
+        {
+            "id": "k7FDkVV3pvzu9orC",
+            "outs": {
+                "out": {
+                    "connection": "MwvcFnHhj776RXiF:ins:in"
+                }
+            },
+            "position": {
+                "x": 294,
+                "y": 321
+            },
+            "type": "attack-roll-event"
+        },
+        {
+            "id": "bBk7NdMKCUoKxqcS",
+            "inputs": {
+                "options": {
+                    "connection": "k7FDkVV3pvzu9orC:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n \"item:ranged\",\n \"item:trait:automatic\",\n \"self:action:slug:strike\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "3yBtBWvuyVTZPSd4:ins:in"
+                }
+            },
+            "position": {
+                "x": 847.6249999999994,
+                "y": 376.52777777777743
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "3yBtBWvuyVTZPSd4",
+            "inputs": {
+                "a": {
+                    "connection": "SJML7YLjkFWfm1GJ:outputs:entry"
+                },
+                "compare": {
+                    "value": "gte"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "7eOZAspLUqYS1qqb:ins:in"
+                }
+            },
+            "position": {
+                "x": 1062.1552197802193,
+                "y": 418.5099206349203
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "id": "SJML7YLjkFWfm1GJ",
+            "inputs": {
+                "entry": {
+                    "connection": "k7FDkVV3pvzu9orC:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 922.2321428571424,
+                "y": 501.75992063492026
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "r988i4c7nw6LpIAV": {
+                        "id": "r988i4c7nw6LpIAV",
+                        "label": "GrantItem",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "7eOZAspLUqYS1qqb",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Suppressed from Action Hero"
+                },
+                "origin": {
+                    "connection": "pRbAEnGe6fJAJKnd:outputs:entry"
+                },
+                "r988i4c7nw6LpIAV": {
+                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF\",\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+                },
+                "sf2eImg": {
+                    "value": "systems/sf2e/icons/abilities/blue-soldier.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-action-hero"
+                },
+                "target": {
+                    "connection": "7F6Xgfgyrp6FCXRJ:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1371.1552197802196,
+                "y": 412.4099206349204
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "pRbAEnGe6fJAJKnd",
+            "inputs": {
+                "entry": {
+                    "connection": "k7FDkVV3pvzu9orC:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1252.3432539682533,
+                "y": 619.2043650793646
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "7F6Xgfgyrp6FCXRJ",
+            "inputs": {
+                "entry": {
+                    "connection": "k7FDkVV3pvzu9orC:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1253.4543650793644,
+                "y": 569.2043650793648
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "MwvcFnHhj776RXiF",
+            "inputs": {
+                "sf2e": {
+                    "value": "Compendium.sf2e.class-features.Item.ajzZpzc8uMtgU6N8"
+                },
+                "target": {
+                    "connection": "k7FDkVV3pvzu9orC:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "bBk7NdMKCUoKxqcS:ins:in"
+                }
+            },
+            "position": {
+                "x": 540.5996642246636,
+                "y": 265.076587301587
+            },
+            "type": "has-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "sf2e"
+    ],
+    "variables": {
+        "k7FDkVV3pvzu9orC:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "k7FDkVV3pvzu9orC:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "k7FDkVV3pvzu9orC:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

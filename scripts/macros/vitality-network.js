@@ -1,22 +1,25 @@
 export async function transferVitality() {
   const token = canvas.tokens.controlled[0];
   const actor = token?.actor;
-  if(!actor) return void ui.notifications.warn("Select a token.");
 
-  const target = game.user.targets.first();
-  if (!target) return ui.notifications.warn("Select a target.");
+  if (!actor) return ui.notifications.warn(game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Select"));
 
   const resources = actor.system.resources;
+  
+  if (!("vitalityNetwork" in resources)) return ui.notifications.warn(game.i18n.format("TRIGGERTROVE.VitalityNetwork.Macro.NoVitalityNetwork", {
+    actor: token.name
+  }));
 
-  if (!("vitalityNetwork" in resources)){
-    ui.notifications.info(`${token.name} has no vitality network.`);
-      return;
-  }
+  const target = game.user.targets.first();
+  if (!target) return ui.notifications.warn(game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Target"));
 
-  if (resources.vitalityNetwork.value == 0){
-    ui.notifications.info(`${token.name} has no Hit Points left in their vitality network.`);
-      return;
-  }
+  if (!("vitalityNetwork" in resources)) return ui.notifications.warn(game.i18n.format("TRIGGERTROVE.VitalityNetwork.Macro.NoVitalityNetwork", {
+    actor: token.name
+  }));
+
+  if (resources.vitalityNetwork.value === 0) return ui.notifications.info(game.i18n.format("TRIGGERTROVE.VitalityNetwork.Macro.DepletedVitalityNetwork", {
+    actor: token.name
+  }));
 
   const vitalityNetwork = resources.vitalityNetwork.value;
 
@@ -26,8 +29,8 @@ export async function transferVitality() {
 
   content += expendVitalityNetwork.toFormGroup({
     duration: expendVitalityNetwork,
-    label: "Transfer Vitality Network",
-    hint: "The number of Hit Points you will transfer"},{
+    label: game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Label"),
+    hint: game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Hint")},{
     name: 'hitPoints',
     value: 1
   }).outerHTML

@@ -599,6 +599,16 @@
                 }
             }
         },
+        "VitalityNetwork": {
+            "Macro": {
+                "DepletedVitalityNetwork": "{actor} has no Hit Points left in their vitality network.",
+                "Hint": "The number of Hit Points you will transfer",
+                "Label": "Transfer Vitality",
+                "NoVitalityNetwork": "{actor} has no vitality network",
+                "Select": "Select a token with a vitality network",
+                "Target": "Select a target for Transfer Vitality"
+            }
+        },
         "Vitalizing": {
             "Trigger": {
                 "AttackRolled": {
