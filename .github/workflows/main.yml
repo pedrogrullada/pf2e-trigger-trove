@@ -87,11 +87,11 @@ jobs:
 
       # Build
       - name: Build
-        run: node ./scripts/build/build-packs.js
+        run: node ./scripts/tools/build-packs.js
 
       # Combine individual trigger files into a single file
       - name: Combine Trigger Files
-        run: node ./scripts/combine-triggers.js
+        run: node ./scripts/tools/combine-triggers.js
 
 
       # Modify "module.json" with values specific to the release.
