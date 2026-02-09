@@ -21,11 +21,12 @@ export async function transferVitality() {
     actor: token.name
   }));
 
-  const vitalityNetwork = resources.vitalityNetwork.value;
+  const remaining = resources.vitalityNetwork.value;
+  const maxTransfer = 10 + 10 * Math.floor(actor.level / 5);
 
   let content = "";
 
-  const expendVitalityNetwork = new foundry.data.fields.NumberField({min: 1, max: vitalityNetwork, step: 1})
+  const expendVitalityNetwork = new foundry.data.fields.NumberField({min: 1, max: Math.min(remaining,maxTransfer), step: 1})
 
   content += expendVitalityNetwork.toFormGroup({
     duration: expendVitalityNetwork,
