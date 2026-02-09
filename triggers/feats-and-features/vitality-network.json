@@ -1,4 +1,5 @@
 {
+    "description": "<p>@Localize[TRIGGERTROVE.VitalityNetwork.Trigger.Description]</p>",
     "folder": "Feats & Features",
     "id": "wj2pMbLVNd8e4Lb5",
     "name": "Vitality Network",
@@ -28,12 +29,12 @@
             },
             "outs": {
                 "true": {
-                    "connection": "ksfmz6g7ZcssMsEV:ins:in"
+                    "connection": "EtzpNRjbv2m3k0Rq:ins:in"
                 }
             },
             "position": {
-                "x": 458,
-                "y": 264.7690476190476
+                "x": 531.5714285714287,
+                "y": 265.05476190476196
             },
             "state": "uuid",
             "type": "has-item"
@@ -63,8 +64,8 @@
                 }
             },
             "position": {
-                "x": 731.9230769230767,
-                "y": 386.0190476190475
+                "x": 1121.7008547008545,
+                "y": 347.32460317460306
             },
             "type": "extract-actor"
         },
@@ -95,8 +96,8 @@
                 }
             },
             "position": {
-                "x": 945.25641025641,
-                "y": 410.68571428571425
+                "x": 1335.034188034188,
+                "y": 371.9912698412698
             },
             "state": "value",
             "type": "resolve-formula"
@@ -109,8 +110,8 @@
                 }
             },
             "position": {
-                "x": 1073.1818181818185,
-                "y": 528.8538961038962
+                "x": 1462.9595959595963,
+                "y": 490.15945165945175
             },
             "type": "__variable_getter__"
         },
@@ -174,8 +175,8 @@
                 }
             },
             "position": {
-                "x": 1506.3611111111104,
-                "y": 868.1231379731378
+                "x": 1494.3611111111104,
+                "y": 798.1231379731378
             },
             "state": "value",
             "type": "roll-damage"
@@ -188,8 +189,8 @@
                 }
             },
             "position": {
-                "x": 1949.9300976800969,
-                "y": 1108.6553724053724
+                "x": 1953.9300976800969,
+                "y": 1044.6553724053724
             },
             "type": "__variable_getter__"
         },
@@ -201,8 +202,8 @@
                 }
             },
             "position": {
-                "x": 1747.3768731268726,
-                "y": 1117.3795371295364
+                "x": 1735.3768731268726,
+                "y": 1047.3795371295364
             },
             "type": "__variable_getter__"
         },
@@ -233,8 +234,8 @@
                 }
             },
             "position": {
-                "x": 1809.0958208458203,
-                "y": 992.20969030969
+                "x": 1797.0958208458203,
+                "y": 922.20969030969
             },
             "type": "resolve-formula"
         },
@@ -265,8 +266,8 @@
                 }
             },
             "position": {
-                "x": 240.75793650793673,
-                "y": 1080.5277777777778
+                "x": 236.75793650793673,
+                "y": 1012.5277777777778
             },
             "type": "__gate_exit__"
         },
@@ -284,8 +285,8 @@
                 }
             },
             "position": {
-                "x": 476.3134920634924,
-                "y": 1071.6388888888885
+                "x": 472.3134920634924,
+                "y": 1003.6388888888885
             },
             "type": "update-resource"
         },
@@ -323,8 +324,8 @@
                 }
             },
             "position": {
-                "x": 2113.9680597180586,
-                "y": 1011.8855311355308
+                "x": 2079.9680597180586,
+                "y": 951.8855311355308
             },
             "type": "__gate_entry__"
         },
@@ -362,8 +363,8 @@
                 }
             },
             "position": {
-                "x": 1240.2564102564104,
-                "y": 422.70238095238074
+                "x": 1630.034188034188,
+                "y": 384.0079365079363
             },
             "type": "__gate_entry__"
         },
@@ -450,8 +451,8 @@
                 }
             },
             "position": {
-                "x": 922.8054445554442,
-                "y": 778.558108558108
+                "x": 706.1387778887774,
+                "y": 646.3358863358856
             },
             "type": "__variable_getter__"
         },
@@ -463,8 +464,8 @@
                 }
             },
             "position": {
-                "x": 985.8054445554442,
-                "y": 823.558108558108
+                "x": 996.9165556665553,
+                "y": 801.3358863358858
             },
             "type": "__variable_getter__"
         },
@@ -476,8 +477,8 @@
                 }
             },
             "position": {
-                "x": 1357.8054445554442,
-                "y": 902.558108558108
+                "x": 1345.8054445554442,
+                "y": 832.558108558108
             },
             "type": "__variable_getter__"
         },
@@ -489,8 +490,97 @@
                 }
             },
             "position": {
-                "x": 1372.8054445554442,
-                "y": 941.558108558108
+                "x": 1360.8054445554442,
+                "y": 871.558108558108
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "EtzpNRjbv2m3k0Rq",
+            "inputs": {
+                "sf2e": {
+                    "value": "Compendium.sf2e.feats.Item.WLXWLYl4J8IIKpZh"
+                },
+                "target": {
+                    "connection": "rzSyoGgWifn3MwW5:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "ksfmz6g7ZcssMsEV:ins:in"
+                },
+                "true": {
+                    "connection": "TpA4mJV4Gu0V87YG:ins:in"
+                }
+            },
+            "position": {
+                "x": 838.7802197802197,
+                "y": 137.39999999999992
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "rzSyoGgWifn3MwW5",
+            "inputs": {
+                "entry": {
+                    "connection": "pfsSLJgiDWKerRFT:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 675.7142857142858,
+                "y": 163.17857142857144
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "O8EuFwYY8ZCjBY8m": {
+                        "id": "O8EuFwYY8ZCjBY8m",
+                        "isArray": false,
+                        "label": "Mystic",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "ulkTWyHAEInFbO9M": {
+                        "id": "ulkTWyHAEInFbO9M",
+                        "isArray": false,
+                        "label": "Amount",
+                        "slug": "entry",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "TpA4mJV4Gu0V87YG",
+            "inputs": {
+                "O8EuFwYY8ZCjBY8m": {
+                    "connection": "lUmnXsVAZ9CmbjdZ:outputs:entry"
+                },
+                "ulkTWyHAEInFbO9M": {
+                    "value": 20
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "xcDQ3taHGshtrBdF:ins:in"
+                }
+            },
+            "position": {
+                "x": 1331.8595848595846,
+                "y": 198.3730158730158
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "lUmnXsVAZ9CmbjdZ",
+            "inputs": {
+                "entry": {
+                    "connection": "pfsSLJgiDWKerRFT:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 1170.186507936508,
+                "y": 287.5396825396824
             },
             "type": "__variable_getter__"
         }

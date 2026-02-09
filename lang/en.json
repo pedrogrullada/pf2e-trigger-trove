@@ -1,5 +1,10 @@
 {
     "TRIGGERTROVE": {
+        "ActionHero": {
+            "Trigger": {
+                "Description": "<p>If the origin of a successful Strike with an automatic weapon has the <strong>action hero</strong> fighting style, the target becomes suppressed until the start of the origin's next turn.</p>"
+            }
+        },
         "AirAuraJunction": {
             "Trigger": {
                 "TurnStarted": {
@@ -502,6 +507,11 @@
                 }
             }
         },
+        "SuppressingFire": {
+            "Trigger": {
+                "Description": "<p>When a roller fails their saving throw against an origin using an area weapon with the <strong>suppressing fire</strong> class feature, the roller becomes suppressed until the start of the origin's next turn.</p>"
+            }
+        },
         "SwaggeringInitiative": {
             "Label": "Swaggering Initiative",
             "Trigger": {
@@ -607,6 +617,9 @@
                 "NoVitalityNetwork": "{actor} has no vitality network",
                 "Select": "Select a token with a vitality network",
                 "Target": "Select a target for Transfer Vitality"
+            },
+            "Trigger": {
+                "Description": "<p>When a combatant with <strong>Transfer Vitality</strong> starts their turn, their <strong>vitality network</strong> regains Hit Points.</p><p>When a token with vitality network is selected and you run the Vitality Network macro, you can select a number of Hit Points to roll as healing and reduce from your vitality network.</p>"
             }
         },
         "Vitalizing": {

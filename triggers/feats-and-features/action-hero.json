@@ -1,6 +1,7 @@
 {
+    "description": "<p>@Localize[TRIGGERTROVE.ActionHero.Trigger.Description]</p>",
     "folder": "Feats & Features",
-    "id": "sMGLya583h07EoHN",
+    "id": "veAMPyq04fB7unFM",
     "name": "Action Hero",
     "nodes": [
         {

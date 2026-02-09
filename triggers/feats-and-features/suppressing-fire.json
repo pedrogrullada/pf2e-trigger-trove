@@ -1,6 +1,7 @@
 {
+    "description": "<p>@Localize[TRIGGERTROVE.SuppressingFire.Trigger.Description]</p>",
     "folder": "Feats & Features",
-    "id": "ITKVGewaMJHkWxhs",
+    "id": "MQmbGOlmXerj1kBm",
     "name": "Suppressing Fire",
     "nodes": [
         {
@@ -34,7 +35,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "EwyGg4XgTiwmbKr7:ins:in"
+                    "connection": "4gIZsnx37sP1M85C:ins:in"
                 }
             },
             "position": {
@@ -132,13 +133,13 @@
             "type": "create-effect"
         },
         {
-            "id": "EwyGg4XgTiwmbKr7",
+            "id": "4gIZsnx37sP1M85C",
             "inputs": {
-                "entry": {
-                    "value": "item:trait:area"
-                },
-                "list": {
+                "options": {
                     "connection": "EWQj9DktAFeRubRy:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  {\n    \"or\": [\n      \"item:trait:area\",\n      \"item:trait:automatic\"\n    ]\n  }\n]"
                 }
             },
             "outs": {
@@ -147,10 +148,10 @@
                 }
             },
             "position": {
-                "x": 1136,
-                "y": 382.25
+                "x": 1168,
+                "y": 381
             },
-            "type": "list-contains"
+            "type": "match-predicate"
         }
     ],
     "priority": 0,
