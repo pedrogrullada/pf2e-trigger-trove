@@ -1,0 +1,311 @@
+{
+    "description": "<p>@Localize[TRIGGERTROVE.EngulfAndSwallowWhole.Trigger.Description]</p>",
+    "folder": "Monster Abilities",
+    "id": "xI7vo5M5cuaCptuN",
+    "name": "Engulf & Swallow Whole",
+    "nodes": [
+        {
+            "id": "javvw6E54Wz7UdCG",
+            "outs": {
+                "out": {
+                    "connection": "l09bfKWbvUWHLvMH:ins:in"
+                }
+            },
+            "position": {
+                "x": 271,
+                "y": 387
+            },
+            "type": "turn-end-event"
+        },
+        {
+            "id": "l09bfKWbvUWHLvMH",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.bestiary-effects.Item.1cbIe569UD6paXad"
+                },
+                "sf2e": {
+                    "value": "Compendium.sf2e.bestiary-effects.Item.1cbIe569UD6paXad"
+                },
+                "target": {
+                    "connection": "javvw6E54Wz7UdCG:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "x0emNoaf8w4pRDGa:ins:in"
+                }
+            },
+            "position": {
+                "x": 496.9230769230769,
+                "y": 430.4
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "0kD668ioU10HjRWC": {
+                        "id": "0kD668ioU10HjRWC",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "Origin",
+                        "slug": "path",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "x0emNoaf8w4pRDGa",
+            "inputs": {
+                "input": {
+                    "connection": "l09bfKWbvUWHLvMH:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "aCiaTptSeStEKkHV:ins:in"
+                }
+            },
+            "position": {
+                "x": 782.7272727272726,
+                "y": 502.6954545454545
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "aCiaTptSeStEKkHV",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu"
+                },
+                "sf2e": {
+                    "value": "Compendium.sf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu"
+                },
+                "target": {
+                    "connection": "x0emNoaf8w4pRDGa:outputs:0kD668ioU10HjRWC"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "N40vgjASAFstCcs6:ins:in"
+                },
+                "true": {
+                    "connection": "5DHh3GalB1OTZNZb:ins:in"
+                }
+            },
+            "position": {
+                "x": 1046.090909090909,
+                "y": 405.6045454545454
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "N40vgjASAFstCcs6",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.sf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy"
+                },
+                "sf2e": {
+                    "value": "Compendium.sf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy"
+                },
+                "target": {
+                    "connection": "x0emNoaf8w4pRDGa:outputs:0kD668ioU10HjRWC"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "OZifSCXxWFzv1Pwy:ins:in"
+                }
+            },
+            "position": {
+                "x": 1338.1958041958037,
+                "y": 537.6424242424242
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "5sVvRr1wVubyyBsc",
+            "inputs": {
+                "item": {
+                    "connection": "FPCVcoTEmvA7cRdm:outputs:Yy9yttTsGcgag1ca"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "K2EafG0chvsGgjYs:ins:in"
+                }
+            },
+            "position": {
+                "x": 488.09090909090884,
+                "y": 727.1125541125542
+            },
+            "type": "item-formula"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "Yy9yttTsGcgag1ca": {
+                        "id": "Yy9yttTsGcgag1ca",
+                        "isArray": false,
+                        "label": "Item",
+                        "slug": "entry",
+                        "type": "item"
+                    }
+                },
+                "title": "Roll Damage"
+            },
+            "id": "FPCVcoTEmvA7cRdm",
+            "outs": {
+                "out": {
+                    "connection": "5sVvRr1wVubyyBsc:ins:in"
+                }
+            },
+            "position": {
+                "x": 266.36363636363643,
+                "y": 677.3852813852815
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "Yy9yttTsGcgag1ca": {
+                        "id": "Yy9yttTsGcgag1ca",
+                        "isArray": false,
+                        "label": "Item",
+                        "slug": "entry",
+                        "type": "item"
+                    }
+                }
+            },
+            "id": "5DHh3GalB1OTZNZb",
+            "inputs": {
+                "Yy9yttTsGcgag1ca": {
+                    "connection": "aCiaTptSeStEKkHV:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "FPCVcoTEmvA7cRdm:ins:in"
+                }
+            },
+            "position": {
+                "x": 1376.4685314685314,
+                "y": 335.1060606060606
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "Yy9yttTsGcgag1ca": {
+                        "id": "Yy9yttTsGcgag1ca",
+                        "isArray": false,
+                        "label": "Item",
+                        "slug": "entry",
+                        "type": "item"
+                    }
+                }
+            },
+            "id": "OZifSCXxWFzv1Pwy",
+            "inputs": {
+                "Yy9yttTsGcgag1ca": {
+                    "connection": "N40vgjASAFstCcs6:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "FPCVcoTEmvA7cRdm:ins:in"
+                }
+            },
+            "position": {
+                "x": 1627.4685314685314,
+                "y": 504.1060606060606
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "K2EafG0chvsGgjYs",
+            "inputs": {
+                "formula": {
+                    "connection": "5sVvRr1wVubyyBsc:outputs:formula"
+                },
+                "item": {
+                    "connection": "qxXxWKkkYjvVL6dE:outputs:entry"
+                },
+                "origin": {
+                    "connection": "xR3hm8QV8V7HlaqA:outputs:entry"
+                },
+                "targets": {
+                    "connection": "CjUTWl7a01UbypVm:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 811.4685314685314,
+                "y": 750.1489177489178
+            },
+            "type": "roll-damage"
+        },
+        {
+            "id": "xR3hm8QV8V7HlaqA",
+            "inputs": {
+                "entry": {
+                    "connection": "x0emNoaf8w4pRDGa:outputs:0kD668ioU10HjRWC"
+                }
+            },
+            "position": {
+                "x": 680.5454545454545,
+                "y": 862.4989177489178
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "CjUTWl7a01UbypVm",
+            "inputs": {
+                "entry": {
+                    "connection": "javvw6E54Wz7UdCG:outputs:combatant"
+                }
+            },
+            "position": {
+                "x": 654.5454545454545,
+                "y": 900.4989177489178
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "qxXxWKkkYjvVL6dE",
+            "inputs": {
+                "entry": {
+                    "connection": "FPCVcoTEmvA7cRdm:outputs:Yy9yttTsGcgag1ca"
+                }
+            },
+            "position": {
+                "x": 685.5454545454545,
+                "y": 938.4989177489178
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e",
+        "sf2e"
+    ],
+    "variables": {
+        "FPCVcoTEmvA7cRdm:outputs:Yy9yttTsGcgag1ca": {
+            "isArray": false,
+            "label": "Item",
+            "type": "item"
+        },
+        "javvw6E54Wz7UdCG:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        },
+        "x0emNoaf8w4pRDGa:outputs:0kD668ioU10HjRWC": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        }
+    }
+}

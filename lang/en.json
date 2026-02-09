@@ -174,9 +174,7 @@
         },
         "EngulfAndSwallowWhole": {
             "Trigger": {
-                "TurnEnded": {
-                    "Description": "When a creature that is @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]{Engulfed} or @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]{Swallowed Whole} ends their turn, roll that ability's damage."
-                }
+                "Description": "When a creature that is <strong>Engulfed</strong> or <strong>Swallowed Whole</strong> ends their turn, roll that ability's damage."
             }
         },
         "ExtravagantParry": {
@@ -268,12 +266,7 @@
         },
         "IntenseHeat": {
             "Trigger": {
-                "AuraEntered": {
-                    "Description": "Post the Intense Heat ability to chat when a creature enters the aura."
-                },
-                "TurnStarted": {
-                    "Description": "Post the Intense Heat ability to chat when a creature starts their turn in the aura."
-                }
+                "Description": "When a combatant enters or starts their turn within an intense heat aura, roll its damage and post a saving throw against it."
             }
         },
         "Inviolable": {
