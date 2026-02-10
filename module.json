@@ -86,7 +86,7 @@
       }
     ]
   },
-  "title": "PF2e Trigger Trove",
+  "title": "Trigger Trove",
   "version": "#{VERSION}#",
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",

@@ -400,6 +400,9 @@
             "inputs": {
                 "pf2e": {
                     "value": "Compendium.pf2e.classfeatures.Item.LzYi0OuOoypNb6jd"
+                },
+                "target": {
+                    "connection": "w9gawril0PECLdLm:outputs:roller"
                 }
             },
             "outs": {

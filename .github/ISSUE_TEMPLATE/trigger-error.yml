@@ -26,7 +26,7 @@ body:
       label: "Pre-submission Checklist"
       description: "Please confirm you have completed the following:"
       options:
-        - label: "I have verified that this error occurs without any modules other than PF2e Trigger Trove and its dependencies enabled"
+        - label: "I have verified that this error occurs without any modules other than Trigger Trove and its dependencies enabled"
           required: true
         - label: "I have searched existing issues to ensure this error hasn't been reported before"
           required: true
