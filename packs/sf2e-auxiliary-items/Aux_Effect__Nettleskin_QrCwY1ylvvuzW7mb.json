@@ -1,0 +1,65 @@
+{
+  "name": "Aux Effect: Nettleskin",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.952,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Auxiliary effect for Trigger Trove's <em>nettleskin</em> trigger.</p><p>When a character has this effect and the <em>nettleskin</em> trigger is enabled, damage will be rolled automatically when an adjacent creature hits them with a melee or unarmed attack.</p><p>The effect <strong>must</strong> be added to the spell's description and dragged from there in order to have the correct scaling.</p>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "PF2e Trigger Trove",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "rules": [],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 10,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": null,
+    "fromSpell": false,
+    "context": null
+  },
+  "_id": "QrCwY1ylvvuzW7mb",
+  "img": "icons/magic/nature/root-vine-hand-strike.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "KTlVtxcaM6BIDpE9": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "sf2e",
+    "systemVersion": "0.0.4"
+  },
+  "_key": "!items!QrCwY1ylvvuzW7mb"
+}

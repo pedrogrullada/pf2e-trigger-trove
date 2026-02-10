@@ -160,7 +160,7 @@
         },
         "FlashyDodge": {
             "Trigger": {
-                "Description": "When an attack misses against a target benefitting from @UUID[Compendium.pf2e.feats-srd.Item.TnYHtN9gQASqOnii]{Flashy Dodge}, that target gains panache until the end of their next turn."
+                "Description": "When an attack misses against a target benefitting from <strong>Flashy Dodge</strong>, that target gains panache until the end of their next turn."
             }
         },
         "Fortification": {

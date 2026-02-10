@@ -22,14 +22,8 @@
   "packFolders": [
     {
       "folders": [],
-      "name": "PF2e Trigger Trove",
-      "packs": ["auxiliary-items"],
-      "sorting": "a"
-    },
-    {
-      "folders": [],
-      "name": "SF2e Trigger Trove",
-      "packs": ["sf2e-auxiliary-items","sf2e-trigger-macros"],
+      "name": "Trigger Trove",
+      "packs": ["auxiliary-items","sf2e-auxiliary-items","trigger-macros"],
       "sorting": "a"
     }
   ],
@@ -57,14 +51,13 @@
       "type": "Item"
     },
     {
-      "label": "SF2e Macros",
-      "name": "sf2e-trigger-macros",
+      "label": "Trigger Macros",
+      "name": "trigger-macros",
       "ownership": {
         "ASSISTANT": "OWNER",
         "PLAYER": "OBSERVER"
       },
-      "path": "packs/sf2e-trigger-macros",
-      "system": "sf2e",
+      "path": "packs/trigger-macros",
       "type": "Macro"
     }
   ],

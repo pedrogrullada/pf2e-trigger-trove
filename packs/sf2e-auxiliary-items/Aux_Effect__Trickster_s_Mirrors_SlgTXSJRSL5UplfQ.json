@@ -1,0 +1,89 @@
+{
+  "name": "Aux Effect: Trickster's Mirrors",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.952,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Auxiliary effect for <em>trickster's mirrors</em></p><p>This effect keeps track of the number of mirrors. The number must be manually increased when the spell is sustained, but it will be automatically reduced when appropriate if its associated trigger is active.</p><p>Additionally, if the recipient receives area or splash damage, a reminder that all images are destroyed will be displayed.</p>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "PF2e Trigger Trove",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": [
+          "damage-received"
+        ],
+        "predicate": [
+          {
+            "or": [
+              "area-damage",
+              "item:trait:splash"
+            ]
+          }
+        ],
+        "text": "TRIGGERTROVE.TrickstersMirrors.Item.Note",
+        "title": "TRIGGERTROVE.Generic.Note.Label"
+      }
+    ],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": true
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false,
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "badge": {
+      "type": "counter",
+      "value": 1,
+      "labels": null,
+      "loop": false,
+      "min": null,
+      "max": 3
+    },
+    "fromSpell": false,
+    "context": null
+  },
+  "_id": "SlgTXSJRSL5UplfQ",
+  "img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "lBn9t2oEMiiJjyzv": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "sf2e",
+    "systemVersion": "0.0.4"
+  },
+  "_key": "!items!SlgTXSJRSL5UplfQ"
+}
