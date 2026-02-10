@@ -85,7 +85,7 @@
                 "ToggleLabel": "Diamond Dust — Aura is active"
             },
             "Trigger": {
-                "Description": "When a combatant ends their turn—or enters—a <strong>Diamond Dust</strong> aura, roll its damage and add an effect to track the combatant's immunity to further instances of this trigger. For this trigger to work, the spellcaster must have @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.fyKmMJganeNRIVWi]{Aux Effect: Diamond Dust} applied to them, dragged from the <em>diamond dust</em> spell when it's sent to chat."
+                "Description": "When a combatant ends their turn—or enters—a <strong>Diamond Dust</strong> aura, roll its damage and add an effect to track the combatant's immunity to further instances of this trigger. For this trigger to work, the spellcaster must have <strong>Aux Effect: Diamond Dust</strong> applied to them, dragged from the <em>diamond dust</em> spell when it's sent to chat. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder."
             }
         },
         "Disarm": {
@@ -228,7 +228,7 @@
         },
         "Nettleskin": {
             "Trigger": {
-                "Description": "<p>When the target of a successful melee or unarmed attack has <strong>Nettleskin</strong>'s auxiliary effect and is adjacent to the origin of that attack, roll <em>nettleskin</em>'s damage. When that damage is applied, reduce the duration of nettleskin by 1 round.</p><p>For this trigger to work, @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.QrCwY1ylvvuzW7mb]{Aux Effect: Nettleskin} must be dragged onto the origin when they cast the spell. Furthermore, it must be dragged from the spell's card in chat for its damage to scale correctly.</p>"
+                "Description": "<p>When the target of a successful melee or unarmed attack has <strong>Nettleskin</strong>'s auxiliary effect and is adjacent to the origin of that attack, roll <em>nettleskin</em>'s damage. When that damage is applied, reduce the duration of nettleskin by 1 round.</p><p>For this trigger to work, <strong>Aux Effect: Nettleskin</strong> must be dragged onto the origin when they cast the spell. Furthermore, it must be dragged from the spell's card in chat for its damage to scale correctly. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder.</p>"
             }
         },
         "OneShotOneKill": {
@@ -292,7 +292,7 @@
             }
         },
         "SafeElements": {
-            "Addendum": "A target with @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} dragged onto them <strong>from the kineticist's sheet</strong> is unaffected by this trigger."
+            "Addendum": "A target with <strong>Aux Effect: Safe Elements</strong> dragged onto them <strong>from the kineticist's sheet</strong> is unaffected by this trigger. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder."
         },
         "ScarsOfSteel": {
             "Label": "Scars of Steel",
@@ -351,7 +351,7 @@
         },
         "SpiritLink": {
             "Trigger": {
-                "Description": "<p>When a combatant starts their turn and they have a <strong>Spirit Link</strong> auxiliary effect that originated from themselves, check the scene for tokens with an identical effect. If there is such a token, check if they're not at their Hit Point maximum and if so, send a damage-healing roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD]{Aux Effect: Spirit Link} to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.</p>",
+                "Description": "<p>When a combatant starts their turn and they have a <strong>Spirit Link</strong> auxiliary effect that originated from themselves, check the scene for tokens with an identical effect. If there is such a token, check if they're not at their Hit Point maximum and if so, send a damage-healing roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add <strong>Aux Effect: Spirit Link</strong> to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.  You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder.</p>",
                 "Note": "<p>At the start of each of your turns, if the target is below maximum Hit Points, it regains 2 Hit Points per spell rank of <em>spirit link</em> (or the difference between its current and maximum Hit Points, if that's lower). You lose as many Hit Points as the target regained.</p>"
             }
         },
@@ -411,7 +411,7 @@
                 "ResourceLabel": "Trickster's Mirrors"
             },
             "Trigger": {
-                "Description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ]{Aux Effect: Trickster's Mirrors}, automatically reduce the Trickster's Mirrors resource depending on both the outcome of the attack and a randomly generated number, as described by the spell. If the attacker is within 5 feet, roll damage when a mirror is destroyed.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access.</p>",
+                "Description": "<p>If the attacked creature has <strong>Aux Effect: Trickster's Mirrors</strong>, automatically reduce the <strong>Trickster's Mirrors</strong> resource depending on both the outcome of the attack and a randomly generated number, as described by the spell. If the attacker is within 5 feet, roll damage when a mirror is destroyed.</p><p>For this trigger to work, <strong>Aux Effect: Trickster's Mirrors</strong> must be dragged onto the origin when they cast the spell. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder.",
                 "Note": {
                     "Hit": "<strong>Trickster's Mirror</strong> The attack hits you! All your mirrors remain.",
                     "Miss": "<p>The attack misses you! One of your mirrors is destroyed. If the attacker was within 5 feet, they must succeed at a @Check[will|basic] save or take mental damage as they believe themselves cut by a shower of glass shards from the breaking mirror.</p>",
@@ -439,7 +439,7 @@
                 "Addendum": "Anytime you cast a vitality spell, the thorns' damage increases to d6s of piercing damage until the start of your next turn."
             },
             "Trigger": {
-                "Description": "<p>When the target of a successful melee attack has Vibrant Thorns' auxiliary effect and is adjacent to the origin of the attack, or if the attack was an unarmed attack, roll <em>vibrant thorns'</em> damage. If the target has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.tMv3au5iEzSGOWxN]{Aux Effect: Vibrant Thorns (Increase Damage)}, increase that damage accordingly.</p><p>For this trigger to work, @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.KGbXSyZzPE5i1O4N]{Aux Effect: Vibrant Thorns} must be dragged onto the origin when they cast the spell.</p>"
+                "Description": "<p>When the target of a successful melee attack has Vibrant Thorns' auxiliary effect and is adjacent to the origin of the attack, or if the attack was an unarmed attack, roll <em>vibrant thorns'</em> damage. If the target has <strong>Aux Effect: Vibrant Thorns (Increase Damage)}</strong>, increase that damage accordingly.</p><p>For this trigger to work, <strong>Aux Effect: Vibrant Thorns</strong> must be dragged onto the origin when they cast the spell. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder.</p>"
             }
         },
         "VitalityNetwork": {
@@ -462,7 +462,7 @@
         },
         "WarningStripes": {
             "Trigger": {
-                "Description": "<p>If the target of a successful melee unarmed attack has <strong>Warning Stripes</strong>'s auxiliary effect, roll the spell's damage.</p><p>For this trigger to work, @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.0qQV2XvX2kaOt8yj]{Aux Effect: Warning Stripes} must be dragged onto the origin when they cast the spell. Furthermore, it must be dragged from the spell's card in chat for its damage to scale correctly.</p>"
+                "Description": "<p>If the target of a successful melee unarmed attack has <strong>Warning Stripes</strong>'s auxiliary effect, roll the spell's damage.</p><p>For this trigger to work, <strong>Aux Effect: Warning Stripes</strong> must be dragged onto the origin when they cast the spell. Furthermore, it must be dragged from the spell's card in chat for its damage to scale correctly. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder.</p>"
             }
         },
         "WarpingPull": {
