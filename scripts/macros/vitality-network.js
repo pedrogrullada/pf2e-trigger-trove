@@ -25,7 +25,6 @@ export async function transferVitality() {
   const expendVitalityNetwork = new foundry.data.fields.NumberField({min: 1, max: Math.min(remaining,maxTransfer), step: 1})
 
   content += expendVitalityNetwork.toFormGroup({
-    duration: expendVitalityNetwork,
     label: game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Label"),
     hint: game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Hint")},{
     name: 'hitPoints',
