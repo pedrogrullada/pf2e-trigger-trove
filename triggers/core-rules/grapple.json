@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Grapple.Trigger.Description]",
     "folder": "Core Rules",
     "id": "ft4xvxXIULcSavMR",
     "name": "Grapple",

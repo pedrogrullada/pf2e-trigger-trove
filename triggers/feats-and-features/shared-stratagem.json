@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.SharedStratagem.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "XAQyJMTXoi56BRFh",
     "name": "Shared Stratagem",
@@ -108,7 +109,7 @@
                     "connection": "PpM4U1WyZTkVSxIx:outputs:entry"
                 },
                 "localization": {
-                    "value": "TRIGGERTROVE.SharedStratagem.Trigger.AttackRolled.Investigator.ChatMessage"
+                    "value": "TRIGGERTROVE.SharedStratagem.Trigger.ChatMessage"
                 },
                 "speaker": {
                     "connection": "PpM4U1WyZTkVSxIx:outputs:entry"

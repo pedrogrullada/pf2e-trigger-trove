@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for kineticist triggers when they have the @UUID[Compendium.pf2e.feats-srd.ZBPRABDXeLVwxFC7]{Safe Elements} feat.</p><p>This effect excludes you from being affected by the origin kineticist's triggers. Add it to the description of the kineticist's Safe Elements feat, and drag it from there.</p>",
+      "value": "<p>Auxiliary effect for Trigger Trove's Safe Elements check</p><p>This effect excludes you from being affected by the origin kineticist's triggers. Add it to the description of the kineticist's Safe Elements feat, and drag it from there.</p>",
       "gm": ""
     },
     "publication": {
@@ -55,9 +55,9 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.6.4"
+    "systemVersion": "7.10.1"
   },
   "_id": "p4SCBtIYPzVQ0gEd",
   "sort": 0,

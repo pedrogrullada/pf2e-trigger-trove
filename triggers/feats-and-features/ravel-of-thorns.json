@@ -1,4 +1,5 @@
 {
+    "description": "<p>@Localize[TRIGGERTROVE.RavelOfThorns.Trigger.Description]</p><p>@Localize[TRIGGERTROVE.SafeElements.Addendum]</p>",
     "folder": "Feats & Features",
     "id": "swPIa9DmWZo1tKCR",
     "name": "Ravel of Thorns",
@@ -180,7 +181,7 @@
                     "value": "{\n  \"key\": \"FlatModifier\",\n  \"value\": -10,\n  \"type\": \"circumstance\",\n  \"selector\": [\n    \"all-speeds\"\n  ],\n  \"slug\": \"ravel-of-thorns\"\n}"
                 },
                 "name": {
-                    "value": "Aux Effect: Ravel of Thorns"
+                    "value": "Effect: Ravel of Thorns"
                 },
                 "pf2eImg": {
                     "value": "icons/magic/nature/vines-thorned-entwined-glow-teal-purple.webp"

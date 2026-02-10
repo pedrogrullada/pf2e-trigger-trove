@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "",
+      "value": "<p>Auxiliary effect for Trigger Trove's One Shot, One Kill trigger</p>",
       "gm": ""
     },
     "publication": {
@@ -112,7 +112,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.9.1"
+    "systemVersion": "7.10.1"
   },
   "_key": "!items!h1BznDjjZQfNKqou"
 }

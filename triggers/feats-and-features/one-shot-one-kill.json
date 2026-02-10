@@ -1,4 +1,5 @@
 {
+    "description": "<p>@Localize[TRIGGERTROVE.OneShotOneKill.Trigger.Description]</p>",
     "folder": "Feats & Features",
     "id": "8FJd3xsvnR8t0qOv",
     "name": "One Shot, One Kill",
@@ -41,7 +42,7 @@
             "id": "qMhITxSfvsCVNz8e",
             "inputs": {
                 "localization": {
-                    "value": "TRIGGERTROVE.OneShotOneKill.Trigger.CombatantJoined.Prompt"
+                    "value": "TRIGGERTROVE.OneShotOneKill.Trigger.Prompt"
                 },
                 "title": {
                     "value": "TRIGGERTROVE.OneShotOneKill.Label"
@@ -143,66 +144,6 @@
                 "y": 137.1190476190481
             },
             "type": "__variable_getter__"
-        },
-        {
-            "custom": {
-                "inputs": {
-                    "1tQEIuY8XLtyr6u3": {
-                        "id": "1tQEIuY8XLtyr6u3",
-                        "label": "Tag",
-                        "slug": "rule",
-                        "type": "text"
-                    },
-                    "n4VH3saUMtyVF7n9": {
-                        "id": "n4VH3saUMtyVF7n9",
-                        "label": "Damage Alteration",
-                        "slug": "rule",
-                        "type": "text"
-                    },
-                    "sT0cXvdBHVnGP0Fs": {
-                        "id": "sT0cXvdBHVnGP0Fs",
-                        "label": "Roll Option",
-                        "slug": "rule",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "P5HnqHnvqYjXuH10",
-            "inputs": {
-                "0hHo0E1l048F0C4b": {
-                    "value": "{\n  \"key\": \"ChoiceSet\",\n  \"choices\": {\n    \"ownedItems\": true,\n    \"types\": [\n      \"weapon\"\n    ],\n    \"predicate\": [\n      {\n        \"or\": [\n          \"item:group:crossbow\",\n          \"item:group:firearm\"\n        ]\n      }\n    ]\n  },\n  \"flag\": \"weapon\"\n}"
-                },
-                "1tQEIuY8XLtyr6u3": {
-                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"add\",\n  \"property\": \"other-tags\",\n  \"itemId\": \"{item|flags.pf2e.rulesSelections.weapon}\",\n  \"value\": \"one-shot-one-kill\"\n}"
-                },
-                "bha2QyQ9d3eH0RyG": {
-                    "value": "{\n  \"key\": \"DamageAlteration\",\n  \"selectors\": [\n    \"weapon-damage\"\n  ],\n  \"slug\": \"one-shot-one-kill\",\n  \"mode\": \"downgrade\",\n  \"property\": \"dice-number\",\n  \"value\": 0,\n  \"predicate\": [\n    {\n      \"not\": \"item:id:{item|flags.pf2e.rulesSelections.weapon}\"\n    }\n  ]\n}"
-                },
-                "fixed": {
-                    "value": "encounter"
-                },
-                "n4VH3saUMtyVF7n9": {
-                    "value": "{\n  \"key\": \"DamageAlteration\",\n  \"selectors\": [\n    \"weapon-damage\"\n  ],\n  \"slug\": \"one-shot-one-kill\",\n  \"mode\": \"downgrade\",\n  \"property\": \"dice-number\",\n  \"value\": 0,\n  \"predicate\": [\n    {\n      \"not\": \"item:id:{item|flags.pf2e.rulesSelections.weapon}\"\n    }\n  ]\n}"
-                },
-                "name": {
-                    "value": "Aux Effect: One Shot, One Kill"
-                },
-                "pf2eImg": {
-                    "value": "icons/skills/ranged/projectile-strike-impale-gray.webp"
-                },
-                "slug": {
-                    "value": "trigger-trove-one-shot-one-kill"
-                },
-                "sT0cXvdBHVnGP0Fs": {
-                    "value": "{\n  \"key\": \"RollOption\",\n  \"option\": \"one-shot-one-kill\",\n  \"domain\": \"strike-damage\",\n  \"priority\": 51,\n  \"toggleable\": true,\n  \"disabledIf\": [\n    \"parent:type:effect\"\n  ],\n  \"disabledValue\": true\n}"
-                }
-            },
-            "position": {
-                "x": 1196.923076923077,
-                "y": 995.4714285714285
-            },
-            "state": "fixed",
-            "type": "create-effect"
         },
         {
             "id": "mRB96oQ3XYsPZNb4",

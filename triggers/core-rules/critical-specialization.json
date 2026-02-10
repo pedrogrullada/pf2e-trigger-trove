@@ -1,4 +1,5 @@
 {
+    "description": "<p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Bow]</p><p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Spear]</p><p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Sword]</p>",
     "folder": "Core Rules",
     "id": "6JdDvJY9YKdxoi2o",
     "name": "Critical Specialization",

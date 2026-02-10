@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.ExtravagantParry.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "1uece55CwcZFxmIQ",
     "name": "Extravagant Parry",
@@ -95,6 +96,9 @@
         }
     ],
     "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
     "variables": {
         "dcMsG1nSIv6YyXgK:outputs:outcome": {
             "isArray": false,

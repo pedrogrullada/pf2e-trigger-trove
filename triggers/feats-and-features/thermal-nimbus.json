@@ -1,4 +1,5 @@
 {
+    "description": "<p>@Localize[TRIGGERTROVE.ThermalNimbus.Trigger.Description]</p><p>@Localize[TRIGGERTROVE.SafeElements.Addendum]</p>",
     "folder": "Feats & Features",
     "id": "SklU32D8fErMRcLx",
     "name": "Thermal Nimbus",

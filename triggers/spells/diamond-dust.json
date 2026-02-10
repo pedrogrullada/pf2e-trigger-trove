@@ -363,6 +363,9 @@
         }
     ],
     "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
     "variables": {
         "LPMiL57kSn6C3eyK:outputs:item": {
             "isArray": false,

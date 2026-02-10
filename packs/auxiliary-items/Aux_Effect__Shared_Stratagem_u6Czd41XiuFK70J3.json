@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.feats-srd.Item.N4wCUZH2KG6FoGqh]{Shared Stratagem} trigger</p><p>The investigator's Devise a Stratagem target is off-guard against your next attack.</p>",
+      "value": "<p>Auxiliary effect for Trigger Trove's Shared Stratagem trigger</p><p>The investigator's Devise a Stratagem target is off-guard against your next attack.</p>",
       "gm": ""
     },
     "publication": {
@@ -71,7 +71,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.9.1"
+    "systemVersion": "7.10.1"
   },
   "_key": "!items!u6Czd41XiuFK70J3"
 }

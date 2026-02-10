@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.ScarsOfSteel.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "vohaZDhT8Zf1qBck",
     "name": "Scars of Steel",
@@ -181,7 +182,7 @@
             "id": "Fh1PV8zS7l5XCVvN",
             "inputs": {
                 "localization": {
-                    "value": "TRIGGERTROVE.ScarsOfSteel.Trigger.AttackRolled.AwaitConfirmation.Prompt"
+                    "value": "TRIGGERTROVE.ScarsOfSteel.Trigger.AwaitConfirmation.Prompt"
                 },
                 "title": {
                     "value": "TRIGGERTROVE.ScarsOfSteel.Label"

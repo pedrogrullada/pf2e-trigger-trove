@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Trip.Trigger.Description]",
     "folder": "Core Rules",
     "id": "Ita8kRgcY3SqkFG7",
     "name": "Trip",

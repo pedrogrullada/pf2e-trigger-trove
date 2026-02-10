@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Disarm.Trigger.Description]",
     "folder": "Core Rules",
     "id": "M7QIwJzNZDQf8ziQ",
     "name": "Disarm",

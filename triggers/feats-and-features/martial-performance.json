@@ -1,0 +1,1004 @@
+{
+    "description": "<p>@Localize[TRIGGERTROVE.MartialPerformance.Trigger.Description]</p>",
+    "folder": "Feats & Features",
+    "id": "LmQAU1XCCrqA1w0U",
+    "name": "Martial Performance",
+    "nodes": [
+        {
+            "id": "ZhMxyo4TUFQzKpRv",
+            "outs": {
+                "out": {
+                    "connection": "Ks4vwIqByPVc1LA1:ins:in"
+                }
+            },
+            "position": {
+                "x": -373,
+                "y": -32
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "Ks4vwIqByPVc1LA1",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.q1iP3SjAF5uceI0M"
+                },
+                "target": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "2ZSYdkOtusq3BiWs:ins:in"
+                }
+            },
+            "position": {
+                "x": -66.0769230769231,
+                "y": -5.600000000000023
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "2ZSYdkOtusq3BiWs",
+            "inputs": {
+                "options": {
+                    "connection": "xiIlN1JuJApu4gRs:outputs:entry"
+                },
+                "predicate": {
+                    "value": "[\n  \"origin:action:slug:strike\",\n  \"origin:enemy\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "s5mBNQ5kGArwVQEn:ins:in"
+                }
+            },
+            "position": {
+                "x": 209.9230769230769,
+                "y": 48.5
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "xiIlN1JuJApu4gRs",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:options"
+                }
+            },
+            "position": {
+                "x": 49,
+                "y": 155.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "1vTqDYGMxeGrCtmf": {
+                        "id": "1vTqDYGMxeGrCtmf",
+                        "isArray": false,
+                        "label": "Damage Origin",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "As2qYtrklZcyzB5v": {
+                        "id": "As2qYtrklZcyzB5v",
+                        "isArray": false,
+                        "label": "Effect",
+                        "slug": "entry",
+                        "type": "item"
+                    }
+                },
+                "title": "Duration Update"
+            },
+            "id": "Jj6ezLhKTNbIe43L",
+            "outs": {
+                "out": {
+                    "connection": "SnNv5OGazdX1xXko:ins:in"
+                }
+            },
+            "position": {
+                "x": -470.2738095238094,
+                "y": 457.0476190476191
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "id": "s5mBNQ5kGArwVQEn",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spell-effects.Item.beReeFroAx24hj83"
+                },
+                "target": {
+                    "connection": "w6ioop2CGqB3zcfS:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "QBNUTe3kuzKMlQrG:ins:in"
+                },
+                "true": {
+                    "connection": "X2JwXSew7yigP8u9:ins:in"
+                }
+            },
+            "position": {
+                "x": 448.9230769230769,
+                "y": -37.60000000000002
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "w6ioop2CGqB3zcfS",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 253,
+                "y": -12.25
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "1vTqDYGMxeGrCtmf": {
+                        "id": "1vTqDYGMxeGrCtmf",
+                        "isArray": false,
+                        "label": "Damage Origin",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "As2qYtrklZcyzB5v": {
+                        "id": "As2qYtrklZcyzB5v",
+                        "isArray": false,
+                        "label": "Effect",
+                        "slug": "entry",
+                        "type": "item"
+                    }
+                }
+            },
+            "id": "X2JwXSew7yigP8u9",
+            "inputs": {
+                "1vTqDYGMxeGrCtmf": {
+                    "connection": "CTDA8UXjbQc01jcn:outputs:entry"
+                },
+                "As2qYtrklZcyzB5v": {
+                    "connection": "s5mBNQ5kGArwVQEn:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Jj6ezLhKTNbIe43L:ins:in"
+                }
+            },
+            "position": {
+                "x": 746.9230769230769,
+                "y": -149.5
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "CTDA8UXjbQc01jcn",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 550.8571428571429,
+                "y": -104.24999999999994
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "QBNUTe3kuzKMlQrG",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spell-effects.Item.DLwTvjjnqs2sNGuG"
+                },
+                "target": {
+                    "connection": "3GlpsP9ua5cjtq3W:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "C5EqBZBGDtvAvwED:ins:in"
+                },
+                "true": {
+                    "connection": "JSABRVetzf4Pqco1:ins:in"
+                }
+            },
+            "position": {
+                "x": 758.9230769230769,
+                "y": 59.39999999999998
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "3GlpsP9ua5cjtq3W",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 529.5,
+                "y": 140.5
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "1vTqDYGMxeGrCtmf": {
+                        "id": "1vTqDYGMxeGrCtmf",
+                        "isArray": false,
+                        "label": "Damage Origin",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "As2qYtrklZcyzB5v": {
+                        "id": "As2qYtrklZcyzB5v",
+                        "isArray": false,
+                        "label": "Effect",
+                        "slug": "entry",
+                        "type": "item"
+                    }
+                }
+            },
+            "id": "JSABRVetzf4Pqco1",
+            "inputs": {
+                "1vTqDYGMxeGrCtmf": {
+                    "connection": "yLo9Ei8dcgWOuowJ:outputs:entry"
+                },
+                "As2qYtrklZcyzB5v": {
+                    "connection": "QBNUTe3kuzKMlQrG:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Jj6ezLhKTNbIe43L:ins:in"
+                }
+            },
+            "position": {
+                "x": 1058.923076923077,
+                "y": -52.5
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "yLo9Ei8dcgWOuowJ",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 854,
+                "y": 1.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "1vTqDYGMxeGrCtmf": {
+                        "id": "1vTqDYGMxeGrCtmf",
+                        "isArray": false,
+                        "label": "Damage Origin",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "As2qYtrklZcyzB5v": {
+                        "id": "As2qYtrklZcyzB5v",
+                        "isArray": false,
+                        "label": "Effect",
+                        "slug": "entry",
+                        "type": "item"
+                    }
+                }
+            },
+            "id": "PIfvu6JyEAnSZXDf",
+            "inputs": {
+                "1vTqDYGMxeGrCtmf": {
+                    "connection": "ubs9Oz2u20vHkzcM:outputs:entry"
+                },
+                "As2qYtrklZcyzB5v": {
+                    "connection": "C5EqBZBGDtvAvwED:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Jj6ezLhKTNbIe43L:ins:in"
+                }
+            },
+            "position": {
+                "x": 1327.923076923077,
+                "y": 272.5
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "C5EqBZBGDtvAvwED",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.spell-effects.Item.8adLKKzJy49USYJt"
+                },
+                "target": {
+                    "connection": "B5HQY8ES2FOEZPSJ:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "PIfvu6JyEAnSZXDf:ins:in"
+                }
+            },
+            "position": {
+                "x": 1038.923076923077,
+                "y": 178.39999999999998
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "ubs9Oz2u20vHkzcM",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1136,
+                "y": 351.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "B5HQY8ES2FOEZPSJ",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 822.4285714285716,
+                "y": 245.5357142857144
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "outs": {
+                    "9gC1ky8Y6YvndyhI": {
+                        "id": "9gC1ky8Y6YvndyhI",
+                        "input": "spell-effect-rallying-anthem",
+                        "label": "Rallying Anthem",
+                        "slug": "value"
+                    },
+                    "YIt8aY6rDpjHUKTT": {
+                        "id": "YIt8aY6rDpjHUKTT",
+                        "input": "spell-effect-courageous-anthem",
+                        "label": "Courageous Anthem",
+                        "slug": "value"
+                    }
+                }
+            },
+            "id": "fcqH2SbrC1a6xRJj",
+            "inputs": {
+                "input": {
+                    "connection": "FtryIv33HcOJ27EW:outputs:entry"
+                }
+            },
+            "outs": {
+                "9gC1ky8Y6YvndyhI": {
+                    "connection": "VQkDsAR2DfA4aaQb:ins:in"
+                },
+                "YIt8aY6rDpjHUKTT": {
+                    "connection": "9b4GhW5dOgEJjj5G:ins:in"
+                }
+            },
+            "position": {
+                "x": 2905.608058608059,
+                "y": 675.0950549450554
+            },
+            "type": "split-text"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "0xGDQW7xnz6xC7ke": {
+                        "id": "0xGDQW7xnz6xC7ke",
+                        "input": "system.start.value",
+                        "isArray": false,
+                        "label": "Start Value",
+                        "slug": "path",
+                        "type": "number"
+                    },
+                    "E5wjsZT6oVd9LLmJ": {
+                        "id": "E5wjsZT6oVd9LLmJ",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "Origin",
+                        "slug": "path",
+                        "type": "target"
+                    },
+                    "RR9LlapCc3Avvjet": {
+                        "id": "RR9LlapCc3Avvjet",
+                        "input": "system.slug",
+                        "isArray": false,
+                        "label": "Slug",
+                        "slug": "path",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "SnNv5OGazdX1xXko",
+            "inputs": {
+                "input": {
+                    "connection": "4WnvtsYX3L336yhr:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "7k3zEzanouMgoGCF:ins:in"
+                }
+            },
+            "position": {
+                "x": -237.82692307692264,
+                "y": 462.2600732600731
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "4WnvtsYX3L336yhr",
+            "inputs": {
+                "entry": {
+                    "connection": "Jj6ezLhKTNbIe43L:outputs:As2qYtrklZcyzB5v"
+                }
+            },
+            "position": {
+                "x": -364.53463693169556,
+                "y": 587.2310385692733
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "jdefzrjAZiuGUN6Y": {
+                        "id": "jdefzrjAZiuGUN6Y",
+                        "input": "slug",
+                        "label": "slug",
+                        "slug": "variable",
+                        "type": "text"
+                    },
+                    "T0oI3c58zRSCJpn7": {
+                        "id": "T0oI3c58zRSCJpn7",
+                        "input": "start",
+                        "label": "start",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "jdJByRsAjXm8ZSz4",
+            "inputs": {
+                "jdefzrjAZiuGUN6Y": {
+                    "connection": "SnNv5OGazdX1xXko:outputs:RR9LlapCc3Avvjet"
+                },
+                "plain": {
+                    "value": "@slug-@start"
+                },
+                "T0oI3c58zRSCJpn7": {
+                    "connection": "SnNv5OGazdX1xXko:outputs:0xGDQW7xnz6xC7ke"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "WPXJrdRs4LTwh2Px:ins:in"
+                }
+            },
+            "position": {
+                "x": 261.428733031674,
+                "y": 482.6548480930827
+            },
+            "type": "format-text"
+        },
+        {
+            "id": "MkQvqO2sNzjqmH0S",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 387.83898944193083,
+                "y": 626.3381814264164
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "7k3zEzanouMgoGCF",
+            "inputs": {
+                "a": {
+                    "connection": "0lXWHRdKgW0qJzzN:outputs:entry"
+                },
+                "b": {
+                    "connection": "SnNv5OGazdX1xXko:outputs:E5wjsZT6oVd9LLmJ"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "jdJByRsAjXm8ZSz4:ins:in"
+                }
+            },
+            "position": {
+                "x": 36.76206636500751,
+                "y": 431.0881814264164
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "0lXWHRdKgW0qJzzN",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": -193.4467248437836,
+                "y": 398.62389571213066
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "lQfm1cczx9ibvqF2",
+            "inputs": {
+                "targets": {
+                    "connection": "ytwb9KXFU22Mk8HG:outputs:targets"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "AGRG8x0egQMoh9Q9:ins:in"
+                }
+            },
+            "position": {
+                "x": 853.079526682468,
+                "y": 746.1469115851467
+            },
+            "state": "loop",
+            "type": "filter-targets"
+        },
+        {
+            "id": "ytwb9KXFU22Mk8HG",
+            "position": {
+                "x": 571.5175608705023,
+                "y": 857.8024671407024
+            },
+            "type": "scene-targets"
+        },
+        {
+            "id": "AGRG8x0egQMoh9Q9",
+            "inputs": {
+                "slug": {
+                    "connection": "fNtnnP57QHWZglBp:outputs:entry"
+                },
+                "target": {
+                    "connection": "lQfm1cczx9ibvqF2:outputs:current"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "8cz0iqY8qt24c0EV:ins:in"
+                }
+            },
+            "position": {
+                "x": 1087.1906377935788,
+                "y": 756.7024671407022
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "fNtnnP57QHWZglBp",
+            "inputs": {
+                "entry": {
+                    "connection": "SnNv5OGazdX1xXko:outputs:RR9LlapCc3Avvjet"
+                }
+            },
+            "position": {
+                "x": 945.712005314947,
+                "y": 900.2746893629244
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "FtryIv33HcOJ27EW",
+            "inputs": {
+                "entry": {
+                    "connection": "SnNv5OGazdX1xXko:outputs:RR9LlapCc3Avvjet"
+                }
+            },
+            "position": {
+                "x": 2738.0453386482804,
+                "y": 753.1080226962586
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "U1yKOrAgElzqHG1a": {
+                        "id": "U1yKOrAgElzqHG1a",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "Origin",
+                        "slug": "path",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "8cz0iqY8qt24c0EV",
+            "inputs": {
+                "input": {
+                    "connection": "AGRG8x0egQMoh9Q9:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "hU4ctnJ44mdMoX4D:ins:in"
+                }
+            },
+            "position": {
+                "x": 1365.712005314947,
+                "y": 722.6746893629244
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "hU4ctnJ44mdMoX4D",
+            "inputs": {
+                "a": {
+                    "connection": "8cz0iqY8qt24c0EV:outputs:U1yKOrAgElzqHG1a"
+                },
+                "b": {
+                    "connection": "GcEeivqDdvUJLtbb:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Av0st2yxrvajO39S:ins:in"
+                }
+            },
+            "position": {
+                "x": 1592.712005314947,
+                "y": 663.7746893629244
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "GcEeivqDdvUJLtbb",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1418.712005314947,
+                "y": 813.2746893629245
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Av0st2yxrvajO39S",
+            "inputs": {
+                "by": {
+                    "value": 1
+                },
+                "effect": {
+                    "connection": "AGRG8x0egQMoh9Q9:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "jTu4a5S4S9e6KfLV:ins:in"
+                }
+            },
+            "position": {
+                "x": 1820.5593246622666,
+                "y": 731.0534772417124
+            },
+            "type": "effect-duration"
+        },
+        {
+            "custom": {
+                "title": "Proceed to Rallying Anthem"
+            },
+            "id": "GFnmJ4N4hd8HQ7E1",
+            "outs": {
+                "out": {
+                    "connection": "QBNUTe3kuzKMlQrG:ins:in"
+                }
+            },
+            "position": {
+                "x": 466.2596243625653,
+                "y": 198.26278460101923
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "custom": {
+                "title": "Proceed to Song of Strength"
+            },
+            "id": "2QXYylFVweDfurfW",
+            "outs": {
+                "out": {
+                    "connection": "C5EqBZBGDtvAvwED:ins:in"
+                }
+            },
+            "position": {
+                "x": 737.5096243625653,
+                "y": 313.26278460101923
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "id": "9b4GhW5dOgEJjj5G",
+            "outs": {
+                "out": {
+                    "connection": "GFnmJ4N4hd8HQ7E1:ins:in"
+                }
+            },
+            "position": {
+                "x": 3184.34936795231,
+                "y": 609.0961179343533
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "VQkDsAR2DfA4aaQb",
+            "outs": {
+                "out": {
+                    "connection": "2QXYylFVweDfurfW:ins:in"
+                }
+            },
+            "position": {
+                "x": 3189.84936795231,
+                "y": 741.1794512676865
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "klgBqgjX40QSAqaP": {
+                        "id": "klgBqgjX40QSAqaP",
+                        "input": "id",
+                        "label": "id",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "DEiJ0hETo9UqKlsZ",
+            "inputs": {
+                "klgBqgjX40QSAqaP": {
+                    "connection": "piJqNygEvFcOPpox:outputs:entry"
+                },
+                "plain": {
+                    "value": "Effect: Extended by Martial Performance (@id)"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "eAcbSFVWzwX8wRKA:ins:in"
+                }
+            },
+            "position": {
+                "x": 2260.089743589745,
+                "y": 805.9227272727281
+            },
+            "type": "format-text"
+        },
+        {
+            "id": "piJqNygEvFcOPpox",
+            "inputs": {
+                "entry": {
+                    "connection": "jdJByRsAjXm8ZSz4:outputs:result"
+                }
+            },
+            "position": {
+                "x": 2120.5303030303044,
+                "y": 924.272727272728
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "u98chKCtwct5WiEv",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 2413.39393939394,
+                "y": 947.5909090909104
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "jTu4a5S4S9e6KfLV",
+            "inputs": {
+                "a": {
+                    "connection": "YjvNcAzZdvMuhf1B:outputs:entry"
+                },
+                "b": {
+                    "connection": "QFWFlUWxFVU4GxPE:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "DEiJ0hETo9UqKlsZ:ins:in"
+                }
+            },
+            "position": {
+                "x": 2038.7120053149472,
+                "y": 757.7746893629245
+            },
+            "type": "actors-match"
+        },
+        {
+            "id": "YjvNcAzZdvMuhf1B",
+            "inputs": {
+                "entry": {
+                    "connection": "ZhMxyo4TUFQzKpRv:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1854.2665755297328,
+                "y": 868.4162109820026
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "QFWFlUWxFVU4GxPE",
+            "inputs": {
+                "entry": {
+                    "connection": "lQfm1cczx9ibvqF2:outputs:current"
+                }
+            },
+            "position": {
+                "x": 1871.2665755297328,
+                "y": 918.4162109820026
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "pxW92rehnb15ME18": {
+                        "id": "pxW92rehnb15ME18",
+                        "label": "Description",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "eAcbSFVWzwX8wRKA",
+            "inputs": {
+                "fixed": {
+                    "value": "encounter"
+                },
+                "name": {
+                    "connection": "DEiJ0hETo9UqKlsZ:outputs:result"
+                },
+                "pf2eImg": {
+                    "value": "icons/weapons/polearms/spear-flared-bronze-teal.webp"
+                },
+                "pxW92rehnb15ME18": {
+                    "value": "{\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"title\": \"Trigger Trove Note\",\n      \"text\": \"This effect exists to ensure Martial Performance only affects a given composition once. It will be deleted once the encounter ends.\"\n    }\n  ]\n}"
+                },
+                "secret": {
+                    "value": true
+                },
+                "sf2eImg": {
+                    "value": "icons/weapons/polearms/spear-flared-bronze-teal.webp"
+                },
+                "slug": {
+                    "connection": "3FMtZMLBuwdsvhc5:outputs:entry"
+                },
+                "target": {
+                    "connection": "u98chKCtwct5WiEv:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "fcqH2SbrC1a6xRJj:ins:in"
+                }
+            },
+            "position": {
+                "x": 2590.8221310852887,
+                "y": 804.8130363788275
+            },
+            "state": "fixed",
+            "type": "create-effect"
+        },
+        {
+            "id": "3FMtZMLBuwdsvhc5",
+            "inputs": {
+                "entry": {
+                    "connection": "jdJByRsAjXm8ZSz4:outputs:result"
+                }
+            },
+            "position": {
+                "x": 2450.322131085288,
+                "y": 984.5630363788275
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "WPXJrdRs4LTwh2Px",
+            "inputs": {
+                "slug": {
+                    "connection": "jdJByRsAjXm8ZSz4:outputs:result"
+                },
+                "target": {
+                    "connection": "MkQvqO2sNzjqmH0S:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "lQfm1cczx9ibvqF2:ins:in"
+                },
+                "true": {
+                    "connection": "fcqH2SbrC1a6xRJj:ins:in"
+                }
+            },
+            "position": {
+                "x": 573.1554644186217,
+                "y": 509.8130363788276
+            },
+            "state": "slug",
+            "type": "has-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "jdJByRsAjXm8ZSz4:outputs:result": {
+            "isArray": false,
+            "label": "Identifier",
+            "type": "text"
+        },
+        "Jj6ezLhKTNbIe43L:outputs:As2qYtrklZcyzB5v": {
+            "isArray": false,
+            "label": "Effect",
+            "type": "item"
+        },
+        "lQfm1cczx9ibvqF2:outputs:current": {
+            "isArray": false,
+            "label": "Looped Target",
+            "type": "target"
+        },
+        "SnNv5OGazdX1xXko:outputs:RR9LlapCc3Avvjet": {
+            "isArray": false,
+            "label": "Slug",
+            "type": "text"
+        },
+        "ZhMxyo4TUFQzKpRv:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "ZhMxyo4TUFQzKpRv:outputs:origin": {
+            "isArray": false,
+            "label": "Damage Origin",
+            "type": "target"
+        }
+    }
+}

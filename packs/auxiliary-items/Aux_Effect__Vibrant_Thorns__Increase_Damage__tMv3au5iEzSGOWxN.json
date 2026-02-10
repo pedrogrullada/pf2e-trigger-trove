@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorns}</p><p>Temporarily increase your Vibrant Thorns damage to d6s.</p>",
+      "value": "<p>Auxiliary effect for <em>vibrant thorns</em></p><p>Temporarily increase your Vibrant Thorns damage to d6s.</p>",
       "gm": ""
     },
     "publication": {
@@ -57,9 +57,9 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.350",
+    "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.1"
+    "systemVersion": "7.10.1"
   },
   "_key": "!items!tMv3au5iEzSGOWxN"
 }

@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.SteamKnight.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "GobSqyzICH9LjSOi",
     "name": "Steam Knight",
@@ -105,7 +106,7 @@
                     "connection": "EKfgiAQVPG2HKnsY:outputs:item"
                 },
                 "note": {
-                    "value": "<p>@Localize[TRIGGERTROVE.SteamKnight.Trigger.TurnStarted.Note]</p>"
+                    "value": "<p>@Localize[TRIGGERTROVE.SteamKnight.Trigger.Note]</p>"
                 },
                 "origin": {
                     "connection": "HWWHv4wUT3iZwACk:outputs:entry"

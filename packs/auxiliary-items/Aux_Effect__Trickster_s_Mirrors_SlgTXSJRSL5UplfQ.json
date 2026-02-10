@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.spells-srd.Item.cuKVbWWNzJj1GDpZ]{Trickster's Mirrors}</p><p>This effect keeps track of the number of mirrors. The number must be manually increased when the spell is sustained, but it will be automatically reduced when appropriate if its associated trigger is active.</p><p>Additionally, if the recipient receives area or splash damage, a reminder that all images are destroyed will be displayed.</p>",
+      "value": "<p>Auxiliary effect for <em>trickster's mirrors</em></p><p>This effect keeps track of the number of mirrors. The number must be manually increased when the spell is sustained, but it will be automatically reduced when appropriate if its associated trigger is active.</p><p>Additionally, if the recipient receives area or splash damage, a reminder that all images are destroyed will be displayed.</p>",
       "gm": ""
     },
     "publication": {
@@ -83,7 +83,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.10.0"
+    "systemVersion": "7.10.1"
   },
   "_key": "!items!SlgTXSJRSL5UplfQ"
 }

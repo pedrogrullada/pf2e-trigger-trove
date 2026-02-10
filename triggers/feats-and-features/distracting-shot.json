@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.DistractingShot.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "gtKRywh18WVEw7JN",
     "name": "Distracting Shot",
@@ -496,6 +497,9 @@
         }
     ],
     "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
     "variables": {
         "NMiT4L2WFZWXEewk:outputs:origin": {
             "isArray": false,

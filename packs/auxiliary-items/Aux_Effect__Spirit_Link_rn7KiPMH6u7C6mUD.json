@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e]{Spirit Link}</p><p>The effect must be added to both the spellcaster and the target.</p>",
+      "value": "<p>Auxiliary effect for <em>spirit link</em></p><p>The effect must be added to both the spellcaster and the target.</p>",
       "gm": ""
     },
     "publication": {
@@ -59,7 +59,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.4"
+    "systemVersion": "7.10.1"
   },
   "_key": "!items!rn7KiPMH6u7C6mUD"
 }

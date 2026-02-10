@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Defend.Trigger.Description]",
     "folder": "Core Rules",
     "id": "aMWcJbAfeTIOGMWd",
     "name": "Defend",

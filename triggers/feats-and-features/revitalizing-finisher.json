@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.RevitalizingFinisher.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "q68PweTSbsDvdAmU",
     "name": "Revitalizing Finisher",
@@ -147,7 +148,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "Y2XIlXw4ceWwT7bh:ins:in"
+                    "connection": "tg2ZWw28EKSEokJt:ins:in"
                 }
             },
             "position": {
@@ -170,30 +171,6 @@
             "type": "__variable_getter__"
         },
         {
-            "id": "Y2XIlXw4ceWwT7bh",
-            "inputs": {
-                "a": {
-                    "connection": "rq6VMrirmhd7J6NJ:outputs:entry"
-                },
-                "b": {
-                    "connection": "fS5hWUrF88a8AtN7:outputs:entry"
-                },
-                "strict": {
-                    "value": true
-                }
-            },
-            "outs": {
-                "out": {
-                    "connection": "QOpHP67OGg6u9MtR:ins:in"
-                }
-            },
-            "position": {
-                "x": 1889.923076923077,
-                "y": 696.4
-            },
-            "type": "distance-between"
-        },
-        {
             "id": "fS5hWUrF88a8AtN7",
             "inputs": {
                 "entry": {
@@ -201,34 +178,10 @@
                 }
             },
             "position": {
-                "x": 1767,
-                "y": 811.75
+                "x": 1785,
+                "y": 743.75
             },
             "type": "__variable_getter__"
-        },
-        {
-            "id": "QOpHP67OGg6u9MtR",
-            "inputs": {
-                "a": {
-                    "connection": "Y2XIlXw4ceWwT7bh:outputs:distance"
-                },
-                "b": {
-                    "value": 30
-                },
-                "compare": {
-                    "value": "lte"
-                }
-            },
-            "outs": {
-                "true": {
-                    "connection": "70UPDhgkPsqhB4OV:ins:in"
-                }
-            },
-            "position": {
-                "x": 2125.923076923077,
-                "y": 749.5
-            },
-            "type": "compare-numbers"
         },
         {
             "id": "70UPDhgkPsqhB4OV",
@@ -241,8 +194,8 @@
                 }
             },
             "position": {
-                "x": 2351.923076923077,
-                "y": 779.4
+                "x": 2164.923076923077,
+                "y": 753.4
             },
             "type": "create-item"
         },
@@ -254,8 +207,45 @@
                 }
             },
             "position": {
-                "x": 2218,
-                "y": 936.75
+                "x": 2041,
+                "y": 915.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "tg2ZWw28EKSEokJt",
+            "inputs": {
+                "distance": {
+                    "value": 30
+                },
+                "origin": {
+                    "connection": "CFrX4Uxe7eH9yCAz:outputs:entry"
+                },
+                "target": {
+                    "connection": "fS5hWUrF88a8AtN7:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "70UPDhgkPsqhB4OV:ins:in"
+                }
+            },
+            "position": {
+                "x": 1929,
+                "y": 674
+            },
+            "type": "in-range"
+        },
+        {
+            "id": "CFrX4Uxe7eH9yCAz",
+            "inputs": {
+                "entry": {
+                    "connection": "bagLTk5Cvt8LlVQR:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1783,
+                "y": 794.75
             },
             "type": "__variable_getter__"
         }

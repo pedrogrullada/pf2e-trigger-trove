@@ -7,64 +7,41 @@
         },
         "AirAuraJunction": {
             "Trigger": {
-                "TurnStarted": {
-                    "Description": "<p>When a character starts their turn within the kinetic aura of an @UUID[Compendium.pf2e.classfeatures.Item.X11Y3T1IzmtNqGMV]{Air Gate} kineticist with its aura junction, grant that character the corresponding bonus to their Speeds via an auxiliary effect until the end of their turn.</p><p>This benefit overlaps with the system's effect when inside the aura, but persists once the character leaves the aura until the end of their turn.</p>"
-                }
+                "Description": "When a combatant starts their turn within the kinetic aura of an <strong>air gate</strong> kineticist with its <strong>aura junction</strong>, grant that character the corresponding bonus to their Speeds via effect until the end of their turn.</p><p>This benefit overlaps with the system's effect when inside the aura, but persists once the character leaves the aura until the end of their turn."
             }
         },
         "AldoriSwordlord": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When a character with the @UUID[Compendium.pf2e.feats-srd.Item.BEgz2GnG2MKmmaZX]{Aldori Swordlord} feat hits or critically hits with an attack using an <em>aldori dueling sword</em>, they receive the corresponding number of temporary Hit Points."
-                }
+                "Description": "When the origin of an attack with an <em>aldori dueling sword</em> has the <strong>Aldori Swordlord</strong> feat, add its corresponding effect to them, according to their degree of success."
             }
         },
         "AmuletsAbeyance": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "Automatically remove the @UUID[Compendium.pf2e.actionspf2e.Item.Or6RLXeoZkN8CLdi]{Amulet's Abeyance} effect after damage is taken."
-                }
+                "Description": "When a target takes damage and they have <strong>Amulet's Abeyance</strong>'s resistance effect, remove that effect."
             }
         },
         "AuraOfCourage": {
             "Trigger": {
-                "TurnEnded": {
-                    "Description": "When a champion with Aura of Courage ends their turn, all allies within their aura reduce their frightened condition by 1."
-                }
-            }
-        },
-        "AuxiliarySubtriggers": {
-            "RollItemDamage": {
-                "Description": "Roll item damage with context provided by the parent trigger."
-            },
-            "SendAbilityToChat": {
-                "Addendum": "If you have <a href=\"https://foundryvtt.com/packages/pf2e-toolbelt\">PF2e Toolbelt</a>'s Target Helper feature enabled, the message will have the triggering creature as its target.</p>",
-                "Description": "Send an ability to chat. The ability's slug and its origin are set in the parent trigger."
+                "Description": "When a combatant with <strong>Aura of Courage</strong> ends their turn, all allies within their aura reduce their frightened condition by 1."
             }
         },
         "BlindingAura": {
             "Trigger": {
-                "TurnStarted": {
-                    "Description": "When a character starts their turn within a @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.ePJcp2ADOjJYYQ5Q]{Shining Child}'s Blinding Aura, send that ability to chat, as well as its immunity effect."
-                }
+                "Description": "<p>When a combatant starts their turn within a Shining Child's <strong>Blinding Aura</strong>, send that ability to chat. When a roller fails their saving throw against Blinding Aura, add the blinded condition according to their degree of success. On a critical success, the roller does not trigger further Blinding Aura triggers.</p>"
             }
         },
         "BrutalBeating": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "When a character with @UUID[Compendium.pf2e.feats-srd.Item.DYUlMxh7TDgEh9xB]{Brutal Beating} deals critical hit damage to a target, that target becomes frightened 1."
-                }
+                "Description": "WWhen a target takes damage from an origin with the <strong>Brutal Beating</strong> feat, that target becomes frightened 1."
             }
         },
         "ChampionsResistance": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "<p>Automatically remove the Champion's Resistance effect after damage is taken.<p>If the origin champion has the @UUID[Compendium.pf2e.classfeatures.Item.UyuwFp0jQqYL2AdF]{Redemption} cause, the damage origin also becomes enfeebled until the end of its next turn. If they have the @UUID[Compendium.pf2e.feats-srd.Item.2c9awqDem5OLK47S]{Weight of Guilt} feat, the champion can choose whether to apply the stupefied or enfeebled conditions.</p>",
-                    "Redemption": {
-                        "AwaitConfirmation": {
-                            "Prompt": "Will you use Weight of Guilt to make the enemy stupefied rather than enfeebled?",
-                            "Title": "Weight of Guilt"
-                        }
+                "Description": "<p>When a target takes damage and they have a <strong>Champion's Resistance</strong> effect, remove that effect.<p>If the effect origin has <strong>Glimpse of Redemption</strong>, the damage origin also becomes enfeebled until the end of its next turn. If they have the <strong>Weight of Guilt</strong> feat, the champion can choose whether to apply the stupefied or enfeebled conditions.</p>",
+                "Redemption": {
+                    "AwaitConfirmation": {
+                        "Prompt": "Will you use Weight of Guilt to make the enemy stupefied rather than enfeebled?",
+                        "Title": "Weight of Guilt"
                     }
                 }
             }
@@ -79,41 +56,30 @@
         "CriticalSpecialization": {
             "Trigger": {
                 "Description": {
-                    "DamageTaken": {
-                        "Description": {
-                            "Bow": "When critical damage is dealt with a weapon in the bow group and the origin has its critical specialization effect, add the immobilized condition to the target.",
-                            "Spear": "When critical damage is dealt with a weapon in the spear group and the origin has its critical specialization effect, add the clumsy condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts for an additional round.",
-                            "Sword": "When critical damage is dealt with a weapon in the sword group and the origin has its critical specialization effect, add the off-guard condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts until the end of the origin's turn instead."
-                        }
-                    }
+                    "Bow": "When critical damage is dealt with a weapon in the bow group and the origin has its critical specialization effect, add the immobilized condition to the target.",
+                    "Spear": "When critical damage is dealt with a weapon in the spear group and the origin has its critical specialization effect, add the clumsy condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts for an additional round.",
+                    "Sword": "When critical damage is dealt with a weapon in the sword group and the origin has its critical specialization effect, add the off-guard condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts until the end of the origin's turn instead."
                 }
             }
         },
         "CrownedInTempestsFury": {
             "Trigger": {
-                "AuraEntered": {
-                    "Description": "<p>Roll a kineticist's Crowned in Tempest's Fury damage when a creature enters their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them from the kineticist's sheet.</p>"
-                },
-                "TurnEnded": {
-                    "Description": "<p>Roll a kineticist's Crowned in Tempest's Fury damage when a creature end its turn in their kinetic aura.</p><p>If you have Safe Elements, you can designate a party member to be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong></p>"
-                }
+                "Description": "When a target enters a kinetic aura, or starts their turn within one, and the source of that aura is in <strong>Crowned in Tempest's Fury</strong> stance, roll 2d12 electricity damage against that target."
             }
         },
         "Crushing": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When a character critically hits and their weapon has a @UUID[Compendium.pf2e.equipment-srd.Item.JY8X4RSfg6xIqAC9]{Crushing} or @UUID[Compendium.pf2e.equipment-srd.Item.t6SSQYruLsDWj5Tl]{Greater Crushing} rune, their target becomes clumsy and enfeebled."
-                }
+                "Description": "When the origin of an attack critically hits and their weapon has a <strong>crushing</strong> or <strong>greater crushing</strong> rune, their target becomes clumsy and enfeebled."
             }
         },
         "Defend": {
             "Trigger": {
-                "CombatantJoined": {
-                    "Description": "When a character that is @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0]{Defending} joins a combat, raise their shield."
-                },
-                "TurnStarted": {
-                    "Description": "When a @UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0]{Defending} character starts their first turn with their shield raised, remove that effect."
-                }
+                "Description": "<p>When a combatant is created and they have an active <strong>Defend</strong> exploration activity, add an effect that raises their shield.</p><p>At the start of a combatant's first turn in a combat, remove that effect.</p>"
+            }
+        },
+        "Demoralize": {
+            "Trigger": {
+                "Description": "<p>When the roller of a skill check to <strong>Demoralize</strong> a target succeeds on their check, add the frightened 1 condition to the target (frightened 2 on a critical success). Regardless of the outcome, the target gains an immunity tracking effect. </p>"
             }
         },
         "DiamondDust": {
@@ -129,11 +95,14 @@
                 }
             }
         },
+        "Disarm": {
+            "Trigger": {
+                "Description": "<p>When a roller succeeds on their skill check to <strong>Disarm</strong> a target, add Disarm's success effect to that target. On a critical failure, the roller becomes off-guard until the start of their next turn.</p>"
+            }
+        },
         "DistractingShot": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>When a character with @UUID[Compendium.pf2e.feats-srd.Item.BQrhDpLIp9zjbjEP]{Distracting Shot} critically hits their hunted prey, or if they hit their hunted prey twice in the same turn, that target becomes off-guard until the start of the triggering character's next turn.</p><p>If the character has @UUID[Compendium.pf2e.feats-srd.Item.vDJRIKS27md3LudA]{Greater Distracting Shot}, this effect lasts until the end of their next turn instead, and their hunted prey becomes off-guard until the start of their next turn on a hit.</p>"
-                }
+                "Description": "<p>When the origin of an attack has <strong>Distracting Shot</strong> and critically hits their hunted prey, or if they hit their hunted prey twice in the same turn, that target becomes off-guard until the start of the origin's next turn.</p><p>If the origin has <strong>Greater Distracting Shot</strong>, this effect lasts until the end of their next turn instead. Additionally, their hunted prey becomes off-guard until the start of their next turn on a single hit.</p>"
             }
         },
         "DreadFlickering": {
@@ -145,16 +114,12 @@
         },
         "ElegantBuckler": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When an attack critically misses against a target benefitting from @UUID[Compendium.pf2e.feats-srd.Item.C5tSxOwDILefw4zq]{Elegant Buckler}, that target gains panache until the end of their next turn."
-                }
+                "Description": "When an attack critically misses against a target benefitting from Elegant Buckler, that target gains panache until the end of their next turn."
             }
         },
         "EnduringMight": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "Remove @UUID[Compendium.pf2e.spells-srd.Item.eG1fBodYwolaXK98]{Enduring Might}'s effect when damage is taken."
-                }
+                "Description": "When a target takes damage and they have <strong>Enduring Might</strong>'s resistance effect, remove that effect."
             }
         },
         "EnergyShot": {
@@ -163,13 +128,8 @@
             },
             "Label": "Energy Shot",
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "If the attacker has the Energy Shot auxiliary effect, deplete the Energy Shots resource by 1 after attacking with a crossbow or firearm. If there are no more Energy Shots left, remove the effect automatically."
-                },
-                "CombatantJoined": {
-                    "Description": "After confirming that Energy Shot is used, add its damage effect as well as an auxiliary effect to automatically track the shots as a Special Resource.",
-                    "Prompt": "Are you using Energy Shot in this combat?"
-                }
+                "Description": "<p>When a combatant with <strong>Energy Shot</strong> is created, confirm whether the free action will be used. If so, add its auxiliary effect to the combatant, which will keep track of their shots used with a Special Resource.</p><p>If the origin of an attack rolled with a crossbow or firearm has the Energy Shot auxiliary effect, deplete the energy resource by 1. If the Energy Shot resource is at zero, remove the effect.</p>",
+                "Prompt": "Are you using Energy Shot in this combat?"
             }
         },
         "EngulfAndSwallowWhole": {
@@ -179,23 +139,17 @@
         },
         "ExtravagantParry": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When an attack misses against a target benefitting from @UUID[Compendium.pf2e.feats-srd.Item.WcY7H7mRiK2VDquV]{Extravagant Parry}, that target gains panache until the end of their next turn."
-                }
+                "Description": "When an attack misses against a target benefitting from <strong>Extravagant Parry</strong>, that target gains panache until the end of their next turn."
             }
         },
         "Fearsome": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When a character critically hits and their weapon has a @UUID[Compendium.pf2e.equipment-srd.Item.P6v2AtJw7AUwaDzf]{Fearsome} or @UUID[Compendium.pf2e.equipment-srd.Item.uz3JCjRvkE44jxMd]{Greater Fearsome} rune, their target becomes frightened 1 or 2, respectively."
-                }
+                "Description": "When the origin of an attack critically hits and their weapon has a <strong>fearsome</strong> or <strong>greater fearsome</strong> rune, add the frightened 1 or 2 condition to the target, respectively."
             }
         },
         "FinishingFollowThrough": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "When a creature is brought to 0 Hit Points from a finisher, if the damage origin has @UUID[Compendium.pf2e.feats-srd.Item.DY6pNO3GzHeKSxmQ]{Finishing Follow-Through}, it gains panache."
-                }
+                "Description": "When a target is brought to 0 Hit Points by a finisher from an origin with <strong>Finishing Follow-Through</strong>, that origin gains panache."
             }
         },
         "FlameBarrier": {
@@ -207,17 +161,13 @@
         },
         "FlashyDodge": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When an attack misses against a target benefitting from @UUID[Compendium.pf2e.feats-srd.Item.TnYHtN9gQASqOnii]{Flashy Dodge}, that target gains panache until the end of their next turn."
-                }
+                "Description": "When an attack misses against a target benefitting from @UUID[Compendium.pf2e.feats-srd.Item.TnYHtN9gQASqOnii]{Flashy Dodge}, that target gains panache until the end of their next turn."
             }
         },
         "Fortification": {
             "Trigger": {
-                "AttackRolled": {
-                    "CreateChatMessage": "<p><strong>Trigger Trove Note</strong> On a success, this critical hit becomes a normal hit thanks to your <em>fortification</em> rune!</p>",
-                    "Description": "When a character whose armor has a @UUID[Compendium.pf2e.equipment-srd.Item.8buhFcGwuaJRrp0y]{Fortification} or @UUID[Compendium.pf2e.equipment-srd.Item.ujWnpVMkbTljMGN9]{Greater Fortification} rune etched onto it is critically hit, roll a flat check with the appropriate DC."
-                }
+                "CreateChatMessage": "<p><strong>Trigger Trove Note</strong> On a success, this critical hit becomes a normal hit thanks to your <em>fortification</em> rune!</p>",
+                "Description": "<p>When the target of a critically successful attack is wearing armor with a <strong>fortification</strong> or <strong>greater fortification</strong> rune etched onto it is critically hit, roll a flat check with the appropriate DC.</p><p>This is skipped if the character has the Perfect Protection feat, deferring to the system's automation instead.</p>"
             }
         },
         "FrightfulPresence": {
@@ -231,12 +181,6 @@
             }
         },
         "Generic": {
-            "Immunity": {
-                "Addendum": {
-                    "CriticalSuccess": "If the triggering character critically succeeds, you can apply this effect to make them immune.",
-                    "Success": "If the triggering character succeeds, you can apply this effect to make them immune."
-                }
-            },
             "Note": {
                 "Label": "Trigger Trove Note"
             }
@@ -248,12 +192,9 @@
                 }
             }
         },
-        "GoblinScuttle": {
+        "Grapple": {
             "Trigger": {
-                "TokenMoved": {
-                    "Description": "When an allied token is moved to an adjacent space of another token with Goblin Scuttle, confirm whether they want to use it, and if so, send the feat to chat. Be aware of false positives resulting from a Foundry movement not being the same as having ended a move action.",
-                    "Prompt": "Your ally has moved into an adjacent space, possibly ending their move action there. Do you want to use Goblin Scuttle?"
-                }
+                "Description": "When a roller succeeds on their skill check to <strong>Grapple</strong> a target, that target becomes grabbed. On a critical success, the target becomes restrained instead."
             }
         },
         "IncendiaryAura": {
@@ -266,21 +207,17 @@
         },
         "IntenseHeat": {
             "Trigger": {
-                "Description": "When a combatant enters or starts their turn within an intense heat aura, roll its damage and post a saving throw against it."
+                "Description": "When a combatant enters or starts their turn within an <strong>intense heat</strong> aura, roll its damage and post a saving throw against it."
             }
         },
         "Inviolable": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When a creature with Inviolable is hit, roll 3d6 spirit damage. If they are holy or unholy, the damage has the corresponding trait."
-                }
+                "Description": "When the target of a successful attack has Inviolable, roll 3d6 spirit damage. If they are holy or unholy, the damage has the corresponding trait."
             }
         },
         "MartialPerformance": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "<p>If a character with @UUID[Compendium.pf2e.feats-srd.Item.q1iP3SjAF5uceI0M]{Martial Performance} deals damage to an enemy, and they are under the effects of @UUID[Compendium.pf2e.spells-srd.Item.IAjvwqgiDr3qGYxY]{Courageous Anthem}, @UUID[Compendium.pf2e.spells-srd.Item.bH0kPuf7UKxRvi2P]{Rallying Anthem}, or @UUID[Compendium.pf2e.spells-srd.Item.Xxdwkt0EEDgP1LGc]{Song of Strength}; the duration of these effects is extended by 1 round.</p><p>Then, an effect is added that prevents extended effects from benefitting again.</p><p>For this trigger to work correctly, the composition effect must have been dragged from the triggering character's chat card.</p>"
-                }
+                "Description": "<p>If a target takes damage from an enemy origin with <strong>Martial Performance</strong>, and the origin is under the effects of <em>courageous anthem</em>, <em>rallying anthem</em>, or <em>song of strength</em>; extend the duration of these effects by 1 round. Then, add an effect that prevents effects from benefitting more than once.</p><p>For this trigger to work correctly, the composition effect must have been dragged from the triggering character's chat card.</p>"
             }
         },
         "MirrorImage": {
@@ -314,13 +251,18 @@
         "OneShotOneKill": {
             "Label": "One Shot, One Kill",
             "Trigger": {
-                "CombatantJoined": {
-                    "Description": "After confirming that One Shot, One Kill is used, add an effect that enables its additional precision damage until the first successful Strike deals damage.",
-                    "Prompt": "Are you using One Shot, One Kill in this combat?"
-                },
-                "DamageTaken": {
-                    "Description": "Remove the One Shot, One Kill auxiliary effect when an enemy takes damage from a character benefitting from that ability."
-                }
+                "Description": "When a combatant with <strong>One Shot, One Kill</strong> is created, confirm whether they will use it as a free action. If so, add an effect that enables its additional precision damage until their first successful Strike deals damage, and then remove the effect.",
+                "Prompt": "Are you using One Shot, One Kill in this combat?"
+            }
+        },
+        "Overdrive": {
+            "Trigger": {
+                "Description": "If a Crafting check to <strong>Overdrive</strong> is rolled, add the appropriate effect to the roller based on their degree of success. On a critical failure, add an effect to keep track of their malfunctioning gadgets, rolling 1d4 to determine its duration."
+            }
+        },
+        "Panache": {
+            "Trigger": {
+                "Description": "<p>When the roller of a check has the <strong>Panache</strong> class feature and is using a bravado action, add panache to them as appropriate for their degree of success.</p><p>When the origin of an attack uses a finisher, remove panache from them once the attack's damage, if any, is resolved.</p>"
             }
         },
         "PhaseFamiliar": {
@@ -339,12 +281,7 @@
         },
         "RavelOfThorns": {
             "Trigger": {
-                "AuraLeft": {
-                    "Description": "Remove the Ravel of Thorns penalty when a creature leaves the kineticist's kinetic aura."
-                },
-                "TurnStarted": {
-                    "Description": "When a creature starts its turn inside the kinetic aura of a character in @UUID[Compendium.pf2e.feats-srd.Item.mHvkBdBN4gs6CH1g]{Ravel of Thorns} stance, add the Ravel of Thorns auxiliary effect."
-                }
+                "Description": "When a combatant starts its turn inside a kinetic aura whose source is in <strong>Ravel of Thorns</strong> stance, add an effect to that combatant to apply the corresponding speed penalty. Remove this effect when they leave the kinetic aura."
             }
         },
         "RegaliaInitiate": {
@@ -356,23 +293,17 @@
         },
         "RejuvenatingTouch": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "When the target of a @UUID[Compendium.pf2e.spells-srd.Item.zNN9212H2FGfM7VS]{Lay on Hands} spell is healed by the spell and its origin has the @UUID[Compendium.pf2e.feats-srd.Item.xZrTjUub7V09sXZF]{Rejuvenating Touch} feat, that target receives its temporary Hit Points."
-                }
+                "Description": "When the target of a <em>lay on hands</em> spell is healed by the spell and its origin has the <strong>Rejuvenating Touch</strong> feat, that target receives its temporary Hit Points."
             }
         },
         "ReplenishmentOfWar": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "If the damage origin has Replenishment of War and its damage comes from a Strike with its deity's favored weapon, then grant Replenishment of War's temporary Hit Points appropriate for the outcome of the Strike. If the damage origin has Shared Replenishment, this trigger will be disabled."
-                }
+                "Description": "When a target takes damage from an origin with Replenishment of War, and that damage comes from a Strike with their deity's favored weapon, grant Replenishment of War's temporary Hit Points to the origin, as appropriate for the outcome of Strike. If the damage origin has Shared Replenishment, this trigger will have no effect."
             }
         },
         "RevitalizingFinisher": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When a @UUID[Compendium.pf2e.feats-srd.Item.83zzG4XBiL5I3NZv]{Revitalizing Finisher} hits, the origin creature and all allies within 30 feet of it gain temporary Hit Points equal to half the origin's level. On a failure, only the origin gains this benefit."
-                }
+                "Description": "When the origin of a successful attack is using <strong>Revitalizing Finisher</strong>, the origin creature and all allies within 30 feet of it gain temporary Hit Points equal to half the origin's level. On a failure, only the origin gains this benefit."
             }
         },
         "Rooting": {
@@ -385,72 +316,50 @@
                 }
             },
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When a character critically hits and their weapon has a @UUID[Compendium.pf2e.equipment-srd.Item.yGgsoSA8EaaEsYZn]{Rooting} rune, their target becomes immobilized and clumsy."
-                }
+                "Description": "When the origin of a critically successful attack uses a weapon with a <strong>rooting</strong> rune, add the clumsy and immobilized conditions to the target."
             }
         },
         "SafeElements": {
-            "Subtrigger": {
-                "Check": {
-                    "Addendum": "A creature can be unaffected by this trigger by dragging the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} effect onto them <strong>from the kineticist's sheet.</strong>"
-                }
-            }
+            "Addendum": "A target with @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} dragged onto them <strong>from the kineticist's sheet.</strong> is unaffected by this trigger."
         },
         "ScarsOfSteel": {
             "Label": "Scars of Steel",
             "Trigger": {
-                "AttackRolled": {
-                    "AwaitConfirmation": {
-                        "Prompt": "An opponent critically hits you with an attack that deals physical damage. Will you use Scars of Steel?"
-                    },
-                    "Description": "When a raging character is critically hit by an attack that deals physical damage, and that character has @UUID[Compendium.pf2e.feats-srd.Item.j8ycCi7ghTtpRjEW]{Scars of Steel} with available uses left, confirm whether they will use the ability and add an auxiliary effect that enables its resistance if so."
+                "AwaitConfirmation": {
+                    "Prompt": "An opponent critically hits you with an attack that deals physical damage. Will you use Scars of Steel?"
                 },
-                "DamageTaken": {
-                    "Description": "When a character with the auxiliary effect given by the Scars of Steel (Attack Rolled) trigger takes physical damage, remove that auxiliary effect."
-                }
+                "Description": "<p>When a target that is Raging is critically hit by an attack that deals physical damage, and that target has Scars of Steel with available uses left, confirm whether they will use the ability. If so, add an auxiliary effect that enables its resistance, and deplete one use from Scars of Steel.</p><p>Once damage is taken, remove the previously added effect.</p>"
             }
         },
         "Scout": {
             "Trigger": {
-                "CombatantJoined": {
-                    "Description": "When a character that is @UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb]{Scouting} joins combat, add its effect to all allied scene tokens. If the character has @UUID[Compendium.pf2e.feats-srd.Item.aFoVHsuInMOkTZoQ]{Incredible Scout}, its effect will be given instead."
-                }
+                "Description": "When a combatant that has an active <strong>Scout</strong> activity is created, add its effect to all allied tokens in the scene."
+            }
+        },
+        "ScoutDedication": {
+            "Trigger": {
+                "Description": "When a Scouting combatant with <strong>Scout Dedication</strong> is created, add an effect that upgrades Scout's bonus for all allies benefitting from it."
             }
         },
         "ScoutsWarning": {
             "Label": "Scout's Warning",
             "Trigger": {
-                "CombatantJoined": {
-                    "AwaitConfirmation": {
-                        "Prompt": "Will you use Scout's Warning? You must roll a Perception, Stealth, or Survival check for initiative."
-                    },
-                    "Description": "A character with Scout's Warning can confirm whether they will use that feat. If they will, its effect will be added to all scene tokens that share its alliance."
-                }
+                "AwaitConfirmation": {
+                    "Prompt": "Will you use Scout's Warning? You must roll a Perception, Stealth, or Survival check for initiative."
+                },
+                "Description": "When a combatant with <strong>Scout's Warning</strong> is created, confirm whether they will use it as a free action. If so, add Scout's Warning effect to the combatant and their allies."
             }
         },
         "SelfishShield": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "<p>Automatically remove @UUID[Compendium.pf2e.actionspf2e.Item.enQieRrITuEQZxx2]{Selfish Shield}'s effect after taking damage. Additionally, add @UUID[Compendium.pf2e.feat-effects.Item.2a6fuugiPpICe3Li]{Effect: Champion's Extra Damage} effect automatically. The source of the damage must be targeted after the effect is added in order to work correctly.</p><p>If the trigger target has @UUID[Compendium.pf2e.feats-srd.Item.MRMW0EiuOO20pzG2]{Ongoing Selfishness}, its effect will be added automatically as well.</p>",
-                    "Note": "<p><strong>Trigger Trove Note</strong> An effect for Selfish Shield's extra damage has been added! Target the source of the damage to activate it.</p>"
-                }
+                "Description": "<p>When a target with <strong>Selfish Shield</strong>'s effect takes damage, remove that effect and add an effect to the target for Selfish's Shield additional damage, reminding the user to target the origin of the damage. If the damage target has <strong>Ongoing Selfishness</strong>, add its effect as well.</p>",
+                "Note": "<p><strong>Trigger Trove Note</strong> An effect for Selfish Shield's extra damage has been added! Target the source of the damage to activate it.</p>"
             }
         },
         "SharedStratagem": {
             "Trigger": {
-                "AttackRolled": {
-                    "Ally": {
-                        "Description": "If the attacker has the Shared Stratagem auxiliary effect and the target is the Devise a Stratagem target, remove the auxiliary effect if they miss on their attack. If the attack is rerolled into a success, add the effect back."
-                    },
-                    "Investigator": {
-                        "ChatMessage": "<p><strong>Trigger Trove Note</strong> Drag this effect onto the designated ally for Shared Stratagem!</p><p>@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3]{Aux Effect: Shared Stratagem}</p>",
-                        "Description": "Apply a marker effect to the investigator's Devise a Stratagem target. Then post a message to chat with an effect to drag onto the designated ally. The attack target will be off-guard to the designated allies' next attack."
-                    }
-                },
-                "DamageTaken": {
-                    "Description": "If the damage origin has the Shared Stratagem auxiliary effect and the target is the Devise a Stratagem target, remove both the auxiliary and trigger effects."
-                }
+                "ChatMessage": "<p><strong>Trigger Trove Note</strong> Drag this effect onto the designated ally for Shared Stratagem!</p><p>@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3]{Aux Effect: Shared Stratagem}</p>",
+                "Description": "<p>When an attacker with Shared Stratagem successfully attacks their Devise a Stratagem target, and that target isn't being affected by Shared Stratagem already, add a trigger effect marking said target as such, and post a chat message containing an auxiliary effect an ally may drag onto themselves to benefit from Shared Stratagem.</p><p>When an attacker holding the aforementioned auxiliary effect targets the investigator's marked target, that target will be off-guard to that attack.</p><p><em>Note: This trigger may behave incorrectly if you have more than one character using Shared Stratagem to help each other.</em></p>"
             }
         },
         "ShieldsOfTheSpirit": {
@@ -462,9 +371,7 @@
         },
         "SpikeSkin": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>Reduce the duration of @UUID[Compendium.pf2e.feats-srd.Item.9p28s0zg4Vv4r5i2]{Spike Skin}'s effect by 1 minute each time the user is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of the previously mentioned damage types will be missed.</em></p>"
-                }
+                "Description": "<p>When a target under the effects of <strong>Spike Skin</strong> takes damage from an unarmed attack or a non-reach melee weapon, roll Spike Skin's damage. Additionally, if the damage the target takes is physical, regardless of its source, the duration of Spike Skin is reduced by 1 minute.</p>"
             }
         },
         "SpiritLink": {
@@ -477,17 +384,13 @@
         },
         "StaggeringFire": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When a character using @UUID[Compendium.pf2e.feats-srd.Item.fngPLUD4Sltho2kn]{Staggering Fire} hits or critically hits with a ranged Strike using a weapon in the bow group, the attack target receives the appropriate speed penalty."
-                }
+                "Description": "When the origin of an attack is using <strong>Staggering Fire</strong>, and their attack hits or critically using a weapon in the bow group, the target receives the appropriate speed penalty."
             }
         },
         "SteamKnight": {
             "Trigger": {
-                "TurnStarted": {
-                    "Description": "If a character in @UUID[Compendium.pf2e.feats-srd.Item.7PjBANpMMoBxTYq3]{Steam Knight} stance starts their turn and there's an enemy within their kinetic aura, roll damage automatically, including a reminder note of the free action they can use to deal this damage, and the necessary saving throw.",
-                    "Note": "<strong>Steam Knight</strong> <span class=\"action-glyph\">F</span> At the start of each of your turns, you can emit steam as a free action. It deals fire damage to each creature in your kinetic aura with a @Check[reflex|against:kineticist|basic|options:area-effect,forced-movement|traits:composite,fire,impulse,kineticist,primal,stance,water] save. A creature that fails is also pushed 5 feet."
-                }
+                "Description": "If a combatant in <strong>Steam Knight</strong> stance starts their turn and there's at least one enemy in their kinetic aura, roll Steam Knight's damage, including a reminder note of the free action they can use to deal this damage, and the necessary saving throw.",
+                "Note": "<strong>Steam Knight</strong> <span class=\"action-glyph\">F</span> At the start of each of your turns, you can emit steam as a free action. It deals fire damage to each creature in your kinetic aura with a @Check[reflex|against:kineticist|basic|options:area-effect,forced-movement] save. A creature that fails is also pushed 5 feet."
             }
         },
         "Stench": {
@@ -508,14 +411,10 @@
         "SwaggeringInitiative": {
             "Label": "Swaggering Initiative",
             "Trigger": {
-                "CombatantCreated": {
-                    "AwaitConfirmation": {
-                        "Prompt": "Will you use Swaggering Initiative in this encounter?"
-                    }
+                "AwaitConfirmation": {
+                    "Prompt": "Will you use Swaggering Initiative in this encounter?"
                 },
-                "TurnStarted": {
-                    "Description": "When a character using @UUID[Compendium.pf2e.feats-srd.Item.NHheDmNB7L4REmlr]{Swaggering Initiative} is the first one to take a turn in combat, they receive panache."
-                }
+                "Description": "When a combatant with the <strong>Swaggering Initiative</strong> feat is created, confirm whether they will use that feat. If so, toggle their bonus to initiative on. If that combatant is the first one to act, they gain panache."
             }
         },
         "SwashbucklerFinisher": {
@@ -530,36 +429,22 @@
         },
         "SwordAndPistol": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "When a character with @UUID[Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi]{Sword and Pistol} makes a successful ranged Strike against an enemy within their reach—as indicated by the toggle in their sheet—with a one-handed firearm or crossbow, an auxiliary effect is added that makes the target @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to their next melee attack with a one-handed melee weapon. A trigger effect is also added to the target of this attack for tracking purposes."
-                },
-                "DamageTaken": {
-                    "Description": "When a character with @UUID[Compendium.pf2e.feats-srd.Item.dWbISC0di0r4oPCi]{Sword and Pistol} deals damage with a one-handed melee weapon to an enemy that was off-guard as a result of that feat, remove the auxiliary effect on the attacker, and the trigger effect on the target."
-                }
+                "Description": "<p>When the origin of a successful ranged Strike with a one-handed firearm or crossbow has the <strong>Sword and Pistol</strong> feat, and the target is an enemy within their reach—as indicated by the Sword and Pistol toggle in their sheet—add an auxiliary effect that makes the target off-guard to the origin's next melee attack with a one-handed melee weapon. Add a trigger effect to the target of this attack for tracking purposes as well.</p><p>When a target that was off-guard as a result of Sword and Pistol takes damage from a character with that feat using a one-handed melee weapon, remove the auxiliary effect on the attacker, and the trigger effect on the target.</p>"
             }
         },
         "Taunt": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "Checks if attacking creature is @UUID[Compendium.pf2e.actionspf2e.Item.4DYFJ4TUsNkgFBDb]{Taunted}, if so it then checks if the attack target is creature is a creature other than the origin of Taunt. If so, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} is applied to the attacking creature until start of its next turn."
-                }
+                "Description": "When the origin of an attack is <strong>Taunted</strong>, and the target is not the origin of that Taunt, the origin becomes off-guard until the start of its next turn."
             }
         },
         "ThermalNimbus": {
             "Trigger": {
-                "AuraEntered": {
-                    "Description": "Roll a kineticist's Thermal Nimbus damage when a creature enters their kinetic aura while their stance is active."
-                },
-                "TurnStarted": {
-                    "Description": "Roll a kineticist's Thermal Nimbus damage when a creature ends their turn in their kinetic aura while their stance is active."
-                }
+                "Description": "When a combatant starts their turn within, or enters, a kinetic aura whose source is in <strong>Thermal Nimbus</strong> stance, roll the corresponding damage."
             }
         },
         "TreatWounds": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "When a character receives healing from @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}, remove the wounded condition and add its immunity tracking effect."
-                }
+                "Description": "When a target receives healing from <strong>Treat Wounds</strong>, remove the wounded condition and, if the character doesn't have Continual Recovery, add its immunity tracking effect."
             }
         },
         "TrickstersMirrors": {
@@ -578,18 +463,19 @@
                 }
             }
         },
+        "Trip": {
+            "Trigger": {
+                "Description": "When a roller succeeds on their skill check to <strong>Trip</strong> a target, add the prone condition prone to the target. Additionally, roll Trip's damage on a critical success. On a critical failure, add the trip condition to the roller instead."
+            }
+        },
         "UnbalancingBlow": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "When a character with @UUID[Compendium.pf2e.feats-srd.Item.4f65nrWVzTG8Njj8]{Unbalancing Blow} deals critical hit damage, the target becomes off-guard against the character's attacks until the end of their next turn."
-                }
+                "Description": "When a target takes damage from a critical hit from an origin with <strong>Unbalancing Blow</strong>, that target becomes off-guard against the origin's attacks until the end of their next turn."
             }
         },
         "UnbalancingFinisher": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "When a creature takes damage from an @UUID[Compendium.pf2e.feats-srd.Item.VXA50vhIRCBt4vvP]{Unbalancing Finisher}, it is off-guard until the end of the origin's next turn."
-                }
+                "Description": "When a target takes damage from an origin using <strong>Unbalancing Finisher</strong>, that target is off-guard until the end of the origin's next turn."
             }
         },
         "VibrantThorns": {
@@ -617,9 +503,7 @@
         },
         "Vitalizing": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>When a character with a @UUID[Compendium.pf2e.equipment-srd.Item.LwQb7ryTC8FlOXgX]{Vitalizing} rune critically hits an undead, that undead becomes enfeebled 1 until the end of that character's next turn.</p><p>If the character has a @UUID[Compendium.pf2e.equipment-srd.Item.oVrVzML63VFvVfKk]{Greater Vitalizing} rune, that character becomes enfeebled 1 and stupefied 1 instead.</p>"
-                }
+                "Description": "When the origin of a critically successful attack uses a weapon with a <strong>vitalizing</strong> rune, add the enfeebled 1 condition to the target. Additionally, add the stupefied 1 condition if the rune was a <strong>greater vitalizing</strong> rune"
             }
         },
         "WarningStripes": {

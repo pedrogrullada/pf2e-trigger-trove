@@ -1,0 +1,284 @@
+{
+    "description": "@Localize[TRIGGERTROVE.SpikeSkin.Trigger.Description]",
+    "folder": "Feats & Features",
+    "id": "8mne9pllSuMRErsK",
+    "name": "Spike Skin",
+    "nodes": [
+        {
+            "id": "7tH42TwnZqLvj39I",
+            "inputs": {
+                "requires": {
+                    "value": false
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "qrBhhefjzXv58R40:ins:in"
+                }
+            },
+            "position": {
+                "x": 88,
+                "y": 183
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "NkvxjrKTDaDSRuF1",
+            "inputs": {
+                "options": {
+                    "connection": "7tH42TwnZqLvj39I:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  {\n    \"or\": [\n      \"item:category:unarmed\",\n      {\n        \"and\": [\n          \"item:melee\",\n          {\n            \"nor\": [\n              \"item:category:unarmed\",\n              \"item:trait:reach\"\n            ]\n          }\n        ]\n      }\n    ]\n  }\n]"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "3ezimQsg2DzZQXX4:ins:in"
+                },
+                "true": {
+                    "connection": "3zI03U4YgJ5i6XSm:ins:in"
+                }
+            },
+            "position": {
+                "x": 792.9999999999998,
+                "y": 287.91666666666663
+            },
+            "type": "match-predicate"
+        },
+        {
+            "id": "qrBhhefjzXv58R40",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.pFEk5cwegWqXvX4D"
+                },
+                "target": {
+                    "connection": "7tH42TwnZqLvj39I:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "NkvxjrKTDaDSRuF1:ins:in"
+                }
+            },
+            "position": {
+                "x": 414.9230769230769,
+                "y": 101.39999999999998
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "Q5NcuWOz6M23mMzo": {
+                        "id": "Q5NcuWOz6M23mMzo",
+                        "input": "origin",
+                        "isArray": false,
+                        "label": "Effect Origin",
+                        "slug": "path",
+                        "type": "target"
+                    }
+                }
+            },
+            "id": "3zI03U4YgJ5i6XSm",
+            "inputs": {
+                "input": {
+                    "connection": "qrBhhefjzXv58R40:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Cyqrvzbcuy5EZlkc:ins:in"
+                }
+            },
+            "position": {
+                "x": 1043.9230769230767,
+                "y": 223.0666666666666
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "z4UwSwfdkMGAt3ia",
+            "inputs": {
+                "item": {
+                    "connection": "Cyqrvzbcuy5EZlkc:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "1o7kSXVyHpBqZFvL:ins:in"
+                }
+            },
+            "position": {
+                "x": 1574.9230769230767,
+                "y": 213.16666666666663
+            },
+            "type": "item-formula"
+        },
+        {
+            "id": "Cyqrvzbcuy5EZlkc",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.9p28s0zg4Vv4r5i2"
+                },
+                "target": {
+                    "connection": "3zI03U4YgJ5i6XSm:outputs:Q5NcuWOz6M23mMzo"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "z4UwSwfdkMGAt3ia:ins:in"
+                }
+            },
+            "position": {
+                "x": 1271.9999999999998,
+                "y": 250.8166666666666
+            },
+            "state": "uuid",
+            "type": "has-item"
+        },
+        {
+            "id": "1o7kSXVyHpBqZFvL",
+            "inputs": {
+                "formula": {
+                    "connection": "z4UwSwfdkMGAt3ia:outputs:formula"
+                },
+                "item": {
+                    "connection": "Cyqrvzbcuy5EZlkc:outputs:item"
+                },
+                "origin": {
+                    "connection": "4WluzJnte5XR7tNp:outputs:entry"
+                },
+                "targets": {
+                    "connection": "IuPCDJ3KMjeOBCIc:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "3ezimQsg2DzZQXX4:ins:in"
+                }
+            },
+            "position": {
+                "x": 2083,
+                "y": 373.8166666666666
+            },
+            "state": "none",
+            "type": "roll-damage"
+        },
+        {
+            "id": "4WluzJnte5XR7tNp",
+            "inputs": {
+                "entry": {
+                    "connection": "3zI03U4YgJ5i6XSm:outputs:Q5NcuWOz6M23mMzo"
+                }
+            },
+            "position": {
+                "x": 1834.9999999999998,
+                "y": 400.41666666666663
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "IuPCDJ3KMjeOBCIc",
+            "inputs": {
+                "entry": {
+                    "connection": "7tH42TwnZqLvj39I:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1877.9999999999998,
+                "y": 439.41666666666663
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "LlWFds1JXOGp2jXr",
+            "inputs": {
+                "by": {
+                    "value": -1
+                },
+                "effect": {
+                    "connection": "edpBz5CjVdnlo3FY:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2552.3846153846157,
+                "y": 790.6820512820512
+            },
+            "type": "effect-duration"
+        },
+        {
+            "id": "edpBz5CjVdnlo3FY",
+            "inputs": {
+                "entry": {
+                    "connection": "qrBhhefjzXv58R40:outputs:item"
+                }
+            },
+            "position": {
+                "x": 2359.9230769230767,
+                "y": 897.3397435897434
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "3ezimQsg2DzZQXX4",
+            "inputs": {
+                "entry": {
+                    "value": "item:damage:category:physical"
+                },
+                "list": {
+                    "connection": "gfadSehpFC6GrNoX:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "LlWFds1JXOGp2jXr:ins:in"
+                }
+            },
+            "position": {
+                "x": 2332.2097902097903,
+                "y": 755.7890442890442
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "gfadSehpFC6GrNoX",
+            "inputs": {
+                "entry": {
+                    "connection": "7tH42TwnZqLvj39I:outputs:options"
+                }
+            },
+            "position": {
+                "x": 2150.286713286713,
+                "y": 931.0390442890442
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "3zI03U4YgJ5i6XSm:outputs:Q5NcuWOz6M23mMzo": {
+            "isArray": false,
+            "label": "Effect Origin",
+            "type": "target"
+        },
+        "7tH42TwnZqLvj39I:outputs:options": {
+            "isArray": true,
+            "label": "Roll Options",
+            "type": "text"
+        },
+        "7tH42TwnZqLvj39I:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "qrBhhefjzXv58R40:outputs:item": {
+            "isArray": false,
+            "label": "Spike Skin Effect",
+            "type": "item"
+        }
+    }
+}

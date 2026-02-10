@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5]{Diamond Dust} trigger</p><p>Link this effect in the spell's description and apply it when the spell is cast.</p>",
+      "value": "<p>Auxiliary effect for Trigger Trove's <em>diamond dust</em> trigger</p><p>Link this effect in the spell's description and apply it when the spell is cast.</p>",
       "gm": ""
     },
     "publication": {
@@ -79,7 +79,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.7.4"
+    "systemVersion": "7.10.1"
   },
   "_key": "!items!fyKmMJganeNRIVWi"
 }

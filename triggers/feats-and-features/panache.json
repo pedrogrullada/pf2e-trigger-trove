@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Panache.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "B6vKHsinr1B64PQe",
     "name": "Panache",
@@ -7,7 +8,7 @@
             "id": "w9gawril0PECLdLm",
             "outs": {
                 "out": {
-                    "connection": "VEQkX5JqFKqghEBV:ins:in"
+                    "connection": "g8fQqVqwiAC9Th9k:ins:in"
                 }
             },
             "position": {
@@ -31,8 +32,8 @@
                 }
             },
             "position": {
-                "x": 1444.5714285714287,
-                "y": 550.6190476190477
+                "x": 1825.9999999999998,
+                "y": 566.3333333333334
             },
             "type": "create-item"
         },
@@ -50,8 +51,8 @@
                 }
             },
             "position": {
-                "x": 1442.4285714285718,
-                "y": 244.0952380952383
+                "x": 1823.8571428571427,
+                "y": 281.23809523809535
             },
             "type": "create-item"
         },
@@ -63,8 +64,8 @@
                 }
             },
             "position": {
-                "x": 852.2552447552446,
-                "y": 556.7342657342659
+                "x": 1152.2552447552443,
+                "y": 575.3056943056943
             },
             "type": "__variable_getter__"
         },
@@ -87,8 +88,8 @@
                 }
             },
             "position": {
-                "x": 992,
-                "y": 401
+                "x": 1329.1428571428567,
+                "y": 466.71428571428567
             },
             "type": "split-outcome"
         },
@@ -108,8 +109,8 @@
                 }
             },
             "position": {
-                "x": 757,
-                "y": 422.25
+                "x": 1078.428571428571,
+                "y": 436.5357142857142
             },
             "type": "list-contains"
         },
@@ -121,8 +122,8 @@
                 }
             },
             "position": {
-                "x": 1295,
-                "y": 487.75
+                "x": 1686.4285714285709,
+                "y": 490.6071428571428
             },
             "type": "__variable_getter__"
         },
@@ -393,6 +394,24 @@
                 "y": 1377.5716195569134
             },
             "type": "__variable_getter__"
+        },
+        {
+            "id": "g8fQqVqwiAC9Th9k",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.classfeatures.Item.LzYi0OuOoypNb6jd"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "VEQkX5JqFKqghEBV:ins:in"
+                }
+            },
+            "position": {
+                "x": 802.7087912087916,
+                "y": 335.1857142857143
+            },
+            "type": "has-item"
         }
     ],
     "priority": 0,

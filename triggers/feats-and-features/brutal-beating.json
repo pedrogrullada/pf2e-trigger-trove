@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.BrutalBeating.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "HCgZeaz8OQL7ZqKA",
     "name": "Brutal Beating",
@@ -51,8 +52,8 @@
                 }
             },
             "position": {
-                "x": 1153.9072398190046,
-                "y": 516.0113122171945
+                "x": 1809.7481489099137,
+                "y": 603.4885849444672
             },
             "type": "increase-condition"
         },
@@ -68,12 +69,12 @@
             },
             "outs": {
                 "true": {
-                    "connection": "DMha9gwullVg9nxW:ins:in"
+                    "connection": "bUPAHqArFJSYnstF:ins:in"
                 }
             },
             "position": {
-                "x": 928,
-                "y": 467.25
+                "x": 923,
+                "y": 427.25
             },
             "type": "list-contains"
         },
@@ -85,10 +86,73 @@
                 }
             },
             "position": {
-                "x": 1016,
-                "y": 618.75
+                "x": 1254.2272727272727,
+                "y": 669.75
             },
             "type": "__variable_getter__"
+        },
+        {
+            "id": "bUPAHqArFJSYnstF",
+            "inputs": {
+                "target": {
+                    "connection": "UTIJ9LYwn1rNyO0s:outputs:entry"
+                },
+                "type": {
+                    "value": "mental"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "HRmMXytxx9VHSZSl:ins:in"
+                }
+            },
+            "position": {
+                "x": 1135,
+                "y": 441
+            },
+            "type": "has-immunity"
+        },
+        {
+            "id": "g3bicP2qfzMO1WlN",
+            "inputs": {
+                "target": {
+                    "connection": "UTIJ9LYwn1rNyO0s:outputs:entry"
+                },
+                "type": {
+                    "value": "fear-effects"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "DMha9gwullVg9nxW:ins:in"
+                }
+            },
+            "position": {
+                "x": 1573.8181818181818,
+                "y": 515.1818181818181
+            },
+            "type": "has-immunity"
+        },
+        {
+            "id": "HRmMXytxx9VHSZSl",
+            "inputs": {
+                "target": {
+                    "connection": "UTIJ9LYwn1rNyO0s:outputs:entry"
+                },
+                "type": {
+                    "value": "emotion"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "g3bicP2qfzMO1WlN:ins:in"
+                }
+            },
+            "position": {
+                "x": 1352.181818181818,
+                "y": 480.72727272727275
+            },
+            "type": "has-immunity"
         }
     ],
     "priority": 0,

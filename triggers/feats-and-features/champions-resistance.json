@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.ChampionsResistance.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "E7hicPPDwAU3AIGR",
     "name": "Champion's Resistance",
@@ -147,10 +148,10 @@
             "id": "HaSRrzoN73iOtUPr",
             "inputs": {
                 "localization": {
-                    "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Prompt"
+                    "value": "TRIGGERTROVE.ChampionsResistance.Trigger.Redemption.AwaitConfirmation.Prompt"
                 },
                 "title": {
-                    "value": "TRIGGERTROVE.ChampionsResistance.Trigger.DamageTaken.Redemption.AwaitConfirmation.Title"
+                    "value": "TRIGGERTROVE.ChampionsResistance.Trigger.Redemption.AwaitConfirmation.Title"
                 },
                 "user": {
                     "connection": "oNFVwpE1bqRsZMcF:outputs:entry"

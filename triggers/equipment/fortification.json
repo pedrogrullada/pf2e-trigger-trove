@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Fortification.Trigger.Description]",
     "folder": "Equipment",
     "id": "X32DeTp4mBzqQUtK",
     "name": "Fortification",

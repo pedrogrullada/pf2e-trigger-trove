@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.UnbalancingBlow.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "KvCY9f2g6kBPhpR9",
     "name": "Unbalancing Blow",
@@ -50,7 +51,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "mnXcEKjnV8Upsj5Q:ins:in"
+                    "connection": "MF3tqQ8Nebgi0pmc:ins:in"
                 }
             },
             "position": {
@@ -60,59 +61,112 @@
             "type": "list-contains"
         },
         {
-            "id": "mnXcEKjnV8Upsj5Q",
+            "custom": {
+                "inputs": {
+                    "SDwf5qP2Ptc9Xo5I": {
+                        "id": "SDwf5qP2Ptc9Xo5I",
+                        "label": "Ephemeral",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "MF3tqQ8Nebgi0pmc",
             "inputs": {
-                "condition": {
-                    "value": "off-guard"
-                },
                 "expiry": {
                     "value": "turn-end"
                 },
                 "name": {
-                    "value": "Effect: Off-Guard from Unbalancing Blow"
+                    "value": "Effect: Unbalancing Blow"
                 },
                 "origin": {
-                    "connection": "pTGLegu48w7E4ZKy:outputs:entry"
+                    "connection": "fWBnK75qZ5ii8TYX:outputs:entry"
                 },
                 "pf2eImg": {
-                    "value": "icons/skills/melee/shield-damaged-broken-brown.webp"
+                    "value": "icons/skills/melee/strike-flail-spiked-red.webp"
+                },
+                "SDwf5qP2Ptc9Xo5I": {
+                    "value": "{\n  \"key\": \"EphemeralEffect\",\n  \"predicate\": [\n    \"target:effect:trigger-engine-pf2e-trigger-kv-cy9f2g6k-bphp-r9-unbalancing-blow\"\n  ],\n  \"selectors\": [\n    \"attack\",\n    \"attack-damage\"\n  ],\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg\"\n}"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/melee/strike-flail-spiked-red.webp"
                 },
                 "slug": {
                     "value": "trigger-trove-unbalancing-blow"
                 },
                 "target": {
-                    "connection": "IyubaTquUWRYsqJA:outputs:entry"
+                    "connection": "fWBnK75qZ5ii8TYX:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "zNJzLIVPFUXCTODV:ins:in"
                 }
             },
             "position": {
-                "x": 1320.923076923077,
-                "y": 321.4
+                "x": 1294,
+                "y": 394
             },
-            "type": "create-condition"
+            "type": "create-effect"
         },
         {
-            "id": "pTGLegu48w7E4ZKy",
+            "id": "fWBnK75qZ5ii8TYX",
             "inputs": {
                 "entry": {
                     "connection": "x0TebZ8JMPgsjzg1:outputs:origin"
                 }
             },
             "position": {
-                "x": 1167,
-                "y": 546.75
+                "x": 1132,
+                "y": 521.75
             },
             "type": "__variable_getter__"
         },
         {
-            "id": "IyubaTquUWRYsqJA",
+            "id": "zNJzLIVPFUXCTODV",
+            "inputs": {
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "identifier": {
+                    "value": "unbalancing-blow"
+                },
+                "origin": {
+                    "connection": "2zbtDqn2drNl75GT:outputs:entry"
+                },
+                "target": {
+                    "connection": "wta6H9QGLBSfDVhL:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1617.923076923077,
+                "y": 413.4
+            },
+            "type": "create-temporary"
+        },
+        {
+            "id": "wta6H9QGLBSfDVhL",
             "inputs": {
                 "entry": {
                     "connection": "x0TebZ8JMPgsjzg1:outputs:target"
                 }
             },
             "position": {
-                "x": 1164,
-                "y": 505.75
+                "x": 1498,
+                "y": 532.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "2zbtDqn2drNl75GT",
+            "inputs": {
+                "entry": {
+                    "connection": "x0TebZ8JMPgsjzg1:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1501,
+                "y": 573.75
             },
             "type": "__variable_getter__"
         }

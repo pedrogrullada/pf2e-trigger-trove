@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.AirAuraJunction.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "fS9X6zv6GP5xzbHD",
     "name": "Air Aura Junction",
@@ -84,7 +85,7 @@
                     "value": "icons/magic/air/wind-tornado-funnel-blue.webp"
                 },
                 "name": {
-                    "value": "Aux Effect: Aura Junction (Air)"
+                    "value": "Effect: Aura Junction (Air, Temporary)"
                 },
                 "origin": {
                     "connection": "2Rpe8gWTPUsj7pW9:outputs:entry"

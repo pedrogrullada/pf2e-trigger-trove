@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.SelfishShield.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "bdOKawzYpPa7jLwe",
     "name": "Selfish Shield",
@@ -100,7 +101,7 @@
                     "connection": "LPF5bhT0j83uY02b:outputs:entry"
                 },
                 "localization": {
-                    "value": "TRIGGERTROVE.SelfishShield.Trigger.DamageTaken.Note"
+                    "value": "TRIGGERTROVE.SelfishShield.Trigger.Note"
                 },
                 "speaker": {
                     "connection": "LPF5bhT0j83uY02b:outputs:entry"

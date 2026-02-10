@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.ScoutsWarning.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "Cmw8Fea7T6v1tm6u",
     "name": "Scout's Warning",
@@ -41,7 +42,7 @@
             "id": "hXHY0tYDLSPoi7Ra",
             "inputs": {
                 "localization": {
-                    "value": "TRIGGERTROVE.ScoutsWarning.Trigger.CombatantJoined.AwaitConfirmation.Prompt"
+                    "value": "TRIGGERTROVE.ScoutsWarning.Trigger.AwaitConfirmation.Prompt"
                 },
                 "title": {
                     "value": "TRIGGERTROVE.ScoutsWarning.Label"

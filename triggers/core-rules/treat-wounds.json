@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.TreatWounds.Trigger.Description]",
     "folder": "Core Rules",
     "id": "Vcwe3xEBYBLWiVYS",
     "name": "Treat Wounds",

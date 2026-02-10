@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.BlindingAura.Trigger.Description]",
     "folder": "Monster Abilities",
     "id": "lR14O9W9IJMTUT5T",
     "name": "Blinding Aura",

@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.AldoriSwordlord.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "k84ZX1XYsmDnIhkg",
     "name": "Aldori Swordlord",
@@ -171,6 +172,9 @@
         }
     ],
     "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
     "variables": {
         "RIw6ala9EjAeJZgF:outputs:origin": {
             "isArray": false,

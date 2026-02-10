@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.EnergyShot.Trigger.Description]",
     "folder": "Feats & Features",
     "id": "7WhQSiTiixb8R33k",
     "name": "Energy Shot",
@@ -41,7 +42,7 @@
             "id": "R350eRzcQL26BMVn",
             "inputs": {
                 "localization": {
-                    "value": "TRIGGERTROVE.EnergyShot.Trigger.CombatantJoined.Prompt"
+                    "value": "TRIGGERTROVE.EnergyShot.Trigger.Prompt"
                 },
                 "title": {
                     "value": "TRIGGERTROVE.EnergyShot.Label"

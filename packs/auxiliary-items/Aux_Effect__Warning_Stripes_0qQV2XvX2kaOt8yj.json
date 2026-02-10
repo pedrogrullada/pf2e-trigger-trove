@@ -8,7 +8,7 @@
       "previous": null
     },
     "description": {
-      "value": "<p>Auxiliary effect for @UUID[Compendium.pf2e.spells-srd.Item.D4kArD91fFiREvC6]{Warning Stripes} trigger.</p><p>When a character has this effect and the Warning Stripes trigger is enabled, damage will be rolled automatically when they're hit with an unarmed melee attack.</p>",
+      "value": "<p>Auxiliary effect for Trigger Trove's <em>warning stripes</em> trigger.</p><p>When a character has this effect and the <em>warning stripes</em> trigger is enabled, damage will be rolled automatically when they're hit with an unarmed melee attack.</p>",
       "gm": ""
     },
     "publication": {
@@ -59,7 +59,7 @@
     "exportSource": null,
     "coreVersion": "13.351",
     "systemId": "pf2e",
-    "systemVersion": "7.8.0"
+    "systemVersion": "7.10.1"
   },
   "_key": "!items!0qQV2XvX2kaOt8yj"
 }

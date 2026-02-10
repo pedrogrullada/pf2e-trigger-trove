@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Scout.Trigger.Description]",
     "folder": "Core Rules",
     "id": "FifdrgdNCDjkyRVS",
     "name": "Scout",
@@ -216,57 +217,6 @@
                 "y": 211.99999999999994
             },
             "type": "__variable_getter__"
-        },
-        {
-            "custom": {
-                "inputs": {
-                    "86DtVeOr07CFlfxO": {
-                        "id": "86DtVeOr07CFlfxO",
-                        "label": "Text",
-                        "slug": "rule",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "FdTISLQJUocnEnVO",
-            "inputs": {
-                "86DtVeOr07CFlfxO": {
-                    "value": "{\n  \"key\": \"AdjustModifier\",\n  \"slug\": \"scouting-bonus\",\n  \"value\": 2,\n  \"selector\": \"initiative\",\n  \"mode\": \"upgrade\"\n}"
-                },
-                "name": {
-                    "value": "Aux Effect: Scout Improvement"
-                },
-                "pf2eImg": {
-                    "value": "icons/sundries/books/book-red-exclamation.webp"
-                },
-                "slug": {
-                    "value": "trigger-trove-scout-dedication"
-                }
-            },
-            "position": {
-                "x": 3657.650793650792,
-                "y": 307.63888888888823
-            },
-            "state": "fixed",
-            "type": "create-effect"
-        },
-        {
-            "id": "3YAU2DXQervYSG9b",
-            "inputs": {
-                "pf2e": {
-                    "value": "Compendium.pf2e.other-effects.Item.EMqGwUi3VMhCjTlF"
-                }
-            },
-            "outs": {
-                "true": {
-                    "connection": "FdTISLQJUocnEnVO:ins:in"
-                }
-            },
-            "position": {
-                "x": 3384.673076923077,
-                "y": 231.64999999999998
-            },
-            "type": "has-item"
         }
     ],
     "priority": 100,
