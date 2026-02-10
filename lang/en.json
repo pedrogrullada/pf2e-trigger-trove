@@ -7,7 +7,7 @@
         },
         "AirAuraJunction": {
             "Trigger": {
-                "Description": "When a combatant starts their turn within the kinetic aura of an <strong>air gate</strong> kineticist with its <strong>aura junction</strong>, grant that character the corresponding bonus to their Speeds via effect until the end of their turn.</p><p>This benefit overlaps with the system's effect when inside the aura, but persists once the character leaves the aura until the end of their turn."
+                "Description": "<p>When a combatant starts their turn within the kinetic aura of an <strong>air gate</strong> kineticist with its <strong>aura junction</strong>, grant that character the corresponding bonus to their Speeds via effect until the end of their turn.</p><p>This benefit overlaps with the system's effect when inside the aura, but persists once the character leaves the aura until the end of their turn.<p>"
             }
         },
         "AldoriSwordlord": {
@@ -48,9 +48,7 @@
         },
         "CommandingPresence": {
             "Trgger": {
-                "AuraEntered": {
-                    "Description": "When a character enters a @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.Ccjg08wVRO43YlTf]{Jann}'s Commanding Presence, send that ability to chat and add an immunity effect to the triggering character. If that character is a non-jann genie, also add an auxiliary effect with a penalty to their save."
-                }
+                "Description": "When a target enters a <strong>Commanding Presence</strong> aura, send that ability to chat, and add an effect tracking the target's immunity. If a roller fails their saving throw against that ability, add the frightened condition to them with the corresponding value.<"
             }
         },
         "CriticalSpecialization": {
@@ -107,9 +105,7 @@
         },
         "DreadFlickering": {
             "Trigger": {
-                "TurnEnded": {
-                    "Description": "When a non-immune living character ends their turn in a Dread Flickering aura, send the ability to chat alongside an immunity auxiliary effect to be applied in the event of a critically successful save."
-                }
+                "Description": "When a living combatant ends their turn in a <strong>Dread Flickering</strong> aura, send the ability to chat. If a roller fails their saving throw against it, add the frightened condition accordingly. If the roller critically succeeds, add an effect to track their immunity."
             }
         },
         "ElegantBuckler": {
@@ -172,12 +168,7 @@
         },
         "FrightfulPresence": {
             "Trigger": {
-                "AuraEntered": {
-                    "Description": {
-                        "All": "Post the Frightful Presence ability to chat when a creature enters the aura. If you have Frightful Presence (Aura Entered, Enemies Only) enabled, disable this one.",
-                        "EnemiesOnly": "Post the Frightful Presence ability to chat when an enemy of the Frightful Presence creature enters the aura. If you have Frightful Presence (Aura Entered) enabled, disable this one."
-                    }
-                }
+                "Description": "When a target enters a <strong>Frightful Presence</strong> aura, send that ability to chat, and add an effect tracking the target's immunity. If a roller fails their saving throw against that ability, add the frightened condition to them with the corresponding value."
             }
         },
         "Generic": {
@@ -187,9 +178,7 @@
         },
         "Gibbering": {
             "Trigger": {
-                "TurnStarted": {
-                    "Description": "When a non-immune creature begins its turn within the gibbering aura, send the ability to chat alongside an auxiliary effect to apply immunity."
-                }
+                "Description": "When a combatant begins their turn within a <strong>Gibbering</strong> aura, send the ability to chat. If a roller succeeds on their saving throw against this ability, add an effect to track their immunity. If they fail, add the confused condition until the start of their next turn."
             }
         },
         "Grapple": {
@@ -207,7 +196,7 @@
         },
         "IntenseHeat": {
             "Trigger": {
-                "Description": "When a combatant enters or starts their turn within an <strong>intense heat</strong> aura, roll its damage and post a saving throw against it."
+                "Description": "When a combatant enters or starts their turn within an <strong>Intense Heat</strong> aura, roll its damage and post a saving throw against it."
             }
         },
         "Inviolable": {
@@ -320,7 +309,7 @@
             }
         },
         "SafeElements": {
-            "Addendum": "A target with @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} dragged onto them <strong>from the kineticist's sheet.</strong> is unaffected by this trigger."
+            "Addendum": "A target with @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.p4SCBtIYPzVQ0gEd]{Aux Effect: Safe Elements} dragged onto them <strong>from the kineticist's sheet</strong> is unaffected by this trigger."
         },
         "ScarsOfSteel": {
             "Label": "Scars of Steel",
@@ -395,12 +384,7 @@
         },
         "Stench": {
             "Trigger": {
-                "AuraEntered": {
-                    "Description": "Post the Stench ability when a creature enters the aura."
-                },
-                "TurnStarted": {
-                    "Description": "Post the Stench ability when a creature starts its turn in the aura."
-                }
+                "Description": "<p>When a combatant starts their turn within—or enters—a <strong>Stench</strong> aura, send that ability to chat. If a roller succeeds on their saving, add an effect tracking their immunity. If the roller fails their saving throw, add the sickened and slowed condition as appropriate for the outcome of their save.</p>"
             }
         },
         "SuppressingFire": {

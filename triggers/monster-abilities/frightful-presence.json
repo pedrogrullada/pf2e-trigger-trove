@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.FrightfulPresence.Trigger.Description]",
     "folder": "Monster Abilities",
     "id": "74Cpvh2e4fquwb7y",
     "name": "Frightful Presence",

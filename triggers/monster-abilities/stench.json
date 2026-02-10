@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Stench.Trigger.Description]",
     "folder": "Monster Abilities",
     "id": "a9f8PWrXz6lUEgzA",
     "name": "Stench",
@@ -300,6 +301,9 @@
             "outs": {
                 "criticalFailure": {
                     "connection": "bxLQWa9dXTQ3pmXd:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "y0cojrXFbjXOab4d:ins:in"
                 },
                 "failure": {
                     "connection": "X5AZON0PRlKYfjH8:ins:in"

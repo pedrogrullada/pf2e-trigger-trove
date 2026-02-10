@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.CommandingPresence.Trgger.Description]",
     "folder": "Monster Abilities",
     "id": "V1PLolsPjOaYB3NL",
     "name": "Commanding Presence",
