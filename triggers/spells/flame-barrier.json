@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.FlameBarrier.Trigger.Description]",
     "folder": "Spells",
     "id": "8YJWoyjpK3wDkrkA",
     "name": "Flame Barrier",

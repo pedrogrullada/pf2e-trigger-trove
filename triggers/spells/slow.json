@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Slow.Trigger.Description]",
     "folder": "Spells",
     "id": "EXn7DHAAnBzXtx5W",
     "name": "Slow",

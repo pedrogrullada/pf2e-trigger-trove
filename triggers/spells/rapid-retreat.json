@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.RapidRetreat.Trigger.Description]",
     "folder": "Spells",
     "id": "zrPCCErCIdGEIpU7",
     "name": "Rapid Retreat",

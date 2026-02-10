@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.WarpingPull.Trigger.Description]",
     "folder": "Spells",
     "id": "lf3sXStkes61DBGV",
     "name": "Warping Pull",

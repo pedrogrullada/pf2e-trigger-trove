@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.PhaseFamiliar.Trigger.Description]",
     "folder": "Spells",
     "id": "bGSn90k9pvNHC2r4",
     "name": "Phase Familiar",

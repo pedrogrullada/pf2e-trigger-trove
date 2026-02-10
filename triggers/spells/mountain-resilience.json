@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.MountainResilience.Trigger.Description]",
     "folder": "Spells",
     "id": "9qpu2XJYTk5RGP4u",
     "name": "Mountain Resilience",
@@ -47,7 +48,7 @@
                     "connection": "20pBrCfA3qgFwP2K:outputs:options"
                 },
                 "predicate": {
-                    "value": "[\n  {\n    \"or\": [\n      \"item:damage:type:bludgeoning\",\n      \"item:damage:type:piercing\",\n      \"item:damage:type:slashing\"\n    ]\n  }\n]"
+                    "value": "[\n  \"origin:action:trait:attack\",\n  {\n    \"or\": [\n      \"item:damage:type:bludgeoning\",\n      \"item:damage:type:piercing\",\n      \"item:damage:type:slashing\"\n    ]\n  }\n]"
                 }
             },
             "outs": {

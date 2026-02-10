@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.Enfeeble.Trigger.Description]",
     "folder": "Spells",
     "id": "fHAXQOccfig3GqLP",
     "name": "Enfeeble",
@@ -135,7 +136,7 @@
                         "type": "number"
                     }
                 },
-                "title": "Add Slowed"
+                "title": "Add Enfeebled"
             },
             "id": "gWYb42N06zTBBYt3",
             "outs": {

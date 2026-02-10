@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.DiamondDust.Trigger.Description]",
     "folder": "Spells",
     "id": "G9fPlEiZQLZFSujx",
     "name": "Diamond Dust",

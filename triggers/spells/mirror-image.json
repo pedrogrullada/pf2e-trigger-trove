@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.MirrorImage.Trigger.Description]",
     "folder": "Spells",
     "id": "YLvgeM3yhtoR7EdZ",
     "name": "Mirror Image",
@@ -206,7 +207,7 @@
                     "connection": "bRsl3Y5MoDQem989:outputs:entry"
                 },
                 "localization": {
-                    "value": "TRIGGERTROVE.MirrorImage.Trigger.AttackRolled.Note.Hit"
+                    "value": "TRIGGERTROVE.MirrorImage.Trigger.Note.Hit"
                 },
                 "speaker": {
                     "connection": "bRsl3Y5MoDQem989:outputs:entry"
@@ -239,7 +240,7 @@
                     "connection": "LMTmtv1rPDbcQDxf:outputs:entry"
                 },
                 "localization": {
-                    "value": "TRIGGERTROVE.MirrorImage.Trigger.AttackRolled.Note.Miss"
+                    "value": "TRIGGERTROVE.MirrorImage.Trigger.Note.Miss"
                 },
                 "speaker": {
                     "connection": "LMTmtv1rPDbcQDxf:outputs:entry"

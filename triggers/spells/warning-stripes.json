@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.WarningStripes.Trigger.Description]",
     "folder": "Spells",
     "id": "Uin97evJgsju14cF",
     "name": "Warning Stripes",

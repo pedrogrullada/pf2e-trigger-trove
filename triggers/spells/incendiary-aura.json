@@ -1,4 +1,5 @@
 {
+    "description": "@Localize[TRIGGERTROVE.IncendiaryAura.Trigger.Description]",
     "folder": "Spells",
     "id": "qpLYXJhtEOf9CWeJ",
     "name": "Incendiary Aura",

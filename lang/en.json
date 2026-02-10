@@ -85,12 +85,7 @@
                 "ToggleLabel": "Diamond Dust — Aura is active"
             },
             "Trigger": {
-                "AuraEntered": {
-                    "Description": "<p>When a character enters a @UUID[Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5]{Diamond Dust} aura, roll its damage and add an effect to make the character immune to further instances of this trigger.</p><p>For this trigger to work, the spellcaster must have @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.fyKmMJganeNRIVWi]{Aux Effect: Diamond Dust} applied to them, dragged from the spell when posted to chat. Link this effect in the spell's description.</p>"
-                },
-                "TurnEnded": {
-                    "Description": "<p>When a character ends their turn inside a @UUID[Compendium.pf2e.spells-srd.Item.wjJW9hWY5CkkMvY5]{Diamond Dust} aura, roll its damage. If a character has the immunity effect added by the Aura Entered trigger, remove that effect.</p><p>For this trigger to work, the spellcaster must have @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.fyKmMJganeNRIVWi]{Aux Effect: Diamond Dust} applied to them, dragged from the spell when posted to chat. Link this effect in the spell's description.</p>"
-                }
+                "Description": "When a combatant ends their turn—or enters—a <strong>Diamond Dust</strong> aura, roll its damage and add an effect to track the combatant's immunity to further instances of this trigger. For this trigger to work, the spellcaster must have @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.fyKmMJganeNRIVWi]{Aux Effect: Diamond Dust} applied to them, dragged from the <em>diamond dust</em> spell when it's sent to chat."
             }
         },
         "Disarm": {
@@ -128,6 +123,11 @@
                 "Prompt": "Are you using Energy Shot in this combat?"
             }
         },
+        "Enfeeble": {
+            "Trigger": {
+                "Description": "When a roller saves against the <strong>Enfeeble</strong> spell, apply the enfeebled condition depending on their degree of success."
+            }
+        },
         "EngulfAndSwallowWhole": {
             "Trigger": {
                 "Description": "When a creature that is <strong>Engulfed</strong> or <strong>Swallowed Whole</strong> ends their turn, roll that ability's damage."
@@ -136,6 +136,11 @@
         "ExtravagantParry": {
             "Trigger": {
                 "Description": "When an attack misses against a target benefitting from <strong>Extravagant Parry</strong>, that target gains panache until the end of their next turn."
+            }
+        },
+        "Fear": {
+            "Trigger": {
+                "Description": "When a roller saves against the <strong>Fear</strong> spell, apply the frightened condition depending on their degree of success. On a critical failure, apply the fleeing condition for 1 round as well."
             }
         },
         "Fearsome": {
@@ -150,9 +155,7 @@
         },
         "FlameBarrier": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "Remove @UUID[Compendium.pf2e.spells-srd.Item.y7Tusv3CieZktkkV]{Flame Barrier}'s effect when damage is taken."
-                }
+                "Description": "When a target takes damage and they have <strong>Flame Barrier</strong>'s resistance effect, remove that effect."
             }
         },
         "FlashyDodge": {
@@ -188,10 +191,7 @@
         },
         "IncendiaryAura": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "Roll persistent fire damage each time a creature within an @UUID[Compendium.pf2e.spells-srd.Item.AspA30tzKCHFWRf0]{Incendiary Aura} takes damage. This trigger cannot distinguish between damage types, so it's up to the user to apply it only when the triggering creature takes fire damage.",
-                    "Note": "If a creature within the emanation takes fire damage, it catches on fire, taking persistent fire damage."
-                }
+                "Description": "<p>When a target within an <strong>Incendiary Aura</strong> takes fire damage, add the corresponding amount of persistent fire damage to that target.</p><p><em>Note: This trigger can only detect fire damage when it's the primary damage type of a roll.</em></p>"
             }
         },
         "IntenseHeat": {
@@ -214,27 +214,21 @@
                 "ResourceLabel": "Mirror Images"
             },
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.pnSHABS9FZvExLa9]{Aux Effect: Mirror Image}, automatically reduce the Mirror Images resource depending on both the outcome of the attack and a randomly generated number, as described by the spell.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access, and used instead of the system-provided effect.</p>",
-                    "Note": {
-                        "Hit": "<strong>Mirror Image</strong> The attack hits you! All your mirror images remain.",
-                        "Miss": "<strong>Mirror Image</strong> The attack misses you! One of your mirror images is destroyed."
-                    }
+                "Description": "When the target of an attack has <strong>Mirror Image</strong>'s effect, decrease the effect's badge value by 1 if the attack misses. If the attack hits, roll a die of the appropriate number of faces to determine if the attack hits its original target, or if it hits a mirror image, reducing the effect's badge value by 1.",
+                "Note": {
+                    "Hit": "<strong>Mirror Image</strong> The attack hits you! All your mirror images remain.",
+                    "Miss": "<strong>Mirror Image</strong> The attack misses you! One of your mirror images is destroyed."
                 }
             }
         },
         "MountainResilience": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>Reduce the duration of @UUID[Compendium.pf2e.spells-srd.Item.2BV2yYPfVJ5zirZt]{Mountain Resilience}'s effect by 1 minute each time the beneficiary of the spell is hit by an attack that deals bludgeoning, piercing, or slashing damage.</p><p><em><strong>Note:</strong> Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of the previously mentioned damage types will be missed.</em></p>"
-                }
+                "Description": "<p>When a target with <strong>Mountain Resilience</strong>'s effect takes bludgeoning, piercing, or slashing damage from an attack, reduce the duration of that effect by 1 minute.</p><p><em>Note: Due to a current limitation, this trigger will only work when the primary damage type is bludgeoning, piercing, or slashing. This covers most cases, but be aware that some instances of the previously mentioned damage types will be missed.</em></p>"
             }
         },
         "Nettleskin": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.BA143r8fCqmSjdRf]{Nettleskin}'s damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent attacker.</p><p>For this trigger to work, the @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.QrCwY1ylvvuzW7mb]{Aux Effect: Nettleskin} must be dragged onto the recipient. Furthermore, it must be dragged from the spell's card in chat, otherwise it won't have the correct scaling.</p>"
-                }
+                "Description": "<p>When the target of a successful melee or unarmed attack has <strong>Nettleskin</strong>'s auxiliary effect and is adjacent to the origin of that attack, roll <em>nettleskin</em>'s damage. When that damage is applied, reduce the duration of nettleskin by 1 round.</p><p>For this trigger to work, @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.QrCwY1ylvvuzW7mb]{Aux Effect: Nettleskin} must be dragged onto the origin when they cast the spell. Furthermore, it must be dragged from the spell's card in chat for its damage to scale correctly.</p>"
             }
         },
         "OneShotOneKill": {
@@ -256,28 +250,17 @@
         },
         "PhaseFamiliar": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "Automatically remove @UUID[Compendium.pf2e.spells-srd.Item.rMOI8JFJ0nT2mrCF]{Phase Familiar}'s effect after damage is taken"
-                }
+                "Description": "When a target takes damage and they have <strong>Phase Familiar</strong>'s resistance effect, remove that effect."
             }
         },
         "RapidRetreat": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "Automatically remove @UUID[Compendium.pf2e.spells-srd.Item.6sNjsNPipZvQ3BGe]{Rapid Retreat}'s effect after damage is taken."
-                }
+                "Description": "When a target takes damage and they have <strong>Rapid Retreat</strong>'s resistance effect, remove that effect."
             }
         },
         "RavelOfThorns": {
             "Trigger": {
                 "Description": "When a combatant starts its turn inside a kinetic aura whose source is in <strong>Ravel of Thorns</strong> stance, add an effect to that combatant to apply the corresponding speed penalty. Remove this effect when they leave the kinetic aura."
-            }
-        },
-        "RegaliaInitiate": {
-            "Trigger": {
-                "TurnEnded": {
-                    "Description": "When a character with @UUID[Compendium.pf2e.classfeatures.Item.3eRkOQa7h1MWmzBh]{Initiate Benefit (Regalia)} ends their turn, reduce the frightened value of all frightened allies within their inspiring aura by 1."
-                }
             }
         },
         "RejuvenatingTouch": {
@@ -353,9 +336,12 @@
         },
         "ShieldsOfTheSpirit": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>Roll @UUID[Compendium.pf2e.spells-srd.Item.ZL97DcoJ8us6EwAF]{Shields of the Spirit}'s damage when an ally is attacked while they are in the champion's aura. The champion must have the spell's effect on them.</p><p>Alternatively, roll damage if the target ally is not within the champion's aura, but does have the Shields of the Spirit (Security) effect on them.</p>"
-                }
+                "Description": "When the target of an attack has <strong>Shields of the Spirit's</strong> effect, and is inside a champion's aura or benefitting from the <strong>Security</strong> feat, roll <em>shields of the spirit</em>'s damage against the origin of the attack."
+            }
+        },
+        "Slow": {
+            "Trigger": {
+                "Description": "When a roller saves against the <strong>Slow</strong> spell, apply the slowed condition depending on their degree of success."
             }
         },
         "SpikeSkin": {
@@ -365,10 +351,8 @@
         },
         "SpiritLink": {
             "Trigger": {
-                "TurnStarted": {
-                    "Description": "<p>When a creature starts their turn and they have a @UUID[Compendium.pf2e.spells-srd.Item.yHujiDQPdtXW797e]{Spirit Link} auxiliary effect that originated from themselves, then check scene tokens for other creatures with an identical effect. If there is such a creature, check if they're not at their Hit Point maximum and if so, send a damage-healing-hybrid roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD]{Aux Effect: Spirit Link} to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.</p>",
-                    "Note": "<p>At the start of each of your turns, if the target is below maximum Hit Points, it regains 2 Hit Points per spell rank of <em>spirit link</em> (or the difference between its current and maximum Hit Points, if that's lower). You lose as many Hit Points as the target regained.</p>"
-                }
+                "Description": "<p>When a combatant starts their turn and they have a <strong>Spirit Link</strong> auxiliary effect that originated from themselves, check the scene for tokens with an identical effect. If there is such a token, check if they're not at their Hit Point maximum and if so, send a damage-healing roll to chat for both parties of spirit link to apply to themselves.</p><p>For this trigger to work properly, you must add @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.rn7KiPMH6u7C6mUD]{Aux Effect: Spirit Link} to the spell's description and drag it <strong>from the spell's chat card</strong> to both the spellcaster and the target.</p>",
+                "Note": "<p>At the start of each of your turns, if the target is below maximum Hit Points, it regains 2 Hit Points per spell rank of <em>spirit link</em> (or the difference between its current and maximum Hit Points, if that's lower). You lose as many Hit Points as the target regained.</p>"
             }
         },
         "StaggeringFire": {
@@ -401,16 +385,6 @@
                 "Description": "When a combatant with the <strong>Swaggering Initiative</strong> feat is created, confirm whether they will use that feat. If so, toggle their bonus to initiative on. If that combatant is the first one to act, they gain panache."
             }
         },
-        "SwashbucklerFinisher": {
-            "Trigger": {
-                "AttackRolled": {
-                    "Description": "Remove Panache's effect when a finisher misses. If the attack is rerolled into a success, grant Panache back to enable finisher damage."
-                },
-                "DamageTaken": {
-                    "Description": "Remove Panache's effect from damage origin when finisher damage is dealt."
-                }
-            }
-        },
         "SwordAndPistol": {
             "Trigger": {
                 "Description": "<p>When the origin of a successful ranged Strike with a one-handed firearm or crossbow has the <strong>Sword and Pistol</strong> feat, and the target is an enemy within their reach—as indicated by the Sword and Pistol toggle in their sheet—add an auxiliary effect that makes the target off-guard to the origin's next melee attack with a one-handed melee weapon. Add a trigger effect to the target of this attack for tracking purposes as well.</p><p>When a target that was off-guard as a result of Sword and Pistol takes damage from a character with that feat using a one-handed melee weapon, remove the auxiliary effect on the attacker, and the trigger effect on the target.</p>"
@@ -437,12 +411,10 @@
                 "ResourceLabel": "Trickster's Mirrors"
             },
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ]{Aux Effect: Trickster's Mirrors}, automatically reduce the Trickster's Mirrors resource depending on both the outcome of the attack and a randomly generated number, as described by the spell. If the attacker is within 5 feet, roll damage when a mirror is destroyed.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access.</p>"
-                },
+                "Description": "<p>If the attacked creature has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.SlgTXSJRSL5UplfQ]{Aux Effect: Trickster's Mirrors}, automatically reduce the Trickster's Mirrors resource depending on both the outcome of the attack and a randomly generated number, as described by the spell. If the attacker is within 5 feet, roll damage when a mirror is destroyed.</p><p>It's recommended that the auxiliary effect is added to the spell's description for easy access.</p>",
                 "Note": {
                     "Hit": "<strong>Trickster's Mirror</strong> The attack hits you! All your mirrors remain.",
-                    "Miss": "<p>The attack misses you! One of your mirrors is destroyed. If the attacker was within 5 feet, they must succeed at a @Check[will|basic|options:item:type:spell|traits:animist,focus,illusion,mental,visual] save or take mental damage as they believe themselves cut by a shower of glass shards from the breaking mirror.</p>",
+                    "Miss": "<p>The attack misses you! One of your mirrors is destroyed. If the attacker was within 5 feet, they must succeed at a @Check[will|basic] save or take mental damage as they believe themselves cut by a shower of glass shards from the breaking mirror.</p>",
                     "MissNoDamage": "<p><strong>Trickster's Mirror</strong> The attack misses you! One of your mirrors is destroyed.</p>"
                 }
             }
@@ -467,9 +439,7 @@
                 "Addendum": "Anytime you cast a vitality spell, the thorns' damage increases to d6s of piercing damage until the start of your next turn."
             },
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "Roll @UUID[Compendium.pf2e.spells-srd.Item.nnSipUPNd3sm5vYL]{Vibrant Thorns}' damage when the recipient of the spell is hit with an unarmed attack, or a melee attack by an adjacent creature."
-                }
+                "Description": "<p>When the target of a successful melee attack has Vibrant Thorns' auxiliary effect and is adjacent to the origin of the attack, or if the attack was an unarmed attack, roll <em>vibrant thorns'</em> damage. If the target has @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.tMv3au5iEzSGOWxN]{Aux Effect: Vibrant Thorns (Increase Damage)}, increase that damage accordingly.</p><p>For this trigger to work, @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.KGbXSyZzPE5i1O4N]{Aux Effect: Vibrant Thorns} must be dragged onto the origin when they cast the spell.</p>"
             }
         },
         "VitalityNetwork": {
@@ -492,16 +462,12 @@
         },
         "WarningStripes": {
             "Trigger": {
-                "AttackRolled": {
-                    "Description": "<p>If a character affected by @UUID[Compendium.pf2e.spells-srd.Item.D4kArD91fFiREvC6]{Warning Stripes}, as determined by the presence of its auxiliary effect, is hit with a melee unarmed attack, roll the spell's damage.</p><p>For this trigger to work, the spell recipient needs @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.0qQV2XvX2kaOt8yj]{Aux Effect: Warning Stripes} applied to them. This effect must be linked in the spell's description for ease of access and to set the correct origin data on it.</p>"
-                }
+                "Description": "<p>If the target of a successful melee unarmed attack has <strong>Warning Stripes</strong>'s auxiliary effect, roll the spell's damage.</p><p>For this trigger to work, @UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.0qQV2XvX2kaOt8yj]{Aux Effect: Warning Stripes} must be dragged onto the origin when they cast the spell. Furthermore, it must be dragged from the spell's card in chat for its damage to scale correctly.</p>"
             }
         },
         "WarpingPull": {
             "Trigger": {
-                "DamageTaken": {
-                    "Description": "Automatically remove @UUID[Compendium.pf2e.spells-srd.Item.UtINSoEJ0u630ia4]{Warping Pull}'s effect after damage is taken"
-                }
+                "Description": "When a target takes damage and they have <strong>Warping Pull</strong>'s resistance effect, remove that effect."
             }
         }
     }
