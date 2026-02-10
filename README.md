@@ -1,93 +1,16 @@
-# PF2e Trigger Trove
-A compilation of triggers to use with the [PF2e Trigger](https://github.com/reonZ/pf2e-trigger) module.
+# Trigger Trove
+A compilation of triggers to use with the [Trigger Engine](https://github.com/reonZ/trigger-engine) module.
+
+> [!WARNING]
+> This module has been retooled to use **Trigger Engine** instead of PF2e Trigger. Make sure you have the right module enabled.
 
 ## How to use?
-Enable the module and you will see this module's triggers. They are **disabled** by default, and you should only enable triggers that you plan on using.
+Enable the module and you will see our compilation of triggers. They are **disabled** by default, and you should only enable triggers that you plan on using.
 
-Here's the list of abilities currently handled by triggers in some capacity.
-<details>
-  <summary>The List (As of 0.11.0)</summary>
-
-   - Core Rules
-     - Defend
-     - Scout
-     - Treat Wounds
-   - Equipment
-     - Critical Specialization
-        + Bow, Spear, and Sword only
-     - Crushing
-     - Fearsome
-     - Fortification
-     - Rooting
-     - Vitalizing
-   - Feats & Features
-     - Air Aura Junction
-     - Aldori Swordlord
-     - Amulet's Abeyance
-     - Aura of Courage
-     - Brutal Beating
-     - Champion's Resistance
-        + Special Glimpse of Redemption support
-     - Crowned in Tempest's Fury
-     - Distracting Shot
-     - Elegant Buckler
-     - Energy Shot
-     - Extravagant Parry
-     - Finishing Follow-Through
-     - Flashy Dodge
-     - Goblin Scuttle
-     - Incredible Scout
-     - Inviolable
-     - Martial Performance
-     - One Shot, One Kill
-     - Ravel of Thorns
-     - Regalia Initiate Benefit
-     - Rejuvenating Touch
-     - Revitalizing Finisher
-     - Scars of Steel
-     - Scout's Warning
-     - Selfish Shield
-        - Ongoing Selfishness
-     - Shared Stratagem
-     - Spike Skin
-     - Staggering Shot
-     - Steam Knight
-     - Swaggering Initiative
-     - Swashbuckler Finisher
-     - Sword and Pistol
-     - Taunt
-     - Unbalancing Blow
-     - Unbalancing Finisher
-     - Thermal Nimbus
-   - Monster Abilities
-     - Blinding Aura
-     - Commanding Presence 
-     - Dread Flickering
-     - Engulf & Swallow Whole 
-     - Frightful Presence
-     - Gibbering
-     - Intense Heat
-     - Stench
-   - Spells
-     - Diamond Dust
-     - Enduring Might
-     - Flame Barrier 
-     - Incendiary Aura
-     - Mirror Image
-     - Mountain Resilience
-     - Nettleskin
-     - Phase Familiar
-     - Rapid Retreat
-     - Shields of the Spirit
-     - Spirit Link
-     - Trickster's Mirrors
-     - Vibrant Thorns
-     - Warning Stripes
-     - Warping Pull
-</details>
+If you want to see what abilities have some degree of support before installing, you can navigate the [triggers](./triggers/) directory.
 
 ## Contribute
-If you have a request for something the module could handle, or if you have a trigger idea that you can't make a PR for, you can [make a new issue](https://github.com/pedrogrullada/pf2e-trigger-trove/issues/new). No promises that I'll act on it, but I'll at least take a look.
+If you have a request for a rule a trigger could handle, or if you have a trigger idea that you can't make a PR for, you can [make a new issue](https://github.com/pedrogrullada/pf2e-trigger-trove/issues/new). No promises that I'll act on it, but I'll at least take a look.
 
 Pull requests are very welcome! I will review your PR as soon as I can, likely testing them out myself. Please bear with me if I take some time, or if I'm a bit fuzzy and ask for changes.
 
@@ -97,24 +20,22 @@ If you want to contribute your own trigger, here's how you do it:
 
 1. Create your triggers. Here's a few things to keep in mind:
     - See [Triggers Style Guide](#triggers-style-guide).
-    - If your trigger relies on certain items, usually effects, they should go in the Auxiliary Items compendium. See [Adding Auxiliary Items.](#adding-auxiliary-items)
-    - If you need to access one of the module's subtriggers, you will need to import it from `pf2e-trigger-trove.json` while making sure to check the **KEEP IDS** box.
-2. Once your triggers are created, export all triggers and subtriggers you want to submit.
-3. Create a JSON file containing either
-    - A single trigger object, if you're only submitting one trigger
-    - An array of trigger objects, if you're submitting multiple triggers (for example, Aura Entered and Turn Started triggers are a common combo)
-4. Name the file after the rule you're automating in kebab-case (for example `thermal-nimbus.json`), and place it in the most fitting folder in the `/triggers/` directory. Create a new one if none fit.
-5. Submit your PR!
+    - If your trigger relies on certain items, usually effects, they should go in the Auxiliary Items compendium. See [Adding Auxiliary Items.](#adding-auxiliary-items).
+2. Once your triggers are created, export all triggers you want to submit. Trigger Engine will give you an array with all your triggers.
+3. Create a JSON file for each trigger you're submitting, each of them must be an object.
+4. Name the file after the rule you're automating in kebab-case (for example `thermal-nimbus.json`), and place it in the most fitting folder in the `/triggers/` directory. Create a new one if none of them fit.
+5. Make sure any auxiliary items your trigger needs have been exported. See [Adding Auxiliary Items.](#adding-auxiliary-items).
+6. Submit your PR!
 
 Here are some examples of what the trigger file you submit would look like.
 <details>
-  <summary>Single Trigger Example</summary>
+  <summary>Trigger Example</summary>
 
 ```json
 {
-  "_id": "12345abcde",
   "description": "A very impressive trigger.",
   "folder": "Spells",
+  "id": "12345abcde",
   "name": "Mega Punch (Attack Rolled)",
   "nodes": [
     {
@@ -123,45 +44,15 @@ Here are some examples of what the trigger file you submit would look like.
     {
       "..."
     }
-  ]
-}
-```
-</details>
-
-<details>
-  <summary>Multiple Triggers Example</summary>
-
-```json
-[
-  {
-    "_id": "poiuyt912837",
-    "description": "Charge kick at the start of a turn",
-    "folder": "Feats & Features",
-    "name": "Mega Kick (Turn Started)",
-    "nodes": [
-      {
-        "..."
-      },
-      {
-        "..."
-      }
-    ]
-  },
-  {
-    "_id": "qwerty987654",
-    "description": "Deliver the charged kick, ouchie.",
-    "folder": "Feats & Features",
-    "name": "Mega Kick (Attack Rolled)",
-    "nodes": [
-      {
-        "..."
-      },
-      {
-        "..."
-      }
-    ]
+  ],
+  "priority": 0,
+  "tags": [
+      "pf2e"
+  ],
+  "variables": {
+   "..."
   }
-]
+}
 ```
 </details>
 
@@ -177,12 +68,20 @@ If your trigger relies on auxiliary items (such as how we handle Safe Elements),
 6. From here, you can start working on the module inside Foundry. You'll want to add your items to the Auxiliary Items compendium.
 7. Make sure your items are properly linked in your triggers.
 8. Run `npm run extractPacks` to extract the changes you made in Foundry into your cloned repo.
-9. Commit and push the items you added, then create a PR with both your trigger and item updates.
+9. If your item was created in pf2e and it's meant to be cross-compatible by using an anachronism module, duplicate the item and add it to sf2e's auxiliary items pack, making the necessary adjustments (switching its system and version propertes for the ones corresponding to sf2e, and switching flags such as `flags.pf2e` for `flags.sf2e`; and making sure you're using a valid image). If your item was created in sf2e, it is the same process but reversed.
+  9a. This is just an interim solution until I figure out a way to be smarter about this!
+10. Commit and push the items you added, then create a PR with both your trigger and item updates.
+
+### Adding Macros
+The Execute Event node is such that there's a lot of possibilities for automations that can be triggered by the user, such as the existing Vitality Network implementation. If you're handy with macros and want to contribute to or improve the module's macros, feel free! As for extracting the Foundry macros, you can follow the instructions for [Adding Auxiliary Items.](#adding-auxiliary-items), extracting your macro instead. Just make sure to make them usable via this module's API for ease of providing updates
 
 ### Triggers Style Guide
 Here are some guidelines to keep some level of consistency and curation in the module.
-- Name your triggers `Name of Ability (Trigger Type)`. If there's multiple triggers with the same name and type, you can be a bit more specific.
-- Check the module's subtriggers to see if you can use one of them to save yourself some work.
-- For now, prefer the `Send Item to Chat` node over `Roll Save` for abilities such as Intense Heat and Stench.
-  - If PF2e Toolbelt's Target Helper feature is enabled, the target will be the triggering creature by default, which is quite handy and preferable to auto-rolling saves, in my opinion.
-- Sort your trigger in the proper folder, creating a new one, if there's no folder that fits your trigger.
+- Name your trigger after the rule it's handling, following [Chicago Title Case](https://capitalizemytitle.com/style/chicago). If for some reason there need to be multiple triggers handling the same rule, you can use parentheticals to be more specific.
+- Use `Check Rolled` rather than `Roll Save` for abilities that need a player to roll such as Intense Heat and Stench. It's my philosophy with this module that players should be rolling their own dice.
+- Sort your trigger in the proper folder, creating a new one if there's no folder that fits your trigger.
+- Write a description for your trigger, add it to `en.json`, and reference it via `@Localize[TRIGGERTROVE.FOO.BAR]` in your trigger's description field.
+  - The description should be written in present tense imperative mood (When A happens, if B and C, then roll X damage, add Y condition, remove Z effect).
+  - The first mention of the rule you're automating should be bolded.
+  - If your trigger needs an auxiliary effect to work, mention that in its description.
+- Make sure to tag your triggers as pf2e- or sf2e- compatible, as appropriate.
