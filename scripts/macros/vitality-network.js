@@ -13,10 +13,6 @@ export async function transferVitality() {
   const target = game.user.targets.first();
   if (!target) return ui.notifications.warn(game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Target"));
 
-  if (!("vitalityNetwork" in resources)) return ui.notifications.warn(game.i18n.format("TRIGGERTROVE.VitalityNetwork.Macro.NoVitalityNetwork", {
-    actor: token.name
-  }));
-
   if (resources.vitalityNetwork.value === 0) return ui.notifications.info(game.i18n.format("TRIGGERTROVE.VitalityNetwork.Macro.DepletedVitalityNetwork", {
     actor: token.name
   }));
