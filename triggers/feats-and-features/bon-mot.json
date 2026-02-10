@@ -1,0 +1,365 @@
+{
+    "description": "@Localize[TRIGGERTROVE.BonMot.Trigger.Description]",
+    "folder": "Feats & Features",
+    "id": "OL7xmEswEMqZJPoZ",
+    "name": "Bon Mot",
+    "nodes": [
+        {
+            "id": "d1zI3dCEIQdYZ5W7",
+            "inputs": {
+                "for": {
+                    "value": "skill-check"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "d5Asv9viovvk805m:ins:in"
+                }
+            },
+            "position": {
+                "x": 269,
+                "y": 145
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "d5Asv9viovvk805m",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feats-srd.Item.0GF2j54roPFIDmXf"
+                },
+                "target": {
+                    "connection": "d1zI3dCEIQdYZ5W7:outputs:roller"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "YM7BxgBnwi3zkIKc:ins:in"
+                }
+            },
+            "position": {
+                "x": 535.9230769230769,
+                "y": 116.4
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "QoWMozPEY7yCcSh8",
+            "inputs": {
+                "input": {
+                    "connection": "d1zI3dCEIQdYZ5W7:outputs:outcome"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "qEXN1e7vJdPiag7q:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "A80VAAYlHbjSAvcp:ins:in"
+                },
+                "success": {
+                    "connection": "b0t8bLgGEscGDYHQ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1103.25,
+                "y": 336.25
+            },
+            "type": "split-outcome"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "dLfyNaIiyApHnTBp": {
+                        "id": "dLfyNaIiyApHnTBp",
+                        "isArray": false,
+                        "label": "Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "ZqB3sF8s4B6Ne3kk": {
+                        "id": "ZqB3sF8s4B6Ne3kk",
+                        "isArray": false,
+                        "label": "Choice",
+                        "slug": "entry",
+                        "type": "text"
+                    }
+                },
+                "title": "Add Bon Mot Effect"
+            },
+            "id": "Hq6UrpTB00ScrKw9",
+            "outs": {
+                "out": {
+                    "connection": "1617AlgAmyxaJeY7:ins:in"
+                }
+            },
+            "position": {
+                "x": 234.5,
+                "y": 631.25
+            },
+            "type": "__gate_exit__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "ywzUn8trxWdzC9ZY": {
+                        "id": "ywzUn8trxWdzC9ZY",
+                        "label": "Text",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "1617AlgAmyxaJeY7",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.GoSls6SKCFmSoDxT"
+                },
+                "target": {
+                    "connection": "Hq6UrpTB00ScrKw9:outputs:dLfyNaIiyApHnTBp"
+                },
+                "ywzUn8trxWdzC9ZY": {
+                    "connection": "Hq6UrpTB00ScrKw9:outputs:ZqB3sF8s4B6Ne3kk"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "FJsg7TX2tJxGVVjs:ins:in"
+                }
+            },
+            "position": {
+                "x": 481.8461538461537,
+                "y": 586.3615384615385
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "UGjj5jFgso4Lcv1B",
+            "inputs": {
+                "entry": {
+                    "connection": "d1zI3dCEIQdYZ5W7:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1291.5663780663776,
+                "y": 81.97582972582961
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dLfyNaIiyApHnTBp": {
+                        "id": "dLfyNaIiyApHnTBp",
+                        "isArray": false,
+                        "label": "Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "ZqB3sF8s4B6Ne3kk": {
+                        "id": "ZqB3sF8s4B6Ne3kk",
+                        "isArray": false,
+                        "label": "Choice",
+                        "slug": "entry",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "b0t8bLgGEscGDYHQ",
+            "inputs": {
+                "dLfyNaIiyApHnTBp": {
+                    "connection": "tEY1hK7tNHQRyDeJ:outputs:entry"
+                },
+                "ZqB3sF8s4B6Ne3kk": {
+                    "value": "flag:penalty:1"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Hq6UrpTB00ScrKw9:ins:in"
+                }
+            },
+            "position": {
+                "x": 1515.2802197802196,
+                "y": 358.5714285714286
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dLfyNaIiyApHnTBp": {
+                        "id": "dLfyNaIiyApHnTBp",
+                        "isArray": false,
+                        "label": "Target",
+                        "slug": "entry",
+                        "type": "target"
+                    },
+                    "ZqB3sF8s4B6Ne3kk": {
+                        "id": "ZqB3sF8s4B6Ne3kk",
+                        "isArray": false,
+                        "label": "Choice",
+                        "slug": "entry",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "A80VAAYlHbjSAvcp",
+            "inputs": {
+                "dLfyNaIiyApHnTBp": {
+                    "connection": "tEY1hK7tNHQRyDeJ:outputs:entry"
+                },
+                "ZqB3sF8s4B6Ne3kk": {
+                    "value": "flag:penalty:0"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Hq6UrpTB00ScrKw9:ins:in"
+                }
+            },
+            "position": {
+                "x": 1516.708791208791,
+                "y": 502.85714285714283
+            },
+            "type": "__gate_entry__"
+        },
+        {
+            "id": "tEY1hK7tNHQRyDeJ",
+            "inputs": {
+                "entry": {
+                    "connection": "d1zI3dCEIQdYZ5W7:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1280.6428571428569,
+                "y": 517.9642857142856
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "xaq2kIYitVCj81n3": {
+                        "id": "xaq2kIYitVCj81n3",
+                        "label": "Flat Modifier",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "qEXN1e7vJdPiag7q",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Bon Mot (Critical Failure)"
+                },
+                "origin": {
+                    "connection": "UGjj5jFgso4Lcv1B:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "systems/pf2e/icons/features/feats/bon-mot.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-bon-mot-critical-failure"
+                },
+                "target": {
+                    "connection": "UGjj5jFgso4Lcv1B:outputs:entry"
+                },
+                "xaq2kIYitVCj81n3": {
+                    "value": "{\n  \"key\": \"FlatModifier\",\n  \"selector\": [\n    \"perception\",\n    \"will\"\n  ],\n  \"type\": \"status\",\n  \"value\": -2\n}"
+                }
+            },
+            "position": {
+                "x": 1514.9406565656566,
+                "y": -86.25414862914869
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "FJsg7TX2tJxGVVjs",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-bon-mot-critical-failure"
+                },
+                "target": {
+                    "connection": "hQeaSC0GdcXhfdfS:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "QzoRGraM9BmYQU0G:ins:in"
+                }
+            },
+            "position": {
+                "x": 766.9272255522255,
+                "y": 668.3190115440116
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "QzoRGraM9BmYQU0G",
+            "inputs": {
+                "item": {
+                    "connection": "FJsg7TX2tJxGVVjs:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1038.9272255522255,
+                "y": 681.5618686868687
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "hQeaSC0GdcXhfdfS",
+            "inputs": {
+                "entry": {
+                    "connection": "d1zI3dCEIQdYZ5W7:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 631.8173354423355,
+                "y": 817.8997807747808
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "YM7BxgBnwi3zkIKc",
+            "inputs": {
+                "options": {
+                    "connection": "d1zI3dCEIQdYZ5W7:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  \"action:bon-mot\",\n  \"check:statistic:diplomacy\"\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "QoWMozPEY7yCcSh8:ins:in"
+                }
+            },
+            "position": {
+                "x": 827.4125735375738,
+                "y": 204.5718586968585
+            },
+            "type": "match-predicate"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "d1zI3dCEIQdYZ5W7:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "d1zI3dCEIQdYZ5W7:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

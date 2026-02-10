@@ -30,6 +30,11 @@
                 "Description": "<p>When a combatant starts their turn within a Shining Child's <strong>Blinding Aura</strong>, send that ability to chat. When a roller fails their saving throw against Blinding Aura, add the blinded condition according to their degree of success. On a critical success, the roller does not trigger further Blinding Aura triggers.</p>"
             }
         },
+        "BonMot": {
+            "Trigger": {
+                "Description": "When the roller of a Diplomacy check is using the <strong>Bon Mot</strong> action, apply Bon Mot's effect to the target or roller, depending on the outcome. If the roller succeeds on their Bon Mot, remove the effect resulting from a critically failed Bon Mot, if there is one."
+            }
+        },
         "BrutalBeating": {
             "Trigger": {
                 "Description": "WWhen a target takes damage from an origin with the <strong>Brutal Beating</strong> feat, that target becomes frightened 1."
