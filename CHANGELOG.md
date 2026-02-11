@@ -1,3 +1,30 @@
+## 1.0.0
+- Housekeeping 
+  - Migrate the module to use **Trigger Engine**
+    - This means the module **no longer works with PF2e Trigger.** Use **Trigger Engine** instead
+  - Add support for SF2e
+- Trigger Updates
+  - Recreate nearly every trigger to work with Trigger Engine
+  - **Scars of Steel**
+    - Its trigger will now reduce its number of uses.
+  - Monster abilities, such as **Gibbering** and **Frightful Presence**, will now automatically apply their effects when a save is made
+- New Triggers
+  - **Demoralize, Grapple, Trip, & Disarm**
+    - Automatically apply their respective conditions and effects depending on the outcome
+  - **Enfeeble, Fear, and Slow**
+    - Automatically apply the effects of these spells depending on the outcome. Just proof of concept for some of the new stuff we can do
+  - **Panache**
+    - Panache will automatically be applied when bravado actions are rolled, and removed when finishers are resolved
+  - **Overdrive**
+    - Automatically apply overdrive's effect depending on the outcome, including a critical failure tracking effect
+  - **Action Hero**
+    - When an action hero succeeds on their Strike with an automatic weapon, add the suppressed condition to the target
+  - **Suppressing Fire**
+    - When an enemy fails their area/auto fire save, automatically apply the suppressed condition
+  - **Vitality Network**
+    - At the start of of the mystic's turns, they regain some of their vitality network
+    - Using the macro provided in the compendium, you can select a number of Hit Points to roll as healing and automatically deduct them from your vitality network
+
 ## 0.11.0
 - Housekeeping
   - Updates minimum PF2e Trigger version to 2.21.0, which fixes some effects being applied to non-character tokens. 
