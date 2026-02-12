@@ -1,3 +1,10 @@
+## 1.1.0
+- **New Triggers**
+  - **Bon Mot:** When the roller of a Diplomacy check is using the <strong>Bon Mot</strong> action, apply Bon Mot's effect to the target or roller, depending on the outcome. If the roller succeeds on their Bon Mot, remove the effect resulting from a critically failed Bon Mot, if there is one.
+- **Updated Triggers**
+  - **Vitality Network:** Remove duplicate vitality network resource check and delete unused variable from macro
+  - **Vitalizing:** Check that the target of the attack is undead
+
 ## 1.0.0
 - Housekeeping 
   - Migrate the module to use **Trigger Engine**
