@@ -1,5 +1,5 @@
 {
-    "description": "@Localize[TRIGGERTROVE.Vitalizing.Trigger.Description]",
+    "description": "<p>@Localize[TRIGGERTROVE.Vitalizing.Trigger.Description]</p>",
     "folder": "Equipment",
     "id": "QQD7bYI6E4fpWNSf",
     "name": "Vitalizing",
@@ -29,7 +29,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "upl6gKuDyYUcnb0l:ins:in"
+                    "connection": "CcxLPJQze9CrGg1s:ins:in"
                 }
             },
             "position": {
@@ -57,8 +57,8 @@
                 }
             },
             "position": {
-                "x": 800.9230769230769,
-                "y": 379.5
+                "x": 1055.923076923077,
+                "y": 387
             },
             "type": "match-predicate"
         },
@@ -70,8 +70,8 @@
                 }
             },
             "position": {
-                "x": 646,
-                "y": 497.75
+                "x": 629.571428571429,
+                "y": 541.6785714285717
             },
             "type": "__variable_getter__"
         },
@@ -98,8 +98,8 @@
                 }
             },
             "position": {
-                "x": 1232,
-                "y": -84
+                "x": 1487,
+                "y": -76.5
             },
             "type": "create-condition"
         },
@@ -111,8 +111,8 @@
                 }
             },
             "position": {
-                "x": 1115.3333333333333,
-                "y": 235.3055555555555
+                "x": 1370.3333333333333,
+                "y": 242.8055555555555
             },
             "type": "__variable_getter__"
         },
@@ -124,8 +124,8 @@
                 }
             },
             "position": {
-                "x": 1119,
-                "y": 26.75
+                "x": 1374,
+                "y": 34.25
             },
             "type": "__variable_getter__"
         },
@@ -145,8 +145,8 @@
                 }
             },
             "position": {
-                "x": 1036.423076923077,
-                "y": 445.75
+                "x": 1291.423076923077,
+                "y": 453.25
             },
             "type": "match-predicate"
         },
@@ -189,8 +189,8 @@
                 }
             },
             "position": {
-                "x": 1269.5897435897436,
-                "y": 430.73333333333323
+                "x": 1524.5897435897436,
+                "y": 438.23333333333323
             },
             "type": "create-effect"
         },
@@ -202,8 +202,8 @@
                 }
             },
             "position": {
-                "x": 1145.1111111111109,
-                "y": 613.9722222222221
+                "x": 1400.1111111111109,
+                "y": 621.4722222222221
             },
             "type": "__variable_getter__"
         },
@@ -215,10 +215,31 @@
                 }
             },
             "position": {
-                "x": 1145.1111111111109,
-                "y": 567.3055555555555
+                "x": 1400.1111111111109,
+                "y": 574.8055555555555
             },
             "type": "__variable_getter__"
+        },
+        {
+            "id": "CcxLPJQze9CrGg1s",
+            "inputs": {
+                "entry": {
+                    "value": "target:mode:undead"
+                },
+                "list": {
+                    "connection": "dbcETUobr3Rb0655:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "upl6gKuDyYUcnb0l:ins:in"
+                }
+            },
+            "position": {
+                "x": 801.78021978022,
+                "y": 334.107142857143
+            },
+            "type": "list-contains"
         }
     ],
     "priority": 0,
