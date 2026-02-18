@@ -199,6 +199,11 @@
                 "Description": "<p>When a target within an <strong>Incendiary Aura</strong> takes fire damage, add the corresponding amount of persistent fire damage to that target.</p><p><em>Note: This trigger can only detect fire damage when it's the primary damage type of a roll.</em></p>"
             }
         },
+        "IncredibleScout": {
+            "Trigger": {
+                "Description": "When a Scouting combatant with <strong>Incredible Scout</strong> is created, add an effect that upgrades Scout's bonus for all allies benefitting from it."
+            }
+        },
         "IntenseHeat": {
             "Trigger": {
                 "Description": "When a combatant enters or starts their turn within an <strong>Intense Heat</strong> aura, roll its damage and post a saving throw against it."
@@ -315,7 +320,7 @@
         },
         "ScoutDedication": {
             "Trigger": {
-                "Description": "When a Scouting combatant with <strong>Scout Dedication</strong> is created, add an effect that upgrades Scout's bonus for all allies benefitting from it."
+                "Description": "When a Scouting combatant with <strong>Scout Dedication</strong> is created, add an effect that upgrades Scout's bonus for themself and all allies benefitting from it."
             }
         },
         "ScoutsWarning": {
