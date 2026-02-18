@@ -1,5 +1,5 @@
 {
-    "description": "@Localize[TRIGGERTROVE.Scout.Trigger.Description]",
+    "description": "<p>@Localize[TRIGGERTROVE.Scout.Trigger.Description]</p>",
     "folder": "Core Rules",
     "id": "FifdrgdNCDjkyRVS",
     "name": "Scout",
@@ -165,6 +165,11 @@
         },
         {
             "id": "rE2NJ0lYsQxohzRq",
+            "inputs": {
+                "callback": {
+                    "value": "return !target.actor.system.traits.value.includes(\"minion\");"
+                }
+            },
             "position": {
                 "x": 1410.0930735930742,
                 "y": 268.2494588744589

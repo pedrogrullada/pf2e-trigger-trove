@@ -1,5 +1,5 @@
 {
-    "description": "@Localize[TRIGGERTROVE.ScoutDedication.Trigger.Description]",
+    "description": "<p>@Localize[TRIGGERTROVE.ScoutDedication.Trigger.Description]</p>",
     "folder": "Feats & Features",
     "id": "eBRINkvxHRi6T6Fm",
     "name": "Scout Dedication",
@@ -42,7 +42,7 @@
                     "value": "{\n  \"key\": \"AdjustModifier\",\n  \"slug\": \"scouting-bonus\",\n  \"value\": 2,\n  \"selector\": \"initiative\",\n  \"mode\": \"upgrade\"\n}"
                 },
                 "name": {
-                    "value": "Aux Effect: Scout Dedication"
+                    "value": "Effect: Scout Dedication"
                 },
                 "pf2eImg": {
                     "value": "icons/sundries/books/book-red-exclamation.webp"
@@ -95,6 +95,11 @@
         },
         {
             "id": "eiFZtKjF9YLWoaEf",
+            "inputs": {
+                "callback": {
+                    "value": "return !target.actor.system.traits.value.includes(\"minion\");"
+                }
+            },
             "position": {
                 "x": 1662.0769230769229,
                 "y": 669.3076923076924
@@ -309,6 +314,54 @@
                 "y": 418.75000000000017
             },
             "type": "__variable_getter__"
+        },
+        {
+            "id": "X91zYCkrL6q0G787",
+            "outs": {
+                "out": {
+                    "connection": "p5jnoarsd9YrKp5k:ins:in"
+                }
+            },
+            "position": {
+                "x": 314.77564102564156,
+                "y": 773.5769230769229
+            },
+            "type": "turn-start-event"
+        },
+        {
+            "id": "p5jnoarsd9YrKp5k",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-scout-dedication"
+                },
+                "target": {
+                    "connection": "X91zYCkrL6q0G787:outputs:combatant"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "IZpkDdPIOz55FXuX:ins:in"
+                }
+            },
+            "position": {
+                "x": 527.5673076923081,
+                "y": 774.2557692307687
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "IZpkDdPIOz55FXuX",
+            "inputs": {
+                "item": {
+                    "connection": "p5jnoarsd9YrKp5k:outputs:item"
+                }
+            },
+            "position": {
+                "x": 793.5288461538462,
+                "y": 790.5865384615383
+            },
+            "type": "delete-item"
         }
     ],
     "priority": 0,

@@ -1,5 +1,5 @@
 {
-    "description": "@Localize[TRIGGERTROVE.ScoutsWarning.Trigger.Description]",
+    "description": "<p>@Localize[TRIGGERTROVE.ScoutsWarning.Trigger.Description]</p>",
     "folder": "Feats & Features",
     "id": "Cmw8Fea7T6v1tm6u",
     "name": "Scout's Warning",
@@ -97,6 +97,11 @@
         },
         {
             "id": "H0TistY8A7N5YK7a",
+            "inputs": {
+                "callback": {
+                    "value": "return !target.actor.system.traits.value.includes(\"minion\");"
+                }
+            },
             "position": {
                 "x": 939,
                 "y": 695.75
