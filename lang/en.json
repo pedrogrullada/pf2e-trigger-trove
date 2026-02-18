@@ -110,7 +110,7 @@
         },
         "ElegantBuckler": {
             "Trigger": {
-                "Description": "When an attack critically misses against a target benefitting from Elegant Buckler, that target gains panache until the end of their next turn."
+                "Description": "When an attack critically misses against a target benefiting from Elegant Buckler, that target gains panache until the end of their next turn."
             }
         },
         "EnduringMight": {
@@ -140,7 +140,7 @@
         },
         "ExtravagantParry": {
             "Trigger": {
-                "Description": "When an attack misses against a target benefitting from <strong>Extravagant Parry</strong>, that target gains panache until the end of their next turn."
+                "Description": "When an attack misses against a target benefiting from <strong>Extravagant Parry</strong>, that target gains panache until the end of their next turn."
             }
         },
         "Fear": {
@@ -165,7 +165,7 @@
         },
         "FlashyDodge": {
             "Trigger": {
-                "Description": "When an attack misses against a target benefitting from <strong>Flashy Dodge</strong>, that target gains panache until the end of their next turn."
+                "Description": "When an attack misses against a target benefiting from <strong>Flashy Dodge</strong>, that target gains panache until the end of their next turn."
             }
         },
         "Fortification": {
@@ -201,7 +201,7 @@
         },
         "IncredibleScout": {
             "Trigger": {
-                "Description": "When a Scouting combatant with <strong>Incredible Scout</strong> is created, add an effect that upgrades Scout's bonus for all allies benefitting from it."
+                "Description": "When a Scouting combatant with <strong>Incredible Scout</strong> is created, add an effect that upgrades Scout's bonus for all allies benefiting from it."
             }
         },
         "IntenseHeat": {
@@ -216,7 +216,7 @@
         },
         "MartialPerformance": {
             "Trigger": {
-                "Description": "<p>If a target takes damage from an enemy origin with <strong>Martial Performance</strong>, and the origin is under the effects of <em>courageous anthem</em>, <em>rallying anthem</em>, or <em>song of strength</em>; extend the duration of these effects by 1 round. Then, add an effect that prevents effects from benefitting more than once.</p><p>For this trigger to work correctly, the composition effect must have been dragged from the triggering character's chat card.</p>"
+                "Description": "<p>If a target takes damage from an enemy origin with <strong>Martial Performance</strong>, and the origin is under the effects of <em>courageous anthem</em>, <em>rallying anthem</em>, or <em>song of strength</em>; extend the duration of these effects by 1 round. Then, add an effect that prevents effects from benefiting more than once.</p><p>For this trigger to work correctly, the composition effect must have been dragged from the triggering character's chat card.</p>"
             }
         },
         "MirrorImage": {
@@ -320,7 +320,7 @@
         },
         "ScoutDedication": {
             "Trigger": {
-                "Description": "When a Scouting combatant with <strong>Scout Dedication</strong> is created, add an effect that upgrades Scout's bonus for themself and all allies benefitting from it."
+                "Description": "When a Scouting combatant with <strong>Scout Dedication</strong> is created, add an effect that upgrades Scout's bonus for themself and all allies benefiting from it."
             }
         },
         "ScoutsWarning": {
@@ -346,7 +346,7 @@
         },
         "ShieldsOfTheSpirit": {
             "Trigger": {
-                "Description": "When the target of an attack has <strong>Shields of the Spirit's</strong> effect, and is inside a champion's aura or benefitting from the <strong>Security</strong> feat, roll <em>shields of the spirit</em>'s damage against the origin of the attack."
+                "Description": "When the target of an attack has <strong>Shields of the Spirit's</strong> effect, and is inside a champion's aura or benefiting from the <strong>Security</strong> feat, roll <em>shields of the spirit</em>'s damage against the origin of the attack."
             }
         },
         "Slow": {
