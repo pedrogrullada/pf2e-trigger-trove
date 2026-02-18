@@ -1,5 +1,5 @@
 {
-    "description": "@Localize[TRIGGERTROVE.SteamKnight.Trigger.Description]",
+    "description": "<p>@Localize[TRIGGERTROVE.SteamKnight.Trigger.Description]</p>",
     "folder": "Feats & Features",
     "id": "GobSqyzICH9LjSOi",
     "name": "Steam Knight",
@@ -149,7 +149,7 @@
             "id": "zodXKdy14hAcNv2I",
             "inputs": {
                 "callback": {
-                    "value": "/**\n * @param {{actor: Actor; token: TokenDocument}} target\n * @returns {boolean}\n *\n * @example\n * return target.actor.type === \"npc\";\n */\n{{actor: Actor; token: TokenDocument}} target\n\nreturn target.actor.system.details.alliance == \"opposition\";"
+                    "value": "return target.actor.system.details.alliance == \"opposition\";"
                 }
             },
             "position": {
