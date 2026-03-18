@@ -222,6 +222,56 @@
                 "y": 211.99999999999994
             },
             "type": "__variable_getter__"
+        },
+        {
+            "type": "delete-combatant-event",
+            "position": {
+              "x": 1157.0910616788,
+              "y": 513.818233360653
+            },
+            "id": "IWhrTZwYpmTWzv50",
+            "outs": {
+              "out": {
+                "connection": "jQgklmq11oYKr02L:ins:in"
+              }
+            }
+        },
+        {
+            "type": "delete-item",
+            "position": {
+              "x": 1724.42421375621,
+              "y": 531.211931751063
+            },
+            "id": "dcijQt2XrjOMWfUf",
+            "inputs": {
+              "item": {
+                "connection": "jQgklmq11oYKr02L:outputs:item"
+              }
+            }
+        },
+        {
+            "type": "has-item",
+            "position": {
+              "x": 1427.33312988281,
+              "y": 511.333347011415
+            },
+            "id": "jQgklmq11oYKr02L",
+            "inputs": {
+              "target": {
+                "connection": "IWhrTZwYpmTWzv50:outputs:combatant"
+              },
+              "pf2e": {
+                "value": "Compendium.pf2e.other-effects.Item.EMqGwUi3VMhCjTlF"
+              },
+              "sf2e": {
+                "value": "Compendium.sf2e.other-effects.Item.EMqGwUi3VMhCjTlF"
+              }
+            },
+            "outs": {
+              "true": {
+                "connection": "dcijQt2XrjOMWfUf:ins:in"
+              }
+            }
         }
     ],
     "priority": 100,
