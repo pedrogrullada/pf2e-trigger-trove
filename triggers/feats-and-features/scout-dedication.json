@@ -362,7 +362,55 @@
                 "y": 790.5865384615383
             },
             "type": "delete-item"
+        },
+        {
+        "type": "delete-combatant-event",
+        "position": {
+          "x": 314.666687011719,
+          "y": 930.666768520999
+        },
+        "id": "Vvc8VNkfJIVwl4XD",
+        "outs": {
+          "out": {
+            "connection": "ABGg6gR5UTFjvZ2T:ins:in"
+          }
         }
+      },
+      {
+        "id": "ABGg6gR5UTFjvZ2T",
+        "inputs": {
+          "slug": {
+            "value": "trigger-trove-scout-dedication"
+          },
+          "target": {
+            "connection": "Vvc8VNkfJIVwl4XD:outputs:combatant"
+          }
+        },
+        "outs": {
+          "true": {
+            "connection": "y0Ym2I8RJx1SPZ9Z:ins:in"
+          }
+        },
+        "position": {
+          "x": 588.900681715746,
+          "y": 924.922391954709
+        },
+        "state": "slug",
+        "type": "has-item"
+      },
+      {
+        "id": "y0Ym2I8RJx1SPZ9Z",
+        "inputs": {
+          "item": {
+            "connection": "ABGg6gR5UTFjvZ2T:outputs:item"
+          }
+        },
+        "position": {
+          "x": 873.52878511869,
+          "y": 931.919848498765
+        },
+        "type": "delete-item"
+      }
     ],
     "priority": 0,
     "tags": [
