@@ -1,0 +1,774 @@
+{
+    "description": "@Localize[TRIGGERTROVE.MarshalStances.Trigger.Description]",
+    "folder": "Feats & Features",
+    "id": "cfvGvxnx8bNtPCa6",
+    "name": "Marshal Stances",
+    "nodes": [
+        {
+            "id": "WDWylwPXPa9infeU",
+            "inputs": {
+                "for": {
+                    "value": "skill-check"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "3VMK5iyWHenCGYLx:ins:in"
+                }
+            },
+            "position": {
+                "x": 287,
+                "y": 404
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "3VMK5iyWHenCGYLx",
+            "inputs": {
+                "entry": {
+                    "value": "action:devrins-cunning-stance"
+                },
+                "list": {
+                    "connection": "WDWylwPXPa9infeU:outputs:options"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "5eCiVcIbj2d8RtQh:ins:in"
+                },
+                "true": {
+                    "connection": "kgkZBiGj2zcYDHuw:ins:in"
+                }
+            },
+            "position": {
+                "x": 601,
+                "y": 353.25
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "5eCiVcIbj2d8RtQh",
+            "inputs": {
+                "entry": {
+                    "value": "action:dread-marshal-stance"
+                },
+                "list": {
+                    "connection": "WDWylwPXPa9infeU:outputs:options"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "eJFYjZEUWuWPcTp1:ins:in"
+                },
+                "true": {
+                    "connection": "ltKK8MC5GC3tj4HG:ins:in"
+                }
+            },
+            "position": {
+                "x": 600,
+                "y": 481.25
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "eJFYjZEUWuWPcTp1",
+            "inputs": {
+                "entry": {
+                    "value": "action:inspiring-marshal-stance"
+                },
+                "list": {
+                    "connection": "WDWylwPXPa9infeU:outputs:options"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "968pWKRU5rjPyPFj:ins:in"
+                },
+                "true": {
+                    "connection": "ZIr5PA7iaSys3V87:ins:in"
+                }
+            },
+            "position": {
+                "x": 598,
+                "y": 610.25
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "R6bsVG9jSHGUyvQy",
+            "inputs": {
+                "input": {
+                    "connection": "y6xl4Vp7waa1C79J:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "h84ALXQco7qnBW91:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "rMjsZxZffdlfgLM4:ins:in"
+                },
+                "success": {
+                    "connection": "tB0Y89LctsmeLeKa:ins:in"
+                }
+            },
+            "position": {
+                "x": 1960.923076923077,
+                "y": -611.5
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "y6xl4Vp7waa1C79J",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 1789,
+                "y": -438.25
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "kgkZBiGj2zcYDHuw",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-devrins-cunning-stance-cooldown"
+                },
+                "target": {
+                    "connection": "M5tdnXIxms9OZXa3:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "R6bsVG9jSHGUyvQy:ins:in"
+                }
+            },
+            "position": {
+                "x": 1651.923076923077,
+                "y": -571.6
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "M5tdnXIxms9OZXa3",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1523,
+                "y": -554.25
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "nrcbE9FNen8WX3Li": {
+                        "id": "nrcbE9FNen8WX3Li",
+                        "label": "Outcome",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "rMjsZxZffdlfgLM4",
+            "inputs": {
+                "nrcbE9FNen8WX3Li": {
+                    "value": "flag:auraRadius:0"
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.kyrvZfZfzKK1vx9b"
+                },
+                "target": {
+                    "connection": "YfvhTCAf5CDKSZdT:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2355,
+                "y": -439
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "YfvhTCAf5CDKSZdT",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 2151,
+                "y": -435.25
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "nrcbE9FNen8WX3Li": {
+                        "id": "nrcbE9FNen8WX3Li",
+                        "label": "Outcome",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "tB0Y89LctsmeLeKa",
+            "inputs": {
+                "nrcbE9FNen8WX3Li": {
+                    "value": "flag:auraRadius:1"
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.kyrvZfZfzKK1vx9b"
+                },
+                "target": {
+                    "connection": "YfvhTCAf5CDKSZdT:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2360,
+                "y": -667.0000000000001
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "h84ALXQco7qnBW91",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Devrin's Cunning Stance Cooldown"
+                },
+                "origin": {
+                    "connection": "R5Wzfy89LjQBdocS:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/sundries/flags/banner-white.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/sundries/flags/banner-white.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-devrins-cunning-stance-cooldown"
+                },
+                "target": {
+                    "connection": "R5Wzfy89LjQBdocS:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 2363.173076923077,
+                "y": -1058.85
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "R5Wzfy89LjQBdocS",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 2121.25,
+                "y": -900.5000000000001
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ltKK8MC5GC3tj4HG",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-dread-marshal-stance-cooldown"
+                },
+                "target": {
+                    "connection": "bXwjOBGkJPDWHebz:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "06gSx2spsRfCbbYm:ins:in"
+                }
+            },
+            "position": {
+                "x": 1667.004309416074,
+                "y": -8.76526610644214
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "bXwjOBGkJPDWHebz",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1464.158496732026,
+                "y": 307.4104808590106
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "06gSx2spsRfCbbYm",
+            "inputs": {
+                "input": {
+                    "connection": "7211EmUDyQaCymIB:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "FZwjLRH70tGJi9TP:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "mxa8oipAOhUYSMXH:ins:in"
+                },
+                "success": {
+                    "connection": "mxa8oipAOhUYSMXH:ins:in"
+                }
+            },
+            "position": {
+                "x": 1942.589743589744,
+                "y": 53.500000000000455
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "7211EmUDyQaCymIB",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 1735.6923795159087,
+                "y": 342.7538874524174
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "FZwjLRH70tGJi9TP",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Dread Marshal Stance Cooldown"
+                },
+                "origin": {
+                    "connection": "AM3wNnVx1vnjHVX8:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/sundries/flags/banner-white.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/sundries/flags/banner-white.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-dread-marshal-stance-cooldown"
+                },
+                "target": {
+                    "connection": "AM3wNnVx1vnjHVX8:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 2337.247752247752,
+                "y": -175.5870129870127
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "AM3wNnVx1vnjHVX8",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 2114.065395388924,
+                "y": -2.370210671680752
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "mxa8oipAOhUYSMXH",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.qX62wJzDYtNxDbFv"
+                },
+                "target": {
+                    "connection": "pNxCaVoucTP3xsw7:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2334.604633928163,
+                "y": 212.04746609599601
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "pNxCaVoucTP3xsw7",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 2152.2327835563124,
+                "y": 272.3426320411621
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "ZIr5PA7iaSys3V87",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-inspiring-marshal-stance-cooldown"
+                },
+                "target": {
+                    "connection": "bXwjOBGkJPDWHebz:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "27mbYdQo63zgivXM:ins:in"
+                }
+            },
+            "position": {
+                "x": 1674.4328808446453,
+                "y": 571.5204481792722
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "id": "27mbYdQo63zgivXM",
+            "inputs": {
+                "input": {
+                    "connection": "7211EmUDyQaCymIB:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "7dHJ0b3TWoW7HOBh:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "TwBw4gCzCsPGkuGJ:ins:in"
+                },
+                "success": {
+                    "connection": "TwBw4gCzCsPGkuGJ:ins:in"
+                }
+            },
+            "position": {
+                "x": 1950.0183150183154,
+                "y": 633.7857142857148
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "7dHJ0b3TWoW7HOBh",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Inspiring Marshal Stance Cooldown"
+                },
+                "origin": {
+                    "connection": "3xQq5ZPezAeuqEAy:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/sundries/flags/banner-white.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/sundries/flags/banner-white.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-dread-marshal-stance-cooldown"
+                },
+                "target": {
+                    "connection": "3xQq5ZPezAeuqEAy:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 2344.6763236763236,
+                "y": 404.6987012987016
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "TwBw4gCzCsPGkuGJ",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.er5tvDNvpbcnlbHQ"
+                },
+                "target": {
+                    "connection": "MvKQFVj9L3ri8dE1:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 2304.0332053567345,
+                "y": 818.3331803817102
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "MvKQFVj9L3ri8dE1",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 2075.2486565721856,
+                "y": 845.9328196313497
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "3xQq5ZPezAeuqEAy",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 2131.2486565721856,
+                "y": 595.0237287222587
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "968pWKRU5rjPyPFj",
+            "inputs": {
+                "entry": {
+                    "value": "action:strategist-stance"
+                },
+                "list": {
+                    "connection": "WDWylwPXPa9infeU:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "oAQbaGDj3jFrUuu8:ins:in"
+                }
+            },
+            "position": {
+                "x": 596.75,
+                "y": 742.75
+            },
+            "type": "list-contains"
+        },
+        {
+            "id": "yCtoa0Fwn3FqdKoT",
+            "inputs": {
+                "input": {
+                    "connection": "iW3qNnoOHu5AnZal:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "6PKw3iX8D5A5Qk2j:ins:in"
+                },
+                "criticalSuccess": {
+                    "connection": "AJZ0J5U6HCKCpOxX:ins:in"
+                },
+                "success": {
+                    "connection": "2pM0VNjsFa18oEuq:ins:in"
+                }
+            },
+            "position": {
+                "x": 1222.4945054945053,
+                "y": 960.1190476190473
+            },
+            "type": "split-outcome"
+        },
+        {
+            "id": "oAQbaGDj3jFrUuu8",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-strategist-stance-cooldown"
+                },
+                "target": {
+                    "connection": "cTRU69MdwxsGDE9m:outputs:entry"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "yCtoa0Fwn3FqdKoT:ins:in"
+                }
+            },
+            "position": {
+                "x": 916.3516483516482,
+                "y": 897.1619047619043
+            },
+            "state": "slug",
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "nrcbE9FNen8WX3Li": {
+                        "id": "nrcbE9FNen8WX3Li",
+                        "label": "Outcome",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "AJZ0J5U6HCKCpOxX",
+            "inputs": {
+                "nrcbE9FNen8WX3Li": {
+                    "value": "flag:auraRadius:0"
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.z6oLNlBs724PCcR6"
+                },
+                "target": {
+                    "connection": "Gn3SlLGuB7QZBu2r:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1929.4285714285713,
+                "y": 1578.5119047619046
+            },
+            "type": "create-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "nrcbE9FNen8WX3Li": {
+                        "id": "nrcbE9FNen8WX3Li",
+                        "label": "Outcome",
+                        "slug": "choices",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "2pM0VNjsFa18oEuq",
+            "inputs": {
+                "nrcbE9FNen8WX3Li": {
+                    "value": "flag:auraRadius:1"
+                },
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.z6oLNlBs724PCcR6"
+                },
+                "target": {
+                    "connection": "Gn3SlLGuB7QZBu2r:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1934.4285714285713,
+                "y": 1350.5119047619046
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "6PKw3iX8D5A5Qk2j",
+            "inputs": {
+                "name": {
+                    "value": "Effect: Strategist Stance Cooldown"
+                },
+                "origin": {
+                    "connection": "uuqAFb7f14xErnpG:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/sundries/flags/banner-white.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/sundries/flags/banner-white.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-strategist-stance-cooldown"
+                },
+                "target": {
+                    "connection": "uuqAFb7f14xErnpG:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                }
+            },
+            "position": {
+                "x": 1949.0302197802198,
+                "y": 974.1976190476189
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "iW3qNnoOHu5AnZal",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 1081.9047619047615,
+                "y": 1063.2619047619041
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "cTRU69MdwxsGDE9m",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 792.7289377289374,
+                "y": 998.7564102564096
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "uuqAFb7f14xErnpG",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1763.6172161172155,
+                "y": 1136.4945054945051
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "Gn3SlLGuB7QZBu2r",
+            "inputs": {
+                "entry": {
+                    "connection": "WDWylwPXPa9infeU:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1687.0695970695965,
+                "y": 1570.1849816849813
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "WDWylwPXPa9infeU:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "WDWylwPXPa9infeU:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        }
+    }
+}

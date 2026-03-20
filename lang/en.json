@@ -214,6 +214,16 @@
                 "Description": "When the target of a successful attack has Inviolable, roll 3d6 spirit damage. If they are holy or unholy, the damage has the corresponding trait."
             }
         },
+        "KineticAura": {
+            "Trigger": {
+                "Description": "When a target takes damage and would be knocked out as a result, remove <strong>Kinetic Aura</strong> from them."
+            }
+        },
+        "MarshalStances": {
+            "Trigger": {
+                "Description": "When a roller makes a skill check for <strong>Devrin's Cunning Stance</strong>, <strong>Dread Marshal Stance</strong>, <strong>Inspiring Marshal Stance</strong>, or <strong>Strategist Stance</strong>, and they succeed or critically succeed, grant their respective stance effects. If they critically fail, grant a temporary cooldown effect instead."
+            }
+        },
         "MartialPerformance": {
             "Trigger": {
                 "Description": "<p>If a target takes damage from an enemy origin with <strong>Martial Performance</strong>, and the origin is under the effects of <em>courageous anthem</em>, <em>rallying anthem</em>, or <em>song of strength</em>; extend the duration of these effects by 1 round. Then, add an effect that prevents effects from benefiting more than once.</p><p>For this trigger to work correctly, the composition effect must have been dragged from the triggering character's chat card.</p>"
@@ -261,6 +271,11 @@
         "PhaseFamiliar": {
             "Trigger": {
                 "Description": "When a target takes damage and they have <strong>Phase Familiar</strong>'s resistance effect, remove that effect."
+            }
+        },
+        "Rage": {
+            "Trigger": {
+                "Description": "When a target that is <strong>Raging</strong> takes damage and is knocked out as a result, remove the Rage effect, and grant its temporary Hit Points immunity effect. If the target has <strong>Vitalizing Rage</strong>, create an immunity effect that lasts until the end of the their next turn instead."
             }
         },
         "RapidRetreat": {

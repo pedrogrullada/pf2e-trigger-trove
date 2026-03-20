@@ -1,0 +1,199 @@
+{
+    "description": "@Localize[TRIGGERTROVE.Rage.Trigger.Description]",
+    "folder": "Feats & Features",
+    "id": "QCOTlIkw0exZwTur",
+    "name": "Rage",
+    "nodes": [
+        {
+            "id": "sDc1lhPICheWeO5k",
+            "outs": {
+                "out": {
+                    "connection": "8VxQqVVuhmyj3TPr:ins:in"
+                }
+            },
+            "position": {
+                "x": 320,
+                "y": 440
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "2ZzQnI8VtuAvOUVD",
+            "inputs": {
+                "target": {
+                    "connection": "kSIlNHZdmap95dkr:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "hVNgUFmw5GhBWIm7:ins:in"
+                }
+            },
+            "position": {
+                "x": 914.4281274281271,
+                "y": 281.9949494949492
+            },
+            "type": "is-dead"
+        },
+        {
+            "id": "8VxQqVVuhmyj3TPr",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr"
+                },
+                "target": {
+                    "connection": "sDc1lhPICheWeO5k:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "2ZzQnI8VtuAvOUVD:ins:in"
+                }
+            },
+            "position": {
+                "x": 622.8426295926296,
+                "y": 344.93373015873
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "kSIlNHZdmap95dkr",
+            "inputs": {
+                "entry": {
+                    "connection": "sDc1lhPICheWeO5k:outputs:target"
+                }
+            },
+            "position": {
+                "x": 772.1013708513707,
+                "y": 284.7382756132756
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "hVNgUFmw5GhBWIm7",
+            "inputs": {
+                "item": {
+                    "connection": "8VxQqVVuhmyj3TPr:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "O3dsnQn3Q9Y3KPdY:ins:in"
+                }
+            },
+            "position": {
+                "x": 1158.3740981240978,
+                "y": 370.96554834054825
+            },
+            "type": "delete-item"
+        },
+        {
+            "id": "P6m50WBU3HOTphSl",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.MaepXeSHiMoWDm7u"
+                },
+                "target": {
+                    "connection": "sDc1lhPICheWeO5k:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1712.7939282939283,
+                "y": 656.0051587301585
+            },
+            "type": "create-item"
+        },
+        {
+            "id": "O3dsnQn3Q9Y3KPdY",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.classfeatures.Item.qMtyQGUllPdgpzUo"
+                },
+                "target": {
+                    "connection": "sDc1lhPICheWeO5k:outputs:target"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "P6m50WBU3HOTphSl:ins:in"
+                },
+                "true": {
+                    "connection": "kzktDK7NxCyNc3Pb:ins:in"
+                }
+            },
+            "position": {
+                "x": 1434.3516483516485,
+                "y": 553.9714285714285
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "JsaitZ0NKSTS0dO8": {
+                        "id": "JsaitZ0NKSTS0dO8",
+                        "label": "AELike",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "kzktDK7NxCyNc3Pb",
+            "inputs": {
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "JsaitZ0NKSTS0dO8": {
+                    "value": "{\n  \"key\": \"ActiveEffectLike\",\n  \"mode\": \"override\",\n  \"path\": \"flags.pf2e.rageTempHP\",\n  \"phase\": \"beforeDerived\",\n  \"value\": 0\n}"
+                },
+                "name": {
+                    "value": "Effect: Rage Temporary Hit Points Immunity"
+                },
+                "origin": {
+                    "connection": "v61GKVO4YOKGSApM:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/skills/wounds/injury-pain-body-orange.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/skills/wounds/injury-pain-body-orange.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-rage-temporary-hit-points-immunity"
+                },
+                "target": {
+                    "connection": "v61GKVO4YOKGSApM:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1776.0714285714287,
+                "y": 181.25
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "v61GKVO4YOKGSApM",
+            "inputs": {
+                "entry": {
+                    "connection": "sDc1lhPICheWeO5k:outputs:target"
+                }
+            },
+            "position": {
+                "x": 1594.8809523809523,
+                "y": 352.7460317460318
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "sDc1lhPICheWeO5k:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}

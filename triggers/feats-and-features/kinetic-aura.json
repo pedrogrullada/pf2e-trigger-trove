@@ -1,0 +1,97 @@
+{
+    "description": "@Localize[TRIGGERTROVE.KineticAura.Trigger.Description]",
+    "folder": "Feats & Features",
+    "id": "ewe9o4AhG4gIVTGy",
+    "name": "Kinetic Aura",
+    "nodes": [
+        {
+            "id": "DNbPX8G8bDayGc9a",
+            "outs": {
+                "out": {
+                    "connection": "RfTeXbNk8QrSdXpL:ins:in"
+                }
+            },
+            "position": {
+                "x": 328,
+                "y": 316
+            },
+            "type": "damage-taken-event"
+        },
+        {
+            "id": "RfTeXbNk8QrSdXpL",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.feat-effects.Item.pLurcSPQb2gjAzoP"
+                },
+                "target": {
+                    "connection": "DNbPX8G8bDayGc9a:outputs:target"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "OxbWZ1jW6kmrkoGJ:ins:in"
+                }
+            },
+            "position": {
+                "x": 596.9230769230769,
+                "y": 246.39999999999998
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "OxbWZ1jW6kmrkoGJ",
+            "inputs": {
+                "target": {
+                    "connection": "tA9kKJ0h5dkrJFAF:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "F7cNmOFmJ00xB9pO:ins:in"
+                }
+            },
+            "position": {
+                "x": 887.4230769230769,
+                "y": 184.25
+            },
+            "type": "is-dead"
+        },
+        {
+            "id": "tA9kKJ0h5dkrJFAF",
+            "inputs": {
+                "entry": {
+                    "connection": "DNbPX8G8bDayGc9a:outputs:target"
+                }
+            },
+            "position": {
+                "x": 752.7500000000001,
+                "y": 186.24999999999994
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "F7cNmOFmJ00xB9pO",
+            "inputs": {
+                "item": {
+                    "connection": "RfTeXbNk8QrSdXpL:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1115.5,
+                "y": 269.74999999999994
+            },
+            "type": "delete-item"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "DNbPX8G8bDayGc9a:outputs:target": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        }
+    }
+}
