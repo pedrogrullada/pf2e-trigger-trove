@@ -9,9 +9,12 @@ export async function transferVitality() {
   if (!("vitalityNetwork" in resources)) return ui.notifications.warn(game.i18n.format("TRIGGERTROVE.VitalityNetwork.Macro.NoVitalityNetwork", {
     actor: token.name
   }));
-
+  
+  const targetHelperEnabled = game.modules.get("pf2e-toolbelt")?.active && game.settings.get("pf2e-toolbelt","targetHelper.enabled");
   const target = game.user.targets.first();
-  if (!target) return ui.notifications.warn(game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Target"));
+  if (targetHelperEnabled && actor.inCombat && !target) {
+    ui.notifications.info(game.i18n.localize("TRIGGERTROVE.VitalityNetwork.Macro.Target"))
+  };
 
   if (resources.vitalityNetwork.value === 0) return ui.notifications.info(game.i18n.format("TRIGGERTROVE.VitalityNetwork.Macro.DepletedVitalityNetwork", {
     actor: token.name
@@ -40,7 +43,7 @@ export async function transferVitality() {
   game.triggerEngine.execute(
     "trigger-engine:pf2e-trigger:wj2pMbLVNd8e4Lb5",
     [
-      {type: "target", value: {actor: target.actor, token: target}},
+      {type: "target", value: target ? {actor: target.actor, token: target} : null},
       {type: "number", value: response.hitPoints},
       {type: "target", value: {actor: actor, token: token}}
     ]

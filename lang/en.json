@@ -474,7 +474,7 @@
                 "Label": "Transfer Vitality",
                 "NoVitalityNetwork": "{actor} has no vitality network",
                 "Select": "Select a token with a vitality network",
-                "Target": "Select a target for Transfer Vitality"
+                "Target": "Target a token to use PF2e Toolbelt's Target Helper feature"
             },
             "Trigger": {
                 "Description": "<p>When a combatant with <strong>Transfer Vitality</strong> starts their turn, their <strong>vitality network</strong> regains Hit Points.</p><p>When a token with vitality network is selected and you run the Vitality Network macro, you can select a number of Hit Points to roll as healing and reduce from your vitality network.</p>"
