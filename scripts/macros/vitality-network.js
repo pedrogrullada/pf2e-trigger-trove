@@ -18,7 +18,8 @@ export async function transferVitality() {
   }));
 
   const remaining = resources.vitalityNetwork.value;
-  const maxTransfer = 10 + 10 * Math.floor(actor.level / 5);
+  const transferScaling = (actor.class.slug == "mystic") ? 10 : 5;
+  const maxTransfer = 10 + transferScaling * Math.floor(actor.level / 5);
 
   const expendVitalityNetwork = new foundry.data.fields.NumberField({min: 1, max: Math.min(remaining,maxTransfer), step: 1})
 
