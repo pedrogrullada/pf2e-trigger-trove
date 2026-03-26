@@ -99,7 +99,7 @@
             "id": "H0TistY8A7N5YK7a",
             "inputs": {
                 "callback": {
-                    "value": "return !target.actor.system.traits.value.includes(\"minion\");"
+                    "value": "return ([\"character\", \"npc\"].includes(target.actor.type) && !target.actor.system.traits.value.includes(\"minion\"));"
                 }
             },
             "position": {
