@@ -494,6 +494,11 @@
             "Trigger": {
                 "Description": "When a target takes damage and they have <strong>Warping Pull</strong>'s resistance effect, remove that effect."
             }
+        },
+        "FetidFumes": {
+            "Trigger": {
+                "Description": "<p>When a creature starts it's turn or enters inside the aura of <strong>Fetid Fumes</strong>, the Fetid Fumes ability card is sent to chat and the affected creature must roll a <strong>Fortitude save</strong>. If the check fails, a <strong>condition effect</strong> is added to the creature, preventing Fetid Fumes from triggering again.</p>"
+            }
         }
     }
 }
