@@ -497,7 +497,7 @@
         },
         "FetidFumes": {
             "Trigger": {
-                "Description": "<p>When a creature starts it's turn or enters inside the aura of <strong>Fetid Fumes</strong>, the Fetid Fumes ability card is sent to chat and the affected creature must roll a <strong>Fortitude save</strong>. If the check fails, a <strong>condition effect</strong> is added to the creature, preventing Fetid Fumes from triggering again.</p>"
+                "Description": "<p>When a combatant starts their turn within—or enters—a <strong>Fetid Fumes</strong> aura, send that ability to chat. If the roller fails their saving throw against that ability, a condition effect for sickened 1 is added, and that roller can't trigger Fetid Fumes until this effect is removed.</p>"
             }
         }
     }
