@@ -494,6 +494,11 @@
             "Trigger": {
                 "Description": "When a target takes damage and they have <strong>Warping Pull</strong>'s resistance effect, remove that effect."
             }
+        },
+        "FetidFumes": {
+            "Trigger": {
+                "Description": "<p>When a combatant starts their turn within—or enters—a <strong>Fetid Fumes</strong> aura, send that ability to chat. If the roller fails their saving throw against that ability, a condition effect for sickened 1 is added, and that roller can't trigger Fetid Fumes until this effect is removed.</p>"
+            }
         }
     }
 }
