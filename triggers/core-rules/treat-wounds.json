@@ -7,6 +7,9 @@
         {
             "id": "qhaeuB1fpOlMXrwq",
             "inputs": {
+                "for": {
+                    "value": "heal"
+                },
                 "requires": {
                     "value": false
                 },
@@ -55,7 +58,7 @@
             },
             "outs": {
                 "false": {
-                    "connection": "mtjp4Dz7Z0Y2VVYd:ins:in"
+                    "connection": "glctmBVceCmcdg6Z:ins:in"
                 }
             },
             "position": {
@@ -150,16 +153,13 @@
             "type": "__variable_getter__"
         },
         {
-            "id": "mtjp4Dz7Z0Y2VVYd",
+            "id": "glctmBVceCmcdg6Z",
             "inputs": {
                 "condition": {
                     "value": "wounded"
                 },
                 "target": {
                     "connection": "V4lreBvXPw9IWVut:outputs:entry"
-                },
-                "value": {
-                    "value": 10
                 }
             },
             "outs": {
@@ -168,10 +168,10 @@
                 }
             },
             "position": {
-                "x": 1123.5894660894653,
-                "y": 353.1479076479076
+                "x": 1125,
+                "y": 366
             },
-            "type": "decrease-condition"
+            "type": "remove-condition"
         }
     ],
     "priority": 0,
