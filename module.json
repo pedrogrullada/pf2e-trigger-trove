@@ -6,8 +6,8 @@
     }
   ],
   "compatibility": {
-    "minimum": "13",
-    "verified": "13"
+    "minimum": "14",
+    "verified": "14"
   },
   "description": "A collection of triggers to use with the Trigger Engine module.",
   "esmodules": [
@@ -81,7 +81,7 @@
         "manifest": "https://raw.githubusercontent.com/reonZ/trigger-engine/master/module.json",
         "type": "module",
         "compatibility": {
-          "minimum": "1.5.0"
+          "minimum": "1.6.0"
         }
       }
     ]
