@@ -1,3 +1,7 @@
+## 2.0.1
+- **Trigger Updates**
+  - Account for bravado Strikes in Panache trigger
+
 ## 2.0.0
 - **Housekeeping**
   - Update minimum and verified Foundry versions to V14
