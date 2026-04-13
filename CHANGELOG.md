@@ -1,3 +1,43 @@
+## 2.0.0
+- **Housekeeping**
+  - Update minimum and verified Foundry versions to V14
+  - Update minimum Trigger Engine version to 1.6.0
+- **New Triggers**
+  - (valerijatoncinska) **Cinder Rat's Fetid Fumes:** When a combatant starts their turn within—or enters—a Fetid Fumes aura, send that ability to chat. If the roller fails their saving throw against that ability, a condition effect for sickened 1 is added, and that roller can't trigger Fetid Fumes until this effect is removed.
+- **Trigger Updates**
+  - Fix Treat Wounds trigger not removing wounded condition
+  - Fix Brutal Beating trigger not adding frightened condition 
+
+## 1.2.4
+- Trigger Updates
+  - **Scout** (and other scout-related triggers): Filter out non-characters from loop
+
+## 1.2.3
+- **New Triggers**
+  - **Kinetic Aura**: When a target takes damage and would be knocked out as a result, remove Kinetic Aura's effect from them.
+  - **Marshal Stances:** When a roller makes a skill check for a marshal stance, and they succeed or critically succeed, grant their respective stance effects. If they critically fail, grant a temporary cooldown effect instead.
+  - **Rage**: When a target that is raging takes damage and is knocked out as a result, remove the Rage effect, and grant its temporary Hit Points immunity effect. If the target has Vitalizing Rage, create an immunity effect that lasts until the end of the their next turn instead.
+- **Trigger Updates**
+  - **Vitality Network**
+    - Account for multiclass mystic when determining maximum Transfer Vitality value
+    - Relax targeting requirement to simply remind user to target when Toolbelt's Target Helper is enabled
+
+## 1.2.2
+- **Trigger Updates**
+  - (Vauxs) **Scout and Scout Dedication:** Fix their effects persisting after an encounter in some cases by explicitly removing them when a combatant leaves the encounter
+
+## 1.2.1
+- **Trigger Updates**
+  - **Critical Specialization** Fix spear text entry in critical specialization text splitter
+
+## 1.2.0
+- **Housekeeping**
+  - Update minimum Trigger Engine version to 1.4.0, as it fixes a bug that might have affected some condition-increasing triggers.
+- **New Triggers**
+  - **Incredible Scout:** When a Scouting combatant with **Incredible Scout** is created, add an effect that upgrades Scout's bonus for all allies benefiting from it.
+- **Updated Triggers**
+  - **Scout, Scout's Warning, and Scout Dedication:** Now excludes minions! whoops.
+
 ## 1.1.0
 - **New Triggers**
   - **Bon Mot:** When the roller of a Diplomacy check is using the <strong>Bon Mot</strong> action, apply Bon Mot's effect to the target or roller, depending on the outcome. If the roller succeeds on their Bon Mot, remove the effect resulting from a critically failed Bon Mot, if there is one.
