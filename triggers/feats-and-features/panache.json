@@ -94,27 +94,6 @@
             "type": "split-outcome"
         },
         {
-            "id": "VEQkX5JqFKqghEBV",
-            "inputs": {
-                "entry": {
-                    "value": "item:trait:bravado"
-                },
-                "list": {
-                    "connection": "w9gawril0PECLdLm:outputs:options"
-                }
-            },
-            "outs": {
-                "true": {
-                    "connection": "Pmgzms5A8xwBXIJm:ins:in"
-                }
-            },
-            "position": {
-                "x": 1078.428571428571,
-                "y": 436.5357142857142
-            },
-            "type": "list-contains"
-        },
-        {
             "id": "SdX9ewRq4eT0Q16O",
             "inputs": {
                 "entry": {
@@ -407,7 +386,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "VEQkX5JqFKqghEBV:ins:in"
+                    "connection": "e9L9Svl9fsSUwNuh:ins:in"
                 }
             },
             "position": {
@@ -415,6 +394,27 @@
                 "y": 335.1857142857143
             },
             "type": "has-item"
+        },
+        {
+            "id": "e9L9Svl9fsSUwNuh",
+            "inputs": {
+                "options": {
+                    "connection": "w9gawril0PECLdLm:outputs:options"
+                },
+                "predicate": {
+                    "value": "[\n  {\n    \"or\": [\n      \"item:trait:bravado\",\n      \"self:action:trait:bravado\"\n    ]\n  }\n]"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Pmgzms5A8xwBXIJm:ins:in"
+                }
+            },
+            "position": {
+                "x": 1087,
+                "y": 407
+            },
+            "type": "match-predicate"
         }
     ],
     "priority": 0,
