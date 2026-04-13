@@ -61,7 +61,7 @@
             "id": "N8Y19Yw4FIxF5zgq",
             "inputs": {
                 "entry": {
-                    "value": "\"check:outcome:critical-success\""
+                    "value": "check:outcome:critical-success"
                 },
                 "list": {
                     "connection": "J4AaMNNp49u55tT9:outputs:options"
