@@ -152,7 +152,7 @@
                 "y": -571.6
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "M5tdnXIxms9OZXa3",
@@ -302,7 +302,7 @@
                 "y": -8.76526610644214
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "bXwjOBGkJPDWHebz",
@@ -447,7 +447,7 @@
                 "y": 571.5204481792722
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "27mbYdQo63zgivXM",
@@ -611,7 +611,7 @@
                 "y": 897.1619047619043
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "custom": {

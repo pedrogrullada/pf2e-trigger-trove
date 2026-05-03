@@ -600,7 +600,7 @@
                 "y": 756.7024671407022
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "fNtnnP57QHWZglBp",
@@ -962,7 +962,7 @@
                 "y": 509.8130363788276
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         }
     ],
     "priority": 0,

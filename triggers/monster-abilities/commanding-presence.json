@@ -48,7 +48,7 @@
                 "y": 168.36153846153846
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "AeBNAiBtwoqlCLdD",
@@ -125,7 +125,7 @@
                 "y": 261.28009049773755
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "mUIKl7Ywn9SRSljt",

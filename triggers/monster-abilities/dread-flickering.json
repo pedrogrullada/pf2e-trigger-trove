@@ -37,7 +37,7 @@
                 "y": 262.85454545454536
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "7pdqMD0r4IwYd3gb",
@@ -83,7 +83,7 @@
                 "y": 396.9909090909091
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "JxmAXNvBQe2tNoJl",

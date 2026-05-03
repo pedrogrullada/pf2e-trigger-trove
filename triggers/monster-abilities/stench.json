@@ -85,7 +85,7 @@
                 "y": 991.3722222222225
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "custom": {
@@ -139,7 +139,7 @@
                 "y": 898.6222222222225
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "R3RK1te1QX3eJHWq",

@@ -48,7 +48,7 @@
                 "y": 242.39999999999986
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "KZadi2k777NYIXcQ",
@@ -70,7 +70,7 @@
                 "y": 498.983333333333
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "sV9v678cDc103c41",

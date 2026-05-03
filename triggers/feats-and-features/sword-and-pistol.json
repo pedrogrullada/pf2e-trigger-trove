@@ -253,7 +253,7 @@
                 "y": 384.3166666666666
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "J44H8AQyUyiGnODa",
@@ -796,7 +796,7 @@
                 "y": 977.3444444444438
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "TxAflzY8EkbWc8pK",
@@ -909,7 +909,7 @@
                 "y": 1210.677777777777
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "FIs7MKfujqfzPNzd",
@@ -1149,7 +1149,7 @@
                 "y": -494.0603174603177
             },
             "state": "slug",
-            "type": "has-item"
+            "type": "has-item-slug"
         },
         {
             "id": "ITKpuQUna1qQfdBx",
