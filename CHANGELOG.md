@@ -1,3 +1,8 @@
+## 2.1.0
+- **Housekeeping**
+  - Update minimum Trigger Engine version to 1.7.0
+  - Update type on slug state has-item nodes to has-item-slug
+
 ## 2.0.1
 - **Trigger Updates**
   - Account for bravado Strikes in Panache trigger
