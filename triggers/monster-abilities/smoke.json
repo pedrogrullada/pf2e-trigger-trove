@@ -1,0 +1,265 @@
+{
+    "description": "@Localize[TRIGGERTROVE.Smoke.Trigger.Description]",
+    "folder": "Monster Abilities",
+    "id": "wTpZ2GhZFRZvZaLy",
+    "name": "Smoke",
+    "nodes": [
+        {
+            "type": "turn-start-event",
+            "position": {
+                "x": 396,
+                "y": 129
+            },
+            "id": "gaNA8iUlXcMr5B3O",
+            "outs": {
+                "out": {
+                    "connection": "S4MAdG4Dyo1YUak7:ins:in"
+                }
+            }
+        },
+        {
+            "type": "inside-aura",
+            "position": {
+                "x": 885.2286324786324,
+                "y": 10.344444444444406
+            },
+            "id": "I0fXvkKkjQutxjJ9",
+            "inputs": {
+                "target": {
+                    "connection": "gaNA8iUlXcMr5B3O:outputs:combatant"
+                },
+                "slug": {
+                    "value": "smoke"
+                },
+                "affects": {
+                    "value": "all"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "o4zri8a1A56S8U5T:ins:in"
+                }
+            }
+        },
+        {
+            "type": "send-chat",
+            "position": {
+                "x": 1485.7564102564102,
+                "y": 57.111111111111086
+            },
+            "id": "oLzBRLOPlcJwuMNW",
+            "inputs": {
+                "item": {
+                    "connection": "o4zri8a1A56S8U5T:outputs:item"
+                },
+                "targets": {
+                    "connection": "gaNA8iUlXcMr5B3O:outputs:combatant"
+                },
+                "parent": {
+                    "connection": "I0fXvkKkjQutxjJ9:outputs:source"
+                }
+            }
+        },
+        {
+            "type": "has-item-slug",
+            "position": {
+                "x": 1206.395299145299,
+                "y": -14.211111111111165
+            },
+            "id": "o4zri8a1A56S8U5T",
+            "inputs": {
+                "slug": {
+                    "value": "smoke"
+                },
+                "target": {
+                    "connection": "I0fXvkKkjQutxjJ9:outputs:source"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "oLzBRLOPlcJwuMNW:ins:in"
+                }
+            }
+        },
+        {
+            "type": "split-outcome",
+            "position": {
+                "x": 1135.5897435897434,
+                "y": 495.44444444444434
+            },
+            "id": "6tu3vP8zuZX87sf9",
+            "inputs": {
+                "input": {
+                    "connection": "1wTPy2yfePMlICWH:outputs:entry"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "VQgbljoyhcuKS35X:ins:in"
+                },
+                "failure": {
+                    "connection": "VQgbljoyhcuKS35X:ins:in"
+                }
+            }
+        },
+        {
+            "type": "list-contains",
+            "position": {
+                "x": 585.9230769230769,
+                "y": 349.9
+            },
+            "id": "FssQVaHLQRE89hsR",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:smoke"
+                },
+                "list": {
+                    "connection": "DPY7Tyh7d9fnvQHT:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Cmpkox2d7myldLEt:ins:in"
+                }
+            }
+        },
+        {
+            "type": "has-item-slug",
+            "position": {
+                "x": 621.1730769230769,
+                "y": -36.85000000000002
+            },
+            "id": "S4MAdG4Dyo1YUak7",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-smoke-immunity"
+                },
+                "target": {
+                    "connection": "gaNA8iUlXcMr5B3O:outputs:combatant"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "I0fXvkKkjQutxjJ9:ins:in"
+                }
+            }
+        },
+        {
+            "type": "create-effect",
+            "position": {
+                "x": 805.4230769230766,
+                "y": 412.5666666666664
+            },
+            "id": "Cmpkox2d7myldLEt",
+            "inputs": {
+                "pf2eImg": {
+                    "value": "icons/magic/air/fog-gas-smoke-gray.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/air/fog-gas-smoke-gray.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-smoke-immunity"
+                },
+                "unit": {
+                    "value": "minutes"
+                },
+                "name": {
+                    "value": "Effect: Smoke Immunity"
+                },
+                "target": {
+                    "connection": "DPY7Tyh7d9fnvQHT:outputs:roller"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "6tu3vP8zuZX87sf9:ins:in"
+                }
+            }
+        },
+        {
+            "type": "increase-condition",
+            "position": {
+                "x": 1385.5897435897434,
+                "y": 517.7499999999999
+            },
+            "id": "VQgbljoyhcuKS35X",
+            "inputs": {
+                "condition": {
+                    "value": "sickened"
+                },
+                "value": {
+                    "value": 2
+                },
+                "max": {
+                    "value": 2
+                },
+                "target": {
+                    "connection": "KSnXenWM937uuxnQ:outputs:entry"
+                }
+            }
+        },
+        {
+            "type": "check-roll-event",
+            "position": {
+                "x": 320.1111111111113,
+                "y": 411.30555555555554
+            },
+            "id": "DPY7Tyh7d9fnvQHT",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "FssQVaHLQRE89hsR:ins:in"
+                }
+            },
+            "state": "check"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "DPY7Tyh7d9fnvQHT:outputs:roller"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1245.8611111111113,
+                "y": 681.6944444444442
+            },
+            "id": "KSnXenWM937uuxnQ"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "DPY7Tyh7d9fnvQHT:outputs:outcome"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1013.333333333333,
+                "y": 544.3611111111109
+            },
+            "id": "1wTPy2yfePMlICWH"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e",
+        "sf2e"
+    ],
+    "variables": {
+        "DPY7Tyh7d9fnvQHT:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "DPY7Tyh7d9fnvQHT:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        }
+    }
+}

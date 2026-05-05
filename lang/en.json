@@ -499,6 +499,11 @@
             "Trigger": {
                 "Description": "<p>When a combatant starts their turn within—or enters—a <strong>Fetid Fumes</strong> aura, send that ability to chat. If the roller fails their saving throw against that ability, a condition effect for sickened 1 is added, and that roller can't trigger Fetid Fumes until this effect is removed.</p>"
             }
+        },
+        "Smoke": {
+            "Trigger": {
+                "Description": "<p>When a combatant starts their turn withing a <strong>Smoke</strong> aura, send that ability to chat. If a roller fails on their saving throw, increase their Sickened condition to 2. The roller is temporarily immune to the Smoke regardless of the outcome of the roll, add an effect tracking this immunity.</p>"
+            }
         }
     }
 }
