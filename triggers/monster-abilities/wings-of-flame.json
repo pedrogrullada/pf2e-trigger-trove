@@ -30,6 +30,9 @@
                 },
                 "slug": {
                     "value": "wings-of-flame"
+                },
+                "affects": {
+                    "value": "all"
                 }
             },
             "outs": {
