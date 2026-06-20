@@ -1,0 +1,215 @@
+{
+    "description": "<p>@Localize[TRIGGERTROVE.WingsOfFlame.Trigger.Description]</p>",
+    "folder": "Monster Abilities",
+    "id": "Yqs0GXfuGBqWV3tp",
+    "name": "Wings of Flame",
+    "nodes": [
+        {
+            "type": "turn-end-event",
+            "position": {
+                "x": 348,
+                "y": 194
+            },
+            "id": "zqJDd1DLvSmc23ej",
+            "outs": {
+                "out": {
+                    "connection": "TkvuZkQWq2oQgAwW:ins:in"
+                }
+            }
+        },
+        {
+            "type": "inside-aura",
+            "position": {
+                "x": 553.9230769230769,
+                "y": 193.4
+            },
+            "id": "TkvuZkQWq2oQgAwW",
+            "inputs": {
+                "target": {
+                    "connection": "zqJDd1DLvSmc23ej:outputs:combatant"
+                },
+                "slug": {
+                    "value": "wings-of-flame"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "LXDSHA5su3gp3mls:ins:in"
+                }
+            }
+        },
+        {
+            "type": "has-item-slug",
+            "position": {
+                "x": 868.5897435897435,
+                "y": 151.06666666666663
+            },
+            "id": "LXDSHA5su3gp3mls",
+            "inputs": {
+                "target": {
+                    "connection": "TkvuZkQWq2oQgAwW:outputs:source"
+                },
+                "slug": {
+                    "value": "wings-of-flame"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "AtZ3XYzogjJLbu5H:ins:in"
+                }
+            }
+        },
+        {
+            "type": "roll-damage",
+            "position": {
+                "x": 1833.4786324786317,
+                "y": 98.06666666666601
+            },
+            "id": "q3IiHJkWCwgYhJhi",
+            "state": "item",
+            "inputs": {
+                "formula": {
+                    "connection": "AtZ3XYzogjJLbu5H:outputs:formula"
+                },
+                "targets": {
+                    "connection": "mfDaUyy2b8P4AJWm:outputs:entry"
+                },
+                "origin": {
+                    "connection": "KJrZ9NHpXaLNPtIa:outputs:entry"
+                },
+                "item": {
+                    "connection": "STge1cRG79gfcl2y:outputs:entry"
+                }
+            }
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "zqJDd1DLvSmc23ej:outputs:combatant"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1328.7777777777771,
+                "y": 330.194444444444
+            },
+            "id": "DjNHdQwTzIlNbDx6"
+        },
+        {
+            "type": "item-formula",
+            "position": {
+                "x": 1140.6666666666656,
+                "y": 110.9999999999998
+            },
+            "id": "AtZ3XYzogjJLbu5H",
+            "inputs": {
+                "item": {
+                    "connection": "LXDSHA5su3gp3mls:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "3CTCsv0w6GrMqVaM:ins:in"
+                }
+            }
+        },
+        {
+            "type": "send-chat",
+            "position": {
+                "x": 1467.9230769230762,
+                "y": 191.27777777777754
+            },
+            "id": "3CTCsv0w6GrMqVaM",
+            "inputs": {
+                "targets": {
+                    "connection": "DjNHdQwTzIlNbDx6:outputs:entry"
+                },
+                "item": {
+                    "connection": "LXDSHA5su3gp3mls:outputs:item"
+                },
+                "parent": {
+                    "connection": "5wT8XUDiz6gd67h3:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "q3IiHJkWCwgYhJhi:ins:in"
+                }
+            }
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "zqJDd1DLvSmc23ej:outputs:combatant"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1683.8888888888885,
+                "y": 285.5277777777775
+            },
+            "id": "mfDaUyy2b8P4AJWm"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "TkvuZkQWq2oQgAwW:outputs:source"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1680.2222222222222,
+                "y": 244.41666666666626
+            },
+            "id": "KJrZ9NHpXaLNPtIa"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "LXDSHA5su3gp3mls:outputs:item"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1702.9999999999993,
+                "y": 323.30555555555526
+            },
+            "id": "STge1cRG79gfcl2y"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "TkvuZkQWq2oQgAwW:outputs:source"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1324.6666666666665,
+                "y": 287.74999999999983
+            },
+            "id": "5wT8XUDiz6gd67h3"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e",
+        "sf2e"
+    ],
+    "variables": {
+        "zqJDd1DLvSmc23ej:outputs:combatant": {
+            "isArray": false,
+            "label": "Combatant",
+            "type": "target"
+        },
+        "TkvuZkQWq2oQgAwW:outputs:source": {
+            "isArray": false,
+            "label": "Aura Source",
+            "type": "target"
+        },
+        "LXDSHA5su3gp3mls:outputs:item": {
+            "isArray": false,
+            "label": "Item",
+            "type": "item"
+        }
+    }
+}

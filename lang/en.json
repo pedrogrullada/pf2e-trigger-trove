@@ -504,6 +504,11 @@
             "Trigger": {
                 "Description": "<p>When a combatant starts their turn withing a <strong>Smoke</strong> aura, send that ability to chat. If a roller fails on their saving throw, increase their Sickened condition to 2. The roller is temporarily immune to the Smoke regardless of the outcome of the roll, add an effect tracking this immunity.</p>"
             }
+        },
+        "WingsOfFlame": {
+            "Trigger": {
+                "Description": "<p>When a combatant ends their turn within a <strong>Wings of Flame</strong> aura, send that ability to chat, roll the damage.</p>"
+            }
         }
     }
 }
