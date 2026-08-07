@@ -1,0 +1,89 @@
+{
+  "name": "Daze",
+  "folder": "Spells",
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "nodes": [
+    {
+      "type": "check-roll-event",
+      "position": {
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
+      },
+      "id": "3XC9Bm2VcInNzutZ",
+      "inputs": {
+        "for": {
+          "value": "saving-throw"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
+        }
+      },
+      "state": "check"
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "options": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"item:slug:daze\"\n]"
+        }
+      },
+      "position": {
+        "x": 914.5555543816838,
+        "y": 338.4166458263811
+      },
+      "id": "0Nbw4OxpFR4HTZVs",
+      "outs": {
+        "true": {
+          "connection": "W6EnA9YhSYWmu3tD:ins:in"
+        }
+      }
+    },
+    {
+      "type": "compare-outcomes",
+      "inputs": {
+        "a": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        },
+        "b": {
+          "value": "criticalFailure"
+        }
+      },
+      "position": {
+        "x": 1159.0000146116138,
+        "y": 338.4166458263811
+      },
+      "id": "W6EnA9YhSYWmu3tD",
+      "outs": {
+        "true": {
+          "connection": "lFdCx2VTgrG6z97t:ins:in"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1465.0341121341125,
+        "y": 322.2222190678631
+      },
+      "id": "lFdCx2VTgrG6z97t",
+      "inputs": {
+        "condition": {
+          "value": "stunned"
+        },
+        "target": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      }
+    }
+  ],
+  "id": "bUkWq4kdtlmWEm84",
+  "description": "<p>@Localize[TRIGGERTROVE.Daze.Trigger.Description]</p>"
+}

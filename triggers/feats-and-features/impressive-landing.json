@@ -1,0 +1,128 @@
+{
+  "name": "Impressive Landing",
+  "folder": "Feats & Features",
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "nodes": [
+    {
+      "type": "template-placed-event",
+      "position": {
+        "x": 588.6667044035536,
+        "y": 359.00000928090196
+      },
+      "id": "xrssoFCdO1h9lcOM",
+      "outs": {
+        "out": {
+          "connection": "DXuzLYNbpvB6K1yf:ins:in"
+        }
+      }
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "options": {
+          "connection": "xrssoFCdO1h9lcOM:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"origin:item:impressive-landing\"\n]"
+        }
+      },
+      "position": {
+        "x": 855.3334905703318,
+        "y": 374.5833503521398
+      },
+      "id": "DXuzLYNbpvB6K1yf",
+      "outs": {
+        "true": {
+          "connection": "zMR3VmE4fQZg4Bzr:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-behavior",
+      "state": "terrain",
+      "inputs": {
+        "region": {
+          "connection": "xrssoFCdO1h9lcOM:outputs:region"
+        },
+        "name": {
+          "value": "Difficult Terrain"
+        },
+        "walk": {
+          "value": "2"
+        }
+      },
+      "position": {
+        "x": 1114.6668584988704,
+        "y": 358.48331947535615
+      },
+      "id": "zMR3VmE4fQZg4Bzr"
+    },
+    {
+      "type": "damage-taken-event",
+      "position": {
+        "x": 590.0000621236863,
+        "y": 763.6666231442275
+      },
+      "id": "OH95ZF0Wyk9Zb8n8",
+      "outs": {
+        "out": {
+          "connection": "YO35IRkBRLUsCLJt:ins:in"
+        }
+      }
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "predicate": {
+          "value": "[\n  \"item:impressive-landing\"\n]"
+        },
+        "options": {
+          "connection": "OH95ZF0Wyk9Zb8n8:outputs:options"
+        }
+      },
+      "position": {
+        "x": 881.3333702391833,
+        "y": 779.916652703921
+      },
+      "id": "YO35IRkBRLUsCLJt",
+      "outs": {
+        "true": {
+          "connection": "ZaMfcam4QkijQ3So:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-condition",
+      "position": {
+        "x": 1144.6667852524242,
+        "y": 763.6666841793818
+      },
+      "id": "ZaMfcam4QkijQ3So",
+      "inputs": {
+        "condition": {
+          "value": "off-guard"
+        },
+        "pf2eImg": {
+          "value": "systems/pf2e/icons/conditions"
+        },
+        "target": {
+          "connection": "OH95ZF0Wyk9Zb8n8:outputs:target"
+        },
+        "slug": {
+          "value": "off-guard-1round"
+        },
+        "name": {
+          "value": "Off-guard (1 round)"
+        },
+        "origin": {
+          "connection": "OH95ZF0Wyk9Zb8n8:outputs:origin"
+        }
+      }
+    }
+  ],
+  "id": "suimpAfcKCOwDn2C",
+  "description": "<p>@Localize[TRIGGERTROVE.ImpressiveLanding.Trigger.Description]</p>"
+}

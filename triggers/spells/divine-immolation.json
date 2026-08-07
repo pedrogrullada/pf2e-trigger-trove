@@ -1,0 +1,275 @@
+{
+  "name": "Divine Immolation",
+  "folder": "Spells",
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "nodes": [
+    {
+      "type": "check-roll-event",
+      "position": {
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
+      },
+      "id": "3XC9Bm2VcInNzutZ",
+      "inputs": {
+        "for": {
+          "value": "saving-throw"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
+        }
+      },
+      "state": "check"
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "options": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"item:slug:divine-immolation\"\n]"
+        }
+      },
+      "position": {
+        "x": 914.5555543816838,
+        "y": 338.4166458263811
+      },
+      "id": "0Nbw4OxpFR4HTZVs",
+      "outs": {
+        "true": {
+          "connection": "vDtNoEfCIpxyl04s:ins:in"
+        }
+      }
+    },
+    {
+      "type": "split-outcome",
+      "inputs": {
+        "input": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 1420.9437522195865,
+        "y": 339.01623335419987
+      },
+      "id": "eqRLx1DpO6Yf4nzm",
+      "outs": {
+        "failure": {
+          "connection": "iTpaWqk8HsmwUWRY:ins:in"
+        },
+        "criticalFailure": {
+          "connection": "Yb9NZkJlePrhDwh5:ins:in"
+        }
+      }
+    },
+    {
+      "type": "extract-item",
+      "position": {
+        "x": 1164.6242278455584,
+        "y": 339.0319923036636
+      },
+      "id": "vDtNoEfCIpxyl04s",
+      "custom": {
+        "outputs": {
+          "9iMKsEny9vcJK95j": {
+            "id": "9iMKsEny9vcJK95j",
+            "input": "level",
+            "label": "level",
+            "slug": "path",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "inputs": {
+        "input": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:item"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
+        }
+      }
+    },
+    {
+      "custom": {
+        "title": "Adds Persistent Damage",
+        "outputs": {
+          "pZ0v9grOlrXlN7Ry": {
+            "id": "pZ0v9grOlrXlN7Ry",
+            "label": "Formula",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "type": "__gate_exit__",
+      "position": {
+        "x": 641.5872830848468,
+        "y": 961.7460025031235
+      },
+      "id": "Oy2OMqIuPzSIarrM",
+      "outs": {
+        "out": {
+          "connection": "Dhsk03dTWHUSzIij:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-persistent",
+      "position": {
+        "x": 1251.9999071776374,
+        "y": 962.3333652442386
+      },
+      "id": "QZeFczOknShVUG6B",
+      "inputs": {
+        "type": {
+          "value": "fire"
+        },
+        "die": {
+          "connection": "Dhsk03dTWHUSzIij:outputs:result"
+        },
+        "target": {
+          "connection": "sRoXazCSQJy1P2LH:outputs:entry"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 921.6970863180368,
+        "y": 978.3545585071142
+      },
+      "id": "Dhsk03dTWHUSzIij",
+      "custom": {
+        "inputs": {
+          "a9DEv6N1bsHBO5Yi": {
+            "id": "a9DEv6N1bsHBO5Yi",
+            "input": "lvl",
+            "label": "lvl",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "plain": {
+          "connection": "Oy2OMqIuPzSIarrM:outputs:pZ0v9grOlrXlN7Ry"
+        },
+        "a9DEv6N1bsHBO5Yi": {
+          "connection": "QRaouRUFhDM2qjPk:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "QZeFczOknShVUG6B:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 741.3332580263725,
+        "y": 1069.666736054773
+      },
+      "id": "QRaouRUFhDM2qjPk"
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 1110.0001008108688,
+        "y": 1093.0000483445979
+      },
+      "id": "sRoXazCSQJy1P2LH"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "pZ0v9grOlrXlN7Ry": {
+            "id": "pZ0v9grOlrXlN7Ry",
+            "label": "Formula",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Oy2OMqIuPzSIarrM:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1763.2565021334976,
+        "y": 371.4999766679537
+      },
+      "id": "iTpaWqk8HsmwUWRY",
+      "inputs": {
+        "pZ0v9grOlrXlN7Ry": {
+          "value": "(@lvl -3)d6"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "pZ0v9grOlrXlN7Ry": {
+            "id": "pZ0v9grOlrXlN7Ry",
+            "label": "Formula",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Oy2OMqIuPzSIarrM:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1762.5898762063584,
+        "y": 219.50001173547867
+      },
+      "id": "Yb9NZkJlePrhDwh5",
+      "inputs": {
+        "pZ0v9grOlrXlN7Ry": {
+          "value": "(2*(@lvl -3))d6"
+        }
+      }
+    }
+  ],
+  "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
+      "type": "target"
+    },
+    "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j": {
+      "isArray": false,
+      "label": "level",
+      "type": "number"
+    }
+  },
+  "id": "NfrK0169FaKgxnEE",
+  "description": "<p>@Localize[TRIGGERTROVE.DivineImmolation.Trigger.Description]</p>"
+}

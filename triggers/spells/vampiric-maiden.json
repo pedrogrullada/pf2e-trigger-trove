@@ -1,0 +1,910 @@
+{
+  "name": "Vampiric Maiden",
+  "folder": "Spells",
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "nodes": [
+    {
+      "type": "damage-taken-event",
+      "position": {
+        "x": 481.9999947824491,
+        "y": 322.33332336675886
+      },
+      "id": "pMqYLPSIOu8E6dYP",
+      "state": "select",
+      "outs": {
+        "out": {
+          "connection": "yxlPO2pP6cOvvAxk:ins:in"
+        }
+      }
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "options": {
+          "connection": "pMqYLPSIOu8E6dYP:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"item:slug:vampiric-maiden\"\n]"
+        }
+      },
+      "position": {
+        "x": 792.0000420453957,
+        "y": 338.5832598770271
+      },
+      "id": "yxlPO2pP6cOvvAxk",
+      "outs": {
+        "true": {
+          "connection": "OlwOGKiKvMrQkHlJ:ins:in"
+        }
+      }
+    },
+    {
+      "type": "check-roll-event",
+      "position": {
+        "x": 481.9999886719505,
+        "y": -318.3333292085399
+      },
+      "id": "GhzuGikR3kaTSYgq",
+      "inputs": {
+        "for": {
+          "value": "saving-throw"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "KdLnFmgJfJPJ96Io:ins:in"
+        }
+      },
+      "state": "check"
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "predicate": {
+          "value": "[\n  \"item:slug:vampiric-maiden\"\n]"
+        },
+        "options": {
+          "connection": "GhzuGikR3kaTSYgq:outputs:options"
+        }
+      },
+      "position": {
+        "x": 786.0000425624434,
+        "y": -302.33337546384786
+      },
+      "id": "KdLnFmgJfJPJ96Io",
+      "outs": {
+        "true": {
+          "connection": "gTyzlGxxFJYVYASF:ins:in"
+        }
+      }
+    },
+    {
+      "type": "extract-actor",
+      "inputs": {
+        "input": {
+          "connection": "jL5Azm6tIU89VyCv:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1597.833381871205,
+        "y": -301.5167442126874
+      },
+      "id": "0AeoCqNyBURtqCn8",
+      "custom": {
+        "outputs": {
+          "jLqAV8rX6gJkYMP8": {
+            "id": "jLqAV8rX6gJkYMP8",
+            "input": "hitPoints.value",
+            "label": "currentHp",
+            "slug": "path",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "JLKG3BQeYiVIG8HU:ins:in"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 1865.6668720463194,
+        "y": -300.5000549010508
+      },
+      "id": "JLKG3BQeYiVIG8HU",
+      "custom": {
+        "inputs": {
+          "hao2cH4BQ9mZczGc": {
+            "id": "hao2cH4BQ9mZczGc",
+            "input": "hp",
+            "label": "hp",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "hao2cH4BQ9mZczGc": {
+          "connection": "0AeoCqNyBURtqCn8:outputs:jLqAV8rX6gJkYMP8"
+        },
+        "plain": {
+          "value": "{\"key\":\"ActiveEffectLike\",\"mode\":\"add\",\"path\":\"flags.system.vampiricMaiden.hp\",\"value\":@hp}"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "yFFesKIaAaDfxonC:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-effect",
+      "position": {
+        "x": 2235.0002373896186,
+        "y": -316.16684825532525
+      },
+      "id": "yFFesKIaAaDfxonC",
+      "custom": {
+        "inputs": {
+          "cgZDrMQfuLuPy8fz": {
+            "id": "cgZDrMQfuLuPy8fz",
+            "label": "AE like - hpCount",
+            "slug": "rule",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "cgZDrMQfuLuPy8fz": {
+          "connection": "JLKG3BQeYiVIG8HU:outputs:result"
+        },
+        "name": {
+          "value": "Temp (Vampiric Maiden)"
+        },
+        "slug": {
+          "value": "tmp-vampiric-maiden"
+        },
+        "pf2eImg": {
+          "value": "icons/environment/settlement/sewer-entrance.webp"
+        },
+        "target": {
+          "connection": "pTqZt1ezISnU1Yh9:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "pndtuV3y5u6L7Yru:ins:in"
+        }
+      }
+    },
+    {
+      "type": "extract-actor",
+      "inputs": {
+        "input": {
+          "connection": "WHcQYiRoRCkRxU3B:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1050.6666161663627,
+        "y": 339.23311191427456
+      },
+      "id": "OlwOGKiKvMrQkHlJ",
+      "custom": {
+        "outputs": {
+          "4uX08pKmriVYKuKp": {
+            "id": "4uX08pKmriVYKuKp",
+            "input": "flags.pf2e.vampiricMaiden.hp",
+            "label": "previousHp",
+            "slug": "path",
+            "isArray": false,
+            "type": "number"
+          },
+          "7okdimame5cMbvz7": {
+            "id": "7okdimame5cMbvz7",
+            "input": "hitPoints.value",
+            "label": "currentHp",
+            "slug": "path",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "IBHNPAP92qsGKOUu:ins:in"
+        }
+      }
+    },
+    {
+      "type": "compare-outcomes",
+      "inputs": {
+        "compare": {
+          "value": "diff"
+        },
+        "b": {
+          "value": "criticalSuccess"
+        },
+        "a": {
+          "connection": "EntvxvqXkb9p2A5b:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1032.9285402369849,
+        "y": -302.000143370243
+      },
+      "id": "gTyzlGxxFJYVYASF",
+      "outs": {
+        "true": {
+          "connection": "rIQPagMRecBLQxPr:ins:in"
+        }
+      }
+    },
+    {
+      "type": "resolve-formula",
+      "position": {
+        "x": 1321.1666407026362,
+        "y": 339.74977072330137
+      },
+      "id": "IBHNPAP92qsGKOUu",
+      "custom": {
+        "inputs": {
+          "Fg2JD0MPdqUsDOga": {
+            "id": "Fg2JD0MPdqUsDOga",
+            "input": "previous",
+            "label": "previous",
+            "slug": "variable",
+            "type": "number"
+          },
+          "WkHapryZXeUd2AES": {
+            "id": "WkHapryZXeUd2AES",
+            "input": "current",
+            "label": "current",
+            "slug": "variable",
+            "type": "number"
+          }
+        }
+      },
+      "inputs": {
+        "Fg2JD0MPdqUsDOga": {
+          "connection": "OlwOGKiKvMrQkHlJ:outputs:4uX08pKmriVYKuKp"
+        },
+        "WkHapryZXeUd2AES": {
+          "connection": "OlwOGKiKvMrQkHlJ:outputs:7okdimame5cMbvz7"
+        },
+        "formula": {
+          "value": "ceil((@previous-@current)/2)"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "ve0hhctnaLSS9zCx:ins:in"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 1621.833307739462,
+        "y": 339.6665381507537
+      },
+      "id": "ve0hhctnaLSS9zCx",
+      "custom": {
+        "inputs": {
+          "hao2cH4BQ9mZczGc": {
+            "id": "hao2cH4BQ9mZczGc",
+            "input": "tmphp",
+            "label": "tmphp",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "plain": {
+          "value": "{\"key\":\"TempHP\",\"value\":@tmphp}"
+        },
+        "hao2cH4BQ9mZczGc": {
+          "connection": "IBHNPAP92qsGKOUu:outputs:value"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "peFfpZDXVjJ1LmmE:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-effect",
+      "position": {
+        "x": 1997.8335430432624,
+        "y": 324.1665538735174
+      },
+      "id": "peFfpZDXVjJ1LmmE",
+      "custom": {
+        "inputs": {
+          "cgZDrMQfuLuPy8fz": {
+            "id": "cgZDrMQfuLuPy8fz",
+            "label": "Temp Hp",
+            "slug": "rule",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "name": {
+          "value": "Temp Hp (Vampiric Maiden)"
+        },
+        "slug": {
+          "value": "hp-vampiric-maiden"
+        },
+        "pf2eImg": {
+          "value": "icons/environment/settlement/sewer-entrance.webp"
+        },
+        "cgZDrMQfuLuPy8fz": {
+          "connection": "ve0hhctnaLSS9zCx:outputs:result"
+        },
+        "target": {
+          "connection": "IUlUueOQrD0KQsFw:outputs:entry"
+        },
+        "unit": {
+          "value": "minutes"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "uaX8du0OVLj4EkA0:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "pMqYLPSIOu8E6dYP:outputs:origin"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 1809.5000642843315,
+        "y": 456.41633217242645
+      },
+      "id": "IUlUueOQrD0KQsFw"
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "pMqYLPSIOu8E6dYP:outputs:target"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 893.5000095183822,
+        "y": 453.41639329738234
+      },
+      "id": "WHcQYiRoRCkRxU3B"
+    },
+    {
+      "type": "delete-item",
+      "position": {
+        "x": 2615.8463142207943,
+        "y": 324.6424111008471
+      },
+      "id": "Dk9505cvb6PNbYvg",
+      "inputs": {
+        "item": {
+          "connection": "uaX8du0OVLj4EkA0:outputs:item"
+        }
+      }
+    },
+    {
+      "type": "has-item-slug",
+      "state": "split",
+      "position": {
+        "x": 2310.333395594518,
+        "y": 324.7448192930467
+      },
+      "id": "uaX8du0OVLj4EkA0",
+      "inputs": {
+        "target": {
+          "connection": "S4okiCLWEzIci7LK:outputs:entry"
+        },
+        "slug": {
+          "value": "tmp-vampiric-maiden"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "Dk9505cvb6PNbYvg:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "pMqYLPSIOu8E6dYP:outputs:target"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 2100.071414092409,
+        "y": 774.5234679937573
+      },
+      "id": "S4okiCLWEzIci7LK"
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "GhzuGikR3kaTSYgq:outputs:outcome"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 874.166434736536,
+        "y": -187.91677406334952
+      },
+      "id": "EntvxvqXkb9p2A5b"
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "GhzuGikR3kaTSYgq:outputs:outcome"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 2335.40712663049,
+        "y": 130.71286766526373
+      },
+      "id": "JK0zfiyi64TAZM8B"
+    },
+    {
+      "type": "split-outcome",
+      "inputs": {
+        "input": {
+          "connection": "JK0zfiyi64TAZM8B:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 2815.5920314534023,
+        "y": -299.78569532513114
+      },
+      "id": "La7lPKRhBh41YOoc",
+      "outs": {
+        "failure": {
+          "connection": "vdMIrJBVwDc7KCRT:ins:in"
+        },
+        "criticalFailure": {
+          "connection": "1QolKGPRkOGCI8qD:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "GhzuGikR3kaTSYgq:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 2053.8327456507404,
+        "y": -185.5833358048642
+      },
+      "id": "pTqZt1ezISnU1Yh9"
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "GhzuGikR3kaTSYgq:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 1419.6662262490647,
+        "y": -210.5833732034888
+      },
+      "id": "jL5Azm6tIU89VyCv"
+    },
+    {
+      "type": "extract-actor",
+      "inputs": {
+        "input": {
+          "connection": "GhzuGikR3kaTSYgq:outputs:origin"
+        }
+      },
+      "position": {
+        "x": 1319.1667260577306,
+        "y": -301.3260562213944
+      },
+      "id": "rIQPagMRecBLQxPr",
+      "custom": {
+        "outputs": {
+          "Nl2k6vg1I0emyxBI": {
+            "id": "Nl2k6vg1I0emyxBI",
+            "input": "system.attributes.spellDC.value",
+            "label": "spellDC",
+            "slug": "path",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "0AeoCqNyBURtqCn8:ins:in"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 3258.3860338497725,
+        "y": -476.7324657806253
+      },
+      "id": "1QolKGPRkOGCI8qD",
+      "inputs": {
+        "localization": {
+          "value": "@Localize[TRIGGERTROVE.VampiricMaiden.Trigger.EffectDescriptionCritFail]"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "y4qEWZg5uSKxjhtQ:ins:in"
+        }
+      },
+      "state": "localization"
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 2473.036889843229,
+        "y": -300.052843514571
+      },
+      "id": "pndtuV3y5u6L7Yru",
+      "custom": {
+        "inputs": {
+          "ICntV4P71vPmipDn": {
+            "id": "ICntV4P71vPmipDn",
+            "input": "outcome",
+            "label": "outcome",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "plain": {
+          "value": "Immobilized (Vampiric Maiden) (@outcome)"
+        },
+        "ICntV4P71vPmipDn": {
+          "connection": "JK0zfiyi64TAZM8B:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "La7lPKRhBh41YOoc:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-effect",
+      "position": {
+        "x": 4641.370855482731,
+        "y": -317.94823192063825
+      },
+      "id": "d3b0skv3uuSFUryN",
+      "custom": {
+        "inputs": {
+          "aRm98MNCGX8oX6A8": {
+            "id": "aRm98MNCGX8oX6A8",
+            "label": "description",
+            "slug": "rule",
+            "type": "text"
+          },
+          "6bnJQZMWXepvo6dU": {
+            "id": "6bnJQZMWXepvo6dU",
+            "label": "immobilized",
+            "slug": "rule",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "pf2eImg": {
+          "value": "systems/pf2e/icons/conditions/immobilized.webp"
+        },
+        "G6eZkQdOJq5Qu0Ar": {
+          "value": "{\n  \"key\": \"FlatModifier\",\n  \"slug\": \"distracting-chatter\",\n  \"type\": \"status\",\n  \"value\": -2,\n  \"selector\": [\n    \"perception\"\n  ],\n  \"predicate\": [\n    \"audible\"\n  ]\n}"
+        },
+        "FvUo7gMTT4LKkf7b": {
+          "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg\"\n}"
+        },
+        "6bnJQZMWXepvo6dU": {
+          "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\"\n}"
+        },
+        "aRm98MNCGX8oX6A8": {
+          "connection": "ilALvcOhCT8gcOR1:outputs:rLSBPNTuzkIK81Ob"
+        },
+        "target": {
+          "connection": "aCZf3bXBk0Codg6z:outputs:entry"
+        },
+        "name": {
+          "connection": "Pe0mvYeoStjlYxcw:outputs:entry"
+        },
+        "slug": {
+          "connection": "ilALvcOhCT8gcOR1:outputs:867mY7RQGSLq1Mh8"
+        }
+      },
+      "state": "timed"
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 3600.1050879110526,
+        "y": -476.9903450036157
+      },
+      "id": "y4qEWZg5uSKxjhtQ",
+      "custom": {
+        "inputs": {
+          "8z2TFEZizklxurbh": {
+            "id": "8z2TFEZizklxurbh",
+            "input": "description",
+            "label": "description",
+            "slug": "variable",
+            "type": "text"
+          },
+          "6VbRMEd8VxioYSqM": {
+            "id": "6VbRMEd8VxioYSqM",
+            "input": "spelldc",
+            "label": "spelldc",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "plain": {
+          "value": "{ \"itemType\": \"effect\", \"key\": \"ItemAlteration\", \"mode\": \"override\", \"predicate\": [ \"item:slug:immobilized-vampiric-maiden-critfail\" ], \"property\": \"description\", \"value\": [ { \"text\": \"@description [[/act escape dc=@spelldc]]\" } ] }"
+        },
+        "6VbRMEd8VxioYSqM": {
+          "connection": "7scjMmqGjUqC8xI1:outputs:entry"
+        },
+        "8z2TFEZizklxurbh": {
+          "connection": "1QolKGPRkOGCI8qD:outputs:result"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "hX37ogtHcz42ZIta:ins:in"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 3258.068658474728,
+        "y": -157.31457969386867
+      },
+      "id": "vdMIrJBVwDc7KCRT",
+      "inputs": {
+        "localization": {
+          "value": "@Localize[TRIGGERTROVE.VampiricMaiden.Trigger.EffectDescriptionFail]"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "rwWCE8aStchZZ7ah:ins:in"
+        }
+      },
+      "state": "localization"
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 3595.0653041675914,
+        "y": -157.66501073584294
+      },
+      "id": "rwWCE8aStchZZ7ah",
+      "custom": {
+        "inputs": {
+          "8z2TFEZizklxurbh": {
+            "id": "8z2TFEZizklxurbh",
+            "input": "description",
+            "label": "description",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "plain": {
+          "value": "{ \"itemType\": \"effect\", \"key\": \"ItemAlteration\", \"mode\": \"override\", \"predicate\": [ \"item:slug:immobilized-vampiric-maiden-fail\" ], \"property\": \"description\", \"value\": [ { \"text\": \"@description\" } ] }"
+        },
+        "8z2TFEZizklxurbh": {
+          "connection": "vdMIrJBVwDc7KCRT:outputs:result"
+        },
+        "mvv0lDZ9WO3yKO17": {
+          "connection": "e2M2scDUMmnwHPTm:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "QIbMQmrfe3Pg2iXC:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "rIQPagMRecBLQxPr:outputs:Nl2k6vg1I0emyxBI"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 3439.7032945647566,
+        "y": -388.0688637418149
+      },
+      "id": "7scjMmqGjUqC8xI1"
+    },
+    {
+      "custom": {
+        "title": "Immobilized Effect",
+        "outputs": {
+          "rLSBPNTuzkIK81Ob": {
+            "id": "rLSBPNTuzkIK81Ob",
+            "label": "description",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          },
+          "867mY7RQGSLq1Mh8": {
+            "id": "867mY7RQGSLq1Mh8",
+            "label": "slug",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "type": "__gate_exit__",
+      "position": {
+        "x": 4321.156025787222,
+        "y": -318.31919662222674
+      },
+      "id": "ilALvcOhCT8gcOR1",
+      "outs": {
+        "out": {
+          "connection": "d3b0skv3uuSFUryN:ins:in"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "rLSBPNTuzkIK81Ob": {
+            "id": "rLSBPNTuzkIK81Ob",
+            "label": "description",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "ilALvcOhCT8gcOR1:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 3937.3226758612554,
+        "y": -492.4143735572292
+      },
+      "id": "hX37ogtHcz42ZIta",
+      "inputs": {
+        "rLSBPNTuzkIK81Ob": {
+          "connection": "y4qEWZg5uSKxjhtQ:outputs:result"
+        },
+        "867mY7RQGSLq1Mh8": {
+          "value": "immobilized-vampiric-maiden-critfail"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "rLSBPNTuzkIK81Ob": {
+            "id": "rLSBPNTuzkIK81Ob",
+            "label": "description",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "ilALvcOhCT8gcOR1:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 3923.155806794389,
+        "y": -173.24766558182608
+      },
+      "id": "QIbMQmrfe3Pg2iXC",
+      "inputs": {
+        "rLSBPNTuzkIK81Ob": {
+          "connection": "rwWCE8aStchZZ7ah:outputs:result"
+        },
+        "867mY7RQGSLq1Mh8": {
+          "value": "immobilized-vampiric-maiden-fail"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "pndtuV3y5u6L7Yru:outputs:result"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 4421.896849481566,
+        "y": -148.3193034362414
+      },
+      "id": "Pe0mvYeoStjlYxcw"
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "GhzuGikR3kaTSYgq:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 4421.06356707264,
+        "y": -187.94890362258718
+      },
+      "id": "aCZf3bXBk0Codg6z"
+    }
+  ],
+  "variables": {
+    "pMqYLPSIOu8E6dYP:outputs:origin": {
+      "isArray": false,
+      "label": "Origin",
+      "type": "target"
+    },
+    "pMqYLPSIOu8E6dYP:outputs:target": {
+      "isArray": false,
+      "label": "Target",
+      "type": "target"
+    },
+    "GhzuGikR3kaTSYgq:outputs:outcome": {
+      "isArray": false,
+      "label": "Outcome",
+      "type": "outcome"
+    },
+    "GhzuGikR3kaTSYgq:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
+      "type": "target"
+    },
+    "rIQPagMRecBLQxPr:outputs:Nl2k6vg1I0emyxBI": {
+      "isArray": false,
+      "label": "spellDC",
+      "type": "number"
+    },
+    "pndtuV3y5u6L7Yru:outputs:result": {
+      "isArray": false,
+      "label": "name",
+      "type": "text"
+    }
+  },
+  "id": "NjpJNIsQZAjn1WSB",
+  "description": "<p>@Localize[TRIGGERTROVE.VampiricMaiden.Trigger.Description]</p>"
+}

@@ -1,0 +1,230 @@
+{
+  "name": "Cutting Insult",
+  "folder": "Spells",
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "nodes": [
+    {
+      "type": "check-roll-event",
+      "position": {
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
+      },
+      "id": "3XC9Bm2VcInNzutZ",
+      "inputs": {
+        "for": {
+          "value": "saving-throw"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
+        }
+      },
+      "state": "check"
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "options": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"item:slug:cutting-insult\"\n]"
+        }
+      },
+      "position": {
+        "x": 914.5555543816838,
+        "y": 338.4166458263811
+      },
+      "id": "0Nbw4OxpFR4HTZVs",
+      "outs": {
+        "true": {
+          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 962.3674698036609,
+        "y": 802.8888321529082
+      },
+      "id": "neZ9rprFjwfj3jHX",
+      "inputs": {
+        "condition": {
+          "value": "frightened"
+        },
+        "max": {
+          "connection": "zGc4tCQVcjOnTmoH:outputs:u97jKtquMWwwUvxE"
+        },
+        "value": {
+          "connection": "zGc4tCQVcjOnTmoH:outputs:u97jKtquMWwwUvxE"
+        },
+        "target": {
+          "connection": "igSlsRt62qRz2s68:outputs:entry"
+        }
+      }
+    },
+    {
+      "type": "split-outcome",
+      "inputs": {
+        "input": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 1155.3332871816397,
+        "y": 337.25000796381175
+      },
+      "id": "eqRLx1DpO6Yf4nzm",
+      "outs": {
+        "failure": {
+          "connection": "RrO2cEggzTHKLZqb:ins:in"
+        },
+        "success": {
+          "connection": "Ru24FAiGctmf2pfa:ins:in"
+        },
+        "criticalFailure": {
+          "connection": "ASck9Hy1Lxgxrmxa:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 741.9999449886639,
+        "y": 908.9999928172751
+      },
+      "id": "igSlsRt62qRz2s68"
+    },
+    {
+      "custom": {
+        "title": "Add Condition",
+        "outputs": {
+          "u97jKtquMWwwUvxE": {
+            "id": "u97jKtquMWwwUvxE",
+            "label": "Value",
+            "slug": "entry",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "type": "__gate_exit__",
+      "position": {
+        "x": 641.9999524025905,
+        "y": 802.3332479633482
+      },
+      "id": "zGc4tCQVcjOnTmoH",
+      "outs": {
+        "out": {
+          "connection": "neZ9rprFjwfj3jHX:ins:in"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "u97jKtquMWwwUvxE": {
+            "id": "u97jKtquMWwwUvxE",
+            "label": "Value",
+            "slug": "entry",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "zGc4tCQVcjOnTmoH:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1603.256330890325,
+        "y": 372.8333201339013
+      },
+      "id": "RrO2cEggzTHKLZqb",
+      "inputs": {
+        "u97jKtquMWwwUvxE": {
+          "value": 2
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "u97jKtquMWwwUvxE": {
+            "id": "u97jKtquMWwwUvxE",
+            "label": "Value",
+            "slug": "entry",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "zGc4tCQVcjOnTmoH:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1602.5895828928817,
+        "y": 539.5000021566416
+      },
+      "id": "Ru24FAiGctmf2pfa",
+      "inputs": {
+        "u97jKtquMWwwUvxE": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "u97jKtquMWwwUvxE": {
+            "id": "u97jKtquMWwwUvxE",
+            "label": "Value",
+            "slug": "entry",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "zGc4tCQVcjOnTmoH:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1603.9228347471603,
+        "y": 219.50001173547895
+      },
+      "id": "ASck9Hy1Lxgxrmxa",
+      "inputs": {
+        "u97jKtquMWwwUvxE": {
+          "value": 3
+        }
+      }
+    }
+  ],
+  "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
+      "type": "target"
+    }
+  },
+  "id": "jrjoaNfS3cgNQZLg",
+  "description": "<p>@Localize[TRIGGERTROVE.CuttingInsult.Trigger.Description]</p>"
+}

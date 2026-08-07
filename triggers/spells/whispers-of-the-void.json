@@ -1,0 +1,395 @@
+{
+  "name": "Whispers of the Void",
+  "folder": "Spells",
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "nodes": [
+    {
+      "type": "check-roll-event",
+      "position": {
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
+      },
+      "id": "3XC9Bm2VcInNzutZ",
+      "inputs": {
+        "for": {
+          "value": "saving-throw"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
+        }
+      },
+      "state": "check"
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "options": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"item:slug:whispers-of-the-void\"\n]"
+        }
+      },
+      "position": {
+        "x": 914.5555543816838,
+        "y": 338.4166458263811
+      },
+      "id": "0Nbw4OxpFR4HTZVs",
+      "outs": {
+        "true": {
+          "connection": "vDtNoEfCIpxyl04s:ins:in"
+        }
+      }
+    },
+    {
+      "type": "split-outcome",
+      "inputs": {
+        "input": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 1420.9437522195865,
+        "y": 339.01623335419987
+      },
+      "id": "eqRLx1DpO6Yf4nzm",
+      "outs": {
+        "criticalFailure": {
+          "connection": "IqUj8AB9Kz69cGJ0:ins:in"
+        },
+        "failure": {
+          "connection": "0S9LObpvwOdbh6cZ:ins:in"
+        },
+        "success": {
+          "connection": "eFpXoLyLOPPVDsVp:ins:in"
+        }
+      }
+    },
+    {
+      "type": "extract-item",
+      "position": {
+        "x": 1164.6242278455584,
+        "y": 339.0319923036636
+      },
+      "id": "vDtNoEfCIpxyl04s",
+      "custom": {
+        "outputs": {
+          "9iMKsEny9vcJK95j": {
+            "id": "9iMKsEny9vcJK95j",
+            "input": "level",
+            "label": "level",
+            "slug": "path",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "inputs": {
+        "input": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:item"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 786.9349701297177,
+        "y": 1067.7835191169947
+      },
+      "id": "ldLlWZjYrAPjx6Ed"
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1922.13949230081,
+        "y": 373.3918957969099
+      },
+      "id": "0S9LObpvwOdbh6cZ",
+      "inputs": {
+        "condition": {
+          "value": "drained"
+        },
+        "max": {
+          "value": 1
+        },
+        "target": {
+          "connection": "1O6CH3yC2EDmAbLe:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "89wReKuM3BGtIOui:ins:in"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1921.7152499237477,
+        "y": 161.02820347735195
+      },
+      "id": "IqUj8AB9Kz69cGJ0",
+      "inputs": {
+        "condition": {
+          "value": "drained"
+        },
+        "max": {
+          "value": 2
+        },
+        "value": {
+          "value": 2
+        },
+        "target": {
+          "connection": "1O6CH3yC2EDmAbLe:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "ubiaurjvjFr69szh:ins:in"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 2157.472837779505,
+        "y": 160.72516243894836
+      },
+      "id": "ubiaurjvjFr69szh",
+      "inputs": {
+        "condition": {
+          "value": "doomed"
+        },
+        "max": {
+          "value": 1
+        },
+        "target": {
+          "connection": "1O6CH3yC2EDmAbLe:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "fojUYmgehy3P9uE1:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 1528.8938592687082,
+        "y": 301.45258625362374
+      },
+      "id": "1O6CH3yC2EDmAbLe"
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 1150.590940506761,
+        "y": 1092.4655583078413
+      },
+      "id": "LbKaNmJZsA3oxHHT"
+    },
+    {
+      "custom": {
+        "title": "Adds Persistent Damage",
+        "outputs": {
+          "5EE8tQ4lZzRh9FJC": {
+            "id": "5EE8tQ4lZzRh9FJC",
+            "label": "formula",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "type": "__gate_exit__",
+      "position": {
+        "x": 686.0715520927431,
+        "y": 961.7857686016515
+      },
+      "id": "86FPAQ2J3uDpOmbH",
+      "outs": {
+        "out": {
+          "connection": "Fy9TVyVX6My95C62:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-persistent",
+      "position": {
+        "x": 1292.7950050966774,
+        "y": 962.1667261302073
+      },
+      "id": "l6P1mPHzq53QTb63",
+      "inputs": {
+        "type": {
+          "value": "void"
+        },
+        "die": {
+          "connection": "Fy9TVyVX6My95C62:outputs:result"
+        },
+        "target": {
+          "connection": "LbKaNmJZsA3oxHHT:outputs:entry"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 962.4921842370769,
+        "y": 978.1879193930829
+      },
+      "id": "Fy9TVyVX6My95C62",
+      "custom": {
+        "inputs": {
+          "a9DEv6N1bsHBO5Yi": {
+            "id": "a9DEv6N1bsHBO5Yi",
+            "input": "lvl",
+            "label": "lvl",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "plain": {
+          "connection": "86FPAQ2J3uDpOmbH:outputs:5EE8tQ4lZzRh9FJC"
+        },
+        "a9DEv6N1bsHBO5Yi": {
+          "connection": "ldLlWZjYrAPjx6Ed:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "l6P1mPHzq53QTb63:ins:in"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "5EE8tQ4lZzRh9FJC": {
+            "id": "5EE8tQ4lZzRh9FJC",
+            "label": "formula",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "86FPAQ2J3uDpOmbH:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 2163.8280012788873,
+        "y": 372.630886792258
+      },
+      "id": "89wReKuM3BGtIOui",
+      "inputs": {
+        "5EE8tQ4lZzRh9FJC": {
+          "value": "(4+2*floor((@lvl-4)/2))d8"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "5EE8tQ4lZzRh9FJC": {
+            "id": "5EE8tQ4lZzRh9FJC",
+            "label": "formula",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "86FPAQ2J3uDpOmbH:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 2403.827983485464,
+        "y": 160.96425189290744
+      },
+      "id": "fojUYmgehy3P9uE1",
+      "inputs": {
+        "5EE8tQ4lZzRh9FJC": {
+          "value": "(4+2*floor((@lvl-4)/2))d8"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "5EE8tQ4lZzRh9FJC": {
+            "id": "5EE8tQ4lZzRh9FJC",
+            "label": "formula",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "86FPAQ2J3uDpOmbH:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1921.3279429637205,
+        "y": 610.1310322708505
+      },
+      "id": "eFpXoLyLOPPVDsVp",
+      "inputs": {
+        "5EE8tQ4lZzRh9FJC": {
+          "value": "(2+floor((@lvl-4)/2))d8"
+        }
+      }
+    }
+  ],
+  "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
+      "type": "target"
+    },
+    "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j": {
+      "isArray": false,
+      "label": "level",
+      "type": "number"
+    }
+  },
+  "id": "TUnjeVHHjD8lPMtf",
+  "description": "<p>@Localize[TRIGGERTROVE.WhispersOfTheVoid.Trigger.Description]</p>"
+}

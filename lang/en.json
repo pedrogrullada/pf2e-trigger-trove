@@ -524,6 +524,93 @@
             "Trigger": {
                 "Description": "<p>When a combatant ends their turn within a <strong>Wings of Flame</strong> aura, send that ability to chat, roll the damage.</p>"
             }
+        },
+        "FuriousFinish": {
+            "Trigger": {
+                "Description": "<p>When <strong>Furious Finish</strong> Effect is removed, remove Rage effect, then add fatigued condition.</p>"
+            }
+        },
+        "ImpressiveLanding": {
+            "Trigger": {
+                "Description": "<p>When the region for <strong>Impressive Landing</strong> is placed, add a difficult terrain Region Behavior to it.<br>When damage is taken from <strong>Impressive Landing</strong>, adds Off-guard effect for 1 round.</p>"
+            }
+        },
+        "MagicalFetters": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Magical Fetters</strong> spell, apply an effect depending on their degree of success.</p>"
+            }
+        },
+        "Daze": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Magical Fetters</strong> spell, on critical failure apply stunned 1.</p>"
+            }
+        },
+        "CuttingInsult": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Cutting Insult</strong> spell, apply the frightened condition depending on their degree of success.</p>"
+            }
+        },
+        "InnerRadianceTorrent": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Inner Radiance Torrent</strong> spell, on critical failure apply blinded for 1 round.</p>"
+            }
+        },
+        "DistractingChatter": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Distracting Chatter</strong> spell, apply an effect depending on their degree of success.</p>",
+                "EffectDescription": "<p>You bombard a target with distracting auditory illusions, surrounding them with a tumultuous cacophony of overlapping speech, whispers, screams, and muttering. The target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, takes a -2 status penalty to purely auditory Perception checks, and must succeed at a @Check[flat|dc:5] to use auditory abilities or verbal spell components. Similarly, a creature who attempts to affect the target with an auditory effect must succeed at a @Check[flat|dc:5] or the attempt fails. The duration depends on the target's Will save.</p>"
+            }
+        },
+        "VampiricFeast": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Vampiric Feast</strong> spell, apply an effect to the target to track their hp.<br>When damage is taken from the <strong>Vampiric Feast</strong> spell, then create an effect that gives the caster temp hp equal to the difference between the target current hp and the hp store in the temp effect, finally delete the temp effect.</p>"
+            }
+        },
+        "WhispersOfTheVoid": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Whispers of the Void</strong> spell, apply persistent damage, drained and dommed depending on their degree of success.</p>"
+            }
+        },
+        "VampiricMaiden": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Vampiric Maiden</strong> spell, apply an effect to the target to track their hp and apply an imobilized effect depending on their degree of success.<br>When damage is taken from the <strong>Vampiric Maiden</strong> spell, then create an effect that gives the caster temp hp equal to the difference between the target current hp and the hp store in the temp effect, finally delete the temp effect.</p>",
+                "EffectDescriptionFail": "<p>The target is briefly trapped within the vampiric maiden. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} by the iron maiden for 1 round or until it uses an Interact action to extricate itself, whichever comes first.</p>",
+                "EffectDescriptionCritFail": "<p>The target is briefly trapped within the vampiric maiden. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} by the vampiric maiden for 1 round or until it @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escapes}, whichever comes first.</p>"
+            }
+        },
+        "ShockAndAwe": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Shock and Awe</strong> spell, apply frightened and stunned depending on their degree of success.</p>"
+            }
+        },
+        "DivineImmolation": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Divine Immolation</strong> spell, apply persistent damage depending on their degree of success.</p>"
+            }
+        },
+        "SawtoothTerrain": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Sawtooth Terrain</strong> spell, apply persistent damage and gives an effect that adds a speed penalty depending on their degree of success.<br>When the region for <strong>Sawtooth Terrain</strong> is placed, add a difficult terrain Region Behavior to it.</p>",
+                "EffectDescriptionFail": "<p>The creature incur a –10-foot circumstance penalty to their Speed until they receive magical healing or benefit from a successful Medicine check against your spell DC to @UUID[Compendium.pf2e.actionspf2e.Item.MHLuKy4nQO2Z4Am1]{Administer First Aid}.</p>",
+                "EffectDescriptionCritFail": "<p>The creature incur a –15-foot circumstance penalty to their Speed until they receive magical healing or benefit from a successful Medicine check against your spell DC to @UUID[Compendium.pf2e.actionspf2e.Item.MHLuKy4nQO2Z4Am1]{Administer First Aid}.</p>"
+            }
+        },
+        "CastIntoTime": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Cast Into Time</strong> spell, apply the sickened condition depending on their degree of success.</p>"
+            }
+        },
+        "Dominate": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Dominate</strong> spell, apply the controlled or stunned condition depending on their degree of success.</p>",
+                "EffectDescriptionFail": "<p>You control the target. It gains the @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} condition, but it can attempt a Will save at the end of each of its turns. On a success, the spell ends.</p>",
+                "EffectDescriptionCritFail": "<p>You control the target. It gains the @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} condition, it can attempt a Will save only if you give it a new order that is against its nature, such as killing its allies. On a success, the spell ends.</p> "
+            }
+        },
+        "AttackedFromWithin": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Attacked From Within</strong> spell, apply the frightened condition and Off-Guard for 1 round depending on their degree of success.</p>"
+            }
         }
     }
 }

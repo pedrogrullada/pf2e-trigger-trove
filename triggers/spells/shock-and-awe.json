@@ -1,0 +1,210 @@
+{
+  "name": "Shock and Awe",
+  "folder": "Spells",
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "nodes": [
+    {
+      "type": "check-roll-event",
+      "position": {
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
+      },
+      "id": "3XC9Bm2VcInNzutZ",
+      "inputs": {
+        "for": {
+          "value": "saving-throw"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
+        }
+      },
+      "state": "check"
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "options": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"item:slug:shock-and-awe\"\n]"
+        }
+      },
+      "position": {
+        "x": 914.5555543816838,
+        "y": 338.4166458263811
+      },
+      "id": "0Nbw4OxpFR4HTZVs",
+      "outs": {
+        "true": {
+          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1601.7008500486154,
+        "y": 578.2223639926794
+      },
+      "id": "lFdCx2VTgrG6z97t",
+      "inputs": {
+        "condition": {
+          "value": "frightened"
+        },
+        "max": {
+          "value": 1
+        },
+        "target": {
+          "connection": "igSlsRt62qRz2s68:outputs:entry"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1602.3674833896814,
+        "y": 370.2222191277307
+      },
+      "id": "neZ9rprFjwfj3jHX",
+      "inputs": {
+        "condition": {
+          "value": "frightened"
+        },
+        "max": {
+          "value": 2
+        },
+        "value": {
+          "value": 2
+        },
+        "target": {
+          "connection": "igSlsRt62qRz2s68:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "zW9NBnzyIGJheCaN:ins:in"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1601.700864876469,
+        "y": 160.88882234956688
+      },
+      "id": "PJWl8Ru7kpwSaXeB",
+      "inputs": {
+        "condition": {
+          "value": "frightened"
+        },
+        "max": {
+          "value": 3
+        },
+        "value": {
+          "value": 3
+        },
+        "target": {
+          "connection": "igSlsRt62qRz2s68:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "0o1Y2xhgRzOYclLM:ins:in"
+        }
+      }
+    },
+    {
+      "type": "split-outcome",
+      "inputs": {
+        "input": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 1155.3332871816397,
+        "y": 337.25000796381175
+      },
+      "id": "eqRLx1DpO6Yf4nzm",
+      "outs": {
+        "success": {
+          "connection": "lFdCx2VTgrG6z97t:ins:in"
+        },
+        "failure": {
+          "connection": "neZ9rprFjwfj3jHX:ins:in"
+        },
+        "criticalFailure": {
+          "connection": "PJWl8Ru7kpwSaXeB:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 1261.9999064362448,
+        "y": 500.3333180385307
+      },
+      "id": "igSlsRt62qRz2s68"
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1832.3675144416777,
+        "y": 161.44443044654187
+      },
+      "id": "0o1Y2xhgRzOYclLM",
+      "inputs": {
+        "condition": {
+          "value": "stunned"
+        },
+        "max": {
+          "value": 2
+        },
+        "value": {
+          "value": 2
+        },
+        "target": {
+          "connection": "igSlsRt62qRz2s68:outputs:entry"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1835.589702516589,
+        "y": 370.44443944915224
+      },
+      "id": "zW9NBnzyIGJheCaN",
+      "inputs": {
+        "condition": {
+          "value": "stunned"
+        },
+        "max": {
+          "value": 1
+        },
+        "target": {
+          "connection": "igSlsRt62qRz2s68:outputs:entry"
+        }
+      }
+    }
+  ],
+  "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
+      "type": "target"
+    }
+  },
+  "id": "g77TM3VGMFuYTR1E",
+  "description": "<p>@Localize[TRIGGERTROVE.ShockAndAwe.Trigger.Description]</p>"
+}

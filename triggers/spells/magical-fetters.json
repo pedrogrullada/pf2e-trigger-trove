@@ -1,0 +1,434 @@
+{
+  "name": "Magical Fetters",
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "nodes": [
+    {
+      "type": "check-roll-event",
+      "position": {
+        "x": 2.2222220574683433,
+        "y": 323.59254981018495
+      },
+      "id": "FkN8qi1m6iLzjQ3T",
+      "inputs": {
+        "for": {
+          "value": "saving-throw"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "TnE5p6nspFuTcE9k:ins:in"
+        }
+      },
+      "state": "check"
+    },
+    {
+      "type": "match-predicate",
+      "inputs": {
+        "options": {
+          "connection": "FkN8qi1m6iLzjQ3T:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"item:slug:magical-fetters\"\n]"
+        }
+      },
+      "position": {
+        "x": 316.22213655635824,
+        "y": 339.8425473556078
+      },
+      "id": "TnE5p6nspFuTcE9k",
+      "outs": {
+        "true": {
+          "connection": "3gUeZNSeiTU0LLSD:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "FkN8qi1m6iLzjQ3T:outputs:outcome"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 400.88887951233096,
+        "y": 453.592515401205
+      },
+      "id": "oDsuSGdWu9iayUsM"
+    },
+    {
+      "type": "split-outcome",
+      "inputs": {
+        "input": {
+          "connection": "oDsuSGdWu9iayUsM:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 820.0252108880027,
+        "y": 339.53950434599113
+      },
+      "id": "WwRJD8l2GEelKTEu",
+      "outs": {
+        "criticalFailure": {
+          "connection": "X6pgdGzabaqDEpaD:ins:in"
+        },
+        "failure": {
+          "connection": "9ia2CgpHB7QYVq2W:ins:in"
+        },
+        "success": {
+          "connection": "QgR5xMFgsrRoYfmJ:ins:in"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "FkN8qi1m6iLzjQ3T:outputs:roller"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 484.69297273026973,
+        "y": 1093.6454379427148
+      },
+      "id": "iu6iPJkCqy7sd9v9"
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 295.53684797881647,
+        "y": 978.7129181778315
+      },
+      "id": "DLLGuKYGyKWkHgiF",
+      "custom": {
+        "inputs": {
+          "2NYjPq24oVenvkMu": {
+            "id": "2NYjPq24oVenvkMu",
+            "input": "badge",
+            "label": "badge",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "plain": {
+          "value": "{ \"alterations\": [ { \"mode\": \"override\", \"property\": \"badge-value\", \"value\": @badge } ], \"key\": \"GrantItem\", \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\" }"
+        },
+        "2NYjPq24oVenvkMu": {
+          "connection": "GhdbQ2vZTTRiqqNR:outputs:JC67owyUAZDvhZGm"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Gl0p0Bcblg6Xqgrw:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-effect",
+      "position": {
+        "x": 690.2963497362907,
+        "y": 962.6666831100774
+      },
+      "id": "Gl0p0Bcblg6Xqgrw",
+      "custom": {
+        "inputs": {
+          "uOzV13noDP0tk3Zh": {
+            "id": "uOzV13noDP0tk3Zh",
+            "label": "maladroit",
+            "slug": "rule",
+            "type": "text"
+          },
+          "xVjteVal2rEuoHOd": {
+            "id": "xVjteVal2rEuoHOd",
+            "label": "vitesse",
+            "slug": "rule",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "name": {
+          "connection": "qkY4gUjWQAJZJ5um:outputs:entry"
+        },
+        "pf2eImg": {
+          "value": "icons/magic/control/debuff-chains-shackles-movement-blue.webp"
+        },
+        "slug": {
+          "value": "effect-magical-fetters"
+        },
+        "xVjteVal2rEuoHOd": {
+          "value": "{\n  \"key\": \"FlatModifier\",\n  \"selector\": \"all-speeds\",\n  \"value\": -10,\n  \"type\": \"status\"\n}"
+        },
+        "YwrM2OEjWlRUnCnk": {
+          "value": "{\n  \"alterations\": [\n    {\n      \"mode\": \"override\",\n      \"property\": \"badge-value\",\n      \"value\": 1\n    }\n  ],\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3\"\n}"
+        },
+        "unit": {
+          "connection": "GhdbQ2vZTTRiqqNR:outputs:RFmHkiBCiDcOWlmd"
+        },
+        "uOzV13noDP0tk3Zh": {
+          "connection": "DLLGuKYGyKWkHgiF:outputs:result"
+        },
+        "target": {
+          "connection": "iu6iPJkCqy7sd9v9:outputs:entry"
+        },
+        "origin": {
+          "connection": "OxezT6U1nRIEqhwt:outputs:entry"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "position": {
+        "x": 533.4896267494801,
+        "y": 339.9180181541603
+      },
+      "id": "3gUeZNSeiTU0LLSD",
+      "custom": {
+        "inputs": {
+          "E3Ess0axJuRmFMwE": {
+            "id": "E3Ess0axJuRmFMwE",
+            "input": "outcome",
+            "label": "outcome",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "inputs": {
+        "plain": {
+          "value": "Effect : Magical Fetters (@outcome)"
+        },
+        "E3Ess0axJuRmFMwE": {
+          "connection": "oDsuSGdWu9iayUsM:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "WwRJD8l2GEelKTEu:ins:in"
+        }
+      }
+    },
+    {
+      "custom": {
+        "title": "Add Effect",
+        "outputs": {
+          "JC67owyUAZDvhZGm": {
+            "id": "JC67owyUAZDvhZGm",
+            "label": "clumsyBadge",
+            "slug": "entry",
+            "isArray": false,
+            "type": "number"
+          },
+          "RFmHkiBCiDcOWlmd": {
+            "id": "RFmHkiBCiDcOWlmd",
+            "label": "duration",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "type": "__gate_exit__",
+      "position": {
+        "x": 2.2962441331433183,
+        "y": 961.6666273898476
+      },
+      "id": "GhdbQ2vZTTRiqqNR",
+      "outs": {
+        "out": {
+          "connection": "DLLGuKYGyKWkHgiF:ins:in"
+        }
+      }
+    },
+    {
+      "type": "increase-condition",
+      "position": {
+        "x": 1172.8959908245597,
+        "y": 160.93690369975624
+      },
+      "id": "X6pgdGzabaqDEpaD",
+      "inputs": {
+        "condition": {
+          "value": "slowed"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "qBEnnul1T47yfNWJ:ins:in"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "JC67owyUAZDvhZGm": {
+            "id": "JC67owyUAZDvhZGm",
+            "label": "clumsyBadge",
+            "slug": "entry",
+            "isArray": false,
+            "type": "number"
+          },
+          "RFmHkiBCiDcOWlmd": {
+            "id": "RFmHkiBCiDcOWlmd",
+            "label": "duration",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "GhdbQ2vZTTRiqqNR:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1441.4818905976258,
+        "y": 162.1448962613708
+      },
+      "id": "qBEnnul1T47yfNWJ",
+      "inputs": {
+        "JC67owyUAZDvhZGm": {
+          "value": 3
+        },
+        "RFmHkiBCiDcOWlmd": {
+          "value": "minutes"
+        }
+      }
+    },
+    {
+      "custom": {
+        "inputs": {
+          "JC67owyUAZDvhZGm": {
+            "id": "JC67owyUAZDvhZGm",
+            "label": "clumsyBadge",
+            "slug": "entry",
+            "isArray": false,
+            "type": "number"
+          },
+          "RFmHkiBCiDcOWlmd": {
+            "id": "RFmHkiBCiDcOWlmd",
+            "label": "duration",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "GhdbQ2vZTTRiqqNR:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1443.906132842137,
+        "y": 376.2189156335709
+      },
+      "id": "9ia2CgpHB7QYVq2W",
+      "inputs": {
+        "JC67owyUAZDvhZGm": {
+          "value": 3
+        },
+        "RFmHkiBCiDcOWlmd": {
+          "value": "minutes"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "FkN8qi1m6iLzjQ3T:outputs:item"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 486.632815878467,
+        "y": 1171.0254814759537
+      },
+      "id": "OxezT6U1nRIEqhwt"
+    },
+    {
+      "inputs": {
+        "entry": {
+          "connection": "3gUeZNSeiTU0LLSD:outputs:result"
+        }
+      },
+      "type": "__variable_getter__",
+      "position": {
+        "x": 485.89218822070234,
+        "y": 1131.76617818065
+      },
+      "id": "qkY4gUjWQAJZJ5um"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "JC67owyUAZDvhZGm": {
+            "id": "JC67owyUAZDvhZGm",
+            "label": "clumsyBadge",
+            "slug": "entry",
+            "isArray": false,
+            "type": "number"
+          },
+          "RFmHkiBCiDcOWlmd": {
+            "id": "RFmHkiBCiDcOWlmd",
+            "label": "duration",
+            "slug": "entry",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "GhdbQ2vZTTRiqqNR:ins:in"
+        }
+      },
+      "type": "__gate_entry__",
+      "position": {
+        "x": 1441.7512220762376,
+        "y": 592.5826503284479
+      },
+      "id": "QgR5xMFgsrRoYfmJ",
+      "inputs": {
+        "JC67owyUAZDvhZGm": {
+          "value": 1
+        },
+        "RFmHkiBCiDcOWlmd": {
+          "value": "rounds"
+        }
+      }
+    }
+  ],
+  "variables": {
+    "FkN8qi1m6iLzjQ3T:outputs:outcome": {
+      "isArray": false,
+      "label": "Outcome",
+      "type": "outcome"
+    },
+    "FkN8qi1m6iLzjQ3T:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
+      "type": "target"
+    },
+    "3gUeZNSeiTU0LLSD:outputs:result": {
+      "isArray": false,
+      "label": "name",
+      "type": "text"
+    },
+    "FkN8qi1m6iLzjQ3T:outputs:item": {
+      "isArray": false,
+      "label": "Spell",
+      "type": "item"
+    }
+  },
+  "folder": "Spells",
+  "id": "9R9NfWQacAgKSDsN",
+  "description": "<p>@Localize[TRIGGERTROVE.MagicalFetters.Trigger.Description]</p>"
+}
