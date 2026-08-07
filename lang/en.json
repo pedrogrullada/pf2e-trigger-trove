@@ -20,6 +20,11 @@
                 "Description": "When a target takes damage and they have <strong>Amulet's Abeyance</strong>'s resistance effect, remove that effect."
             }
         },
+        "AttackedFromWithin": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against <strong>Attacked From Within</strong>, increase their frightened condition depending on their degree of success. If they critically fail, add the off-guard condition for 1 round.</p>"
+            }
+        },
         "AuraOfCourage": {
             "Trigger": {
                 "Description": "When a combatant with <strong>Aura of Courage</strong> ends their turn, all allies within their aura reduce their frightened condition by 1."
@@ -38,6 +43,11 @@
         "BrutalBeating": {
             "Trigger": {
                 "Description": "WWhen a target takes damage from an origin with the <strong>Brutal Beating</strong> feat, that target becomes frightened 1."
+            }
+        },
+        "CastIntoTime": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Cast Into Time</strong> spell, apply the sickened condition depending on their degree of success.</p>"
             }
         },
         "ChampionsResistance": {
@@ -75,6 +85,16 @@
                 "Description": "When the origin of an attack critically hits and their weapon has a <strong>crushing</strong> or <strong>greater crushing</strong> rune, their target becomes clumsy and enfeebled."
             }
         },
+        "CuttingInsult": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Cutting Insult</strong> spell, apply the frightened condition depending on their degree of success.</p>"
+            }
+        },
+        "Daze": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Magical Fetters</strong> spell, on critical failure apply stunned 1.</p>"
+            }
+        },
         "Defend": {
             "Trigger": {
                 "Description": "<p>When a combatant is created and they have an active <strong>Defend</strong> exploration activity, add an effect that raises their shield.</p><p>At the start of a combatant's first turn in a combat, remove that effect.</p>"
@@ -98,9 +118,31 @@
                 "Description": "<p>When a roller succeeds on their skill check to <strong>Disarm</strong> a target, add Disarm's success effect to that target. On a critical failure, the roller becomes off-guard until the start of their next turn.</p>"
             }
         },
+        "DistractingChatter": {
+            "Label": "Distracting Shatter",
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Distracting Chatter</strong> spell, apply an effect that automates the off-guard condition and adds reminders for its flat check on auditory abilities.</p>",
+                "EffectAddendum": "<p>You must succeed at a @Check[flat|dc:5|showDC:all] to use auditory abilities or verbal spell components.</p>",
+                "EffectDescription": "<p>You bombard a target with distracting auditory illusions, surrounding them with a tumultuous cacophony of overlapping speech, whispers, screams, and muttering. The target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, takes a -2 status penalty to purely auditory Perception checks, and must succeed at a @Check[flat|dc:5] to use auditory abilities or verbal spell components. Similarly, a creature who attempts to affect the target with an auditory effect must succeed at a @Check[flat|dc:5] or the attempt fails. The duration depends on the target's Will save.</p>"
+            }
+        },
         "DistractingShot": {
             "Trigger": {
                 "Description": "<p>When the origin of an attack has <strong>Distracting Shot</strong> and critically hits their hunted prey, or if they hit their hunted prey twice in the same turn, that target becomes off-guard until the start of the origin's next turn.</p><p>If the origin has <strong>Greater Distracting Shot</strong>, this effect lasts until the end of their next turn instead. Additionally, their hunted prey becomes off-guard until the start of their next turn on a single hit.</p>"
+            }
+        },
+        "DivineImmolation": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Divine Immolation</strong> spell, apply persistent fire damage depending on their degree of success. If they are immune to fire, the persistent damage is spirit instead.</p>"
+            }
+        },
+        "Dominate": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Dominate</strong> spell, apply the controlled or stunned condition depending on their degree of success.</p>",
+                "EffectDescription": {
+                    "CriticalFailure": "You are @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}. You can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save if you are given an order that is against your nature, such as killing your allies. On a success, the spell ends.",
+                    "Failure": "You are @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}, but you can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save at the end of each of your turns. On a success, the spell ends."
+                }
             }
         },
         "DreadFlickering": {
@@ -194,6 +236,12 @@
                 "Description": "When a target enters a <strong>Frightful Presence</strong> aura, send that ability to chat, and add an effect tracking the target's immunity. If a roller fails their saving throw against that ability, add the frightened condition to them with the corresponding value."
             }
         },
+        "FuriousFinish": {
+            "Trigger": {
+                "Addendum": "You are fatigued until you rest for at least 10 minutes.",
+                "Description": "<p>When a target takes damage from an origin with the <strong>Furious Finish</strong> effect, as well as Rage's, remove both effects and add the fatigued condition.</p>"
+            }
+        },
         "Generic": {
             "Note": {
                 "Label": "Trigger Trove Note"
@@ -209,6 +257,11 @@
                 "Description": "When a roller succeeds on their skill check to <strong>Grapple</strong> a target, that target becomes grabbed. On a critical success, the target becomes restrained instead."
             }
         },
+        "ImpressiveLanding": {
+            "Trigger": {
+                "Description": "<p>When the region for <strong>Impressive Landing</strong> is placed, add a difficult terrain Region Behavior to it and roll Impressive Landing's damage. When this damage is taken, add the off-guard condition until the start of the target's next turn.</p>"
+            }
+        },
         "IncendiaryAura": {
             "Trigger": {
                 "Description": "<p>When a target within an <strong>Incendiary Aura</strong> takes fire damage, add the corresponding amount of persistent fire damage to that target.</p><p><em>Note: This trigger can only detect fire damage when it's the primary damage type of a roll.</em></p>"
@@ -217,6 +270,11 @@
         "IncredibleScout": {
             "Trigger": {
                 "Description": "When a Scouting combatant with <strong>Incredible Scout</strong> is created, add an effect that upgrades Scout's bonus for all allies benefiting from it."
+            }
+        },
+        "InnerRadianceTorrent": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Inner Radiance Torrent</strong> spell, on critical failure apply blinded for 1 round.</p>"
             }
         },
         "IntenseHeat": {
@@ -232,6 +290,11 @@
         "KineticAura": {
             "Trigger": {
                 "Description": "When a target takes damage and would be knocked out as a result, remove <strong>Kinetic Aura</strong> from them."
+            }
+        },
+        "MagicalFetters": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Magical Fetters</strong> spell, apply an effect depending on their degree of success.</p>"
             }
         },
         "MarshalStances": {
@@ -339,6 +402,15 @@
         "SafeElements": {
             "Addendum": "A target with <strong>Aux Effect: Safe Elements</strong> dragged onto them <strong>from the kineticist's sheet</strong> is unaffected by this trigger. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder."
         },
+        "SawtoothTerrain": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Sawtooth Terrain</strong> spell, add persistent bleed damage and an effect containing a Speed penalty depending on their degree of success. If the roller receives magical healing while having this effect, remove the effect. If a template originating from Sawtooth Terrain is placed, add a difficult terrain behavior to it.</p>",
+                "EffectDescription": {
+                    "CriticalFailure": "You take a –15-foot circumstance penalty to your Speed until you receive magical healing or benefit from a successful @Check[medicine] check against the origin's spell DC to Administer First Aid.",
+                    "Failure": "You take a –10-foot circumstance penalty to your Speed until you receive magical healing or benefit from a successful @Check[medicine] check against the origin's spell DC to Administer First Aid."
+                }
+            }
+        },
         "ScarsOfSteel": {
             "Label": "Scars of Steel",
             "Trigger": {
@@ -382,6 +454,11 @@
         "ShieldsOfTheSpirit": {
             "Trigger": {
                 "Description": "When the target of an attack has <strong>Shields of the Spirit's</strong> effect, and is inside a champion's aura or benefiting from the <strong>Security</strong> feat, roll <em>shields of the spirit</em>'s damage against the origin of the attack."
+            }
+        },
+        "ShockAndAwe": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Shock and Awe</strong> spell, add the frightened and stunned conditions depending on their degree of success.</p>"
             }
         },
         "Slow": {
@@ -484,6 +561,11 @@
                 "Description": "When a target takes damage from an origin using <strong>Unbalancing Finisher</strong>, that target is off-guard until the end of the origin's next turn."
             }
         },
+        "VampiricFeast": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Vampiric Feast</strong> spell, apply an effect to the target to track their hp.<br>When damage is taken from the <strong>Vampiric Feast</strong> spell, then create an effect that gives the caster temp hp equal to the difference between the target current hp and the hp store in the temp effect, finally delete the temp effect.</p>"
+            }
+        },
         "VibrantThorns": {
             "Item": {
                 "Addendum": "Anytime you cast a vitality spell, the thorns' damage increases to d6s of piercing damage until the start of your next turn."
@@ -520,103 +602,14 @@
                 "Description": "When a target takes damage and they have <strong>Warping Pull</strong>'s resistance effect, remove that effect."
             }
         },
-        "WingsOfFlame": {
-            "Trigger": {
-                "Description": "<p>When a combatant ends their turn within a <strong>Wings of Flame</strong> aura, send that ability to chat, roll the damage.</p>"
-            }
-        },
-        "FuriousFinish": {
-            "Trigger": {
-                "Addendum": "You are fatigued until you rest for at least 10 minutes.",
-                "Description": "<p>When a target takes damage from an origin with the <strong>Furious Finish</strong> effect, as well as Rage's, remove both effects and add the fatigued condition.</p>"
-            }
-        },
-        "ImpressiveLanding": {
-            "Trigger": {
-                "Description": "<p>When the region for <strong>Impressive Landing</strong> is placed, add a difficult terrain Region Behavior to it and roll Impressive Landing's damage. When this damage is taken, add the off-guard condition until the start of the target's next turn.</p>"
-            }
-        },
-        "MagicalFetters": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Magical Fetters</strong> spell, apply an effect depending on their degree of success.</p>"
-            }
-        },
-        "Daze": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Magical Fetters</strong> spell, on critical failure apply stunned 1.</p>"
-            }
-        },
-        "CuttingInsult": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Cutting Insult</strong> spell, apply the frightened condition depending on their degree of success.</p>"
-            }
-        },
-        "InnerRadianceTorrent": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Inner Radiance Torrent</strong> spell, on critical failure apply blinded for 1 round.</p>"
-            }
-        },
-        "DistractingChatter": {
-            "Label": "Distracting Shatter",
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Distracting Chatter</strong> spell, apply an effect that automates the off-guard condition and adds reminders for its flat check on auditory abilities.</p>",
-                "EffectAddendum": "<p>You must succeed at a @Check[flat|dc:5|showDC:all] to use auditory abilities or verbal spell components.</p>",
-                "EffectDescription": "<p>You bombard a target with distracting auditory illusions, surrounding them with a tumultuous cacophony of overlapping speech, whispers, screams, and muttering. The target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, takes a -2 status penalty to purely auditory Perception checks, and must succeed at a @Check[flat|dc:5] to use auditory abilities or verbal spell components. Similarly, a creature who attempts to affect the target with an auditory effect must succeed at a @Check[flat|dc:5] or the attempt fails. The duration depends on the target's Will save.</p>"
-            }
-        },
-        "VampiricFeast": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Vampiric Feast</strong> spell, apply an effect to the target to track their hp.<br>When damage is taken from the <strong>Vampiric Feast</strong> spell, then create an effect that gives the caster temp hp equal to the difference between the target current hp and the hp store in the temp effect, finally delete the temp effect.</p>"
-            }
-        },
         "WhispersOfTheVoid": {
             "Trigger": {
                 "Description": "<p>When a roller saves against the <strong>Whispers of the Void</strong> spell, they take persistent void damage, and they become drained and doomed depending on their degree of success.</p>"
             }
         },
-        "VampiricMaiden": {
+        "WingsOfFlame": {
             "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Vampiric Maiden</strong> spell, apply an effect to the target to track their hp and apply an imobilized effect depending on their degree of success.<br>When damage is taken from the <strong>Vampiric Maiden</strong> spell, then create an effect that gives the caster temp hp equal to the difference between the target current hp and the hp store in the temp effect, finally delete the temp effect.</p>",
-                "EffectDescriptionFail": "<p>The target is briefly trapped within the vampiric maiden. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} by the iron maiden for 1 round or until it uses an Interact action to extricate itself, whichever comes first.</p>",
-                "EffectDescriptionCritFail": "<p>The target is briefly trapped within the vampiric maiden. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} by the vampiric maiden for 1 round or until it @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escapes}, whichever comes first.</p>"
-            }
-        },
-        "ShockAndAwe": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Shock and Awe</strong> spell, add the frightened and stunned conditions depending on their degree of success.</p>"
-            }
-        },
-        "DivineImmolation": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Divine Immolation</strong> spell, apply persistent fire damage depending on their degree of success. If they are immune to fire, the persistent damage is spirit instead.</p>"
-            }
-        },
-        "SawtoothTerrain": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Sawtooth Terrain</strong> spell, add persistent bleed damage and an effect containing a Speed penalty depending on their degree of success. If the roller receives magical healing while having this effect, remove the effect. If a template originating from Sawtooth Terrain is placed, add a difficult terrain behavior to it.</p>",
-                "EffectDescription": {
-                    "CriticalFailure": "You take a –15-foot circumstance penalty to your Speed until you receive magical healing or benefit from a successful @Check[medicine] check against the origin's spell DC to Administer First Aid.",
-                    "Failure": "You take a –10-foot circumstance penalty to your Speed until you receive magical healing or benefit from a successful @Check[medicine] check against the origin's spell DC to Administer First Aid."
-                }
-            }
-        },
-        "CastIntoTime": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Cast Into Time</strong> spell, apply the sickened condition depending on their degree of success.</p>"
-            }
-        },
-        "Dominate": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Dominate</strong> spell, apply the controlled or stunned condition depending on their degree of success.</p>",
-                "EffectDescription": {
-                    "CriticalFailure": "You are @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}. You can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save if you are given an order that is against your nature, such as killing your allies. On a success, the spell ends.",
-                    "Failure": "You are @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}, but you can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save at the end of each of your turns. On a success, the spell ends."
-                }
-            }
-        },
-        "AttackedFromWithin": {
-            "Trigger": {
-                "Description": "<p>When a roller saves against <strong>Attacked From Within</strong>, increase their frightened condition depending on their degree of success. If they critically fail, add the off-guard condition for 1 round.</p>"
+                "Description": "<p>When a combatant ends their turn within a <strong>Wings of Flame</strong> aura, send that ability to chat, roll the damage.</p>"
             }
         }
     }
