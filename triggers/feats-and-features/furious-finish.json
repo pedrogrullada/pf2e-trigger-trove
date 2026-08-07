@@ -1,137 +1,190 @@
 {
-  "name": "Furious Finish",
+  "description": "<p>@Localize[TRIGGERTROVE.FuriousFinish.Trigger.Description]</p>",
   "folder": "Feats & Features",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "Vn0rVB9OHddsF0b1",
+  "name": "Furious Finish",
   "nodes": [
     {
-      "type": "delete-item-event",
-      "position": {
-        "x": 705.9999476576774,
-        "y": 491.0000053296314
-      },
-      "id": "Dzlh0HURkCJoFgl6",
-      "inputs": {
-        "type": {
-          "value": "effect"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "YHAcTQd3OYjrpuyD:ins:in"
-        }
-      }
-    },
-    {
-      "type": "extract-item",
-      "inputs": {
-        "input": {
-          "connection": "Dzlh0HURkCJoFgl6:outputs:item"
-        }
-      },
-      "position": {
-        "x": 1011.9999758397618,
-        "y": 507.81665899003286
-      },
-      "id": "YHAcTQd3OYjrpuyD",
-      "custom": {
-        "outputs": {
-          "YZpVNkhCQOGVE8Pk": {
-            "id": "YZpVNkhCQOGVE8Pk",
-            "input": "system.slug",
-            "label": "Slug",
-            "slug": "path",
-            "isArray": false,
-            "type": "text"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "kw5IFrgOrWYkXvko:ins:in"
-        }
-      }
-    },
-    {
-      "type": "texts-match",
-      "position": {
-        "x": 1259.3333444263617,
-        "y": 508.33334831663683
-      },
-      "id": "kw5IFrgOrWYkXvko",
-      "inputs": {
-        "a": {
-          "connection": "YHAcTQd3OYjrpuyD:outputs:YZpVNkhCQOGVE8Pk"
-        },
-        "b": {
-          "value": "effect-furious-finish"
-        }
-      },
-      "outs": {
-        "true": {
-          "connection": "d9VhgsA68Cr8oVZw:ins:in"
-        }
-      }
-    },
-    {
-      "type": "delete-item",
-      "position": {
-        "x": 1895.9230319869134,
-        "y": 493.5832376028392
-      },
       "id": "isRmY0j3g9hslsP2",
       "inputs": {
         "item": {
-          "connection": "d9VhgsA68Cr8oVZw:outputs:item"
+          "connection": "huAepxUdt1uBDaEE:outputs:item"
         }
       },
       "outs": {
         "out": {
-          "connection": "ce7VqkmbzHLMGPgm:ins:in"
+          "connection": "JctgFBwrMt5E0u4Q:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1592.8851531990347,
+        "y": 537.1438436634453
+      },
+      "type": "delete-item"
     },
     {
-      "type": "has-item-slug",
-      "state": "split",
-      "position": {
-        "x": 1574.1666750216907,
-        "y": 493.56663269348155
-      },
-      "id": "d9VhgsA68Cr8oVZw",
+      "id": "huAepxUdt1uBDaEE",
       "inputs": {
-        "slug": {
-          "value": "effect-rage"
+        "pf2e": {
+          "value": "Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr"
+        },
+        "sf2e": {
+          "value": "Compendium.pf2e-anachronism.feat-effects.Item.z3uyCMBddrPK5umr"
         },
         "target": {
-          "connection": "Dzlh0HURkCJoFgl6:outputs:parent"
+          "connection": "cF4EPdoQANCvwGM8:outputs:entry"
         }
       },
       "outs": {
         "true": {
           "connection": "isRmY0j3g9hslsP2:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1312.0606060606062,
+        "y": 525.7424242424242
+      },
+      "type": "has-item"
     },
     {
-      "type": "create-item",
-      "position": {
-        "x": 2160.999872917851,
-        "y": 493.2499492339159
+      "custom": {
+        "inputs": {
+          "0e1N4gZIXxsNycDp": {
+            "id": "0e1N4gZIXxsNycDp",
+            "label": "Text",
+            "slug": "rule",
+            "type": "text"
+          },
+          "fcwvRWTUYkqL1ybz": {
+            "id": "fcwvRWTUYkqL1ybz",
+            "label": "Text",
+            "slug": "rule",
+            "type": "text"
+          }
+        }
       },
-      "id": "ce7VqkmbzHLMGPgm",
+      "id": "JctgFBwrMt5E0u4Q",
       "inputs": {
-        "pf2e": {
-          "value": "Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw"
+        "0e1N4gZIXxsNycDp": {
+          "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw\",\n  \"inMemoryOnly\": true\n}"
+        },
+        "fcwvRWTUYkqL1ybz": {
+          "value": "{\n  \"key\": \"ItemAlteration\",\n  \"property\": \"description\",\n  \"mode\": \"override\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.FuriousFinish.Trigger.Addendum\"\n    }\n  ]\n}"
+        },
+        "name": {
+          "value": "Effect: Fatigued from Furious Finish"
+        },
+        "pf2eImg": {
+          "value": "icons/skills/melee/strike-flail-destructive-yellow.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/skills/melee/strike-flail-destructive-yellow.webp"
+        },
+        "slug": {
+          "value": "trigger-trove-fatigued-from-furious-finish"
         },
         "target": {
-          "connection": "Dzlh0HURkCJoFgl6:outputs:parent"
+          "connection": "BdT94jxMSnzKA7CM:outputs:entry"
         }
-      }
+      },
+      "position": {
+        "x": 1834.6515151515152,
+        "y": 537.8409090909088
+      },
+      "state": "fixed",
+      "type": "create-effect"
+    },
+    {
+      "id": "nL5nIj9qvKf1K41a",
+      "outs": {
+        "out": {
+          "connection": "cECmV3xQ88KyC8Dc:ins:in"
+        }
+      },
+      "position": {
+        "x": 530.9639249639254,
+        "y": 507.91558441558476
+      },
+      "type": "damage-taken-event"
+    },
+    {
+      "id": "cECmV3xQ88KyC8Dc",
+      "inputs": {
+        "pf2e": {
+          "value": "Compendium.pf2e.feat-effects.Item.VxaHh8r8QVfPfxcw"
+        },
+        "sf2e": {
+          "value": "Compendium.pf2e-anachronism.feat-effects.Item.VxaHh8r8QVfPfxcw"
+        },
+        "target": {
+          "connection": "nL5nIj9qvKf1K41a:outputs:origin"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "wZBLqncYWc0UjOum:ins:in"
+        }
+      },
+      "position": {
+        "x": 795.4083694083697,
+        "y": 506.80447330447345
+      },
+      "type": "has-item"
+    },
+    {
+      "id": "cF4EPdoQANCvwGM8",
+      "inputs": {
+        "entry": {
+          "connection": "nL5nIj9qvKf1K41a:outputs:origin"
+        }
+      },
+      "position": {
+        "x": 1171.0750360750362,
+        "y": 654.5544733044736
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "wZBLqncYWc0UjOum",
+      "inputs": {
+        "item": {
+          "connection": "cECmV3xQ88KyC8Dc:outputs:item"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "huAepxUdt1uBDaEE:ins:in"
+        }
+      },
+      "position": {
+        "x": 1086.3578643578649,
+        "y": 527.511544011544
+      },
+      "type": "delete-item"
+    },
+    {
+      "id": "BdT94jxMSnzKA7CM",
+      "inputs": {
+        "entry": {
+          "connection": "nL5nIj9qvKf1K41a:outputs:origin"
+        }
+      },
+      "position": {
+        "x": 1680.1002886002893,
+        "y": 657.9433621933621
+      },
+      "type": "__variable_getter__"
     }
   ],
-  "id": "9FFL9Or8xi0Jqx3j",
-  "description": "<p>@Localize[TRIGGERTROVE.FuriousFinish.Trigger.Description]</p>"
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "variables": {
+    "nL5nIj9qvKf1K41a:outputs:origin": {
+      "isArray": false,
+      "label": "Origin",
+      "type": "target"
+    }
+  }
 }

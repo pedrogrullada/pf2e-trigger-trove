@@ -1,17 +1,10 @@
 {
-  "name": "Cast Into Time",
+  "description": "<p>@Localize[TRIGGERTROVE.CastIntoTime.Trigger.Description]</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "VVuEtL67alQoYxvp",
+  "name": "Cast Into Time",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,38 +13,17 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:cast-into-time\"\n]"
+          "connection": "fgQzDbUWQ0l4dypH:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 993.0341545417738,
-        "y": 801.5555192045382
-      },
       "id": "neZ9rprFjwfj3jHX",
       "inputs": {
         "condition": {
@@ -66,106 +38,117 @@
         "value": {
           "connection": "yTA8ffX9IyB0sMEJ:outputs:Wg6kbh8dNqnaUo35"
         }
-      }
+      },
+      "position": {
+        "x": 1735.0341545417737,
+        "y": 742.5555192045382
+      },
+      "type": "increase-condition"
     },
     {
-      "type": "split-outcome",
+      "id": "eqRLx1DpO6Yf4nzm",
       "inputs": {
         "input": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
         }
       },
-      "position": {
-        "x": 1155.3332871816397,
-        "y": 337.25000796381175
-      },
-      "id": "eqRLx1DpO6Yf4nzm",
       "outs": {
-        "failure": {
-          "connection": "p146vUDeokdY7fCf:ins:in"
-        },
         "criticalFailure": {
           "connection": "DzwdgUyUDArllc2v:ins:in"
+        },
+        "failure": {
+          "connection": "p146vUDeokdY7fCf:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1210.3332871816397,
+        "y": 518.2500079638118
+      },
+      "type": "split-outcome"
     },
     {
+      "id": "igSlsRt62qRz2s68",
       "inputs": {
         "entry": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 743.9998838052334,
-        "y": 907.000114947452
+        "x": 1573.9998838052334,
+        "y": 866.000114947452
       },
-      "id": "igSlsRt62qRz2s68"
+      "type": "__variable_getter__"
     },
     {
       "custom": {
-        "title": "Adds Condition",
         "outputs": {
           "Wg6kbh8dNqnaUo35": {
             "id": "Wg6kbh8dNqnaUo35",
-            "label": "value",
-            "slug": "entry",
             "isArray": false,
+            "label": "Value",
+            "slug": "entry",
             "type": "number"
           }
-        }
-      },
-      "type": "__gate_exit__",
-      "position": {
-        "x": 642.0000134377426,
-        "y": 801.6667440770495
+        },
+        "title": "Adds Condition"
       },
       "id": "yTA8ffX9IyB0sMEJ",
       "outs": {
         "out": {
           "connection": "neZ9rprFjwfj3jHX:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1482.0000134377426,
+        "y": 747.6667440770495
+      },
+      "type": "__gate_exit__"
     },
     {
       "custom": {
         "inputs": {
           "Wg6kbh8dNqnaUo35": {
             "id": "Wg6kbh8dNqnaUo35",
+            "isArray": false,
             "label": "value",
             "slug": "entry",
-            "isArray": false,
             "type": "number"
           }
         }
-      },
-      "outs": {
-        "out": {
-          "connection": "yTA8ffX9IyB0sMEJ:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 1602.5895828928826,
-        "y": 371.50006822068565
       },
       "id": "p146vUDeokdY7fCf",
       "inputs": {
         "Wg6kbh8dNqnaUo35": {
           "value": 1
         }
-      }
+      },
+      "outs": {
+        "out": {
+          "connection": "yTA8ffX9IyB0sMEJ:ins:in"
+        }
+      },
+      "position": {
+        "x": 1479.5895828928826,
+        "y": 631.5000682206856
+      },
+      "type": "__gate_entry__"
     },
     {
       "custom": {
         "inputs": {
           "Wg6kbh8dNqnaUo35": {
             "id": "Wg6kbh8dNqnaUo35",
+            "isArray": false,
             "label": "value",
             "slug": "entry",
-            "isArray": false,
             "type": "number"
           }
+        }
+      },
+      "id": "DzwdgUyUDArllc2v",
+      "inputs": {
+        "Wg6kbh8dNqnaUo35": {
+          "value": 2
         }
       },
       "outs": {
@@ -173,18 +156,37 @@
           "connection": "yTA8ffX9IyB0sMEJ:ins:in"
         }
       },
-      "type": "__gate_entry__",
       "position": {
-        "x": 1602.5897049631856,
-        "y": 202.83338625781312
+        "x": 1484.5897049631856,
+        "y": 493.8333862578131
       },
-      "id": "DzwdgUyUDArllc2v",
+      "type": "__gate_entry__"
+    },
+    {
+      "id": "fgQzDbUWQ0l4dypH",
       "inputs": {
-        "Wg6kbh8dNqnaUo35": {
-          "value": 2
+        "entry": {
+          "value": "item:slug:cast-into-time"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
         }
-      }
+      },
+      "outs": {
+        "true": {
+          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
+        }
+      },
+      "position": {
+        "x": 957,
+        "y": 320
+      },
+      "type": "list-contains"
     }
+  ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
   ],
   "variables": {
     "3XC9Bm2VcInNzutZ:outputs:roller": {
@@ -192,7 +194,5 @@
       "label": "Roller",
       "type": "target"
     }
-  },
-  "id": "U4QiZNIoOGGd0qVe",
-  "description": "<p>@Localize[TRIGGERTROVE.CastIntoTime.Trigger.Description]</p>"
+  }
 }

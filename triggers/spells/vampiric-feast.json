@@ -1,351 +1,145 @@
 {
-  "name": "Vampiric Feast",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "esqNCbbd3KqDHkXq",
+  "name": "Vampiric Feast",
   "nodes": [
     {
-      "type": "damage-taken-event",
-      "position": {
-        "x": 481.9999947824491,
-        "y": 322.33332336675886
+      "id": "0pxJsv2BMOZYs0FT",
+      "outs": {
+        "out": {
+          "connection": "doEZJzjGb2i4TJln:ins:in"
+        }
       },
-      "id": "pMqYLPSIOu8E6dYP",
+      "position": {
+        "x": 80.09090909090912,
+        "y": 135.77272727272728
+      },
+      "type": "check-roll-event"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "83K2PUKWEJ7h1y9R": {
+            "id": "83K2PUKWEJ7h1y9R",
+            "input": "system.attributes.hp.value",
+            "isArray": false,
+            "label": "Hit Points",
+            "slug": "path",
+            "type": "number"
+          }
+        }
+      },
+      "id": "JqsqhROiSIcNUcPl",
+      "inputs": {
+        "input": {
+          "connection": "rJFlGHSm8l457ehT:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Q80XmYzMCm1so3i7:ins:in"
+        }
+      },
+      "position": {
+        "x": 537.2347652347654,
+        "y": 206.9844155844156
+      },
+      "type": "extract-actor"
+    },
+    {
+      "id": "9iAl5OdqDf0bKWGm",
+      "outs": {
+        "out": {
+          "connection": "lmkhCDo92ShbyCIE:ins:in"
+        }
+      },
+      "position": {
+        "x": -37.95454545454555,
+        "y": 633.1006493506497
+      },
       "state": "select",
-      "outs": {
-        "out": {
-          "connection": "yxlPO2pP6cOvvAxk:ins:in"
-        }
-      }
+      "type": "damage-taken-event"
     },
     {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "pMqYLPSIOu8E6dYP:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:vampiric-feast\"\n]"
-        }
-      },
-      "position": {
-        "x": 792.0000420453957,
-        "y": 338.5832598770271
-      },
-      "id": "yxlPO2pP6cOvvAxk",
-      "outs": {
-        "true": {
-          "connection": "OlwOGKiKvMrQkHlJ:ins:in"
-        }
-      }
-    },
-    {
-      "type": "check-roll-event",
-      "position": {
-        "x": 481.9999886719505,
-        "y": -318.3333292085399
-      },
-      "id": "GhzuGikR3kaTSYgq",
-      "inputs": {
-        "for": {
-          "value": "saving-throw"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "KdLnFmgJfJPJ96Io:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "predicate": {
-          "value": "[\n  \"item:slug:vampiric-feast\"\n]"
-        },
-        "options": {
-          "connection": "GhzuGikR3kaTSYgq:outputs:options"
-        }
-      },
-      "position": {
-        "x": 786.0000425624434,
-        "y": -302.33337546384786
-      },
-      "id": "KdLnFmgJfJPJ96Io",
-      "outs": {
-        "true": {
-          "connection": "gTyzlGxxFJYVYASF:ins:in"
-        }
-      }
-    },
-    {
-      "type": "extract-actor",
-      "inputs": {
-        "input": {
-          "connection": "GhzuGikR3kaTSYgq:outputs:roller"
-        }
-      },
-      "position": {
-        "x": 1357.3334027822675,
-        "y": -301.3500572059583
-      },
-      "id": "0AeoCqNyBURtqCn8",
-      "custom": {
-        "outputs": {
-          "jLqAV8rX6gJkYMP8": {
-            "id": "jLqAV8rX6gJkYMP8",
-            "input": "hitPoints.value",
-            "label": "currentHp",
-            "slug": "path",
-            "isArray": false,
-            "type": "number"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "JLKG3BQeYiVIG8HU:ins:in"
-        }
-      }
-    },
-    {
-      "type": "format-text",
-      "position": {
-        "x": 1625.166892957382,
-        "y": -300.3333678943215
-      },
-      "id": "JLKG3BQeYiVIG8HU",
       "custom": {
         "inputs": {
-          "hao2cH4BQ9mZczGc": {
-            "id": "hao2cH4BQ9mZczGc",
-            "input": "hp",
-            "label": "hp",
-            "slug": "variable",
-            "type": "text"
-          }
-        }
-      },
-      "inputs": {
-        "hao2cH4BQ9mZczGc": {
-          "connection": "0AeoCqNyBURtqCn8:outputs:jLqAV8rX6gJkYMP8"
-        },
-        "plain": {
-          "value": "{\"key\":\"ActiveEffectLike\",\"mode\":\"add\",\"path\":\"flags.system.vampiricFeast.hp\",\"value\":@hp}"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "yFFesKIaAaDfxonC:ins:in"
-        }
-      }
-    },
-    {
-      "type": "create-effect",
-      "position": {
-        "x": 1994.5002583006813,
-        "y": -316.00016124859616
-      },
-      "id": "yFFesKIaAaDfxonC",
-      "custom": {
-        "inputs": {
-          "cgZDrMQfuLuPy8fz": {
-            "id": "cgZDrMQfuLuPy8fz",
-            "label": "AE like - hpCount",
+          "gBkicC68K9RBKcYx": {
+            "id": "gBkicC68K9RBKcYx",
+            "label": "Minuend",
             "slug": "rule",
             "type": "text"
           }
         }
       },
+      "id": "FztPUfKSzSNWFQYt",
       "inputs": {
-        "cgZDrMQfuLuPy8fz": {
-          "connection": "JLKG3BQeYiVIG8HU:outputs:result"
+        "gBkicC68K9RBKcYx": {
+          "connection": "m0l9jPPDYpnPGUMb:outputs:entry"
+        },
+        "level": {
+          "connection": "8LU0R4PeLQjyAXVr:outputs:Fyhxod6o5x4qz4pK"
+        },
+        "mRizZhOKa7K3ydzs": {
+          "value": "{\n\"key\": \"ActiveEffectLike\",\n  \"mode\": \"override\",\n  \"path\": \"flags.trigger-trove.vampiricFeastHpBefore\",\n  \"value\": \"aaa\"\n}"
         },
         "name": {
-          "value": "Temp (Festin vampirique)"
-        },
-        "slug": {
-          "value": "tmp-vampiric-feast"
+          "value": "Aux Effect: Vampiric Feast"
         },
         "pf2eImg": {
-          "value": "systems/pf2e/icons/spells/vampiric-touch.webp"
+          "value": "icons/magic/death/mouth-bite-fangs-vampire.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/magic/death/mouth-bite-fangs-vampire.webp"
+        },
+        "slug": {
+          "value": "trigger-trove-vampiric-feast-minuend"
         },
         "target": {
-          "connection": "GhzuGikR3kaTSYgq:outputs:roller"
-        }
-      }
-    },
-    {
-      "type": "extract-actor",
-      "inputs": {
-        "input": {
-          "connection": "WHcQYiRoRCkRxU3B:outputs:entry"
+          "connection": "MMzNUMHTUetiexLk:outputs:entry"
         }
       },
       "position": {
-        "x": 1050.6666161663627,
-        "y": 339.23311191427456
+        "x": 1329.9822399822415,
+        "y": 192.6132034632037
       },
-      "id": "OlwOGKiKvMrQkHlJ",
-      "custom": {
-        "outputs": {
-          "4uX08pKmriVYKuKp": {
-            "id": "4uX08pKmriVYKuKp",
-            "input": "flags.pf2e.vampiricFeast.hp",
-            "label": "previousHp",
-            "slug": "path",
-            "isArray": false,
-            "type": "number"
-          },
-          "7okdimame5cMbvz7": {
-            "id": "7okdimame5cMbvz7",
-            "input": "hitPoints.value",
-            "label": "currentHp",
-            "slug": "path",
-            "isArray": false,
-            "type": "number"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "IBHNPAP92qsGKOUu:ins:in"
-        }
-      }
+      "type": "create-effect"
     },
     {
-      "type": "compare-outcomes",
-      "inputs": {
-        "a": {
-          "connection": "GhzuGikR3kaTSYgq:outputs:outcome"
-        },
-        "compare": {
-          "value": "diff"
-        },
-        "b": {
-          "value": "criticalSuccess"
-        }
-      },
-      "position": {
-        "x": 1054.3332878331182,
-        "y": -301.8334563635137
-      },
-      "id": "gTyzlGxxFJYVYASF",
-      "outs": {
-        "true": {
-          "connection": "0AeoCqNyBURtqCn8:ins:in"
-        }
-      }
-    },
-    {
-      "type": "resolve-formula",
-      "position": {
-        "x": 1321.1666407026362,
-        "y": 339.74977072330137
-      },
-      "id": "IBHNPAP92qsGKOUu",
       "custom": {
         "inputs": {
-          "Fg2JD0MPdqUsDOga": {
-            "id": "Fg2JD0MPdqUsDOga",
-            "input": "previous",
-            "label": "previous",
-            "slug": "variable",
-            "type": "number"
-          },
-          "WkHapryZXeUd2AES": {
-            "id": "WkHapryZXeUd2AES",
-            "input": "current",
-            "label": "current",
-            "slug": "variable",
-            "type": "number"
-          }
-        }
-      },
-      "inputs": {
-        "Fg2JD0MPdqUsDOga": {
-          "connection": "OlwOGKiKvMrQkHlJ:outputs:4uX08pKmriVYKuKp"
-        },
-        "WkHapryZXeUd2AES": {
-          "connection": "OlwOGKiKvMrQkHlJ:outputs:7okdimame5cMbvz7"
-        },
-        "formula": {
-          "value": "ceil((@previous-@current)/2)"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "ve0hhctnaLSS9zCx:ins:in"
-        }
-      }
-    },
-    {
-      "type": "format-text",
-      "position": {
-        "x": 1621.833307739462,
-        "y": 339.6665381507537
-      },
-      "id": "ve0hhctnaLSS9zCx",
-      "custom": {
-        "inputs": {
-          "hao2cH4BQ9mZczGc": {
-            "id": "hao2cH4BQ9mZczGc",
-            "input": "tmphp",
-            "label": "tmphp",
-            "slug": "variable",
-            "type": "text"
-          }
-        }
-      },
-      "inputs": {
-        "plain": {
-          "value": "{\"key\":\"TempHP\",\"value\":@tmphp}"
-        },
-        "hao2cH4BQ9mZczGc": {
-          "connection": "IBHNPAP92qsGKOUu:outputs:value"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "peFfpZDXVjJ1LmmE:ins:in"
-        }
-      }
-    },
-    {
-      "type": "create-effect",
-      "position": {
-        "x": 1997.8335430432624,
-        "y": 324.1665538735174
-      },
-      "id": "peFfpZDXVjJ1LmmE",
-      "custom": {
-        "inputs": {
-          "cgZDrMQfuLuPy8fz": {
-            "id": "cgZDrMQfuLuPy8fz",
-            "label": "Temp Hp",
+          "ocUFJA81FQjQezL0": {
+            "id": "ocUFJA81FQjQezL0",
+            "label": "Text",
             "slug": "rule",
             "type": "text"
           }
         }
       },
+      "id": "DqbbMTgb1wqmUHsO",
       "inputs": {
-        "name": {
-          "value": "Temp Hp (Vampiric Feast)"
+        "level": {
+          "connection": "ff3KLe7HrA82w7bQ:outputs:entry"
         },
-        "slug": {
-          "value": "hp-vampiric-feast"
+        "name": {
+          "value": "Spell Effect: Vampiric Feast"
+        },
+        "ocUFJA81FQjQezL0": {
+          "connection": "GePdQKjnrgiVKwuX:outputs:result"
+        },
+        "origin": {
+          "connection": "BSybmhcIip9CgxWx:outputs:entry"
         },
         "pf2eImg": {
-          "value": "systems/pf2e/icons/spells/vampiric-touch.webp"
+          "value": "icons/magic/death/mouth-bite-fangs-vampire.webp"
         },
-        "cgZDrMQfuLuPy8fz": {
-          "connection": "ve0hhctnaLSS9zCx:outputs:result"
+        "sf2eImg": {
+          "value": "icons/magic/death/mouth-bite-fangs-vampire.webp"
+        },
+        "slug": {
+          "value": "trigger-trove-vampiric-feast-temp-hp"
         },
         "target": {
-          "connection": "IUlUueOQrD0KQsFw:outputs:entry"
+          "connection": "BSybmhcIip9CgxWx:outputs:entry"
         },
         "unit": {
           "value": "minutes"
@@ -353,97 +147,452 @@
       },
       "outs": {
         "out": {
-          "connection": "uaX8du0OVLj4EkA0:ins:in"
-        }
-      }
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "pMqYLPSIOu8E6dYP:outputs:origin"
+          "connection": "L4WlS47Z9GYGjSvE:ins:in"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 1809.5000642843315,
-        "y": 456.41633217242645
+        "x": 2335.931485181485,
+        "y": 579.8539349539346
       },
-      "id": "IUlUueOQrD0KQsFw"
+      "type": "create-effect"
     },
     {
-      "inputs": {
-        "entry": {
-          "connection": "pMqYLPSIOu8E6dYP:outputs:target"
+      "custom": {
+        "outputs": {
+          "96Xk2BnGMJV5y3GJ": {
+            "id": "96Xk2BnGMJV5y3GJ",
+            "input": "system.attributes.hp.value",
+            "isArray": false,
+            "label": "Subtrahend",
+            "slug": "path",
+            "type": "number"
+          },
+          "iykrs6fmHWV4yCrb": {
+            "id": "iykrs6fmHWV4yCrb",
+            "input": "flags.triggerTrove.vampiricMaidenMinuend",
+            "isArray": false,
+            "label": "Minuend",
+            "slug": "path",
+            "type": "number"
+          }
         }
       },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 893.5000095183822,
-        "y": 453.41639329738234
-      },
-      "id": "WHcQYiRoRCkRxU3B"
-    },
-    {
-      "type": "delete-item",
-      "position": {
-        "x": 2615.8463142207943,
-        "y": 324.6424111008471
-      },
-      "id": "Dk9505cvb6PNbYvg",
+      "id": "cnO1XZKBLPz94oj4",
       "inputs": {
-        "item": {
-          "connection": "uaX8du0OVLj4EkA0:outputs:item"
+        "input": {
+          "connection": "9DDQ9Z85HtkKhf0H:outputs:entry"
         }
-      }
+      },
+      "outs": {
+        "out": {
+          "connection": "Ky8YTWpcAJYKGaHI:ins:in"
+        }
+      },
+      "position": {
+        "x": 1061.8501498501505,
+        "y": 673.4179820179821
+      },
+      "type": "extract-actor"
     },
     {
-      "type": "has-item-slug",
-      "state": "split",
-      "position": {
-        "x": 2310.333395594518,
-        "y": 324.7448192930467
+      "custom": {
+        "inputs": {
+          "6CZHs24R5rU1Wm4P": {
+            "id": "6CZHs24R5rU1Wm4P",
+            "input": "y",
+            "label": "y",
+            "slug": "variable",
+            "type": "number"
+          },
+          "VUnTcCReTjAVBjhr": {
+            "id": "VUnTcCReTjAVBjhr",
+            "input": "x",
+            "label": "x",
+            "slug": "variable",
+            "type": "number"
+          }
+        }
       },
-      "id": "uaX8du0OVLj4EkA0",
+      "id": "Ky8YTWpcAJYKGaHI",
       "inputs": {
-        "target": {
-          "connection": "S4okiCLWEzIci7LK:outputs:entry"
+        "6CZHs24R5rU1Wm4P": {
+          "connection": "cnO1XZKBLPz94oj4:outputs:96Xk2BnGMJV5y3GJ"
         },
-        "slug": {
-          "value": "tmp-vampiric-feast"
+        "formula": {
+          "value": "floor((@x-@y)/2)"
+        },
+        "VUnTcCReTjAVBjhr": {
+          "connection": "cnO1XZKBLPz94oj4:outputs:iykrs6fmHWV4yCrb"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "GePdQKjnrgiVKwuX:ins:in"
+        }
+      },
+      "position": {
+        "x": 1288.6033966033965,
+        "y": 673.5076867576865
+      },
+      "type": "resolve-formula"
+    },
+    {
+      "id": "doEZJzjGb2i4TJln",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:vampiric-feast"
+        },
+        "list": {
+          "connection": "0pxJsv2BMOZYs0FT:outputs:options"
         }
       },
       "outs": {
         "true": {
-          "connection": "Dk9505cvb6PNbYvg:ins:in"
+          "connection": "JqsqhROiSIcNUcPl:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 316.27272727272737,
+        "y": 191.63636363636374
+      },
+      "type": "list-contains"
     },
     {
+      "id": "rJFlGHSm8l457ehT",
       "inputs": {
         "entry": {
-          "connection": "pMqYLPSIOu8E6dYP:outputs:target"
+          "connection": "0pxJsv2BMOZYs0FT:outputs:roller"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 2100.071414092409,
-        "y": 774.5234679937573
+        "x": 421.0000000000002,
+        "y": 329.75000000000006
       },
-      "id": "S4okiCLWEzIci7LK"
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "MMzNUMHTUetiexLk",
+      "inputs": {
+        "entry": {
+          "connection": "0pxJsv2BMOZYs0FT:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 1156.3787878787884,
+        "y": 355.6237373737375
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "BSybmhcIip9CgxWx",
+      "inputs": {
+        "entry": {
+          "connection": "9iAl5OdqDf0bKWGm:outputs:origin"
+        }
+      },
+      "position": {
+        "x": 1951.6839271839276,
+        "y": 731.4234654234658
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "Fyhxod6o5x4qz4pK": {
+            "id": "Fyhxod6o5x4qz4pK",
+            "input": "rank",
+            "isArray": false,
+            "label": "Rank",
+            "slug": "path",
+            "type": "number"
+          }
+        }
+      },
+      "id": "8LU0R4PeLQjyAXVr",
+      "inputs": {
+        "input": {
+          "connection": "Lb4cBFB4gdqNcsqo:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "FztPUfKSzSNWFQYt:ins:in"
+        }
+      },
+      "position": {
+        "x": 1057.6330336330343,
+        "y": 208.95050505050494
+      },
+      "type": "extract-item"
+    },
+    {
+      "id": "Lb4cBFB4gdqNcsqo",
+      "inputs": {
+        "entry": {
+          "connection": "0pxJsv2BMOZYs0FT:outputs:item"
+        }
+      },
+      "position": {
+        "x": 939.9321789321793,
+        "y": 325.6338383838382
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "lmkhCDo92ShbyCIE",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:vampiric-feast"
+        },
+        "list": {
+          "connection": "9iAl5OdqDf0bKWGm:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "6Uj41j6A0uQOfU2P:ins:in"
+        }
+      },
+      "position": {
+        "x": 291.828282828283,
+        "y": 660.5252525252528
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "6Uj41j6A0uQOfU2P",
+      "inputs": {
+        "slug": {
+          "value": "trigger-trove-vampiric-feast-minuend"
+        },
+        "target": {
+          "connection": "ZZuuZTaGmW7DTbWB:outputs:entry"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "fbKP8Z1f03LLgfLR:ins:in"
+        }
+      },
+      "position": {
+        "x": 515.2849372849378,
+        "y": 660.614840714841
+      },
+      "type": "has-item-slug"
+    },
+    {
+      "id": "ZZuuZTaGmW7DTbWB",
+      "inputs": {
+        "entry": {
+          "connection": "9iAl5OdqDf0bKWGm:outputs:target"
+        }
+      },
+      "position": {
+        "x": 341.6136086136091,
+        "y": 797.8319735819738
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "Fyhxod6o5x4qz4pK": {
+            "id": "Fyhxod6o5x4qz4pK",
+            "input": "level",
+            "isArray": false,
+            "label": "Rank",
+            "slug": "path",
+            "type": "number"
+          }
+        }
+      },
+      "id": "fbKP8Z1f03LLgfLR",
+      "inputs": {
+        "input": {
+          "connection": "6Uj41j6A0uQOfU2P:outputs:item"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "cnO1XZKBLPz94oj4:ins:in"
+        }
+      },
+      "position": {
+        "x": 834.0176490176499,
+        "y": 673.5658896658897
+      },
+      "type": "extract-item"
+    },
+    {
+      "id": "9DDQ9Z85HtkKhf0H",
+      "inputs": {
+        "entry": {
+          "connection": "9iAl5OdqDf0bKWGm:outputs:target"
+        }
+      },
+      "position": {
+        "x": 887.8228160728165,
+        "y": 775.3756798756801
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "ff3KLe7HrA82w7bQ",
+      "inputs": {
+        "entry": {
+          "connection": "fbKP8Z1f03LLgfLR:outputs:Fyhxod6o5x4qz4pK"
+        }
+      },
+      "position": {
+        "x": 2213.5069652569664,
+        "y": 743.96250971251
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "L4WlS47Z9GYGjSvE",
+      "inputs": {
+        "item": {
+          "connection": "WL6VJ1jKjlp76M8v:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 2702.760406260406,
+        "y": 580.2055722055719
+      },
+      "type": "delete-item"
+    },
+    {
+      "id": "WL6VJ1jKjlp76M8v",
+      "inputs": {
+        "entry": {
+          "connection": "6Uj41j6A0uQOfU2P:outputs:item"
+        }
+      },
+      "position": {
+        "x": 2551.769730269729,
+        "y": 646.0639638139637
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "98OMBWrpnu5eRgT6": {
+            "id": "98OMBWrpnu5eRgT6",
+            "input": "temphp",
+            "label": "temphp",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "id": "GePdQKjnrgiVKwuX",
+      "inputs": {
+        "98OMBWrpnu5eRgT6": {
+          "connection": "Ky8YTWpcAJYKGaHI:outputs:value"
+        },
+        "plain": {
+          "value": "{\"key\": \"TempHP\", \"value\": \"@temphp\"}"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "DqbbMTgb1wqmUHsO:ins:in"
+        }
+      },
+      "position": {
+        "x": 1587.3116883116877,
+        "y": 686.9896048396049
+      },
+      "type": "format-text"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "sw61WQ4hW6V7Abxp": {
+            "id": "sw61WQ4hW6V7Abxp",
+            "input": "hp",
+            "label": "hp",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "id": "Q80XmYzMCm1so3i7",
+      "inputs": {
+        "plain": {
+          "value": "{\"key\": \"ActiveEffectLike\",  \"mode\": \"override\",  \"path\": \"flags.triggerTrove.vampiricMaidenMinuend\",\"value\":@hp}"
+        },
+        "sw61WQ4hW6V7Abxp": {
+          "connection": "JqsqhROiSIcNUcPl:outputs:83K2PUKWEJ7h1y9R"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "8LU0R4PeLQjyAXVr:ins:in"
+        }
+      },
+      "position": {
+        "x": 756,
+        "y": 208
+      },
+      "type": "format-text"
+    },
+    {
+      "id": "m0l9jPPDYpnPGUMb",
+      "inputs": {
+        "entry": {
+          "connection": "Q80XmYzMCm1so3i7:outputs:result"
+        }
+      },
+      "position": {
+        "x": 1146.875,
+        "y": 399.2499999999999
+      },
+      "type": "__variable_getter__"
     }
   ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
   "variables": {
-    "pMqYLPSIOu8E6dYP:outputs:origin": {
+    "0pxJsv2BMOZYs0FT:outputs:item": {
       "isArray": false,
-      "label": "Origin",
+      "label": "Item",
+      "type": "item"
+    },
+    "0pxJsv2BMOZYs0FT:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
       "type": "target"
     },
-    "pMqYLPSIOu8E6dYP:outputs:target": {
+    "6Uj41j6A0uQOfU2P:outputs:item": {
       "isArray": false,
-      "label": "Target",
+      "label": "Aux Effect",
+      "type": "item"
+    },
+    "9iAl5OdqDf0bKWGm:outputs:origin": {
+      "isArray": false,
+      "label": "Damage Origin",
       "type": "target"
+    },
+    "9iAl5OdqDf0bKWGm:outputs:target": {
+      "isArray": false,
+      "label": "Damage Target",
+      "type": "target"
+    },
+    "fbKP8Z1f03LLgfLR:outputs:Fyhxod6o5x4qz4pK": {
+      "isArray": false,
+      "label": "Rank",
+      "type": "number"
+    },
+    "Q80XmYzMCm1so3i7:outputs:result": {
+      "isArray": false,
+      "label": "Minuend",
+      "type": "text"
     }
-  },
-  "id": "8EQafRQHVkKvyXxx",
-  "description": "<p>@Localize[TRIGGERTROVE.VampiricFeast.Trigger.Description]</p>"
+  }
 }

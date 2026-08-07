@@ -1,17 +1,10 @@
 {
-  "name": "Daze",
+  "description": "<p>@Localize[TRIGGERTROVE.Daze.Trigger.Description]</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "zIbzAcZWcCfus7CS",
+  "name": "Daze",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,34 +13,18 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:daze\"\n]"
+          "connection": "CwJJdCbkTbwhWtSw:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "W6EnA9YhSYWmu3tD:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "compare-outcomes",
+      "id": "W6EnA9YhSYWmu3tD",
       "inputs": {
         "a": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
@@ -56,34 +33,80 @@
           "value": "criticalFailure"
         }
       },
-      "position": {
-        "x": 1159.0000146116138,
-        "y": 338.4166458263811
-      },
-      "id": "W6EnA9YhSYWmu3tD",
       "outs": {
         "true": {
           "connection": "lFdCx2VTgrG6z97t:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1169.9091055207048,
+        "y": 412.96210037183573
+      },
+      "type": "compare-outcomes"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 1465.0341121341125,
-        "y": 322.2222190678631
-      },
       "id": "lFdCx2VTgrG6z97t",
       "inputs": {
         "condition": {
           "value": "stunned"
         },
+        "max": {
+          "value": 1
+        },
         "target": {
+          "connection": "j6M5br7V3YulsU9h:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1483.2159303159308,
+        "y": 396.7676736133175
+      },
+      "type": "increase-condition"
+    },
+    {
+      "id": "CwJJdCbkTbwhWtSw",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:daze"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "W6EnA9YhSYWmu3tD:ins:in"
+        }
+      },
+      "position": {
+        "x": 930.9090909090908,
+        "y": 276.36363636363626
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "j6M5br7V3YulsU9h",
+      "inputs": {
+        "entry": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
         }
-      }
+      },
+      "position": {
+        "x": 1320.454545454545,
+        "y": 573.8409090909091
+      },
+      "type": "__variable_getter__"
     }
   ],
-  "id": "bUkWq4kdtlmWEm84",
-  "description": "<p>@Localize[TRIGGERTROVE.Daze.Trigger.Description]</p>"
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
+      "type": "target"
+    }
+  }
 }

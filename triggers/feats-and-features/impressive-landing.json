@@ -1,128 +1,316 @@
 {
-  "name": "Impressive Landing",
+  "description": "<p>@Localize[TRIGGERTROVE.ImpressiveLanding.Trigger.Description]</p>",
   "folder": "Feats & Features",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "2vQbqZSOYaj4mobR",
+  "name": "Impressive Landing",
   "nodes": [
     {
-      "type": "template-placed-event",
-      "position": {
-        "x": 588.6667044035536,
-        "y": 359.00000928090196
-      },
       "id": "xrssoFCdO1h9lcOM",
       "outs": {
         "out": {
           "connection": "DXuzLYNbpvB6K1yf:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 588.6667044035536,
+        "y": 359.00000928090196
+      },
+      "type": "template-placed-event"
     },
     {
-      "type": "match-predicate",
+      "id": "DXuzLYNbpvB6K1yf",
       "inputs": {
         "options": {
           "connection": "xrssoFCdO1h9lcOM:outputs:options"
         },
         "predicate": {
-          "value": "[\n  \"origin:item:impressive-landing\"\n]"
+          "value": "[\n  \"origin:item:slug:impressive-landing\"\n]"
         }
       },
-      "position": {
-        "x": 855.3334905703318,
-        "y": 374.5833503521398
-      },
-      "id": "DXuzLYNbpvB6K1yf",
       "outs": {
         "true": {
           "connection": "zMR3VmE4fQZg4Bzr:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 829.3334905703318,
+        "y": 392.5833503521398
+      },
+      "type": "match-predicate"
     },
     {
-      "type": "create-behavior",
-      "state": "terrain",
+      "id": "zMR3VmE4fQZg4Bzr",
       "inputs": {
-        "region": {
-          "connection": "xrssoFCdO1h9lcOM:outputs:region"
-        },
         "name": {
           "value": "Difficult Terrain"
+        },
+        "region": {
+          "connection": "LzU3Z9sktTR2nUGb:outputs:entry"
         },
         "walk": {
           "value": "2"
         }
       },
-      "position": {
-        "x": 1114.6668584988704,
-        "y": 358.48331947535615
+      "outs": {
+        "out": {
+          "connection": "2dRDR3YCFJ5FQ2G1:ins:in"
+        }
       },
-      "id": "zMR3VmE4fQZg4Bzr"
+      "position": {
+        "x": 1071.6668584988704,
+        "y": 376.48331947535615
+      },
+      "state": "terrain",
+      "type": "create-behavior"
     },
     {
-      "type": "damage-taken-event",
-      "position": {
-        "x": 590.0000621236863,
-        "y": 763.6666231442275
-      },
       "id": "OH95ZF0Wyk9Zb8n8",
       "outs": {
         "out": {
-          "connection": "YO35IRkBRLUsCLJt:ins:in"
-        }
-      }
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "predicate": {
-          "value": "[\n  \"item:impressive-landing\"\n]"
-        },
-        "options": {
-          "connection": "OH95ZF0Wyk9Zb8n8:outputs:options"
+          "connection": "UfjseD3dA0U901Wu:ins:in"
         }
       },
       "position": {
-        "x": 881.3333702391833,
-        "y": 779.916652703921
+        "x": 639.8485469721718,
+        "y": 774.9923807199854
       },
-      "id": "YO35IRkBRLUsCLJt",
-      "outs": {
-        "true": {
-          "connection": "ZaMfcam4QkijQ3So:ins:in"
-        }
-      }
+      "type": "damage-taken-event"
     },
     {
-      "type": "create-condition",
-      "position": {
-        "x": 1144.6667852524242,
-        "y": 763.6666841793818
-      },
       "id": "ZaMfcam4QkijQ3So",
       "inputs": {
         "condition": {
           "value": "off-guard"
         },
-        "pf2eImg": {
-          "value": "systems/pf2e/icons/conditions"
+        "name": {
+          "value": "Effect: Off-Guard from Impressive Landing"
         },
-        "target": {
-          "connection": "OH95ZF0Wyk9Zb8n8:outputs:target"
+        "pf2eImg": {
+          "value": "icons/magic/earth/barrier-stone-brown-green.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/magic/earth/barrier-stone-brown-green.webp"
         },
         "slug": {
-          "value": "off-guard-1round"
+          "value": "trigger-trove-off-guard-from-impressive-landing"
         },
-        "name": {
-          "value": "Off-guard (1 round)"
-        },
-        "origin": {
-          "connection": "OH95ZF0Wyk9Zb8n8:outputs:origin"
+        "target": {
+          "connection": "YZRz5tXHA15ZCa6t:outputs:entry"
         }
-      }
+      },
+      "position": {
+        "x": 1190.3334519190917,
+        "y": 796.0833508460489
+      },
+      "state": "fixed",
+      "type": "create-condition"
+    },
+    {
+      "id": "UfjseD3dA0U901Wu",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:impressive-landing"
+        },
+        "list": {
+          "connection": "OH95ZF0Wyk9Zb8n8:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "ZaMfcam4QkijQ3So:ins:in"
+        }
+      },
+      "position": {
+        "x": 931.5959595959606,
+        "y": 796.2146464646469
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "YZRz5tXHA15ZCa6t",
+      "inputs": {
+        "entry": {
+          "connection": "OH95ZF0Wyk9Zb8n8:outputs:target"
+        }
+      },
+      "position": {
+        "x": 982.5050505050517,
+        "y": 929.9646464646469
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "LzU3Z9sktTR2nUGb",
+      "inputs": {
+        "entry": {
+          "connection": "xrssoFCdO1h9lcOM:outputs:region"
+        }
+      },
+      "position": {
+        "x": 929,
+        "y": 520.75
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "GynhWegObc6gnzfQ",
+      "inputs": {
+        "formula": {
+          "connection": "q9RAEgoEWop2xCAu:outputs:formula"
+        },
+        "item": {
+          "connection": "GIbGo1IGK4Jwqc9R:outputs:entry"
+        },
+        "options": {
+          "connection": "q9RAEgoEWop2xCAu:outputs:options"
+        }
+      },
+      "position": {
+        "x": 2141.453379953381,
+        "y": 429.09696969696984
+      },
+      "type": "roll-damage"
+    },
+    {
+      "id": "q9RAEgoEWop2xCAu",
+      "inputs": {
+        "item": {
+          "connection": "2dRDR3YCFJ5FQ2G1:outputs:item"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "GynhWegObc6gnzfQ:ins:in"
+        }
+      },
+      "position": {
+        "x": 1615.5303030303035,
+        "y": 477.1287878787878
+      },
+      "type": "item-formula"
+    },
+    {
+      "id": "2dRDR3YCFJ5FQ2G1",
+      "inputs": {
+        "pf2e": {
+          "value": "Compendium.pf2e.feats-srd.Item.QO8l5Dao8HnaFQE4"
+        },
+        "sf2e": {
+          "value": "Compendium.pf2e.feats-srd.Item.QO8l5Dao8HnaFQE4"
+        },
+        "target": {
+          "connection": "TaGy69inwDKZmTOh:outputs:entry"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "q9RAEgoEWop2xCAu:ins:in"
+        }
+      },
+      "position": {
+        "x": 1333.0897435897436,
+        "y": 458.9833333333332
+      },
+      "type": "has-item"
+    },
+    {
+      "id": "TaGy69inwDKZmTOh",
+      "inputs": {
+        "entry": {
+          "connection": "xrssoFCdO1h9lcOM:outputs:origin"
+        }
+      },
+      "position": {
+        "x": 1131.9778554778554,
+        "y": 664.2144522144523
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "GIbGo1IGK4Jwqc9R",
+      "inputs": {
+        "entry": {
+          "connection": "2dRDR3YCFJ5FQ2G1:outputs:item"
+        }
+      },
+      "position": {
+        "x": 2019.705128205129,
+        "y": 551.3962703962704
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "tl6tfPPsJtdiJGHb",
+      "outs": {
+        "out": {
+          "connection": "GJ5z0DI5Mt2xLyhc:ins:in"
+        }
+      },
+      "position": {
+        "x": 1454.1968309468311,
+        "y": 840.1891996891995
+      },
+      "type": "turn-start-event"
+    },
+    {
+      "id": "GJ5z0DI5Mt2xLyhc",
+      "inputs": {
+        "slug": {
+          "value": "trigger-trove-off-guard-from-impressive-landing"
+        },
+        "target": {
+          "connection": "tl6tfPPsJtdiJGHb:outputs:combatant"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "u7oTBDWQpCjJckpk:ins:in"
+        }
+      },
+      "position": {
+        "x": 1665.8976856476859,
+        "y": 839.4780885780884
+      },
+      "type": "has-item-slug"
+    },
+    {
+      "id": "u7oTBDWQpCjJckpk",
+      "inputs": {
+        "item": {
+          "connection": "GJ5z0DI5Mt2xLyhc:outputs:item"
+        }
+      },
+      "position": {
+        "x": 1926.6350593850595,
+        "y": 840.3739316239315
+      },
+      "type": "delete-item"
     }
   ],
-  "id": "suimpAfcKCOwDn2C",
-  "description": "<p>@Localize[TRIGGERTROVE.ImpressiveLanding.Trigger.Description]</p>"
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "variables": {
+    "2dRDR3YCFJ5FQ2G1:outputs:item": {
+      "isArray": false,
+      "label": "Feat",
+      "type": "item"
+    },
+    "OH95ZF0Wyk9Zb8n8:outputs:target": {
+      "isArray": false,
+      "label": "Damage Target",
+      "type": "target"
+    },
+    "xrssoFCdO1h9lcOM:outputs:origin": {
+      "isArray": false,
+      "label": "Template Origin",
+      "type": "target"
+    },
+    "xrssoFCdO1h9lcOM:outputs:region": {
+      "isArray": false,
+      "label": "Region",
+      "type": "region"
+    }
+  }
 }

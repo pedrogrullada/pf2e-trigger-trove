@@ -1,17 +1,10 @@
 {
-  "name": "Inner Radiance Torrent",
+  "description": "<p>@Localize[TRIGGERTROVE.InnerRadianceTorrent.Trigger.Description]</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "u4TLeGitlKPQ9Tuk",
+  "name": "Inner Radiance Torrent",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,76 +13,175 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:inner-radiance-torrent\"\n]"
+          "connection": "MnV1lSNpVTWwPyKW:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "W6EnA9YhSYWmu3tD:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "compare-outcomes",
+      "id": "W6EnA9YhSYWmu3tD",
       "inputs": {
         "a": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+          "connection": "OU81ppOqCMIp2mdp:outputs:entry"
         },
         "b": {
           "value": "criticalFailure"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "pJ8V0OL1XoVyqTh6:ins:in"
         }
       },
       "position": {
         "x": 1159.0000146116138,
         "y": 338.4166458263811
       },
-      "id": "W6EnA9YhSYWmu3tD",
-      "outs": {
-        "true": {
-          "connection": "9umhWR4MRlGXxPAK:ins:in"
-        }
-      }
+      "type": "compare-outcomes"
     },
     {
-      "type": "create-condition",
-      "position": {
-        "x": 1454.5897159357971,
-        "y": 322.06663427962593
-      },
       "id": "9umhWR4MRlGXxPAK",
       "inputs": {
-        "target": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        "name": {
+          "value": "Spell Effect: Inner Radiance Torrent"
         },
         "pf2eImg": {
-          "value": "systems/pf2e/icons/conditions/blinded.webp"
+          "value": "icons/magic/fire/beam-jet-stream-embers.webp"
         },
-        "name": {
-          "value": "Effect : Blinded (1 round)"
+        "sf2eImg": {
+          "value": "icons/magic/fire/beam-jet-stream-embers.webp"
         },
         "slug": {
-          "value": "blinded-1round"
+          "value": "trigger-trove-inner-radiance-torrent"
+        },
+        "target": {
+          "connection": "mbiUNwypQfaDEEVe:outputs:entry"
+        },
+        "value": {
+          "connection": "pJ8V0OL1XoVyqTh6:outputs:kexYqD8SmDJ9krZF"
         }
-      }
+      },
+      "position": {
+        "x": 1718.5897159357971,
+        "y": 286.066634279626
+      },
+      "type": "create-condition"
+    },
+    {
+      "id": "OU81ppOqCMIp2mdp",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 1018,
+        "y": 466.75
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "mbiUNwypQfaDEEVe",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 1552,
+        "y": 267.75
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "kexYqD8SmDJ9krZF": {
+            "id": "kexYqD8SmDJ9krZF",
+            "input": "rank",
+            "isArray": false,
+            "label": "Rank",
+            "slug": "path",
+            "type": "number"
+          }
+        }
+      },
+      "id": "pJ8V0OL1XoVyqTh6",
+      "inputs": {
+        "input": {
+          "connection": "EkeaB5lAgbYpvhqn:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "9umhWR4MRlGXxPAK:ins:in"
+        }
+      },
+      "position": {
+        "x": 1455.923076923077,
+        "y": 338.4
+      },
+      "type": "extract-item"
+    },
+    {
+      "id": "EkeaB5lAgbYpvhqn",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:item"
+        }
+      },
+      "position": {
+        "x": 1325,
+        "y": 488.75
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "MnV1lSNpVTWwPyKW",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:inner-radiance-torrent"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "W6EnA9YhSYWmu3tD:ins:in"
+        }
+      },
+      "position": {
+        "x": 903,
+        "y": 335
+      },
+      "type": "list-contains"
     }
   ],
-  "id": "FH3QU7GJFOmZvNlb",
-  "description": "<p>@Localize[TRIGGERTROVE.InnerRadianceTorrent.Trigger.Description]</p>"
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
+  "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:item": {
+      "isArray": false,
+      "label": "Item",
+      "type": "item"
+    },
+    "3XC9Bm2VcInNzutZ:outputs:outcome": {
+      "isArray": false,
+      "label": "Outcome",
+      "type": "outcome"
+    },
+    "3XC9Bm2VcInNzutZ:outputs:roller": {
+      "isArray": false,
+      "label": "Roller",
+      "type": "target"
+    }
+  }
 }

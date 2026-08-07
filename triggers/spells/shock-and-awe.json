@@ -1,17 +1,10 @@
 {
-  "name": "Shock and Awe",
+  "description": "<p>@Localize[TRIGGERTROVE.ShockAndAwe.Trigger.Description]</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "NCScIUJjc7ExkAnL",
+  "name": "Shock and Awe",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,38 +13,17 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:shock-and-awe\"\n]"
+          "connection": "04HSFkB1PSewBf0c:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 647.6666393648816,
+        "y": 307.71428593021494
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 1601.7008500486154,
-        "y": 578.2223639926794
-      },
       "id": "lFdCx2VTgrG6z97t",
       "inputs": {
         "condition": {
@@ -61,16 +33,16 @@
           "value": 1
         },
         "target": {
-          "connection": "igSlsRt62qRz2s68:outputs:entry"
+          "connection": "qsr38fcQF5KaCR6D:outputs:entry"
         }
-      }
+      },
+      "position": {
+        "x": 1658.8437071914725,
+        "y": 623.9366497069651
+      },
+      "type": "increase-condition"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 1602.3674833896814,
-        "y": 370.2222191277307
-      },
       "id": "neZ9rprFjwfj3jHX",
       "inputs": {
         "condition": {
@@ -79,25 +51,25 @@
         "max": {
           "value": 2
         },
+        "target": {
+          "connection": "KGeEEcQVLpctY2xB:outputs:entry"
+        },
         "value": {
           "value": 2
-        },
-        "target": {
-          "connection": "igSlsRt62qRz2s68:outputs:entry"
         }
       },
       "outs": {
         "out": {
           "connection": "zW9NBnzyIGJheCaN:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1659.5103405325385,
+        "y": 415.93650484201635
+      },
+      "type": "increase-condition"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 1601.700864876469,
-        "y": 160.88882234956688
-      },
       "id": "PJWl8Ru7kpwSaXeB",
       "inputs": {
         "condition": {
@@ -106,62 +78,49 @@
         "max": {
           "value": 3
         },
+        "target": {
+          "connection": "KGeEEcQVLpctY2xB:outputs:entry"
+        },
         "value": {
           "value": 3
-        },
-        "target": {
-          "connection": "igSlsRt62qRz2s68:outputs:entry"
         }
       },
       "outs": {
         "out": {
           "connection": "0o1Y2xhgRzOYclLM:ins:in"
         }
-      }
-    },
-    {
-      "type": "split-outcome",
-      "inputs": {
-        "input": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
-        }
       },
       "position": {
-        "x": 1155.3332871816397,
-        "y": 337.25000796381175
+        "x": 1637.732610908215,
+        "y": 155.4919969527415
       },
+      "type": "increase-condition"
+    },
+    {
       "id": "eqRLx1DpO6Yf4nzm",
+      "inputs": {
+        "input": {
+          "connection": "fvpqsuKrt2VCV4fj:outputs:entry"
+        }
+      },
       "outs": {
-        "success": {
-          "connection": "lFdCx2VTgrG6z97t:ins:in"
+        "criticalFailure": {
+          "connection": "PJWl8Ru7kpwSaXeB:ins:in"
         },
         "failure": {
           "connection": "neZ9rprFjwfj3jHX:ins:in"
         },
-        "criticalFailure": {
-          "connection": "PJWl8Ru7kpwSaXeB:ins:in"
-        }
-      }
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        "success": {
+          "connection": "lFdCx2VTgrG6z97t:ins:in"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 1261.9999064362448,
-        "y": 500.3333180385307
+        "x": 1136.7618586102112,
+        "y": 375.82143653524037
       },
-      "id": "igSlsRt62qRz2s68"
+      "type": "split-outcome"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 1832.3675144416777,
-        "y": 161.44443044654187
-      },
       "id": "0o1Y2xhgRzOYclLM",
       "inputs": {
         "condition": {
@@ -170,20 +129,20 @@
         "max": {
           "value": 2
         },
+        "target": {
+          "connection": "DPheDHWEdwMviIN2:outputs:entry"
+        },
         "value": {
           "value": 2
-        },
-        "target": {
-          "connection": "igSlsRt62qRz2s68:outputs:entry"
         }
-      }
+      },
+      "position": {
+        "x": 1891.7325938067572,
+        "y": 154.9364939386054
+      },
+      "type": "increase-condition"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 1835.589702516589,
-        "y": 370.44443944915224
-      },
       "id": "zW9NBnzyIGJheCaN",
       "inputs": {
         "condition": {
@@ -193,18 +152,103 @@
           "value": 1
         },
         "target": {
-          "connection": "igSlsRt62qRz2s68:outputs:entry"
+          "connection": "DPheDHWEdwMviIN2:outputs:entry"
         }
-      }
+      },
+      "position": {
+        "x": 1892.7325596594462,
+        "y": 416.1587251634379
+      },
+      "type": "increase-condition"
+    },
+    {
+      "id": "04HSFkB1PSewBf0c",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:shock-and-awe"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
+        }
+      },
+      "position": {
+        "x": 900.5714285714287,
+        "y": 359.57142857142867
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "fvpqsuKrt2VCV4fj",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 989.7142857142858,
+        "y": 499.32142857142867
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "KGeEEcQVLpctY2xB",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 1503.6161616161621,
+        "y": 353.06457431457426
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "DPheDHWEdwMviIN2",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 1752.5050505050506,
+        "y": 351.953463203463
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "qsr38fcQF5KaCR6D",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 1511.3939393939393,
+        "y": 751.0010822510819
+      },
+      "type": "__variable_getter__"
     }
   ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
   "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:outcome": {
+      "isArray": false,
+      "label": "Outcome",
+      "type": "outcome"
+    },
     "3XC9Bm2VcInNzutZ:outputs:roller": {
       "isArray": false,
       "label": "Roller",
       "type": "target"
     }
-  },
-  "id": "g77TM3VGMFuYTR1E",
-  "description": "<p>@Localize[TRIGGERTROVE.ShockAndAwe.Trigger.Description]</p>"
+  }
 }

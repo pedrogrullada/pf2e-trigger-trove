@@ -1,17 +1,10 @@
 {
-  "name": "Sawtooth Terrain",
+  "description": "<p>When a roller saves against <strong>Sawtooth Terrain</strong>, add persistent bleed damage and an effect containing a Speed penalty depending on their degree of success. If the roller receives magical healing while having this effect, remove the effect. If a template originating from Sawtooth Terrain is placed, add a difficult terrain behavior to it.</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "ctrh9fxiusxU7cYi",
+  "name": "Sawtooth Terrain",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,791 +13,739 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:sawtooth-terrain\"\n]"
+          "connection": "9rxZtnPz2IZcRysq:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "vDtNoEfCIpxyl04s:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "split-outcome",
-      "inputs": {
-        "input": {
-          "connection": "LvqbtfrwYw04OSR5:outputs:entry"
-        }
-      },
-      "position": {
-        "x": 2029.5063962837562,
-        "y": 340.2139387729891
-      },
-      "id": "eqRLx1DpO6Yf4nzm",
-      "outs": {
-        "criticalFailure": {
-          "connection": "lb7lbwGz9gx4jkBP:ins:in"
-        },
-        "failure": {
-          "connection": "WQZH0xd0fsqgfPdp:ins:in"
-        }
-      }
-    },
-    {
-      "type": "extract-item",
-      "position": {
-        "x": 1160.7353731534063,
-        "y": 339.0319923036636
-      },
-      "id": "vDtNoEfCIpxyl04s",
       "custom": {
         "outputs": {
           "9iMKsEny9vcJK95j": {
             "id": "9iMKsEny9vcJK95j",
-            "input": "level",
-            "label": "level",
-            "slug": "path",
+            "input": "rank",
             "isArray": false,
+            "label": "Rank",
+            "slug": "path",
             "type": "number"
           }
         }
       },
+      "id": "vDtNoEfCIpxyl04s",
       "inputs": {
         "input": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:item"
+          "connection": "wXieOYbCrM8zUkKW:outputs:entry"
         }
       },
       "outs": {
         "out": {
-          "connection": "7sViCv8f7Yv6ysRl:ins:in"
-        }
-      }
-    },
-    {
-      "type": "extract-actor",
-      "inputs": {
-        "input": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:origin"
+          "connection": "5ZMf7cYS7BDjyBJg:ins:in"
         }
       },
       "position": {
-        "x": 1404.6665625257097,
-        "y": 339.1111498095205
+        "x": 1105.294813712847,
+        "y": 405.29461856629007
       },
-      "id": "7sViCv8f7Yv6ysRl",
-      "custom": {
-        "outputs": {
-          "Nl2k6vg1I0emyxBI": {
-            "id": "Nl2k6vg1I0emyxBI",
-            "input": "system.attributes.spellDC.value",
-            "label": "spellDC",
-            "slug": "path",
-            "isArray": false,
-            "type": "number"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "Cgy6Ni8lOtVk481j:ins:in"
-        }
-      }
+      "type": "extract-item"
     },
     {
-      "type": "match-predicate",
-      "inputs": {
-        "predicate": {
-          "value": "[\n  \"origin:item:slug:sawtooth-terrain\"\n]"
-        },
-        "options": {
-          "connection": "QRc59NrEcIm3AsqY:outputs:options"
-        }
-      },
-      "position": {
-        "x": 903.3517566209931,
-        "y": 1457.4258542897655
-      },
-      "id": "WyUZn5Zb2Of0F1Bt",
-      "outs": {
-        "true": {
-          "connection": "zyd0sp2FFRV8k4vF:ins:in"
-        }
-      }
-    },
-    {
-      "type": "create-behavior",
-      "position": {
-        "x": 1133.7597224749409,
-        "y": 1442.1818421796606
-      },
       "id": "zyd0sp2FFRV8k4vF",
       "inputs": {
         "name": {
           "value": "Difficult Terrain"
         },
         "region": {
-          "connection": "QRc59NrEcIm3AsqY:outputs:region"
+          "connection": "BawOKPjwRX1kdNn0:outputs:entry"
         },
         "walk": {
           "value": "2"
         }
       },
-      "state": "terrain"
+      "position": {
+        "x": 1105.085925683497,
+        "y": 686.3648487156083
+      },
+      "state": "terrain",
+      "type": "create-behavior"
     },
     {
-      "type": "template-placed-event",
-      "position": {
-        "x": 642.0185240429239,
-        "y": 1441.4258547687073
-      },
       "id": "QRc59NrEcIm3AsqY",
       "outs": {
         "out": {
-          "connection": "WyUZn5Zb2Of0F1Bt:ins:in"
-        }
-      }
-    },
-    {
-      "custom": {
-        "title": "Adds Effet & Persistent Damage",
-        "outputs": {
-          "yWwyz99DIE58xw7U": {
-            "id": "yWwyz99DIE58xw7U",
-            "label": "formula",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "K9NtcgRNLosQ5nxM": {
-            "id": "K9NtcgRNLosQ5nxM",
-            "label": "slug",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "9sVi7lEPruJheAIz": {
-            "id": "9sVi7lEPruJheAIz",
-            "label": "description",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "vg1D2ry50TMy4WUD": {
-            "id": "vg1D2ry50TMy4WUD",
-            "label": "speedPenalty",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          }
+          "connection": "LJfPBKqH1W5aBdUK:ins:in"
         }
       },
-      "type": "__gate_exit__",
       "position": {
-        "x": 643.3889344366571,
-        "y": 803.1667033420449
+        "x": 646.0185240429239,
+        "y": 611.4258547687073
       },
-      "id": "nTFvtgoDB1i9jru1",
-      "outs": {
-        "out": {
-          "connection": "B0iXUqr4mX4zCD6S:ins:in"
-        }
-      }
+      "type": "template-placed-event"
     },
     {
-      "type": "format-text",
-      "position": {
-        "x": 2401.8501605547926,
-        "y": 75.58276881997688
-      },
-      "id": "lb7lbwGz9gx4jkBP",
-      "inputs": {
-        "localization": {
-          "value": "@Localize[TRIGGERTROVE.SawtoothTerrain.Trigger.EffectDescriptionCritFail]"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "OFYFKAsNCCmB2Xeu:ins:in"
-        }
-      },
-      "state": "localization"
-    },
-    {
-      "type": "format-text",
-      "position": {
-        "x": 2761.629737957476,
-        "y": 75.6885259497376
-      },
-      "id": "OFYFKAsNCCmB2Xeu",
-      "custom": {
-        "inputs": {
-          "8z2TFEZizklxurbh": {
-            "id": "8z2TFEZizklxurbh",
-            "input": "description",
-            "label": "description",
-            "slug": "variable",
-            "type": "text"
-          },
-          "6VbRMEd8VxioYSqM": {
-            "id": "6VbRMEd8VxioYSqM",
-            "input": "spelldc",
-            "label": "spelldc",
-            "slug": "variable",
-            "type": "text"
-          }
-        }
-      },
-      "inputs": {
-        "plain": {
-          "value": "{\"itemType\":\"effect\",\"key\":\"ItemAlteration\",\"mode\":\"override\",\"predicate\":[\"item:slug:effect-sawtooth-terrain-critfail\"],\"property\":\"description\",\"value\":[{\"text\":\"@description @Check[type:medicine|dc:@spelldc]\"}]}"
-        },
-        "8z2TFEZizklxurbh": {
-          "connection": "lb7lbwGz9gx4jkBP:outputs:result"
-        },
-        "6VbRMEd8VxioYSqM": {
-          "connection": "u2Zu4cK4oroY70Fv:outputs:entry"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "8KLXWFdYl0UWj4s3:ins:in"
-        }
-      }
-    },
-    {
-      "type": "format-text",
-      "position": {
-        "x": 1641.965249930359,
-        "y": 339.467481297963
-      },
-      "id": "Cgy6Ni8lOtVk481j",
-      "custom": {
-        "inputs": {
-          "ICntV4P71vPmipDn": {
-            "id": "ICntV4P71vPmipDn",
-            "input": "outcome",
-            "label": "outcome",
-            "slug": "variable",
-            "type": "text"
-          }
-        }
-      },
-      "inputs": {
-        "plain": {
-          "value": "Effect : Sawtooth Terrain (@outcome)"
-        },
-        "ICntV4P71vPmipDn": {
-          "connection": "LvqbtfrwYw04OSR5:outputs:entry"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
-        }
-      }
-    },
-    {
+      "id": "LJfPBKqH1W5aBdUK",
       "inputs": {
         "entry": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+          "value": "origin:item:slug:sawtooth-terrain"
+        },
+        "list": {
+          "connection": "QRc59NrEcIm3AsqY:outputs:options"
         }
       },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 1155.0079630164757,
-        "y": 934.9045991788939
+      "outs": {
+        "true": {
+          "connection": "zyd0sp2FFRV8k4vF:ins:in"
+        }
       },
-      "id": "hJFtUXWflIkomaCr"
+      "position": {
+        "x": 884.3498217468805,
+        "y": 649.7889610389611
+      },
+      "type": "list-contains"
     },
     {
+      "id": "9rxZtnPz2IZcRysq",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:sawtooth-terrain"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "vDtNoEfCIpxyl04s:ins:in"
+        }
+      },
+      "position": {
+        "x": 889.1909707939118,
+        "y": 389.85272080860346
+      },
+      "state": "split",
+      "type": "list-contains"
+    },
+    {
+      "id": "wXieOYbCrM8zUkKW",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:item"
+        }
+      },
+      "position": {
+        "x": 996.5064331093745,
+        "y": 527.993552199435
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "5ZMf7cYS7BDjyBJg",
+      "inputs": {
+        "input": {
+          "connection": "pf1iLAiGVMKNEfSo:outputs:entry"
+        }
+      },
+      "outs": {
+        "criticalFailure": {
+          "connection": "Lge8CRe1Bv3vSAk8:ins:in"
+        },
+        "failure": {
+          "connection": "iCWBcJWsyjtlqRqX:ins:in"
+        }
+      },
+      "position": {
+        "x": 1325.9267676767677,
+        "y": 381.2752525252525
+      },
+      "type": "split-outcome"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "DL786VOf8lIuQAKF": {
+            "id": "DL786VOf8lIuQAKF",
+            "input": "dos",
+            "label": "dos",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "id": "90seBdU78CdC4hKY",
+      "inputs": {
+        "DL786VOf8lIuQAKF": {
+          "connection": "iCWBcJWsyjtlqRqX:outputs:result"
+        },
+        "plain": {
+          "value": "Spell Effect: Sawtooth Terrain (@dos)"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "KUlDxQxlf7PVkXBT:ins:in"
+        }
+      },
+      "position": {
+        "x": 1894.7386389899075,
+        "y": 514.6755958513614
+      },
+      "type": "format-text"
+    },
+    {
+      "id": "iCWBcJWsyjtlqRqX",
+      "inputs": {
+        "localization": {
+          "value": "PF2E.Check.Result.Degree.Check.failure"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "90seBdU78CdC4hKY:ins:in"
+        }
+      },
+      "position": {
+        "x": 1579.1200908713608,
+        "y": 514.8776549034209
+      },
+      "state": "localization",
+      "type": "format-text"
+    },
+    {
+      "id": "Lge8CRe1Bv3vSAk8",
+      "inputs": {
+        "localization": {
+          "value": "PF2E.Check.Result.Degree.Check.criticalFailure"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "l58VtcW7Pqae5e37:ins:in"
+        }
+      },
+      "position": {
+        "x": 1579.023834186868,
+        "y": 330.4618795023513
+      },
+      "state": "localization",
+      "type": "format-text"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "DL786VOf8lIuQAKF": {
+            "id": "DL786VOf8lIuQAKF",
+            "input": "dos",
+            "label": "dos",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "id": "l58VtcW7Pqae5e37",
+      "inputs": {
+        "DL786VOf8lIuQAKF": {
+          "connection": "Lge8CRe1Bv3vSAk8:outputs:result"
+        },
+        "plain": {
+          "value": "Spell Effect: Sawtooth Terrain (@dos)"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "FwHaMgBNneOfNO91:ins:in"
+        }
+      },
+      "position": {
+        "x": 1896.8317762448096,
+        "y": 330.10830529877694
+      },
+      "type": "format-text"
+    },
+    {
+      "id": "pf1iLAiGVMKNEfSo",
       "inputs": {
         "entry": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 1488.8570411936723,
-        "y": 430.6663539581167
+        "x": 1191.9419191919192,
+        "y": 504.891414141414
       },
-      "id": "LvqbtfrwYw04OSR5"
-    },
-    {
-      "type": "format-text",
-      "position": {
-        "x": 2403.3366434190857,
-        "y": 389.5797643819976
-      },
-      "id": "WQZH0xd0fsqgfPdp",
-      "inputs": {
-        "localization": {
-          "value": "@Localize[TRIGGERTROVE.SawtoothTerrain.Trigger.EffectDescriptionFail]"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "e8YSrYerBuLp6pPS:ins:in"
-        }
-      },
-      "state": "localization"
-    },
-    {
-      "type": "format-text",
-      "position": {
-        "x": 2750.388949038088,
-        "y": 389.68552151175857
-      },
-      "id": "e8YSrYerBuLp6pPS",
-      "custom": {
-        "inputs": {
-          "8z2TFEZizklxurbh": {
-            "id": "8z2TFEZizklxurbh",
-            "input": "description",
-            "label": "description",
-            "slug": "variable",
-            "type": "text"
-          },
-          "6VbRMEd8VxioYSqM": {
-            "id": "6VbRMEd8VxioYSqM",
-            "input": "spelldc",
-            "label": "spelldc",
-            "slug": "variable",
-            "type": "text"
-          }
-        }
-      },
-      "inputs": {
-        "plain": {
-          "value": "{\"itemType\":\"effect\",\"key\":\"ItemAlteration\",\"mode\":\"override\",\"predicate\":[\"item:slug:effect-sawtooth-terrain-fail\"],\"property\":\"description\",\"value\":[{\"text\":\"@description @Check[type:medicine|dc:@spelldc]\"}]}"
-        },
-        "8z2TFEZizklxurbh": {
-          "connection": "WQZH0xd0fsqgfPdp:outputs:result"
-        },
-        "6VbRMEd8VxioYSqM": {
-          "connection": "u2Zu4cK4oroY70Fv:outputs:entry"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "BYpXb5nnEKKSu1o5:ins:in"
-        }
-      }
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "7sViCv8f7Yv6ysRl:outputs:Nl2k6vg1I0emyxBI"
-        }
-      },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 2130.559287333599,
-        "y": 504.54600216533163
-      },
-      "id": "u2Zu4cK4oroY70Fv"
+      "type": "__variable_getter__"
     },
     {
       "custom": {
         "inputs": {
-          "yWwyz99DIE58xw7U": {
-            "id": "yWwyz99DIE58xw7U",
-            "label": "formula",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "K9NtcgRNLosQ5nxM": {
-            "id": "K9NtcgRNLosQ5nxM",
-            "label": "slug",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "9sVi7lEPruJheAIz": {
-            "id": "9sVi7lEPruJheAIz",
-            "label": "description",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "vg1D2ry50TMy4WUD": {
-            "id": "vg1D2ry50TMy4WUD",
-            "label": "speedPenalty",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "nTFvtgoDB1i9jru1:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 3203.0007827557056,
-        "y": 60.359149099387764
-      },
-      "id": "8KLXWFdYl0UWj4s3",
-      "inputs": {
-        "K9NtcgRNLosQ5nxM": {
-          "value": "effect-sawtooth-terrain-critfail"
-        },
-        "9sVi7lEPruJheAIz": {
-          "connection": "OFYFKAsNCCmB2Xeu:outputs:result"
-        },
-        "Oh6k1uiw8mxUFo2y": {
-          "value": "-15"
-        },
-        "vg1D2ry50TMy4WUD": {
-          "value": -15
-        },
-        "yWwyz99DIE58xw7U": {
-          "value": "(2*floor((@lvl -1)/2))d6"
-        }
-      }
-    },
-    {
-      "custom": {
-        "inputs": {
-          "yWwyz99DIE58xw7U": {
-            "id": "yWwyz99DIE58xw7U",
-            "label": "formula",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "K9NtcgRNLosQ5nxM": {
-            "id": "K9NtcgRNLosQ5nxM",
-            "label": "slug",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "9sVi7lEPruJheAIz": {
-            "id": "9sVi7lEPruJheAIz",
-            "label": "description",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          },
-          "vg1D2ry50TMy4WUD": {
-            "id": "vg1D2ry50TMy4WUD",
-            "label": "speedPenalty",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "nTFvtgoDB1i9jru1:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 3203.175297271072,
-        "y": 374.39884035845955
-      },
-      "id": "BYpXb5nnEKKSu1o5",
-      "inputs": {
-        "K9NtcgRNLosQ5nxM": {
-          "value": "effect-sawtooth-terrain-fail"
-        },
-        "9sVi7lEPruJheAIz": {
-          "connection": "e8YSrYerBuLp6pPS:outputs:result"
-        },
-        "Oh6k1uiw8mxUFo2y": {
-          "value": "-10"
-        },
-        "vg1D2ry50TMy4WUD": {
-          "value": -10
-        },
-        "yWwyz99DIE58xw7U": {
-          "value": "(floor((@lvl -1)/2))d6"
-        }
-      }
-    },
-    {
-      "type": "create-persistent",
-      "position": {
-        "x": 1293.58116563189,
-        "y": 804.2212593623033
-      },
-      "id": "UrU2l7umcnzJBdVK",
-      "inputs": {
-        "type": {
-          "value": "bleed"
-        },
-        "target": {
-          "connection": "hJFtUXWflIkomaCr:outputs:entry"
-        },
-        "die": {
-          "connection": "B0iXUqr4mX4zCD6S:outputs:result"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "TebHRsRZsJ05RGvA:ins:in"
-        }
-      }
-    },
-    {
-      "type": "create-effect",
-      "position": {
-        "x": 1962.0343923475689,
-        "y": 805.3781091188266
-      },
-      "id": "doOy4DtJzlBb7Q8n",
-      "custom": {
-        "inputs": {
-          "aRm98MNCGX8oX6A8": {
-            "id": "aRm98MNCGX8oX6A8",
-            "label": "description",
-            "slug": "rule",
-            "type": "text"
-          },
-          "6bnJQZMWXepvo6dU": {
-            "id": "6bnJQZMWXepvo6dU",
-            "label": "Speed Penalty",
+          "2dw1TnlbKjGwwE6N": {
+            "id": "2dw1TnlbKjGwwE6N",
+            "label": "Degree of Success",
             "slug": "rule",
             "type": "text"
           }
         }
       },
+      "id": "NJnwYYLggTUUVydT",
       "inputs": {
-        "pf2eImg": {
-          "value": "icons/environment/wilderness/terrain-stone-stalagtite.webp"
-        },
-        "G6eZkQdOJq5Qu0Ar": {
-          "value": "{\n  \"key\": \"FlatModifier\",\n  \"slug\": \"distracting-chatter\",\n  \"type\": \"status\",\n  \"value\": -2,\n  \"selector\": [\n    \"perception\"\n  ],\n  \"predicate\": [\n    \"audible\"\n  ]\n}"
-        },
-        "FvUo7gMTT4LKkf7b": {
-          "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg\"\n}"
+        "2dw1TnlbKjGwwE6N": {
+          "value": "{\n  \"choices\": [\n    {\n      \"label\": \"PF2E.Check.Result.Degree.Check.failure\",\n      \"value\": \"failure\"\n    }\n  ],\n  \"flag\": \"sawtoothTerrain\",\n  \"key\": \"ChoiceSet\",\n  \"prompt\": \"PF2E.SpecificRule.Prompt.DegreeOfSuccess\",\n  \"rollOption\": \"sawtooth-terrain\"\n}"
         },
         "name": {
-          "connection": "WclJZJ6X7c9bpc05:outputs:entry"
+          "value": "Spell Effect: Sawtooth Terrain"
         },
-        "6bnJQZMWXepvo6dU": {
-          "connection": "TebHRsRZsJ05RGvA:outputs:result"
+        "pf2eImg": {
+          "value": "icons/creatures/claws/claw-curved-jagged-yellow.webp"
         },
-        "aRm98MNCGX8oX6A8": {
-          "connection": "Kdsbm1neqx16jps5:outputs:entry"
-        },
-        "slug": {
-          "connection": "BHFV4zbgKNnz7ncg:outputs:entry"
+        "sf2eImg": {
+          "value": "icons/creatures/claws/claw-curved-jagged-yellow.webp"
+        }
+      },
+      "position": {
+        "x": 128.5555555555556,
+        "y": -1123.4444444444443
+      },
+      "type": "create-effect"
+    },
+    {
+      "id": "yEhlNV6OrFowy991",
+      "inputs": {
+        "die": {
+          "connection": "rUrsEQcNDKiilCoE:outputs:result"
         },
         "target": {
-          "connection": "dA7qzRueuMp7ZtBJ:outputs:entry"
+          "connection": "QCEaUCpY5ZFTaQ8R:outputs:entry"
+        },
+        "type": {
+          "value": "bleed"
         }
       },
-      "state": "fixed"
+      "position": {
+        "x": 3294.9977522477534,
+        "y": 141.10642135642098
+      },
+      "type": "create-persistent"
     },
     {
-      "type": "format-text",
-      "position": {
-        "x": 1600.8450851930686,
-        "y": 820.4701283102106
-      },
-      "id": "TebHRsRZsJ05RGvA",
       "custom": {
         "inputs": {
-          "mTlZpEj5mlNepfLj": {
-            "id": "mTlZpEj5mlNepfLj",
-            "input": "speed",
-            "label": "speed",
+          "wRXUKpKWIxAlcRgd": {
+            "id": "wRXUKpKWIxAlcRgd",
+            "input": "rank",
+            "label": "rank",
             "slug": "variable",
             "type": "text"
           }
         }
       },
+      "id": "rUrsEQcNDKiilCoE",
       "inputs": {
         "plain": {
-          "value": "{ \"key\": \"FlatModifier\", \"selector\": [ \"land-speed\" ], \"slug\": \"sawtooth-terrain-fail-speed-penalty\", \"type\": \"circumstance\", \"value\": @speed }"
+          "value": "2*(floor((@rank - 1)/2))d6"
         },
-        "mTlZpEj5mlNepfLj": {
-          "connection": "DapU0bHdkzWbi5q9:outputs:entry"
+        "wRXUKpKWIxAlcRgd": {
+          "connection": "YjYUgjEg8Cnzc1c3:outputs:entry"
         }
       },
       "outs": {
         "out": {
-          "connection": "doOy4DtJzlBb7Q8n:ins:in"
-        }
-      }
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "nTFvtgoDB1i9jru1:outputs:K9NtcgRNLosQ5nxM"
-        }
-      },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 1786.4882817044497,
-        "y": 1013.1604737559719
-      },
-      "id": "BHFV4zbgKNnz7ncg"
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "nTFvtgoDB1i9jru1:outputs:9sVi7lEPruJheAIz"
-        }
-      },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 1755.9165066272685,
-        "y": 1052.875019860688
-      },
-      "id": "Kdsbm1neqx16jps5"
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "nTFvtgoDB1i9jru1:outputs:vg1D2ry50TMy4WUD"
-        }
-      },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 1355.8453431381422,
-        "y": 986.5415519104799
-      },
-      "id": "DapU0bHdkzWbi5q9"
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
-        }
-      },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 1787.154715806827,
-        "y": 935.2559263530228
-      },
-      "id": "dA7qzRueuMp7ZtBJ"
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "Cgy6Ni8lOtVk481j:outputs:result"
-        }
-      },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 1786.6784846758392,
-        "y": 973.9225337335281
-      },
-      "id": "WclJZJ6X7c9bpc05"
-    },
-    {
-      "type": "format-text",
-      "state": "plain",
-      "inputs": {
-        "plain": {
-          "connection": "nTFvtgoDB1i9jru1:outputs:yWwyz99DIE58xw7U"
-        },
-        "BM30quOIDtaddPwk": {
-          "connection": "W80ZF2sAWCAG58Os:outputs:entry"
+          "connection": "yEhlNV6OrFowy991:ins:in"
         }
       },
       "position": {
-        "x": 963.8927866080903,
-        "y": 819.8819471993347
+        "x": 2961.178571428572,
+        "y": 156.90079365079293
       },
-      "id": "B0iXUqr4mX4zCD6S",
-      "custom": {
-        "inputs": {
-          "BM30quOIDtaddPwk": {
-            "id": "BM30quOIDtaddPwk",
-            "input": "lvl",
-            "label": "lvl",
-            "slug": "variable",
-            "type": "text"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "UrU2l7umcnzJBdVK:ins:in"
-        }
-      }
+      "type": "format-text"
     },
     {
+      "id": "YjYUgjEg8Cnzc1c3",
       "inputs": {
         "entry": {
           "connection": "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 782.5118197964587,
-        "y": 983.0890548040047
+        "x": 2806.587384837386,
+        "y": 350.75738150738084
       },
-      "id": "W80ZF2sAWCAG58Os"
+      "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "wRXUKpKWIxAlcRgd": {
+            "id": "wRXUKpKWIxAlcRgd",
+            "input": "rank",
+            "label": "rank",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "id": "OT0DmmnbTspYefRH",
+      "inputs": {
+        "plain": {
+          "value": "(floor((@rank - 1)/2))d6"
+        },
+        "wRXUKpKWIxAlcRgd": {
+          "connection": "YjYUgjEg8Cnzc1c3:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "1M86YFyrVf5dCOBn:ins:in"
+        }
+      },
+      "position": {
+        "x": 2964.7500000000005,
+        "y": 459.7579365079358
+      },
+      "type": "format-text"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "g5k7YWu7fKOtCel7": {
+            "id": "g5k7YWu7fKOtCel7",
+            "label": "Speed Penalty",
+            "slug": "rule",
+            "type": "text"
+          },
+          "jH1AM5dl7gImtda5": {
+            "id": "jH1AM5dl7gImtda5",
+            "label": "Description",
+            "slug": "rule",
+            "type": "text"
+          }
+        }
+      },
+      "id": "FwHaMgBNneOfNO91",
+      "inputs": {
+        "g5k7YWu7fKOtCel7": {
+          "value": "{\n  \"key\": \"FlatModifier\",\n  \"type\": \"circumstance\",\n  \"value\": -15,\n  \"selector\": \"land-speed\"\n}"
+        },
+        "jH1AM5dl7gImtda5": {
+          "value": "{\n  \"key\": \"ItemAlteration\",\n  \"itemId\": \"{item|id}\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.SawtoothTerrain.Trigger.EffectDescription.CriticalFailure\"\n    }\n  ]\n}"
+        },
+        "level": {
+          "connection": "UdAT21wP7mTlIX9h:outputs:entry"
+        },
+        "name": {
+          "connection": "l58VtcW7Pqae5e37:outputs:result"
+        },
+        "pf2eImg": {
+          "value": "icons/environment/wilderness/terrain-stone-stalagtite.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/environment/wilderness/terrain-stone-stalagtite.webp"
+        },
+        "slug": {
+          "value": "trigger-trove-sawtooth-terrain"
+        },
+        "target": {
+          "connection": "fTPBD3t9r1oBdp0D:outputs:entry"
+        },
+        "unit": {
+          "value": "minutes"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "rUrsEQcNDKiilCoE:ins:in"
+        }
+      },
+      "position": {
+        "x": 2551.7646569117182,
+        "y": 46.539151697973466
+      },
+      "type": "create-effect"
+    },
+    {
+      "id": "UdAT21wP7mTlIX9h",
+      "inputs": {
+        "entry": {
+          "connection": "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j"
+        }
+      },
+      "position": {
+        "x": 2420.3860028860017,
+        "y": 282.32034632034606
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "fTPBD3t9r1oBdp0D",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 2415.63675213675,
+        "y": 237.23132423132347
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "QCEaUCpY5ZFTaQ8R",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 3127.325674325675,
+        "y": 340.47313797313717
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "g5k7YWu7fKOtCel7": {
+            "id": "g5k7YWu7fKOtCel7",
+            "label": "Speed Penalty",
+            "slug": "rule",
+            "type": "text"
+          },
+          "jH1AM5dl7gImtda5": {
+            "id": "jH1AM5dl7gImtda5",
+            "label": "Description",
+            "slug": "rule",
+            "type": "text"
+          }
+        }
+      },
+      "id": "KUlDxQxlf7PVkXBT",
+      "inputs": {
+        "g5k7YWu7fKOtCel7": {
+          "value": "{\n  \"key\": \"FlatModifier\",\n  \"type\": \"circumstance\",\n  \"value\": -10,\n  \"selector\": \"land-speed\"\n}"
+        },
+        "jH1AM5dl7gImtda5": {
+          "value": "{\n  \"key\": \"ItemAlteration\",\n  \"itemId\": \"{item|id}\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.SawtoothTerrain.Trigger.EffectDescription.Failure\"\n    }\n  ]\n}"
+        },
+        "level": {
+          "connection": "ExaJmPf0PqjFzn85:outputs:entry"
+        },
+        "name": {
+          "connection": "90seBdU78CdC4hKY:outputs:result"
+        },
+        "pf2eImg": {
+          "value": "icons/environment/wilderness/terrain-stone-stalagtite.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/environment/wilderness/terrain-stone-stalagtite.webp"
+        },
+        "slug": {
+          "value": "trigger-trove-sawtooth-terrain"
+        },
+        "target": {
+          "connection": "F4KB4AbEScfRS4sL:outputs:entry"
+        },
+        "unit": {
+          "value": "minutes"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "OT0DmmnbTspYefRH:ins:in"
+        }
+      },
+      "position": {
+        "x": 2549.2646569117182,
+        "y": 590.2891516979736
+      },
+      "type": "create-effect"
+    },
+    {
+      "id": "F4KB4AbEScfRS4sL",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 2403.0037185037186,
+        "y": 741.3810356310356
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "ExaJmPf0PqjFzn85",
+      "inputs": {
+        "entry": {
+          "connection": "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j"
+        }
+      },
+      "position": {
+        "x": 2407.1335886335883,
+        "y": 789.835581085581
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "BawOKPjwRX1kdNn0",
+      "inputs": {
+        "entry": {
+          "connection": "QRc59NrEcIm3AsqY:outputs:region"
+        }
+      },
+      "position": {
+        "x": 979.6732711732719,
+        "y": 798.5051337551345
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "Lf3ZlBPqOZJxZEC3",
+      "inputs": {
+        "slug": {
+          "value": "trigger-trove-sawtooth-terrain"
+        },
+        "target": {
+          "connection": "K5dsGNI96xKao6o8:outputs:target"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "loiycfCH9wVoo3jH:ins:in"
+        }
+      },
+      "position": {
+        "x": 892.8954933954944,
+        "y": 1083.5162448662454
+      },
+      "state": "split",
+      "type": "has-item-slug"
+    },
+    {
+      "id": "K5dsGNI96xKao6o8",
+      "inputs": {
+        "for": {
+          "value": "heal"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Lf3ZlBPqOZJxZEC3:ins:in"
+        }
+      },
+      "position": {
+        "x": 626.5470085470095,
+        "y": 1083.3258408258414
+      },
+      "type": "damage-taken-event"
+    },
+    {
+      "id": "loiycfCH9wVoo3jH",
+      "inputs": {
+        "entry": {
+          "value": "item:magical"
+        },
+        "list": {
+          "connection": "K5dsGNI96xKao6o8:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "Mv5FV1p178V3Fxxa:ins:in"
+        }
+      },
+      "position": {
+        "x": 1175.9814123784736,
+        "y": 1156.180819180819
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "Mv5FV1p178V3Fxxa",
+      "inputs": {
+        "item": {
+          "connection": "a3t8lFvWUSvft0Te:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1414.882511279572,
+        "y": 1192.7797202797206
+      },
+      "type": "delete-item"
+    },
+    {
+      "id": "a3t8lFvWUSvft0Te",
+      "inputs": {
+        "entry": {
+          "connection": "Lf3ZlBPqOZJxZEC3:outputs:item"
+        }
+      },
+      "position": {
+        "x": 1247.4978958949569,
+        "y": 1303.4912587412587
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "1M86YFyrVf5dCOBn",
+      "inputs": {
+        "die": {
+          "connection": "OT0DmmnbTspYefRH:outputs:result"
+        },
+        "target": {
+          "connection": "QCEaUCpY5ZFTaQ8R:outputs:entry"
+        },
+        "type": {
+          "value": "bleed"
+        }
+      },
+      "position": {
+        "x": 3290.4522977022993,
+        "y": 439.2882395382392
+      },
+      "type": "create-persistent"
     }
   ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
   "variables": {
-    "3XC9Bm2VcInNzutZ:outputs:roller": {
+    "3XC9Bm2VcInNzutZ:outputs:item": {
       "isArray": false,
-      "label": "Roller",
+      "label": "Spell",
+      "type": "item"
+    },
+    "3XC9Bm2VcInNzutZ:outputs:origin": {
+      "isArray": false,
+      "label": "Origin",
       "type": "target"
-    },
-    "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j": {
-      "isArray": false,
-      "label": "level",
-      "type": "number"
-    },
-    "7sViCv8f7Yv6ysRl:outputs:Nl2k6vg1I0emyxBI": {
-      "isArray": false,
-      "label": "spellDC",
-      "type": "number"
     },
     "3XC9Bm2VcInNzutZ:outputs:outcome": {
       "isArray": false,
       "label": "Outcome",
       "type": "outcome"
     },
-    "Cgy6Ni8lOtVk481j:outputs:result": {
+    "3XC9Bm2VcInNzutZ:outputs:roller": {
       "isArray": false,
-      "label": "name",
-      "type": "text"
+      "label": "Roller",
+      "type": "target"
     },
-    "nTFvtgoDB1i9jru1:outputs:K9NtcgRNLosQ5nxM": {
+    "Lf3ZlBPqOZJxZEC3:outputs:item": {
       "isArray": false,
-      "label": "slug",
-      "type": "text"
+      "label": "Spell Effect",
+      "type": "item"
     },
-    "nTFvtgoDB1i9jru1:outputs:9sVi7lEPruJheAIz": {
+    "QRc59NrEcIm3AsqY:outputs:region": {
       "isArray": false,
-      "label": "description",
-      "type": "text"
+      "label": "Region",
+      "type": "region"
     },
-    "nTFvtgoDB1i9jru1:outputs:vg1D2ry50TMy4WUD": {
+    "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j": {
       "isArray": false,
-      "label": "speedPenalty",
+      "label": "Rank",
       "type": "number"
     }
-  },
-  "id": "ioLs24NBy5aflzir",
-  "description": "<p>@Localize[TRIGGERTROVE.SawtoothTerrain.Trigger.Description]</p>"
+  }
 }

@@ -1,17 +1,10 @@
 {
-  "name": "Attacked From Within",
+  "description": "<p>@Localize[TRIGGERTROVE.AttackedFromWithin.Trigger.Description]</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "A4i9VnVYxQAJn9VH",
+  "name": "Attacked From Within",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,38 +13,17 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:attacked-from-within\"\n]"
+          "connection": "GfVRIEKgVTqDrBMY:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 962.9708116300121,
-        "y": 962.5819063200772
-      },
       "id": "PJWl8Ru7kpwSaXeB",
       "inputs": {
         "condition": {
@@ -60,29 +32,29 @@
         "max": {
           "connection": "EpsXOZt020KVUkFZ:outputs:k1moK8GUMG0Qktrv"
         },
-        "value": {
-          "connection": "EpsXOZt020KVUkFZ:outputs:k1moK8GUMG0Qktrv"
-        },
         "target": {
           "connection": "igSlsRt62qRz2s68:outputs:entry"
-        }
-      }
-    },
-    {
-      "type": "split-outcome",
-      "inputs": {
-        "input": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        },
+        "value": {
+          "connection": "EpsXOZt020KVUkFZ:outputs:k1moK8GUMG0Qktrv"
         }
       },
       "position": {
-        "x": 1155.3332871816397,
-        "y": 337.25000796381175
+        "x": 2108.8041449633456,
+        "y": 644.9430174311883
       },
+      "type": "increase-condition"
+    },
+    {
       "id": "eqRLx1DpO6Yf4nzm",
+      "inputs": {
+        "input": {
+          "connection": "H481dzyYH3Q0RYJw:outputs:entry"
+        }
+      },
       "outs": {
         "criticalFailure": {
-          "connection": "MulxZwHgH2E6tA3F:ins:in"
+          "connection": "2tQsofrXWqUe9Of8:ins:in"
         },
         "failure": {
           "connection": "U1Xbh4G0tQnsYWCh:ins:in"
@@ -90,184 +62,216 @@
         "success": {
           "connection": "4nz69iaWY1SNQTeR:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1147.5555094038618,
+        "y": 370.58334129714507
+      },
+      "type": "split-outcome"
     },
     {
+      "id": "igSlsRt62qRz2s68",
       "inputs": {
         "entry": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 743.058129821545,
-        "y": 1069.328090735359
+        "x": 1888.891463154878,
+        "y": 751.68920184647
       },
-      "id": "igSlsRt62qRz2s68"
-    },
-    {
-      "type": "create-condition",
-      "position": {
-        "x": 1603.2378310534073,
-        "y": -100.23821462578167
-      },
-      "id": "MulxZwHgH2E6tA3F",
-      "inputs": {
-        "condition": {
-          "value": "off-guard"
-        },
-        "pf2eImg": {
-          "value": "systems/pf2e/icons/conditions/off-guard.webp"
-        },
-        "name": {
-          "value": "Off-Guard (1 round)"
-        },
-        "slug": {
-          "value": "off-guard-1round"
-        },
-        "target": {
-          "connection": "bM93xVLDQjD8y5qY:outputs:entry"
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "v0RMr2rHLIImRgZR:ins:in"
-        }
-      }
+      "type": "__variable_getter__"
     },
     {
       "custom": {
-        "title": "Add Condition",
         "outputs": {
           "k1moK8GUMG0Qktrv": {
             "id": "k1moK8GUMG0Qktrv",
-            "label": "value",
-            "slug": "entry",
             "isArray": false,
+            "label": "Value",
+            "slug": "entry",
             "type": "number"
           }
-        }
-      },
-      "type": "__gate_exit__",
-      "position": {
-        "x": 642.6666568034962,
-        "y": 962.3808940546799
+        },
+        "title": "Add Condition"
       },
       "id": "EpsXOZt020KVUkFZ",
       "outs": {
         "out": {
           "connection": "PJWl8Ru7kpwSaXeB:ins:in"
         }
-      }
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
-        }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 1262.66661083715,
-        "y": 299.5238146359526
+        "x": 1788.4999901368294,
+        "y": 644.7420051657909
       },
-      "id": "bM93xVLDQjD8y5qY"
+      "type": "__gate_exit__"
     },
     {
       "custom": {
         "inputs": {
           "k1moK8GUMG0Qktrv": {
             "id": "k1moK8GUMG0Qktrv",
+            "isArray": false,
             "label": "value",
             "slug": "entry",
-            "isArray": false,
             "type": "number"
           }
         }
-      },
-      "outs": {
-        "out": {
-          "connection": "EpsXOZt020KVUkFZ:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 1601.9228959305908,
-        "y": 371.35715863001906
       },
       "id": "U1Xbh4G0tQnsYWCh",
       "inputs": {
         "k1moK8GUMG0Qktrv": {
           "value": 2
         }
-      }
-    },
-    {
-      "custom": {
-        "inputs": {
-          "k1moK8GUMG0Qktrv": {
-            "id": "k1moK8GUMG0Qktrv",
-            "label": "value",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          }
-        }
       },
       "outs": {
         "out": {
           "connection": "EpsXOZt020KVUkFZ:ins:in"
         }
       },
-      "type": "__gate_entry__",
       "position": {
-        "x": 1602.2087845812705,
-        "y": 562.309475737738
+        "x": 1790.8117848194795,
+        "y": 406.6904919633524
+      },
+      "type": "__gate_entry__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "k1moK8GUMG0Qktrv": {
+            "id": "k1moK8GUMG0Qktrv",
+            "isArray": false,
+            "label": "value",
+            "slug": "entry",
+            "type": "number"
+          }
+        }
       },
       "id": "4nz69iaWY1SNQTeR",
       "inputs": {
         "k1moK8GUMG0Qktrv": {
           "value": 1
         }
-      }
-    },
-    {
-      "custom": {
-        "inputs": {
-          "k1moK8GUMG0Qktrv": {
-            "id": "k1moK8GUMG0Qktrv",
-            "label": "value",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          }
-        }
       },
       "outs": {
         "out": {
           "connection": "EpsXOZt020KVUkFZ:ins:in"
         }
       },
-      "type": "__gate_entry__",
       "position": {
-        "x": 1877.7326550581492,
-        "y": -100.07143792375771
+        "x": 1790.4865623590483,
+        "y": 518.3372535155158
       },
-      "id": "v0RMr2rHLIImRgZR",
+      "type": "__gate_entry__"
+    },
+    {
+      "id": "2tQsofrXWqUe9Of8",
       "inputs": {
-        "k1moK8GUMG0Qktrv": {
-          "value": 2
+        "condition": {
+          "value": "off-guard"
+        },
+        "name": {
+          "value": "Spell Effect: Off-Guard from Attack From Within"
+        },
+        "origin": {
+          "connection": "4QAfpaR42UkasikT:outputs:combatant"
+        },
+        "pf2eImg": {
+          "value": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp"
+        },
+        "slug": {
+          "value": "trigger-trove-off-guard-from-attack-from-within"
+        },
+        "target": {
+          "connection": "8TrHreSmreT8yG5y:outputs:entry"
         }
-      }
+      },
+      "outs": {
+        "out": {
+          "connection": "U1Xbh4G0tQnsYWCh:ins:in"
+        }
+      },
+      "position": {
+        "x": 1482.7777777777778,
+        "y": 0.22222222222220012
+      },
+      "state": "timed",
+      "type": "create-condition"
+    },
+    {
+      "id": "4QAfpaR42UkasikT",
+      "position": {
+        "x": 1167.2222222222222,
+        "y": 299.63888888888886
+      },
+      "type": "current-combatant"
+    },
+    {
+      "id": "8TrHreSmreT8yG5y",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 1264.5555555555554,
+        "y": 255.08333333333331
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "GfVRIEKgVTqDrBMY",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:attacked-from-within"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
+        }
+      },
+      "position": {
+        "x": 911.8055555555554,
+        "y": 354.4999999999998
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "H481dzyYH3Q0RYJw",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 999.5833333333329,
+        "y": 494.80555555555543
+      },
+      "type": "__variable_getter__"
     }
   ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
   "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:outcome": {
+      "isArray": false,
+      "label": "Outcome",
+      "type": "outcome"
+    },
     "3XC9Bm2VcInNzutZ:outputs:roller": {
       "isArray": false,
       "label": "Roller",
       "type": "target"
     }
-  },
-  "id": "1WXmvEW2fso6vUkU",
-  "description": "<p>@Localize[TRIGGERTROVE.AttackedFromWithin.Trigger.Description]</p>"
+  }
 }

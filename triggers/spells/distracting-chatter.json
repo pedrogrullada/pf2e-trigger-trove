@@ -1,17 +1,10 @@
 {
-  "name": "Distracting Chatter",
+  "description": "<p>@Localize[TRIGGERTROVE.DistractingChatter.Trigger.Description]</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "fuSgtFvnJzHMabPh",
+  "name": "Distracting Chatter",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,44 +13,23 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:distracting-chatter\"\n]"
+          "connection": "28ythuecWbOrCgTI:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 622.6666393648816,
+        "y": 319.5000002159292
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "ERjCNxQ6w7EWG3p4:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "split-outcome",
+      "id": "eqRLx1DpO6Yf4nzm",
       "inputs": {
         "input": {
-          "connection": "mZkNi2XtNzue6s5Z:outputs:entry"
+          "connection": "0Av8SRdOOytI339N:outputs:entry"
         }
       },
-      "position": {
-        "x": 2138.184939574149,
-        "y": 338.9537500460586
-      },
-      "id": "eqRLx1DpO6Yf4nzm",
       "outs": {
         "criticalFailure": {
           "connection": "OuHcidf6A4ZDreSt:ins:in"
@@ -68,75 +40,83 @@
         "success": {
           "connection": "8aH1MdMJDXjR87hH:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1765.3920102812194,
+        "y": 399.5165206088291
+      },
+      "type": "split-outcome"
     },
     {
+      "id": "igSlsRt62qRz2s68",
       "inputs": {
         "entry": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 743.1273426927706,
-        "y": 1091.7334119207628
+        "x": 2391.8221478875757,
+        "y": 816.1457495831
       },
-      "id": "igSlsRt62qRz2s68"
+      "type": "__variable_getter__"
     },
     {
-      "type": "format-text",
-      "position": {
-        "x": 1847.370285400592,
-        "y": 338.8889123351614
-      },
-      "id": "y6VBruqFkVFEiNru",
       "custom": {
         "inputs": {
-          "qQx5WVh2hn6hY6h0": {
-            "id": "qQx5WVh2hn6hY6h0",
-            "input": "outcome",
-            "label": "outcome",
+          "DL786VOf8lIuQAKF": {
+            "id": "DL786VOf8lIuQAKF",
+            "input": "localized",
+            "label": "localized",
             "slug": "variable",
             "type": "text"
           }
         }
       },
+      "id": "y6VBruqFkVFEiNru",
       "inputs": {
+        "DL786VOf8lIuQAKF": {
+          "connection": "Sfc0rJPtaJaUF6D2:outputs:result"
+        },
         "plain": {
-          "value": "Effect : Distracting Chatter (@outcome)"
+          "value": "Spell Effect : Distracting Chatter (@localized)"
         },
         "qQx5WVh2hn6hY6h0": {
-          "connection": "mZkNi2XtNzue6s5Z:outputs:entry"
+          "connection": "Sfc0rJPtaJaUF6D2:outputs:result"
         }
       },
       "outs": {
         "out": {
           "connection": "eqRLx1DpO6Yf4nzm:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1430.8836886639956,
+        "y": 379.5859930322422
+      },
+      "type": "format-text"
     },
     {
+      "id": "mC5t9jHoyQ3mjj9C",
       "inputs": {
         "entry": {
           "connection": "y6VBruqFkVFEiNru:outputs:result"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 742.0777160802769,
-        "y": 1129.895189392207
+        "x": 2368.272521275082,
+        "y": 859.3075270545444
       },
-      "id": "mC5t9jHoyQ3mjj9C"
+      "type": "__variable_getter__"
     },
     {
-      "type": "create-effect",
-      "position": {
-        "x": 1120.8804120822097,
-        "y": 961.9140691787361
-      },
-      "id": "cmE8Vy9XEHWS3vff",
       "custom": {
         "inputs": {
+          "aRm98MNCGX8oX6A8": {
+            "id": "aRm98MNCGX8oX6A8",
+            "label": "description",
+            "slug": "rule",
+            "type": "text"
+          },
           "FvUo7gMTT4LKkf7b": {
             "id": "FvUo7gMTT4LKkf7b",
             "label": "off-guard",
@@ -149,35 +129,60 @@
             "slug": "rule",
             "type": "text"
           },
-          "aRm98MNCGX8oX6A8": {
-            "id": "aRm98MNCGX8oX6A8",
-            "label": "description",
+          "kqKPB3OG5QzhzhJb": {
+            "id": "kqKPB3OG5QzhzhJb",
+            "label": "Text",
+            "slug": "rule",
+            "type": "text"
+          },
+          "oKjsUvmIH2Q4iyC7": {
+            "id": "oKjsUvmIH2Q4iyC7",
+            "label": "Text",
+            "slug": "rule",
+            "type": "text"
+          },
+          "Y5Xm0NrSJDfXdg4W": {
+            "id": "Y5Xm0NrSJDfXdg4W",
+            "label": "Text",
             "slug": "rule",
             "type": "text"
           }
         }
       },
+      "id": "cmE8Vy9XEHWS3vff",
       "inputs": {
-        "slug": {
-          "value": "effect-distracting-chatter"
-        },
-        "pf2eImg": {
-          "value": "icons/creatures/abilities/mouth-teeth-human.webp"
-        },
         "aRm98MNCGX8oX6A8": {
-          "connection": "JmLujvdyltVCDnBl:outputs:entry"
-        },
-        "G6eZkQdOJq5Qu0Ar": {
-          "value": "{\n  \"key\": \"FlatModifier\",\n  \"slug\": \"distracting-chatter\",\n  \"type\": \"status\",\n  \"value\": -2,\n  \"selector\": [\n    \"perception\"\n  ],\n  \"predicate\": [\n    \"audible\"\n  ]\n}"
-        },
-        "FvUo7gMTT4LKkf7b": {
-          "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg\"\n}"
+          "value": "{\n  \"itemId\": \"{item|id}\",\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"override\",\n  \"property\": \"description\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.DistractingChatter.Trigger.EffectDescription\"\n    }\n  ]\n}"
         },
         "duration": {
           "connection": "uMtj28AYVOlYDMeP:outputs:YjZtzzPN8szWEy2T"
         },
+        "FvUo7gMTT4LKkf7b": {
+          "value": "{\n  \"inMemoryOnly\": true,\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg\"\n}"
+        },
+        "G6eZkQdOJq5Qu0Ar": {
+          "value": "{\n  \"key\": \"FlatModifier\",\n  \"slug\": \"distracting-chatter\",\n  \"type\": \"status\",\n  \"value\": -2,\n  \"selector\": [\n    \"perception\"\n  ],\n  \"predicate\": [\n    \"item:trait:auditory\"\n  ]\n}"
+        },
+        "kqKPB3OG5QzhzhJb": {
+          "value": "{\n  \"itemType\": \"action\",\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"add\",\n  \"predicate\": [\n    \"item:trait:auditory\"\n  ],\n  \"property\": \"description\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.DistractingChatter.Trigger.EffectAddendum\"\n    }\n  ],\n  \"label\": \"TRIGGERTROVE.DistractingChatter.Label\"\n}"
+        },
         "name": {
           "connection": "mC5t9jHoyQ3mjj9C:outputs:entry"
+        },
+        "oKjsUvmIH2Q4iyC7": {
+          "value": "{\n  \"itemType\": \"spell\",\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"add\",\n  \"predicate\": [\n    {\n      \"not\": \"item:trait:subtle\"\n    }\n  ],\n  \"property\": \"description\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.DistractingChatter.Trigger.EffectAddendum\"\n    }\n  ],\n  \"label\": \"TRIGGERTROVE.DistractingChatter.Label\"\n}"
+        },
+        "origin": {
+          "connection": "1aavVc1E8tc6W1kR:outputs:entry"
+        },
+        "pf2eImg": {
+          "value": "icons/creatures/abilities/mouth-teeth-human.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/creatures/abilities/mouth-teeth-human.webp"
+        },
+        "slug": {
+          "value": "trigger-trove-distracting-chatter"
         },
         "target": {
           "connection": "igSlsRt62qRz2s68:outputs:entry"
@@ -185,252 +190,274 @@
         "unit": {
           "connection": "uMtj28AYVOlYDMeP:outputs:bcJsggocsLOvDVe6"
         },
-        "origin": {
-          "connection": "1aavVc1E8tc6W1kR:outputs:entry"
+        "Y5Xm0NrSJDfXdg4W": {
+          "value": "{\n  \"itemType\": \"feat\",\n  \"key\": \"ItemAlteration\",\n  \"mode\": \"add\",\n  \"predicate\": [\n    \"item:trait:auditory\"\n  ],\n  \"property\": \"description\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.DistractingChatter.Trigger.EffectAddendum\"\n    }\n  ],\n  \"label\": \"TRIGGERTROVE.DistractingChatter.Label\"\n}"
         }
-      }
+      },
+      "position": {
+        "x": 2512.0752172770153,
+        "y": 717.5764068410733
+      },
+      "type": "create-effect"
     },
     {
       "custom": {
-        "title": "Add Effect",
         "outputs": {
-          "YjZtzzPN8szWEy2T": {
-            "id": "YjZtzzPN8szWEy2T",
-            "label": "duration",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          },
           "bcJsggocsLOvDVe6": {
             "id": "bcJsggocsLOvDVe6",
+            "isArray": false,
             "label": "durationUnit",
             "slug": "entry",
-            "isArray": false,
             "type": "text"
+          },
+          "YjZtzzPN8szWEy2T": {
+            "id": "YjZtzzPN8szWEy2T",
+            "isArray": false,
+            "label": "duration",
+            "slug": "entry",
+            "type": "number"
           }
-        }
-      },
-      "type": "__gate_exit__",
-      "position": {
-        "x": 641.2878705462045,
-        "y": 961.5470871788871
+        },
+        "title": "Add Effect"
       },
       "id": "uMtj28AYVOlYDMeP",
       "outs": {
         "out": {
           "connection": "cmE8Vy9XEHWS3vff:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 2029.7554030137371,
+        "y": 798.1185157503153
+      },
+      "type": "__gate_exit__"
     },
     {
-      "type": "format-text",
-      "position": {
-        "x": 1135.4629013861825,
-        "y": 338.7778983961899
-      },
-      "id": "ERjCNxQ6w7EWG3p4",
+      "id": "mZkNi2XtNzue6s5Z",
       "inputs": {
-        "localization": {
-          "value": "@Localize[TRIGGERTROVE.DistractingChatter.Trigger.EffectDescription]"
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 979.5734461923976,
+        "y": 499.1373342869648
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "bcJsggocsLOvDVe6": {
+            "id": "bcJsggocsLOvDVe6",
+            "isArray": false,
+            "label": "durationUnit",
+            "slug": "entry",
+            "type": "text"
+          },
+          "YjZtzzPN8szWEy2T": {
+            "id": "YjZtzzPN8szWEy2T",
+            "isArray": false,
+            "label": "duration",
+            "slug": "entry",
+            "type": "number"
+          }
+        }
+      },
+      "id": "OuHcidf6A4ZDreSt",
+      "inputs": {
+        "bcJsggocsLOvDVe6": {
+          "value": "minutes"
+        },
+        "YjZtzzPN8szWEy2T": {
+          "value": 1
         }
       },
       "outs": {
         "out": {
-          "connection": "8KrnAqzjrhf5YWW8:ins:in"
+          "connection": "uMtj28AYVOlYDMeP:ins:in"
         }
       },
-      "state": "localization"
+      "position": {
+        "x": 2023.2483588872583,
+        "y": 409.22064801157705
+      },
+      "type": "__gate_entry__"
     },
     {
-      "type": "format-text",
-      "position": {
-        "x": 1452.7775513904362,
-        "y": 338.63911401826635
-      },
-      "id": "8KrnAqzjrhf5YWW8",
       "custom": {
         "inputs": {
-          "8z2TFEZizklxurbh": {
-            "id": "8z2TFEZizklxurbh",
-            "input": "description",
-            "label": "description",
+          "bcJsggocsLOvDVe6": {
+            "id": "bcJsggocsLOvDVe6",
+            "isArray": false,
+            "label": "durationUnit",
+            "slug": "entry",
+            "type": "text"
+          },
+          "YjZtzzPN8szWEy2T": {
+            "id": "YjZtzzPN8szWEy2T",
+            "isArray": false,
+            "label": "duration",
+            "slug": "entry",
+            "type": "number"
+          }
+        }
+      },
+      "id": "R3gji4hZ85S7lmrL",
+      "inputs": {
+        "bcJsggocsLOvDVe6": {
+          "value": "rounds"
+        },
+        "YjZtzzPN8szWEy2T": {
+          "value": 3
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "uMtj28AYVOlYDMeP:ins:in"
+        }
+      },
+      "position": {
+        "x": 2021.8102949167198,
+        "y": 536.5413398442936
+      },
+      "type": "__gate_entry__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "bcJsggocsLOvDVe6": {
+            "id": "bcJsggocsLOvDVe6",
+            "isArray": false,
+            "label": "durationUnit",
+            "slug": "entry",
+            "type": "text"
+          },
+          "YjZtzzPN8szWEy2T": {
+            "id": "YjZtzzPN8szWEy2T",
+            "isArray": false,
+            "label": "duration",
+            "slug": "entry",
+            "type": "number"
+          }
+        }
+      },
+      "id": "8aH1MdMJDXjR87hH",
+      "inputs": {
+        "bcJsggocsLOvDVe6": {
+          "value": "rounds"
+        },
+        "YjZtzzPN8szWEy2T": {
+          "value": 1
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "uMtj28AYVOlYDMeP:ins:in"
+        }
+      },
+      "position": {
+        "x": 2023.5033925605821,
+        "y": 665.5554240392397
+      },
+      "type": "__gate_entry__"
+    },
+    {
+      "id": "1aavVc1E8tc6W1kR",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:item"
+        }
+      },
+      "position": {
+        "x": 2401.905983266678,
+        "y": 906.5680115987902
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "28ythuecWbOrCgTI",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:distracting-chatter"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "Sfc0rJPtaJaUF6D2:ins:in"
+        }
+      },
+      "position": {
+        "x": 900.3214285714287,
+        "y": 321.2500000000001
+      },
+      "type": "list-contains"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "WJBsiV9iqLeHikxT": {
+            "id": "WJBsiV9iqLeHikxT",
+            "input": "outcome",
+            "label": "outcome",
             "slug": "variable",
             "type": "text"
           }
         }
       },
+      "id": "Sfc0rJPtaJaUF6D2",
       "inputs": {
-        "plain": {
-          "value": "{ \"itemType\": \"effect\", \"key\": \"ItemAlteration\", \"mode\": \"override\", \"predicate\": [ \"item:slug:effect-distracting-chatter\" ], \"property\": \"description\", \"value\": [ { \"text\": \"@description\" } ] }"
+        "localization": {
+          "value": "PF2E.Check.Result.Degree.Check.@outcome"
         },
-        "8z2TFEZizklxurbh": {
-          "connection": "ERjCNxQ6w7EWG3p4:outputs:result"
+        "WJBsiV9iqLeHikxT": {
+          "connection": "mZkNi2XtNzue6s5Z:outputs:entry"
         }
       },
       "outs": {
         "out": {
           "connection": "y6VBruqFkVFEiNru:ins:in"
         }
-      }
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "8KrnAqzjrhf5YWW8:outputs:result"
-        }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 672.9297940285765,
-        "y": 1210.1109360256744
+        "x": 1124.7456709956707,
+        "y": 374.354978354978
       },
-      "id": "JmLujvdyltVCDnBl"
+      "state": "localization",
+      "type": "format-text"
     },
     {
+      "id": "0Av8SRdOOytI339N",
       "inputs": {
         "entry": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 1671.394153263105,
-        "y": 453.2011871008175
+        "x": 1619.5287629037634,
+        "y": 509.578074703074
       },
-      "id": "mZkNi2XtNzue6s5Z"
-    },
-    {
-      "custom": {
-        "inputs": {
-          "YjZtzzPN8szWEy2T": {
-            "id": "YjZtzzPN8szWEy2T",
-            "label": "duration",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          },
-          "bcJsggocsLOvDVe6": {
-            "id": "bcJsggocsLOvDVe6",
-            "label": "durationUnit",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "uMtj28AYVOlYDMeP:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 2562.2483588872583,
-        "y": 211.30001309094217
-      },
-      "id": "OuHcidf6A4ZDreSt",
-      "inputs": {
-        "YjZtzzPN8szWEy2T": {
-          "value": 1
-        },
-        "bcJsggocsLOvDVe6": {
-          "value": "minutes"
-        }
-      }
-    },
-    {
-      "custom": {
-        "inputs": {
-          "YjZtzzPN8szWEy2T": {
-            "id": "YjZtzzPN8szWEy2T",
-            "label": "duration",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          },
-          "bcJsggocsLOvDVe6": {
-            "id": "bcJsggocsLOvDVe6",
-            "label": "durationUnit",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "uMtj28AYVOlYDMeP:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 2561.5173656237903,
-        "y": 373.16615946911327
-      },
-      "id": "R3gji4hZ85S7lmrL",
-      "inputs": {
-        "YjZtzzPN8szWEy2T": {
-          "value": 3
-        },
-        "bcJsggocsLOvDVe6": {
-          "value": "rounds"
-        }
-      }
-    },
-    {
-      "custom": {
-        "inputs": {
-          "YjZtzzPN8szWEy2T": {
-            "id": "YjZtzzPN8szWEy2T",
-            "label": "duration",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          },
-          "bcJsggocsLOvDVe6": {
-            "id": "bcJsggocsLOvDVe6",
-            "label": "durationUnit",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          }
-        }
-      },
-      "outs": {
-        "out": {
-          "connection": "uMtj28AYVOlYDMeP:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 2561.190261247451,
-        "y": 545.2105466943624
-      },
-      "id": "8aH1MdMJDXjR87hH",
-      "inputs": {
-        "YjZtzzPN8szWEy2T": {
-          "value": 1
-        },
-        "bcJsggocsLOvDVe6": {
-          "value": "rounds"
-        }
-      }
-    },
-    {
-      "inputs": {
-        "entry": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:item"
-        }
-      },
-      "type": "__variable_getter__",
-      "position": {
-        "x": 740.7111780718726,
-        "y": 1169.655673936453
-      },
-      "id": "1aavVc1E8tc6W1kR"
+      "type": "__variable_getter__"
     }
   ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
   "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:item": {
+      "isArray": false,
+      "label": "Spell",
+      "type": "item"
+    },
+    "3XC9Bm2VcInNzutZ:outputs:outcome": {
+      "isArray": false,
+      "label": "Outcome",
+      "type": "outcome"
+    },
     "3XC9Bm2VcInNzutZ:outputs:roller": {
       "isArray": false,
       "label": "Roller",
@@ -438,25 +465,8 @@
     },
     "y6VBruqFkVFEiNru:outputs:result": {
       "isArray": false,
-      "label": "name",
+      "label": "Effect Name",
       "type": "text"
-    },
-    "8KrnAqzjrhf5YWW8:outputs:result": {
-      "isArray": false,
-      "label": "effectDescription",
-      "type": "text"
-    },
-    "3XC9Bm2VcInNzutZ:outputs:outcome": {
-      "isArray": false,
-      "label": "Outcome",
-      "type": "outcome"
-    },
-    "3XC9Bm2VcInNzutZ:outputs:item": {
-      "isArray": false,
-      "label": "Spell",
-      "type": "item"
     }
-  },
-  "id": "fnyZzptChWnSn5ap",
-  "description": "<p>@Localize[TRIGGERTROVE.DistractingChatter.Trigger.Description]</p>"
+  }
 }

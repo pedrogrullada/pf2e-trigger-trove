@@ -1,17 +1,10 @@
 {
-  "name": "Divine Immolation",
+  "description": "<p>@Localize[TRIGGERTROVE.DivineImmolation.Trigger.Description]</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "fG9Bkqsim03yGM63",
+  "name": "Divine Immolation",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,72 +13,51 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:divine-immolation\"\n]"
+          "connection": "ZwV5QmfMoni1aVUr:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "vDtNoEfCIpxyl04s:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "split-outcome",
+      "id": "eqRLx1DpO6Yf4nzm",
       "inputs": {
         "input": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+          "connection": "HCYk2UEgppQ9NtLt:outputs:entry"
         }
       },
-      "position": {
-        "x": 1420.9437522195865,
-        "y": 339.01623335419987
-      },
-      "id": "eqRLx1DpO6Yf4nzm",
       "outs": {
-        "failure": {
-          "connection": "iTpaWqk8HsmwUWRY:ins:in"
-        },
         "criticalFailure": {
           "connection": "Yb9NZkJlePrhDwh5:ins:in"
+        },
+        "failure": {
+          "connection": "iTpaWqk8HsmwUWRY:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1390.9437522195863,
+        "y": 436.7940111319776
+      },
+      "type": "split-outcome"
     },
     {
-      "type": "extract-item",
-      "position": {
-        "x": 1164.6242278455584,
-        "y": 339.0319923036636
-      },
-      "id": "vDtNoEfCIpxyl04s",
       "custom": {
         "outputs": {
           "9iMKsEny9vcJK95j": {
             "id": "9iMKsEny9vcJK95j",
             "input": "level",
+            "isArray": false,
             "label": "level",
             "slug": "path",
-            "isArray": false,
             "type": "number"
           }
         }
       },
+      "id": "vDtNoEfCIpxyl04s",
       "inputs": {
         "input": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:item"
@@ -95,149 +67,131 @@
         "out": {
           "connection": "eqRLx1DpO6Yf4nzm:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1154.6242278455584,
+        "y": 421.2542145258858
+      },
+      "type": "extract-item"
     },
     {
       "custom": {
-        "title": "Adds Persistent Damage",
         "outputs": {
           "pZ0v9grOlrXlN7Ry": {
             "id": "pZ0v9grOlrXlN7Ry",
+            "isArray": false,
             "label": "Formula",
             "slug": "entry",
-            "isArray": false,
             "type": "text"
           }
-        }
-      },
-      "type": "__gate_exit__",
-      "position": {
-        "x": 641.5872830848468,
-        "y": 961.7460025031235
+        },
+        "title": "Adds Persistent Damage"
       },
       "id": "Oy2OMqIuPzSIarrM",
       "outs": {
         "out": {
           "connection": "Dhsk03dTWHUSzIij:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1663.8095053070688,
+        "y": 687.3015580586789
+      },
+      "type": "__gate_exit__"
     },
     {
-      "type": "create-persistent",
-      "position": {
-        "x": 1251.9999071776374,
-        "y": 962.3333652442386
-      },
       "id": "QZeFczOknShVUG6B",
       "inputs": {
-        "type": {
-          "value": "fire"
-        },
         "die": {
-          "connection": "Dhsk03dTWHUSzIij:outputs:result"
+          "connection": "tEX3EYVDmIrXjWta:outputs:entry"
         },
         "target": {
-          "connection": "sRoXazCSQJy1P2LH:outputs:entry"
+          "connection": "u2UZYaWVe2v6eitw:outputs:entry"
+        },
+        "type": {
+          "value": "spirit"
         }
-      }
+      },
+      "position": {
+        "x": 2495.888796066526,
+        "y": 569.2222541331273
+      },
+      "type": "create-persistent"
     },
     {
-      "type": "format-text",
-      "position": {
-        "x": 921.6970863180368,
-        "y": 978.3545585071142
-      },
-      "id": "Dhsk03dTWHUSzIij",
       "custom": {
         "inputs": {
           "a9DEv6N1bsHBO5Yi": {
             "id": "a9DEv6N1bsHBO5Yi",
-            "input": "lvl",
-            "label": "lvl",
+            "input": "rank",
+            "label": "rank",
             "slug": "variable",
             "type": "text"
           }
         }
       },
+      "id": "Dhsk03dTWHUSzIij",
       "inputs": {
-        "plain": {
-          "connection": "Oy2OMqIuPzSIarrM:outputs:pZ0v9grOlrXlN7Ry"
-        },
         "a9DEv6N1bsHBO5Yi": {
           "connection": "QRaouRUFhDM2qjPk:outputs:entry"
+        },
+        "plain": {
+          "connection": "Oy2OMqIuPzSIarrM:outputs:pZ0v9grOlrXlN7Ry"
         }
       },
       "outs": {
         "out": {
-          "connection": "QZeFczOknShVUG6B:ins:in"
+          "connection": "RlVPWTwIOYtzwRee:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1943.919308540259,
+        "y": 703.9101140626697
+      },
+      "type": "format-text"
     },
     {
+      "id": "QRaouRUFhDM2qjPk",
       "inputs": {
         "entry": {
           "connection": "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 741.3332580263725,
-        "y": 1069.666736054773
+        "x": 1763.5554802485944,
+        "y": 795.2222916103285
       },
-      "id": "QRaouRUFhDM2qjPk"
+      "type": "__variable_getter__"
     },
     {
+      "id": "sRoXazCSQJy1P2LH",
       "inputs": {
         "entry": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 1110.0001008108688,
-        "y": 1093.0000483445979
+        "x": 2133.3334341442023,
+        "y": 819.6667150112643
       },
-      "id": "sRoXazCSQJy1P2LH"
+      "type": "__variable_getter__"
     },
     {
       "custom": {
         "inputs": {
           "pZ0v9grOlrXlN7Ry": {
             "id": "pZ0v9grOlrXlN7Ry",
+            "isArray": false,
             "label": "Formula",
             "slug": "entry",
-            "isArray": false,
             "type": "text"
           }
         }
-      },
-      "outs": {
-        "out": {
-          "connection": "Oy2OMqIuPzSIarrM:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 1763.2565021334976,
-        "y": 371.4999766679537
       },
       "id": "iTpaWqk8HsmwUWRY",
       "inputs": {
         "pZ0v9grOlrXlN7Ry": {
-          "value": "(@lvl -3)d6"
-        }
-      }
-    },
-    {
-      "custom": {
-        "inputs": {
-          "pZ0v9grOlrXlN7Ry": {
-            "id": "pZ0v9grOlrXlN7Ry",
-            "label": "Formula",
-            "slug": "entry",
-            "isArray": false,
-            "type": "text"
-          }
+          "value": "(@rank - 3)d6"
         }
       },
       "outs": {
@@ -245,31 +199,195 @@
           "connection": "Oy2OMqIuPzSIarrM:ins:in"
         }
       },
-      "type": "__gate_entry__",
       "position": {
-        "x": 1762.5898762063584,
-        "y": 219.50001173547867
+        "x": 1663.2565021334974,
+        "y": 551.4999766679537
+      },
+      "type": "__gate_entry__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "pZ0v9grOlrXlN7Ry": {
+            "id": "pZ0v9grOlrXlN7Ry",
+            "isArray": false,
+            "label": "Formula",
+            "slug": "entry",
+            "type": "text"
+          }
+        }
       },
       "id": "Yb9NZkJlePrhDwh5",
       "inputs": {
         "pZ0v9grOlrXlN7Ry": {
-          "value": "(2*(@lvl -3))d6"
+          "value": "(2*(@rank - 3))d6"
         }
-      }
+      },
+      "outs": {
+        "out": {
+          "connection": "Oy2OMqIuPzSIarrM:ins:in"
+        }
+      },
+      "position": {
+        "x": 1662.5898762063582,
+        "y": 415.0555672910342
+      },
+      "type": "__gate_entry__"
+    },
+    {
+      "id": "HCYk2UEgppQ9NtLt",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
+        }
+      },
+      "position": {
+        "x": 1246.444444444444,
+        "y": 542.5277777777778
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "ZwV5QmfMoni1aVUr",
+      "inputs": {
+        "entry": {
+          "value": "item:slug:divine-immolation"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "vDtNoEfCIpxyl04s:ins:in"
+        }
+      },
+      "position": {
+        "x": 926.4444444444447,
+        "y": 313.33333333333337
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "RlVPWTwIOYtzwRee",
+      "inputs": {
+        "target": {
+          "connection": "sRoXazCSQJy1P2LH:outputs:entry"
+        },
+        "type": {
+          "value": "fire"
+        }
+      },
+      "outs": {
+        "false": {
+          "connection": "gNAMaFA5EfP9HcFZ:ins:in"
+        },
+        "true": {
+          "connection": "QZeFczOknShVUG6B:ins:in"
+        }
+      },
+      "position": {
+        "x": 2251.39393939394,
+        "y": 688.2070707070708
+      },
+      "type": "has-immunity"
+    },
+    {
+      "id": "gNAMaFA5EfP9HcFZ",
+      "inputs": {
+        "die": {
+          "connection": "VlzMVpapZqUSa8ws:outputs:entry"
+        },
+        "target": {
+          "connection": "5ZYfCnwwha8pgXNo:outputs:entry"
+        },
+        "type": {
+          "value": "fire"
+        }
+      },
+      "position": {
+        "x": 2491.888796066526,
+        "y": 784.2222541331273
+      },
+      "type": "create-persistent"
+    },
+    {
+      "id": "tEX3EYVDmIrXjWta",
+      "inputs": {
+        "entry": {
+          "connection": "Dhsk03dTWHUSzIij:outputs:result"
+        }
+      },
+      "position": {
+        "x": 2334.39393939394,
+        "y": 612.84595959596
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "VlzMVpapZqUSa8ws",
+      "inputs": {
+        "entry": {
+          "connection": "Dhsk03dTWHUSzIij:outputs:result"
+        }
+      },
+      "position": {
+        "x": 2355.39393939394,
+        "y": 862.84595959596
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "u2UZYaWVe2v6eitw",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 2336.39393939394,
+        "y": 561.84595959596
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "5ZYfCnwwha8pgXNo",
+      "inputs": {
+        "entry": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
+        }
+      },
+      "position": {
+        "x": 2361.39393939394,
+        "y": 826.84595959596
+      },
+      "type": "__variable_getter__"
     }
   ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
+  ],
   "variables": {
+    "3XC9Bm2VcInNzutZ:outputs:outcome": {
+      "isArray": false,
+      "label": "Outcome",
+      "type": "outcome"
+    },
     "3XC9Bm2VcInNzutZ:outputs:roller": {
       "isArray": false,
       "label": "Roller",
       "type": "target"
     },
+    "Dhsk03dTWHUSzIij:outputs:result": {
+      "isArray": false,
+      "label": "Formula",
+      "type": "text"
+    },
     "vDtNoEfCIpxyl04s:outputs:9iMKsEny9vcJK95j": {
       "isArray": false,
-      "label": "level",
+      "label": "Rank",
       "type": "number"
     }
-  },
-  "id": "NfrK0169FaKgxnEE",
-  "description": "<p>@Localize[TRIGGERTROVE.DivineImmolation.Trigger.Description]</p>"
+  }
 }

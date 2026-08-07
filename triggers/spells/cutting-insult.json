@@ -1,17 +1,10 @@
 {
-  "name": "Cutting Insult",
+  "description": "<p>@Localize[TRIGGERTROVE.CuttingInsult.Trigger.Description]</p>",
   "folder": "Spells",
-  "priority": 0,
-  "tags": [
-    "pf2e"
-  ],
+  "id": "6ra1pqyJ2fJxTZBj",
+  "name": "Cutting Insult",
   "nodes": [
     {
-      "type": "check-roll-event",
-      "position": {
-        "x": 642.6666393648816,
-        "y": 322.0000002159292
-      },
       "id": "3XC9Bm2VcInNzutZ",
       "inputs": {
         "for": {
@@ -20,38 +13,17 @@
       },
       "outs": {
         "out": {
-          "connection": "0Nbw4OxpFR4HTZVs:ins:in"
-        }
-      },
-      "state": "check"
-    },
-    {
-      "type": "match-predicate",
-      "inputs": {
-        "options": {
-          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
-        },
-        "predicate": {
-          "value": "[\n  \"item:slug:cutting-insult\"\n]"
+          "connection": "sKPnpoourxStAhLH:ins:in"
         }
       },
       "position": {
-        "x": 914.5555543816838,
-        "y": 338.4166458263811
+        "x": 642.6666393648816,
+        "y": 322.0000002159292
       },
-      "id": "0Nbw4OxpFR4HTZVs",
-      "outs": {
-        "true": {
-          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
-        }
-      }
+      "state": "check",
+      "type": "check-roll-event"
     },
     {
-      "type": "increase-condition",
-      "position": {
-        "x": 962.3674698036609,
-        "y": 802.8888321529082
-      },
       "id": "neZ9rprFjwfj3jHX",
       "inputs": {
         "condition": {
@@ -60,144 +32,155 @@
         "max": {
           "connection": "zGc4tCQVcjOnTmoH:outputs:u97jKtquMWwwUvxE"
         },
-        "value": {
-          "connection": "zGc4tCQVcjOnTmoH:outputs:u97jKtquMWwwUvxE"
-        },
         "target": {
           "connection": "igSlsRt62qRz2s68:outputs:entry"
+        },
+        "value": {
+          "connection": "zGc4tCQVcjOnTmoH:outputs:u97jKtquMWwwUvxE"
         }
-      }
+      },
+      "position": {
+        "x": 1895.367469803661,
+        "y": 650.8888321529082
+      },
+      "type": "increase-condition"
     },
     {
-      "type": "split-outcome",
+      "id": "eqRLx1DpO6Yf4nzm",
       "inputs": {
         "input": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:outcome"
         }
       },
-      "position": {
-        "x": 1155.3332871816397,
-        "y": 337.25000796381175
-      },
-      "id": "eqRLx1DpO6Yf4nzm",
       "outs": {
+        "criticalFailure": {
+          "connection": "ASck9Hy1Lxgxrmxa:ins:in"
+        },
         "failure": {
           "connection": "RrO2cEggzTHKLZqb:ins:in"
         },
         "success": {
           "connection": "Ru24FAiGctmf2pfa:ins:in"
-        },
-        "criticalFailure": {
-          "connection": "ASck9Hy1Lxgxrmxa:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1177.3332871816397,
+        "y": 466.25000796381175
+      },
+      "type": "split-outcome"
     },
     {
+      "id": "igSlsRt62qRz2s68",
       "inputs": {
         "entry": {
           "connection": "3XC9Bm2VcInNzutZ:outputs:roller"
         }
       },
-      "type": "__variable_getter__",
       "position": {
-        "x": 741.9999449886639,
-        "y": 908.9999928172751
+        "x": 1710.9999449886639,
+        "y": 770.9999928172751
       },
-      "id": "igSlsRt62qRz2s68"
+      "type": "__variable_getter__"
     },
     {
       "custom": {
-        "title": "Add Condition",
         "outputs": {
           "u97jKtquMWwwUvxE": {
             "id": "u97jKtquMWwwUvxE",
+            "isArray": false,
             "label": "Value",
             "slug": "entry",
-            "isArray": false,
             "type": "number"
           }
-        }
-      },
-      "type": "__gate_exit__",
-      "position": {
-        "x": 641.9999524025905,
-        "y": 802.3332479633482
+        },
+        "title": "Add Condition"
       },
       "id": "zGc4tCQVcjOnTmoH",
       "outs": {
         "out": {
           "connection": "neZ9rprFjwfj3jHX:ins:in"
         }
-      }
+      },
+      "position": {
+        "x": 1613.9999524025905,
+        "y": 649.3332479633482
+      },
+      "type": "__gate_exit__"
     },
     {
       "custom": {
         "inputs": {
           "u97jKtquMWwwUvxE": {
             "id": "u97jKtquMWwwUvxE",
+            "isArray": false,
             "label": "Value",
             "slug": "entry",
-            "isArray": false,
             "type": "number"
           }
         }
-      },
-      "outs": {
-        "out": {
-          "connection": "zGc4tCQVcjOnTmoH:ins:in"
-        }
-      },
-      "type": "__gate_entry__",
-      "position": {
-        "x": 1603.256330890325,
-        "y": 372.8333201339013
       },
       "id": "RrO2cEggzTHKLZqb",
       "inputs": {
         "u97jKtquMWwwUvxE": {
           "value": 2
         }
-      }
-    },
-    {
-      "custom": {
-        "inputs": {
-          "u97jKtquMWwwUvxE": {
-            "id": "u97jKtquMWwwUvxE",
-            "label": "Value",
-            "slug": "entry",
-            "isArray": false,
-            "type": "number"
-          }
-        }
       },
       "outs": {
         "out": {
           "connection": "zGc4tCQVcjOnTmoH:ins:in"
         }
       },
-      "type": "__gate_entry__",
       "position": {
-        "x": 1602.5895828928817,
-        "y": 539.5000021566416
+        "x": 1604.256330890325,
+        "y": 432.8333201339013
+      },
+      "type": "__gate_entry__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "u97jKtquMWwwUvxE": {
+            "id": "u97jKtquMWwwUvxE",
+            "isArray": false,
+            "label": "Value",
+            "slug": "entry",
+            "type": "number"
+          }
+        }
       },
       "id": "Ru24FAiGctmf2pfa",
       "inputs": {
         "u97jKtquMWwwUvxE": {
           "value": 1
         }
-      }
+      },
+      "outs": {
+        "out": {
+          "connection": "zGc4tCQVcjOnTmoH:ins:in"
+        }
+      },
+      "position": {
+        "x": 1606.5895828928817,
+        "y": 538.5000021566416
+      },
+      "type": "__gate_entry__"
     },
     {
       "custom": {
         "inputs": {
           "u97jKtquMWwwUvxE": {
             "id": "u97jKtquMWwwUvxE",
+            "isArray": false,
             "label": "Value",
             "slug": "entry",
-            "isArray": false,
             "type": "number"
           }
+        }
+      },
+      "id": "ASck9Hy1Lxgxrmxa",
+      "inputs": {
+        "u97jKtquMWwwUvxE": {
+          "value": 3
         }
       },
       "outs": {
@@ -205,18 +188,37 @@
           "connection": "zGc4tCQVcjOnTmoH:ins:in"
         }
       },
-      "type": "__gate_entry__",
       "position": {
-        "x": 1603.9228347471603,
-        "y": 219.50001173547895
+        "x": 1605.9228347471603,
+        "y": 329.50001173547895
       },
-      "id": "ASck9Hy1Lxgxrmxa",
+      "type": "__gate_entry__"
+    },
+    {
+      "id": "sKPnpoourxStAhLH",
       "inputs": {
-        "u97jKtquMWwwUvxE": {
-          "value": 3
+        "entry": {
+          "value": "item:slug:cutting-insult"
+        },
+        "list": {
+          "connection": "3XC9Bm2VcInNzutZ:outputs:options"
         }
-      }
+      },
+      "outs": {
+        "true": {
+          "connection": "eqRLx1DpO6Yf4nzm:ins:in"
+        }
+      },
+      "position": {
+        "x": 924,
+        "y": 305
+      },
+      "type": "list-contains"
     }
+  ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
   ],
   "variables": {
     "3XC9Bm2VcInNzutZ:outputs:roller": {
@@ -224,7 +226,5 @@
       "label": "Roller",
       "type": "target"
     }
-  },
-  "id": "jrjoaNfS3cgNQZLg",
-  "description": "<p>@Localize[TRIGGERTROVE.CuttingInsult.Trigger.Description]</p>"
+  }
 }

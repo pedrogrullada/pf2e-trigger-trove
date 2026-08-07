@@ -527,12 +527,13 @@
         },
         "FuriousFinish": {
             "Trigger": {
-                "Description": "<p>When <strong>Furious Finish</strong> Effect is removed, remove Rage effect, then add fatigued condition.</p>"
+                "Addendum": "You are fatigued until you rest for at least 10 minutes.",
+                "Description": "<p>When a target takes damage from an origin with the <strong>Furious Finish</strong> effect, as well as Rage's, remove both effects and add the fatigued condition.</p>"
             }
         },
         "ImpressiveLanding": {
             "Trigger": {
-                "Description": "<p>When the region for <strong>Impressive Landing</strong> is placed, add a difficult terrain Region Behavior to it.<br>When damage is taken from <strong>Impressive Landing</strong>, adds Off-guard effect for 1 round.</p>"
+                "Description": "<p>When the region for <strong>Impressive Landing</strong> is placed, add a difficult terrain Region Behavior to it and roll Impressive Landing's damage. When this damage is taken, add the off-guard condition until the start of the target's next turn.</p>"
             }
         },
         "MagicalFetters": {
@@ -556,8 +557,10 @@
             }
         },
         "DistractingChatter": {
+            "Label": "Distracting Shatter",
             "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Distracting Chatter</strong> spell, apply an effect depending on their degree of success.</p>",
+                "Description": "<p>When a roller saves against the <strong>Distracting Chatter</strong> spell, apply an effect that automates the off-guard condition and adds reminders for its flat check on auditory abilities.</p>",
+                "EffectAddendum": "<p>You must succeed at a @Check[flat|dc:5|showDC:all] to use auditory abilities or verbal spell components.</p>",
                 "EffectDescription": "<p>You bombard a target with distracting auditory illusions, surrounding them with a tumultuous cacophony of overlapping speech, whispers, screams, and muttering. The target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, takes a -2 status penalty to purely auditory Perception checks, and must succeed at a @Check[flat|dc:5] to use auditory abilities or verbal spell components. Similarly, a creature who attempts to affect the target with an auditory effect must succeed at a @Check[flat|dc:5] or the attempt fails. The duration depends on the target's Will save.</p>"
             }
         },
@@ -568,7 +571,7 @@
         },
         "WhispersOfTheVoid": {
             "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Whispers of the Void</strong> spell, apply persistent damage, drained and dommed depending on their degree of success.</p>"
+                "Description": "<p>When a roller saves against the <strong>Whispers of the Void</strong> spell, they take persistent void damage, and they become drained and doomed depending on their degree of success.</p>"
             }
         },
         "VampiricMaiden": {
@@ -580,19 +583,21 @@
         },
         "ShockAndAwe": {
             "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Shock and Awe</strong> spell, apply frightened and stunned depending on their degree of success.</p>"
+                "Description": "<p>When a roller saves against the <strong>Shock and Awe</strong> spell, add the frightened and stunned conditions depending on their degree of success.</p>"
             }
         },
         "DivineImmolation": {
             "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Divine Immolation</strong> spell, apply persistent damage depending on their degree of success.</p>"
+                "Description": "<p>When a roller saves against the <strong>Divine Immolation</strong> spell, apply persistent fire damage depending on their degree of success. If they are immune to fire, the persistent damage is spirit instead.</p>"
             }
         },
         "SawtoothTerrain": {
             "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Sawtooth Terrain</strong> spell, apply persistent damage and gives an effect that adds a speed penalty depending on their degree of success.<br>When the region for <strong>Sawtooth Terrain</strong> is placed, add a difficult terrain Region Behavior to it.</p>",
-                "EffectDescriptionFail": "<p>The creature incur a –10-foot circumstance penalty to their Speed until they receive magical healing or benefit from a successful Medicine check against your spell DC to @UUID[Compendium.pf2e.actionspf2e.Item.MHLuKy4nQO2Z4Am1]{Administer First Aid}.</p>",
-                "EffectDescriptionCritFail": "<p>The creature incur a –15-foot circumstance penalty to their Speed until they receive magical healing or benefit from a successful Medicine check against your spell DC to @UUID[Compendium.pf2e.actionspf2e.Item.MHLuKy4nQO2Z4Am1]{Administer First Aid}.</p>"
+                "Description": "<p>When a roller saves against the <strong>Sawtooth Terrain</strong> spell, add persistent bleed damage and an effect containing a Speed penalty depending on their degree of success. If the roller receives magical healing while having this effect, remove the effect. If a template originating from Sawtooth Terrain is placed, add a difficult terrain behavior to it.</p>",
+                "EffectDescription": {
+                    "CriticalFailure": "You take a –15-foot circumstance penalty to your Speed until you receive magical healing or benefit from a successful @Check[medicine] check against the origin's spell DC to Administer First Aid.",
+                    "Failure": "You take a –10-foot circumstance penalty to your Speed until you receive magical healing or benefit from a successful @Check[medicine] check against the origin's spell DC to Administer First Aid."
+                }
             }
         },
         "CastIntoTime": {
@@ -603,13 +608,15 @@
         "Dominate": {
             "Trigger": {
                 "Description": "<p>When a roller saves against the <strong>Dominate</strong> spell, apply the controlled or stunned condition depending on their degree of success.</p>",
-                "EffectDescriptionFail": "<p>You control the target. It gains the @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} condition, but it can attempt a Will save at the end of each of its turns. On a success, the spell ends.</p>",
-                "EffectDescriptionCritFail": "<p>You control the target. It gains the @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} condition, it can attempt a Will save only if you give it a new order that is against its nature, such as killing its allies. On a success, the spell ends.</p> "
+                "EffectDescription": {
+                    "CriticalFailure": "You are @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}. You can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save if you are given an order that is against your nature, such as killing your allies. On a success, the spell ends.",
+                    "Failure": "You are @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}, but you can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save at the end of each of your turns. On a success, the spell ends."
+                }
             }
         },
         "AttackedFromWithin": {
             "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Attacked From Within</strong> spell, apply the frightened condition and Off-Guard for 1 round depending on their degree of success.</p>"
+                "Description": "<p>When a roller saves against <strong>Attacked From Within</strong>, increase their frightened condition depending on their degree of success. If they critically fail, add the off-guard condition for 1 round.</p>"
             }
         }
     }
