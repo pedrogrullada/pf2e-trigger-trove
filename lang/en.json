@@ -7,7 +7,7 @@
         },
         "AirAuraJunction": {
             "Trigger": {
-                "Description": "<p>When a combatant starts their turn within the kinetic aura of an <strong>air gate</strong> kineticist with its <strong>aura junction</strong>, grant that character the corresponding bonus to their Speeds via effect until the end of their turn.</p><p>This benefit overlaps with the system's effect when inside the aura, but persists once the character leaves the aura until the end of their turn.<p>"
+                "Description": "<p>When a combatant starts their turn within the kinetic aura of an <strong>air gate</strong> kineticist with its <strong>aura junction</strong>, grant that character the corresponding bonus to their Speeds via effect until the end of their turn.</p><p>This benefit overlaps with the system's effect when inside the aura, but persists once the character leaves the aura until the end of their turn.</p>"
             }
         },
         "AldoriSwordlord": {
@@ -42,7 +42,7 @@
         },
         "BrutalBeating": {
             "Trigger": {
-                "Description": "WWhen a target takes damage from an origin with the <strong>Brutal Beating</strong> feat, that target becomes frightened 1."
+                "Description": "When a target takes damage from an origin with the <strong>Brutal Beating</strong> feat, that target becomes frightened 1."
             }
         },
         "CastIntoTime": {
@@ -52,7 +52,7 @@
         },
         "ChampionsResistance": {
             "Trigger": {
-                "Description": "<p>When a target takes damage and they have a <strong>Champion's Resistance</strong> effect, remove that effect.<p>If the effect origin has <strong>Glimpse of Redemption</strong>, the damage origin also becomes enfeebled until the end of its next turn. If they have the <strong>Weight of Guilt</strong> feat, the champion can choose whether to apply the stupefied or enfeebled conditions.</p>",
+                "Description": "<p>When a target takes damage and they have a <strong>Champion's Resistance</strong> effect, remove that effect.</p><p>If the effect origin has <strong>Glimpse of Redemption</strong>, the damage origin also becomes enfeebled until the end of its next turn. If they have the <strong>Weight of Guilt</strong> feat, the champion can choose whether to apply the stupefied or enfeebled conditions.</p>",
                 "Redemption": {
                     "AwaitConfirmation": {
                         "Prompt": "Will you use Weight of Guilt to make the enemy stupefied rather than enfeebled?",
@@ -62,8 +62,8 @@
             }
         },
         "CommandingPresence": {
-            "Trgger": {
-                "Description": "When a target enters a <strong>Commanding Presence</strong> aura, send that ability to chat, and add an effect tracking the target's immunity. If a roller fails their saving throw against that ability, add the frightened condition to them with the corresponding value.<"
+            "Trigger": {
+                "Description": "<p>When a target enters a <strong>Commanding Presence</strong> aura, send that ability to chat, and add an effect tracking the target's immunity. If a roller fails their saving throw against that ability, add the frightened condition to them with the corresponding value.</p><"
             }
         },
         "CriticalSpecialization": {
@@ -92,7 +92,7 @@
         },
         "Daze": {
             "Trigger": {
-                "Description": "<p>When a roller saves against the <strong>Magical Fetters</strong> spell, on critical failure apply stunned 1.</p>"
+                "Description": "<p>When a roller critically fails their save against the <strong>Daze</strong> cantrip, they become stunned 1.</p>"
             }
         },
         "Defend": {
@@ -119,11 +119,11 @@
             }
         },
         "DistractingChatter": {
-            "Label": "Distracting Shatter",
+            "Label": "Distracting Chatter",
             "Trigger": {
                 "Description": "<p>When a roller saves against the <strong>Distracting Chatter</strong> spell, apply an effect that automates the off-guard condition and adds reminders for its flat check on auditory abilities.</p>",
                 "EffectAddendum": "<p>You must succeed at a @Check[flat|dc:5|showDC:all] to use auditory abilities or verbal spell components.</p>",
-                "EffectDescription": "<p>You bombard a target with distracting auditory illusions, surrounding them with a tumultuous cacophony of overlapping speech, whispers, screams, and muttering. The target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, takes a -2 status penalty to purely auditory Perception checks, and must succeed at a @Check[flat|dc:5] to use auditory abilities or verbal spell components. Similarly, a creature who attempts to affect the target with an auditory effect must succeed at a @Check[flat|dc:5] or the attempt fails. The duration depends on the target's Will save.</p>"
+                "EffectDescription": "<p>You bombard a target with distracting auditory illusions, surrounding them with a tumultuous cacophony of overlapping speech, whispers, screams, and muttering. The target is off-guard, takes a -2 status penalty to purely auditory Perception checks, and must succeed at a @Check[flat|dc:5] to use auditory abilities or verbal spell components. Similarly, a creature who attempts to affect the target with an auditory effect must succeed at a @Check[flat|dc:5] or the attempt fails. The duration depends on the target's Will save.</p>"
             }
         },
         "DistractingShot": {
@@ -140,14 +140,14 @@
             "Trigger": {
                 "Description": "<p>When a roller saves against the <strong>Dominate</strong> spell, apply the controlled or stunned condition depending on their degree of success.</p>",
                 "EffectDescription": {
-                    "CriticalFailure": "You are @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}. You can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save if you are given an order that is against your nature, such as killing your allies. On a success, the spell ends.",
-                    "Failure": "You are @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}, but you can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save at the end of each of your turns. On a success, the spell ends."
+                    "CriticalFailure": "You are controlled. You can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save if you are given an order that is against your nature, such as killing your allies. On a success, the spell ends.",
+                    "Failure": "You are controlled, but you can attempt a @Check[will|options:item:type:spell|traits:concentrate,incapacitation,manipulate,mental] save at the end of each of your turns. On a success, the spell ends."
                 }
             }
         },
         "DreadFlickering": {
             "Trigger": {
-                "Description": "When a living combatant ends their turn in a <strong>Dread Flickering</strong> aura, send the ability to chat. If a roller fails their saving throw against it, add the frightened condition accordingly. If the roller critically succeeds, add an effect to track their immunity."
+                "Description": "When a living combatant ends their turn within a <strong>Dread Flickering</strong> aura, send the ability to chat. If a roller fails their saving throw against it, add the frightened condition accordingly. If the roller critically succeeds, add an effect to track their immunity."
             }
         },
         "ElegantBuckler": {
@@ -182,7 +182,7 @@
         },
         "EntanglingFlora": {
             "Trigger": {
-                "Description": "When the region for <strong>Engangling Flora</strong> is placed, add a difficult terrain Region Behavior to it."
+                "Description": "When the region for <strong>Entangling Flora</strong> is placed, add a difficult terrain Region Behavior to it."
             }
         },
         "ExtravagantParry": {
@@ -358,7 +358,7 @@
         },
         "Rage": {
             "Trigger": {
-                "Description": "When a target that is <strong>Raging</strong> takes damage and is knocked out as a result, remove the Rage effect, and grant its temporary Hit Points immunity effect. If the target has <strong>Vitalizing Rage</strong>, create an immunity effect that lasts until the end of the their next turn instead."
+                "Description": "When a target that is <strong>Raging</strong> takes damage and is knocked out as a result, remove the Rage effect, and grant its temporary Hit Points immunity effect. If the target has <strong>Vitalizing Rage</strong>, create an immunity effect that lasts until the end of their next turn instead."
             }
         },
         "RapidRetreat": {
@@ -378,7 +378,7 @@
         },
         "ReplenishmentOfWar": {
             "Trigger": {
-                "Description": "When a target takes damage from an origin with Replenishment of War, and that damage comes from a Strike with their deity's favored weapon, grant Replenishment of War's temporary Hit Points to the origin, as appropriate for the outcome of Strike. If the damage origin has Shared Replenishment, this trigger will have no effect."
+                "Description": "When a target takes damage from an origin with Replenishment of War, and that damage comes from a Strike with their deity's favored weapon, grant Replenishment of War's temporary Hit Points to the origin, as appropriate for the outcome of the Strike. If the damage origin has Shared Replenishment, this trigger will have no effect."
             }
         },
         "RevitalizingFinisher": {
@@ -447,7 +447,10 @@
         },
         "SharedStratagem": {
             "Trigger": {
-                "ChatMessage": "<p><strong>Trigger Trove Note</strong> Drag this effect onto the designated ally for Shared Stratagem!</p><p>@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3]{Aux Effect: Shared Stratagem}</p>",
+                "ChatMessage": {
+                    "PF2E": "<p><strong>Trigger Trove Note</strong> Drag this effect onto the designated ally for Shared Stratagem!</p><p>@UUID[Compendium.pf2e-trigger-trove.auxiliary-items.Item.u6Czd41XiuFK70J3]{Aux Effect: Shared Stratagem}</p>",
+                    "SF2E": "<p><strong>Trigger Trove Note</strong> Drag this effect onto the designated ally for Shared Stratagem!</p><p>@UUID[Compendium.pf2e-trigger-trove.sf2e-auxiliary-items.Item.u6Czd41XiuFK70J3]{Aux Effect: Shared Stratagem}</p>"
+                },
                 "Description": "<p>When an attacker with Shared Stratagem successfully attacks their Devise a Stratagem target, and that target isn't being affected by Shared Stratagem already, add a trigger effect marking said target as such, and post a chat message containing an auxiliary effect an ally may drag onto themselves to benefit from Shared Stratagem.</p><p>When an attacker holding the aforementioned auxiliary effect targets the investigator's marked target, that target will be off-guard to that attack.</p><p><em>Note: This trigger may behave incorrectly if you have more than one character using Shared Stratagem to help each other.</em></p>"
             }
         },
@@ -548,7 +551,7 @@
         },
         "Trip": {
             "Trigger": {
-                "Description": "When a roller succeeds on their skill check to <strong>Trip</strong> a target, add the prone condition prone to the target. Additionally, roll Trip's damage on a critical success. On a critical failure, add the trip condition to the roller instead."
+                "Description": "When a roller succeeds on their skill check to <strong>Trip</strong> a target, add the prone condition to the target. Additionally, roll Trip's damage on a critical success. On a critical failure, add the trip condition to the roller instead."
             }
         },
         "UnbalancingBlow": {
@@ -571,7 +574,7 @@
                 "Addendum": "Anytime you cast a vitality spell, the thorns' damage increases to d6s of piercing damage until the start of your next turn."
             },
             "Trigger": {
-                "Description": "<p>When the target of a successful melee attack has Vibrant Thorns' auxiliary effect and is adjacent to the origin of the attack, or if the attack was an unarmed attack, roll <em>vibrant thorns'</em> damage. If the target has <strong>Aux Effect: Vibrant Thorns (Increase Damage)}</strong>, increase that damage accordingly.</p><p>For this trigger to work, <strong>Aux Effect: Vibrant Thorns</strong> must be dragged onto the origin when they cast the spell. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder.</p>"
+                "Description": "<p>When the target of a successful melee attack has Vibrant Thorns' auxiliary effect and is adjacent to the origin of the attack, or if the attack was an unarmed attack, roll <em>vibrant thorns'</em> damage. If the target has <strong>Aux Effect: Vibrant Thorns (Increase Damage)</strong>, increase that damage accordingly.</p><p>For this trigger to work, <strong>Aux Effect: Vibrant Thorns</strong> must be dragged onto the origin when they cast the spell. You can find this auxiliary effect in the <strong>Auxiliary Items</strong> compendium under the Trigger Trove folder.</p>"
             }
         },
         "VitalityNetwork": {
@@ -589,7 +592,7 @@
         },
         "Vitalizing": {
             "Trigger": {
-                "Description": "When the origin of a critically successful attack uses a weapon with a <strong>vitalizing</strong> rune, add the enfeebled 1 condition to the target. Additionally, add the stupefied 1 condition if the rune was a <strong>greater vitalizing</strong> rune"
+                "Description": "When the origin of a critically successful attack uses a weapon with a <strong>vitalizing</strong> rune, add the enfeebled 1 condition to the target. Additionally, add the stupefied 1 condition if the rune was a <strong>greater vitalizing</strong> rune."
             }
         },
         "WarningStripes": {

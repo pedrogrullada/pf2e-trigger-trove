@@ -66,7 +66,7 @@ function combineTriggers(triggersDir = "./triggers", baseFile = null, pf2eFile =
     }
   }
 
-  console.log(`\nCombined ${base.length} cross-compatible triggers`);
+  console.log(`\nCombined ${base.length} basic triggers`);
   console.log(`\nCombined ${pf2e.length} pf2e triggers`);
   console.log(`\nCombined ${sf2e.length} sf2e triggers`);
 

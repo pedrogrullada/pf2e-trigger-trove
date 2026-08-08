@@ -57,7 +57,7 @@ If your trigger relies on auxiliary items (such as how we handle Safe Elements),
 6. From here, you can start working on the module inside Foundry. You'll want to add your items to the Auxiliary Items compendium.
 7. Make sure your items are properly linked in your triggers.
 8. Run `npm run extractPacks` to extract the changes you made in Foundry into your cloned repo.
-9. If your item was created in pf2e and it's meant to be cross-compatible by using an anachronism module, duplicate the item and add it to sf2e's auxiliary items pack, making the necessary adjustments (switching its system and version propertes for the ones corresponding to sf2e, and switching flags such as `flags.pf2e` for `flags.sf2e`; and making sure you're using a valid image). If your item was created in sf2e, it is the same process but reversed. This is just an interim solution until I figure out a way to be smarter about this!
+9. If your item was created in pf2e and can be cross-compatible by using an anachronism module, make sure to create a copy in the sf2e packs as well, and viceversa.
 10. Commit and push the items you added, then create a PR with both your trigger and item updates.
 
 ### Adding Macros
