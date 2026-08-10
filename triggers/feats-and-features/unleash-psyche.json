@@ -2,7 +2,7 @@
   "name": "Unleash Psyche",
   "folder": "Feats & Features",
   "priority": 0,
-  "description": "<p>Automates applying Stupefied 1 for 1 round on the target after <strong>Effect: Unleash Psyche</strong> is removed. Additionally applies an immunity effect to the target upon removal</p>",
+  "description": "<p>@Localize[TRIGGERTROVE.UnleashPsyche.Trigger.Description]</p>",
   "id": "yRFBh9CVTbSW05nM",
   "nodes": [
     {
