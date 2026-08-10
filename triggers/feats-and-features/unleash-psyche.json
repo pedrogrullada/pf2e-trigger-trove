@@ -1,0 +1,201 @@
+{
+    "description": "<p>@Localize[TRIGGERTROVE.UnleashPsyche.Trigger.Description]</p>",
+    "folder": "Feats & Features",
+    "id": "yRFBh9CVTbSW05nM",
+    "name": "Unleash Psyche",
+    "nodes": [
+        {
+            "id": "ydsPHiTolDthX1Jy",
+            "inputs": {
+                "type": {
+                    "value": "effect"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "DfODOQrxWVOMJvu4:ins:in"
+                }
+            },
+            "position": {
+                "x": 439,
+                "y": 263
+            },
+            "type": "delete-item-event"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "lY5hd49il47FTwxf": {
+                        "id": "lY5hd49il47FTwxf",
+                        "input": "slug",
+                        "isArray": false,
+                        "label": "Slug",
+                        "slug": "path",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "DfODOQrxWVOMJvu4",
+            "inputs": {
+                "input": {
+                    "connection": "ydsPHiTolDthX1Jy:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "IXebfnxqeYekw15e:ins:in"
+                }
+            },
+            "position": {
+                "x": 686,
+                "y": 277.15
+            },
+            "type": "extract-item"
+        },
+        {
+            "id": "IXebfnxqeYekw15e",
+            "inputs": {
+                "a": {
+                    "connection": "DfODOQrxWVOMJvu4:outputs:lY5hd49il47FTwxf"
+                },
+                "b": {
+                    "value": "effect-unleash-psyche"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "t7uvIoo8xPq9M9qA:ins:in"
+                }
+            },
+            "position": {
+                "x": 916,
+                "y": 278.25
+            },
+            "type": "texts-match"
+        },
+        {
+            "id": "t7uvIoo8xPq9M9qA",
+            "inputs": {
+                "condition": {
+                    "value": "stupefied"
+                },
+                "duration": {
+                    "value": 2
+                },
+                "expiry": {
+                    "value": "round-end"
+                },
+                "name": {
+                    "value": "Effect: Unleash Psyche (Backlash)"
+                },
+                "origin": {
+                    "connection": "b3Eq5BsqcCXU4Cj1:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "systems/pf2e/icons/features/classes/unleash-psyche.webp"
+                },
+                "sf2eImg": {
+                    "value": "systems/sf2e/icons/features/classes/unleash-psyche.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-unleash-psyche-backlash"
+                },
+                "target": {
+                    "connection": "b3Eq5BsqcCXU4Cj1:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "2zXaL9mvwV2l3fES:ins:in"
+                }
+            },
+            "position": {
+                "x": 1197.923076923077,
+                "y": 262.4
+            },
+            "type": "create-condition"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "zKImgodEhwIMSWKo": {
+                        "id": "zKImgodEhwIMSWKo",
+                        "label": "Immunity",
+                        "slug": "rule",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "2zXaL9mvwV2l3fES",
+            "inputs": {
+                "duration": {
+                    "value": 2
+                },
+                "expiry": {
+                    "value": "round-end"
+                },
+                "name": {
+                    "value": "Effect: Unleash Psyche (Immunity)"
+                },
+                "origin": {
+                    "connection": "mljGkcnHMZrTxlFs:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "systems/pf2e/icons/features/classes/unleash-psyche.webp"
+                },
+                "sf2eImg": {
+                    "value": "systems/sf2e/icons/features/classes/unleash-psyche.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-unleash-psyche-immunity"
+                },
+                "target": {
+                    "connection": "mljGkcnHMZrTxlFs:outputs:entry"
+                },
+                "zKImgodEhwIMSWKo": {
+                    "value": "{\n  \"key\": \"Immunity\",\n  \"definition\": [\n    \"item:slug:effect-unleash-psyche\",\n    \"item:type:effect\"\n  ],\n  \"type\": \"custom\",\n  \"label\": \"TRIGGERTROVE.UnleashPsyche.Trigger.ImmunityLabel\"\n}"
+                }
+            },
+            "position": {
+                "x": 1505.923076923077,
+                "y": 263.4
+            },
+            "type": "create-effect"
+        },
+        {
+            "id": "b3Eq5BsqcCXU4Cj1",
+            "inputs": {
+                "entry": {
+                    "connection": "ydsPHiTolDthX1Jy:outputs:parent"
+                }
+            },
+            "position": {
+                "x": 1037,
+                "y": 461.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "mljGkcnHMZrTxlFs",
+            "inputs": {
+                "entry": {
+                    "connection": "ydsPHiTolDthX1Jy:outputs:parent"
+                }
+            },
+            "position": {
+                "x": 1396,
+                "y": 450.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "variables": {
+        "ydsPHiTolDthX1Jy:outputs:parent": {
+            "isArray": false,
+            "label": "Parent",
+            "type": "target"
+        }
+    }
+}
+

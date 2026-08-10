@@ -564,6 +564,12 @@
                 "Description": "When a target takes damage from an origin using <strong>Unbalancing Finisher</strong>, that target is off-guard until the end of the origin's next turn."
             }
         },
+        "UnleashPsyche": {
+            "Trigger": {
+                "Description": "When Unleash Psyche's effect is removed, add the stupefied condition to the parent for 2 rounds, and add an immunity effect against Unleash Psyche's effect for the same duration.",
+                "ImmunityLabel": "Unleash Psyche"
+            }
+        },
         "VampiricFeast": {
             "Trigger": {
                 "Description": "<p>When a roller saves against the <strong>Vampiric Feast</strong> spell, apply an effect to the target to track their hp.<br>When damage is taken from the <strong>Vampiric Feast</strong> spell, then create an effect that gives the caster temp hp equal to the difference between the target current hp and the hp store in the temp effect, finally delete the temp effect.</p>"
