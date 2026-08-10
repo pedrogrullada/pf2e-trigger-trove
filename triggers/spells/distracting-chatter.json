@@ -55,8 +55,8 @@
         }
       },
       "position": {
-        "x": 2391.8221478875757,
-        "y": 816.1457495831
+        "x": 2700.8221478875757,
+        "y": 936.1457495831
       },
       "type": "__variable_getter__"
     },
@@ -103,8 +103,8 @@
         }
       },
       "position": {
-        "x": 2368.272521275082,
-        "y": 859.3075270545444
+        "x": 2677.272521275082,
+        "y": 979.3075270545444
       },
       "type": "__variable_getter__"
     },
@@ -158,7 +158,7 @@
           "connection": "uMtj28AYVOlYDMeP:outputs:YjZtzzPN8szWEy2T"
         },
         "FvUo7gMTT4LKkf7b": {
-          "value": "{\n  \"inMemoryOnly\": true,\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg\"\n}"
+          "connection": "S2HjhiE66hIR4sG0:outputs:entry"
         },
         "G6eZkQdOJq5Qu0Ar": {
           "value": "{\n  \"key\": \"FlatModifier\",\n  \"slug\": \"distracting-chatter\",\n  \"type\": \"status\",\n  \"value\": -2,\n  \"selector\": [\n    \"perception\"\n  ],\n  \"predicate\": [\n    \"item:trait:auditory\"\n  ]\n}"
@@ -195,8 +195,8 @@
         }
       },
       "position": {
-        "x": 2512.0752172770153,
-        "y": 717.5764068410733
+        "x": 2891.0752172770153,
+        "y": 835.5764068410733
       },
       "type": "create-effect"
     },
@@ -223,7 +223,7 @@
       "id": "uMtj28AYVOlYDMeP",
       "outs": {
         "out": {
-          "connection": "cmE8Vy9XEHWS3vff:ins:in"
+          "connection": "tXH8vFMEiUe6yLA1:ins:in"
         }
       },
       "position": {
@@ -370,8 +370,8 @@
         }
       },
       "position": {
-        "x": 2401.905983266678,
-        "y": 906.5680115987902
+        "x": 2710.905983266678,
+        "y": 1026.5680115987902
       },
       "type": "__variable_getter__"
     },
@@ -441,6 +441,80 @@
         "y": 509.578074703074
       },
       "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "3j83dBSqeCuDxU6B": {
+            "id": "3j83dBSqeCuDxU6B",
+            "isArray": false,
+            "label": "pack",
+            "slug": "output",
+            "type": "text"
+          }
+        }
+      },
+      "id": "tXH8vFMEiUe6yLA1",
+      "inputs": {
+        "script": {
+          "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id === \"pf2e\" ?\n      \"pf2e.conditionitems\" :\n      \"sf2e.conditions\"\n  }\n];"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "IW5avKaWqNyIAPob:ins:in"
+        }
+      },
+      "position": {
+        "x": 2271,
+        "y": 763
+      },
+      "type": "execute-script"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "FJsrK6IgKLuBFSG7": {
+            "id": "FJsrK6IgKLuBFSG7",
+            "input": "pack",
+            "label": "pack",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "id": "IW5avKaWqNyIAPob",
+      "inputs": {
+        "FJsrK6IgKLuBFSG7": {
+          "connection": "tXH8vFMEiUe6yLA1:outputs:3j83dBSqeCuDxU6B"
+        },
+        "plain": {
+          "value": "{   \"inMemoryOnly\": true,   \"key\": \"GrantItem\",   \"uuid\": \"Compendium.@pack.Item.AJh5ex99aV6VTggg\" }"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "cmE8Vy9XEHWS3vff:ins:in"
+        }
+      },
+      "position": {
+        "x": 2542.6666666666665,
+        "y": 777.7777777777776
+      },
+      "type": "format-text"
+    },
+    {
+      "id": "S2HjhiE66hIR4sG0",
+      "inputs": {
+        "entry": {
+          "connection": "IW5avKaWqNyIAPob:outputs:result"
+        }
+      },
+      "position": {
+        "x": 2716,
+        "y": 1269.75
+      },
+      "type": "__variable_getter__"
     }
   ],
   "priority": 0,
@@ -462,6 +536,11 @@
       "isArray": false,
       "label": "Roller",
       "type": "target"
+    },
+    "IW5avKaWqNyIAPob:outputs:result": {
+      "isArray": false,
+      "label": "Grant Off-Guard",
+      "type": "text"
     },
     "y6VBruqFkVFEiNru:outputs:result": {
       "isArray": false,

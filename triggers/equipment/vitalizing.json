@@ -1,7 +1,7 @@
 {
     "description": "<p>@Localize[TRIGGERTROVE.Vitalizing.Trigger.Description]</p>",
     "folder": "Equipment",
-    "id": "QQD7bYI6E4fpWNSf",
+    "id": "0qyoZmfAPyOonFMs",
     "name": "Vitalizing",
     "nodes": [
         {
@@ -42,7 +42,7 @@
             "id": "upl6gKuDyYUcnb0l",
             "inputs": {
                 "options": {
-                    "connection": "dbcETUobr3Rb0655:outputs:entry"
+                    "connection": "cF18qm099ozcOnga:outputs:entry"
                 },
                 "predicate": {
                     "value": "[\n  \"item:rune:property:disrupting\",\n  \"target:mode:undead\"\n]"
@@ -57,8 +57,8 @@
                 }
             },
             "position": {
-                "x": 1055.923076923077,
-                "y": 387
+                "x": 2050.923076923076,
+                "y": 290.8461538461536
             },
             "type": "match-predicate"
         },
@@ -70,8 +70,8 @@
                 }
             },
             "position": {
-                "x": 629.571428571429,
-                "y": 541.6785714285717
+                "x": 631.0000000000005,
+                "y": 498.8214285714288
             },
             "type": "__variable_getter__"
         },
@@ -93,13 +93,22 @@
                 "origin": {
                     "connection": "SZBCi5sPWhqt5wI1:outputs:entry"
                 },
+                "pf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-green.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-green.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-vitalizing"
+                },
                 "target": {
                     "connection": "j80a4CmlMRARIoWP:outputs:entry"
                 }
             },
             "position": {
-                "x": 1487,
-                "y": -76.5
+                "x": 2481.9999999999995,
+                "y": -172.65384615384636
             },
             "type": "create-condition"
         },
@@ -111,8 +120,8 @@
                 }
             },
             "position": {
-                "x": 1370.3333333333333,
-                "y": 242.8055555555555
+                "x": 2360.3333333333326,
+                "y": 39.985042735042384
             },
             "type": "__variable_getter__"
         },
@@ -124,8 +133,8 @@
                 }
             },
             "position": {
-                "x": 1374,
-                "y": 34.25
+                "x": 2360.666666666666,
+                "y": -4.4038461538463025
             },
             "type": "__variable_getter__"
         },
@@ -133,7 +142,7 @@
             "id": "r8J9yJccX49oNpGq",
             "inputs": {
                 "options": {
-                    "connection": "dbcETUobr3Rb0655:outputs:entry"
+                    "connection": "cF18qm099ozcOnga:outputs:entry"
                 },
                 "predicate": {
                     "value": "[\n  \"item:rune:property:greater-disrupting\",\n  \"target:mode:undead\"\n]"
@@ -145,8 +154,8 @@
                 }
             },
             "position": {
-                "x": 1291.423076923077,
-                "y": 453.25
+                "x": 2286.423076923076,
+                "y": 357.0961538461536
             },
             "type": "match-predicate"
         },
@@ -170,10 +179,10 @@
             "id": "SugiVmsINvVLgtEP",
             "inputs": {
                 "1WpMR24pFes5BVhf": {
-                    "value": "{\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7\",\n  \"key\": \"GrantItem\",\n  \"inMemoryOnly\": true\n}"
+                    "connection": "XUJR3xFdfQPG4iVv:outputs:entry"
                 },
                 "ddeRQRhFrj1R5HTs": {
-                    "value": "{\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg\",\n  \"key\": \"GrantItem\",\n  \"inMemoryOnly\": true\n}"
+                    "connection": "McFddY1X5AbnXUvg:outputs:entry"
                 },
                 "img": {
                     "value": "systems/pf2e/icons/equipment/runes/weapon-property-runes/weapon-property-runes.webp"
@@ -181,17 +190,24 @@
                 "name": {
                     "value": "Effect: Greater Vitalizing"
                 },
-                "origin": {
-                    "connection": "2ekFZMkRFEuh1Sn0:outputs:entry"
+                "pf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-green.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-green.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-vitalizing-greater"
                 },
                 "target": {
                     "connection": "L4LhLv4BesjLmBGZ:outputs:entry"
                 }
             },
             "position": {
-                "x": 1524.5897435897436,
-                "y": 438.23333333333323
+                "x": 2519.5897435897427,
+                "y": 342.0794871794868
             },
+            "state": "fixed",
             "type": "create-effect"
         },
         {
@@ -202,8 +218,8 @@
                 }
             },
             "position": {
-                "x": 1400.1111111111109,
-                "y": 621.4722222222221
+                "x": 2385.1111111111104,
+                "y": 526.9850427350424
             },
             "type": "__variable_getter__"
         },
@@ -215,8 +231,8 @@
                 }
             },
             "position": {
-                "x": 1400.1111111111109,
-                "y": 574.8055555555555
+                "x": 2385.1111111111104,
+                "y": 480.31837606837587
             },
             "type": "__variable_getter__"
         },
@@ -232,7 +248,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "upl6gKuDyYUcnb0l:ins:in"
+                    "connection": "veCnXQSAoEFyhWdP:ins:in"
                 }
             },
             "position": {
@@ -240,6 +256,138 @@
                 "y": 334.107142857143
             },
             "type": "list-contains"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "3j83dBSqeCuDxU6B": {
+                        "id": "3j83dBSqeCuDxU6B",
+                        "isArray": false,
+                        "label": "pack",
+                        "slug": "output",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "veCnXQSAoEFyhWdP",
+            "inputs": {
+                "script": {
+                    "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id === \"pf2e\" ?\n      \"pf2e.conditionitems\" :\n      \"sf2e.conditions\"\n  }\n];"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "yTLlRgBEIONOEEsh:ins:in"
+                }
+            },
+            "position": {
+                "x": 1040.8214285714287,
+                "y": 255.02380952380952
+            },
+            "type": "execute-script"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "tHdiJrGwjoLdK24p": {
+                        "id": "tHdiJrGwjoLdK24p",
+                        "input": "pack",
+                        "label": "pack",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "yTLlRgBEIONOEEsh",
+            "inputs": {
+                "plain": {
+                    "value": "{   \"uuid\": \"Compendium.@pack.Item.MIRkyAjyBeXivMa7\",   \"key\": \"GrantItem\",   \"inMemoryOnly\": true }"
+                },
+                "tHdiJrGwjoLdK24p": {
+                    "connection": "veCnXQSAoEFyhWdP:outputs:3j83dBSqeCuDxU6B"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "kf9l9r3Q3yT6C7U0:ins:in"
+                }
+            },
+            "position": {
+                "x": 1357.2460317460318,
+                "y": 164.93650793650784
+            },
+            "type": "format-text"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "RF00p6KrtpoqeTq4": {
+                        "id": "RF00p6KrtpoqeTq4",
+                        "input": "pack",
+                        "label": "pack",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "kf9l9r3Q3yT6C7U0",
+            "inputs": {
+                "plain": {
+                    "value": "{   \"uuid\": \"Compendium.@pack.Item.e1XGnhKNSQIm5IXg\",   \"key\": \"GrantItem\",   \"inMemoryOnly\": true }"
+                },
+                "RF00p6KrtpoqeTq4": {
+                    "connection": "veCnXQSAoEFyhWdP:outputs:3j83dBSqeCuDxU6B"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "upl6gKuDyYUcnb0l:ins:in"
+                }
+            },
+            "position": {
+                "x": 1699.674603174603,
+                "y": 247.46123321123298
+            },
+            "type": "format-text"
+        },
+        {
+            "id": "cF18qm099ozcOnga",
+            "inputs": {
+                "entry": {
+                    "connection": "lQ3KnJYWEa4cHbTS:outputs:options"
+                }
+            },
+            "position": {
+                "x": 1886.6706349206347,
+                "y": 407.56043956043925
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "XUJR3xFdfQPG4iVv",
+            "inputs": {
+                "entry": {
+                    "connection": "yTLlRgBEIONOEEsh:outputs:result"
+                }
+            },
+            "position": {
+                "x": 2298.8872793872797,
+                "y": 727.3141858141855
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "McFddY1X5AbnXUvg",
+            "inputs": {
+                "entry": {
+                    "connection": "kf9l9r3Q3yT6C7U0:outputs:result"
+                }
+            },
+            "position": {
+                "x": 2304.124121492543,
+                "y": 770.3405016036592
+            },
+            "type": "__variable_getter__"
         }
     ],
     "priority": 0,
@@ -247,6 +395,11 @@
         "pf2e"
     ],
     "variables": {
+        "kf9l9r3Q3yT6C7U0:outputs:result": {
+            "isArray": false,
+            "label": "Grant Stupefied",
+            "type": "text"
+        },
         "lQ3KnJYWEa4cHbTS:outputs:options": {
             "isArray": true,
             "label": "Roll Options",
@@ -261,6 +414,11 @@
             "isArray": false,
             "label": "Target",
             "type": "target"
+        },
+        "yTLlRgBEIONOEEsh:outputs:result": {
+            "isArray": false,
+            "label": "Grant Enfeebled",
+            "type": "text"
         }
     }
 }

@@ -13,7 +13,7 @@
       },
       "outs": {
         "out": {
-          "connection": "JctgFBwrMt5E0u4Q:ins:in"
+          "connection": "bmQ2XXkEZuyt5e6f:ins:in"
         }
       },
       "position": {
@@ -66,10 +66,13 @@
       "id": "JctgFBwrMt5E0u4Q",
       "inputs": {
         "0e1N4gZIXxsNycDp": {
-          "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw\",\n  \"inMemoryOnly\": true\n}"
+          "connection": "Zrq7PBhWuyectfu3:outputs:result"
         },
         "fcwvRWTUYkqL1ybz": {
           "value": "{\n  \"key\": \"ItemAlteration\",\n  \"property\": \"description\",\n  \"mode\": \"override\",\n  \"itemId\": \"{item|id}\",\n  \"value\": [\n    {\n      \"text\": \"TRIGGERTROVE.FuriousFinish.Trigger.Addendum\"\n    }\n  ]\n}"
+        },
+        "level": {
+          "value": 2
         },
         "name": {
           "value": "Effect: Fatigued from Furious Finish"
@@ -88,8 +91,8 @@
         }
       },
       "position": {
-        "x": 1834.6515151515152,
-        "y": 537.8409090909088
+        "x": 2597.651515151515,
+        "y": 504.72979797979764
       },
       "state": "fixed",
       "type": "create-effect"
@@ -170,10 +173,71 @@
         }
       },
       "position": {
-        "x": 1680.1002886002893,
-        "y": 657.9433621933621
+        "x": 2443.1002886002893,
+        "y": 624.8322510822509
       },
       "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "3j83dBSqeCuDxU6B": {
+            "id": "3j83dBSqeCuDxU6B",
+            "isArray": false,
+            "label": "pack",
+            "slug": "output",
+            "type": "text"
+          }
+        }
+      },
+      "id": "bmQ2XXkEZuyt5e6f",
+      "inputs": {
+        "script": {
+          "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id === \"pf2e\" ?\n      \"pf2e.conditionitems\" :\n      \"sf2e.conditions\"\n  }\n];"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Zrq7PBhWuyectfu3:ins:in"
+        }
+      },
+      "position": {
+        "x": 1814,
+        "y": 537.8888888888889
+      },
+      "type": "execute-script"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "FJsrK6IgKLuBFSG7": {
+            "id": "FJsrK6IgKLuBFSG7",
+            "input": "pack",
+            "label": "pack",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "id": "Zrq7PBhWuyectfu3",
+      "inputs": {
+        "FJsrK6IgKLuBFSG7": {
+          "connection": "bmQ2XXkEZuyt5e6f:outputs:3j83dBSqeCuDxU6B"
+        },
+        "plain": {
+          "value": "{   \"key\": \"GrantItem\",   \"uuid\": \"Compendium.@packs.Item.HL2l2VRSaQHu9lUw\",   \"inMemoryOnly\": true }"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "JctgFBwrMt5E0u4Q:ins:in"
+        }
+      },
+      "position": {
+        "x": 2085.6666666666665,
+        "y": 552.6666666666665
+      },
+      "type": "format-text"
     }
   ],
   "priority": 0,

@@ -1,7 +1,7 @@
 {
     "description": "@Localize[TRIGGERTROVE.ChampionsResistance.Trigger.Description]",
     "folder": "Feats & Features",
-    "id": "E7hicPPDwAU3AIGR",
+    "id": "7sydLbDODg4eCC3h",
     "name": "Champion's Resistance",
     "nodes": [
         {
@@ -73,6 +73,9 @@
                 }
             },
             "outs": {
+                "false": {
+                    "connection": "MFu45OfX7Yw5KmOu:ins:in"
+                },
                 "true": {
                     "connection": "R8btMrjuR6ILiJXy:ins:in"
                 }
@@ -128,15 +131,15 @@
             },
             "outs": {
                 "false": {
-                    "connection": "xeKAIrtbPnXMwvNe:ins:in"
+                    "connection": "EvGrv9GjtqQFHytb:ins:in"
                 },
                 "true": {
                     "connection": "HaSRrzoN73iOtUPr:ins:in"
                 }
             },
             "position": {
-                "x": 1661.923076923077,
-                "y": 249.39999999999998
+                "x": 1666.9230769230771,
+                "y": -268.9333333333332
             },
             "type": "has-item"
         },
@@ -148,8 +151,8 @@
                 }
             },
             "position": {
-                "x": 1498.5357142857144,
-                "y": 209.42857142857156
+                "x": 1412.2023809523816,
+                "y": -356.9047619047615
             },
             "type": "__variable_getter__"
         },
@@ -168,59 +171,18 @@
             },
             "outs": {
                 "false": {
-                    "connection": "xeKAIrtbPnXMwvNe:ins:in"
+                    "connection": "EvGrv9GjtqQFHytb:ins:in"
                 },
                 "true": {
-                    "connection": "6ch6M3N1iqwGKpC5:ins:in"
+                    "connection": "A4s24mPabncfrZWP:ins:in"
                 }
             },
             "position": {
-                "x": 2053.7629870129877,
-                "y": 142.39500499500525
+                "x": 2058.7629870129877,
+                "y": -375.93832833832795
             },
             "state": "localization",
             "type": "await-confirm"
-        },
-        {
-            "custom": {
-                "inputs": {
-                    "wgNHGLOcB7g0N0pc": {
-                        "id": "wgNHGLOcB7g0N0pc",
-                        "label": "GrantItem",
-                        "slug": "rule",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "xeKAIrtbPnXMwvNe",
-            "inputs": {
-                "expiry": {
-                    "value": "turn-end"
-                },
-                "name": {
-                    "value": "Effect: Glimpse of Redemption (Enfeebled)"
-                },
-                "origin": {
-                    "connection": "LbegBIDcWOhkw3v3:outputs:entry"
-                },
-                "pf2eImg": {
-                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
-                },
-                "slug": {
-                    "value": "trigger-trove-glimpse-of-redemption-enfeebled"
-                },
-                "target": {
-                    "connection": "LbegBIDcWOhkw3v3:outputs:entry"
-                },
-                "wgNHGLOcB7g0N0pc": {
-                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7\",\n  \"inMemoryOnly\": true,\n  \"alterations\": [\n    {\n      \"mode\": \"upgrade\",\n      \"value\": 2,\n      \"property\": \"badge-value\"\n    }\n  ]\n}"
-                }
-            },
-            "position": {
-                "x": 2446.367687867688,
-                "y": 276.4394494394497
-            },
-            "type": "create-effect"
         },
         {
             "id": "LbegBIDcWOhkw3v3",
@@ -230,24 +192,30 @@
                 }
             },
             "position": {
-                "x": 2286.3045565545567,
-                "y": 439.8510656010658
+                "x": 2271.304556554557,
+                "y": -50.48226773226719
             },
             "type": "__variable_getter__"
         },
         {
-            "custom": {
-                "inputs": {
-                    "wgNHGLOcB7g0N0pc": {
-                        "id": "wgNHGLOcB7g0N0pc",
-                        "label": "GrantItem",
-                        "slug": "rule",
-                        "type": "text"
-                    }
+            "id": "nZIHMGMqcZiC8NUU",
+            "inputs": {
+                "entry": {
+                    "connection": "e5AEGHgEYhvuegPO:outputs:origin"
                 }
             },
-            "id": "6ch6M3N1iqwGKpC5",
+            "position": {
+                "x": 2251.011627261627,
+                "y": -478.67418692418636
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "A4s24mPabncfrZWP",
             "inputs": {
+                "condition": {
+                    "value": "stupefied"
+                },
                 "expiry": {
                     "value": "turn-end"
                 },
@@ -260,32 +228,91 @@
                 "pf2eImg": {
                     "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
                 },
+                "sf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
+                },
                 "slug": {
                     "value": "trigger-trove-glimpse-of-redemption-stupefied"
                 },
                 "target": {
                     "connection": "nZIHMGMqcZiC8NUU:outputs:entry"
                 },
-                "wgNHGLOcB7g0N0pc": {
-                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg\",\n  \"inMemoryOnly\": true,\n  \"alterations\": [\n    {\n      \"mode\": \"upgrade\",\n      \"value\": 2,\n      \"property\": \"badge-value\"\n    }\n  ]\n}"
+                "value": {
+                    "value": 2
                 }
             },
             "position": {
-                "x": 2451.9232434232435,
-                "y": -170.22721722721704
+                "x": 2424,
+                "y": -655.3333333333333
             },
-            "type": "create-effect"
+            "type": "create-condition"
         },
         {
-            "id": "nZIHMGMqcZiC8NUU",
+            "id": "EvGrv9GjtqQFHytb",
             "inputs": {
-                "entry": {
-                    "connection": "e5AEGHgEYhvuegPO:outputs:origin"
+                "condition": {
+                    "value": "enfeebled"
+                },
+                "expiry": {
+                    "value": "turn-end"
+                },
+                "name": {
+                    "value": "Effect: Glimpse of Redemption (Stupefied)"
+                },
+                "origin": {
+                    "connection": "LbegBIDcWOhkw3v3:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
+                },
+                "slug": {
+                    "value": "trigger-trove-glimpse-of-redemption-enfeebled"
+                },
+                "target": {
+                    "connection": "LbegBIDcWOhkw3v3:outputs:entry"
+                },
+                "value": {
+                    "value": 2
                 }
             },
             "position": {
-                "x": 2277.0116272616265,
-                "y": -9.340853590853271
+                "x": 2423.5,
+                "y": -231.99999999999943
+            },
+            "type": "create-condition"
+        },
+        {
+            "id": "MFu45OfX7Yw5KmOu",
+            "inputs": {
+                "pf2e": {
+                    "value": "Compendium.pf2e.actionspf2e.Item.ITWUi1r8Z7EtChkB"
+                },
+                "sf2e": {
+                    "value": "Compendium.pf2e.actionspf2e.Item.ITWUi1r8Z7EtChkB"
+                },
+                "target": {
+                    "connection": "zSW5vGkxegWyv1XH:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1671.2206959706962,
+                "y": 583.0666666666672
+            },
+            "type": "has-item"
+        },
+        {
+            "id": "zSW5vGkxegWyv1XH",
+            "inputs": {
+                "entry": {
+                    "connection": "EZTatzbIcNSNAPV3:outputs:wluUAbMcMcCfQEvF"
+                }
+            },
+            "position": {
+                "x": 1520.2976190476193,
+                "y": 681.4166666666674
             },
             "type": "__variable_getter__"
         }

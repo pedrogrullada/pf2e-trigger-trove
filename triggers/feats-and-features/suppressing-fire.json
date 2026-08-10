@@ -1,7 +1,7 @@
 {
     "description": "<p>@Localize[TRIGGERTROVE.SuppressingFire.Trigger.Description]</p>",
     "folder": "Feats & Features",
-    "id": "MQmbGOlmXerj1kBm",
+    "id": "HyQoarezmy6e8Zjw",
     "name": "Suppressing Fire",
     "nodes": [
         {
@@ -55,8 +55,8 @@
                 }
             },
             "position": {
-                "x": 1736.75,
-                "y": 341.5
+                "x": 2446.75,
+                "y": 631.5
             },
             "type": "__variable_getter__"
         },
@@ -74,10 +74,13 @@
             "id": "9OYOKxJu3XLIeeW2",
             "inputs": {
                 "DbQDybDfA3QXLAIR": {
-                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF\",\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+                    "connection": "3KnCO9xLDH95vHRb:outputs:result"
                 },
                 "name": {
                     "value": "Effect: Suppressing Fire"
+                },
+                "pf2eImg": {
+                    "value": "systems/pf2e/icons/abilities/red-bullets-in-flight.webp"
                 },
                 "sf2eImg": {
                     "value": "systems/sf2e/icons/abilities/red-bullets-in-flight.webp"
@@ -90,8 +93,8 @@
                 }
             },
             "position": {
-                "x": 2003,
-                "y": 346.5
+                "x": 2608.25,
+                "y": 491
             },
             "type": "create-effect"
         },
@@ -125,18 +128,18 @@
             },
             "outs": {
                 "criticalFailure": {
-                    "connection": "9OYOKxJu3XLIeeW2:ins:in"
+                    "connection": "hmp2itt1DFqajJ6w:ins:in"
                 },
                 "failure": {
-                    "connection": "9OYOKxJu3XLIeeW2:ins:in"
+                    "connection": "hmp2itt1DFqajJ6w:ins:in"
                 },
                 "success": {
                     "connection": "fQzS01SFNOUg58Au:ins:in"
                 }
             },
             "position": {
-                "x": 1393.9166666666667,
-                "y": 392.91666666666674
+                "x": 1444.9166666666667,
+                "y": 404.91666666666674
             },
             "type": "split-outcome"
         },
@@ -156,20 +159,100 @@
         {
             "id": "fQzS01SFNOUg58Au",
             "inputs": {
+                "pf2e": {
+                    "value": "Compendium.sf2e-anachronism.class-features.Item.VDEYb7aAwAjBp8Av"
+                },
                 "sf2e": {
                     "value": "Compendium.sf2e.class-features.Item.VDEYb7aAwAjBp8Av"
+                },
+                "target": {
+                    "connection": "Uolkjcek09w9K0OE:outputs:entry"
                 }
             },
             "outs": {
                 "true": {
+                    "connection": "hmp2itt1DFqajJ6w:ins:in"
+                }
+            },
+            "position": {
+                "x": 1680.3397435897436,
+                "y": 522.0666666666668
+            },
+            "type": "has-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dnCkrmA0JzdyCEMK": {
+                        "id": "dnCkrmA0JzdyCEMK",
+                        "input": "pack",
+                        "label": "pack",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "3KnCO9xLDH95vHRb",
+            "inputs": {
+                "dnCkrmA0JzdyCEMK": {
+                    "connection": "hmp2itt1DFqajJ6w:outputs:3j83dBSqeCuDxU6B"
+                },
+                "plain": {
+                    "value": "{   \"key\": \"GrantItem\",   \"uuid\": \"Compendium.@packs.Item.enA7BxAjBb7ns1iF\",   \"onDeleteActions\": {     \"grantee\": \"restrict\"   } }"
+                }
+            },
+            "outs": {
+                "out": {
                     "connection": "9OYOKxJu3XLIeeW2:ins:in"
                 }
             },
             "position": {
-                "x": 1681.5897435897436,
-                "y": 499.56666666666683
+                "x": 2278.5,
+                "y": 422.75
             },
-            "type": "has-item"
+            "type": "format-text"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "3j83dBSqeCuDxU6B": {
+                        "id": "3j83dBSqeCuDxU6B",
+                        "isArray": false,
+                        "label": "pack",
+                        "slug": "output",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "hmp2itt1DFqajJ6w",
+            "inputs": {
+                "script": {
+                    "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id === \"pf2e\" ?\n      \"sf2e-anachronism.conditions\" :\n      \"sf2e.conditions\"\n  }\n];"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "3KnCO9xLDH95vHRb:ins:in"
+                }
+            },
+            "position": {
+                "x": 1987.3269230769233,
+                "y": 405.10000000000014
+            },
+            "type": "execute-script"
+        },
+        {
+            "id": "Uolkjcek09w9K0OE",
+            "inputs": {
+                "entry": {
+                    "connection": "EWQj9DktAFeRubRy:outputs:origin"
+                }
+            },
+            "position": {
+                "x": 1555.1666666666667,
+                "y": 616.0833333333331
+            },
+            "type": "__variable_getter__"
         }
     ],
     "priority": 0,
@@ -177,6 +260,11 @@
         "sf2e"
     ],
     "variables": {
+        "EWQj9DktAFeRubRy:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
         "EWQj9DktAFeRubRy:outputs:outcome": {
             "isArray": false,
             "label": "Outcome",

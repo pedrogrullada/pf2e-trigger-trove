@@ -1,7 +1,7 @@
 {
     "description": "@Localize[TRIGGERTROVE.EnergyShot.Trigger.Description]",
     "folder": "Feats & Features",
-    "id": "7WhQSiTiixb8R33k",
+    "id": "nOGbGiFT4OkyB4gi",
     "name": "Energy Shot",
     "nodes": [
         {
@@ -56,7 +56,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "rO5ZLNcXdim7T010:ins:in"
+                    "connection": "cfsJxWTLE9xw7nPl:ins:in"
                 }
             },
             "position": {
@@ -86,7 +86,7 @@
             "id": "rO5ZLNcXdim7T010",
             "inputs": {
                 "2Hr3qQYmJeZFiiIo": {
-                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.feat-effects.Item.zocU4IYIlWwRKUuE\",\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+                    "connection": "Ddq3qv7otWoJfNiq:outputs:result"
                 },
                 "fixed": {
                     "value": "encounter"
@@ -113,8 +113,8 @@
                 }
             },
             "position": {
-                "x": 1460.305819180819,
-                "y": 336.1512237762238
+                "x": 2306.9724858474856,
+                "y": 280.59566822066813
             },
             "state": "fixed",
             "type": "create-effect"
@@ -127,8 +127,8 @@
                 }
             },
             "position": {
-                "x": 1243.305819180819,
-                "y": 492.9012237762238
+                "x": 2153.3058191808186,
+                "y": 377.345668220668
             },
             "type": "__variable_getter__"
         },
@@ -143,8 +143,8 @@
                 }
             },
             "position": {
-                "x": 1805.228896103896,
-                "y": 369.6512237762238
+                "x": 2663.006673881674,
+                "y": 278.5401126651125
             },
             "type": "send-chat"
         },
@@ -156,8 +156,8 @@
                 }
             },
             "position": {
-                "x": 1693.305819180819,
-                "y": 459.9012237762238
+                "x": 2551.083596958597,
+                "y": 368.7901126651125
             },
             "type": "__variable_getter__"
         },
@@ -169,8 +169,8 @@
                 }
             },
             "position": {
-                "x": 1664.305819180819,
-                "y": 509.9012237762238
+                "x": 2522.083596958597,
+                "y": 418.7901126651125
             },
             "type": "__variable_getter__"
         },
@@ -351,6 +351,67 @@
                 "y": 1001.8456682206679
             },
             "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "3j83dBSqeCuDxU6B": {
+                        "id": "3j83dBSqeCuDxU6B",
+                        "isArray": false,
+                        "label": "pack",
+                        "slug": "output",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "cfsJxWTLE9xw7nPl",
+            "inputs": {
+                "script": {
+                    "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id === \"pf2e\" ?\n      \"pf2e.feat-effects\" :\n      \"sf2e.feat-effects\"\n  }\n];"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "Ddq3qv7otWoJfNiq:ins:in"
+                }
+            },
+            "position": {
+                "x": 1425.8888888888887,
+                "y": 280.1111111111111
+            },
+            "type": "execute-script"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "FJsrK6IgKLuBFSG7": {
+                        "id": "FJsrK6IgKLuBFSG7",
+                        "input": "pack",
+                        "label": "pack",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "Ddq3qv7otWoJfNiq",
+            "inputs": {
+                "FJsrK6IgKLuBFSG7": {
+                    "connection": "cfsJxWTLE9xw7nPl:outputs:3j83dBSqeCuDxU6B"
+                },
+                "plain": {
+                    "value": "{   \"key\": \"GrantItem\",   \"uuid\": \"Compendium.@pack.Item.zocU4IYIlWwRKUuE\",   \"onDeleteActions\": {     \"grantee\": \"restrict\"   } }"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "rO5ZLNcXdim7T010:ins:in"
+                }
+            },
+            "position": {
+                "x": 1697.5555555555552,
+                "y": 294.88888888888874
+            },
+            "type": "format-text"
         }
     ],
     "priority": 0,

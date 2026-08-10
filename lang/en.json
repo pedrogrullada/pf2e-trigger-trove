@@ -1,5 +1,10 @@
 {
     "TRIGGERTROVE": {
+        "AcidSplash": {
+            "Trigger": {
+                "Description": "When an attack with <strong>Acid Splash</strong> critically succeeds, add its corresponding persistent acid damage to the target."
+            }
+        },
         "ActionHero": {
             "Trigger": {
                 "Description": "<p>If the origin of a successful Strike with an automatic weapon has the <strong>Action Hero</strong> fighting style, the target becomes suppressed until the start of the origin's next turn.</p>"
@@ -48,6 +53,11 @@
         "CastIntoTime": {
             "Trigger": {
                 "Description": "<p>When a roller saves against the <strong>Cast Into Time</strong> spell, apply the sickened condition depending on their degree of success.</p>"
+            }
+        },
+        "CausticBlast": {
+            "Trigger": {
+                "Description": "<p>When a roller critically fails their save against <strong>Caustic Blast</strong>, they take persistent acid damage.</p>"
             }
         },
         "ChampionsResistance": {
@@ -136,6 +146,15 @@
                 "Description": "<p>When a roller saves against the <strong>Divine Immolation</strong> spell, apply persistent fire damage depending on their degree of success. If they are immune to fire, the persistent damage is spirit instead.</p>"
             }
         },
+        "DyingAndWounded": {
+            "Trigger": {
+                "Description": "<p>When a target takes damage and they are brought to 0 Hit Points, increase their <strong>dying</strong> condition by an amount equal to 1 (or 2 if it was the result of a critical hit or critically failed saving throw) + their wounded condition value, if any.</p><p>If the dying condition is removed, increase their <strong>wounded</strong> condition by 1.</p>",
+                "AwaitConfirmation": {
+                    "Prompt": "You have been brought to 0 Hit Points. Was this the result of a critically failed saving throw or critical hit?",
+                    "Title": "Trigger Trove — Dying & Wounded Automation"
+                }
+            }
+        },
         "Dominate": {
             "Trigger": {
                 "Description": "<p>When a roller saves against the <strong>Dominate</strong> spell, apply the controlled or stunned condition depending on their degree of success.</p>",
@@ -167,7 +186,7 @@
             "Label": "Energy Shot",
             "Trigger": {
                 "Description": "<p>When a combatant with <strong>Energy Shot</strong> is created, confirm whether the free action will be used. If so, add its auxiliary effect to the combatant, which will keep track of their shots used with a Special Resource.</p><p>If the origin of an attack rolled with a crossbow or firearm has the Energy Shot auxiliary effect, deplete the energy resource by 1. If the Energy Shot resource is at zero, remove the effect.</p>",
-                "Prompt": "Are you using Energy Shot in this combat?"
+                "Prompt": "Trigger Trove — Are you using Energy Shot in this combat?"
             }
         },
         "Enfeeble": {
@@ -234,6 +253,11 @@
         "FrightfulPresence": {
             "Trigger": {
                 "Description": "When a target enters a <strong>Frightful Presence</strong> aura, send that ability to chat, and add an effect tracking the target's immunity. If a roller fails their saving throw against that ability, add the frightened condition to them with the corresponding value."
+            }
+        },
+        "Frostbite": {
+            "Trigger": {
+                "Description": "When a roller critically fails their saving throw against <strong>Frostbite</strong>, add their effect for bludgeoning damage weakness."
             }
         },
         "FuriousFinish": {
@@ -338,7 +362,7 @@
             "Label": "One Shot, One Kill",
             "Trigger": {
                 "Description": "When a combatant with <strong>One Shot, One Kill</strong> is created, confirm whether they will use it as a free action. If so, add an effect that enables its additional precision damage until their first successful Strike deals damage, and then remove the effect.",
-                "Prompt": "Are you using One Shot, One Kill in this combat?"
+                "Prompt": "Trigger Trove — Are you using One Shot, One Kill in this combat?"
             }
         },
         "Overdrive": {
@@ -415,7 +439,7 @@
             "Label": "Scars of Steel",
             "Trigger": {
                 "AwaitConfirmation": {
-                    "Prompt": "An opponent critically hits you with an attack that deals physical damage. Will you use Scars of Steel?"
+                    "Prompt": "Trigger Trove — An opponent critically hits you with an attack that deals physical damage. Will you use Scars of Steel?"
                 },
                 "Description": "<p>When a target that is Raging is critically hit by an attack that deals physical damage, and that target has Scars of Steel with available uses left, confirm whether they will use the ability. If so, add an auxiliary effect that enables its resistance, and deplete one use from Scars of Steel.</p><p>Once damage is taken, remove the previously added effect.</p>"
             }
@@ -434,7 +458,7 @@
             "Label": "Scout's Warning",
             "Trigger": {
                 "AwaitConfirmation": {
-                    "Prompt": "Will you use Scout's Warning? You must roll a Perception, Stealth, or Survival check for initiative."
+                    "Prompt": "Trigger Trove — Will you use Scout's Warning? You must roll a Perception, Stealth, or Survival check for initiative."
                 },
                 "Description": "When a combatant with <strong>Scout's Warning</strong> is created, confirm whether they will use it as a free action. If so, add Scout's Warning effect to the combatant and their allies."
             }
@@ -510,7 +534,7 @@
             "Label": "Swaggering Initiative",
             "Trigger": {
                 "AwaitConfirmation": {
-                    "Prompt": "Will you use Swaggering Initiative in this encounter?"
+                    "Prompt": "Trigger Trove — Will you use Swaggering Initiative in this encounter?"
                 },
                 "Description": "When a combatant with the <strong>Swaggering Initiative</strong> feat is created, confirm whether they will use that feat. If so, toggle their bonus to initiative on. If that combatant is the first one to act, they gain panache."
             }

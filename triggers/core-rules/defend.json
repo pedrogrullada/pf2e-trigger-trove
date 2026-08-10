@@ -1,7 +1,7 @@
 {
     "description": "@Localize[TRIGGERTROVE.Defend.Trigger.Description]",
     "folder": "Core Rules",
-    "id": "aMWcJbAfeTIOGMWd",
+    "id": "4ICbsLSvZzi9M64v",
     "name": "Defend",
     "nodes": [
         {
@@ -113,7 +113,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "b0hxSZ5cTD002kqs:ins:in"
+                    "connection": "TMiv3KdK5qVgasxp:ins:in"
                 }
             },
             "position": {
@@ -203,19 +203,13 @@
                         "label": "Grant",
                         "slug": "rule",
                         "type": "text"
-                    },
-                    "MTn19UGCaixCoVM2": {
-                        "id": "MTn19UGCaixCoVM2",
-                        "label": "Grant",
-                        "slug": "rule",
-                        "type": "text"
                     }
                 }
             },
             "id": "b0hxSZ5cTD002kqs",
             "inputs": {
                 "dB2ZS5woMWqxXYNy": {
-                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr\",\n  \"allowDuplicates\": false,\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+                    "connection": "0QSbrwKqNMoOThd8:outputs:result"
                 },
                 "img": {
                     "value": "icons/skills/melee/shield-block-gray-orange.webp"
@@ -243,8 +237,8 @@
                 }
             },
             "position": {
-                "x": 1554.706959706959,
-                "y": 239.00732600732582
+                "x": 2175.706959706959,
+                "y": 354.0073260073258
             },
             "state": "fixed",
             "type": "create-effect"
@@ -257,8 +251,8 @@
                 }
             },
             "position": {
-                "x": 1353.0711233211225,
-                "y": 524.7692307692305
+                "x": 1959.0711233211225,
+                "y": 305.7692307692305
             },
             "type": "__variable_getter__"
         },
@@ -292,10 +286,71 @@
                 }
             },
             "position": {
-                "x": 1068.3242590742584,
-                "y": 548.7590742590744
+                "x": 1078.3242590742584,
+                "y": 614.7590742590744
             },
             "type": "delete-item"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "3j83dBSqeCuDxU6B": {
+                        "id": "3j83dBSqeCuDxU6B",
+                        "isArray": false,
+                        "label": "system",
+                        "slug": "output",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "TMiv3KdK5qVgasxp",
+            "inputs": {
+                "script": {
+                    "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id\n  }\n];"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "0QSbrwKqNMoOThd8:ins:in"
+                }
+            },
+            "position": {
+                "x": 1533,
+                "y": 353
+            },
+            "type": "execute-script"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dnCkrmA0JzdyCEMK": {
+                        "id": "dnCkrmA0JzdyCEMK",
+                        "input": "pack",
+                        "label": "pack",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "0QSbrwKqNMoOThd8",
+            "inputs": {
+                "dnCkrmA0JzdyCEMK": {
+                    "connection": "TMiv3KdK5qVgasxp:outputs:3j83dBSqeCuDxU6B"
+                },
+                "plain": {
+                    "value": "{\"key\": \"GrantItem\",\"uuid\": \"Compendium.@pack.equipment-effects.Item.2YgXoHvJfrDHucMr\",\"allowDuplicates\": false,\"onDeleteActions\": {\"grantee\": \"restrict\"}}"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "b0hxSZ5cTD002kqs:ins:in"
+                }
+            },
+            "position": {
+                "x": 1829.923076923077,
+                "y": 369.4
+            },
+            "type": "format-text"
         }
     ],
     "priority": 0,
@@ -318,6 +373,11 @@
             "isArray": false,
             "label": "Combatant (CC)",
             "type": "target"
+        },
+        "TMiv3KdK5qVgasxp:outputs:3j83dBSqeCuDxU6B": {
+            "isArray": false,
+            "label": "System",
+            "type": "text"
         }
     }
 }

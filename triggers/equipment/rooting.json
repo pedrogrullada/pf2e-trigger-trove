@@ -1,7 +1,7 @@
 {
     "description": "@Localize[TRIGGERTROVE.Rooting.Trigger.Description]",
     "folder": "Equipment",
-    "id": "fMUmzNvlb7zSNvf7",
+    "id": "wVMKZtBtRavLm2Wo",
     "name": "Rooting",
     "nodes": [
         {
@@ -29,7 +29,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "hpXlwA6fqqQLnhzU:ins:in"
+                    "connection": "retoTM0aqfLR8b93:ins:in"
                 }
             },
             "position": {
@@ -49,13 +49,16 @@
                 }
             },
             "outs": {
+                "false": {
+                    "connection": "WcXWA6NnrcXFrD28:ins:in"
+                },
                 "true": {
                     "connection": "PQZ7es2UsM0tTw38:ins:in"
                 }
             },
             "position": {
-                "x": 985.4285714285713,
-                "y": 343.8571428571428
+                "x": 1879.428571428571,
+                "y": 428.85714285714266
             },
             "type": "list-contains"
         },
@@ -70,13 +73,16 @@
                 }
             },
             "outs": {
+                "false": {
+                    "connection": "TEaFtbHXBV8kNecL:ins:in"
+                },
                 "true": {
                     "connection": "rVqQIaWzG7FKGI3J:ins:in"
                 }
             },
             "position": {
-                "x": 986,
-                "y": 477
+                "x": 1880,
+                "y": 561.9999999999999
             },
             "type": "list-contains"
         },
@@ -91,13 +97,16 @@
                 }
             },
             "outs": {
+                "false": {
+                    "connection": "X0DGKy5WuP3TouyF:ins:in"
+                },
                 "true": {
                     "connection": "z1FwWIiL8ea1sZGv:ins:in"
                 }
             },
             "position": {
-                "x": 988,
-                "y": 608
+                "x": 1880.75,
+                "y": 692.9999999999999
             },
             "type": "list-contains"
         },
@@ -112,13 +121,13 @@
                 }
             },
             "outs": {
-                "false": {
+                "true": {
                     "connection": "FCSH8SZBSFAjnGPp:ins:in"
                 }
             },
             "position": {
-                "x": 989,
-                "y": 739
+                "x": 1883,
+                "y": 823.9999999999999
             },
             "type": "list-contains"
         },
@@ -130,8 +139,8 @@
                 }
             },
             "position": {
-                "x": 776,
-                "y": 599.75
+                "x": 1669.9999999999998,
+                "y": 684.7499999999999
             },
             "type": "__variable_getter__"
         },
@@ -169,8 +178,14 @@
                 "name": {
                     "value": "Aux Effect: Rooting"
                 },
+                "pf2eImg": {
+                    "value": "icons/magic/nature/root-vines-entwined-leaves.webp"
+                },
                 "PQ6kF3wdFE1ChYJe": {
                     "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/nature/root-vines-entwined-leaves.webp"
                 },
                 "SWKsaNyJgBMFBIeP": {
                     "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
@@ -180,8 +195,8 @@
                 }
             },
             "position": {
-                "x": 1331.637362637362,
-                "y": 120.57857142857128
+                "x": 2195.6373626373615,
+                "y": 253.91190476190445
             },
             "type": "create-effect"
         },
@@ -219,8 +234,14 @@
                 "name": {
                     "value": "Aux Effect: Rooting"
                 },
+                "pf2eImg": {
+                    "value": "icons/magic/nature/root-vines-entwined-leaves.webp"
+                },
                 "PQ6kF3wdFE1ChYJe": {
                     "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/nature/root-vines-entwined-leaves.webp"
                 },
                 "SWKsaNyJgBMFBIeP": {
                     "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
@@ -230,8 +251,8 @@
                 }
             },
             "position": {
-                "x": 1579.7326007325996,
-                "y": 260.3523809523809
+                "x": 2443.732600732599,
+                "y": 393.6857142857141
             },
             "type": "create-effect"
         },
@@ -269,8 +290,14 @@
                 "name": {
                     "value": "Aux Effect: Rooting"
                 },
+                "pf2eImg": {
+                    "value": "icons/magic/nature/root-vines-entwined-leaves.webp"
+                },
                 "PQ6kF3wdFE1ChYJe": {
                     "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/nature/root-vines-entwined-leaves.webp"
                 },
                 "SWKsaNyJgBMFBIeP": {
                     "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
@@ -280,8 +307,8 @@
                 }
             },
             "position": {
-                "x": 1826.1254578754572,
-                "y": 388.5547619047618
+                "x": 2690.125457875457,
+                "y": 521.8880952380949
             },
             "type": "create-effect"
         },
@@ -319,8 +346,14 @@
                 "name": {
                     "value": "Aux Effect: Rooting"
                 },
+                "pf2eImg": {
+                    "value": "icons/magic/nature/root-vines-entwined-leaves.webp"
+                },
                 "PQ6kF3wdFE1ChYJe": {
                     "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe\",\n  \"inMemoryOnly\": true\n}"
+                },
+                "sf2eImg": {
+                    "value": "icons/magic/nature/root-vines-entwined-leaves.webp"
                 },
                 "SWKsaNyJgBMFBIeP": {
                     "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm\",\n  \"inMemoryOnly\": true\n}"
@@ -330,8 +363,8 @@
                 }
             },
             "position": {
-                "x": 2062.244505494505,
-                "y": 497.61428571428576
+                "x": 2926.2445054945047,
+                "y": 630.9476190476189
             },
             "type": "create-effect"
         },
@@ -343,8 +376,114 @@
                 }
             },
             "position": {
-                "x": 1712.5887445887445,
-                "y": 50.43614718614779
+                "x": 2576.5887445887442,
+                "y": 183.7694805194809
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dnCkrmA0JzdyCEMK": {
+                        "id": "dnCkrmA0JzdyCEMK",
+                        "input": "pack",
+                        "label": "pack",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "uOihCEVUJjStThEy",
+            "inputs": {
+                "dnCkrmA0JzdyCEMK": {
+                    "connection": "retoTM0aqfLR8b93:outputs:3j83dBSqeCuDxU6B"
+                },
+                "plain": {
+                    "value": "{   \"key\": \"GrantItem\",   \"uuid\": \"Compendium.@pack.Item.eIcWbB5o3pP6OIMe\",   \"inMemoryOnly\": true }"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "NjnMPjx74vtCAEdk:ins:in"
+                }
+            },
+            "position": {
+                "x": 1250.5555555555552,
+                "y": 444.7777777777776
+            },
+            "type": "format-text"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "3j83dBSqeCuDxU6B": {
+                        "id": "3j83dBSqeCuDxU6B",
+                        "isArray": false,
+                        "label": "pack",
+                        "slug": "output",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "retoTM0aqfLR8b93",
+            "inputs": {
+                "script": {
+                    "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id === \"pf2e\" ?\n      \"pf2e.conditionitems\" :\n      \"sf2e.conditions\"\n  }\n];"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "uOihCEVUJjStThEy:ins:in"
+                }
+            },
+            "position": {
+                "x": 947.6324786324785,
+                "y": 441.37777777777774
+            },
+            "type": "execute-script"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dnCkrmA0JzdyCEMK": {
+                        "id": "dnCkrmA0JzdyCEMK",
+                        "input": "pack",
+                        "label": "pack",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "NjnMPjx74vtCAEdk",
+            "inputs": {
+                "dnCkrmA0JzdyCEMK": {
+                    "connection": "tgyPjPGIvyr7E3Pz:outputs:entry"
+                },
+                "plain": {
+                    "value": "{   \"key\": \"GrantItem\",   \"uuid\": \"Compendium.@pack.Item.i3OJZU2nk64Df3xm\",   \"inMemoryOnly\": true }"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "hpXlwA6fqqQLnhzU:ins:in"
+                }
+            },
+            "position": {
+                "x": 1566.5555555555552,
+                "y": 445.7777777777776
+            },
+            "type": "format-text"
+        },
+        {
+            "id": "tgyPjPGIvyr7E3Pz",
+            "inputs": {
+                "entry": {
+                    "connection": "retoTM0aqfLR8b93:outputs:3j83dBSqeCuDxU6B"
+                }
+            },
+            "position": {
+                "x": 1418.5959595959594,
+                "y": 573.7297979797979
             },
             "type": "__variable_getter__"
         }
@@ -363,6 +502,11 @@
             "isArray": false,
             "label": "Target",
             "type": "target"
+        },
+        "retoTM0aqfLR8b93:outputs:3j83dBSqeCuDxU6B": {
+            "isArray": false,
+            "label": "Pack",
+            "type": "text"
         }
     }
 }

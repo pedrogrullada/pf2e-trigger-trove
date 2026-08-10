@@ -1,0 +1,209 @@
+{
+    "description": "<p>When a roller critically fails their save against the Caustic Blast cantrip, they take persistent acid damage.</p>",
+    "folder": "Spells",
+    "id": "oHeUF9jF1tWrAVa3",
+    "name": "Caustic Blast",
+    "nodes": [
+        {
+            "id": "EakUiv6gK3tlmbt2",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:caustic-blasts"
+                },
+                "list": {
+                    "connection": "5dzXxBOy8uZWKxbR:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "sFHCWjrJJQ0uHFeX:ins:in"
+                }
+            },
+            "position": {
+                "x": 644,
+                "y": 376
+            },
+            "state": "split",
+            "type": "list-contains"
+        },
+        {
+            "id": "sFHCWjrJJQ0uHFeX",
+            "inputs": {
+                "a": {
+                    "value": "criticalFailure"
+                },
+                "b": {
+                    "connection": "XTG8M5Wn7KNhB56a:outputs:entry"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "URzOU2brCXISnFTV:ins:in"
+                }
+            },
+            "position": {
+                "x": 859.9230769230769,
+                "y": 438.35
+            },
+            "type": "compare-outcomes"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "asWhbTZZGAQYLvAA": {
+                        "id": "asWhbTZZGAQYLvAA",
+                        "input": "rank",
+                        "isArray": false,
+                        "label": "Rank",
+                        "slug": "path",
+                        "type": "number"
+                    }
+                }
+            },
+            "id": "URzOU2brCXISnFTV",
+            "inputs": {
+                "input": {
+                    "connection": "yuYMZUOf7u953Ogm:outputs:entry"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "gONy6NVhsRM8xMym:ins:in"
+                }
+            },
+            "position": {
+                "x": 1150.923076923077,
+                "y": 438.25
+            },
+            "type": "extract-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "bzQed4Gg48knepTh": {
+                        "id": "bzQed4Gg48knepTh",
+                        "input": "rank",
+                        "label": "rank",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "gONy6NVhsRM8xMym",
+            "inputs": {
+                "bzQed4Gg48knepTh": {
+                    "connection": "URzOU2brCXISnFTV:outputs:asWhbTZZGAQYLvAA"
+                },
+                "plain": {
+                    "value": "@Damage[(ceil(@rank/2))"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "XOj11DcCwuYFszWG:ins:in"
+                }
+            },
+            "position": {
+                "x": 1421.923076923077,
+                "y": 439.25
+            },
+            "type": "format-text"
+        },
+        {
+            "id": "XOj11DcCwuYFszWG",
+            "inputs": {
+                "die": {
+                    "connection": "gONy6NVhsRM8xMym:outputs:result"
+                },
+                "target": {
+                    "connection": "kuJOVhZjbz6RdvuY:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1777.256410256411,
+                "y": 423.0166666666669
+            },
+            "type": "create-persistent"
+        },
+        {
+            "id": "5dzXxBOy8uZWKxbR",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "EakUiv6gK3tlmbt2:ins:in"
+                }
+            },
+            "position": {
+                "x": 352,
+                "y": 337
+            },
+            "state": "check",
+            "type": "check-roll-event"
+        },
+        {
+            "id": "XTG8M5Wn7KNhB56a",
+            "inputs": {
+                "entry": {
+                    "connection": "5dzXxBOy8uZWKxbR:outputs:outcome"
+                }
+            },
+            "position": {
+                "x": 736,
+                "y": 588.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "yuYMZUOf7u953Ogm",
+            "inputs": {
+                "entry": {
+                    "connection": "5dzXxBOy8uZWKxbR:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1012,
+                "y": 588.75
+            },
+            "type": "__variable_getter__"
+        },
+        {
+            "id": "kuJOVhZjbz6RdvuY",
+            "inputs": {
+                "entry": {
+                    "connection": "5dzXxBOy8uZWKxbR:outputs:roller"
+                }
+            },
+            "position": {
+                "x": 1615,
+                "y": 576.75
+            },
+            "type": "__variable_getter__"
+        }
+    ],
+    "priority": 0,
+    "tags": [
+        "pf2e",
+        "sf2e"
+    ],
+    "variables": {
+        "5dzXxBOy8uZWKxbR:outputs:item": {
+            "isArray": false,
+            "label": "Item",
+            "type": "item"
+        },
+        "5dzXxBOy8uZWKxbR:outputs:outcome": {
+            "isArray": false,
+            "label": "Outcome",
+            "type": "outcome"
+        },
+        "5dzXxBOy8uZWKxbR:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        }
+    }
+}

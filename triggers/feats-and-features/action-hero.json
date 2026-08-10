@@ -1,7 +1,7 @@
 {
     "description": "<p>@Localize[TRIGGERTROVE.ActionHero.Trigger.Description]</p>",
     "folder": "Feats & Features",
-    "id": "veAMPyq04fB7unFM",
+    "id": "jW9hQtmkcSalQCzZ",
     "name": "Action Hero",
     "nodes": [
         {
@@ -50,7 +50,7 @@
             },
             "outs": {
                 "true": {
-                    "connection": "7eOZAspLUqYS1qqb:ins:in"
+                    "connection": "CUNRo1ZHSBiC0unh:ins:in"
                 }
             },
             "position": {
@@ -92,7 +92,7 @@
                     "connection": "pRbAEnGe6fJAJKnd:outputs:entry"
                 },
                 "r988i4c7nw6LpIAV": {
-                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF\",\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+                    "connection": "fZBcw81MzsHydcCy:outputs:result"
                 },
                 "sf2eImg": {
                     "value": "systems/sf2e/icons/abilities/blue-soldier.webp"
@@ -105,8 +105,8 @@
                 }
             },
             "position": {
-                "x": 1371.1552197802196,
-                "y": 412.4099206349204
+                "x": 1931.1552197802193,
+                "y": 455.15992063492035
             },
             "type": "create-effect"
         },
@@ -118,8 +118,8 @@
                 }
             },
             "position": {
-                "x": 1252.3432539682533,
-                "y": 619.2043650793646
+                "x": 1797.3432539682533,
+                "y": 791.7043650793646
             },
             "type": "__variable_getter__"
         },
@@ -131,8 +131,8 @@
                 }
             },
             "position": {
-                "x": 1253.4543650793644,
-                "y": 569.2043650793648
+                "x": 1783.6816378066374,
+                "y": 612.8407287157285
             },
             "type": "__variable_getter__"
         },
@@ -156,6 +156,67 @@
                 "y": 265.076587301587
             },
             "type": "has-item"
+        },
+        {
+            "custom": {
+                "inputs": {
+                    "dnCkrmA0JzdyCEMK": {
+                        "id": "dnCkrmA0JzdyCEMK",
+                        "input": "pack",
+                        "label": "pack",
+                        "slug": "variable",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "fZBcw81MzsHydcCy",
+            "inputs": {
+                "dnCkrmA0JzdyCEMK": {
+                    "connection": "CUNRo1ZHSBiC0unh:outputs:3j83dBSqeCuDxU6B"
+                },
+                "plain": {
+                    "value": "{   \"key\": \"GrantItem\",   \"uuid\": \"Compendium.@pack.Item.enA7BxAjBb7ns1iF\",   \"onDeleteActions\": {     \"grantee\": \"restrict\"   } }"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "7eOZAspLUqYS1qqb:ins:in"
+                }
+            },
+            "position": {
+                "x": 1612.25,
+                "y": 470.75
+            },
+            "type": "format-text"
+        },
+        {
+            "custom": {
+                "outputs": {
+                    "3j83dBSqeCuDxU6B": {
+                        "id": "3j83dBSqeCuDxU6B",
+                        "isArray": false,
+                        "label": "pack",
+                        "slug": "output",
+                        "type": "text"
+                    }
+                }
+            },
+            "id": "CUNRo1ZHSBiC0unh",
+            "inputs": {
+                "script": {
+                    "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id === \"pf2e\" ?\n      \"sf2e-anachronism.conditions\" :\n      \"sf2e.conditions\"\n  }\n];"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "fZBcw81MzsHydcCy:ins:in"
+                }
+            },
+            "position": {
+                "x": 1335.5769230769233,
+                "y": 454.85000000000014
+            },
+            "type": "execute-script"
         }
     ],
     "priority": 0,
