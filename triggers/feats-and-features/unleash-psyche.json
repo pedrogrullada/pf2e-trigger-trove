@@ -1,0 +1,148 @@
+{
+  "name": "Unleash Psyche",
+  "folder": "Feats & Features",
+  "priority": 0,
+  "description": "<p>Automates applying Stupefied 1 for 1 round on the target after <strong>Effect: Unleash Psyche</strong> is removed. Additionally applies an immunity effect to the target upon removal</p>",
+  "id": "yRFBh9CVTbSW05nM",
+  "nodes": [
+    {
+      "type": "delete-item-event",
+      "position": {
+        "x": 439,
+        "y": 263
+      },
+      "id": "ydsPHiTolDthX1Jy",
+      "inputs": {
+        "type": {
+          "value": "effect"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "DfODOQrxWVOMJvu4:ins:in"
+        }
+      }
+    },
+    {
+      "type": "extract-item",
+      "inputs": {
+        "input": {
+          "connection": "ydsPHiTolDthX1Jy:outputs:item"
+        }
+      },
+      "position": {
+        "x": 686,
+        "y": 277.15
+      },
+      "id": "DfODOQrxWVOMJvu4",
+      "custom": {
+        "outputs": {
+          "lY5hd49il47FTwxf": {
+            "id": "lY5hd49il47FTwxf",
+            "input": "slug",
+            "label": "Slug",
+            "slug": "path",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "IXebfnxqeYekw15e:ins:in"
+        }
+      }
+    },
+    {
+      "type": "texts-match",
+      "inputs": {
+        "a": {
+          "connection": "DfODOQrxWVOMJvu4:outputs:lY5hd49il47FTwxf"
+        },
+        "b": {
+          "value": "effect-unleash-psyche"
+        }
+      },
+      "position": {
+        "x": 916,
+        "y": 278.25
+      },
+      "id": "IXebfnxqeYekw15e",
+      "outs": {
+        "true": {
+          "connection": "t7uvIoo8xPq9M9qA:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-condition",
+      "position": {
+        "x": 1199.923076923077,
+        "y": 266.4
+      },
+      "id": "t7uvIoo8xPq9M9qA",
+      "inputs": {
+        "target": {
+          "connection": "ydsPHiTolDthX1Jy:outputs:parent"
+        },
+        "condition": {
+          "value": "stupefied"
+        },
+        "pf2eImg": {
+          "value": "systems/pf2e/icons/features/classes/unleash-psyche.webp"
+        },
+        "sf2eImg": {
+          "value": "systems/sf2e/icons/features/classes/unleash-psyche.webp"
+        },
+        "name": {
+          "value": "Effect: Unleash Psyche (Backlash)"
+        },
+        "slug": {
+          "value": "effect-unleash-psyche-backlash"
+        },
+        "duration": {
+          "value": 2
+        },
+        "expiry": {
+          "value": "round-end"
+        },
+        "origin": {
+          "connection": "ydsPHiTolDthX1Jy:outputs:parent"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "2zXaL9mvwV2l3fES:ins:in"
+        }
+      }
+    },
+    {
+      "type": "create-effect",
+      "position": {
+        "x": 1412.923076923077,
+        "y": 256.4
+      },
+      "id": "2zXaL9mvwV2l3fES",
+      "inputs": {
+        "duration": {
+          "value": 2
+        },
+        "expiry": {
+          "value": "round-end"
+        },
+        "origin": {
+          "connection": "ydsPHiTolDthX1Jy:outputs:parent"
+        },
+        "target": {
+          "connection": "ydsPHiTolDthX1Jy:outputs:parent"
+        },
+        "name": {
+          "value": "Effect: Unleash Psyche (Immunity)"
+        },
+        "slug": {
+          "value": "effect-unleash-psyche-immunity"
+        }
+      }
+    }
+  ]
+}
