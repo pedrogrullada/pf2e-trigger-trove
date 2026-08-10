@@ -566,7 +566,8 @@
         },
         "UnleashPsyche": {
             "Trigger": {
-                "Description": "Automates applying Stupefied 1 for 1 round on the target after <strong>Effect: Unleash Psyche</strong> is removed. Additionally applies an immunity effect to the target upon removal"
+                "Description": "When Unleash Psyche's effect is removed, add the stupefied condition to the parent for 2 rounds, and add an immunity effect against Unleash Psyche's effect for the same duration.",
+                "ImmunityLabel": "Unleash Psyche"
             }
         },
         "VampiricFeast": {
