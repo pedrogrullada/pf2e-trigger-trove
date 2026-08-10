@@ -1,3 +1,17 @@
+## 2.3.0
+- **New Triggers**
+  - (Chasarooni) Add trigger for Unleash Psyche's stupefied condition and cooldown
+  - (RedB) Add triggers for Furious Finish and Impressive Landing feats
+  - (RedB) Add triggers for Attacked from Within, Cast Into Time, Cutting Insult, Daze, Distracting Chatter, Divine Immolation, Dominate, Inner Radiance Torrent, Magical Fetters, Sawtooth Terrain, Shock and Awe, Vampiric Feast, and Whispers of the Void spells
+  - Add trigger for critical effects of Acid Splash, Caustic Blast, and Frostbite cantrips
+  - Add trigger for increasing wounded and dying conditions
+    - Quite basic, doesn't account for special cases from specific feats as of now.
+- **Trigger Updates**
+  - Update several triggers to dynamically account for system of choice when creating their rule elements
+- **Housekeeping**
+  - Update minimum Trigger Engine version to 1.27.0
+  - Correct several typos in english language file
+
 ## 2.2.0
 - **Enhancements**
   - Register SF2e triggers in pf2e when SF2e Anachronism is enabled (and viceversa)
