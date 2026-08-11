@@ -301,7 +301,7 @@
         {
             "id": "RtnJBrg6PUeKmeQk",
             "inputs": {
-                "plain": {
+                "localization": {
                     "value": "TRIGGERTROVE.DyingAndWounded.Trigger.AwaitConfirmation.Prompt"
                 },
                 "title": {
@@ -323,6 +323,7 @@
                 "x": 1407.183621933622,
                 "y": 282.31349206349273
             },
+            "state": "localization",
             "type": "await-confirm"
         },
         {
