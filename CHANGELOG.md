@@ -1,3 +1,8 @@
+## 2.3.1
+- **Trigger Updates**
+  - Fix typo in Commanding Presence trigger's description localization key path
+  - Update Dying and Wounded prompt to localization instead of plain text mode
+
 ## 2.3.0
 - **New Triggers**
   - (Chasarooni) Add trigger for Unleash Psyche's stupefied condition and cooldown
