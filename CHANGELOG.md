@@ -1,3 +1,8 @@
+## 2.3.2
+- **Trigger Updates**
+  - Limit Dying and Wounded trigger to PCs only
+  - Add recovery check automation to Dying and Wounded trigger
+
 ## 2.3.1
 - **Trigger Updates**
   - Fix typo in Commanding Presence trigger's description localization key path
