@@ -148,7 +148,7 @@
         },
         "DyingAndWounded": {
             "Trigger": {
-                "Description": "<p>When a target takes damage and they are brought to 0 Hit Points, increase their <strong>dying</strong> condition by an amount equal to 1 (or 2 if it was the result of a critical hit or critically failed saving throw) + their wounded condition value, if any.</p><p>If the dying condition is removed, increase their <strong>wounded</strong> condition by 1.</p>",
+                "Description": "<p>When a Player Character takes damage and they are brought to 0 Hit Points, increase their <strong>dying</strong> condition by an amount equal to 1 (or 2 if it was the result of a critical hit or critically failed saving throw) + their wounded condition value, if any.</p><p>If the dying condition is removed from a Player Character, increase their <strong>wounded</strong> condition by 1.</p><p>Additionally, if a Player Character rolls a recovery check, increase or decrease their dying condition depending on their degree of success.</p>",
                 "AwaitConfirmation": {
                     "Prompt": "You have been brought to 0 Hit Points. Was this the result of a critically failed saving throw or critical hit?",
                     "Title": "Trigger Trove — Dying & Wounded Automation"
