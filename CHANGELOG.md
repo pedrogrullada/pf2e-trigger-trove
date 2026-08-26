@@ -1,3 +1,7 @@
+## 2.3.4
+- **Trigger Updates**
+  - Fix Shields of the Spirit triggering for every applicable champion
+
 ## 2.3.3
 - **Trigger Updates**
   - Patch Shared Stratagem localization key in PF2e
