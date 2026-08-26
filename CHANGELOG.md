@@ -1,3 +1,7 @@
+## 2.3.3
+- **Trigger Updates**
+  - Patch Shared Stratagem localization key in PF2e
+
 ## 2.3.2
 - **Trigger Updates**
   - Limit Dying and Wounded trigger to PCs only
