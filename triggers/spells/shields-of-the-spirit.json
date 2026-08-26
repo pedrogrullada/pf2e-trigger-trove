@@ -5,15 +5,15 @@
     "name": "Shields of the Spirit",
     "nodes": [
         {
-            "id": "7yKftUXeWkE9Qpyp",
+            "id": "vEdXfL6ElgNUo85I",
             "outs": {
                 "out": {
                     "connection": "KUl8OkthKAy6E5GW:ins:in"
                 }
             },
             "position": {
-                "x": 385.5,
-                "y": 377.5
+                "x": 315.2878787878783,
+                "y": 207.06060606060572
             },
             "type": "attack-roll-event"
         },
@@ -34,13 +34,16 @@
                 "false": {
                     "connection": "cKj5Pla8kyO1DAK5:ins:in"
                 },
+                "out": {
+                    "connection": "TWMwvtA0CsG23FTK:ins:in"
+                },
                 "true": {
                     "connection": "tOTjYzUS0YSmzUdi:ins:in"
                 }
             },
             "position": {
-                "x": 660.3571428571435,
-                "y": 280.5071428571428
+                "x": 534.9107559107556,
+                "y": 216.90729825729778
             },
             "type": "inside-aura"
         },
@@ -54,7 +57,7 @@
                     "value": "Compendium.pf2e-anachronism.spell-effects.Item.mlvDokpnQBhvQrSk"
                 },
                 "target": {
-                    "connection": "grPBF7kGSTOdwSqL:outputs:entry"
+                    "connection": "T5x47gfESvyuKYhr:outputs:entry"
                 }
             },
             "outs": {
@@ -63,8 +66,8 @@
                 }
             },
             "position": {
-                "x": 1030.7802197802202,
-                "y": 191.25714285714318
+                "x": 969.9519369519369,
+                "y": 222.09047619047635
             },
             "type": "has-item"
         },
@@ -95,8 +98,8 @@
                 }
             },
             "position": {
-                "x": 384.31109022556336,
-                "y": 750.1378446115295
+                "x": 292.4929084073815,
+                "y": 725.592390066075
             },
             "type": "__gate_exit__"
         },
@@ -205,23 +208,10 @@
                 }
             },
             "position": {
-                "x": 1009.5302197802206,
-                "y": 436.25714285714326
+                "x": 990.4393106893114,
+                "y": 473.52987012987046
             },
             "type": "has-item"
-        },
-        {
-            "id": "grPBF7kGSTOdwSqL",
-            "inputs": {
-                "entry": {
-                    "connection": "7yKftUXeWkE9Qpyp:outputs:target"
-                }
-            },
-            "position": {
-                "x": 831.5333124477853,
-                "y": 206.33228905597412
-            },
-            "type": "__variable_getter__"
         },
         {
             "id": "T5x47gfESvyuKYhr",
@@ -231,8 +221,8 @@
                 }
             },
             "position": {
-                "x": 856.5333124477856,
-                "y": 520.0822890559739
+                "x": 746.1696760841492,
+                "y": 452.0822890559738
             },
             "type": "__variable_getter__"
         },
@@ -269,8 +259,8 @@
                 }
             },
             "position": {
-                "x": 1345.0333124477856,
-                "y": 437.4822890559742
+                "x": 1363.875303789777,
+                "y": 488.2723323460175
             },
             "type": "extract-item"
         },
@@ -284,6 +274,14 @@
                         "label": "Level",
                         "slug": "path",
                         "type": "number"
+                    },
+                    "HO6ZkRTd7SUTbHQY": {
+                        "id": "HO6ZkRTd7SUTbHQY",
+                        "input": "id",
+                        "label": "Aura Source ID",
+                        "slug": "path",
+                        "isArray": false,
+                        "type": "text"
                     }
                 }
             },
@@ -295,12 +293,12 @@
             },
             "outs": {
                 "out": {
-                    "connection": "CiYoM6yUx96Vjr78:ins:in"
+                    "connection": "dHJJM1sePKpsCDCf:ins:in"
                 }
             },
             "position": {
-                "x": 1304.456389370862,
-                "y": 174.48228905597432
+                "x": 1365.0321469466198,
+                "y": 132.36107693476197
             },
             "type": "extract-actor"
         },
@@ -312,8 +310,8 @@
                 }
             },
             "position": {
-                "x": 1114.5333124477852,
-                "y": 143.33228905597434
+                "x": 1173.2403831548556,
+                "y": 134.90804663173162
             },
             "type": "__variable_getter__"
         },
@@ -325,8 +323,8 @@
                 }
             },
             "position": {
-                "x": 1361.5,
-                "y": 266.75
+                "x": 2386.3585858585857,
+                "y": 329.2803030303028
             },
             "type": "__variable_getter__"
         },
@@ -439,8 +437,8 @@
                 }
             },
             "position": {
-                "x": 1602.5675004819743,
-                "y": 444.7767335004187
+                "x": 1584.320747235221,
+                "y": 473.86764259132775
             },
             "type": "__gate_entry__"
         },
@@ -481,10 +479,155 @@
                 }
             },
             "position": {
-                "x": 1577.5675004819743,
-                "y": 192.27673350041871
+                "x": 2555.5195206839935,
+                "y": 151.57471329839848
             },
             "type": "__gate_entry__"
+        },
+        {
+            "type": "texts-match",
+            "position": {
+                "x": 1710.4738718883473,
+                "y": 221.73485544383442
+            },
+            "id": "1YJ5JcD8MqRM8z9a",
+            "inputs": {
+                "b": {
+                    "connection": "akj6icQHomcVUBtk:outputs:rK1RR3QjQLFJPdQA"
+                },
+                "a": {
+                    "connection": "ETcooP9zgfW9aEVE:outputs:HO6ZkRTd7SUTbHQY"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "baOkGnpZrxGn3nK5:ins:in"
+                }
+            }
+        },
+        {
+            "type": "extract-item",
+            "inputs": {
+                "input": {
+                    "connection": "tOTjYzUS0YSmzUdi:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1238.5624499769244,
+                "y": 279.7772408362195
+            },
+            "id": "dHJJM1sePKpsCDCf",
+            "custom": {
+                "outputs": {
+                    "wXAp0Zd1EsyhVogp": {
+                        "id": "wXAp0Zd1EsyhVogp",
+                        "input": "origin",
+                        "label": "Origin",
+                        "slug": "path",
+                        "isArray": false,
+                        "type": "target"
+                    }
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "akj6icQHomcVUBtk:ins:in"
+                }
+            }
+        },
+        {
+            "id": "akj6icQHomcVUBtk",
+            "inputs": {
+                "input": {
+                    "connection": "dHJJM1sePKpsCDCf:outputs:wXAp0Zd1EsyhVogp"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "1YJ5JcD8MqRM8z9a:ins:in"
+                }
+            },
+            "position": {
+                "x": 1449.6685105829845,
+                "y": 278.99744057112576
+            },
+            "type": "extract-actor",
+            "custom": {
+                "outputs": {
+                    "rK1RR3QjQLFJPdQA": {
+                        "id": "rK1RR3QjQLFJPdQA",
+                        "input": "id",
+                        "label": "Spell origin ID",
+                        "slug": "path",
+                        "isArray": false,
+                        "type": "text"
+                    }
+                }
+            }
+        },
+        {
+            "type": "extract-actor",
+            "inputs": {
+                "input": {
+                    "connection": "POTkkW9g4sSvQ06J:outputs:entry"
+                }
+            },
+            "position": {
+                "x": 1987.2171717171707,
+                "y": 224.01868686868642
+            },
+            "id": "baOkGnpZrxGn3nK5",
+            "custom": {
+                "outputs": {
+                    "rzAQr1GH6MXZxF1G": {
+                        "id": "rzAQr1GH6MXZxF1G",
+                        "input": "id",
+                        "label": "Attack Target ID",
+                        "slug": "path",
+                        "isArray": false,
+                        "type": "text"
+                    }
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "DCDbmPTphUvifgil:ins:in"
+                }
+            }
+        },
+        {
+            "type": "texts-match",
+            "position": {
+                "x": 2224.9435688580434,
+                "y": 207.8888958478746
+            },
+            "id": "DCDbmPTphUvifgil",
+            "inputs": {
+                "a": {
+                    "connection": "akj6icQHomcVUBtk:outputs:rK1RR3QjQLFJPdQA"
+                },
+                "b": {
+                    "connection": "baOkGnpZrxGn3nK5:outputs:rzAQr1GH6MXZxF1G"
+                }
+            },
+            "outs": {
+                "false": {
+                    "connection": "CiYoM6yUx96Vjr78:ins:in"
+                }
+            }
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "7yKftUXeWkE9Qpyp:outputs:target"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1820.493867243867,
+                "y": 348.016594516594
+            },
+            "id": "POTkkW9g4sSvQ06J"
         }
     ],
     "priority": 0,
