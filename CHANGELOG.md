@@ -1,6 +1,6 @@
 ## 2.3.4
 - **Trigger Updates**
-  - Fix Shields of the Spirit triggering for every applicable champion
+  - (Dantar) Fix Shields of the Spirit triggering for every applicable champion
 
 ## 2.3.3
 - **Trigger Updates**
