@@ -1,3 +1,7 @@
+## 2.3.5
+- **Trigger Updates**
+  - (Dantar) Fix broken id in Shields of the Spirit trigger
+
 ## 2.3.4
 - **Trigger Updates**
   - (Dantar) Fix Shields of the Spirit triggering for every applicable champion
