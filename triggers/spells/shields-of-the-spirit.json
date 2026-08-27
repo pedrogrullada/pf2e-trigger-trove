@@ -5,7 +5,7 @@
     "name": "Shields of the Spirit",
     "nodes": [
         {
-            "id": "vEdXfL6ElgNUo85I",
+            "id": "7yKftUXeWkE9Qpyp",
             "outs": {
                 "out": {
                     "connection": "KUl8OkthKAy6E5GW:ins:in"
@@ -33,9 +33,6 @@
             "outs": {
                 "false": {
                     "connection": "cKj5Pla8kyO1DAK5:ins:in"
-                },
-                "out": {
-                    "connection": "TWMwvtA0CsG23FTK:ins:in"
                 },
                 "true": {
                     "connection": "tOTjYzUS0YSmzUdi:ins:in"
