@@ -635,6 +635,11 @@
                 "Description": "When a target takes damage and they have <strong>Warping Pull</strong>'s resistance effect, remove that effect."
             }
         },
+        "WaveOfDespair": {
+            "Trigger": {
+                "Description": "<p>When a roller saves against the <strong>Wave of Despair</strong> spell, apply a tracking effect depending on their degree of success. On a critical failure, instead apply the slowed condition for 1 minute. At the start of an affected combatant's turn, they attempt a Will save; on a failure, they become slowed 1 for that turn.</p>"
+            }
+        },
         "WhispersOfTheVoid": {
             "Trigger": {
                 "Description": "<p>When a roller saves against the <strong>Whispers of the Void</strong> spell, they take persistent void damage, and they become drained and doomed depending on their degree of success.</p>"
