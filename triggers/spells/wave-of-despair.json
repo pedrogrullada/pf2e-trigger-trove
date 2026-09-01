@@ -1,0 +1,463 @@
+{
+    "description": "@Localize[TRIGGERTROVE.WaveOfDespair.Trigger.Description]",
+    "folder": "Spells",
+    "id": "iV9KeLnc99aZCire",
+    "name": "Wave of Despair",
+    "priority": 0,
+    "nodes": [
+        {
+            "type": "check-roll-event",
+            "position": {
+                "x": 731.18,
+                "y": 164.7
+            },
+            "id": "30DP9nmavXy20XuE",
+            "inputs": {
+                "for": {
+                    "value": "saving-throw"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "svBlcDtqvksFJfiO:ins:in"
+                }
+            },
+            "state": "check"
+        },
+        {
+            "type": "list-contains",
+            "position": {
+                "x": 994.92,
+                "y": 216.38
+            },
+            "id": "svBlcDtqvksFJfiO",
+            "inputs": {
+                "entry": {
+                    "value": "item:slug:wave-of-despair"
+                },
+                "list": {
+                    "connection": "30DP9nmavXy20XuE:outputs:options"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Y2eTYYfjD5H9lXsk:ins:in"
+                }
+            }
+        },
+        {
+            "type": "split-outcome",
+            "position": {
+                "x": 1234,
+                "y": 278
+            },
+            "id": "Y2eTYYfjD5H9lXsk",
+            "inputs": {
+                "input": {
+                    "connection": "30DP9nmavXy20XuE:outputs:outcome"
+                }
+            },
+            "outs": {
+                "criticalFailure": {
+                    "connection": "YeoME2kZKlZJmYrd:ins:in"
+                },
+                "failure": {
+                    "connection": "sjNQDoqyG5YZa8oZ:ins:in"
+                },
+                "success": {
+                    "connection": "Voo5okuxZOKfwPus:ins:in"
+                }
+            }
+        },
+        {
+            "type": "create-condition",
+            "position": {
+                "x": 1981.77,
+                "y": 832.96
+            },
+            "id": "mc0LAP9nDQKXdbUJ",
+            "inputs": {
+                "condition": {
+                    "value": "slowed"
+                },
+                "target": {
+                    "connection": "LEr32tlxWStqcLB8:outputs:entry"
+                },
+                "name": {
+                    "value": "Effect: Wave of Despair"
+                }
+            }
+        },
+        {
+            "type": "create-condition",
+            "position": {
+                "x": 1537.63,
+                "y": -59.4
+            },
+            "id": "YeoME2kZKlZJmYrd",
+            "inputs": {
+                "condition": {
+                    "value": "slowed"
+                },
+                "name": {
+                    "value": "Effect: Wave of Despair (Critical Failure)"
+                },
+                "slug": {
+                    "value": "trigger-trove-wave-of-despair-crit-fail"
+                },
+                "unit": {
+                    "value": "minutes"
+                },
+                "origin": {
+                    "connection": "UO9xXvcyWOkfPNoF:outputs:entry"
+                },
+                "target": {
+                    "connection": "lC8HhH5yFu5ojTM9:outputs:entry"
+                }
+            }
+        },
+        {
+            "type": "turn-start-event",
+            "position": {
+                "x": 699.51,
+                "y": 805.65
+            },
+            "id": "4LGZHlYtoUlmHdrK",
+            "outs": {
+                "out": {
+                    "connection": "Yr2nzGeGcn8TDIjZ:ins:in"
+                }
+            }
+        },
+        {
+            "type": "has-item-slug",
+            "position": {
+                "x": 906.44,
+                "y": 805
+            },
+            "id": "Yr2nzGeGcn8TDIjZ",
+            "inputs": {
+                "target": {
+                    "connection": "4LGZHlYtoUlmHdrK:outputs:combatant"
+                },
+                "slug": {
+                    "value": "trigger-trove-wave-of-despair"
+                }
+            },
+            "outs": {
+                "true": {
+                    "connection": "Ii4BhQ8hsBY5axbH:ins:in"
+                }
+            }
+        },
+        {
+            "type": "split-outcome",
+            "position": {
+                "x": 1656.42,
+                "y": 833.64
+            },
+            "id": "zCfVTZoX2LcJpf8q",
+            "outs": {
+                "criticalFailure": {
+                    "connection": "mc0LAP9nDQKXdbUJ:ins:in"
+                },
+                "failure": {
+                    "connection": "mc0LAP9nDQKXdbUJ:ins:in"
+                }
+            },
+            "inputs": {
+                "input": {
+                    "connection": "OkkZWCkzE7BrzCjN:outputs:outcome"
+                }
+            }
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "30DP9nmavXy20XuE:outputs:origin"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1385.94,
+                "y": 679.81
+            },
+            "id": "UsbslwxeZ1HTVHbB"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "30DP9nmavXy20XuE:outputs:origin"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1424.22,
+                "y": 253.07
+            },
+            "id": "UO9xXvcyWOkfPNoF"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "30DP9nmavXy20XuE:outputs:origin"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1713.19,
+                "y": 594.33
+            },
+            "id": "HkW9C5nHI7bl78DT"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "30DP9nmavXy20XuE:outputs:roller"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1710.09,
+                "y": 378.05
+            },
+            "id": "jpgNJe6GsR08iWv5"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "30DP9nmavXy20XuE:outputs:roller"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1393.14,
+                "y": 460.57
+            },
+            "id": "UuLFBq4nbt2sa74S"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "30DP9nmavXy20XuE:outputs:roller"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1423.67,
+                "y": 6.34
+            },
+            "id": "lC8HhH5yFu5ojTM9"
+        },
+        {
+            "type": "create-effect",
+            "position": {
+                "x": 1831.83,
+                "y": 309.31
+            },
+            "id": "sjNQDoqyG5YZa8oZ",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-wave-of-despair"
+                },
+                "target": {
+                    "connection": "jpgNJe6GsR08iWv5:outputs:entry"
+                },
+                "origin": {
+                    "connection": "HkW9C5nHI7bl78DT:outputs:entry"
+                },
+                "unit": {
+                    "value": "minutes"
+                },
+                "pf2eImg": {
+                    "value": "icons/creatures/slimes/slime-face-teeth-purple.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/creatures/slimes/slime-face-teeth-purple.webp"
+                },
+                "counter": {
+                    "connection": "a52bKlQDBUg8oPXh:outputs:entry"
+                },
+                "name": {
+                    "value": "Effect: Wave of Despair (Failure)"
+                }
+            }
+        },
+        {
+            "type": "roll-save",
+            "position": {
+                "x": 1454.55,
+                "y": 816.99
+            },
+            "id": "OkkZWCkzE7BrzCjN",
+            "inputs": {
+                "value": {
+                    "connection": "Ii4BhQ8hsBY5axbH:outputs:m93K9tI4IieGLy66"
+                },
+                "save": {
+                    "value": "will"
+                },
+                "target": {
+                    "connection": "seyc2uaW4GRbsKjS:outputs:entry"
+                },
+                "traits": {
+                    "value": "arcane, emotion, mental"
+                },
+                "note": {
+                    "value": "<p>Wave of Despair save; on a failure, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for this turn</p>"
+                },
+                "item": {
+                    "connection": "Yr2nzGeGcn8TDIjZ:outputs:item"
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "zCfVTZoX2LcJpf8q:ins:in"
+                }
+            }
+        },
+        {
+            "type": "extract-item",
+            "inputs": {
+                "input": {
+                    "connection": "Yr2nzGeGcn8TDIjZ:outputs:item"
+                }
+            },
+            "position": {
+                "x": 1174.56,
+                "y": 830.29
+            },
+            "id": "Ii4BhQ8hsBY5axbH",
+            "custom": {
+                "outputs": {
+                    "m93K9tI4IieGLy66": {
+                        "id": "m93K9tI4IieGLy66",
+                        "input": "system.badge.value",
+                        "label": "system.badge.value",
+                        "slug": "path",
+                        "isArray": false,
+                        "type": "number"
+                    }
+                }
+            },
+            "outs": {
+                "out": {
+                    "connection": "OkkZWCkzE7BrzCjN:ins:in"
+                }
+            }
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "4LGZHlYtoUlmHdrK:outputs:combatant"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1351.01,
+                "y": 909.15
+            },
+            "id": "seyc2uaW4GRbsKjS"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "4LGZHlYtoUlmHdrK:outputs:combatant"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1864.57,
+                "y": 906.43
+            },
+            "id": "LEr32tlxWStqcLB8"
+        },
+        {
+            "type": "create-effect",
+            "position": {
+                "x": 1500.46,
+                "y": 390.22
+            },
+            "id": "Voo5okuxZOKfwPus",
+            "inputs": {
+                "slug": {
+                    "value": "trigger-trove-wave-of-despair"
+                },
+                "target": {
+                    "connection": "UuLFBq4nbt2sa74S:outputs:entry"
+                },
+                "origin": {
+                    "connection": "UsbslwxeZ1HTVHbB:outputs:entry"
+                },
+                "pf2eImg": {
+                    "value": "icons/creatures/slimes/slime-face-teeth-purple.webp"
+                },
+                "sf2eImg": {
+                    "value": "icons/creatures/slimes/slime-face-teeth-purple.webp"
+                },
+                "counter": {
+                    "connection": "HkDaFptNwONPrVS3:outputs:entry"
+                },
+                "name": {
+                    "value": "Effect: Wave of Despair (Success)"
+                }
+            }
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "30DP9nmavXy20XuE:outputs:dc"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1716.25,
+                "y": 494.28
+            },
+            "id": "a52bKlQDBUg8oPXh"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "30DP9nmavXy20XuE:outputs:dc"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1389.46,
+                "y": 582.31
+            },
+            "id": "HkDaFptNwONPrVS3"
+        }
+    ],
+    "tags": [
+        "pf2e"
+    ],
+    "variables": {
+        "30DP9nmavXy20XuE:outputs:origin": {
+            "isArray": false,
+            "label": "Origin",
+            "type": "target"
+        },
+        "30DP9nmavXy20XuE:outputs:roller": {
+            "isArray": false,
+            "label": "Roller",
+            "type": "target"
+        },
+        "30DP9nmavXy20XuE:outputs:item": {
+            "isArray": false,
+            "label": "Spell",
+            "type": "item"
+        },
+        "4LGZHlYtoUlmHdrK:outputs:combatant": {
+            "isArray": false,
+            "label": "Target",
+            "type": "target"
+        },
+        "30DP9nmavXy20XuE:outputs:dc": {
+            "isArray": false,
+            "label": "DC",
+            "type": "number"
+        }
+    }
+}
