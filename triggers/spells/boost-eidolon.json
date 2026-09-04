@@ -1,0 +1,118 @@
+ {
+        "name": "Boost Eidolon",
+        "priority": 0,
+        "id": "7IMShxf25Dfjhrzl",
+        "nodes": [
+            {
+                "type": "spell-cast-event",
+                "position": {
+                    "x": 555,
+                    "y": 283
+                },
+                "id": "RyPJtcgAtGaxA5oH",
+                "inputs": {
+                    "slug": {
+                        "value": "boost-eidolon"
+                    }
+                },
+                "outs": {
+                    "out": {
+                        "connection": "A0u8nxOzBfrC6D5K:ins:in"
+                    }
+                }
+            },
+            {
+                "type": "user-targets",
+                "position": {
+                    "x": 832.9230769230769,
+                    "y": 180.39999999999998
+                },
+                "id": "A0u8nxOzBfrC6D5K",
+                "inputs": {
+                    "user": {
+                        "connection": "RyPJtcgAtGaxA5oH:outputs:origin"
+                    }
+                },
+                "outs": {
+                    "out": {
+                        "connection": "kvQYRdd7gPyeQbES:ins:in"
+                    }
+                }
+            },
+            {
+                "type": "has-item",
+                "position": {
+                    "x": 1060.923076923077,
+                    "y": 84.39999999999998
+                },
+                "id": "kvQYRdd7gPyeQbES",
+                "inputs": {
+                    "target": {
+                        "connection": "A0u8nxOzBfrC6D5K:outputs:targets"
+                    },
+                    "pf2e": {
+                        "value": "Compendium.pf2e.spell-effects.Item.UVrEe0nukiSmiwfF"
+                    }
+                },
+                "outs": {
+                    "true": {
+                        "connection": "qSFIebumohDgFTrX:ins:in"
+                    },
+                    "false": {
+                        "connection": "h7AXyOaZZmEPcLZv:ins:in"
+                    }
+                }
+            },
+            {
+                "type": "delete-item",
+                "position": {
+                    "x": 1349.923076923077,
+                    "y": 78.5
+                },
+                "id": "qSFIebumohDgFTrX",
+                "inputs": {
+                    "item": {
+                        "connection": "kvQYRdd7gPyeQbES:outputs:item"
+                    }
+                },
+                "outs": {
+                    "out": {
+                        "connection": "h7AXyOaZZmEPcLZv:ins:in"
+                    }
+                }
+            },
+            {
+                "type": "create-effect-source",
+                "position": {
+                    "x": 1542.923076923077,
+                    "y": 314.5
+                },
+                "id": "h7AXyOaZZmEPcLZv",
+                "inputs": {
+                    "pf2e": {
+                        "value": "Compendium.pf2e.spell-effects.Item.h0CKGrgjGNSg21BW"
+                    },
+                    "target": {
+                        "connection": "A0u8nxOzBfrC6D5K:outputs:targets"
+                    },
+                    "options": {
+                        "connection": "RyPJtcgAtGaxA5oH:outputs:options"
+                    },
+                    "level": {
+                        "connection": "RyPJtcgAtGaxA5oH:outputs:rank"
+                    },
+                    "origin": {
+                        "connection": "RyPJtcgAtGaxA5oH:outputs:origin"
+                    }
+                }
+            }
+        ],
+        "folder": "Spells",
+        "tags": [
+            "PF2E",
+            "Focus Spell",
+            "Spell",
+            "Summoner"
+        ],
+        "description": "<p>@Localize[TRIGGERTROVE.BoostEidolon.Trigger.Description]</p>"
+    }
