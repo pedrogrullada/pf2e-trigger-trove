@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 2.4.1
+
+- Includes triggers accidentally excluded from last release
+
 ## 2.4.0
 
 - **Triggers**
