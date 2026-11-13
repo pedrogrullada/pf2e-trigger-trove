@@ -72,4 +72,4 @@ Here are some guidelines to keep some level of consistency and curation in the m
   - The description should be written in present tense imperative mood (When A happens, if B and C, then roll X damage, add Y condition, remove Z effect).
   - The first mention of the rule you're automating should be bolded.
   - If your trigger needs an auxiliary effect to work, mention that in its description.
-- Make sure to tag your triggers as pf2e- or sf2e- compatible, as appropriate.
+- Make sure to tag your triggers as `pf2e` or `sf2e` compatible. These tags determine your trigger's availability on these systems (or when their anachronism modules are enabled).
