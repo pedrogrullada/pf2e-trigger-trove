@@ -109,10 +109,7 @@
         ],
         "folder": "Spells",
         "tags": [
-            "PF2E",
-            "Focus Spell",
-            "Spell",
-            "Summoner"
+            "pf2e"
         ],
         "description": "<p>@Localize[TRIGGERTROVE.BoostEidolon.Trigger.Description]</p>"
     }
