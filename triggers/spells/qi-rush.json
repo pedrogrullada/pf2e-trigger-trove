@@ -1,109 +1,150 @@
 {
   "description": "@Localize[TRIGGERTROVE.QiRush.Trigger.Description]",
-  "name": "Qi Rush",
   "folder": "Spells",
-  "priority": 0,
   "id": "gTpSuLaO84ZRSAhE",
+  "name": "Qi Rush",
   "nodes": [
     {
-      "type": "create-condition",
-      "position": { "x": 1414.923076923077, "y": 57.39999999999998 },
       "id": "UsnMOW80TEaUC7pi",
       "inputs": {
-        "condition": { "value": "concealed" },
-        "target": { "connection": "xFv1H16bzgHHnGba:outputs:F5n2vtc8V2EdTF1r" },
-        "origin": { "connection": "xFv1H16bzgHHnGba:outputs:F5n2vtc8V2EdTF1r" },
-        "name": { "value": "Effect: Qi Rush" },
-        "slug": { "value": "effect-qi-rush" }
-      }
+        "condition": {
+          "value": "concealed"
+        },
+        "name": {
+          "value": "Effect: Qi Rush"
+        },
+        "origin": {
+          "connection": "xFv1H16bzgHHnGba:outputs:F5n2vtc8V2EdTF1r"
+        },
+        "slug": {
+          "value": "effect-qi-rush"
+        },
+        "target": {
+          "connection": "xFv1H16bzgHHnGba:outputs:F5n2vtc8V2EdTF1r"
+        }
+      },
+      "position": {
+        "x": 1414.923076923077,
+        "y": 57.39999999999998
+      },
+      "type": "create-condition"
     },
     {
-      "type": "hook-called-event",
-      "position": { "x": 63, "y": 61 },
-      "id": "pnnwDLCQaSCuotNZ",
       "custom": {
         "outputs": {
           "YJftQWgPMu4JGTBO": {
             "id": "YJftQWgPMu4JGTBO",
+            "isArray": false,
             "label": "Message",
             "slug": "output",
-            "isArray": false,
             "type": "any"
           }
         }
       },
-      "inputs": { "name": { "value": "createChatMessage" } },
-      "outs": { "out": { "connection": "xFv1H16bzgHHnGba:ins:in" } }
+      "id": "pnnwDLCQaSCuotNZ",
+      "inputs": {
+        "name": {
+          "value": "createChatMessage"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "xFv1H16bzgHHnGba:ins:in"
+        }
+      },
+      "position": {
+        "x": 63,
+        "y": 61
+      },
+      "type": "hook-called-event"
     },
     {
-      "type": "extract-item",
-      "inputs": {
-        "input": { "connection": "xFv1H16bzgHHnGba:outputs:CiBBJ4CH7ufOfma9" }
-      },
-      "position": { "x": 831, "y": 66.14999999999998 },
-      "id": "OtlSkDFRpXBxtmoR",
       "custom": {
         "outputs": {
           "pQp2JGNKYnXObRU9": {
             "id": "pQp2JGNKYnXObRU9",
             "input": "slug",
+            "isArray": false,
             "label": "Slug",
             "slug": "path",
-            "isArray": false,
             "type": "text"
           }
         }
       },
-      "outs": { "out": { "connection": "cyPd7lDQwXKd8Wmy:ins:in" } }
-    },
-    {
-      "type": "texts-match",
+      "id": "OtlSkDFRpXBxtmoR",
       "inputs": {
-        "a": { "connection": "OtlSkDFRpXBxtmoR:outputs:pQp2JGNKYnXObRU9" },
-        "b": { "value": "qi-rush" }
+        "input": {
+          "connection": "xFv1H16bzgHHnGba:outputs:CiBBJ4CH7ufOfma9"
+        }
       },
-      "position": { "x": 1061, "y": 56.25 },
-      "id": "cyPd7lDQwXKd8Wmy",
-      "outs": { "true": { "connection": "UsnMOW80TEaUC7pi:ins:in" } }
+      "outs": {
+        "out": {
+          "connection": "cyPd7lDQwXKd8Wmy:ins:in"
+        }
+      },
+      "position": {
+        "x": 831,
+        "y": 66.14999999999998
+      },
+      "type": "extract-item"
     },
     {
-      "type": "execute-script",
-      "position": { "x": 312, "y": 55 },
-      "id": "xFv1H16bzgHHnGba",
+      "id": "cyPd7lDQwXKd8Wmy",
+      "inputs": {
+        "a": {
+          "connection": "OtlSkDFRpXBxtmoR:outputs:pQp2JGNKYnXObRU9"
+        },
+        "b": {
+          "value": "qi-rush"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "UsnMOW80TEaUC7pi:ins:in"
+        }
+      },
+      "position": {
+        "x": 1061,
+        "y": 56.25
+      },
+      "type": "texts-match"
+    },
+    {
       "custom": {
         "inputs": {
           "eqKEn0OvHB2Da1tu": {
             "id": "eqKEn0OvHB2Da1tu",
+            "isArray": false,
             "label": "Message",
             "slug": "input",
-            "isArray": false,
             "type": "any"
           }
         },
         "outputs": {
           "CiBBJ4CH7ufOfma9": {
             "id": "CiBBJ4CH7ufOfma9",
+            "isArray": false,
             "label": "Item",
             "slug": "output",
-            "isArray": false,
             "type": "item"
-          },
-          "F5n2vtc8V2EdTF1r": {
-            "id": "F5n2vtc8V2EdTF1r",
-            "label": "Actor",
-            "slug": "output",
-            "isArray": false,
-            "type": "target"
           },
           "DhJtta1WuRqItQuo": {
             "id": "DhJtta1WuRqItQuo",
+            "isArray": false,
             "label": "Valid",
             "slug": "output",
-            "isArray": false,
             "type": "boolean"
+          },
+          "F5n2vtc8V2EdTF1r": {
+            "id": "F5n2vtc8V2EdTF1r",
+            "isArray": false,
+            "label": "Actor",
+            "slug": "output",
+            "type": "target"
           }
         }
       },
+      "id": "xFv1H16bzgHHnGba",
       "inputs": {
         "eqKEn0OvHB2Da1tu": {
           "connection": "pnnwDLCQaSCuotNZ:outputs:YJftQWgPMu4JGTBO"
@@ -112,16 +153,38 @@
           "value": "/**\n * @param {unknown[]} inputs\n * @returns {boolean} to break out current process\n * @returns {{type: EntryType; value: unknown}[]}\n *\n * @example\n * const x = inputs[0];\n * const y = inputs[1];\n * return [{type: \"number\", value: x + y}];\n */\n\nconst msg = inputs[0];\n\nreturn [{type: \"item\", value: msg?.item}, {type: \"target\", value: msg?.actor}, {type: \"boolean\", value: msg?.user?.id === game.user.id}]"
         }
       },
-      "outs": { "out": { "connection": "qLiQTBDMevMEruED:ins:in" } }
+      "outs": {
+        "out": {
+          "connection": "qLiQTBDMevMEruED:ins:in"
+        }
+      },
+      "position": {
+        "x": 312,
+        "y": 55
+      },
+      "type": "execute-script"
     },
     {
-      "type": "split-boolean",
-      "inputs": {
-        "input": { "connection": "xFv1H16bzgHHnGba:outputs:DhJtta1WuRqItQuo" }
-      },
-      "position": { "x": 600, "y": 68.25 },
       "id": "qLiQTBDMevMEruED",
-      "outs": { "true": { "connection": "OtlSkDFRpXBxtmoR:ins:in" } }
+      "inputs": {
+        "input": {
+          "connection": "xFv1H16bzgHHnGba:outputs:DhJtta1WuRqItQuo"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "OtlSkDFRpXBxtmoR:ins:in"
+        }
+      },
+      "position": {
+        "x": 600,
+        "y": 68.25
+      },
+      "type": "split-boolean"
     }
+  ],
+  "priority": 0,
+  "tags": [
+    "pf2e"
   ]
 }
