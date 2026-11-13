@@ -251,7 +251,9 @@
     },
     "Fortification": {
       "Trigger": {
-        "CreateChatMessage": "<p><strong>Trigger Trove Note</strong> On a success, this critical hit becomes a normal hit thanks to your <em>fortification</em> rune!</p>",
+        "AttackRolled": {
+          "CreateChatMessage": "<p><strong>Trigger Trove Note</strong> On a success, this critical hit becomes a normal hit thanks to your <em>fortification</em> rune.</p>"
+        },
         "Description": "<p>When the target of a critically successful attack is wearing armor with a <strong>fortification</strong> or <strong>greater fortification</strong> rune etched onto it is critically hit, roll a flat check with the appropriate DC.</p><p>This is skipped if the character has the Perfect Protection feat, deferring to the system's automation instead.</p>"
       }
     },
