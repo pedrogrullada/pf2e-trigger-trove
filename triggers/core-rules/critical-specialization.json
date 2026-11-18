@@ -1,438 +1,839 @@
 {
-    "description": "<p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Bow]</p><p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Spear]</p><p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Sword]</p>",
-    "folder": "Core Rules",
-    "id": "6JdDvJY9YKdxoi2o",
-    "name": "Critical Specialization",
-    "nodes": [
-        {
-            "id": "sj9X74RFqaVJPJpl",
-            "outs": {
-                "out": {
-                    "connection": "oYYR4W7IaJpI1OpI:ins:in"
-                }
-            },
-            "position": {
-                "x": 359,
-                "y": 199
-            },
-            "type": "damage-taken-event"
-        },
-        {
-            "custom": {
-                "outputs": {
-                    "EFei8iSFvbXhsMNm": {
-                        "id": "EFei8iSFvbXhsMNm",
-                        "input": "system.group",
-                        "isArray": false,
-                        "label": "Group",
-                        "slug": "path",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "WgRxR9iBveEBKfEh",
-            "inputs": {
-                "input": {
-                    "connection": "c68Np10IY8q9swOb:outputs:entry"
-                }
-            },
-            "outs": {
-                "out": {
-                    "connection": "UUSytLItArfpgLyB:ins:in"
-                }
-            },
-            "position": {
-                "x": 856.9230769230769,
-                "y": 318.4
-            },
-            "type": "extract-item"
-        },
-        {
-            "custom": {
-                "outs": {
-                    "tkSzYew7JjEPCxN8": {
-                        "id": "tkSzYew7JjEPCxN8",
-                        "input": "spear",
-                        "label": "Spear",
-                        "slug": "value"
-                    },
-                    "tmb6tj1DTmhWw3Rl": {
-                        "id": "tmb6tj1DTmhWw3Rl",
-                        "input": "bow",
-                        "label": "Bow",
-                        "slug": "value"
-                    },
-                    "U7h0oV2dTJf4qzpf": {
-                        "id": "U7h0oV2dTJf4qzpf",
-                        "input": "sword",
-                        "label": "Sword",
-                        "slug": "value"
-                    }
-                }
-            },
-            "id": "UUSytLItArfpgLyB",
-            "inputs": {
-                "input": {
-                    "connection": "WgRxR9iBveEBKfEh:outputs:EFei8iSFvbXhsMNm"
-                }
-            },
-            "outs": {
-                "tkSzYew7JjEPCxN8": {
-                    "connection": "MeOfD9CzHzYpOCyh:ins:in"
-                },
-                "tmb6tj1DTmhWw3Rl": {
-                    "connection": "VNGf6TljpajRLvoE:ins:in"
-                },
-                "U7h0oV2dTJf4qzpf": {
-                    "connection": "IW2ykUsQg9OXWZer:ins:in"
-                }
-            },
-            "position": {
-                "x": 1102.7445054945053,
-                "y": 286.7928571428572
-            },
-            "type": "split-text"
-        },
-        {
-            "id": "c68Np10IY8q9swOb",
-            "inputs": {
-                "entry": {
-                    "connection": "sj9X74RFqaVJPJpl:outputs:item"
-                }
-            },
-            "position": {
-                "x": 721,
-                "y": 386.75
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "VNGf6TljpajRLvoE",
-            "inputs": {
-                "condition": {
-                    "value": "immobilized"
-                },
-                "img": {
-                    "value": "icons/skills/ranged/person-archery-bow-attack-orange.webp"
-                },
-                "name": {
-                    "value": "Effect: Bow Critical Specialization"
-                },
-                "pf2eImg": {
-                    "value": "icons/skills/ranged/projectile-strike-impale-gray.webp"
-                },
-                "sf2eImg": {
-                    "value": "icons/skills/ranged/projectile-strike-impale-gray.webp"
-                },
-                "target": {
-                    "connection": "xyl2HZiGy0tkiFTR:outputs:entry"
-                }
-            },
-            "position": {
-                "x": 1469.1254578754574,
-                "y": -291.02857142857124
-            },
-            "state": "fixed",
-            "type": "create-condition"
-        },
-        {
-            "id": "xyl2HZiGy0tkiFTR",
-            "inputs": {
-                "entry": {
-                    "connection": "sj9X74RFqaVJPJpl:outputs:target"
-                }
-            },
-            "position": {
-                "x": 1304.9642857142853,
-                "y": -165.40476190476187
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "oYYR4W7IaJpI1OpI",
-            "inputs": {
-                "options": {
-                    "connection": "sj9X74RFqaVJPJpl:outputs:options"
-                },
-                "predicate": {
-                    "value": "[\n  \"check:outcome:critical-success\",\n  \"critical-specialization\"\n]"
-                }
-            },
-            "outs": {
-                "true": {
-                    "connection": "WgRxR9iBveEBKfEh:ins:in"
-                }
-            },
-            "position": {
-                "x": 621.3818681318678,
-                "y": 238.75183150183142
-            },
-            "type": "match-predicate"
-        },
-        {
-            "id": "MeOfD9CzHzYpOCyh",
-            "inputs": {
-                "entry": {
-                    "value": "item:rune:property:grievous"
-                },
-                "list": {
-                    "connection": "vcy1uyAyRhsihh38:outputs:entry"
-                }
-            },
-            "outs": {
-                "false": {
-                    "connection": "lkLFmkNLjg4wYXV0:ins:in"
-                },
-                "true": {
-                    "connection": "8L3UdlLtDkAsZi91:ins:in"
-                }
-            },
-            "position": {
-                "x": 1457.380036630036,
-                "y": 194.46886446886458
-            },
-            "type": "list-contains"
-        },
-        {
-            "id": "vcy1uyAyRhsihh38",
-            "inputs": {
-                "entry": {
-                    "connection": "sj9X74RFqaVJPJpl:outputs:options"
-                }
-            },
-            "position": {
-                "x": 1478.623626373626,
-                "y": 351.86172161172175
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "IW2ykUsQg9OXWZer",
-            "inputs": {
-                "entry": {
-                    "value": "item:rune:property:grievous"
-                },
-                "list": {
-                    "connection": "vcy1uyAyRhsihh38:outputs:entry"
-                }
-            },
-            "outs": {
-                "false": {
-                    "connection": "Idq5HuA48hpOdYF6:ins:in"
-                },
-                "true": {
-                    "connection": "DiFcxMpjFxKDTCXK:ins:in"
-                }
-            },
-            "position": {
-                "x": 1458.380036630036,
-                "y": 408.4688644688646
-            },
-            "type": "list-contains"
-        },
-        {
-            "id": "8L3UdlLtDkAsZi91",
-            "inputs": {
-                "condition": {
-                    "value": "clumsy"
-                },
-                "duration": {
-                    "value": 2
-                },
-                "img": {
-                    "value": "icons/skills/melee/strike-polearm-light-orange.webp"
-                },
-                "name": {
-                    "value": "Effect: Spear Critical Specialization (Grievous)"
-                },
-                "origin": {
-                    "connection": "V3lVG2rdIdL5hzi8:outputs:combatant"
-                },
-                "pf2eImg": {
-                    "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
-                },
-                "sf2eImg": {
-                    "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
-                },
-                "target": {
-                    "connection": "RIjE2piI5tvHXhPT:outputs:entry"
-                }
-            },
-            "position": {
-                "x": 1903.8656898656914,
-                "y": -783.5776723276712
-            },
-            "type": "create-condition"
-        },
-        {
-            "id": "V3lVG2rdIdL5hzi8",
-            "position": {
-                "x": 1437.8429625929639,
-                "y": -396.5928238428226
-            },
-            "type": "current-combatant"
-        },
-        {
-            "id": "RIjE2piI5tvHXhPT",
-            "inputs": {
-                "entry": {
-                    "connection": "sj9X74RFqaVJPJpl:outputs:target"
-                }
-            },
-            "position": {
-                "x": 1583.6510434010447,
-                "y": -521.5145410145394
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "lkLFmkNLjg4wYXV0",
-            "inputs": {
-                "condition": {
-                    "value": "clumsy"
-                },
-                "img": {
-                    "value": "icons/skills/melee/strike-polearm-light-orange.webp"
-                },
-                "name": {
-                    "value": "Effect: Spear Critical Specialization"
-                },
-                "origin": {
-                    "connection": "V3lVG2rdIdL5hzi8:outputs:combatant"
-                },
-                "pf2eImg": {
-                    "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
-                },
-                "sf2eImg": {
-                    "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
-                },
-                "target": {
-                    "connection": "RIjE2piI5tvHXhPT:outputs:entry"
-                }
-            },
-            "position": {
-                "x": 1903.5020535020549,
-                "y": -360.94130869130765
-            },
-            "type": "create-condition"
-        },
-        {
-            "id": "DiFcxMpjFxKDTCXK",
-            "inputs": {
-                "condition": {
-                    "value": "off-guard"
-                },
-                "expiry": {
-                    "value": "turn-end"
-                },
-                "img": {
-                    "value": "icons/skills/melee/strike-sword-steel-yellow.webp"
-                },
-                "name": {
-                    "value": "Effect: Sword Critical Specialization (Grievous)"
-                },
-                "origin": {
-                    "connection": "ld1XmRNAnf9nKfPC:outputs:entry"
-                },
-                "pf2eImg": {
-                    "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
-                },
-                "sf2eImg": {
-                    "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
-                },
-                "target": {
-                    "connection": "I7CLcZCKMyyFqUv5:outputs:entry"
-                }
-            },
-            "position": {
-                "x": 1904.9695859695871,
-                "y": 65.21453546453665
-            },
-            "type": "create-condition"
-        },
-        {
-            "id": "I7CLcZCKMyyFqUv5",
-            "inputs": {
-                "entry": {
-                    "connection": "sj9X74RFqaVJPJpl:outputs:target"
-                }
-            },
-            "position": {
-                "x": 1701.0532800532806,
-                "y": 327.6070318570334
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "Idq5HuA48hpOdYF6",
-            "inputs": {
-                "condition": {
-                    "value": "off-guard"
-                },
-                "img": {
-                    "value": "icons/skills/melee/strike-sword-steel-yellow.webp"
-                },
-                "name": {
-                    "value": "Effect: Sword Critical Specialization"
-                },
-                "origin": {
-                    "connection": "ld1XmRNAnf9nKfPC:outputs:entry"
-                },
-                "pf2eImg": {
-                    "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
-                },
-                "sf2eImg": {
-                    "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
-                },
-                "target": {
-                    "connection": "I7CLcZCKMyyFqUv5:outputs:entry"
-                }
-            },
-            "position": {
-                "x": 1903.7195859695871,
-                "y": 485.21453546453665
-            },
-            "type": "create-condition"
-        },
-        {
-            "id": "ld1XmRNAnf9nKfPC",
-            "inputs": {
-                "entry": {
-                    "connection": "sj9X74RFqaVJPJpl:outputs:origin"
-                }
-            },
-            "position": {
-                "x": 1683.5916583416597,
-                "y": 552.0108363858388
-            },
-            "type": "__variable_getter__"
+  "description": "<p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Bow]</p><p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Spear]</p><p>@Localize[TRIGGERTROVE.CriticalSpecialization.Trigger.Description.Sword]</p>",
+  "folder": "Core Rules",
+  "id": "NzgcT7S1lbrIAVRb",
+  "name": "Critical Specialization",
+  "nodes": [
+    {
+      "id": "sj9X74RFqaVJPJpl",
+      "outs": {
+        "out": {
+          "connection": "oYYR4W7IaJpI1OpI:ins:in"
         }
-    ],
-    "priority": 0,
-    "tags": [
-        "pf2e",
-        "sf2e"
-    ],
-    "variables": {
-        "sj9X74RFqaVJPJpl:outputs:item": {
+      },
+      "position": {
+        "x": 359,
+        "y": 199
+      },
+      "type": "damage-taken-event"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "EFei8iSFvbXhsMNm": {
+            "id": "EFei8iSFvbXhsMNm",
+            "input": "system.group",
             "isArray": false,
-            "label": "Weapon",
-            "type": "item"
-        },
-        "sj9X74RFqaVJPJpl:outputs:options": {
-            "isArray": true,
-            "label": "Roll Options",
+            "label": "Group",
+            "slug": "path",
             "type": "text"
-        },
-        "sj9X74RFqaVJPJpl:outputs:origin": {
-            "isArray": false,
-            "label": "Origin",
-            "type": "target"
-        },
-        "sj9X74RFqaVJPJpl:outputs:target": {
-            "isArray": false,
-            "label": "Target",
-            "type": "target"
+          }
         }
+      },
+      "id": "WgRxR9iBveEBKfEh",
+      "inputs": {
+        "input": {
+          "connection": "c68Np10IY8q9swOb:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "UUSytLItArfpgLyB:ins:in"
+        }
+      },
+      "position": {
+        "x": 856.9230769230769,
+        "y": 318.4
+      },
+      "type": "extract-item"
+    },
+    {
+      "custom": {
+        "outs": {
+          "tkSzYew7JjEPCxN8": {
+            "id": "tkSzYew7JjEPCxN8",
+            "input": "spear",
+            "label": "Spear",
+            "slug": "value"
+          },
+          "tmb6tj1DTmhWw3Rl": {
+            "id": "tmb6tj1DTmhWw3Rl",
+            "input": "bow",
+            "label": "Bow",
+            "slug": "value"
+          },
+          "U7h0oV2dTJf4qzpf": {
+            "id": "U7h0oV2dTJf4qzpf",
+            "input": "sword",
+            "label": "Sword",
+            "slug": "value"
+          }
+        }
+      },
+      "id": "UUSytLItArfpgLyB",
+      "inputs": {
+        "input": {
+          "connection": "WgRxR9iBveEBKfEh:outputs:EFei8iSFvbXhsMNm"
+        }
+      },
+      "outs": {
+        "tkSzYew7JjEPCxN8": {
+          "connection": "MeOfD9CzHzYpOCyh:ins:in"
+        },
+        "tmb6tj1DTmhWw3Rl": {
+          "connection": "VNGf6TljpajRLvoE:ins:in"
+        },
+        "U7h0oV2dTJf4qzpf": {
+          "connection": "IW2ykUsQg9OXWZer:ins:in"
+        }
+      },
+      "position": {
+        "x": 1102.7445054945053,
+        "y": 286.7928571428572
+      },
+      "type": "split-text"
+    },
+    {
+      "id": "c68Np10IY8q9swOb",
+      "inputs": {
+        "entry": {
+          "connection": "sj9X74RFqaVJPJpl:outputs:item"
+        }
+      },
+      "position": {
+        "x": 721,
+        "y": 386.75
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "VNGf6TljpajRLvoE",
+      "inputs": {
+        "condition": {
+          "value": "immobilized"
+        },
+        "img": {
+          "value": "icons/skills/ranged/person-archery-bow-attack-orange.webp"
+        },
+        "name": {
+          "value": "Effect: Bow Critical Specialization"
+        },
+        "pf2eImg": {
+          "value": "icons/skills/ranged/projectile-strike-impale-gray.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/skills/ranged/projectile-strike-impale-gray.webp"
+        },
+        "target": {
+          "connection": "xyl2HZiGy0tkiFTR:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1469.1254578754574,
+        "y": -291.02857142857124
+      },
+      "state": "fixed",
+      "type": "create-condition"
+    },
+    {
+      "id": "xyl2HZiGy0tkiFTR",
+      "inputs": {
+        "entry": {
+          "connection": "sj9X74RFqaVJPJpl:outputs:target"
+        }
+      },
+      "position": {
+        "x": 1304.9642857142853,
+        "y": -165.40476190476187
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "oYYR4W7IaJpI1OpI",
+      "inputs": {
+        "options": {
+          "connection": "sj9X74RFqaVJPJpl:outputs:options"
+        },
+        "predicate": {
+          "value": "[\n  \"check:outcome:critical-success\",\n  \"critical-specialization\"\n]"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "WgRxR9iBveEBKfEh:ins:in"
+        }
+      },
+      "position": {
+        "x": 621.3818681318678,
+        "y": 238.75183150183142
+      },
+      "type": "match-predicate"
+    },
+    {
+      "id": "MeOfD9CzHzYpOCyh",
+      "inputs": {
+        "entry": {
+          "value": "item:rune:property:grievous"
+        },
+        "list": {
+          "connection": "vcy1uyAyRhsihh38:outputs:entry"
+        }
+      },
+      "outs": {
+        "false": {
+          "connection": "lkLFmkNLjg4wYXV0:ins:in"
+        },
+        "true": {
+          "connection": "8L3UdlLtDkAsZi91:ins:in"
+        }
+      },
+      "position": {
+        "x": 1457.380036630036,
+        "y": 194.46886446886458
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "vcy1uyAyRhsihh38",
+      "inputs": {
+        "entry": {
+          "connection": "sj9X74RFqaVJPJpl:outputs:options"
+        }
+      },
+      "position": {
+        "x": 1478.623626373626,
+        "y": 351.86172161172175
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "IW2ykUsQg9OXWZer",
+      "inputs": {
+        "entry": {
+          "value": "item:rune:property:grievous"
+        },
+        "list": {
+          "connection": "vcy1uyAyRhsihh38:outputs:entry"
+        }
+      },
+      "outs": {
+        "false": {
+          "connection": "Idq5HuA48hpOdYF6:ins:in"
+        },
+        "true": {
+          "connection": "DiFcxMpjFxKDTCXK:ins:in"
+        }
+      },
+      "position": {
+        "x": 1458.380036630036,
+        "y": 408.4688644688646
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "8L3UdlLtDkAsZi91",
+      "inputs": {
+        "condition": {
+          "value": "clumsy"
+        },
+        "duration": {
+          "value": 2
+        },
+        "img": {
+          "value": "icons/skills/melee/strike-polearm-light-orange.webp"
+        },
+        "name": {
+          "value": "Effect: Spear Critical Specialization (Grievous)"
+        },
+        "origin": {
+          "connection": "V3lVG2rdIdL5hzi8:outputs:combatant"
+        },
+        "pf2eImg": {
+          "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
+        },
+        "target": {
+          "connection": "RIjE2piI5tvHXhPT:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1903.8656898656914,
+        "y": -783.5776723276712
+      },
+      "type": "create-condition"
+    },
+    {
+      "id": "V3lVG2rdIdL5hzi8",
+      "position": {
+        "x": 1437.8429625929639,
+        "y": -396.5928238428226
+      },
+      "type": "current-combatant"
+    },
+    {
+      "id": "RIjE2piI5tvHXhPT",
+      "inputs": {
+        "entry": {
+          "connection": "sj9X74RFqaVJPJpl:outputs:target"
+        }
+      },
+      "position": {
+        "x": 1583.6510434010447,
+        "y": -521.5145410145394
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "lkLFmkNLjg4wYXV0",
+      "inputs": {
+        "condition": {
+          "value": "clumsy"
+        },
+        "img": {
+          "value": "icons/skills/melee/strike-polearm-light-orange.webp"
+        },
+        "name": {
+          "value": "Effect: Spear Critical Specialization"
+        },
+        "origin": {
+          "connection": "V3lVG2rdIdL5hzi8:outputs:combatant"
+        },
+        "pf2eImg": {
+          "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/skills/melee/strike-polearm-glowing-white.webp"
+        },
+        "target": {
+          "connection": "RIjE2piI5tvHXhPT:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1903.5020535020549,
+        "y": -360.94130869130765
+      },
+      "type": "create-condition"
+    },
+    {
+      "id": "DiFcxMpjFxKDTCXK",
+      "inputs": {
+        "condition": {
+          "value": "off-guard"
+        },
+        "expiry": {
+          "value": "turn-end"
+        },
+        "img": {
+          "value": "icons/skills/melee/strike-sword-steel-yellow.webp"
+        },
+        "name": {
+          "value": "Effect: Sword Critical Specialization (Grievous)"
+        },
+        "origin": {
+          "connection": "ld1XmRNAnf9nKfPC:outputs:entry"
+        },
+        "pf2eImg": {
+          "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
+        },
+        "target": {
+          "connection": "I7CLcZCKMyyFqUv5:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1904.9695859695871,
+        "y": 65.21453546453665
+      },
+      "type": "create-condition"
+    },
+    {
+      "id": "I7CLcZCKMyyFqUv5",
+      "inputs": {
+        "entry": {
+          "connection": "sj9X74RFqaVJPJpl:outputs:target"
+        }
+      },
+      "position": {
+        "x": 1701.0532800532806,
+        "y": 327.6070318570334
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "Idq5HuA48hpOdYF6",
+      "inputs": {
+        "condition": {
+          "value": "off-guard"
+        },
+        "img": {
+          "value": "icons/skills/melee/strike-sword-steel-yellow.webp"
+        },
+        "name": {
+          "value": "Effect: Sword Critical Specialization"
+        },
+        "origin": {
+          "connection": "ld1XmRNAnf9nKfPC:outputs:entry"
+        },
+        "pf2eImg": {
+          "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/skills/melee/sword-damaged-broken-orange.webp"
+        },
+        "target": {
+          "connection": "I7CLcZCKMyyFqUv5:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 1903.7195859695871,
+        "y": 485.21453546453665
+      },
+      "type": "create-condition"
+    },
+    {
+      "id": "ld1XmRNAnf9nKfPC",
+      "inputs": {
+        "entry": {
+          "connection": "sj9X74RFqaVJPJpl:outputs:origin"
+        }
+      },
+      "position": {
+        "x": 1683.5916583416597,
+        "y": 552.0108363858388
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "type": "execute-script",
+      "custom": {
+        "inputs": {
+          "p21uaboVSbwjgqtq": {
+            "id": "p21uaboVSbwjgqtq",
+            "label": "msg",
+            "slug": "input",
+            "isArray": false,
+            "type": "any"
+          }
+        },
+        "outputs": {
+          "5JIXAPrXtbVXipiI": {
+            "id": "5JIXAPrXtbVXipiI",
+            "label": "is Valid?",
+            "slug": "output",
+            "isArray": false,
+            "type": "boolean"
+          },
+          "lfvaND78zQRmAVcz": {
+            "id": "lfvaND78zQRmAVcz",
+            "label": "Base Damage / 2",
+            "slug": "output",
+            "isArray": false,
+            "type": "number"
+          },
+          "ChjFgGxwlX8zUYFi": {
+            "id": "ChjFgGxwlX8zUYFi",
+            "label": "Source",
+            "slug": "output",
+            "isArray": false,
+            "type": "target"
+          },
+          "HM2uyd2UNOWcriy6": {
+            "id": "HM2uyd2UNOWcriy6",
+            "label": "Weapon",
+            "slug": "output",
+            "isArray": false,
+            "type": "item"
+          },
+          "pmYUBLUWNy4XYhRn": {
+            "id": "pmYUBLUWNy4XYhRn",
+            "label": "Target",
+            "slug": "output",
+            "isArray": false,
+            "type": "target"
+          },
+          "IwnS6xzJDsHTD3jM": {
+            "id": "IwnS6xzJDsHTD3jM",
+            "label": "Type",
+            "slug": "output",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "position": {
+        "x": 527.6013348559561,
+        "y": 1037.5131931866954
+      },
+      "id": "h62yKXrN5IeEXKBg",
+      "inputs": {
+        "script": {
+          "value": "/**\n * @param {unknown[]} inputs\n * @returns {boolean} to break out current process\n * @returns {{type: EntryType; value: unknown}[]}\n *\n * @example\n * const x = inputs[0];\n * const y = inputs[1];\n * return [{type: \"number\", value: x + y}];\n */\n\nconst msg = inputs[0];\n\nconst isValid = msg?.isDamageRoll\n   && msg?.flags?.pf2e?.context?.outcome === 'criticalSuccess'\n  && (msg?.flags?.pf2e?.context?.options?.includes(\"critical-specialization\"))\nconst roll = msg?.rolls?.[0];\n\nconst data = roll?.options?.damage?.damage?.base?.map(d => (\n  {\n    type: d.damageType, \n    faces: Number( d.dieSize?.replace(\"d\", \"\"))\n  }))\n\nconst dmg = roll?.terms?.[0].rolls?.find(r => \n  data?.some(d => d.type === r?.type && d?.faces === r?.dice?.[0]?.faces))\nconsole.log(dmg)\n\nconst total = Math.floor((dmg?.dice?.[0]?.total ?? 0) /2 );\nconst type = dmg?.type ?? \"\"\n\nreturn [\n  {type: \"boolean\", value: isValid},\n  {type: \"number\", value: total},\n  {type: \"target\", value: msg?.token},\n  {type: \"boolean\", value: msg?.item},\n  {type: \"target\", value: msg?.target},\n  {type: \"text\", value: type}\n];"
+        },
+        "p21uaboVSbwjgqtq": {
+          "connection": "VnUBmyvIHhio9TCE:outputs:7ftQ4sTPysuLbaPD"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "aQnH3RzwYfkyT7fv:ins:in"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "custom": {
+        "inputs": {
+          "lUXvUpgT4mt6810j": {
+            "id": "lUXvUpgT4mt6810j",
+            "input": "dmg",
+            "label": "dmg",
+            "slug": "variable",
+            "type": "text"
+          },
+          "BihTW0HoJqd3p5bx": {
+            "id": "BihTW0HoJqd3p5bx",
+            "input": "type",
+            "label": "type",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "position": {
+        "x": 2058.7110094850304,
+        "y": 1036.7432395592748
+      },
+      "id": "nPnmXnXpoBl7LJa3",
+      "inputs": {
+        "lUXvUpgT4mt6810j": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:lfvaND78zQRmAVcz"
+        },
+        "plain": {
+          "value": "(@dmg)[@type]"
+        },
+        "BihTW0HoJqd3p5bx": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:IwnS6xzJDsHTD3jM"
+        },
+        "BLLjEF3yK4hINcZp": {
+          "connection": "jPekpzXXoaS34b8G:outputs:result"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "8Xrva4OBjE23hxIV:ins:in"
+        }
+      }
+    },
+    {
+      "type": "split-boolean",
+      "inputs": {
+        "input": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:5JIXAPrXtbVXipiI"
+        }
+      },
+      "position": {
+        "x": 824.0275547552486,
+        "y": 1045.208008481955
+      },
+      "id": "aQnH3RzwYfkyT7fv",
+      "outs": {
+        "true": {
+          "connection": "yFsmfy8js1W4Xfab:ins:in"
+        }
+      }
+    },
+    {
+      "type": "filter-targets",
+      "custom": {
+        "inputs": {
+          "1fFKgmOlE8TKmS2q": {
+            "id": "1fFKgmOlE8TKmS2q",
+            "label": "Source",
+            "slug": "input",
+            "isArray": false,
+            "type": "target"
+          },
+          "r51t5M0j3VQmigc7": {
+            "id": "r51t5M0j3VQmigc7",
+            "label": "Target",
+            "slug": "input",
+            "isArray": false,
+            "type": "target"
+          },
+          "AaLQvMJJFWJtxEWL": {
+            "id": "AaLQvMJJFWJtxEWL",
+            "label": "Reach",
+            "slug": "input",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "state": "filter",
+      "inputs": {
+        "qB6jz6mqmByEwnXI": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:ChjFgGxwlX8zUYFi"
+        },
+        "callback": {
+          "value": "/**\n * @param {{actor: Actor; token: TokenDocument}} target\n * @param {unknown[]} inputs\n * @returns {boolean}\n *\n * @example\n * const level = inputs[0];\n * return target.actor.level >= level;\n */\nconst src = inputs[0];\nconst tar = inputs[1];\nconst range = inputs[2];\n\nreturn src?.token?.disposition  !== target?.token?.disposition && target?.token?.id !== tar?.token?.id && target?.token?.object?.distanceTo(src?.token?.object) <= range && target?.token?.object?.distanceTo(tar?.token?.object) <= 5;"
+        },
+        "targets": {
+          "connection": "CsfbFUV7qbz279wm:outputs:targets"
+        },
+        "1fFKgmOlE8TKmS2q": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:ChjFgGxwlX8zUYFi"
+        },
+        "r51t5M0j3VQmigc7": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:pmYUBLUWNy4XYhRn"
+        },
+        "AaLQvMJJFWJtxEWL": {
+          "connection": "U1cKlnjfpAYCCz5p:outputs:0xpbZYMYP6E4kyoS"
+        }
+      },
+      "position": {
+        "x": 1591.4043742585695,
+        "y": 1039.4818886597122
+      },
+      "id": "sJd9T9vAcsZV5Dkw",
+      "outs": {
+        "out": {
+          "connection": "Cw5ZHcMUvwVBLQTG:ins:in"
+        }
+      }
+    },
+    {
+      "type": "if-truthy",
+      "custom": {
+        "inputs": {
+          "cKuZNl7rRhDDbYza": {
+            "id": "cKuZNl7rRhDDbYza",
+            "label": "Targets",
+            "slug": "condition",
+            "isArray": true,
+            "type": "target"
+          }
+        }
+      },
+      "position": {
+        "x": 1816.2666601764859,
+        "y": 1026.6164214193163
+      },
+      "id": "Cw5ZHcMUvwVBLQTG",
+      "inputs": {
+        "cKuZNl7rRhDDbYza": {
+          "connection": "sJd9T9vAcsZV5Dkw:outputs:targets"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "nPnmXnXpoBl7LJa3:ins:in"
+        }
+      }
+    },
+    {
+      "type": "hook-called-event",
+      "position": {
+        "x": 268.25381136910084,
+        "y": 979.8059366034241
+      },
+      "id": "VnUBmyvIHhio9TCE",
+      "custom": {
+        "outputs": {
+          "7ftQ4sTPysuLbaPD": {
+            "id": "7ftQ4sTPysuLbaPD",
+            "label": "msg",
+            "slug": "output",
+            "isArray": false,
+            "type": "any"
+          }
+        }
+      },
+      "inputs": {
+        "name": {
+          "value": "createChatMessage"
+        },
+        "gm": {
+          "value": true
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "h62yKXrN5IeEXKBg:ins:in"
+        }
+      }
+    },
+    {
+      "type": "extract-item",
+      "custom": {
+        "outputs": {
+          "4qHnNdaa5zwUMn0V": {
+            "id": "4qHnNdaa5zwUMn0V",
+            "input": "system.group",
+            "label": "Group",
+            "slug": "path",
+            "isArray": false,
+            "type": "text"
+          }
+        }
+      },
+      "position": {
+        "x": 828.050244294868,
+        "y": 1140.7652455313473
+      },
+      "id": "yFsmfy8js1W4Xfab",
+      "inputs": {
+        "input": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:HM2uyd2UNOWcriy6"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Id0osiCIwPy6dqCb:ins:in"
+        }
+      }
+    },
+    {
+      "type": "split-text",
+      "custom": {
+        "outs": {
+          "a3npR2tU9MccvVzU": {
+            "id": "a3npR2tU9MccvVzU",
+            "input": "axe",
+            "label": "Axe",
+            "slug": "value"
+          }
+        }
+      },
+      "inputs": {
+        "input": {
+          "connection": "yFsmfy8js1W4Xfab:outputs:4qHnNdaa5zwUMn0V"
+        }
+      },
+      "position": {
+        "x": 1056.3494000528322,
+        "y": 1045.5152788844152
+      },
+      "id": "Id0osiCIwPy6dqCb",
+      "outs": {
+        "a3npR2tU9MccvVzU": {
+          "connection": "U1cKlnjfpAYCCz5p:ins:in"
+        }
+      }
+    },
+    {
+      "type": "scene-targets",
+      "position": {
+        "x": 1313.5751784000022,
+        "y": 956.4485918877384
+      },
+      "id": "CsfbFUV7qbz279wm"
+    },
+    {
+      "type": "execute-script",
+      "custom": {
+        "inputs": {
+          "yS5gtv4CKcArI8q4": {
+            "id": "yS5gtv4CKcArI8q4",
+            "label": "Source",
+            "slug": "input",
+            "isArray": false,
+            "type": "target"
+          },
+          "3b5qqgWqHlbU1EXW": {
+            "id": "3b5qqgWqHlbU1EXW",
+            "label": "Weapon",
+            "slug": "input",
+            "isArray": false,
+            "type": "item"
+          }
+        },
+        "outputs": {
+          "0xpbZYMYP6E4kyoS": {
+            "id": "0xpbZYMYP6E4kyoS",
+            "label": "Range",
+            "slug": "output",
+            "isArray": false,
+            "type": "number"
+          }
+        }
+      },
+      "position": {
+        "x": 1292.23757863522,
+        "y": 1029.2419200582362
+      },
+      "id": "U1cKlnjfpAYCCz5p",
+      "inputs": {
+        "3b5qqgWqHlbU1EXW": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:HM2uyd2UNOWcriy6"
+        },
+        "yS5gtv4CKcArI8q4": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:ChjFgGxwlX8zUYFi"
+        },
+        "script": {
+          "value": "/**\n * @param {unknown[]} inputs\n * @returns {boolean} to break out current process\n * @returns {{type: EntryType; value: unknown}[]}\n *\n * @example\n * const x = inputs[0];\n * const y = inputs[1];\n * return [{type: \"number\", value: x + y}];\n */\nconst source = inputs[0];\nconst item = inputs[1];\nreturn [\n  {\n    type: \"number\",\n    value: source.actor.getReach({action: \"attack\", weapon: item})\n  }\n];"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "sJd9T9vAcsZV5Dkw:ins:in"
+        }
+      }
+    },
+    {
+      "type": "roll-damage",
+      "position": {
+        "x": 2384.239576299602,
+        "y": 1022.8046201441747
+      },
+      "id": "8Xrva4OBjE23hxIV",
+      "inputs": {
+        "formula": {
+          "connection": "nPnmXnXpoBl7LJa3:outputs:result"
+        },
+        "item": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:HM2uyd2UNOWcriy6"
+        },
+        "targets": {
+          "connection": "sJd9T9vAcsZV5Dkw:outputs:targets"
+        },
+        "origin": {
+          "connection": "h62yKXrN5IeEXKBg:outputs:ChjFgGxwlX8zUYFi"
+        },
+        "note": {
+          "value": "<p>@Localize[PF2E.Item.Weapon.CriticalSpecialization.axe]</p>"
+        }
+      }
     }
+  ],
+  "priority": 0,
+  "tags": [
+    "pf2e",
+    "sf2e"
+  ],
+  "variables": {
+    "sj9X74RFqaVJPJpl:outputs:item": {
+      "isArray": false,
+      "label": "Weapon",
+      "type": "item"
+    },
+    "sj9X74RFqaVJPJpl:outputs:options": {
+      "isArray": true,
+      "label": "Roll Options",
+      "type": "text"
+    },
+    "sj9X74RFqaVJPJpl:outputs:origin": {
+      "isArray": false,
+      "label": "Origin",
+      "type": "target"
+    },
+    "sj9X74RFqaVJPJpl:outputs:target": {
+      "isArray": false,
+      "label": "Target",
+      "type": "target"
+    }
+  }
 }

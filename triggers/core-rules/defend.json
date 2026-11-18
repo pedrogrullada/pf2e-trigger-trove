@@ -1,383 +1,431 @@
 {
-    "description": "@Localize[TRIGGERTROVE.Defend.Trigger.Description]",
-    "folder": "Core Rules",
-    "id": "4ICbsLSvZzi9M64v",
-    "name": "Defend",
-    "nodes": [
-        {
-            "id": "rwdcX79vEkbrKlF4",
-            "outs": {
-                "out": {
-                    "connection": "vF36Ux2YKjZmU2Mq:ins:in"
-                }
-            },
-            "position": {
-                "x": 342,
-                "y": 425
-            },
-            "type": "create-combatant-event"
-        },
-        {
-            "id": "vF36Ux2YKjZmU2Mq",
-            "inputs": {
-                "pf2e": {
-                    "value": "Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0"
-                },
-                "sf2e": {
-                    "value": "Compendium.sf2e.actions.Item.cYtYKa1gDEl7y2N0"
-                },
-                "target": {
-                    "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
-                }
-            },
-            "outs": {
-                "true": {
-                    "connection": "HUiiu7ZERiquPGME:ins:in"
-                }
-            },
-            "position": {
-                "x": 558.4945054945056,
-                "y": 386.4
-            },
-            "type": "has-item"
-        },
-        {
-            "custom": {
-                "outputs": {
-                    "ccvLuI6m3jz6dmLm": {
-                        "id": "ccvLuI6m3jz6dmLm",
-                        "input": "id",
-                        "isArray": false,
-                        "label": "Defend ID",
-                        "slug": "path",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "HUiiu7ZERiquPGME",
-            "inputs": {
-                "input": {
-                    "connection": "vF36Ux2YKjZmU2Mq:outputs:item"
-                }
-            },
-            "outs": {
-                "out": {
-                    "connection": "w1mLOtH5cgy3CKFl:ins:in"
-                }
-            },
-            "position": {
-                "x": 826.7802197802199,
-                "y": 364.97142857142853
-            },
-            "type": "extract-item"
-        },
-        {
-            "custom": {
-                "outputs": {
-                    "WUTvEm00TaDbSIvW": {
-                        "id": "WUTvEm00TaDbSIvW",
-                        "input": "system.exploration",
-                        "isArray": true,
-                        "label": "Exploration Activities",
-                        "slug": "path",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "w1mLOtH5cgy3CKFl",
-            "inputs": {
-                "input": {
-                    "connection": "xgIZ2PAYSlhe1KCm:outputs:entry"
-                }
-            },
-            "outs": {
-                "out": {
-                    "connection": "xRSQVTdd5Sh3Lt91:ins:in"
-                }
-            },
-            "position": {
-                "x": 1043.7802197802198,
-                "y": 332.6142857142857
-            },
-            "type": "extract-actor"
-        },
-        {
-            "id": "xRSQVTdd5Sh3Lt91",
-            "inputs": {
-                "entry": {
-                    "connection": "K09aRHch8jBQIp5T:outputs:entry"
-                },
-                "list": {
-                    "connection": "w1mLOtH5cgy3CKFl:outputs:WUTvEm00TaDbSIvW"
-                }
-            },
-            "outs": {
-                "true": {
-                    "connection": "TMiv3KdK5qVgasxp:ins:in"
-                }
-            },
-            "position": {
-                "x": 1311.002442002442,
-                "y": 352.6269841269841
-            },
-            "type": "list-contains"
-        },
-        {
-            "id": "JASN9pgwy7TsLIcZ",
-            "outs": {
-                "out": {
-                    "connection": "m672H2XscTTGN9m3:ins:in"
-                }
-            },
-            "position": {
-                "x": 342.1428571428571,
-                "y": 585.8571428571429
-            },
-            "type": "turn-start-event"
-        },
-        {
-            "id": "m672H2XscTTGN9m3",
-            "inputs": {
-                "a": {
-                    "connection": "JASN9pgwy7TsLIcZ:outputs:round"
-                },
-                "b": {
-                    "value": 1
-                }
-            },
-            "outs": {
-                "true": {
-                    "connection": "6BG2vnO4YLA7r19o:ins:in"
-                }
-            },
-            "position": {
-                "x": 568.8373288218485,
-                "y": 561.758256449433
-            },
-            "type": "compare-numbers"
-        },
-        {
-            "id": "xgIZ2PAYSlhe1KCm",
-            "inputs": {
-                "entry": {
-                    "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
-                }
-            },
-            "position": {
-                "x": 853.2087912087911,
-                "y": 467.82142857142867
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "GGUL3kmq0AnY80qG",
-            "inputs": {
-                "entry": {
-                    "connection": "JASN9pgwy7TsLIcZ:outputs:combatant"
-                }
-            },
-            "position": {
-                "x": 622.5714285714286,
-                "y": 712.8928571428572
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "K09aRHch8jBQIp5T",
-            "inputs": {
-                "entry": {
-                    "connection": "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm"
-                }
-            },
-            "position": {
-                "x": 1165.8571428571431,
-                "y": 425.17857142857144
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "custom": {
-                "inputs": {
-                    "dB2ZS5woMWqxXYNy": {
-                        "id": "dB2ZS5woMWqxXYNy",
-                        "label": "Grant",
-                        "slug": "rule",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "b0hxSZ5cTD002kqs",
-            "inputs": {
-                "dB2ZS5woMWqxXYNy": {
-                    "connection": "0QSbrwKqNMoOThd8:outputs:result"
-                },
-                "img": {
-                    "value": "icons/skills/melee/shield-block-gray-orange.webp"
-                },
-                "MTn19UGCaixCoVM2": {
-                    "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.sf2e.equipment-effects.Item.2YgXoHvJfrDHucMr\",\n  \"allowDuplicates\": false,\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
-                },
-                "name": {
-                    "value": "Effect: Defend"
-                },
-                "origin": {
-                    "connection": "z97lyS4JFrvSlqn8:outputs:entry"
-                },
-                "pf2eImg": {
-                    "value": "icons/equipment/shield/heater-wooden-steel-boss.webp"
-                },
-                "sf2eImg": {
-                    "value": "icons/equipment/shield/heater-wooden-steel-boss.webp"
-                },
-                "slug": {
-                    "value": "effect-defend-trigger-trove"
-                },
-                "target": {
-                    "connection": "z97lyS4JFrvSlqn8:outputs:entry"
-                }
-            },
-            "position": {
-                "x": 2175.706959706959,
-                "y": 354.0073260073258
-            },
-            "state": "fixed",
-            "type": "create-effect"
-        },
-        {
-            "id": "z97lyS4JFrvSlqn8",
-            "inputs": {
-                "entry": {
-                    "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
-                }
-            },
-            "position": {
-                "x": 1959.0711233211225,
-                "y": 305.7692307692305
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "6BG2vnO4YLA7r19o",
-            "inputs": {
-                "slug": {
-                    "value": "effect-defend-trigger-trove"
-                },
-                "target": {
-                    "connection": "GGUL3kmq0AnY80qG:outputs:entry"
-                }
-            },
-            "outs": {
-                "true": {
-                    "connection": "iDeo7kxASFCUHXWH:ins:in"
-                }
-            },
-            "position": {
-                "x": 795.3187645687639,
-                "y": 615.5281218781219
-            },
-            "state": "slug",
-            "type": "has-item-slug"
-        },
-        {
-            "id": "iDeo7kxASFCUHXWH",
-            "inputs": {
-                "item": {
-                    "connection": "6BG2vnO4YLA7r19o:outputs:item"
-                }
-            },
-            "position": {
-                "x": 1078.3242590742584,
-                "y": 614.7590742590744
-            },
-            "type": "delete-item"
-        },
-        {
-            "custom": {
-                "outputs": {
-                    "3j83dBSqeCuDxU6B": {
-                        "id": "3j83dBSqeCuDxU6B",
-                        "isArray": false,
-                        "label": "system",
-                        "slug": "output",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "TMiv3KdK5qVgasxp",
-            "inputs": {
-                "script": {
-                    "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id\n  }\n];"
-                }
-            },
-            "outs": {
-                "out": {
-                    "connection": "0QSbrwKqNMoOThd8:ins:in"
-                }
-            },
-            "position": {
-                "x": 1533,
-                "y": 353
-            },
-            "type": "execute-script"
-        },
-        {
-            "custom": {
-                "inputs": {
-                    "dnCkrmA0JzdyCEMK": {
-                        "id": "dnCkrmA0JzdyCEMK",
-                        "input": "pack",
-                        "label": "pack",
-                        "slug": "variable",
-                        "type": "text"
-                    }
-                }
-            },
-            "id": "0QSbrwKqNMoOThd8",
-            "inputs": {
-                "dnCkrmA0JzdyCEMK": {
-                    "connection": "TMiv3KdK5qVgasxp:outputs:3j83dBSqeCuDxU6B"
-                },
-                "plain": {
-                    "value": "{\"key\": \"GrantItem\",\"uuid\": \"Compendium.@pack.equipment-effects.Item.2YgXoHvJfrDHucMr\",\"allowDuplicates\": false,\"onDeleteActions\": {\"grantee\": \"restrict\"}}"
-                }
-            },
-            "outs": {
-                "out": {
-                    "connection": "b0hxSZ5cTD002kqs:ins:in"
-                }
-            },
-            "position": {
-                "x": 1829.923076923077,
-                "y": 369.4
-            },
-            "type": "format-text"
+  "description": "<p>@Localize[TRIGGERTROVE.Defend.Trigger.Description]</p>",
+  "folder": "Core Rules",
+  "id": "skQhn6a88BEREwxK",
+  "name": "Defend",
+  "nodes": [
+    {
+      "id": "rwdcX79vEkbrKlF4",
+      "outs": {
+        "out": {
+          "connection": "vF36Ux2YKjZmU2Mq:ins:in"
         }
-    ],
-    "priority": 0,
-    "tags": [
-        "pf2e",
-        "sf2e"
-    ],
-    "variables": {
-        "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm": {
+      },
+      "position": {
+        "x": 342,
+        "y": 425
+      },
+      "type": "create-combatant-event"
+    },
+    {
+      "id": "vF36Ux2YKjZmU2Mq",
+      "inputs": {
+        "pf2e": {
+          "value": "Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0"
+        },
+        "sf2e": {
+          "value": "Compendium.sf2e.actions.Item.cYtYKa1gDEl7y2N0"
+        },
+        "target": {
+          "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "HUiiu7ZERiquPGME:ins:in"
+        }
+      },
+      "position": {
+        "x": 558.4945054945056,
+        "y": 386.4
+      },
+      "type": "has-item"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "ccvLuI6m3jz6dmLm": {
+            "id": "ccvLuI6m3jz6dmLm",
+            "input": "id",
             "isArray": false,
             "label": "Defend ID",
+            "slug": "path",
             "type": "text"
-        },
-        "JASN9pgwy7TsLIcZ:outputs:combatant": {
-            "isArray": false,
-            "label": "Combatant (TS)",
-            "type": "target"
-        },
-        "rwdcX79vEkbrKlF4:outputs:combatant": {
-            "isArray": false,
-            "label": "Combatant (CC)",
-            "type": "target"
-        },
-        "TMiv3KdK5qVgasxp:outputs:3j83dBSqeCuDxU6B": {
-            "isArray": false,
-            "label": "System",
-            "type": "text"
+          }
         }
+      },
+      "id": "HUiiu7ZERiquPGME",
+      "inputs": {
+        "input": {
+          "connection": "vF36Ux2YKjZmU2Mq:outputs:item"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "w1mLOtH5cgy3CKFl:ins:in"
+        }
+      },
+      "position": {
+        "x": 826.7802197802199,
+        "y": 364.97142857142853
+      },
+      "type": "extract-item"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "WUTvEm00TaDbSIvW": {
+            "id": "WUTvEm00TaDbSIvW",
+            "input": "system.exploration",
+            "isArray": true,
+            "label": "Exploration Activities",
+            "slug": "path",
+            "type": "text"
+          }
+        }
+      },
+      "id": "w1mLOtH5cgy3CKFl",
+      "inputs": {
+        "input": {
+          "connection": "xgIZ2PAYSlhe1KCm:outputs:entry"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "xRSQVTdd5Sh3Lt91:ins:in"
+        }
+      },
+      "position": {
+        "x": 1043.7802197802198,
+        "y": 332.6142857142857
+      },
+      "type": "extract-actor"
+    },
+    {
+      "id": "xRSQVTdd5Sh3Lt91",
+      "inputs": {
+        "entry": {
+          "connection": "K09aRHch8jBQIp5T:outputs:entry"
+        },
+        "list": {
+          "connection": "w1mLOtH5cgy3CKFl:outputs:WUTvEm00TaDbSIvW"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "TMiv3KdK5qVgasxp:ins:in"
+        }
+      },
+      "position": {
+        "x": 1311.002442002442,
+        "y": 352.6269841269841
+      },
+      "type": "list-contains"
+    },
+    {
+      "id": "JASN9pgwy7TsLIcZ",
+      "outs": {
+        "out": {
+          "connection": "m672H2XscTTGN9m3:ins:in"
+        }
+      },
+      "position": {
+        "x": 342.1428571428571,
+        "y": 585.8571428571429
+      },
+      "type": "turn-start-event"
+    },
+    {
+      "id": "m672H2XscTTGN9m3",
+      "inputs": {
+        "a": {
+          "connection": "JASN9pgwy7TsLIcZ:outputs:round"
+        },
+        "b": {
+          "value": 1
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "6BG2vnO4YLA7r19o:ins:in"
+        }
+      },
+      "position": {
+        "x": 568.8373288218485,
+        "y": 561.758256449433
+      },
+      "type": "compare-numbers"
+    },
+    {
+      "id": "xgIZ2PAYSlhe1KCm",
+      "inputs": {
+        "entry": {
+          "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
+        }
+      },
+      "position": {
+        "x": 853.2087912087911,
+        "y": 467.82142857142867
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "GGUL3kmq0AnY80qG",
+      "inputs": {
+        "entry": {
+          "connection": "JASN9pgwy7TsLIcZ:outputs:combatant"
+        }
+      },
+      "position": {
+        "x": 622.5714285714286,
+        "y": 712.8928571428572
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "K09aRHch8jBQIp5T",
+      "inputs": {
+        "entry": {
+          "connection": "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm"
+        }
+      },
+      "position": {
+        "x": 1165.8571428571431,
+        "y": 425.17857142857144
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "dB2ZS5woMWqxXYNy": {
+            "id": "dB2ZS5woMWqxXYNy",
+            "label": "Grant",
+            "slug": "rule",
+            "type": "text"
+          }
+        }
+      },
+      "id": "b0hxSZ5cTD002kqs",
+      "inputs": {
+        "dB2ZS5woMWqxXYNy": {
+          "connection": "0QSbrwKqNMoOThd8:outputs:result"
+        },
+        "img": {
+          "value": "icons/skills/melee/shield-block-gray-orange.webp"
+        },
+        "MTn19UGCaixCoVM2": {
+          "value": "{\n  \"key\": \"GrantItem\",\n  \"uuid\": \"Compendium.sf2e.equipment-effects.Item.2YgXoHvJfrDHucMr\",\n  \"allowDuplicates\": false,\n  \"onDeleteActions\": {\n    \"grantee\": \"restrict\"\n  }\n}"
+        },
+        "name": {
+          "value": "Effect: Defend"
+        },
+        "origin": {
+          "connection": "z97lyS4JFrvSlqn8:outputs:entry"
+        },
+        "pf2eImg": {
+          "value": "icons/equipment/shield/heater-wooden-steel-boss.webp"
+        },
+        "sf2eImg": {
+          "value": "icons/equipment/shield/heater-wooden-steel-boss.webp"
+        },
+        "slug": {
+          "value": "effect-defend-trigger-trove"
+        },
+        "target": {
+          "connection": "z97lyS4JFrvSlqn8:outputs:entry"
+        }
+      },
+      "position": {
+        "x": 2175.706959706959,
+        "y": 354.0073260073258
+      },
+      "state": "fixed",
+      "type": "create-effect"
+    },
+    {
+      "id": "z97lyS4JFrvSlqn8",
+      "inputs": {
+        "entry": {
+          "connection": "rwdcX79vEkbrKlF4:outputs:combatant"
+        }
+      },
+      "position": {
+        "x": 1959.0711233211225,
+        "y": 305.7692307692305
+      },
+      "type": "__variable_getter__"
+    },
+    {
+      "id": "6BG2vnO4YLA7r19o",
+      "inputs": {
+        "slug": {
+          "value": "effect-defend-trigger-trove"
+        },
+        "target": {
+          "connection": "GGUL3kmq0AnY80qG:outputs:entry"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "iDeo7kxASFCUHXWH:ins:in"
+        }
+      },
+      "position": {
+        "x": 795.3187645687639,
+        "y": 615.5281218781219
+      },
+      "state": "slug",
+      "type": "has-item-slug"
+    },
+    {
+      "id": "iDeo7kxASFCUHXWH",
+      "inputs": {
+        "item": {
+          "connection": "6BG2vnO4YLA7r19o:outputs:item"
+        }
+      },
+      "position": {
+        "x": 1078.3242590742584,
+        "y": 614.7590742590744
+      },
+      "type": "delete-item"
+    },
+    {
+      "custom": {
+        "outputs": {
+          "3j83dBSqeCuDxU6B": {
+            "id": "3j83dBSqeCuDxU6B",
+            "isArray": false,
+            "label": "system",
+            "slug": "output",
+            "type": "text"
+          }
+        }
+      },
+      "id": "TMiv3KdK5qVgasxp",
+      "inputs": {
+        "script": {
+          "value": "return [\n  {\n    type: \"text\",\n    value: game.system.id\n  }\n];"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "0QSbrwKqNMoOThd8:ins:in"
+        }
+      },
+      "position": {
+        "x": 1533,
+        "y": 353
+      },
+      "type": "execute-script"
+    },
+    {
+      "custom": {
+        "inputs": {
+          "dnCkrmA0JzdyCEMK": {
+            "id": "dnCkrmA0JzdyCEMK",
+            "input": "pack",
+            "label": "pack",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "id": "0QSbrwKqNMoOThd8",
+      "inputs": {
+        "dnCkrmA0JzdyCEMK": {
+          "connection": "TMiv3KdK5qVgasxp:outputs:3j83dBSqeCuDxU6B"
+        },
+        "plain": {
+          "value": "{\"key\": \"GrantItem\",\"uuid\": \"Compendium.@pack.equipment-effects.Item.2YgXoHvJfrDHucMr\",\"allowDuplicates\": false,\"onDeleteActions\": {\"grantee\": \"restrict\"}}"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "b0hxSZ5cTD002kqs:ins:in"
+        }
+      },
+      "position": {
+        "x": 1829.923076923077,
+        "y": 369.4
+      },
+      "type": "format-text"
+    },
+    {
+      "type": "delete-combatant-event",
+      "position": {
+        "x": 329.090909090909,
+        "y": 764.5454545454544
+      },
+      "id": "l9qj27DBN77xwuQt",
+      "outs": {
+        "out": {
+          "connection": "keSS8042GyhDUiv2:ins:in"
+        }
+      }
+    },
+    {
+      "id": "keSS8042GyhDUiv2",
+      "inputs": {
+        "slug": {
+          "value": "effect-defend-trigger-trove"
+        },
+        "target": {
+          "connection": "l9qj27DBN77xwuQt:outputs:combatant"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "r8S2Gwoy3TvwrpoR:ins:in"
+        }
+      },
+      "position": {
+        "x": 561.6824009324002,
+        "y": 787.3463036963037
+      },
+      "state": "slug",
+      "type": "has-item-slug"
+    },
+    {
+      "id": "r8S2Gwoy3TvwrpoR",
+      "inputs": {
+        "item": {
+          "connection": "keSS8042GyhDUiv2:outputs:item"
+        }
+      },
+      "position": {
+        "x": 824.6878954378948,
+        "y": 803.8499833499834
+      },
+      "type": "delete-item"
     }
+  ],
+  "priority": 0,
+  "tags": [
+    "pf2e",
+    "sf2e"
+  ],
+  "variables": {
+    "HUiiu7ZERiquPGME:outputs:ccvLuI6m3jz6dmLm": {
+      "isArray": false,
+      "label": "Defend ID",
+      "type": "text"
+    },
+    "JASN9pgwy7TsLIcZ:outputs:combatant": {
+      "isArray": false,
+      "label": "Combatant (TS)",
+      "type": "target"
+    },
+    "rwdcX79vEkbrKlF4:outputs:combatant": {
+      "isArray": false,
+      "label": "Combatant (CC)",
+      "type": "target"
+    },
+    "TMiv3KdK5qVgasxp:outputs:3j83dBSqeCuDxU6B": {
+      "isArray": false,
+      "label": "System",
+      "type": "text"
+    }
+  }
 }

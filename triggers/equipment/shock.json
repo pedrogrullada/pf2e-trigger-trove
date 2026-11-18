@@ -1,0 +1,331 @@
+{
+  "name": "Shock",
+  "folder": "Equipment",
+  "priority": 0,
+  "description": "<p>@Localize[TRIGGERTROVE.ShockRune.Trigger.Description]</p>",
+  "id": "NyWeq5fCIAwYeHmH",
+  "nodes": [
+    {
+      "type": "hook-called-event",
+      "custom": {
+        "outputs": {
+          "kzpxAJyM9Cil016l": {
+            "id": "kzpxAJyM9Cil016l",
+            "label": "msg",
+            "slug": "output",
+            "isArray": false,
+            "type": "any"
+          }
+        }
+      },
+      "position": {
+        "x": 530.2468930759624,
+        "y": 161.79012861804222
+      },
+      "id": "dkk7EmVBK5E8HjZ0",
+      "inputs": {
+        "name": {
+          "value": "createChatMessage"
+        },
+        "gm": {
+          "value": true
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Sf88pV6Qm92kuM5G:ins:in"
+        }
+      }
+    },
+    {
+      "type": "execute-script",
+      "custom": {
+        "inputs": {
+          "p21uaboVSbwjgqtq": {
+            "id": "p21uaboVSbwjgqtq",
+            "label": "msg",
+            "slug": "input",
+            "isArray": false,
+            "type": "any"
+          }
+        },
+        "outputs": {
+          "5JIXAPrXtbVXipiI": {
+            "id": "5JIXAPrXtbVXipiI",
+            "label": "is Valid?",
+            "slug": "output",
+            "isArray": false,
+            "type": "boolean"
+          },
+          "lfvaND78zQRmAVcz": {
+            "id": "lfvaND78zQRmAVcz",
+            "label": "Damage",
+            "slug": "output",
+            "isArray": false,
+            "type": "number"
+          },
+          "ChjFgGxwlX8zUYFi": {
+            "id": "ChjFgGxwlX8zUYFi",
+            "label": "Source",
+            "slug": "output",
+            "isArray": false,
+            "type": "target"
+          },
+          "NBWjPV4BLkx5gPde": {
+            "id": "NBWjPV4BLkx5gPde",
+            "label": "Greater?",
+            "slug": "output",
+            "isArray": false,
+            "type": "boolean"
+          },
+          "QsCyRmF68CLjVfLO": {
+            "id": "QsCyRmF68CLjVfLO",
+            "label": "Target",
+            "slug": "output",
+            "isArray": false,
+            "type": "target"
+          }
+        }
+      },
+      "position": {
+        "x": 772.3181458706232,
+        "y": 147.74566496899834
+      },
+      "id": "Sf88pV6Qm92kuM5G",
+      "inputs": {
+        "p21uaboVSbwjgqtq": {
+          "connection": "dkk7EmVBK5E8HjZ0:outputs:kzpxAJyM9Cil016l"
+        },
+        "script": {
+          "value": "/**\n * @param {unknown[]} inputs\n * @returns {boolean} to break out current process\n * @returns {{type: EntryType; value: unknown}[]}\n *\n * @example\n * const x = inputs[0];\n * const y = inputs[1];\n * return [{type: \"number\", value: x + y}];\n */\n\nconst msg = inputs[0];\n\nconst isValid = msg?.isDamageRoll\n   && msg?.flags?.pf2e?.context?.outcome === 'criticalSuccess'\n  && (msg?.flags?.pf2e?.context?.options?.some(o => o === \"item:rune:property:shock\" || o === \"item:rune:property:greater-shock\"))\nconst roll = msg?.rolls?.[0];\n// const damage = roll?.options?.damage?.damage?.dice.find((dice) => dice?.slug === 'shock' || dice?.slug === 'greater-shock')\n\nconst dmg = roll?.terms?.[0].rolls?.find(r => r?.type === 'electricity' && r?.dice?.[0]?.faces === 6 )?.total ?? 0\n\nreturn [\n  {type: \"boolean\", value: isValid},\n  {type: \"number\", value: dmg},\n  {type: \"target\", value: msg?.token},\n  {type: \"boolean\", value: msg?.flags?.pf2e?.context?.options?.includes(\"item:rune:property:greater-shock\")},\n  {type: \"target\", value: msg?.target}\n];"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "rgicoY2NIxlSCO6E:ins:in"
+        }
+      }
+    },
+    {
+      "type": "roll-damage",
+      "position": {
+        "x": 2590.6510049899925,
+        "y": -5.202034238617756
+      },
+      "id": "5JBVxy0FcjnQi32S",
+      "inputs": {
+        "formula": {
+          "connection": "KHvmel7F7g9XBTER:outputs:result"
+        },
+        "origin": {
+          "connection": "Sf88pV6Qm92kuM5G:outputs:ChjFgGxwlX8zUYFi"
+        },
+        "targets": {
+          "connection": "SbeEqrT7FSGO2NKq:outputs:targets"
+        },
+        "item": {
+          "connection": "sLuhUeUblv8xWKWd:outputs:item"
+        }
+      }
+    },
+    {
+      "type": "format-text",
+      "custom": {
+        "inputs": {
+          "lUXvUpgT4mt6810j": {
+            "id": "lUXvUpgT4mt6810j",
+            "input": "dmg",
+            "label": "dmg",
+            "slug": "variable",
+            "type": "text"
+          }
+        }
+      },
+      "position": {
+        "x": 1715.2191105348256,
+        "y": 165.66217087631523
+      },
+      "id": "KHvmel7F7g9XBTER",
+      "inputs": {
+        "lUXvUpgT4mt6810j": {
+          "connection": "Sf88pV6Qm92kuM5G:outputs:lfvaND78zQRmAVcz"
+        },
+        "plain": {
+          "value": "(@dmg)[electricity]"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "98S6GcBDe0l28Ycv:ins:in"
+        }
+      }
+    },
+    {
+      "type": "split-boolean",
+      "inputs": {
+        "input": {
+          "connection": "Sf88pV6Qm92kuM5G:outputs:5JIXAPrXtbVXipiI"
+        }
+      },
+      "position": {
+        "x": 1056.839536885359,
+        "y": 162.5833371177789
+      },
+      "id": "rgicoY2NIxlSCO6E",
+      "outs": {
+        "true": {
+          "connection": "SbeEqrT7FSGO2NKq:ins:in"
+        }
+      }
+    },
+    {
+      "type": "filter-targets",
+      "custom": {
+        "inputs": {
+          "qB6jz6mqmByEwnXI": {
+            "id": "qB6jz6mqmByEwnXI",
+            "label": "Source",
+            "slug": "input",
+            "isArray": false,
+            "type": "target"
+          },
+          "VnyJlEv6mAgVrcV2": {
+            "id": "VnyJlEv6mAgVrcV2",
+            "label": "Target",
+            "slug": "input",
+            "isArray": false,
+            "type": "target"
+          }
+        }
+      },
+      "state": "filter",
+      "inputs": {
+        "qB6jz6mqmByEwnXI": {
+          "connection": "Sf88pV6Qm92kuM5G:outputs:ChjFgGxwlX8zUYFi"
+        },
+        "callback": {
+          "value": "/**\n * @param {{actor: Actor; token: TokenDocument}} target\n * @param {unknown[]} inputs\n * @returns {boolean}\n *\n * @example\n * const level = inputs[0];\n * return target.actor.level >= level;\n */\nconst src = inputs[0];\nconst tar = inputs[1];\nreturn src?.token?.disposition  !== target?.token?.disposition && target?.token?.id !== tar?.token?.id && target?.token?.object?.distanceTo(src?.token?.object) <= 10;"
+        },
+        "targets": {
+          "connection": "yzUvlZA5opPQ4PYc:outputs:targets"
+        }
+      },
+      "position": {
+        "x": 1277.468098478423,
+        "y": 162.78970879941403
+      },
+      "id": "SbeEqrT7FSGO2NKq",
+      "outs": {
+        "out": {
+          "connection": "B86eQrYMvT7wLQp3:ins:in"
+        }
+      }
+    },
+    {
+      "type": "if-truthy",
+      "custom": {
+        "inputs": {
+          "cKuZNl7rRhDDbYza": {
+            "id": "cKuZNl7rRhDDbYza",
+            "label": "Targets",
+            "slug": "condition",
+            "isArray": true,
+            "type": "target"
+          }
+        }
+      },
+      "position": {
+        "x": 1493.58032523365,
+        "y": 152.42424162524563
+      },
+      "id": "B86eQrYMvT7wLQp3",
+      "inputs": {
+        "cKuZNl7rRhDDbYza": {
+          "connection": "SbeEqrT7FSGO2NKq:outputs:targets"
+        }
+      },
+      "outs": {
+        "true": {
+          "connection": "KHvmel7F7g9XBTER:ins:in"
+        }
+      }
+    },
+    {
+      "type": "scene-targets",
+      "position": {
+        "x": 982.716048203384,
+        "y": 74.01237304551086
+      },
+      "id": "yzUvlZA5opPQ4PYc"
+    },
+    {
+      "type": "item-value",
+      "position": {
+        "x": 2340.555781521205,
+        "y": 123.37970506724963
+      },
+      "id": "sLuhUeUblv8xWKWd",
+      "inputs": {
+        "pf2e": {
+          "value": "Compendium.pf2e.equipment-srd.Item.TEa1oKZbwsOvC6TZ"
+        }
+      }
+    },
+    {
+      "type": "item-value",
+      "position": {
+        "x": 2352.438477757268,
+        "y": 445.44767110414944
+      },
+      "id": "bOHNf8rVtce4W5Y7",
+      "inputs": {
+        "pf2e": {
+          "value": "Compendium.pf2e.equipment-srd.Item.NVst7e69agGG9Qwd"
+        }
+      }
+    },
+    {
+      "type": "roll-damage",
+      "position": {
+        "x": 2580.774430423151,
+        "y": 328.74853951872194
+      },
+      "id": "xklzyIQRCixQeYWj",
+      "inputs": {
+        "targets": {
+          "connection": "SbeEqrT7FSGO2NKq:outputs:targets"
+        },
+        "origin": {
+          "connection": "Sf88pV6Qm92kuM5G:outputs:ChjFgGxwlX8zUYFi"
+        },
+        "formula": {
+          "connection": "KHvmel7F7g9XBTER:outputs:result"
+        },
+        "item": {
+          "connection": "bOHNf8rVtce4W5Y7:outputs:item"
+        }
+      }
+    },
+    {
+      "type": "split-boolean",
+      "inputs": {
+        "input": {
+          "connection": "Sf88pV6Qm92kuM5G:outputs:NBWjPV4BLkx5gPde"
+        }
+      },
+      "position": {
+        "x": 2029.9570505044217,
+        "y": 172.05883058890183
+      },
+      "id": "98S6GcBDe0l28Ycv",
+      "outs": {
+        "true": {
+          "connection": "5JBVxy0FcjnQi32S:ins:in"
+        },
+        "false": {
+          "connection": "xklzyIQRCixQeYWj:ins:in"
+        }
+      }
+    }
+  ]
+}

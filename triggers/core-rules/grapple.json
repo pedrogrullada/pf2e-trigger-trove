@@ -6,73 +6,135 @@
   "nodes": [
     {
       "id": "i1zgJ2aIHFL6Dla2",
-      "inputs": { "for": { "value": "skill-check" } },
-      "outs": { "out": { "connection": "Ds7terr8lXT596LE:ins:in" } },
-      "position": { "x": 533, "y": 298 },
+      "inputs": {
+        "for": {
+          "value": "skill-check"
+        }
+      },
+      "outs": {
+        "out": {
+          "connection": "Ds7terr8lXT596LE:ins:in"
+        }
+      },
+      "position": {
+        "x": 533,
+        "y": 298
+      },
       "state": "check",
       "type": "check-roll-event"
     },
     {
       "id": "3njsbGCyxIWOHigE",
       "inputs": {
-        "input": { "connection": "6CJnBF4qSynm0cCr:outputs:entry" }
+        "input": {
+          "connection": "6CJnBF4qSynm0cCr:outputs:entry"
+        }
       },
       "outs": {
-        "success": { "connection": "HBAceJu1NgabnuPD:ins:in" },
-        "criticalSuccess": { "connection": "7xC9qNpXLfGwCDpN:ins:in" }
+        "success": {
+          "connection": "HBAceJu1NgabnuPD:ins:in"
+        },
+        "criticalSuccess": {
+          "connection": "7xC9qNpXLfGwCDpN:ins:in"
+        }
       },
-      "position": { "x": 1031.6666666666665, "y": 410.5833333333333 },
+      "position": {
+        "x": 1031.6666666666665,
+        "y": 410.5833333333333
+      },
       "type": "split-outcome"
     },
     {
       "id": "gEXlmr9yWOPbzHaD",
       "inputs": {
-        "entry": { "connection": "i1zgJ2aIHFL6Dla2:outputs:target" }
+        "entry": {
+          "connection": "i1zgJ2aIHFL6Dla2:outputs:target"
+        }
       },
-      "position": { "x": 1381.3333333333335, "y": 522.9166666666665 },
+      "position": {
+        "x": 1381.3333333333335,
+        "y": 522.9166666666665
+      },
       "type": "__variable_getter__"
     },
     {
       "id": "Ds7terr8lXT596LE",
       "inputs": {
-        "entry": { "value": "action:grapple" },
-        "list": { "connection": "i1zgJ2aIHFL6Dla2:outputs:options" }
+        "entry": {
+          "value": "action:grapple"
+        },
+        "list": {
+          "connection": "i1zgJ2aIHFL6Dla2:outputs:options"
+        }
       },
-      "outs": { "true": { "connection": "3njsbGCyxIWOHigE:ins:in" } },
-      "position": { "x": 791.5, "y": 332.08333333333326 },
+      "outs": {
+        "true": {
+          "connection": "3njsbGCyxIWOHigE:ins:in"
+        }
+      },
+      "position": {
+        "x": 791.5,
+        "y": 332.08333333333326
+      },
       "type": "list-contains"
     },
     {
       "id": "6CJnBF4qSynm0cCr",
       "inputs": {
-        "entry": { "connection": "i1zgJ2aIHFL6Dla2:outputs:outcome" }
+        "entry": {
+          "connection": "i1zgJ2aIHFL6Dla2:outputs:outcome"
+        }
       },
-      "position": { "x": 883.5, "y": 512.5833333333333 },
+      "position": {
+        "x": 883.5,
+        "y": 512.5833333333333
+      },
       "type": "__variable_getter__"
     },
     {
       "type": "create-condition",
-      "position": { "x": 1614, "y": 107 },
+      "position": {
+        "x": 1614,
+        "y": 107
+      },
       "id": "HBAceJu1NgabnuPD",
       "inputs": {
-        "condition": { "value": "grabbed" },
-        "expiry": { "value": "turn-end" },
-        "target": { "connection": "gEXlmr9yWOPbzHaD:outputs:entry" }
+        "condition": {
+          "value": "grabbed"
+        },
+        "expiry": {
+          "value": "turn-end"
+        },
+        "target": {
+          "connection": "gEXlmr9yWOPbzHaD:outputs:entry"
+        }
       }
     },
     {
       "type": "create-condition",
-      "position": { "x": 1607, "y": 539 },
+      "position": {
+        "x": 1607,
+        "y": 539
+      },
       "id": "7xC9qNpXLfGwCDpN",
       "inputs": {
-        "condition": { "value": "restrained" },
-        "expiry": { "value": "turn-end" },
-        "target": { "connection": "gEXlmr9yWOPbzHaD:outputs:entry" }
+        "condition": {
+          "value": "restrained"
+        },
+        "expiry": {
+          "value": "turn-end"
+        },
+        "target": {
+          "connection": "gEXlmr9yWOPbzHaD:outputs:entry"
+        }
       }
     }
   ],
   "priority": 0,
-  "tags": ["pf2e", "sf2e"],
+  "tags": [
+    "pf2e",
+    "sf2e"
+  ],
   "variables": {
     "i1zgJ2aIHFL6Dla2:outputs:outcome": {
       "isArray": false,

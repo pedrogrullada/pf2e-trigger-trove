@@ -1,5 +1,15 @@
 ## Unreleased
 
+## 2.5.0
+
+- **Triggers**
+  - **New**
+    - (Chasarooni) `Shock Rune` - Added the extra damage pop out on critical success with a shock rune
+  - **Updated**
+    - (Chasarooni) `Critical Specialization` - Added Axe Critical Specialization, the extra damage popout on critical success
+    - (Chasarooni) `Grapple` - Set the duration of the conditions properly so they expire over 1 round
+    - (Rigo) `Fortification` - Fixed localization on this
+
 ## 2.4.1
 
 - Includes triggers accidentally excluded from last release

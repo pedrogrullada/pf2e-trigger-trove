@@ -84,6 +84,7 @@
     "CriticalSpecialization": {
       "Trigger": {
         "Description": {
+          "Axe": "When critical damage is dealt with a weapon in the axe group and the origin has its critical specialization effect, create a second damage message that extracts the base axe damage from the original message if there is a relevant target in reach.",
           "Bow": "When critical damage is dealt with a weapon in the bow group and the origin has its critical specialization effect, add the immobilized condition to the target.",
           "Spear": "When critical damage is dealt with a weapon in the spear group and the origin has its critical specialization effect, add the clumsy condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts for an additional round.",
           "Sword": "When critical damage is dealt with a weapon in the sword group and the origin has its critical specialization effect, add the off-guard condition to the target until the start of the origin's turn. If the weapon has the grievous rune, the effect lasts until the end of the origin's turn instead."
@@ -503,6 +504,11 @@
     "ShockAndAwe": {
       "Trigger": {
         "Description": "<p>When a roller saves against the <strong>Shock and Awe</strong> spell, add the frightened and stunned conditions depending on their degree of success.</p>"
+      }
+    },
+    "ShockRune": {
+      "Trigger": {
+        "Description": "When the origin of a critically successful attack uses a weapon with a <strong>shock</strong> rune, create a second message with the damage roll from the shock rune if there are relevant targets in range"
       }
     },
     "Slow": {
