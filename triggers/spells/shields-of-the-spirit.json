@@ -12,8 +12,8 @@
                 }
             },
             "position": {
-                "x": 315.2878787878783,
-                "y": 207.06060606060572
+                "x": 150.5378787878783,
+                "y": 197.81060606060572
             },
             "type": "attack-roll-event"
         },
@@ -95,8 +95,8 @@
                 }
             },
             "position": {
-                "x": 292.4929084073815,
-                "y": 725.592390066075
+                "x": -41.25709159261851,
+                "y": 594.342390066075
             },
             "type": "__gate_exit__"
         },
@@ -119,8 +119,8 @@
                 }
             },
             "position": {
-                "x": 645.5675004819744,
-                "y": 711.804511278196
+                "x": 311.81750048197443,
+                "y": 580.554511278196
             },
             "type": "has-option"
         },
@@ -143,8 +143,8 @@
                 }
             },
             "position": {
-                "x": 645.5675004819744,
-                "y": 877.4545112781958
+                "x": 311.81750048197443,
+                "y": 746.2045112781958
             },
             "type": "has-option"
         },
@@ -168,8 +168,8 @@
                 }
             },
             "position": {
-                "x": 292.4929084073815,
-                "y": 1045.592390066075
+                "x": 855.6747265891997,
+                "y": 742.4105718842568
             },
             "type": "__gate_exit__"
         },
@@ -197,8 +197,8 @@
                 }
             },
             "position": {
-                "x": 953.1444235588971,
-                "y": 665.804511278196
+                "x": 607.5762417407152,
+                "y": 526.3726930963778
             },
             "type": "__gate_entry__"
         },
@@ -226,8 +226,8 @@
                 }
             },
             "position": {
-                "x": 953.1444235588971,
-                "y": 837.4545112781958
+                "x": 613.9398781043515,
+                "y": 706.2045112781957
             },
             "type": "__gate_entry__"
         },
@@ -250,8 +250,8 @@
                 }
             },
             "position": {
-                "x": 953.1444235588971,
-                "y": 977.4545112781958
+                "x": 609.394423558897,
+                "y": 838.9317840054684
             },
             "type": "__gate_entry__"
         },
@@ -268,15 +268,15 @@
                     "connection": "4joponsFQHW1jP0H:outputs:entry"
                 },
                 "targets": {
-                    "connection": "99g6vXmr73UNfICU:outputs:entry"
+                    "connection": "u8Kkk70LBymCM2kl:outputs:entry"
                 },
                 "traits": {
                     "connection": "uV9iJp1pRs4xYz6A:outputs:yZ3eFt5tVw8bCd0E"
                 }
             },
             "position": {
-                "x": 1537.956389370863,
-                "y": 710.732289055974
+                "x": 1610.7256201400937,
+                "y": 663.0399813636662
             },
             "type": "roll-damage"
         },
@@ -291,8 +291,8 @@
                 }
             },
             "position": {
-                "x": 1006.4222013366747,
-                "y": 938.1378446115294
+                "x": 1184.6040195184926,
+                "y": 908.1378446115293
             },
             "type": "item-value"
         },
@@ -443,21 +443,8 @@
                 }
             },
             "position": {
-                "x": 1021.6444235588973,
-                "y": 860.1100668337521
-            },
-            "type": "__variable_getter__"
-        },
-        {
-            "id": "99g6vXmr73UNfICU",
-            "inputs": {
-                "entry": {
-                    "connection": "7yKftUXeWkE9Qpyp:outputs:target"
-                }
-            },
-            "position": {
-                "x": 1019.6444235588972,
-                "y": 896.1100668337521
+                "x": 1480.6444235588974,
+                "y": 752.8373395610247
             },
             "type": "__variable_getter__"
         },
@@ -502,8 +489,8 @@
                 }
             },
             "position": {
-                "x": 1000.6444235588972,
-                "y": 668.1100668337521
+                "x": 1099.2807871952607,
+                "y": 780.0418850155702
             },
             "type": "__variable_getter__"
         },
@@ -586,16 +573,16 @@
                 }
             },
             "position": {
-                "x": 2555.5195206839935,
-                "y": 151.57471329839848
+                "x": 2552.5195206839935,
+                "y": 99.57471329839848
             },
             "type": "__gate_entry__"
         },
         {
             "type": "texts-match",
             "position": {
-                "x": 1710.4738718883473,
-                "y": 221.73485544383442
+                "x": 1689.4738718883473,
+                "y": 198.73485544383442
             },
             "id": "1YJ5JcD8MqRM8z9a",
             "inputs": {
@@ -735,6 +722,19 @@
                 "y": 348.016594516594
             },
             "id": "POTkkW9g4sSvQ06J"
+        },
+        {
+            "inputs": {
+                "entry": {
+                    "connection": "7yKftUXeWkE9Qpyp:outputs:origin"
+                }
+            },
+            "type": "__variable_getter__",
+            "position": {
+                "x": 1466.8106060606056,
+                "y": 793.9015151515148
+            },
+            "id": "u8Kkk70LBymCM2kl"
         }
     ],
     "priority": 0,
@@ -744,12 +744,12 @@
     "variables": {
         "6rZxKLUKqudo4ue9:outputs:mw58ntbL7XuQEWhQ": {
             "isArray": false,
-            "label": "Source Level",
+            "label": "Caster Level",
             "type": "number"
         },
         "6rZxKLUKqudo4ue9:outputs:YLcsqB558JEtNo0z": {
             "isArray": false,
-            "label": "Source Actor",
+            "label": "Caster",
             "type": "target"
         },
         "7yKftUXeWkE9Qpyp:outputs:target": {
@@ -760,6 +760,11 @@
         "KUl8OkthKAy6E5GW:outputs:source": {
             "isArray": false,
             "label": "Aura Source",
+            "type": "target"
+        },
+        "7yKftUXeWkE9Qpyp:outputs:origin": {
+            "isArray": false,
+            "label": "Attacker",
             "type": "target"
         }
     }
